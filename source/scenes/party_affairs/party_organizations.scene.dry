@@ -25,6 +25,7 @@ In addition to being a political party, the SPD is a social world onto itself, w
 
 @radio
 choose-if: resources >= 2
+subtitle: -2 resources
 unavailable-subtitle: Not enough resources.
 view-if: radio = 0
 on-arrival: radio += 1; resources -= 2; new_middle_z += 4*(1 - dissent); old_middle_z += 3*(1 - dissent); workers_z += 2*(1 - dissent); left_labor_dissent += 5; right_labor_dissent += 5; right_strength += 5; socialism += 3*(1 - dissent); nationalism -= 3*(1 - dissent) if pacifism > 1; pro_republic += 3*(1-dissent) if democratization > 1
@@ -33,6 +34,7 @@ Our new radio station allows us to connect to people in a more intimate setting 
 
 @radio_2
 choose-if: resources >= 1
+subtitle: -1 resources
 unavailable-subtitle: Not enough resources.
 view-if: radio > 0 and radio <= 3
 on-arrival: radio += 1; resources -= 1; new_middle_z += 5*(1 - dissent); old_middle_z += 3*(1 - dissent); workers_z += 3*(1 - dissent); socialism += 3*(1 - dissent); nationalism -= 3*(1 - dissent)*(pacifism-2) if pacifism > 2; pro_republic += 3*(1-dissent)*(democratization-2) if democratization > 2
@@ -47,6 +49,7 @@ Our radio network has become a successful tool for spreading our message and it 
 
 @radio_4
 choose-if: resources >= 1
+subtitle: -1 resources
 unavailable-subtitle: Not enough resources.
 view-if: radio > 3 and (radio >= 6 or year >= 1932) and radio <= 9
 on-arrival: radio += 1; resources -= 1; new_middle_z += 3*(1 - dissent); old_middle_z += 2*(1 - dissent); workers_z += 3*(1 - dissent); rural_z += 2*(1 - dissent); unemployed_z += 2*(1-dissent); socialism += 2*(1 - dissent); nationalism -= 2*(1 - dissent)*(pacifism-2) if pacifism > 2; pro_republic += 2*(1-dissent)*(democratization-2) if democratization > 2
