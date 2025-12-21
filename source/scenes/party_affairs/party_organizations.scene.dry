@@ -12,7 +12,10 @@ max-visits: 6
 
 In addition to being a political party, the SPD is a social world onto itself, with a vast array of associated organizations which serve the social needs of their members from cradle to grave.
 
-- @newspapers: Fund more newspapers and journalists.
+- @radio: Fund the creation of a radio station. 
+- @radio_2: Fund the building up of our radio network. 
+- @radio_3: Keep building up our radio network. 
+- @radio_4: Keep on supporting our radio network. 
 - @welfare: Fund more mutual aid and welfare programs.
 - @culture: Fund sports leagues, educational, and cultural programs.
 - @rb: Fund the Reichsbanner, our self-defense organization.
@@ -20,12 +23,35 @@ In addition to being a political party, the SPD is a social world onto itself, w
 - @nothing: Do not increase funding for any program.
 - @easy_discard
 
-@newspapers
-choose-if: resources > 0
+@radio
+choose-if: resources >= 2
 unavailable-subtitle: Not enough resources.
-subtitle: -1 resources
-on-arrival: resources -= 1; media_timer = 0;
-go-to: media
+view-if: radio = 0
+on-arrival: radio += 1; resources -= 2; new_middle_z += 4*(1 - dissent); old_middle_z += 3*(1 - dissent); workers_z += 2*(1 - dissent); left_labor_dissent += 5; right_labor_dissent += 5; right_strength += 5; socialism += 3*(1 - dissent); nationalism -= 3*(1 - dissent) if pacifism > 1; pro_republic += 3*(1-dissent) if democratization > 1
+
+Our new radio station allows us to connect to people in a more intimate setting than before, spreading the message of christian democracy along with music and other popular content. Since most proletarians cannot afford family radios right now, we are reaching the middle class, a fact of which our labor comrades are painfully aware.
+
+@radio_2
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+view-if: radio > 0 and radio <= 3
+on-arrival: radio += 1; resources -= 1; new_middle_z += 5*(1 - dissent); old_middle_z += 3*(1 - dissent); workers_z += 3*(1 - dissent); socialism += 3*(1 - dissent); nationalism -= 3*(1 - dissent)*(pacifism-2) if pacifism > 2; pro_republic += 3*(1-dissent)*(democratization-2) if democratization > 2
+
+Our new radio network has a mix of popular and political programming, and is proving a success.
+
+@radio_3
+view-if: radio > 3 and radio <= 5 and year <= 1931
+on-arrival: radio += 1; new_middle_z += 5*(1 - dissent); old_middle_z += 4*(1 - dissent); workers_z += 4*(1 - dissent); rural_z += 3*(1 - dissent); unemployed_z += 2*(1-dissent); socialism += 3*(1 - dissent); nationalism -= 3*(1 - dissent)*(pacifism-2) if pacifism > 2; pro_republic += 3*(1-dissent)*(democratization-2) if democratization > 2
+
+Our radio network has become a successful tool for spreading our message and it is now financially self sufficient and does not require any more resources. 
+
+@radio_4
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+view-if: radio > 3 and (radio >= 6 or year >= 1932) and radio <= 9
+on-arrival: radio += 1; resources -= 1; new_middle_z += 3*(1 - dissent); old_middle_z += 2*(1 - dissent); workers_z += 3*(1 - dissent); rural_z += 2*(1 - dissent); unemployed_z += 2*(1-dissent); socialism += 2*(1 - dissent); nationalism -= 2*(1 - dissent)*(pacifism-2) if pacifism > 2; pro_republic += 2*(1-dissent)*(democratization-2) if democratization > 2
+
+We are continuing to invest in our radio stations. Both commercial and political radio are becoming more prevalent, making it harder to spread our message amidst the competition.
 
 # TODO: differing outcomes based on whether you've seen media, and what kind of media you've supported.
 
