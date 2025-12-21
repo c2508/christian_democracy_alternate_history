@@ -9,7 +9,7 @@ card-image: img/sangerbund.jpg
 
 = Media
 
-Zentrum runs a veritable media empire, with many newspapers throughout every German city and region. We could use the media for various purposes...
+The Centre Party runs a veritable media empire, with many newspapers throughout every German city and region. We could use the media for various purposes...
 
 - @commercial
 - @campaign
@@ -44,39 +44,39 @@ on-arrival: left_labor_dissent -= 6; right_labor_dissent -= 6; center_dissent -=
 This has been our media course historically, and it has successfully paved over the many tensions in our party.
 
 @radio
-title: Why not fund a radio station?
-subtitle: -2 resources
-choose-if: resources >= 2
+title: Allocate funds to Germania, our newspaper. We 
+subtitle: -1 resource
+choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-view-if: radio = 0
-on-arrival: radio += 1; resources -= 2; new_middle_z += 4*(1 - dissent); old_middle_z += 3*(1 - dissent); workers_z += 2*(1 - dissent); left_labor_dissent += 5; right_labor_dissent += 5; right_strength += 5; socialism += 3*(1 - dissent); nationalism -= 3*(1 - dissent) if pacifism > 1; pro_republic += 3*(1-dissent) if democratization > 1
+view-if: newspaper = 0
+on-arrival: radio += 1; resources -= 1; new_middle_z += 4*(1 - dissent); old_middle_z += 3*(1 - dissent); workers_z += 2*(1 - dissent); left_labor_dissent += 5; right_labor_dissent += 5; right_strength += 5; socialism += 3*(1 - dissent); nationalism -= 3*(1 - dissent) if pacifism > 1; pro_republic += 3*(1-dissent) if democratization > 1
 
-Our new radio station allows us to connect to people in a more intimate setting than before, spreading the message of christian democracy along with music and other popular content. Since most proletarians cannot afford family radios right now, we are reaching the middle class, a fact of which our labor comrades are painfully aware.
+Our expanded newspaper allows us to connect to people in a more intimate setting than before, spreading the message of christian democracy along with music and other popular content. Since most proletarians cannot afford family radios right now, we are reaching the middle class, a fact of which our labor comrades are painfully aware.
 
 @radio_2
-title: We must keep on building up our radio network.
+title: We must keep on building up our newspaper network.
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-view-if: radio > 0 and radio <= 3
-on-arrival: radio += 1; resources -= 1; new_middle_z += 5*(1 - dissent); old_middle_z += 3*(1 - dissent); workers_z += 3*(1 - dissent); socialism += 3*(1 - dissent); nationalism -= 3*(1 - dissent)*(pacifism-2) if pacifism > 2; pro_republic += 3*(1-dissent)*(democratization-2) if democratization > 2
+view-if: newspaper > 0 and newspaper <= 3
+on-arrival: newspaper += 1; resources -= 1; new_middle_z += 5*(1 - dissent); old_middle_z += 3*(1 - dissent); workers_z += 3*(1 - dissent); socialism += 3*(1 - dissent); nationalism -= 3*(1 - dissent)*(pacifism-2) if pacifism > 2; pro_republic += 3*(1-dissent)*(democratization-2) if democratization > 2
 
 Our new radio network has a mix of popular and political programming, and is proving a success.
 
 @radio_3
-title: We must keep on building up our radio network.
+title: We must keep on building up our newspaper network. 
 subtitle: It is now financially self-sufficient, and does not require any more resources.
-view-if: radio > 3 and radio <= 5 and year <= 1931
+view-if: newspaper > 3 and newspaper <= 5 and year <= 1931
 on-arrival: radio += 1; new_middle_z += 5*(1 - dissent); old_middle_z += 4*(1 - dissent); workers_z += 4*(1 - dissent); rural_z += 3*(1 - dissent); unemployed_z += 2*(1-dissent); socialism += 3*(1 - dissent); nationalism -= 3*(1 - dissent)*(pacifism-2) if pacifism > 2; pro_republic += 3*(1-dissent)*(democratization-2) if democratization > 2
 
-Our radio network has become a successful tool for spreading our message.
+Our newspaper network has become a successful tool for spreading our message.
 
 @radio_4
-title: We should keep on supporting our radio network.
-subtitle: As radio becomes more common, the novelty is beginning to wear off, and radio is becoming saturated in society. -1 resources
+title: We should keep on supporting our newspaper network.
+subtitle: As newspapers becomes more common, the novelty is beginning to wear off, and newspapers are becoming saturated in society. -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-view-if: radio > 3 and (radio >= 6 or year >= 1932) and radio <= 9
-on-arrival: radio += 1; resources -= 1; new_middle_z += 3*(1 - dissent); old_middle_z += 2*(1 - dissent); workers_z += 3*(1 - dissent); rural_z += 2*(1 - dissent); unemployed_z += 2*(1-dissent); socialism += 2*(1 - dissent); nationalism -= 2*(1 - dissent)*(pacifism-2) if pacifism > 2; pro_republic += 2*(1-dissent)*(democratization-2) if democratization > 2
+view-if: newspaper > 3 and (newspaper >= 6 or year >= 1932) and radio <= 9
+on-arrival: newspaper += 1; resources -= 1; new_middle_z += 3*(1 - dissent); old_middle_z += 2*(1 - dissent); workers_z += 3*(1 - dissent); rural_z += 2*(1 - dissent); unemployed_z += 2*(1-dissent); socialism += 2*(1 - dissent); nationalism -= 2*(1 - dissent)*(pacifism-2) if pacifism > 2; pro_republic += 2*(1-dissent)*(democratization-2) if democratization > 2
 
 We are continuing to invest in our radio stations. Both commercial and political radio are becoming more prevalent, making it harder to spread our message amidst the competition.
