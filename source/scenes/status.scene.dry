@@ -20,7 +20,7 @@ if (Q.economic_growth) {
 
 Resources available: [+ resources +]
 
-Zentrum position: [? if z_toleration : toleration ?][? if z_in_government : in government - ?][? if z_toleration == 0 and z_in_government == 0 and z_caretaker == 0 : opposition ?][? if z_caretaker : caretaker government ?]
+Centre Party position: [? if z_toleration : toleration ?][? if z_in_government : in government - ?][? if z_toleration == 0 and z_in_government == 0 and z_caretaker == 0 : opposition ?][? if z_caretaker : caretaker government ?]
 [? if in_weimar_coalition and z_in_government: Weimar Coalition ?][? if in_grand_coalition and z_in_government: Grand Coalition ?][? if in_popular_front and z_in_government: Popular Front ?][? if in_socio_catholic and z_in_government: Socio-Catholic Coalition ?][? if in_z_majority and z_in_government: Z majority ?][? if in_minority_government and z_in_government: minority government ?][? if in_emergency_government and z_in_government: emergency government ?]
 
 [? if z_in_government and not in_spd_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
@@ -59,7 +59,7 @@ Reichstag composition:
 # 1928: 9, 1930: 10
 Others: [+ other_r +]%
 
-[? if spd_in_government = 1 : Budget: [+ budget +] ?]
+[? if z_in_government = 1 : Budget: [+ budget +] ?]
 
 Next election: [+ next_election_month : month +] [+ next_election_year +]
 
@@ -92,7 +92,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)">NSDAP</span>!}: [+ nsdap_relation : relationships +]
 
-= Internal Factions of the Zentrum
+= Internal Factions of the Centre Party
 
 {!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the KPD.">Left Labor</span>!} strength: [+ left__labor_strength : strength +], dissent: [+ left_labor_dissent : dissent +]
 
@@ -168,7 +168,7 @@ Prussian police: [+ prussian_police_strength +] thousand members.
 
 Prussian police loyalty: [+ prussian_police_loyalty : loyalty +]
 
-[? if spd_in_government : Interior police loyalty: [+ interior_police_loyalty : loyalty +] ?]
+[? if z_in_government : Interior police loyalty: [+ interior_police_loyalty : loyalty +] ?]
 
 
 @polls
@@ -247,7 +247,7 @@ Catholics: SPD: [+ catholics_spd_display +]%, Z: [+ catholics_z_display +]%, KPD
 [? if dnf_formed: <span style="color: #003755;">**DNF**</span>: [+ dnf_votes +]% ?]
 
 [? if dsu_exist: <span style="color: #6A1E1E;">**DSU**</span>: [+ dsu_votes +]% ?]
-
+3
 [? if not nsdap_split: <span style="color: #7A3C00;">**NSDAP**</span>: [+ nsdap_votes +]% ?]
 
 [? if nsdap_split: <span style="color: #7A3C00;">**NSDAP**</span>: [+ nsdap_hitler_votes +]% ?]
