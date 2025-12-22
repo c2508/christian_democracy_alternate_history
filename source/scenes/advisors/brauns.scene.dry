@@ -9,11 +9,20 @@ new-page: true
 
 Brauns has been our long time labor minister and is an expert on social policy issues.
 
-
+- @union_unity
 - @support_peoples_party
 - @build_peoples_party
 - @campaigning_peoples_party
 - @root: Return to main
+
+@union_unity
+title: Union-party coordination
+subtitle: Reduce dissent among the unions.
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; left_labor_dissent -= 3; right_labor_dissent -= 7
+
+We have reduced tensions with the Labor factions. 
 
 @support_peoples_party
 title: Build support for a People's Party
