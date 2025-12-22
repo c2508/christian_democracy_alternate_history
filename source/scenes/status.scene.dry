@@ -102,7 +102,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy.">Right</span>!} strength: [+ right_strength : strength +], dissent: [+ right_dissent : dissent +]
 
-[? if neorevisionism > 0 : Young Conservatives strength: [+ young_conservative_strength : strength +], dissent: [+ young_conservative_dissent : dissent +] ?]
+[? if neorevisionism > 0 : Young Conservatives strength: [+ young_conservatives_strength : strength +], dissent: [+ young_conservatives_dissent : dissent +] ?]
 
 
 @paramilitaries
@@ -247,7 +247,7 @@ Catholics: SPD: [+ catholics_spd_display +]%, Z: [+ catholics_z_display +]%, KPD
 [? if dnf_formed: <span style="color: #003755;">**DNF**</span>: [+ dnf_votes +]% ?]
 
 [? if dsu_exist: <span style="color: #6A1E1E;">**DSU**</span>: [+ dsu_votes +]% ?]
-3
+
 [? if not nsdap_split: <span style="color: #7A3C00;">**NSDAP**</span>: [+ nsdap_votes +]% ?]
 
 [? if nsdap_split: <span style="color: #7A3C00;">**NSDAP**</span>: [+ nsdap_hitler_votes +]% ?]
