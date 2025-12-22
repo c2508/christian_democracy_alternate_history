@@ -72,7 +72,7 @@ The SA have won this show of strength.
 
 Mass rallies are a common feature of Christian Democratic life, especially in the lead-up to an election. What is the primary theme of this rally?
 
-- @workers: Advancing the rights of Catholics through parliamentary means
+- @catholic: Advancing the rights of Catholics through parliamentary means
 - @welfare: Sozialpolitik - the maintenance and expansion of social welfare programs.
 - @democracy: Expanding our nascent democracy and defending it against dictatorship and fascism.
 - @pacifism: Advocating for nationalism and militarism 
@@ -80,20 +80,20 @@ Mass rallies are a common feature of Christian Democratic life, especially in th
 - @local: A mixture of various local and national concerns that resonate most with the audience.
 - @easy_discard
 
-@workers
-on-arrival: workers_z += 4*(1-dissent); catholics_z += 3*(1-dissent) if left_labor_strength > right_strength; workers_z += 4*(1-dissent) if democratization >= 3; unemployed_z += 3*(1-dissent) if democratization >= 3; left__labor_strength += 5; left__labor_dissent -= 5
+@catholic
+on-arrival: catholics_z += 7*(1-dissent); catholics_z += 4*(1-dissent) if democratization >= 3; center_strength += 5; center_dissent -= 5
 
-Our message of republicanism appeals to the left labor wing of the party. [? if democratization >= 3 : Our achievements in upholding the republic have assisted our messaging. ?]
+Reminding our constituents of our confessional nature is a good way of energising our electoral base. [? if democratization >= 3 : Our achievements in securing equal rights of Catholics have assisted our messaging. ?]
 
 @welfare
-on-arrival: workers_spd += 3*(1-dissent); workers_spd += 3*(1-dissent) if welfare > 0; unemployed_spd += 3*(1-dissent) if welfare > 0; unemployed_spd += 4*(1-dissent) if welfare > 1; reformist_strength += 3; labor_strength += 4; reformist_dissent -= 3; labor_dissent -= 3;
+on-arrival: workers_spd += 3*(1-dissent); workers_z += 3*(1-dissent) if welfare > 0; unemployed_spd += 3*(1-dissent) if welfare > 0; unemployed_z += 4*(1-dissent) if welfare > 1; right_labor_strength += 3; left_labor_strength += 4; right_labor_dissent -= 3; left_labor_dissent -= 3;
 
-The reformist message appeals to the organized workers, whose benefits are the accomplishments of social democracy. [? if welfare > 1 : Our achievements in expanding welfare have made this message more effective. ?]
+The pro-labor message appeals to the organized workers, whose benefits are the accomplishments of Christian Democracy. [? if welfare > 1 : Our achievements in expanding welfare have made this message more effective. ?]
 
 @democracy
 on-arrival: democratization += 1; pro_republic += 2*(1 - dissent); workers_spd += 4*(1-dissent) if democratization >= 3; unemployed_spd += 3*(1-dissent) if democratization >= 3; pro_republic += 4*(1 - dissent) if democratization >= 3; new_middle_spd += 4*(1-dissent) if democratization >= 3 
 
-Our speakers defend the republican system and rail against the communists and fascists who threaten it.
+Our speakers defend the status quo and rail against the communists and fascists who threaten it.
 
 [? if democratization < 3 : Talk of democracy does not excite the workers as much as more practical issues. But that may change; part of our job is to provide political education to the proletariat. ?]
 [? if democratization >= 3 : Since we have consistently made democratization a theme of our campaign, the workers are enthusiastic about our message. ?]
