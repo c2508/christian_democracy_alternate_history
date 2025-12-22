@@ -10,6 +10,7 @@ new-page: true
 Brauns has been our long time labor minister and is an expert on social policy issues.
 
 - @union_unity
+- @organising
 - @support_peoples_party
 - @build_peoples_party
 - @campaigning_peoples_party
@@ -22,7 +23,15 @@ choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 on-arrival: advisor_action_timer = 6; left_labor_dissent -= 3; right_labor_dissent -= 7
 
-We have reduced tensions with the Labor factions. 
+We have reduced tensions with the Labor factions.
+
+@organising
+title: Organising Workers
+subtitle: Improve our standing among the workers. 
+choose-if: advisor_action_timer <= 0
+unavailable subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; workers_z += 5*(1-dissent); right_labor_strength += 2
+
 
 @support_peoples_party
 title: Build support for a People's Party
@@ -30,7 +39,7 @@ subtitle: Can we expand our party beyond Catholics?
 view-if: peoples_party = 0
 choose-if: peoples_party_support <= 4 and advisor_action_timer = 0 and peoples_party = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if peoples_party_support > 4: There is already substantial support for a People's Party. ?]
-on-arrival: advisor_action_timer = 6; peoples_party_support += 1; left_labor_dissent += 2; right_dissent += 2
+on-arrival: advisor_action_timer = 6; peoples_party_support += 1; left_labor_dissent += 2; center_dissent += 2
 
 We are building up support for the idea of a People's Party.
 
@@ -40,7 +49,7 @@ subtitle: Can we expand our party beyond Catholics?
 view-if: peoples_party = 0
 choose-if: peoples_party_support >= 4 and advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if peoples_party_support < 4: There is not enough support for this policy within the party. ?]
-on-arrival: advisor_action_timer = 6; left_labor_dissent += 5; right_dissent += 5
+on-arrival: advisor_action_timer = 6; left_labor_dissent += 5; center_dissent += 5
 go-to: peoples_party
 
 @campaigning_peoples_party
