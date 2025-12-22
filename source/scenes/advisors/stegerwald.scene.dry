@@ -20,8 +20,8 @@ Stegerwald is the leader of the DGB, the Christian Trade Union Association.
 @labor_rights_
 title: Labor Rights
 subtitle: As Labor Minister, Stegerwald can help set regulations for working conditions.
-choose-if: advisor_action_timer <= 0 and z_in_government and labor_minister_party = "Z"
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if labor_minister_party != "Z" : The Center Party does not control the Labor Ministry. ?]
+choose-if: advisor_action_timer <= 0 and z_in_government and labor_minister_party = "Center"
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if labor_minister_party != "Center" : The Center Party does not control the Labor Ministry. ?]
 on-arrival: advisor_action_timer = 6; labor_rights_timer -= 10; last_advisor_action = 1
 go-to: labor_rights
 
