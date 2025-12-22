@@ -75,7 +75,8 @@ Mass rallies are a common feature of Christian Democratic life, especially in th
 - @catholic: Advancing the rights of Catholics through parliamentary means
 - @welfare: Sozialpolitik - the maintenance and expansion of social welfare programs.
 - @democracy: Expanding our nascent democracy and defending it against dictatorship and fascism.
-- @pacifism: Advocating for nationalism and militarism 
+- @pacifism: Advocating against militarism in German society 
+- @right: Working with the conservative right to make Germany great again 
 - @wtb: Support the WTB plan!
 - @local: A mixture of various local and national concerns that resonate most with the audience.
 - @easy_discard
@@ -105,6 +106,11 @@ Our speakers denounce the military establishment and all the spending entering t
 
 [? if pacifism < 3 : Given the volume of nationalist indoctrination in our society, it is difficult to argue so vehemently against the military. ?]
 [? if pacifism >= 3 : Since we have consistently made pacifism a theme of our campaign, the workers are enthusiastic about our message. ?]
+
+@right
+on-arrival: right_strength += 5; right_labor_strength += 3; right_dissent -= 5; right_labour_dissent -= 3; dnvp_relation += 3; dnvp_relation +=3
+
+Rallying the forces of the German Right together pages the way for future cooperation with them. 
 
 @wtb
 view-if: wtb_adopted = 1
