@@ -7,7 +7,7 @@ new-page: true
 
 = Wilhelm Marx
 
-Marx [? if year >= 1928 : was ?][? if year_1928 = 1 : is ?] the Chairman of the Center Party and former presidential candidate in 1925.
+Marx [? if year >= 1928 : was ?][? if year_1928 = 1 : is ?] the Chairman of the Center Party and our presidential candidate in 1925.
 
 
 - @liberal_relation
