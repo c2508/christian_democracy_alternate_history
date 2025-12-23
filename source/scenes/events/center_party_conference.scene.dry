@@ -21,29 +21,30 @@ The party has splintered in two over the vote to decide his sucessor. The nomine
 unavailable-subtitle: [? if right_dissent > 15:There is too much infighting with the right faction of the party. ?][? if right__labor_dissent > 15: The white collar unions are still unhappy with Stegerwald's decision oppose wage increases in 1927. ?][? if right_strength < 30: Stegerwald does not have enough influence to secure the nomination. ?] 
 subtitle: Stegerwald belongs to the right labor faction and would rather work with the political right than the SPD.
 on-arrival: z_party_leader = "Stegerwald"; spd_relation -= 8; dnvp_relation += 8; 
-choose-if: right_dissent <= 15 and right_labor_dissent <= 15 and right_labor_strength >= 30
+choose-if: right_dissent <= 15 and right_labor_dissent <= 15 and right_labor_strength >= 45
 
 Adam Stegerwald has been elected as the chairman of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]. He seems to represent a rightward turn from Marx, despite his trade union background, and will preside over a [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] less inclined to compromise with the left. He views the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] as a prototype for a <span style="color: #000000;">Christian</span>, <span style="color: #586593;">democratic</span>, <span style="color: #000000;">German</span>, and <span style="color: #c00000;">social</span> party, and aims to transform it according to the principles laid out in his proposed "Essen program" eight years prior. 
 
 @joos
 unavailable-subtitle: [? if right_dissent <= 15 and right_labor_dissent <= 15 and right_labor_strength >= 30: Stegerwald has a strong following within the party. ?][? if not (right_dissent <= 15 and right_labor_dissent <= 15 and right_labor_strength >= 30): The vote is deadlocked. ?]
 subtitle: Joos belongs to the Left Labor faction and supports increased cooperation with the SPD. However, he might have trouble controlling the right within our party. 
-choose-if: spd_relation >= 67 and left_labor_strength >= right_strength and left_labor_strength >= right_labor_strength and not (right_dissent <= 15 and right_labor_dissent <= 15 and right_labor_strength >= 30)
-on-arrival: z_party_leader = "Joos"; catholics_spd += 5; workers_z += 3*(1-dissent); z_party_leader1 += 1; spd_relation += 8*(1-dissent); z_rural -= 2*(1-dissent); left_labour_strength += 4*(1-dissent); right_dissent += 3; republic_support += 4
+choose-if: spd_relation >= 67 and left_labor_strength >= right_strength and left_labor_strength >= right_labor_strength and not (right_dissent <= 15 and right_labor_dissent <= 15 and right_labor_strength >= 45)
+on-arrival: z_party_leader = "Joos"; catholics_spd += 5; workers_z += 3*(1-dissent); z_party_leader1 += 1; spd_relation += 8*(1-dissent); z_rural -= 2*(1-dissent); left_labour_strength += 4*(1-dissent); right_dissent += 3; pro_republic += 4
 face-image: img/portraits/JoosJoseph.jpg
 
-With our strong grassroots connections with the SPD, they have been able to influence the Center delegates to support Joseph Joos as the new Center chairman. He has long been a friend of the SPD, and will be more inclined to collaborate with the SPD compared to Stegerwald. He also increases the appeal of the Center Party to the working class.
+With the National Council's rejection of Stegerwald, the party's close relations with the SPD has led the delegates to nominate Joseph Joos as chairman to continue further cooperation with the SPD. Hailing from the Left Labor Wing, he also increases the appeal of the Center Party to workers. 
+
 
 @kaas
-choose-if: not (spd_relation >= 67 and left_labor_strength >= right_strength and left_labor_strength >= right_labor_strength) and not (right_dissent <= 15 and right_labor_dissent <= 15 and right_labor_strength >= 30)
-view-if: not (spd_relation >= 67 and left_labor_strength >= right_strength and left_labor_strength >= right_labor_strength) and not (right_dissent <= 15 and right_labor_dissent <= 15 and right_labor_strength >= 30)
-unavailable-subtitle: [? if z_relation <= 62 : Our relations are not good enough. ?] [? if resources < 1 : We do not have enough resources. ?]
+choose-if: not (spd_relation >= 67 and left_labor_strength >= right_strength and left_labor_strength >= right_labor_strength) and not (right_dissent <= 15 and right_labor_dissent <= 15 and right_labor_strength >= 45)
+view-if: not (spd_relation >= 67 and left_labor_strength >= right_strength and left_labor_strength >= right_labor_strength) and not (right_dissent <= 15 and right_labor_dissent <= 15 and right_labor_strength >= 45)
+unavailable-subtitle: [? if z_relation <= 62 : Our relations are not good enough. ?] 
 subtitle: The vote is deadlocked between Adam Stegerwald and Joseph Joos. 
 on-arrival: z_party_leader = "Kaas"; spd_relations -= 5; prussian_concordat_progress += 1
 face-image: img/portraits/KaasLudwig.jpg
 
-Ludwig Kaas has been selected as the chairman of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] as a compromise candidate between Stegerwald and Joos. He seems to represent a rightward turn from Marx, and will preside over a [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] less inclined to compromise with the left. 
-
+While a suggestion about a collegium with Joos, Stegerwald and Kaas won some approval from delegates, concerns about Stegerwald's personality and the desire of the Windhorstbund for a strong leader has sunk the idea. Thus, in a secret vote by the delegates, Ludwig Kaas has been selected as the chairman of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] as a compromise candidate between Stegerwald and Joos. He seems to represent a rightward turn from Marx, and will preside over a [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] less inclined to compromise with the left. 
+In response to the Center Party's poor electoral performance in 1928, the Executive Committee has elevated a cleric to the chairmanship to win back disaffected Catholics 
 Despite this, Kaas is committed to the current constitutional order and the republic. He maintains a close friendship with Eugenio Pacelli, the Papal Nuncio to Germany, which may prove useful during concordat negotiations.
 
 
