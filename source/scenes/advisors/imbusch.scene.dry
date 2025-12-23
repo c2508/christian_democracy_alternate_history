@@ -1,13 +1,13 @@
-title: Joseph Hess
+title: Heinrich Imbusch
 is-pinned-card: true
 tags: advisor, left_labor
 card-image: img/portraits/LeipartTheodor.jpg
-view-if: hess_advisor = 1
+view-if: imbusch_advisor = 1
 new-page: true 
 
-= Joseph Hess
+= Heinrich Imbusch
 
-Hess is the leader of the Prussian Center Party.
+Imbusch is the chairman of the Christian Miners' Union and is on the Executive Council of the Prussian Center Party. 
 
 - @organizing
 - @union_unity
