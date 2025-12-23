@@ -43,16 +43,6 @@ go-to: rm_main
 Adenauer has been removed as an advisor. The Centrist faction disapproves.
 
 
-@remove_bruning
-title: Remove Bruning
-view-if: bruning_advisor = 1
-tags: remove_advisor
-on-arrival: bruning_advisor = 0; center_dissent += 5; n_advisors -= 1
-go-to: rm_main
-
-Bruning has been removed as an advisor. The Centrist faction disapproves.
-
-
 @remove_guerard
 title: Remove Guerard
 view-if: guerard_advisor = 1
@@ -103,14 +93,14 @@ go-to: rm_main
 
 Joos has been removed as an advisor. The Left Labor faction disapproves.
 
-@remove_hess
-title: Remove Hess
+@remove_imbusch
+title: Remove Imbusch
 view-if: hess_advisor = 1
 tags: remove_advisor
-on-arrival: hess_advisor = 0; left_labor_dissent += 5; n_advisors -= 1
+on-arrival: imbusch_advisor = 0; left_labor_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Hess has been removed as an advisor. The Left Labor faction disapproves.
+Imbusch has been removed as an advisor. The Left Labor faction disapproves.
 
 @remove_wirth
 title: Remove Wirth
@@ -132,6 +122,15 @@ on-arrival: brauns_advisor = 0; right_labor_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
 Brauns has been removed as an advisor. The Right Labor faction disapproves.
+
+@remove_bruning
+title: Remove Bruning
+view-if: bruning_advisor = 1
+tags: remove_advisor
+on-arrival: bruning_advisor = 0; center_dissent += 5; n_advisors -= 1
+go-to: rm_main
+
+Bruning has been removed as an advisor. The Right Labor faction disapproves. 
 
 @remove_stegerwald
 title: Remove Stegerwald
@@ -169,7 +168,7 @@ Kaas has been removed as an advisor. The Right faction disapproves.
 title: Remove Treviranus
 view-if: treviranus_advisor = 1
 tags: remove_advisor
-on-arrival: treviranus_advisor = 0; young_conservative_dissent += 5; n_advisors -= 1
+on-arrival: treviranus_advisor = 0; young_conservatives_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
 Treviranus has been removed as an advisor. The Young Conservative faction disapproves.
@@ -178,7 +177,7 @@ Treviranus has been removed as an advisor. The Young Conservative faction disapp
 title: Remove Lejeune Jung
 view-if: jung_advisor = 1
 tags: remove_advisor
-on-arrival: jung_advisor = 0; young_conservative_dissent += 3; n_advisors -= 1
+on-arrival: jung_advisor = 0; young_conservatives_dissent += 3; n_advisors -= 1
 go-to: rm_main
 
 Lejeune Jung has been removed as an advisor. The Young Conservative faction disapproves.
@@ -187,7 +186,7 @@ Lejeune Jung has been removed as an advisor. The Young Conservative faction disa
 title: Remove Lettow-Vorbeck
 view-if: vorbeck_advisor = 1
 tags: remove_advisor
-on-arrival: vorbeck_advisor = 0; young_conservative_dissent += 3; n_advisors -= 1
+on-arrival: vorbeck_advisor = 0; young_conservatives_dissent += 3; n_advisors -= 1
 go-to: rm_main
 
 Lettow-Vorbeck has been removed as an advisor. The Young Conservative faction disapproves.
@@ -249,9 +248,9 @@ frequency: 1
 
 - @center: Add Centrists
 - @left_labor: Add Left Labor
-- @right_labor: Add Right
-- @right: Add Right Labor
-- @young_conservative: Add Young Conservatives
+- @right_labor: Add Right Labor
+- @right: Add Right 
+- @young_conservatives: Add Young Conservatives
 - @nonfactional: Add non-factional advisors
 - @rm_main: Remove advisors instead.
 - @remove_none: Stop changing advisors.
@@ -276,7 +275,7 @@ view-if: n_advisors < 3
 
 - #right_advisor
 
-@young_conservative
+@young_conservatives
 view-if: neorevisionism > 0 and n_advisors < 3
 
 - #young_conservative_advisor
@@ -297,17 +296,6 @@ on-arrival: adenauer_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
 Konrad Adenauer is now an advisor.
-
-@add_bruning
-title: Heinrich Bruning
-subtitle: Bruning is a former [? if chancellor = "Bruning": and current ?] Chancellor, and managing director of the DGB.
-card-image: img/portraits/BruningHeinrich.jpg
-tags: center_advisor
-view-if: bruning_advisor = 0 and n_advisors < 3 and centrists_resign = 0
-on-arrival: bruning_advisor = 1; n_advisors += 1
-go-to: advisor_menu
-
-Heinrich Bruning is now an advisor.
 
 @add_guerard
 title: Theodor Von Guerard
@@ -410,6 +398,17 @@ tags: right_labor_advisor
 
 Heinrich Brauns is now an advisor.
 
+@add_bruning
+title: Heinrich Bruning
+subtitle: Bruning is our lead economist and managing director of the DGB.
+card-image: img/portraits/BruningHeinrich.jpg
+tags: center_advisor
+view-if: bruning_advisor = 0 and n_advisors < 3 and centrists_resign = 0
+on-arrival: bruning_advisor = 1; n_advisors += 1
+go-to: advisor_menu
+
+Heinrich Bruning is now an advisor.
+
 @add_stegerwald
 title: Adam Stegerwald
 subtitle: Stegerwald is the leader of the DGB, the Catholic Trade Union Association.
@@ -434,17 +433,17 @@ tags: right_labor_advisor
 
 Kurt Rosenfeld is now an advisor.
 
-@add_seydewitz
-title: Max Seydewitz
+@add_hermes
+title: Andreas Hermes 
 subtitle: Max Seydewitz is a former leader of the youth wing, current supporter of the left wing of the SPD, and advocates for class struggle. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Class Struggle, Socialist Youth, Against Toleration ?]
 is-card: true
 card-image: img/portraits/SeydewitzMax.jpg
 view-if: seydewitz_advisor = 0 and n_advisors < 3 and left_split = 0
 on-arrival: seydewitz_advisor = 1; n_advisors += 1; left_strength += 5
 go-to: advisor_menu
-tags: right_labor_advisor
+tags: right_advisor
 
-Max Seydewitz is now an advisor.
+Andreas Hermes is now an advisor.
 
 @add_siemsen
 title: Anna Siemsen
@@ -460,7 +459,7 @@ Anna Siemsen is now an advisor.
 
 
 
-# labor
+# right
 
 @add_leipart
 title: Theodor Leipart
