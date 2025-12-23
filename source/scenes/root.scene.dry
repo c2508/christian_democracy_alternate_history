@@ -68,6 +68,8 @@ Q.right_defected = 0;
 // have we discovered young_conservatism?
 Q.young_conseratives = 0;
 
+// desperation indicates how likely we are to coaltion with the KPD and NSDAP
+Q.desperation = 0;
 // crisis_urgency indicates how seriously the SPD is taking the economic crisis - scale from 0 to 10.
 Q.crisis_urgency = 0;
 // nazi_urgency indicates how seriously the SPD takes the nazis - scale from 0 to 10.
@@ -97,6 +99,8 @@ Q.nationalization_adopted = 0;
 // moderate economic plan
 Q.moderate_plan_support = 0;
 Q.moderate_plan_adopted = 0;
+Q.bruning_points = 0;
+
 
 // organizations
 
@@ -147,10 +151,16 @@ Q.rfb_strength = 130;
 Q.rfb_militancy = 0.5;
 Q.rfb_banned = 0;
 Q.rfb_banned_prussia = 0;
+Q.rb_banned = 0;
+Q.z_rb = 1;
+Q.z_endorse_rb = 0;
+Q.z_sh = 0;
+Q.rb_unity = 55;
+Q.z_dominance = 15;
 
 Q.interior_police_strength = 50;
 Q.interior_police_militancy = 1;
-Q.interior_police_loyalty = 0.45;
+Q.interior_police_loyalty = 0.55;
 
 Q.prussian_police_strength = 90;
 Q.prussian_police_militancy = 1;
@@ -159,7 +169,7 @@ Q.prussian_police_loyalty = 0.5;
 // strength includes actual military and de facto reserves?
 Q.reichswehr_strength = 100;
 Q.reichswehr_militancy = 5;
-Q.reichswehr_loyalty = 0.2;
+Q.reichswehr_loyalty = 0.3;
 
 // The state of the country
 
@@ -406,6 +416,8 @@ Q.judicial_reform = 0;
 Q.bureaucratic_reform = 0;
 Q.military_reform = 0;
 Q.womens_rights = 0;
+Q.republican_unions = 0;
+Q.catholic_rights = 0;
 // level of welfare relative to 1928 (can go negative)
 Q.welfare = 0;
 // level of support for farmers
@@ -440,6 +452,7 @@ Q.eu_progress = 0;
 // science/education
 Q.science = 0;
 Q.education_science = 0;
+
 
 // Tax rates relative to 1928 baseline
 Q.lower_tax_rates = 0;
