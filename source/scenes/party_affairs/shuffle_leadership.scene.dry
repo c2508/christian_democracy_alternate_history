@@ -127,7 +127,7 @@ Brauns has been removed as an advisor. The Right Labor faction disapproves.
 title: Remove Bruning
 view-if: bruning_advisor = 1
 tags: remove_advisor
-on-arrival: bruning_advisor = 0; center_dissent += 5; n_advisors -= 1
+on-arrival: bruning_advisor = 0; right_labor_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
 Bruning has been removed as an advisor. The Right Labor faction disapproves. 
@@ -161,6 +161,15 @@ on-arrival: kass_advisor = 0; right_dissent += 3; n_advisors -= 1
 go-to: rm_main
 
 Kaas has been removed as an advisor. The Right faction disapproves.
+
+@remove_papen
+title: Remove Papen
+view-if: papen_advisor = 1
+tags: remove_advisor
+on-arrival: papen_advisor = 0; right_dissent += 3; n_advisors -= 1
+go-to: rm_main
+
+Papen has been removed as an advisor. The Right faction disapproves. 
 
 # young conservatives
 
@@ -322,7 +331,7 @@ Heinrich Kohler is now an advisor.
 
 @add_marx
 title: Wilhelm Marx
-subtitle: Heinrich Kohler is our longtime Finance Minister in Baden and was briefly the State President of Baden on two seperate occasions.
+subtitle: Marx was the Chairman of the Center Party and our presidential candidate in 1925. 
 card-image: img/portraits/BreitscheidRudolf.jpg
 view-if: marx_advisor = 0 and n_advisors < 3
 on-arrival: marx_advisor = 1; n_advisors += 1
@@ -402,7 +411,7 @@ Heinrich Brauns is now an advisor.
 title: Heinrich Bruning
 subtitle: Bruning is our lead economist and managing director of the DGB.
 card-image: img/portraits/BruningHeinrich.jpg
-tags: center_advisor
+tags: bruning_advisor
 view-if: bruning_advisor = 0 and n_advisors < 3 and centrists_resign = 0
 on-arrival: bruning_advisor = 1; n_advisors += 1
 go-to: advisor_menu
@@ -461,29 +470,29 @@ Anna Siemsen is now an advisor.
 
 # right
 
-@add_leipart
-title: Theodor Leipart
+@add_papen
+title: Franz von Papen
 subtitle: Theodor Leipart is the leader of the ADGB, the German Trade Union Federation. {!<br><br>!}[? if difficulty < 0 : Actions - Organizing Workers, Addressing the Economic Crisis ?]
 is-card: true
 card-image: img/portraits/LeipartTheodor.jpg
 tags: right_advisor
-view-if: leipart_advisor = 0 and n_advisors < 3 and unions_independent = 0
-on-arrival: leipart_advisor = 1; n_advisors += 1; right_strength += 5
+view-if: papen_advisor = 0 and n_advisors < 3 and unions_independent = 0
+on-arrival: papen_advisor = 1; n_advisors += 1; right_strength += 5
 go-to: advisor_menu
 
-Theodor Leipart is now an advisor.
+Franz von Papen is now an advisor.
 
-@add_aufhauser
-title: Siegfried Aufhäuser
+@add_kaas
+title: Ludwig Kaas
 subtitle: Siegfried Aufhäuser is the leader of the AfA-Bund, the white-collar trade union federation. {!<br><br>!}[? if difficulty < 0 : Actions - Organizing White-Collar Workers, Union-Party Coordination, Addressing the Economic Crisis ?]
 is-card: true
 card-image: img/portraits/AufhäuserSiegfried.jpg
 tags: right_advisor
-view-if: aufhauser_advisor = 0 and n_advisors < 3
-on-arrival: aufhauser_advisor = 1; n_advisors += 1; right_strength += 5
+view-if: kaas_advisor = 0 and n_advisors < 3
+on-arrival: kaas_advisor = 1; n_advisors += 1; right_strength += 5
 go-to: advisor_menu
 
-Siegfried Aufhäuser is now an advisor.
+Ludwig Kaas is now an advisor.
 
 @add_wissell
 title: Rudolf Wissell
