@@ -2,7 +2,7 @@ title: Franz Von Papen
 is-pinned-card: true
 tags: advisor, centrist
 card-image: img/portraits/PapenFranz.jpg
-view-if: pfulf_advisor = 1
+view-if: papen_advisor = 1
 new-page: true 
 
 = Franz Von Papen
@@ -26,12 +26,12 @@ We have gained 2 resources.
 
 @building_the_right
 title: Building the Right
-subtitle: Push Zentrum to the right.
+subtitle: Push the Center Party to the right.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer = 0
 on-arrival: advisor_action_timer = 6; right_strength += 6; right_dissent -= 7; left_labor_dissent += 3
 
-We have increased the strength of the right within Zentrum. 
+We have increased the strength of the right within the Center Party. 
 
 @right_cooperation
 title: Cooperation with the right
