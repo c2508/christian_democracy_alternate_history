@@ -18,8 +18,8 @@ Heinrich Kohler is our longtime Finance Minister in Baden and was briefly the St
 @finance_ministry_
 title: Fiscal Policy
 subtitle: As Finance Minister, Kohler can enact tax policies.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if z_in_government = 0 : Zentrum is not in government: ?] [? if finance_minister_party != "Z" : Zentrum does not control the finance ministry. ?]
-choose-if: advisor_action_timer == 0 and spd_in_government == 1 and finance_minister_party == "Z"
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if z_in_government = 0 : The Center Party is not in government: ?] [? if finance_minister_party != "Z" : The Center Party does not control the finance ministry. ?]
+choose-if: advisor_action_timer == 0 and z_in_government == 1 and finance_minister_party == "Z"
 on-arrival: advisor_action_timer = 6; fiscal_policy_timer -= 6; last_advisor_action = 1
 go-to: fiscal_policy
 
