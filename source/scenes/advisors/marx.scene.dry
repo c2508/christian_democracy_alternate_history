@@ -7,20 +7,19 @@ new-page: true
 
 = Wilhelm Marx
 
-Marx [? if spd_prussia = 1 : is ?][? if spd_prussia = 0 : was ?] the Minister-President of Prussia, the largest state in Germany. He is a reformist leader who seeks to work with the bourgeois parties.
+Marx [? if year >= 1928 : was ?][? if year_1928 = 1 : is ?] the Chairman of the Center Party and former presidential candidate in 1925.
 
-- @coalition
+
+- @liberal_relation
 - @party_discipline
 - @root: Return to main
 
-@coalition
-title: Negotiating with the Coalition
-subtitle: Marx can improve our relationships with our centrist and center-[? if spd_government = 1 : left ?][? if spd_government = 0 : right ?] coalition partners in the Reichstag.
-choose-if: advisor_action_timer <= 0 and z_in_government = 1 
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if z_in_government = 0 : The Centre Party is not in government. ?]
-on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if spd_in_government = 1 and coalition_dissent > 0; z_relation += 6; ddp_relation += 6; dvp_relation += 2; dvp_relation += 3 if in_grand_coalition
-
-We have improved our relations with the [? if in_grand_coalition : Center (Zentrum) Party, [+ ddp_name +], and DVP, ?][? if not in_grand_coalition: Center (Zentrum) Party and [+ ddp_name +], ?] and reduced tensions with the coalition.
+@liberal_relation
+title: Liberal Relations
+subtitle: Forge closer cooperation with the centrist parties
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; ddp_relation += 6; dnvp_relation += 6; lvp_relation += 6
 
 @party_discipline
 title: Party Discipline
