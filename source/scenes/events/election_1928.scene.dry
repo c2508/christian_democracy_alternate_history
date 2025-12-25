@@ -1233,7 +1233,7 @@ Adam Stegerwald of the Center Party has been appointed labor minister.
 
 @interior
 title: Interior Ministry
-subtitle: Taking the Interior Ministry is expected of us. The Interior Ministry controls domestic security.
+subtitle: The Interior Ministry controls domestic security.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 5
@@ -1269,7 +1269,7 @@ Heinrich Bruning of the Center Party has been appointed Economic Minister.
 
 @justice
 title: Justice Ministry
-subtitle: The Justice Ministry controls the courts.
+subtitle: Taking the Justice Ministry is expected of us. The Justice Ministry controls the courts.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 10 
@@ -1306,7 +1306,7 @@ Andreas Hermes of the Center Party has been appointed Agriculture Minister.
 
 @reichswehr
 title: Reichswehr Ministry
-subtitle: The Ministry responsible for the armed forces is not typically our domain; General Groener and the bourgeois-conservatives will be displeased.
+subtitle: The Ministry responsible for the armed forces is not typically our domain.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 15 
@@ -1320,7 +1320,7 @@ Wilhelm Groener has been appointed Reichswehr Minister.
 
 @no_more
 title: No more ministries.
-subtitle: [? if leverage >= 10 : We still have some more leverage to gain ministries. ?][? if leverage < 10 : We do not have much leverage left. ?]
+subtitle: [? if leverage >= 5 : We still have some more leverage to gain ministries. ?][? if leverage < 5 : We do not have much leverage left. ?]
 tags: mins_1928
 
 This coalition arrangement is tolerable to all.
