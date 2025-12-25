@@ -102,14 +102,13 @@ if (Q.kpd_r >= Q.spd_r && Q.kpd_r >= Q.nsdap_r) {
 }
 
 // coalitions
-Q.weimar_coalition = Q.spd_r + Q.ddp_r + Q.z_minus_bvp_r + Q.csrp_r
-Q.grand_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r + Q.csrp_r
+Q.weimar_coalition = Q.spd_r + Q.ddp_r + Q.z_minus_bvp_r 
+Q.grand_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r 
 Q.bourgeois_coalition = Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r + Q.kvp_r + Q.wp_r + Q.dbp_r + Q.cnblp_r + Q.csvd_r + Q.csrp_r
 Q.center_right_coalition = Q.z_r + Q.ddp_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
 Q.right_coalition = Q.z_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
 Q.far_right_coalition = Q.dnvp_r + Q.nsdap_r;
 Q.left_coalition = Q.spd_r + Q.kpd_r + Q.sapd_r;
-// this is an absurd concept lol
 Q.popular_front_coalition = Q.spd_r + Q.kpd_r + Q.z_r + Q.ddp_r - 3 + Q.sapd_r;
 Q.anti_democratic_coalition = Q.kpd_r + Q.nsdap_r + Q.dnvp_r;
 // aka everyone except nazi, kpd, dnvp
@@ -300,14 +299,13 @@ go-to: coalition_menu
 {!</table>!}
 
 **Potential coalitions:**
+Weimar Coalition (<span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> + [? if ddp_exist: <span style="color: #DCCA4A;">**[+ ddp_name +]**</span>?][? if lvp_formed or nfvp_formed: <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span>?][? if aspd_exist and aspd_ideology = "Moderate": + <span style="color: #FE9E00;">**ASPD**</span>?][? if csrp_exist: + <span style="color: #FF6B21;">**CSRP**</span>?]): [+ weimar_coalition +]%
 
-Weimar Coalition (SPD + Z + [+ ddp_name +]): [+ weimar_coalition +]%
+Grand Coalition (<span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> + <span style="color: #69A2BE;">**BVP**</span> + [? if ddp_exist: <span style="color: #DCCA4A;">**[+ ddp_name +]**</span> + ?] <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span> [? if aspd_exist and aspd_ideology = "Moderate": + <span style="color: #FE9E00;">**ASPD**</span>?][? if csrp_exist:  + <span style="color: #FF6B21;">**CSRP**</span>?]): [+ grand_coalition +]%
 
-Grand Coalition (SPD + Z + BVP + [+ ddp_name +] + DVP): [+ grand_coalition +]%
+Bourgeois Coalition (<span style="color: #000000;">**Z**</span> + <span style="color: #69A2BE;">**BVP**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span> ?]+ <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span> + [? if dnvp_ideology = "Moderate": <span style="color: #3F7BC1;">**DNVP**</span> +  ?][? if kvp_formed: <span style="color: #455B95;">**KVP**</span> +  ?][? if wp_exist: <span style="color: #B8996F;">**WP**</span> +  ?][? if dbp_exist: <span style="color: #38C538;">**DBP**</span> +  ?][? if cnblp_exist: <span style="color: #7FCEB1;">**CNBLP**</span> +  ?][? if csvd_exist: <span style="color: #8ED8E4;">**CSVD**</span> +  ?][? if csrp_exist: <span style="color: #FF6B21;">**CSRP**</span> +  ?][? if aspd_exist and aspd_ideology = "Moderate": <span style="color: #FE9E00;">**ASPD**</span> +  ?] <span style="color: #909090;">**Others**</span>): [+ bourgeois_coalition +]%
 
-Bourgeois Coalition (Z + BVP + [+ ddp_name +] + DVP + Others): [+ bourgeois_coalition +]%
-
-Right-wing Coalition (Z + BVP + DVP + Others + DNVP): [+ right_coalition +]%
+Right-wing Coalition (<span style="color: #000000;">**Z**</span> + <span style="color: #69A2BE;">**BVP**</span> + <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span> + [? if wp_exist: <span style="color: #B8996F;">**WP**</span> +  ?][? if cnblp_exist: <span style="color: #7FCEB1;">**CNBLP**</span> +  ?][? if kvp_formed: <span style="color: #455B95;">**KVP**</span> +  ?][? if csvd_exist: <span style="color: #8ED8E4;">**CSVD**</span> +  ?] <span style="color: #3F7BC1;">**DNVP**</span> + <span style="color: #909090;">**Others**</span>): [+ right_coalition +]%
 
 [? if nazi_urgency <= 1 and nsdap_r >= 15 : The rapid rise in NSDAP votes is extremely worrying. Many had believed that the party was moribund; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
 
