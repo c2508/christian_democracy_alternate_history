@@ -317,7 +317,7 @@ There are some potential coalition arrangements.
 
 @coalition_menu
 
-- @spd_majority
+- @z_majority
 - @weimar_coalition
 - @grand_coalition
 - @new_grand_coalition
