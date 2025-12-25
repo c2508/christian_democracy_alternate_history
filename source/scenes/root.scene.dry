@@ -48,16 +48,18 @@ Q.dissent_percent = 5;
 // factions
 Q.factions = ['left_labor', 'center', 'right_labor', 'right', 'young_conservatives'];
 // should this be normalized to 100%?
+Q.left_strength = 10
+Q.left_dissent = 25
 Q.left_labor_strength = 20;
 Q.left_labor_dissent = 15;
 Q.center_strength = 40;
 Q.center_dissent = 0;
-Q.right_strength = 10;
+Q.right_strength = 20;
 Q.right_dissent = 5;
 Q.right_labor_strength = 25;
 Q.right_labor_dissent = 5;
 Q.young_conservatives_strength = 5;
-Q.young_conservatives_dissent = 10;
+Q.young_conservatives_dissent = 0;
 
 // secret events...
 Q.left_labor_unions_independent = 0;
