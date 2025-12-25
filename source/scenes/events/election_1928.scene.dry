@@ -538,35 +538,10 @@ In response to the KPD's entrance into the government, the right-wing immediatel
 @right_coalition
 title: A continuation of the previous governing coalition. 
 subtitle: Z + BVP + DVP + DNVP + Others ([+ right_coalition +]%)
-unavailable-subtitle: The DNVP is not interested in a coalition with the Center.
 view-if: right_coalition >= 50
-choose-if: year < 1929
+go to: ministries
 
 There are enough votes for a right-wing coalition of the Center (+ BVP), DVP, DNVP, and minor conservative parties. 
-
-- @right_coalition_sure: Yes, we will abdicate our responsibility for government formation, and let a right-wing coalition take power.
-- @grand_coalition: Actually, we wish to form a grand coalition after all.
-
-@no_right_coalition
-go-to: no_majority
-
-However, the DNVP and its leader Hugenberg is refusing to partake in a coalition with the "November criminals" in the our Party. Thus, there is no clear path towards a Reichstag majority.
-
-@right_coalition_sure
-subtitle: This will be extremely unpopular within our party.
-on-arrival: pro_republic -= 5; center_dissent += 15; left_dissent += 10; labor_dissent += 25; reformist_dissent += 25; neorevisionist_dissent += 15; z_relation -= 5; ddp_relation -= 5; dvp_relation -= 5
-go-to: right_coalition_2
-
-
-@right_coalition_2
-unavailable-subtitle: The DNVP is not interested in a coalition with the Center.
-view-if: right_coalition >= 50
-choose-if: year < 1929
-on-arrival: spd_in_government = 0; spd_toleration = 0; chancellor = "Brüning"; chancellor_party = "Z"; foreign_minister_party = "DVP"; interior_minister_party = "DNVP"; justice_minister_party = "DNVP"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = "DVP"; finance_minister_party = "Z"; agriculture_minister_party = "DNVP"; in_right_coalition = 1;
-
-Even though the DNVP is very reluctant to participate in such a coalition, they still accede to President Hindenburg's wishes. Thus, a majority center-right coalition is formed, with Brüning as chancellor.
-
-
 
 @no_majority
 title: There is no clear governing majority.
@@ -1158,7 +1133,7 @@ We have significant qualms about appointing Braun as chancellor, given that he i
 
 - @muller
 - @wels
-- @braun_2: Let the Center have their cabinet positions.
+- @braun_2: We will have our cabinet positions.
 
 @braun_2
 subtitle: Otto Braun will be Chancellor.
