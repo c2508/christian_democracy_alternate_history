@@ -1202,7 +1202,7 @@ go-to: right_coalition_post_spd if right_coalition >= 50 and president != "Braun
 
 
 @right_coalition_post_spd
-go-to: right_coalition_2
+go-to: right_coalition
 
 @new_elections_spd
 on-arrival: next_election_time = time+3; next_election_month = month + 3; next_election_year = year; next_election_year = year + 1 if next_election_month > 12; next_election_month = next_election_month - 12 if next_election_month > 12; new_middle_spd -= 5; old_middle_spd -= 5; workers_spd -= 3; catholics_spd -= 3; in_election = 1
