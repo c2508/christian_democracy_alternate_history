@@ -16,6 +16,7 @@ Whether or not we are in an electoral campaign, the party is always trying to br
 - @old_middle: The "old middle class" of small independent businessmen and artisans.
 - @rural: Rural workers and small farmers, affiliated with the right wing of our party.
 - @unemployed: The unemployed.
+- @catholics: The Catholics, our traditional voter base.
 - @root: We either don't want to or cannot campaign right now.
 - @easy_discard
 
@@ -47,7 +48,7 @@ We have increased our campaigning among the old middle class. [? if nationalism 
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: rural_z += 5*(1-dissent); resources -= 1; rural_z += 3*(1-dissent) if peoples_party == 1; rural_z += 3*(1-dissent) if rural_policy >= 2
+on-arrival: rural_z += 6*(1-dissent); resources -= 1; rural_z += 3*(1-dissent) if peoples_party == 1; rural_z += 3*(1-dissent) if rural_policy >= 2
 
 We have increased our campaigning among farmers. [? if peoples_party > 0: Our transformation into a Christian People's Party has allowed to appeal to Christians of all denominations.?][? if rural_policy >= 2 : Our rural policies have made it easier for us to build support among farmers. ?]
 
