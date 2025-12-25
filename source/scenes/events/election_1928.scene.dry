@@ -1045,7 +1045,7 @@ Unfortunately, the DVP and BVP are unwilling to enter into another coalition wit
 
 - @no_majority: Thus, there is no clear majority.
 - @brauns_dilemma
-- @right_coalition_2: Perhaps a right-wing coalition may form.
+- @right_coalition: Perhaps a right-wing coalition may form.
 - @beg_dvp: Perhaps we could ask the DVP to change their minds?
 - @unity_government
 - @coalition_menu: What are the other governing arrangements?
