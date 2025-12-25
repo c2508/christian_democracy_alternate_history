@@ -131,6 +131,7 @@ Q.kpd_coalition_dissent = 0;
 Q.spd_in_government = 0;
 Q.in_weimar_coalition = 0;
 Q.in_grand_coalition = 0;
+Q.in_bourgeois_coalition = 0;
 Q.in_left_front = 0;
 Q.in_popular_front = 0;
 Q.in_emergency_government = 0;
@@ -554,7 +555,6 @@ title: We can form a right wing coalition.
 subtitle: Z + BVP + DVP + DNVP + Others ([+ right_coalition +]%)
 view-if: right_coalition >= 50
 on arrival: in_right_coalition = 1
-go to: ministries
 
 There are enough votes for a right-wing coalition of the Center (+ BVP), DVP, DNVP, and minor conservative parties. 
 
