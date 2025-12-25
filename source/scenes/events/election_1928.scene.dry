@@ -732,45 +732,43 @@ There is no path to a majority government for now. The scheming around President
 
 # if NSDAP is largest party and Hindenburg is president, then Hindenburg appoints Hitler chancellor.
 
-@spd_majority
-title: Zentrum majority alone
+@z_majority
+title: Center Party majority alone
 subtitle: Z: [+ z_r +]%
 view-if: z_r >= 50
-on-arrival: chancellor = "Empty"; chancellor_party = "Z"; z_in_government = 1; in_z_majority = 1; pro_republic += 5; foreign_minister_party = "SPD"; foreign_minister = "Breitscheid"; interior_minister_party = "SPD"; interior_minister = "Severing"; justice_minister_party = "SPD"; justice_minister = "Radbruch"; labor_minister_party = "SPD"; labor_minister = "Wissell"; reichswehr_minister_party = "SPD"; reichswehr_minister = "Leber"; economic_minister_party = "SPD"; economic_minister = "Schmidt"; finance_minister_party = "SPD"; finance_minister = "Hilferding"; agriculture_minister_party = "SPD"; agriculture_minister = "Baade"; reichswehr_loyalty -= 0.05; 
+on-arrival: chancellor = "Empty"; chancellor_party = "Z"; z_in_government = 1; in_z_majority = 1; pro_republic += 5; foreign_minister_party = "Z"; foreign_minister = "Bruning"; interior_minister_party = "Z"; interior_minister = "Wirth"; justice_minister_party = "Z"; justice_minister = "Guerard"; labor_minister_party = "Z"; labor_minister = "Stegerwald"; reichswehr_minister_party = "Z"; reichswehr_minister = "Groener"; economic_minister_party = "Z"; economic_minister = "Bruning"; finance_minister_party = "Z"; finance_minister = "Kohler"; agriculture_minister_party = "Z"; agriculture_minister = "Hermes"; 
 achievement: majority_party
 
-Finally, Zentrum can govern alone! Our long campaign of electioneering has paid off. We do not need to worry about coalition government; anything is possible. 
+Finally, the Center Party can govern alone! Our long campaign of electioneering has paid off. We do not need to worry about coalition government; anything is possible. 
 
 Who should be chancellor?
 
 - @bruning_majority_chancellor: Heinrich Bruning for Chancellor.
-- @breitscheid_majority_chancellor: Rudolf Breitscheid for Chancellor.
-- @muller_majority_chancellor: Hermann Müller for Chancellor.
-- @wels_majority_chancellor: Otto Wels for Chancellor.
+- @wirth_majority_chancellor: Joseph Wirth for Chancellor.
+- @adenauer_majority_chancellor: Konrad Adenauer for Chancellor.
+- @guerard_majority_chancellor: Theodor von Guerard for Chancellor.
 
 @bruning_majority_chancellor
 view-if: not historical_mode or not spd_prussia
 on-arrival: chancellor = "Bruning"
 
-[? if president == "Bruning": Our experts have checked the constitution, and have discovered that there is no specific prohibition against the Chancellor also being the President (the President may not be a member of the Reichstag; there is no law saying that the Chancellor must be a member of the Reichstag). Thus, we have Chancellor-President Otto Braun. ?]
-[? if president != "Bruning": Otto Braun has become chancellor of the SPD majority. ?]
+[? if president == "Bruning": Our experts have checked the constitution, and have discovered that there is no specific prohibition against the Chancellor also being the President (the President may not be a member of the Reichstag; there is no law saying that the Chancellor must be a member of the Reichstag). Thus, we have Chancellor-President Heinrich Bruning. ?]
+[? if president != "Bruning": Heinrich Bruning has become chancellor of the Center Party majority. ?]
 
-@breitscheid_majority_chancellor
-on-arrival: chancellor = "Breitscheid"
+@wirth_majority_chancellor
+on-arrival: chancellor = "Wirth"
 
-Rudolf Breitscheid has become chancellor of the SPD majority.
+Joseph Wirth has become chancellor of the Center Party majority.
 
-@muller_majority_chancellor
-view-if: muller_dead = 0
-on-arrival: chancellor = "Müller"
+@adenauer_majority_chancellor
+on-arrival: chancellor = "Adenauer"
 
-Hermann Müller has become chancellor of the SPD majority.
+Konrad Adenauer has become chancellor of the Center Party majority.
 
-@wels_majority_chancellor
-view-if: muller_dead = 1
-on-arrival: chancellor = "Wels"
+@guerard_majority_chancellor
+on-arrival: chancellor = "Guerard"
 
-Otto Wels has become chancellor of the SPD majority.
+Theodor von Guerard has become chancellor of the CEnter Party majority.
 
 # TODO: Otto Wels should be able to be chancellor of a Grand Coalition, Weimar Coalition, or SPD majority after Müller dies.
 
