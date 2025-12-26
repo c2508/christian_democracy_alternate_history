@@ -159,7 +159,7 @@ Q.rb_banned = 0;
 Q.z_rb = 1;
 Q.z_endorse_rb = 0;
 Q.z_sh = 0;
-Q.rb_unity = spd_relation * (1 - dissent) * 1.1;
+Q.rb_unity = spd_relation*(1-dissent)*(1.1)
 Q.z_dominance = 15;
 
 Q.interior_police_strength = 50;
