@@ -29,7 +29,7 @@ title: Cooperation with the right
 subtitle: Push the party to be more friendly towards the right wing parties.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer = 0
-on-arrival: advisor_action_timer = 6; dnvp_relation += 4(1-dissent); dvp_relation += 2*(1-dissent); left_labour_dissent += 2; left_dissent += 5; nsdap_relation += 4(1-dissent); right_strength += 3
+on-arrival: advisor_action_timer = 6; dnvp_relation += 4*(1-dissent); dvp_relation += 2*(1-dissent); left_labour_dissent += 2; left_dissent += 5; nsdap_relation += 4*(1-dissent); right_strength += 3
 
 
 We have increased relations with the right wing parties. 
