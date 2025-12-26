@@ -627,7 +627,7 @@ if not achievement_game_completed
     subtitle: Saving, loading, and polls will be disabled. Not recommended for a first playthrough.
 end
 
-on-arrival: {!
+on-arrival: !{
 Q.difficulty = 2;
 Q.historical_mode = 1;
 Q.resources = 2;
