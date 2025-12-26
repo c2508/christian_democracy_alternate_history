@@ -16,7 +16,7 @@ In addition to being a political party, the Centre Party is a social world onto 
 - @radio_2: Fund the building up of our radio network. 
 - @radio_3: Keep building up our radio network. 
 - @radio_4: Keep on supporting our radio network. 
-- @welfare: Fund more mutual aid and welfare programs.
+- @charity: Fund more Catholic charities.
 - @culture: Fund sports leagues, educational, and cultural programs.
 - @rb: Fund the Reichsbanner, our self-defense organization.
 - @youth: Fund the Windthorstbund, our Catholic youth organization.
@@ -59,13 +59,13 @@ We are continuing to invest in our radio stations. Both commercial and political
 # TODO: differing outcomes based on whether you've seen media, and what kind of media you've supported.
 
 
-@welfare
+@charity
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
 on-arrival: resources -= 1; workers_aid += 1; unemployed_z += 5*(1 - dissent);
 
-We have increased funding to Workers' Welfare. [? if black_thursday_seen > 0 : In an age of economic crisis, this will be helpful for improving our standing among the unemployed. ?]
+We have increased funding to Catholic Charities. [? if black_thursday_seen > 0 : In an age of economic crisis, this will be helpful for improving our standing among the unemployed. ?]
 
 @culture
 choose-if: resources > 0
