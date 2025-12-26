@@ -51,7 +51,7 @@ The center-right parties are committed to the military and deeply suspicious of 
 @train_rb
 subtitle: -1 budget
 choose-if: budget >= 1 and reichswehr_loyalty > 0.65 and z_rb = 1 and z_endorse_rb = 1
-unavailable-subtitle: [? if budget < 1 : We do not have the budget. ?][? if reichswehr_loyalty <= 0.65 : The Reichswehr is not loyal to the democratic government. ?]][? if z_rb = 0 : The Center Party is not part of the Reichsbanner. ?]][? if z_endorse_rb = 0 : The Center Party does not officially endorse the Reichsbanner. ?]
+unavailable-subtitle: [? if budget < 1 : We do not have the budget. ?][? if reichswehr_loyalty <= 0.65 : The Reichswehr is not loyal to the democratic government. ?][? if z_rb = 0 : The Center Party is not part of the Reichsbanner. ?][? if z_endorse_rb = 0 : The Center Party does not officially endorse the Reichsbanner. ?]
 on-arrival: budget -= 1; rb_militancy += 0.08; z_dominance += 5
 
 The loyal sections of the Reichswehr can be used to train the Reichsbanner.
