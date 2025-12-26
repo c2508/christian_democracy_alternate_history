@@ -7,13 +7,13 @@ new-page: true
 
 = Heinrich Brauns
 
-Brauns has been our long time labor minister and is an expert on social policy issues.
+Brauns has been a mainstay in the Labor Ministry, with a pivotal role in shaping the social policy of the Weimar Republic. 
 
 - @union_unity
 - @organising
-- @support_peoples_party
-- @build_peoples_party
-- @campaigning_peoples_party
+- @support_christian_party
+- @build_christian_party
+- @campaigning_christian_party
 - @root: Return to main
 
 @union_unity
@@ -32,32 +32,32 @@ choose-if: advisor_action_timer <= 0
 unavailable subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 on-arrival: advisor_action_timer = 6; workers_z += 5*(1-dissent); right_labor_strength += 2
 
-
-@support_peoples_party
-title: Build support for a People's Party
+@support_christian_party
+title: Build support for an interconfessional Christian Party
 subtitle: Can we expand our party beyond Catholics?
 view-if: peoples_party = 0
 choose-if: peoples_party_support <= 4 and advisor_action_timer = 0 and peoples_party = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if peoples_party_support > 4: There is already substantial support for a People's Party. ?]
-on-arrival: advisor_action_timer = 6; peoples_party_support += 1; left_labor_dissent += 2; center_dissent += 2
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if peoples_party_support > 4: There is already substantial support for an interconfessional Christian Party. ?]
+on-arrival: advisor_action_timer = 6; peoples_party_support += 1; left_labor_dissent += 2; left_dissent += 2; center_dissent += 1
 
-We are building up support for the idea of a People's Party.
+We are building up support for the idea of an interconfessional Christian Party.
 
-@build_peoples_party
-title: Building a People's Party
+@build_christian_party
+title: Building an interconfessional Christian Party
 subtitle: Can we expand our party beyond Catholics?
 view-if: peoples_party = 0
-choose-if: peoples_party_support >= 4 and advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if peoples_party_support < 4: There is not enough support for this policy within the party. ?]
-on-arrival: advisor_action_timer = 6; left_labor_dissent += 5; center_dissent += 5
-go-to: peoples_party
+choose-if: peoples_party_support >= 3 and advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if peoples_party_support < 3: There is not enough support for this policy within the party. ?]
+on-arrival: advisor_action_timer = 6; left_labor_dissent += 5; left_dissent += 5; center_dissent += 3
+go-to: christian_party
 
-@campaigning_peoples_party
-title: Campaigning as a People's Party
+
+@campaigning_christian_party
+title: Campaigning as an interconfessional Christian Party
 subtitle: Campaigning with some of our previously nontraditional demographics.
 view-if: peoples_party = 1
 choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 on-arrival: advisor_action_timer = 6;
-go-to: peoples_party_campaigning
+go-to: christian_party_campaigning
 
