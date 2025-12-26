@@ -79,13 +79,14 @@ if (Q.unemployed <= 1) {
 var total_strength = Q.left_labor_strength + Q.center_strength + Q.right_labor_strength + Q.right_strength + Q.young_conservatives_strength;
 
 // normalize strength for the different factions
+Q.left_strength = 100*Q.left_strength/total_strength;
 Q.left_labor_strength = 100*Q.left_labor_strength/total_strength;
 Q.center_strength = 100*Q.center_strength/total_strength;
 Q.right_labor_strength = 100*Q.right_labor_strength/total_strength;
 Q.right_strength = 100*Q.right_strength/total_strength;
 Q.young_conservatives_strength = 100*Q.young_conservatives_strength/total_strength;
 
-var total_dissent = Q.left_labor_strength*Q.left_labor_dissent + Q.center_strength*Q.center_dissent + Q.right_labor_strength*Q.right_labor_dissent + Q.right_strength*Q.right_dissent + Q.young_conservatives_strength*Q.young_conservatives_dissent;
+var total_dissent = Q.left_strength*Q.left_dissent + Q.left_labor_strength*Q.left_labor_dissent + Q.center_strength*Q.center_dissent + Q.right_labor_strength*Q.right_labor_dissent + Q.right_strength*Q.right_dissent + Q.young_conservatives_strength*Q.young_conservatives_dissent;
 
 
 Q.dissent = 0.01*total_dissent/total_strength;
@@ -487,6 +488,8 @@ if (typeof window !== "undefined" && window.generateBar) {
 go-to: events_choice if has_event = 1; main if has_event = 0 and difficulty >= 0; main.main_easy if has_event = 0 and difficulty < 0
 
 = [+ month : month +] [+ year +]
+
+Q.rb_unity = spd_relation*(1-dissent)*(1.1)
 
 @events_choice
 
