@@ -32,7 +32,7 @@ choose-if: advisor_action_timer <= 0
 unavailable subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 on-arrival: advisor_action_timer = 6; workers_z += 5*(1-dissent); right_labor_strength += 2
 
-@support_christian_party
+@support_peoples_party
 title: Build support for an interconfessional Christian Party
 subtitle: Can we expand our party beyond Catholics?
 view-if: peoples_party = 0
@@ -42,17 +42,17 @@ on-arrival: advisor_action_timer = 6; peoples_party_support += 1; left_labor_dis
 
 We are building up support for the idea of an interconfessional Christian Party.
 
-@build_christian_party
+@build_peoples_party
 title: Building an interconfessional Christian Party
 subtitle: Can we expand our party beyond Catholics?
 view-if: peoples_party = 0
 choose-if: peoples_party_support >= 3 and advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if peoples_party_support < 3: There is not enough support for this policy within the party. ?]
 on-arrival: advisor_action_timer = 6; left_labor_dissent += 5; left_dissent += 5; center_dissent += 3
-go-to: christian_party
+go-to: peoples_party
 
 
-@campaigning_christian_party
+@campaigning_peoples_party
 title: Campaigning as an interconfessional Christian Party
 subtitle: Campaigning with some of our previously nontraditional demographics.
 view-if: peoples_party = 1
