@@ -28,14 +28,28 @@ title: Party Discipline
 subtitle: Reduce dissent across the party.
 choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; left_dissent -= 10; left_labor_dissent -= 10; center_dissent -= 10; right_labour_dissent -=10; right_dissent -= 10; young_conservatives_dissent -= 10
+on-arrival: advisor_action_timer = 6; left_dissent -= 10; left_labor_dissent -= 10; center_dissent -= 10; right_labor_dissent -= 10; right_dissent -= 10; young_conservatives_dissent -= 10
+
 We have enforced party discipline to reduce dissent across all factions.
 
 @coalition
 title: Negotiating with the Coalition
-subtitle: Braun can improve our relationships with our centrist and center-right coalition partners in Prussia as well as in the Reichstag.
-choose-if: advisor_action_timer <= 0 and z_prussia = 1
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if not z_prussia : The <span style="color: #c00000;">Center</span> is not in the Prussian government. ?]
-on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if spd_in_government = 1 and coalition_dissent > 0; spd_relation += 4; ddp_relation += 4; dvp_relation += 2; lvp_relation += 4; dvp_relation += 2 if in_grand_coalition; dvp_relation += 2 if in_grand_coalition_prussia; dvp_left += 1 if in_grand_coalition_prussia; lvp_left += 0.5; ddp_left += 0.25;
+subtitle: Hess can improve our relationships with our coalition partners in Prussia.
+choose-if: advisor_action_timer = 0 and z_prussia = 1
+unavailable-subtitle:
+  [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+  [? if not z_prussia : The <span style="color: #c00000;">Center</span> is not in the Prussian government. ?]
 
-We have improved our relations with the [? if in_grand_coalition : [? if z_party_name != "CVP": <span style="color: #000000;">Center</span> (<span style="color: #000000;">**Zentrum**</span>)?][? if z_party_name == "CVP": <span style="color: #000000;">**Christian People's**</span> (<span style="color: #000000;">**CVP**</span>)?] Party[? if not lvp_formed:, <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, and <span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed:&nbsp;and <span style="color: #FFCC00;">**LVP**</span>?], ?][? if not in_grand_coalition and not in_grand_coalition_prussia: [? if z_party_name != "CVP": <span style="color: #000000;">Center</span> (<span style="color: #000000;">**Zentrum**</span>)?][? if z_party_name == "CVP": <span style="color: #000000;">**Christian People's**</span> (<span style="color: #000000;">**CVP**</span>)?] Party[? if not lvp_formed:&nbsp;and <span style="color: #D3C24D;">**[+ ddp_name +]**</span>,?][? if lvp_formed:&nbsp;and <span style="color: #FFCC00;">**LVP**</span>,?];">Center</span> (<span style="color: #000000;">**Zentrum**</span>)?][? if z_party_name == "CVP": <span style="color: #000000;">**Christian People's**</span> (<span style="color: #000000;">**CVP**</span>)?] Party[? if not lvp_formed:, <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, and <span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed:&nbsp;and <span style="color: #FFCC00;">**LVP**</span>?] ?] and reduced tensions with the coalition. 
+on-arrival:
+  advisor_action_timer = 6;
+  spd_relation += 4 if in_grand_coalition_prussia;
+  ddp_relation += 4 if in_grand_coalition_prussia;
+  dvp_relation += 2 if in_grand_coalition_prussia;
+  lvp_relation += 4 in_grand_coalition_prussia;
+  dvp_relation += 2 if in_grand_coalition_prussia;
+  dvp_left += 1 if in_grand_coalition_prussia;
+  lvp_left += 0.5;
+  ddp_left += 0.25;
+
+We have improved our relations with our coalition partners and reduced tensions within the government.
+
