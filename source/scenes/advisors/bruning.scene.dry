@@ -1,6 +1,6 @@
 title: Heinrich Brüning
 is-pinned-card: true 
-tags: advisor, right labor 
+tags: advisor, right_labor 
 card-image: img/portraits/BrüningHeinrich.jpg
 new-page: true
 view-if: bruning_advisor = 1
