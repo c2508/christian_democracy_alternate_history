@@ -1,5 +1,5 @@
 title: Friedrich Dessauer
-is-pinned-card: true, left
+is-pinned-card: true
 tags: advisor
 card-image: img/portraits/SchumacherKurt.jpg
 view-if: dessauer_advisor = 1
