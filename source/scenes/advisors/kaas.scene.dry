@@ -17,23 +17,25 @@ new-page: true
 
 @negotiate_prussian_concordat_
 title: Negotiate a Concordat in Prussia
+subtitle: Kaas leverages his contacts within the Vatican to start negotiations for a Prussian Concordat.
 view-if: prussian_concordat_progress < 3 and z_prussia = 1
-on-arrival: prussian_concordat_progress += 1; left_labor_dissent -= 2; right_labor_dissent -= 2; center_dissent -= 2; right_dissent -= 2
+on-arrival: prussian_concordat_progress += 1; left_labor_dissent -= 2; right_labor_dissent -= 2; left_dissent -= 2; center_dissent -= 2; right_dissent -= 2
 
 We are making progress towards negotiating a concordat between Prussia and the Catholic church.
 
 
 @sign_prussian_concordat_
 title: We can sign a Concordat in Prussia now
+subtitle: We are done negotiating the terms of a Prussian Concordat.
 view-if: prussian_concordat_progress >= 3 and prussian_concordat = 0 and z_prussia = 1
-on-arrival: prussian_concordat = 1; catholics_z += 5*(1-dissent); left_labor_dissent -= 6; right_labor_dissent -= 6; center_dissent -= 6; right_dissent -= 6
+on-arrival: prussian_concordat = 1; catholics_z += 5*(1-dissent); left_dissent -= 6; left_labor_dissent -= 6; right_labor_dissent -= 6; center_dissent -= 6; right_dissent -= 6
 
 We have signed a Concordat between the Free State of Prussia and the Roman Catholic Church, guaranteeing religious freedom for Catholics in Prussia. This sets the stage for the negotiation of a national Concordat covering all of Germany.
 
 
 @vatican_funding_
 title: Vatican Funding  
-subtitle: Kaas leverages his contacts within the Vatican to secure some funding for Zentrum.
+subtitle: Kaas leverages his contacts within the Vatican to secure some funding for the Center Party.
 unavailable-subtitle: [? if not lateran_treaty_ratified: We must wait for the ratification of the Lateran Treaty in Italy. ?]
 choose-if: lateran_treaty_ratified == 1 
 on-arrival: advisor_action_timer = 6; resources += 2 
