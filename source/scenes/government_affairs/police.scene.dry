@@ -15,6 +15,7 @@ As with the state police units and the Reichswehr, the internal police tends to 
 - @loyalty: Improve the loyalty of the Interior Ministry forces.
 - @investigate_corruption: Investigate corruption by big businesses.
 - @investigate_far_right: Investigate illegal activity among the far right.
+- @investigate_far_left: Investigate illegal activity among the far left.
 - @domestic_enemies: Investigate or ban our domestic enemies.
 - @deport_hitler
 - @root: Take no action for now.
@@ -55,7 +56,19 @@ on-arrival: investigate_far_right += 1; sa_strength -= 20; workers_nsdap -= 3; n
 
 [? if coup_progress >= 6: There are reports of an imminent coup by the far-right. We have attempted to disrupt some of these plans, but the threat is still present. ?]
 
-
 @investigate_far_right_failure
+
+Unfortunately, our investigations have failed to turn up anything. Rumors are that the targets of our investigation were tipped off by infiltrators within the police.
+
+@investigate_far_left
+go-to: investigate_far_left_success if interior_police_loyalty >= 0.10; investigate_far_left_failure if interior_police_loyalty < 0.10
+
+@investigate_far_left_success
+on-arrival: investigate_far_left += 1; rfb_strength -= 20; workers_kpd -= 3; unemployed_kpd -= 3; kpd_urgency += 1; coup_progress -= 1 if coup_progress >= 7
+
+[? if investigate_far_left == 1 : We have discovered a secret cache of documents from the KPD detailing their plan to violently take over the country. This is an anti-constitutional plot, and will be publicized and persecuted. ?]
+[? if investigate_far_left > 1 : Of course the Communists are doing crimes; everyone knows that. Now, we finally have proof. ?]
+
+@investigate_far_left_failure
 
 Unfortunately, our investigations have failed to turn up anything. Rumors are that the targets of our investigation were tipped off by infiltrators within the police.
