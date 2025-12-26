@@ -14,6 +14,8 @@ The Reichswehr is a deeply reactionary institution that has been generally hosti
 - @increase_funding: Increase funding for the military to purchase its loyalty.
 - @decrease_funding: Reduce funding for the military so we have more for social spending.
 - @reform: Conduct a thorough reform of the ranks, reducing the influence of reactionaries and making it more hospitable to us.
+- @train_rb: Use the Reichswehr to train the Reichsbanner.
+- @train_sh: Use the Reichswehr to train the Stalhelm.
 - @root: No change to military policy.
 - @easy_discard
 - @cancel_advisor_action
@@ -30,7 +32,7 @@ The military and the center-right parties are pleasantly surprised that we would
 subtitle: +1 budget
 unavailable-subtitle: There is nothing left to cut.
 choose-if: reichswehr_strength > 0
-on-arrival: budget += 1; coalition_dissent += 1 if in_grand_coalition == 1; dvp_relation -= 8; reichswehr_militancy -= 1; reichswehr_strength -= 20; sh_strength += 15; sa_strength += 5; sh_militancy += 0.05; reichswehr_loyalty -= 0.05 if reichswehr_loyalty > 0; coup_progress += 1; coup_progress += 1 if reichswehr_loyalty < 0.2; coup_progress += 1 if reichswehr_loyalty < 0.1; coup_progress += 1 if reichswehr_loyalty <= 0; reichswehr_goal_completed = 1; economic_growth -= 0.1
+on-arrival: budget += 1; coalition_dissent += 1 if in_grand_coalition == 1; right_dissent += 10; spd_relation += 8; dvp_relation -= 8; reichswehr_militancy -= 1; reichswehr_strength -= 20; sh_strength += 15; sa_strength += 5; sh_militancy += 0.05; reichswehr_loyalty -= 0.05 if reichswehr_loyalty > 0; coup_progress += 1; coup_progress += 1 if reichswehr_loyalty < 0.2; coup_progress += 1 if reichswehr_loyalty < 0.1; coup_progress += 1 if reichswehr_loyalty <= 0; reichswehr_goal_completed = 1; economic_growth -= 0.1
 
 The military has fewer guns and fewer soldiers. There is no hint of a coup yet, but we do not know where the line will be drawn. The center-right parties are committed to the military and deeply opposed to our budget cuts.
 
@@ -40,8 +42,24 @@ Many demobilized soldiers have joined the right-wing paramilitaries such as the 
 subtitle: -1 budget
 choose-if: budget >= 1 and reichswehr_loyalty < 1
 unavailable-subtitle: [? if budget < 1 : We do not have the budget. ?][? if reichswehr_loyalty >= 1 : The Reichswehr is already fully loyal to the democratic government. ?]
-on-arrival: coalition_dissent += 1 if in_grand_coalition == 1; reichswehr_loyalty += 0.15; reichswehr_militancy -= 0.5 if reichswehr_loyalty < 0.5; budget -= 1; coup_progress += 1; dvp_relation -= 5; pacifism += 1; democratization += 1;
+on-arrival: coalition_dissent += 1 if in_grand_coalition == 1; reichswehr_loyalty += 0.15; reichswehr_militancy -= 0.5 if reichswehr_loyalty < 0.5; budget -= 1; coup_progress += 1; spd_relation += 5; dvp_relation -= 5; pacifism += 1; democratization += 1;
 
 Our efforts are at least somewhat successful; we have changed the recruiting and training patterns so that more soldiers from non-reactionary backgrounds can join, hopefully changing the culture of the forces. We have also removed some of the officers who supported the previous Kapp putsch.
 
 The center-right parties are committed to the military and deeply suspicious of our efforts to reform it.
+
+@train_rb
+subtitle: -1 budget
+choose-if: budget >= 1 and reichswehr_loyalty > 0.65 and z_rb = 1 and z_endorse_rb = 1
+unavailable-subtitle: [? if budget < 1 : We do not have the budget. ?][? if reichswehr_loyalty <= 0.65 : The Reichswehr is not loyal to the democratic government. ?]][? if z_rb = 0 : The Center Party is not part of the Reichsbanner. ?]][? if z_endorse_rb = 0 : The Center Party does not officially endorse the Reichsbanner. ?]
+on-arrival: budget -= 1; rb_militancy += 0.08; z_dominance += 5
+
+The loyal sections of the Reichswehr can be used to train the Reichsbanner.
+
+@train_sh
+subtitle: -1 budget
+choose-if: budget >= 1 and z_sh = 1
+unavailable-subtitle: [? if budget < 1 : We do not have the budget. ?][? if z_sh = 0 : The Center Party is not part of the Stalhelm. ?]
+on-arrival: budget -= 1; sh_militancy += 0.08; z_dominance += 5
+
+The Reichswehr can be used to train the Stalhelm.
