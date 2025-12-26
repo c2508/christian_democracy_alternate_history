@@ -1,4 +1,4 @@
-title: Building a People's Party
+title: Building a Christian Party
 new-page: true
 is-card: true
 card-image: img/poster_0.jpg
@@ -6,18 +6,17 @@ view-if: peoples_party_support >= 3 and peoples_party = 0 and peoples_party_time
 on-arrival: peoples_party_timer = 6
 tags: party_affairs
 max-visits: 4
-#subtitle: Can Zentrum move beyond the Catholics?
+#subtitle: Can the Center Party move beyond the Catholics?
 
-= Building a People's Party
+= Building a Christian Party
 
-Contrary to orthodox Marxist predictions, the industrial proletariat is not constantly increasing in size. The rapid growth of the "new middle class" of white-collar workers and the persistence of small farmers and the peasantry confound predictions of a working-class majority.
+Formed during the time of Bismarck, the Center Party was able to fight back the oppressive policies of the Kulterkampf and defended the rights of German Catholics.
+However, with only the support of Catholics, the Center Party will not be able to get out of its perpetual minority position. As such, some in the party have talked about "leaving the tower" to appeal to the broader Protestant electorate. 
 
-In order to build a socialist majority, many reformists and neorevisionists are calling for our party to move beyond the urban working class, to embrace the concerns of the middle class, farmers, and women of all classes. We can create a new and inclusive vision of the party that encompasses all people who work for a living, which is almost everyone in the country save the aristocrats and top capitalists.
-
-- @support_peoples_party: Yes, we must become a people's party!
-- @build_support: We must build additional support before becoming a people's party.
-- @support_peoples_party_hard: Despite strong opposition from the Center and Left factions, we will become a people's party.
-- @no_new_ideas: No, we will always be a party of the working class.
+- @support_peoples_party: Yes, we must become an interconfessional Christian Party!
+- @build_support: We must build additional support before becoming an interconfessional Christian Party.
+- @support_peoples_party_hard: Despite strong opposition from the Center and Left factions, we will become an interconfessional Christian Party.
+- @no_new_ideas: No, we will always be a party for Catholics.
 - @root: Perhaps we can discuss this at a later time.
 - @easy_discard
 - @cancel_advisor_action
@@ -26,7 +25,7 @@ In order to build a socialist majority, many reformists and neorevisionists are 
 view-if: (center_strength + right_labor_strength < left_labor_strength + right_strength) or peoples_party_support < 5
 on-arrival: peoples_party_support += 1; center_strength += 5; left_labor_strength -= 5; left_labor_dissent += 5; right_labor_strength += 5; right_strength -= 5; right_dissent += 5
 
-Within our party, we are pushing forward proposals for a people's party against the Left Labor and Right factions.
+Within our party, we are pushing forward proposals for a people's party against the Left and Center wings.
 
 
 @support_peoples_party
@@ -35,7 +34,7 @@ unavailable-subtitle: The opposition is too strong.
 on-arrival: center_strength += 15; right_labor_strength += 15; center_dissent -= 10; right_labor_dissent -= 10; peoples_party = 1; workers_z += 8; rural_z += 8; new_middle_z += 8; old_middle_z += 8; catholics_z -= 12; left_labor_dissent += 20; right_dissent += 25; kpd_relation -= 10; kpd_coalition_dissent += 1; coalition_dissent -= 1; spd_relation -= 5*(1-dissent); dnvp_relation += 5*(1-dissent)
 achievement: volkspartei
 
-In an emergency conference, we have decided to become a people's party that encompasses all of the regular people of Germany, not just the workers and urban poor. The Left and Center claim that our new party platform is a betrayal of our founding principles, a turn away from Marxism towards bourgeois opportunism. Whatever the case, we are now a party representing all of the people, not just the proletariat.
+In an emergency conference, we have decided to become an interconfesionl Christian Party that encompasses all of the regular people of Germany, not just Catholics. The Left and Center claim that our new party platform is a betrayal of our founding principles, a turn away from Political Catholicism. Whatever the case, we are now a party representing all of the people, not just Catholics.
 
 Should we run a new campaign to publicize our new platform?
 
