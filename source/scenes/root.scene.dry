@@ -659,7 +659,10 @@ music/1928_1933/Wann_wir_schreiten_Seit_an_Seit.mp3 \
 music/1930_1933/Internationale-de_normalized.ogg \
 music/1928_1930/LiedDerPompadour.mp3 \
 music/1928_1933/SozialistenMarsch.mp3
-go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
+@if difficulty >= 0
+    go-to main
+@else
+    go-to main.main_easy
 
 = 1928
 
