@@ -8,11 +8,12 @@ view-if: bruning_advisor = 1
 = Heinrich Brüning
 
 
-Brüning is our lead economist and managing director of the DGB.
+Bruning is our lead economist and the managing director of the Christian Trade Union Federation (DGB). With many connections to the political right, he is a rising star in the party.
 
 - @coalition
 - @bruning_international
 - @bruning_foreign
+- @snap_election
 - @root: Return to main
 
 @coalition
@@ -39,3 +40,12 @@ unavailable-subtitle: [? if not z_in_government: The Center Party is not in gove
 choose-if: advisor_action_timer == 0 and z_in_government and foreign_minister_party == "Z"
 on-arrival: advisor_action_timer = 6; foreign_policy_timer -= 8; last_advisor_action = 1
 go-to: foreign_policy
+
+@snap_election
+title: Snap Election
+subtitle: Call a snap election.
+unavailable-subtitle: [? if chancellor != "Bruning" : Bruning must be Chancellor. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer == 0 and chancellor == "Bruning"
+on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12;
+
+We have called for new elections, set for [+ next_election_month : month +] [+ next_election_year +].
