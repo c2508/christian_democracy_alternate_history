@@ -12,7 +12,7 @@ new-page: true
 
 - @negotiate_prussian_concordat_
 - @sign_prussian_concordat_
-- @vatican_funding_
+- @concordat_negotiate
 - @root: Return to main
 
 @negotiate_prussian_concordat_
@@ -34,13 +34,10 @@ on-arrival: prussian_concordat = 1; catholics_z += 5*(1-dissent); left_dissent -
 
 We have signed a Concordat between the Free State of Prussia and the Roman Catholic Church, guaranteeing religious freedom for Catholics in Prussia. This sets the stage for the negotiation of a national Concordat covering all of Germany.
 
+@concordat_negotiate
+title: Negotiate a Concordat between the Germany and the Vatican.
+view-if: (prussian_concordat = 1 or not spd_prussia) and reichskonkordat = 0 and reichskonkordat_progress < 4
+on-arrival: reichskonkordat_progress += 1; reichskonkordat_progress += 1 if z_leader == "Kaas"; dvp_relation -= 1; ddp_relation -= 2; ddp_cohesion -= 0.25; lvp_relation -= 1
 
-@vatican_funding_
-title: Vatican Funding  
-subtitle: Kaas leverages his contacts within the Vatican to secure some funding for the Center Party.
-unavailable-subtitle: [? if not lateran_treaty_ratified: We must wait for the ratification of the Lateran Treaty in Italy. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-choose-if: lateran_treaty_ratified == 1 
-on-arrival: advisor_action_timer = 6; resources += 2 
-
-We have gained two resources. 
+Using his connections to the Vatican, Kaas is able to speed up concordat negotiations. We are working towards the signing of a Concordat, an agreement between the Vatican and the Republic that formally recognizes the Church's rights and interests in the country.
 
