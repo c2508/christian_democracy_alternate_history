@@ -7,21 +7,21 @@ new-page: true
 
 = Heinrich Imbusch
 
-Imbusch is the chairman of the Christian Miners' Union and is on the Executive Council of the Prussian Center Party. 
+Imbusch is a trade unionist and the first Chairman of the Christians’ Miners Association. He is first-in-line for the chairmanship of the DGB. 
 
-- @organizing
+- @democratic_rally
 - @union_unity
+- @republicanising_union
 - @root: Return to main
 
-
-@organizing
-title: Organizing workers
-subtitle: Improve our standing among the workers.
-choose-if: advisor_action_timer <= 0
+@democratic_rally
+title: Rally for democracy
+subtitle: Rally our party and the German people to defend democracy and freedom.
+choose-if: advisor_action_timer == 0 
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; workers_z += 4*(1-dissent); left_labor_strength += 2; right_labor_strength +=1 
+on_arrival: advisor_action_timer = 6; pro_republic += 4; democratization += 1; left_strength += 5; left_labor_strength += 3; old_middle_z += 2*(1-dissent) if democratization >= 4; catholics_z += 4*(1-dissent) if democratization >= 4
 
-We have increased our organizing among the workers.
+Imbusch helps us to rally the people in defense of democracy.
 
 @union_unity
 title: Union-party coordination
@@ -31,3 +31,12 @@ unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +
 on-arrival: advisor_action_timer = 6; left_labor_dissent -= 5; left_labor_strength += 5; right_labor_dissent -= 3; right_labor_strength += 3
 
 We have reduced tensions with the labor factions, and increased their strength within the party.
+
+@republicanising_union
+title: Republicanising the Unions
+subtitle: Make the unions more supportive of democracy
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; republican_union += 1; new_middle_dvp -= 2; new_middle_z += 3*(1-dissent); left_labor_strength += 3; right_labor_strength -= 2; pro_republic += 2
+
+We have managed to persuade some union members to accept democracy.
