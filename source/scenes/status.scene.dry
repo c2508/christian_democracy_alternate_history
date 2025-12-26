@@ -20,7 +20,7 @@ if (Q.economic_growth) {
 
 Resources available: [+ resources +]
 
-Centre Party position: [? if z_toleration : toleration ?][? if z_in_government : in government - ?][? if z_toleration == 0 and z_in_government == 0 and z_caretaker == 0 : opposition ?][? if z_caretaker : caretaker government ?]
+Centre Party position: [? if z_toleration : toleration ?][? if z_in_government = 1 : in government - ?][? if z_toleration == 0 and z_in_government == 0 and z_caretaker == 0 : opposition ?][? if z_caretaker : caretaker government ?]
 [? if in_weimar_coalition and z_in_government: Weimar Coalition ?][? if in_grand_coalition and z_in_government: Grand Coalition ?][? if in_popular_front and z_in_government: Popular Front ?][? if in_socio_catholic and z_in_government: Socio-Catholic Coalition ?][? if in_z_majority and z_in_government: Z majority ?][? if in_minority_government and z_in_government: minority government ?][? if in_emergency_government and z_in_government: emergency government ?]
 
 [? if z_in_government and not in_spd_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
@@ -94,6 +94,8 @@ Economic growth: [+ economic_growth_2 +]%
 
 = Internal Factions of the Centre Party
 
+{!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the KPD.">Left Labor</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
+
 {!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the KPD.">Left Labor</span>!} strength: [+ left_labor_strength : strength +], dissent: [+ left_labor_dissent : dissent +]
 
 {!<span class="tooltip-text" title="The Center is a faction of Center Marxists, between reform and revolution.">Center</span>!} strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
@@ -159,6 +161,10 @@ Q.sa_strength_2 = Q.sa_strength.toFixed(1);
 
 
 = Official military/paramilitaries
+
+Reichsbanner Unity: [+ rb_unity +] 
+
+Influence in the Reichsbanner: [+ z_dominance +]%
 
 Reichswehr: [+ reichswehr_strength +] thousand troops.
 
