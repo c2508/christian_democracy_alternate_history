@@ -7,10 +7,10 @@ new-page: true
 
 = Joseph Joos
 
-Joseph Joos is a prominent journalist and trade unionist within the party.
+Joos is the Chairman of the Reich Association of Catholic Workers' Associations and sits on the Federal Executive Committee of the Reichbanner. He is a strong supporter of Wirth and the left wing of the Center Party.
 
 - @nazi_urgency
-- @catholic_youth
+- @media_
 - @spd_cooperation
 - @root: Return to main
 
@@ -20,25 +20,24 @@ title: Warning about the <span style="color: #7A3C00;">Nazis</span>
 subtitle: By warning the party about the <span style="color: #7A3C00;">Nazis</span>, we can spur our members to action.
 choose-if: advisor_action_timer == 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; nazi_urgency += 1; rb_militancy += 0.01 if not rb_explode; nsdap_workers -= 4*(1-dissent);
+on-arrival: advisor_action_timer = 6; nazi_urgency += 1; rb_militancy += 0.01 if not rb_explode; nsdap_workers -= 4*(1-dissent); z_dominance += 2
 
 We have begun a propaganda campaign to warn our members away from the <span style="color: #7A3C00;">Nazis</span>.
 
-@catholic_youth
-title: Support Catholic youth organisations
-subtitle: We must end our reputation as a party for old men by increasing funding to the Windthorstbund, our Catholic youth organization. -1 resources
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if resources <= 0 : Not enough resources. ?]
-choose-if: advisor_action_timer = 0 and resources > 0
-on-arrival: advisor_action_timer = 6; resources -= 1; left_labor_strength += 5; left_labor_dissent -= 3; rb_strength += 50; rb_militancy += 0.025; catholics_z += 3*(1-dissent); 
-
-Our new youth members flock to the left wing of the party, and also bring new radicalism to the Reichsbanner.
+@media_
+title: Media
+subtitle: Manage our party's newspapers and media.
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; media_timer -= 6; last_advisor_action = 1
+go-to: media
 
 @spd_cooperation
 title: Cooperation with the <span style="color: #c00000;">**SPD**</span>
 subtitle: Could we build closer ties with the <span style="color: #c00000;">**SPD**</span>?
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer = 0
-on-arrival: advisor_action_timer = 6; left_labor_strength += 2; spd_relation += 4*(1-dissent); right_dissent += 2; right_labor_dissent +=1 
+on-arrival: advisor_action_timer = 6; left_labor_strength += 4; left_strength += 2; spd_relation += 5*(1-dissent); right_dissent += 2; right_labor_dissent +=1 
 
 Joos works towards closer ties with the <span style="color: #c00000;">**SPD**</span> through his labor connections.
 
