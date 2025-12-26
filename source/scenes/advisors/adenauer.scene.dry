@@ -1,6 +1,6 @@
 title: Konrad Adenauer
 is-pinned-card: true
-tags: advisor, centrist
+tags: advisor, right
 card-image: img/portraits/LeviPaul.jpg
 view-if: adenauer_advisor = 1
 new-page: true 
@@ -10,8 +10,8 @@ new-page: true
 Adenauer has been the mayor of Cologne since 1917 and is the President of the Prussian State Council despite his anti-Prussian tendencies.
 
 - @charities
-- @support_peoples_party
-- @build_peoples_party
+- @support_christian_party
+- @build_christian_party
 - @snap_election
 - @root: Return to main
 
@@ -24,24 +24,24 @@ on-arrival: resources -= 1; workers_aid += 1; catholics_z += 5*(1 - dissent); wo
 
 We have increased funding to Catholic Charities. [? if black_thursday_seen > 0 : In an age of economic crisis, this will be helpful for improving our standing among the impoverished. ?]
 
-@support_peoples_party
-title: Build support for a People's Party
+@support_christian_party
+title: Build support for an interconfessional Christian Party
 subtitle: Can we expand our party beyond Catholics?
 view-if: peoples_party = 0
 choose-if: peoples_party_support <= 4 and advisor_action_timer = 0 and peoples_party = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if peoples_party_support > 4: There is already substantial support for a People's Party. ?]
-on-arrival: advisor_action_timer = 6; peoples_party_support += 1; left_labor_dissent +=2 ; clerical_dissent +=2
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if peoples_party_support > 4: There is already substantial support for an interconfessional Christian Party. ?]
+on-arrival: advisor_action_timer = 6; peoples_party_support += 1; left_labor_dissent += 2; left_dissent += 2; center_dissent += 1
 
-We are building up support for the idea of a People's Party.
+We are building up support for the idea of an interconfessional Christian Party.
 
-@build_peoples_party
-title: Building a People's Party
+@build_christian_party
+title: Building an interconfessional Christian Party
 subtitle: Can we expand our party beyond Catholics?
 view-if: peoples_party = 0
 choose-if: peoples_party_support >= 3 and advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if peoples_party_support < 3: There is not enough support for this policy within the party. ?]
-on-arrival: advisor_action_timer = 6; left_labor_dissent +=5 ; clerical_dissent +=5
-go-to: peoples_party
+on-arrival: advisor_action_timer = 6; left_labor_dissent += 5; left_dissent += 5; center_dissent += 3
+go-to: christian_party
 
 @snap_election
 title: Snap Election
