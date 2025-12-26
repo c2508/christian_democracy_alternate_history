@@ -95,7 +95,7 @@ Joos has been removed as an advisor. The Left Labor faction disapproves.
 
 @remove_imbusch
 title: Remove Imbusch
-view-if: hess_advisor = 1
+view-if: imbusch_advisor = 1
 tags: remove_advisor
 on-arrival: imbusch_advisor = 0; left_labor_dissent += 5; n_advisors -= 1
 go-to: rm_main
@@ -384,8 +384,8 @@ title: Heinrich Imbusch
 subtitle: Imbusch is a trade unionist and the first Chairman of the Christians’ Miners Association. He is first-in-line for the chairmanship of the DGB. 
 is-card: true
 card-image: img/portraits/JuchaczMarie.jpg
-view-if: hess_advisor = 0 and n_advisors < 3
-on-arrival: hess_advisor = 1; n_advisors += 1; left_labor_strength += 5
+view-if: imbusch_advisor = 0 and n_advisors < 3
+on-arrival: imbusch_advisor = 1; n_advisors += 1; left_labor_strength += 5
 go-to: advisor_menu
 tags: left_labor_advisor
 
