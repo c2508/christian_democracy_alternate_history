@@ -62,6 +62,7 @@ Q.young_conservatives_strength = 5;
 Q.young_conservatives_dissent = 0;
 
 // secret events...
+Q.left_defected = 0;
 Q.left_labor_unions_independent = 0;
 Q.centrists_resign = 0;
 Q.right_labor_unionists_resign = 0;
@@ -559,28 +560,30 @@ Q.muller_dead = 0;
 // okay I know Arthur Crispien was a leader irl but i couldn't find much interesting about him...
 Q.brauns_advisor = 1; // Heinrich Brauns
 
-// left labor advisors
+// left advisors
 Q.wirth_advisor = 0; // Joseph Wirth
-Q.joos_advisor = 0; // Joseph Joos
-Q.levi_dead = 0;
-Q.kaiser_advisor = 0; // Jakob Kaiser
 Q.hess_advisor = 0; // Joseph Hess
+Q.hess_dead = 0;
+Q.dessauer_advisor = 0; // Friedrich Dessauer
+
+// left labor advisors
+Q.imbusch_advisor = 0; // Heinrich Imbusch
+Q.joos_advisor = 0; // Joseph Joos
+Q.becker_advisor = 0; // Johannes Becker
+Q.giesberts_advisor = 0; // Johannes Giesberts
 
 // centrist alternate advisors
 Q.kohler_advisor = 0; // Heinrich Kohler
+
+// right labor advisors
+Q.stegerwald_advisor = 0; // Adam Stegerwald
 Q.bruning_advisor = 0; // Heinrich Bruning
 
 // right advisors
 Q.hermes_advisor = 0; // Andreas Hermes
 Q.kaas_advisor = 0; // Ludwig Kaas
 Q.papen_advisor = 0; // Franz Von Papen
-Q.baade_advisor = 0; // Fritz Baade
-
-// right labor advisors
-Q.stegerwald_advisor = 0; // Adam Stegerwald
-Q.aufhauser_advisor = 0; // Siegfried Aufhäuser
-Q.woytinsky_advisor = 0; // Wladimir Woytinsky (post-1930)
-Q.wissell_advisor = 0; // Rudolf Wissell
+Q.adenauer_advisor = 0; // Konrad Adenauer
 
 // young conservatives advisors
 Q.trevanius_advisor = 0; // Gottfried Trevanius
@@ -589,8 +592,8 @@ Q.jung_advisor = 0; // Paul Lejune Jung
 
 // Nonfactional advisors
 Q.schreiber_advisor = 0; // Georg Schreiber
-Q.radbruch_advisor = 0; // Gustav Radbruch
-Q.stampfer_advisor = 0; // Friedrich Stampfer
+Q.teusch_advisor = 0; // Christine Teusch
+
 !}
 set-bg: img/map_2.jpg
 new-page: true
