@@ -8,7 +8,7 @@ new-page: true
 
 = Heinrich Kohler
 
-Heinrich Kohler is our longtime Finance Minister in Baden and was briefly the State President of Baden on two seperate occasions.
+Minister-President of Baden on two separate occasions, Kohler was also Finance Minister for Baden from 1920 to 1927.
 
 - @finance_ministry_
 - @party_discipline
@@ -22,15 +22,6 @@ unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +
 choose-if: advisor_action_timer == 0 and z_in_government == 1 and finance_minister_party == "Z"
 on-arrival: advisor_action_timer = 6; fiscal_policy_timer -= 6; last_advisor_action = 1
 go-to: fiscal_policy
-
-@party_discipline
-title: Party Discipline
-subtitle: Reduce dissent across the party.
-choose-if: advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; left_labor_dissent -= 10; right_labor_dissent -= 10; center_dissent -= 10; right_dissent -= 10; clerical_dissent -= 10
-
-We have enforced party discipline to reduce dissent across all factions.
 
 @emergency_fundraising
 title: Emergency Fundraising
