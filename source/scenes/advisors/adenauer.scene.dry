@@ -7,7 +7,7 @@ new-page: true
 
 = Konrad Adenauer
 
-Adenauer is the Mayor of Cologne and is a strong advocate for leaving the tower.
+Adenauer has been the mayor of Cologne since 1917 and is the President of the Prussian State Council despite his anti-Prussian tendencies.
 
 - @charities
 - @support_peoples_party
@@ -22,7 +22,7 @@ choose-if: resources > 0 and advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if resources < 0: Not enough resources. ?]
 on-arrival: resources -= 1; workers_aid += 1; catholics_z += 5*(1 - dissent); workers_z += 3*(1-dissent); workers_z += 2*(1-dissent) if black_thursday_seen; advisor_action_timer = 6;
 
-We have increased funding to Catholic Charities. [? if black_thursday_seen > 0 : In an age of economic crisis, this will be helpful for improving our standing among the unemployed. ?]
+We have increased funding to Catholic Charities. [? if black_thursday_seen > 0 : In an age of economic crisis, this will be helpful for improving our standing among the impoverished. ?]
 
 @support_peoples_party
 title: Build support for a People's Party
