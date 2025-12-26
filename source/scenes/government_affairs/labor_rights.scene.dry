@@ -44,7 +44,7 @@ Some in the labor movement argue that by reducing the maximum number of hours wo
 
 
 @safety
-on-arrival: workers_safety += 1; 'left_labor_dissent -= 5; right_labor_dissent -= 5; left_labor_strength += 2; right_labor_strength += 2; workers_z += 5*(1-dissent); capital_strike_progress += 1 if workers_safety >= 3
+on-arrival: workers_safety += 1; left_labor_dissent -= 5; right_labor_dissent -= 5; left_labor_strength += 2; right_labor_strength += 2; workers_z += 5*(1-dissent); capital_strike_progress += 1 if workers_safety >= 3
 
 The Labor Ministry works on developing and enforcing safety regulations, in order to ensure healty working conditions for the proletariat. [? if workers_safety >= 3 : Businesses have begun to argue that our focus on safety is overbearing and unnecessary, interfering with the economy. ?]
 
