@@ -21,7 +21,7 @@ Removing advisors will increase dissent from their faction of the party, while s
 
 @rm_main
 title: Remove advisors.
-tags: center_advisor, left_labor_advisor, right_labor_advisor, right_advisor, young_conservatives_advisor, nonfactional_advisor 
+tags: center_advisor, left_labor_advisor, left_advisor, right_labor_advisor, right_advisor, young_conservatives_advisor, nonfactional_advisor 
 frequency: 1
 
 - #remove_advisor
@@ -378,6 +378,18 @@ go-to: advisor_menu
 tags: left_labor_advisor
 
 Joseph Hess is now an advisor.
+
+@add_imbusch
+title: Heinrich Imbusch
+subtitle: Imbusch is a trade unionist and the first Chairman of the Christians’ Miners Association. He is first-in-line for the chairmanship of the DGB. 
+is-card: true
+card-image: img/portraits/JuchaczMarie.jpg
+view-if: hess_advisor = 0 and n_advisors < 3
+on-arrival: hess_advisor = 1; n_advisors += 1; left_labor_strength += 5
+go-to: advisor_menu
+tags: left_labor_advisor
+
+Heinrich Imbusch is now an advisor.
 
 @add_wirth
 title: Joseph Wirth
