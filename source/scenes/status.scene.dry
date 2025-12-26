@@ -94,7 +94,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 = Internal Factions of the Centre Party
 
-{!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the KPD.">Left Labor</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
+{!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the KPD.">Left </span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
 
 {!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the KPD.">Left Labor</span>!} strength: [+ left_labor_strength : strength +], dissent: [+ left_labor_dissent : dissent +]
 
