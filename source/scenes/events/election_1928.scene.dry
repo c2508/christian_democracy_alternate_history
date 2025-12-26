@@ -585,6 +585,7 @@ Ernst Scholz's appointment as chancellor is approved by our potential allies.
 title: Gottfried Treviranus for Chancellor
 subtitle: Gottfried Treviranus is part of Young Conservative Wing and is an acceptable candidate for Chancellor.
 on-arrival: spd_in_government = 0; chancellor = "Treviranus"; chancellor_party = "DNVP";
+go-to: ministries
 
 Gottfried Treviranus' appointment as chancellor is approved by our potential allies.
 
