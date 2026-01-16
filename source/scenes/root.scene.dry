@@ -69,7 +69,7 @@ Q.right_labor_unionists_resign = 0;
 Q.right_defected = 0;
 
 // have we discovered young_conservatism?
-Q.young_conseratives = 0;
+Q.young_conservatives = 0;
 
 // desperation indicates how likely we are to coaltion with the KPD and NSDAP
 Q.desperation = 0;
