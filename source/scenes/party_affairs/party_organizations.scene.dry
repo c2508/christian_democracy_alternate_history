@@ -78,8 +78,8 @@ It is not enough for the SPD to solely be a political party. The Worker Singer's
 [? if sa_strength > 500 : However, it feels frivolous to spend on sports and choirs when the fascists are murdering us in the streets. ?]
 
 @rb
-choose-if: resources > 0
-unavailable-subtitle: Not enough resources.
+choose-if: resources > 0 and z_endorse_rb = 1
+unavailable-subtitle: [? if resources < 0: Not enough resources. ?][? if z_endorse_rb = 0: The Center Party has not offically endorsed the Reichsbanner yet. ?]
 subtitle: -1 resources
 on-arrival: resources -= 1; rb_strength  += 100; rb_militancy += 0.01; reichsbanner_timer = 0; funded_reichsbanner += 1
 
