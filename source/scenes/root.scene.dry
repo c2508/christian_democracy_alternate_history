@@ -155,7 +155,6 @@ Q.rfb_strength = 130;
 Q.rfb_militancy = 0.5;
 Q.rfb_banned = 0;
 Q.rfb_banned_prussia = 0;
-Q.rb_banned = 0;
 Q.z_rb = 1;
 Q.z_endorse_rb = 0;
 Q.z_sh = 0;
@@ -397,7 +396,7 @@ Q.justice_minister_party = 'DNVP';
 Q.labor_minister = 'Brauns';
 Q.labor_minister_party = 'Z';
 Q.reichswehr_minister = 'Groener';
-Q.reichswehr_minister_party = 'I';
+Q.reichswehr_minister_party = 'DVP';
 Q.economic_minister = 'Curtius';
 Q.economic_minister_party = 'DVP';
 Q.finance_minister = 'Kohler';
@@ -608,16 +607,13 @@ For more information on the politics and government of the German Republic, see 
 
 - @1928_easy: Begin (easy difficulty)
 
-- @1928_hard: Begin (hard difficulty)
 
 
 @1928_easy
 on-arrival: difficulty = 1; resources = 4; dues = 3; rb_strength = 2500; spd_relation = 54; z_relation = 54; dvp_relation = 49; budget = 5;
 go-to: 1928_main
 
-@1928_hard
-on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; z_relation = 41; kpd_relation = 16; dvp_relation = 31; budget = 3;
-go-to: 1928_main
+
 
 
 = 1928
