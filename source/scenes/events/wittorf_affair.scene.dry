@@ -28,7 +28,7 @@ In the end, Stalin's pressure helps to keep Thälmann from facing much in the wa
 
 @nothing
 title: Do nothing with the information.
-on-arrival: workers_kpd -= 2; unemployed_kpd -= 2
+on-arrival: workers_kpd -= 2; unemployed_kpd -= 2;
 
 The information spreads without our help, leading to some loss of KPD support among the workers.
 
