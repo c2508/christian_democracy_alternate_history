@@ -18,7 +18,7 @@ The party has splintered in two over the vote to decide his sucessor. The nomine
 - @kaas: The Center Party selects Ludwig Kaas as the party chair.
 
 @stegerwald
-unavailable-subtitle: [? if right_dissent > 15:There is too much infighting with the right faction of the party. ?][? if right__labor_dissent > 15: The white collar unions are still unhappy with Stegerwald's decision oppose wage increases in 1927. ?][? if right_labor_strength < 45: Stegerwald does not have enough influence to secure the nomination. ?] 
+unavailable-subtitle: [? if right_dissent > 15: There is too much infighting with the right faction of the party. ?][? if right__labor_dissent > 15: The white collar unions are still unhappy with Stegerwald's decision oppose wage increases in 1927. ?][? if right_labor_strength < 45: Stegerwald does not have enough influence to secure the nomination. ?] 
 subtitle: Stegerwald belongs to the right labor faction and would rather work with the political right than the SPD.
 on-arrival: z_party_leader = "Stegerwald"; spd_relation -= 8; dnvp_relation += 8; 
 choose-if: right_dissent <= 15 and right_labor_dissent <= 15 and right_labor_strength >= 45
