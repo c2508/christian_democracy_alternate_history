@@ -104,6 +104,7 @@ Q.nationalization_adopted = 0;
 Q.moderate_plan_support = 0;
 Q.moderate_plan_adopted = 0;
 Q.bruning_points = 0;
+Q,dnvp_points = 0;
 
 
 // organizations
