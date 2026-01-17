@@ -1228,5 +1228,3 @@ Perhaps a more stable majority can be found in more elections.
 
 New Prussian elections have been set for [+ next_election_month_prussia : month +] [+ next_election_year_prussia +], Week [+ next_election_week +].
 
-@prussia_explode
-go-to: prussian_coup_schleicher
