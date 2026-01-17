@@ -10,27 +10,26 @@ max-visits: 3
 
 = Questions of Ideology
 
-The SPD is torn between many different ideological currents. What should be our primary ideological guidance for now?
+The Center Party is torn between many different ideological currents. What should be our primary ideological guidance for now?
 
 [? if ideology != 0 : We have previously chosen a [+ ideology +] ideology. Changing it will likely have drawbacks. ?]
 
-- @left_labor: Republicanism and cooperation with the SPD are our primary goals.
+- @left: Republicanism and cooperation with the SPD are our primary goals.
 - @centrist: We should continue to advance the rights of Catholics through the democratic framework.
-- @right_labor: With a focus on protecting workers' welfare, we should oppose socialism and laissez-faire capitalism.
-- @right: By working with reactionary institutions, we should restore the monarchy under the Kaiser.
+- @right_labor: With a focus on protecting workers' welfare, we will staunchly oppose socialism and laissez-faire capitalism.
+- @right: By working with the moderate right, we will seek a return to the pre-war status quo. 
 - @easy_discard
 
-@left_labor
+@left
 on-arrival: {!
-if (Q.ideology && Q.ideology != "left_labor") {
+if (Q.ideology && Q.ideology != "left") {
     Q.changed = 1;
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "left_labor"; left_labor_strength += 10; left_labor_dissent -= 5; spd_relation += 3; dvp_relation -= 5; ddp_relation += 1; democratization += 1
+on-departure: ideology = "left"; left_strength += 10; left_labor_strength += 5; left_labor_dissent -= 3; spd_relation += 3; dnvp_relation -= 5; ddp_relation += 1; democratization += 1
 
-The Left Labor faction of our party is staunchly pro-republic and seeks to maintain the current constitutional order.
-
+The left wing of our party is staunchly pro-republic and seeks to continue the current constituitional order. 
 @centrist
 on-arrival: {!
 if (Q.ideology && Q.ideology != "centrist") {
@@ -38,9 +37,9 @@ if (Q.ideology && Q.ideology != "centrist") {
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "centrist"; center_strength += 10; center_dissent -= 10; left_labor_dissent -= 5; right_dissent -= 5
-
-The Centrists, represented by Marx and Guerard, are generally ambivalent towards the Republic.
+on-departure: ideology = "centrist"; center_strength += 10; center_dissent -= 10; left_dissent -= 5; right_dissent -= 5
+ 
+The Centrists, led by Marx and Guerard, are generally republican by reason. While they prefer to work with the DNVP, they do not rule out coalitions with the SPD.
 
 @right_labor
 on-arrival: {!
@@ -51,7 +50,7 @@ if (Q.ideology && Q.ideology != "right_labor") {
 go-to: changed if changed = 1
 on-departure: ideology = "right_labor"; right_labor_strength += 10; peoples_party_support += 1; right_labor_dissent -= 5; spd_relation -= 3
 
-The right labor wing of the party supports continued particpation in government in order to provide benefits to the workers, but detest socialism and would prefer to work with the conservative right.
+The right labor wing of the party supports continued participation in government in order to provide benefits to the workers, but detest socialism and would prefer to work with the conservative right.
 
 @right
 on-arrival: {!
@@ -62,9 +61,9 @@ if (Q.ideology && Q.ideology != "right") {
 go-to: changed if changed = 1
 on-departure: ideology = "right"; right_strength += 10; right_dissent -= 5; dnvp_relation += 5; dvp_relation += 5; spd_relation -= 8; moderate_plan_support += 1
 
-Represented by bourgeouisie aristocrats and agarian interests, the right wing of the party seeks to restore the monarchy under the Kaiser.
+Represented by bourgeouisie aristocrats and agarian interests, the right wing of the party is skeptical of parlimentary democracy.
 
 @changed
-on-arrival: left_dissent += 5; center_dissent += 5; labor_dissent += 5; reformist_dissent += 5
+on-arrival: left_dissent += 5; left_labor_dissent += 5; center_dissent += 5; right_labor_dissent += 5; right_dissent += 5
 
 We have changed ideologies. Many in the party feel unmoored.
