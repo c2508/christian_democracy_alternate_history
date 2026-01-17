@@ -61,7 +61,7 @@ With the National Council's rejection of Stegerwald, the party's close relations
 @compromise
 view-if: dnvp_points = 2
 subtitle: The vote is deadlocked between Adam Stegerwald and Joseph Joos. 
-choose-if: dnvp_points < 2
+choose-if: dnvp_points = 2
 on-arrival: spd_relations -= 5; prussian_concordat_progress += 1
 face-image: img/portraits/KaasLudwig.jpg
 
