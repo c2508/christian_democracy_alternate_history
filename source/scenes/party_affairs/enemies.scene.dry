@@ -14,23 +14,21 @@ In our media and campaign materials, who should we consider as our main opponent
 [? if enemies != 0 : Previously, we had considered the [+ enemies +] as our prior enemies. Is a change of direction necessary? ?]
 
 - @anti_dem: The anti democratic parties - the KPD, NSDAP and DNVP.
-- @far_right: The far right and far left - the KPD and NSDAP.
+- @far_right_and_left: The far right and far left - the KPD and NSDAP.
 - @nsdap: The NSDAP alone.
 - @kpd: The KPD.
 - @marxist: The Marxist parties - the KPD and SPD.
 - @easy_discard
 
 @anti_dem
-on-arrival: enemies = "anti-democratic parties"; center_strength += 5; left_labor_strength += 5; right_dissent += 5; workers_kpd -= 2; workers_nsdap -= 2; workers_dnvp -= 2; dnvp_relation -= 10
+on-arrival: enemies = "anti-democratic parties"; center_strength += 5; left_labor_strength += 5; right_dissent += 5; workers_kpd -= 2; old_middle_nsdap -= 2; rural_dnvp -= 2; dnvp_relation -= 10
 
-Attacking the far right and left is popular among all but the right wing of our party, who would prefer to be fighting the Marxist parties. This might also hamper our ability to reconcile with the DNVP in the future.
+Attacking the anti-democratic parties is popular among all but the right wing of our party, who would prefer to be fighting the Marxist parties. This might also hamper our ability to reconcile with the DNVP in the future.
 
-@far_right
-on-arrival: enemies = "far right"; left_labor_strength += 5; left_labor_dissent -= 5; workers_nsdap -= 3; workers_dnvp -= 3; spd_relation += 5
+@far_right_and_left
+on-arrival: enemies = "far right and left"; left_dissent -= 5; left_labor_dissent -= 5; center_dissent -= 5; right_labor_dissent -= 5; right_dissent -= 5; old_middle_nsdap -= 3; workers_kpd -= 3;
 
-Our rhetoric against the far right parties are popular among left labor, but may make it harder to build the coalitions that are necessary for government in the future.
-
-Attacking the far right is popular among the entire party, although the left considers the bourgeois parties to be just as dangerous, while the right is critical of our lack of response to the KPD. Our bourgeois coalition partners are also skeptical of our lack of commitment to anti-communism.
+Our rhetoric against the extremist parties are popular among most of the party. 
 
 @nsdap
 on-arrival: enemies = "NSDAP"; neorevisionist_strength += 5; nazi_urgency += 1; workers_nsdap -= 4;
@@ -43,6 +41,6 @@ on-arrival: enemies = "KPD"; right_dissent -= 5; dvp_relation += 5; ddp_relation
 Attacking the KPD is supported by all but the most left-wing in our party, and wins us some measure of approval among the other bourgeois parties.
 
 @marxist
-on-arrival: enemies = "marxist parties"; right_strength += 8; right_dissent -= 5; spd_relation -= 5; dvp_relation += 5; dnvp_relation += 5; workers_spd -= 3; workers_kpd -= 3
+on-arrival: enemies = "marxist parties"; left_dissent += 5; left_labor_dissent += 5; right_strength += 8; right_dissent -= 5; spd_relation -= 5; dvp_relation += 5; dnvp_relation += 5; workers_spd -= 3; workers_kpd -= 3
 
-Our anti-marxist rhetoric is popular among the right, but may make it harder to build the coalitions that are necessary for government in the future.
+Our anti-marxist rhetoric is popular among the right, but may make it harder to build the coalitions that are necessary for government in the future. 
