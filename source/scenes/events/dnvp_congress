@@ -44,15 +44,15 @@ On the right is Alfred Hugenberg, a prominent industrialist and head of a media 
 view-if: dnvp_points > 2
 subtitle: Stegerwald belongs to the right labor faction and would rather work with the political right than the SPD.
 on-arrival: dnvp_relation += 8; 
-choose-if: right_dissent <= 15 and right_labor_dissent <= 15 and right_labor_strength >= 45
+choose-if: dnvp_points > 2
 
 Adam Stegerwald has been elected as the chairman of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]. He seems to represent a rightward turn from Marx, despite his trade union background, and will preside over a [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] less inclined to compromise with the left. He views the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] as a prototype for a <span style="color: #000000;">Christian</span>, <span style="color: #586593;">democratic</span>, <span style="color: #000000;">German</span>, and <span style="color: #c00000;">social</span> party, and aims to transform it according to the principles laid out in his proposed "Essen program" eight years prior. 
 
 @hugenberg
 view-if: dnvp_points < 2
 subtitle: Joos belongs to the Left Labor faction and supports increased cooperation with the SPD. However, he might have trouble controlling the right within our party. 
-choose-if: spd_relation >= 67 and left_labor_strength >= right_strength and left_labor_strength >= right_labor_strength and not (right_dissent <= 15 and right_labor_dissent <= 15 and right_labor_strength >= 45)
-on-arrival: catholics_spd += 5; workers_z += 3*(1-dissent); z_party_leader1 += 1; spd_relation += 8*(1-dissent); z_rural -= 2*(1-dissent); left_labour_strength += 4*(1-dissent); right_dissent += 3; pro_republic += 4
+choose-if: dnvp_points < 2
+on-arrival: dnvp_relation -= 8;
 face-image: img/portraits/JoosJoseph.jpg
 
 With the National Council's rejection of Stegerwald, the party's close relations with the SPD has led the delegates to nominate Joseph Joos as chairman to continue further cooperation with the SPD. Hailing from the Left Labor Wing, he also increases the appeal of the Center Party to workers. 
@@ -61,6 +61,7 @@ With the National Council's rejection of Stegerwald, the party's close relations
 @compromise
 view-if: dnvp_points = 2
 subtitle: The vote is deadlocked between Adam Stegerwald and Joseph Joos. 
+choose-if: dnvp_points < 2
 on-arrival: spd_relations -= 5; prussian_concordat_progress += 1
 face-image: img/portraits/KaasLudwig.jpg
 
