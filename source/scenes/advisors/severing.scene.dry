@@ -1,26 +1,36 @@
-title: Carl Severing
+title: Johannes Becker
 is-pinned-card: true
-tags: advisor, reformist
-card-image: img/portraits/SeveringCarl.jpg
-view-if: severing_advisor = 1
+tags: advisor, left labor
+card-image: img/portraits/BeckerJohannes.jpg
+view-if: becker_advisor = 1
 new-page: true 
 
-= Carl Severing
+= Johannes Becker
 
-Severing has been Interior Minister for both the German Republic and for the state of Prussia, and his priority is using the security services to target the enemies of the republic.
+As the founder of the General Association of Health Insurance Funds, Becker supports the DGB and Hirsch-Dunker unions as a counterweight to the ADGB and is an advocate for democratic reforms.
 
-- @prussian_bulwark
+- @liberal_relations 
+- @democratic_reforms
 - @police_affairs
 - @root: Return to main
 
-@prussian_bulwark
-title: Prussian Bulwark
-subtitle: Severing has influence over Prussian politics.
-choose-if: advisor_action_timer <= 0 and spd_prussia = 1
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_prussia : The SPD is not in control of Prussia. ?]
-on-arrival: advisor_action_timer = 6; prussian_affairs_timer -= 6; last_advisor_action = 1
-go-to: prussian_affairs
+@liberal_relations
+title: Liberal relations
+subtitle: Forming closer ties with the liberals
+choose-if: advisor_action_timer == 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on arrival: advisor_action_timer = 6; ddp_relation += 4*(1-dissent); dvp_relation += 6*(1-dissent); center_strength += 5;
 
+We have improved our relations with the liberals.
+
+@democratic_reforms
+title: Democratic Reforms
+subtitle: Reforming the Weimar Constitution
+choose-if: advisor_action_timer == 0; pro_republic > 50; 
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if pro_republic < 51 : Support for the Republic is not high enough. ?]
+on arrival: advisor_action_timer = 6; pro_republic += 3; left_strength += 3; left_labor_strength += 1; 
+
+We have pushed for the Weimar Constitution to undergo amendment and reform.
 
 @police_affairs
 title: Police affairs 
