@@ -858,7 +858,7 @@ go-to: coalition_menu
 - @bourgeois_coalition_prussia
 - @bourgeois_coalition_kvp_prussia
 - @call_new_elections: No majority is able to be found.
-- @call_new_elections_rubicon: No majority is able to be found.
+
 
 @schleicher_majority_coalition_prussia
 title: Schleicher forms a majority government with only the <span style="color: #BFC8CC;">**DNEF**</span>.
@@ -1213,18 +1213,4 @@ We have decided to tolerate a broad bourgeois government. This means that we wil
 
 [? if prussia_leader != "Braun": [+ prussia_leader +] is selected to be the Minister-President of Prussia. ?]
 
-@call_new_elections_rubicon
-subtitle: New elections will be called.
-view-if: (((grand_coalition_prussia < 50) or ((grand_coalition_prussia >= 50 and (dvp_relation < 40 or (lvp_relation < 40 and lvp_formed) or z_relation < 35)))) and far_right_coalition_prussia < 50 and (center_right_coalition_prussia < 50 or ((center_right_coalition_prussia >= 50 and ((dnvp_ideology == "Radical" and not dnvp_westarp) or (year = 1929 and month >= 7)))) and (right_coalition_prussia < 50 or (right_coalition_prussia >= 50 and ((dnvp_ideology == "Radical" and not dnvp_westarp) or (year = 1929 and month >= 7)))))) and rubicon
-on-arrival: no_majority_elections_prussia_schleicher = 1
-go-to: call_new_elections_2_rubicon if prussia_leader != "Braun" and prussia_leader != "Stegerwald" and prussia_leader != "Luther" and prussia_leader != "Brüning"; prussia_explode if prussia_leader == "Braun" or prussia_leader == "Stegerwald" or prussia_leader == "Luther" or prussia_leader == "Brüning"
-
-@call_new_elections_2_rubicon
-view-if: dnef_r_prussia < 50 and (schleicher_right_coalition_prussia < 50 or dsu_leader == "Otto Strasser")
-on-arrival: next_election_week_prussia = next_election_week if rubicon and next_election_time - time < 3; next_election_week_prussia = week + 6 if rubicon and next_election_time - time >= 3; next_election_week_prussia -= 4 if rubicon and next_election_week_prussia > 4; next_election_week_prussia -= 4 if rubicon and next_election_week_prussia > 4
-call: set_next_election_time_prussia
-
-Perhaps a more stable majority can be found in more elections.
-
-New Prussian elections have been set for [+ next_election_month_prussia : month +] [+ next_election_year_prussia +], Week [+ next_election_week +].
 
