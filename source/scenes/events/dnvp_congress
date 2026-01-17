@@ -1,1 +1,69 @@
+title: Center Party Conference
+subtitle: The DNVP chooses their new leader...
+view-if: year = 1928 and month = 10
+on-arrival: {!
+Q.dnvp_points = 0;
+if (Q.dnvp_relation > 45) {
+    Q.dnvp_points += 1;
+}
+if (Q.chancellor = "Treviranus";) {
+    Q.dnvp_points += 1;
+}
+if (Q.pro_republic >= 67) {
+    Q.dstp_formation_points += 1;
+}
+if (Q.dnvp_r > 14) {
+    Q.dnvp_points += 1;
+}
+if (Q.spd_in_government = 0) {
+    Q.dnvp_points += 1;
+}
+if (Q.tariffs >= 0) {
+    Q.dnvp_points += 1;
+}
+!}
+max-visits: 1
+tags: event
+new-page: true
 
+= DNVP Conference
+
+# reference: Evans, Ellen L. “Adam Stegerwald and the Role of the Christian Trade Unions in the Weimar Republic.” The Catholic Historical Review 59, no. 4 (1974): 602–26.
+
+A leadership vote is being held at the <span style="color: #3E88B3;">German National People's Party</span>(<span style="color: #3E88B3;">**DNVP**</span>) congress following the resignation of former leader Kuno von Westarp. The in-fighting resulting from their electoral defeat last election, coupled with the question of governmental participation in a system they're fundamentally opposed to has come to a head at this congress.
+
+On the right is Alfred Hugenberg, a prominent industrialist and head of a media empire. He is vehemently opposed by the left of the party for his "<i>Katastrophenpolitik</i>", as he prefers to see the republic fall than participate in parliamentary government. With Westarp's refusal to run for re-election, despite urgent pleas from the moderates within the party, they have convinced the reluctant Oskar Hergt, former leader of the <span style="color: #3E88B3;">**DNVP**</span> from 1918—1924, himself ousted by the right. The results of this congress may very well be a turning point in the history of the entire German nation.
+
+- @hergt: Oscar Hergt has become the party chair.
+- @hugenberg: Alfred Hugenberg has become the party chair.
+- @compromise: Compromise
+
+
+
+@hergt
+view-if: dnvp_formation_points > 2
+subtitle: Stegerwald belongs to the right labor faction and would rather work with the political right than the SPD.
+on-arrival: dnvp_relation += 8; 
+choose-if: right_dissent <= 15 and right_labor_dissent <= 15 and right_labor_strength >= 45
+
+Adam Stegerwald has been elected as the chairman of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]. He seems to represent a rightward turn from Marx, despite his trade union background, and will preside over a [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] less inclined to compromise with the left. He views the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] as a prototype for a <span style="color: #000000;">Christian</span>, <span style="color: #586593;">democratic</span>, <span style="color: #000000;">German</span>, and <span style="color: #c00000;">social</span> party, and aims to transform it according to the principles laid out in his proposed "Essen program" eight years prior. 
+
+@hugenberg
+view-if: dnvp_points < 2
+subtitle: Joos belongs to the Left Labor faction and supports increased cooperation with the SPD. However, he might have trouble controlling the right within our party. 
+choose-if: spd_relation >= 67 and left_labor_strength >= right_strength and left_labor_strength >= right_labor_strength and not (right_dissent <= 15 and right_labor_dissent <= 15 and right_labor_strength >= 45)
+on-arrival: catholics_spd += 5; workers_z += 3*(1-dissent); z_party_leader1 += 1; spd_relation += 8*(1-dissent); z_rural -= 2*(1-dissent); left_labour_strength += 4*(1-dissent); right_dissent += 3; pro_republic += 4
+face-image: img/portraits/JoosJoseph.jpg
+
+With the National Council's rejection of Stegerwald, the party's close relations with the SPD has led the delegates to nominate Joseph Joos as chairman to continue further cooperation with the SPD. Hailing from the Left Labor Wing, he also increases the appeal of the Center Party to workers. 
+
+
+@compromise
+view-if: dnvp_points = 2
+subtitle: The vote is deadlocked between Adam Stegerwald and Joseph Joos. 
+on-arrival: spd_relations -= 5; prussian_concordat_progress += 1
+face-image: img/portraits/KaasLudwig.jpg
+
+While a suggestion about a collegium with Joos, Stegerwald and Kaas won some approval from delegates, concerns about Stegerwald's personality and the desire of the Windhorstbund for a strong leader has sunk the idea. Thus, in a secret vote by the delegates, Ludwig Kaas has been selected as the chairman of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] as a compromise candidate between Stegerwald and Joos. He seems to represent a rightward turn from Marx, and will preside over a [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] less inclined to compromise with the left. 
+In response to the Center Party's poor electoral performance in 1928, the Executive Committee has elevated a cleric to the chairmanship to win back disaffected Catholics 
+Despite this, Kaas is committed to the current constitutional order and the republic. He maintains a close friendship with Eugenio Pacelli, the Papal Nuncio to Germany, which may prove useful during concordat negotiations.
