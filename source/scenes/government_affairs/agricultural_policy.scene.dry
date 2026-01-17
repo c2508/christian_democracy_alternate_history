@@ -11,6 +11,7 @@ tags: govt_affairs, cabinet
 
 Agricultural policy has been the domain of the Center Party and there is much need for reform in this area. Our urban constituencies hope for cheaper and more stable food supplies, while small farmers need economic relief. There is also the movement for land reform, to break up the large aristocratic estates and redistribute land to peasants.
 
+- @expand_cooperatives
 - @land_reform
 - @agricultural_finance
 - @rural_infra
@@ -18,6 +19,15 @@ Agricultural policy has been the domain of the Center Party and there is much ne
 - @root: Do not enact any policies for now.
 - @easy_discard
 - @cancel_advisor_action
+
+@expand_cooperatives
+title: Support agricultural cooperatives.
+subtitle: Advance legislation to aid agricultural cooperatives.
+view-if: works_councils == 0
+on-arrival: rural_z += 5*(1-dissent); right_dissent -= 6; right_strength += 8; rural_nsdap -= 4*(1-dissent); rural_others -=2*(1-dissent);
+max-visits: 1
+
+In line with the VdB's policies, we have supported the establishment and expansion of agricultural cooperatives to aid small farmers. Our rural base is pleased.
 
 @land_reform
 title: Land Reform
