@@ -10,7 +10,7 @@ if (Q.chancellor == "Treviranus") {
     Q.dnvp_points += 1;
 }
 if (Q.pro_republic >= 67) {
-    Q.dstp_formation_points += 1;
+    Q.dnvp_points += 1;
 }
 if (Q.dnvp_r > 14) {
     Q.dnvp_points += 1;
