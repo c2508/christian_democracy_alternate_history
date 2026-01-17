@@ -594,7 +594,6 @@ Q.schreiber_advisor = 0; // Georg Schreiber
 Q.teusch_advisor = 0; // Christine Teusch
 
 !}
-
 set-bg: img/map_2.jpg
 new-page: true
 
