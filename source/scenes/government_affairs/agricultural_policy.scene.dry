@@ -24,7 +24,7 @@ Agricultural policy has been the domain of the Center Party and there is much ne
 title: Support agricultural cooperatives.
 subtitle: Advance legislation to aid agricultural cooperatives.
 view-if: works_councils == 0
-on-arrival: rural_z += 5*(1-dissent); right_dissent -= 6; right_strength += 8; rural_nsdap -= 4*(1-dissent); rural_others -=2*(1-dissent);
+on-arrival: rural_z += 5*(1-dissent); right_dissent -= 6; right_strength += 8; rural_nsdap -= 4*(1-dissent); rural_others -= 2*(1-dissent);
 max-visits: 1
 
 In line with the VdB's policies, we have supported the establishment and expansion of agricultural cooperatives to aid small farmers. Our rural base is pleased.
