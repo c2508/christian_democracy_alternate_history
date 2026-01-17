@@ -6,7 +6,7 @@ Q.dnvp_points = 0;
 if (Q.dnvp_relation > 45) {
     Q.dnvp_points += 1;
 }
-if (Q.chancellor = "Treviranus";) {
+if (Q.chancellor == "Treviranus") {
     Q.dnvp_points += 1;
 }
 if (Q.pro_republic >= 67) {
