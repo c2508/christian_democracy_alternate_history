@@ -41,7 +41,7 @@ On the right is Alfred Hugenberg, a prominent industrialist and head of a media 
 
 
 @hergt
-view-if: dnvp_formation_points > 2
+view-if: dnvp_points > 2
 subtitle: Stegerwald belongs to the right labor faction and would rather work with the political right than the SPD.
 on-arrival: dnvp_relation += 8; 
 choose-if: right_dissent <= 15 and right_labor_dissent <= 15 and right_labor_strength >= 45
