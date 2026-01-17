@@ -1,4 +1,4 @@
-title: Center Party Conference
+title: Deutschnationale Volkspartei Conference
 subtitle: The DNVP chooses their new leader...
 view-if: year = 1928 and month = 10
 on-arrival: {!
