@@ -1,7 +1,7 @@
 title: Adam Stegerwald
 is-pinned-card: true
 tags: advisor, right_labor
-card-image: img/portraits/StegerwaldAdam.webp
+card-image: img/portraits/StegerwaldAdam.jpg
 view-if: stegerwald_advisor = 1
 new-page: true 
 
