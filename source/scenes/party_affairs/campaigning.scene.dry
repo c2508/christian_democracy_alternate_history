@@ -3,7 +3,7 @@ new-page: true
 on-arrival: month_actions += 1
 max-visits: 36
 is-card: true
-card-image: img/flags.jpg
+card-image: CenterCampaign.jpg
 frequency: 100
 tags: party_affairs
 
@@ -64,6 +64,6 @@ We have increased our campaigning among the unemployed. [? if welfare < 0: The w
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: catholics_z += 7*(1-dissent); resources -= 1
+on-arrival: catholics_z += 5*(1-dissent); resources -= 1; catholics_z += 2*(1-dissent) if prussian_concordat = 1; catholics_z -= 1 if peoples_party > 0; 
 
-We have increased our campaigning among Catholics, our traditional voting base. 
+We have increased our campaigning among Catholics, our traditional voting base. [? if prussian_concordat = 1: Due to our successes in securing the rights of Catholics, they have started to come back to our party. ?][? if peoples_party > 0: Our transformation into a Christian People's Party has alienated some Catholics. ?]
