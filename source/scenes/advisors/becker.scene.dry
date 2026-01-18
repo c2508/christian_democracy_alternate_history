@@ -27,7 +27,7 @@ title: Democratic Reforms
 subtitle: Reforming the Weimar Constitution
 choose-if: advisor_action_timer == 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if pro_republic <= 51 : Support for the Republic is not high enough. ?]
-on arrival: advisor_action_timer = 6; pro_republic += 3; left_strength += 3; left_labor_strength += 1
+on arrival: advisor_action_timer = 6; pro_republic += 3; left_strength += 3; left_labor_strength += 1; democratization += 1; 
 
 We have pushed for the Weimar Constitution to undergo amendment and reform.
 
