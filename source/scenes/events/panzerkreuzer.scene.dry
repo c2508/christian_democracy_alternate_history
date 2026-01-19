@@ -14,7 +14,6 @@ The <span style="color: #c00000;">**SPD**</span> campaigned on food for children
 
 - @vote_yes: Vote yes, for constructing the battlecruiser.
 - @vote_no: Vote no, against constructing the battlecruiser.
-- @abstain: Abstain from the vote.
 
 @vote_yes
 view-if: spd_in_government = 1
