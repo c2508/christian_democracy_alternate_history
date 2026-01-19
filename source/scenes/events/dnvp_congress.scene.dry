@@ -41,7 +41,7 @@ go-to: hergt if (dnvp_points > 3); hugenberg if (dnvp_points < 3); compromise if
 @hergt
 on-arrival: dnvp_relation += 8; rural_other -= 2; old_middle_other -= 1; pro_republic += 3
 
-Amidst the general pro-republic sentiment in Germany, Hugenberg has failed to consolidate support amongst the lower echoleons of the <span style="color: #3E88B3;">**DNVP**</span> for his "<i>Katastrophenpolitik</i>". With the thesis of the Lambach article having found itself some supporters from the National Conservatives [? if Q.chancellor == "Treviranus" : as well as the appointment of Treviranus to the Chancellorship, ?], the left of the party has been strengthened. Following a divisive party congress, Oskar Hergt has been elected chairman, where he is expected to continue the policies of Westarp.
+Amidst the general pro-republic sentiment in Germany, Hugenberg has failed to consolidate support amongst the lower echoleons of the <span style="color: #3E88B3;">**DNVP**</span> for his "<i>Katastrophenpolitik</i>". With the thesis of the Lambach article having found itself some supporters from the National Conservatives [? if chancellor == "Treviranus" : as well as the appointment of Treviranus to the Chancellorship, ?], the left of the party has been strengthened. Following a divisive party congress, Oskar Hergt has been elected chairman, where he is expected to continue the policies of Westarp.
 Meanwhile, Hugenberg and his supporters are agaitating about another split and Hugenberg himself is withholding financial contributions and the use of his media empire from the party.
 
 @hugenberg
