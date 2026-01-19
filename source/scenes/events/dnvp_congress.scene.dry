@@ -35,7 +35,7 @@ On the right is Alfred Hugenberg, a prominent industrialist and head of a media 
 - @resultsdnvp: The party votes...
 
 @resultsdnvp
-go to: hergt if (dnvp_points > 3); hugenburg if (dnvp_points < 3); compromise if (dnvp_points = 3)
+go-to: hergt if (dnvp_points > 3); hugenberg if (dnvp_points < 3); compromise if (dnvp_points = 3)
 
 
 @hergt
