@@ -12,20 +12,20 @@ new-page: true
 The Reichswehr Ministry is demanding the construction of a new battlecruiser, as part of Germany's rearmament. All the parties to our right are united in support and the <span style="color: #c00000;">**SPD**</span> and <span style="color: #700000;">**KPD**</span> campaigned on food for children instead of battlecruisers.
 The <span style="color: #c00000;">**SPD**</span> campaigned on food for children instead of battlecruisers. Will they really betray their campaign promises?
 
-- @vote_yes: Vote yes, for constructing the battlecruiser.
-- @vote_no: Vote no, against constructing the battlecruiser.
+- @vote_yes: The <span style="color: #c00000;">**SPD**</span> votes yes, for constructing the battlecruiser.
+- @vote_no: The <span style="color: #c00000;">**SPD**</span> votes no, against constructing the battlecruiser.
 
 @vote_yes
-view-if: spd_in_government = 1
-choose-if: spd_in_government = 1
+view-if: spd_in_government == 1
+choose-if: spd_in_government == 1
 on-arrival: panzerkreuzer_funded = 1; spd_relation += 5; workers_spd -= 3
 
 The <span style="color: #c00000;">**SPD**</span> has surprising voted for the battlecruiser in order to maintain the current governing coalition. Their grassroot leaders are shocked at their intransigence and many party branches have begun agitating against the cabinet.
 The campaign against the battlecruiser fails, with only the dissident SPD and KPD members voting against. The ship will be built.
 
 @vote_no
-view-if: spd_in_government = 0 or chancellor = "Braun"
-choose-if: spd_in_government = 0 or chancellor = "Braun"
+view-if: spd_in_government == 0 or chancellor == "Braun"
+choose-if: spd_in_government == 0 or chancellor == "Braun"
 on-arrival: spd_relation -= 5; pacifism += 1; nationalism -= 2*(1-dissent); coalition_dissent += 1
 go-to: vote_no_chancellor if chancellor_party = "SPD"; vote_no_pass if chancellor_party != "SPD"
 
