@@ -21,7 +21,7 @@ What should we do with this information?
 title: The Social Democrats have publicized the scandal to damage the KPD and Thälmann.
 on-arrival: workers_kpd -= 4; unemployed_kpd -= 2; workers_spd += 4; spd_relation += 4; 
 view if: spd_right >= spd_left 
-choose if: spd_right > spd_left
+choose if: spd_right >= spd_left
 
 Vorwarts is the first to publicize the affair, bringing a torment of criticism to the hypocrisy of the communists. This has damaged the KPD's standing among the workers, while increasing our cooperation with the SPD.
 
