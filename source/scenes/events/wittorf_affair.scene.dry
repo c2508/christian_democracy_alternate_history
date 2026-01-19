@@ -28,7 +28,7 @@ Vorwarts is the first to publicize the affair, bringing a torment of criticism t
 In the end, Stalin's pressure helps to keep Thälmann from facing much in the way of consequences.
 
 @support
-title: The Social Democrats have defend the KPD throughout this ordeal. 
+title: The Social Democrats have defended the KPD throughout this ordeal. 
 on-arrival: workers_spd += 1; unemployed_spd += 1; workers_kpd -= 2; unemployed_kpd -= 2;
 view if: spd_right < spd_left 
 choose if: spd_right < spd_left
