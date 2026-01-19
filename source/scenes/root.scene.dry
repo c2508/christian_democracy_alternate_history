@@ -104,8 +104,9 @@ Q.nationalization_adopted = 0;
 Q.moderate_plan_support = 0;
 Q.moderate_plan_adopted = 0;
 Q.bruning_points = 0;
-Q,dnvp_points = 0;
-
+Q.dnvp_points = 0;
+Q.spd_left = 0; 
+Q.spd_right = 1 
 
 // organizations
 
@@ -136,6 +137,8 @@ Q.spd_prussia = 1;
 // Options: spd, z, dnvp, papen, nsdap
 Q.prussian_government = "SPD";
 Q.z_prussia = 0;
+Q.dvp_prussia = 0;
+Q.dnvp_prussia = 0; 
 
 // The array of forces - paramilitary groups
 // Number of members in 1928 (in thousands)
