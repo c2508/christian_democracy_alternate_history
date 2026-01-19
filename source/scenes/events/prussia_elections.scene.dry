@@ -1157,13 +1157,21 @@ Who shall be the Minister-President?
 title: Stegerwald shall become Minister-President.
 on arrival: prussia_leader = "Stegerwald"; z_prussia = 1; 
 
+Adam Stegerwald has been appointed as the Minister-President of Prussia.
+
 @luther
-title: We shall let Hans Luther be Minister-President. 
-on arrival: prussia_leader = "Luther";
+title: Hans Luther shall be Minister-President. 
+on arrival: prussia_leader = "Luther"; dvp_relation += 5; 
+
+Hans Luther has been appointed as the Minister President of Prussia. The DVP is pleasantly surprised at our unexpected decision.
 
 @westarp
-title: We shall let Kuno von Westarp be Minister-President. 
-on arrival: prussia_leader = "Westarp"; 
+title: Kuno von Westarp shall be Minister-President. 
+on arrival: prussia_leader = "Westarp"; pro_republic -= 5; dnvp_relation += 5; 
+
+Kuno von Westarp has been appointed as Minister President of Prussia. The DNVP is pleasantly surprised at our decision. 
+
+[? if year = 1928: Westarp has begun dismantling the democratic bulwark and reversing the pro democratic reforms of the previous government. ?]
 
 @bourgeois_coalition_prussia
 title: Refuse to form a government, so that a Bürgerblock may be formed.
