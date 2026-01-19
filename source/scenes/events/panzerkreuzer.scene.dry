@@ -10,14 +10,14 @@ new-page: true
 = Panzerkreuzer
 
 The Reichswehr Ministry is demanding the construction of a new battlecruiser, as part of Germany's rearmament. All the parties to our right are united in support and the <span style="color: #c00000;">**SPD**</span> and <span style="color: #700000;">**KPD**</span> campaigned on food for children instead of battlecruisers.
-The <span style="color: #c00000;">**SPD**</span> campaigned on food for children instead of battlecruisers. Will they really betray our campaign promises?
+The <span style="color: #c00000;">**SPD**</span> campaigned on food for children instead of battlecruisers. Will they really betray their campaign promises?
 
 - @vote_yes: Vote yes, for constructing the battlecruiser.
 - @vote_no: Vote no, against constructing the battlecruiser.
 
 @vote_yes
 view-if: spd_in_government = 1
-choose-if: spd_in_government = 0
+choose-if: spd_in_government = 1
 on-arrival: panzerkreuzer_funded = 1; spd_relation += 5; workers_spd -= 3
 
 The <span style="color: #c00000;">**SPD**</span> has surprising voted for the battlecruiser in order to maintain the current governing coalition. Their grassroot leaders are shocked at their intransigence and many party branches have begun agitating against the cabinet.
