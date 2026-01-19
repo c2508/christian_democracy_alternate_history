@@ -28,4 +28,8 @@ view-if: spd_in_government = 0 or chancellor = "Braun"
 choose-if: spd_in_government = 0 or chancellor = "Braun"
 on-arrival: spd_relation -= 5; pacifism += 1; nationalism -= 5*(1-dissent); coalition_dissent += 1
 
-Our party is shocked by their intransigence! [? if not chancellor = "Braun"; Chancellor [+ chancellor +] brings the matter to a Reichstag vote, which passes with all parties in favor except the <span style="color: #c00000;">**SPD**</span> and <span style="color: #700000;">**KPD**</span>. The ship will be built. ?][? if chancellor = "Braun"; However, Chancellor <span style="color: #c00000;">**Braun**</span> manages to persuade our cabinet ministers to drop the plan to vote on the battlecruiser. The ship will not be built! ?]
+Our party is shocked by their intransigence! 
+[? if chancellor != "Braun"; 
+Chancellor [+ chancellor +] brings the matter to a Reichstag vote, which passes with all parties in favor except the <span style="color: #c00000;">**SPD**</span> and <span style="color: #700000;">**KPD**</span>. The ship will be built. ?]
+[? if chancellor = "Braun"; 
+However, Chancellor <span style="color: #c00000;">**Braun**</span> manages to persuade our cabinet ministers to drop the plan to vote on the battlecruiser. The ship will not be built! ?]
