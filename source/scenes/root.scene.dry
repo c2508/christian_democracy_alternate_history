@@ -135,7 +135,7 @@ Q.hindenburg_enabled = 0;
 Q.spd_prussia = 1;
 // Options: spd, z, dnvp, papen, nsdap
 Q.prussian_government = "SPD";
-Q.z_prussia = 1;
+Q.z_prussia = 0;
 
 // The array of forces - paramilitary groups
 // Number of members in 1928 (in thousands)
