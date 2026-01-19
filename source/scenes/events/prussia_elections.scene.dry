@@ -990,7 +990,7 @@ Who shall be the Minister-President?
 [+ prussia_leader +] is selected to be the Minister-President of Prussia once more.
 
 @give_up_prussia
-title: Demand the Minister-President Position for Stegerwald. 
+title: Demand the Minister-President Position for Adam Stegerwald. 
 subtitle: Braun would need to resign. 
 on-arrival: coalition_dissent = 0; prussia_leader = "Stegerwald"; prussia_leader = "Brüning" if z_leader == "Stegerwald"; spd_relation -= 5; braun_resign = 1; spd_prussia = 0; z_prussia = 1; 
 
@@ -1154,7 +1154,7 @@ Who shall be the Minister-President?
 - @westarp 
 
 @stegerwald
-title: Stegerwald shall become Minister-President.
+title: Adam Stegerwald shall become Minister-President.
 on arrival: prussia_leader = "Stegerwald"; z_prussia = 1; 
 
 Adam Stegerwald has been appointed as the Minister-President of Prussia.
