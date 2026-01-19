@@ -6,11 +6,10 @@ view-if: international_relations_timer <= 0
 on-arrival: month_actions += 1; international_relations_timer += 12;
 card-image: img/international.jpg
 max-visits: 4
-#subtitle: Building ties with our fraternal socialist parties.
+#subtitle: Building ties with our fraternal Christian parties
 
-At the Labor and Socialist International, we can forge contacts with our fraternal socialist parties in Europe and across the world.
+At the White International, we can forge contacts with Christian parties in Europe and across the world.
 
-- @austria: Build relationships with the Austrian CSP to move their government in Germany's favor.
 - @holy_see: Build relations with the Holy See 
 - @lon: Push for constructive engagement and peaceful arbitration through the League of Nations
 - @america: Contact the American Prohibition Party
@@ -30,9 +29,9 @@ The Christians of Austria can influence their governments to be friendlier towar
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: right_strength += 8; right_dissent -= 4; resources -= 1
+on-arrival: right_strength += 8; right_dissent -= 4; resources -= 1; prussian_concordat_progress += 1; reichskonkordat_progress += 1 if prussian_concordat = 1
 
-Members of Zentrum have been sent to meet with the officals from the Holy See to discuss the possibility of a [? if prussian_concordat = 0 : Prussian Concordat ?][? if prussian_concordat = 1 : Reichskonkordat ?].
+Members of the Center Party have been sent to meet with the officals from the Holy See to discuss the possibility of a [? if prussian_concordat = 0 : Prussian Concordat ?][? if prussian_concordat = 1 : Reichskonkordat ?].
 
 @lon
 subtitle: -1 resources
@@ -48,7 +47,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1
 
-The Socialist Party of America is tiny and has limited support. There is not much we can do for them, and conversely, not much they can do for us.
+As the American Prohibition Party is past its peak, there's nothing much they can do for us and nothing we can do for them.
 
 @reduce
 
