@@ -75,7 +75,7 @@ if (Q.unemployed <= 1) {
     Q.unemployed = 1;
 }
 
-Q.rb_unity = Q.spd_relation*(1-Q.dissent)*1.1
+Q.rb_unity =  parseFloat((Q.spd_relation*(1-Q.dissent)*1.1).toFixed(1))
 
 // re-calculate dissent.
 var total_strength = Q.left_labor_strength + Q.center_strength + Q.right_labor_strength + Q.right_strength + Q.young_conservatives_strength;
