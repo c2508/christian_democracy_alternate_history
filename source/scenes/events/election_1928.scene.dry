@@ -301,7 +301,7 @@ go-to: coalition_menu
 
 **Potential coalitions:**
 
-Weimar Coalition (<span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> + <span style="color: #000000;">**DDP**</span>): [+ weimar_coalition +]%
+Weimar Coalition (<span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> + <span style="color: #DCCA4A;">**DDP**</span>): [+ grand_coalition - 3 - Q.dvp_r +]%
 
 Grand Coalition (<span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> + <span style="color: #69A2BE;">**BVP**</span> + <span style="color: #DCCA4A;">**DDP**</span> + <span style="color: #DCCA4A;">**DVP**</span>): [+ grand_coalition +]%
 
