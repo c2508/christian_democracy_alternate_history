@@ -997,11 +997,11 @@ on-arrival: coalition_dissent = 0; prussia_leader = "Stegerwald"; prussia_leader
 
 We finally control the government of Prussia after years of socialist control. 
 
-The Minister-President position is transferred to the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]'s [+ prussia_leader +]. [? if next_election_time - time < 6: We are expected to give up some leverage in upcoming federal coalition talks. ?]
+The Minister-President position is transferred to Adam Stegerwald. [? if next_election_time - time < 6: We are expected to give up some leverage in upcoming federal coalition talks. ?]
 
 @grand_coalition_prussia
 title: We can form a Grand Coalition.
-view-if: grand_coalition_prussia >= 45 and not lvp_formed and dvp_exist and not cvp_formed
+view-if: grand_coalition_prussia >= 45 
 subtitle: <span style="color: #c00000;">**SPD**</span> + <span style="color: #000000;">**[+ z_party_name +]**</span> + [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> + <span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?] ([+ grand_coalition_prussia +]%)
 unavailable-subtitle: <span style="color: #c00000;">SPD</span> + <span style="color: #000000;">[+ z_party_name +]</span> + <span style="color: #D3C24D;">[+ ddp_name +]</span> + <span style="color: #C0A054;">DVP</span> ([+ grand_coalition_prussia +]%) [? if not ((z_relation >= 30 and z_ideology == "Right") or (z_relation >= 25 and z_leader == "Joos") or (z_relation >= 20 and z_leader == "Kaiser")): - We do not have the adequate relations with the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]. ?] [? if not (ddp_relation >= 30 and ddp_ideology == "Right") and not (ddp_relation >= 25 and ddp_ideology == "Moderate") and not (ddp_relation >= 20 and ddp_ideology == "Left") and not lvp_formed: - We do not have the adequate relations with the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>. ?][? if not (lvp_relation >= 40 and lvp_ideology == "Right") and not (lvp_relation >= 35 and lvp_ideology == "Moderate") and not (lvp_relation >= 30 and lvp_ideology == "Left") and lvp_formed: - We do not have the adequate relations with the <span style="color: #FFCC00;">LVP</span>. ?] [? if not (dvp_relation >= 25 and dvp_ideology == "Left") and not (dvp_relation >= 30 and dvp_ideology == "Moderate") and not (dvp_relation >= 45 and dvp_ideology == "Right") and not lvp_formed: - We do not have the adequate relations with the <span style="color: #C0A054;">**DVP**</span>. ?]
 choose-if: grand_coalition_prussia >= 50 and ( ( (z_relation >= 30 and z_ideology == "Right") or (z_relation >= 25 and z_leader == "Joos") or (z_relation >= 20 and z_leader == "Kaiser") ) and ( ( ((ddp_relation >= 30 and ddp_ideology == "Right") or (ddp_relation >= 25 and ddp_ideology == "Moderate") or (ddp_relation >= 20 and ddp_ideology == "Left")) and ((dvp_relation >= 25 and dvp_ideology == "Left") or (dvp_relation >= 30 and dvp_ideology == "Moderate") or (dvp_relation >= 45 and dvp_ideology == "Right")) and not lvp_formed ) or ( lvp_formed and ((lvp_relation >= 40 and lvp_ideology == "Right") or (lvp_relation >= 35 and lvp_ideology == "Moderate") or (lvp_relation >= 30 and lvp_ideology == "Left")) ) ) )
@@ -1136,19 +1136,38 @@ on-arrival: prussia_negotiations_kpd_left_trigger = 0
 - @election_1928.left_coalition_success: Continue negotiations.
 
 @right_coalition_prussia
-title: Refuse to form a government, so that a right-wing coalition may be formed.
+title: We can form a right coalition.
 subtitle: <span style="color: #000000;">**[+ z_party_name +]**</span> + [? if not lvp_formed and dvp_exist: <span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed:<span style="color: #FFCC00;">**LVP**</span>?] + <span style="color: #3E88B3;">**DNVP**</span> + **Others** ([+ right_coalition_prussia +]%)
 unavailable-subtitle: <span style="color: #000000;">[+ z_party_name +]</span>[? if dvp_exist and not lvp_formed:&nbsp;+ <span style="color: #C0A054;">DVP</span>?][? if lvp_formed:&nbsp;+ <span style="color: #FFCC00;">LVP</span>?] + <span style="color: #3E88B3;">DNVP</span> + Others ([+ right_coalition_prussia +]%) [? if (dnvp_ideology == "Radical" and not dnvp_westarp) or (year = 1929 and month >= 7):- The <span style="color: #3E88B3;">DNVP</span> is not interested in a coalition with the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?].?]
 view-if: right_coalition_prussia >= 50 and not cvp_formed
 choose-if: (dnvp_ideology == "Moderate" or dnvp_westarp) and not (year = 1929 and month >= 7)
-on-arrival: in_right_coalition_prussia = 1; hands_tied_prussia = 0; hands_tied_prussia = 1 if ((ddp_relation < 35 and not lvp_formed) or (lvp_relation < 40 and lvp_formed) or weimar_coalition_prussia < 45 or cvp_formed); prussia_leader = "Stegerwald"; prussia_leader = "Brüning" if z_leader == "Stegerwald"; workers_spd -= 5; new_middle_spd -= 5; rural_spd -= 3; dvp_right += 1; center_dissent += 10 if hands_tied_prussia; left_dissent += 5 if hands_tied_prussia; labor_dissent += 20 if hands_tied_prussia; reformist_dissent += 20 if hands_tied_prussia; neorevisionist_dissent += 10 if hands_tied_prussia; ddp_right += 1; ddp_cohesion -= 1; lvp_right += 1; prussian_police_loyalty -= 0.1; prussian_police_strength -= 10; pro_republic -= 3; ddp_relation -= 4; z_relation -= 4; dvp_relation -= 4; lvp_relation -= 4; hands_tied_prussia = 0
+on-arrival: in_right_coalition_prussia = 1; spd_relation -= 10; ddp_relation -= 10; dvp_relation += 10; dnvp_relation += 10; left_dissent += 10; right_strength += 10
+go-to: prussia_minister_president_right
 
-[? if not ((ddp_relation < 35 and not lvp_formed) or (lvp_relation < 40 and lvp_formed) or weimar_coalition_prussia < 45 or cvp_formed): Letting go the democratic bulwark to the right-wing parties is deeply unpopular among all party members, and provides no discernible benefit. ?][? if ((ddp_relation < 35 and not lvp_formed) or (lvp_relation < 40 and lvp_formed) or weimar_coalition_prussia < 45 or cvp_formed): Unfortunately, the current political situation doesn't allow us a choice but to abandon the democratic bulwark. Hopefully we can reestablish control in a few years. ?]
+Our decision to form a right coalition has shocked our "<span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition" partners in Prussia. The DVP and DNVP are pleased with our actions.
 
-[? if z_leader != "Stegerwald": Adam Stegerwald?][? if z_leader == "Stegerwald": Heinrich Brüning?] of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] is selected to be the Minister-President of Prussia.
+@prussia_minister_president_right
+
+Who shall be the Minister-President?
+
+- @stegerwald
+- @luther
+- @westarp 
+
+@stegerwald
+title: Stegerwald shall become Minister-President.
+on arrival: prussia_leader = "Stegerwald"; z_prussia = 1; 
+
+@luther
+title: We shall let Hans Luther be Minister-President. 
+on arrival: prussia_leader = "Luther";
+
+@westarp
+title: We shall let Kuno von Westarp be Minister-President. 
+on arrival: prussia_leader = "Westarp"; 
 
 @center_right_coalition_prussia
-title: Refuse to form a government, so that a center-right coalition may be formed.
+title: We can form a center right coalition.
 unavailable-subtitle: <span style="color: #000000;">[+ z_party_name +]</span> + [? if not lvp_formed: <span style="color: #D3C24D;">[+ ddp_name +]</span>[? if dvp_exist:&nbsp;+ <span style="color: #C0A054;">DVP</span>?]?][? if lvp_formed:<span style="color: #FFCC00;">LVP</span>?] + Others + <span style="color: #3E88B3;">DNVP</span> ([+ center_right_coalition_prussia +]%) [? if (year = 1929 and month >= 7): The <span style="color: #3E88B3;">DNVP</span> is not interested in a coalition with the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?].?]
 subtitle: <span style="color: #000000;">**[+ z_party_name +]**</span> + <span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if dvp_exist:&nbsp;+ <span style="color: #C0A054;">**DVP**</span>?] + **Others** + <span style="color: #3E88B3;">**DNVP**</span> ([+ center_right_coalition_prussia +]%)
 view-if: dnvp_ideology == "Moderate" and center_right_coalition_prussia >= 50 and dnf_formed and right_coalition_prussia < 50 and not lvp_formed and not cvp_formed
