@@ -103,11 +103,16 @@ Q.nationalization_adopted = 0;
 // moderate economic plan
 Q.moderate_plan_support = 0;
 Q.moderate_plan_adopted = 0;
+
 Q.bruning_points = 0;
 Q.dnvp_points = 0;
-Q.spd_left = 0; 
-Q.spd_right = 1 
 
+Q.spd_left = 0; 
+Q.spd_right = 1;
+Q.ddp_left = 2;
+Q.ddp_right = 0;
+Q.dvp_left = 0;
+Q.dvp_right = 1;
 // organizations
 
 // inter-party relations
