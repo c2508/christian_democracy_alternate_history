@@ -16,8 +16,8 @@ The <span style="color: #c00000;">**SPD**</span> campaigned on food for children
 - @vote_no: The <span style="color: #c00000;">**SPD**</span> votes no, against constructing the battlecruiser.
 
 @vote_yes
-view-if: spd_in_government == 1
-choose-if: spd_in_government == 1
+view-if: spd_in_government == 1 or chancellor != "Braun"
+choose-if: spd_in_government == 1 or chancellor != "Braun"
 on-arrival: panzerkreuzer_funded = 1; spd_relation += 5; workers_spd -= 3
 
 The <span style="color: #c00000;">**SPD**</span> has surprising voted for the battlecruiser in order to maintain the current governing coalition. Their grassroot leaders are shocked at their intransigence and many party branches have begun agitating against the cabinet.
