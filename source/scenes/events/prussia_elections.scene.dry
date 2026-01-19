@@ -995,9 +995,9 @@ title: Demand the Minister-President Position for Stegerwald.
 subtitle: Braun would need to resign. 
 on-arrival: coalition_dissent = 0; prussia_leader = "Stegerwald"; prussia_leader = "Brüning" if z_leader == "Stegerwald"; spd_relation -= 5; braun_resign = 1; spd_prussia = 0, z_prussia = 1; 
 
-We finally control the government of Prussia after years of Socialist control. 
+We finally control the government of Prussia after years of socialist control. 
 
-The Minister-President position is transferred to the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]'s [+ prussia_leader +].
+The Minister-President position is transferred to the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]'s [+ prussia_leader +]. [? if next_election_time - time < 6: We are expected to give up some leverage in upcoming federal coalition talks. ?]
 
 @grand_coalition_prussia
 title: We can form a Grand Coalition.
