@@ -8,35 +8,29 @@ tags: event
 
 = Wittorf Affair
 
-Our spies and contacts amongst the communists have brought news of a scandal engulfing the KPD leadership. An associate of KPD chairman Ernst Thälmann, a KPD official named John Wittorf, is accused of embezzling campaign funds, diverting thousands of Reichsmarks for personal use, and Thälmann is accused of covering up the affair. The party's central committee considers this charge serious.
+There has been rumors of a scandal engulfing the KPD leadership. An associate of KPD chairman Ernst Thälmann, a KPD official named John Wittorf, is accused of embezzling campaign funds, diverting thousands of Reichsmarks for personal use, and Thälmann is accused of covering up the affair. The party's central committee considers this charge serious.
 
 The Conciliators in the KPD, a faction opposed to the party's present hard-line policy, are said to have leaked this information to aid them in the intra-party struggle. Dissident communists in the Leninbund also have information about this affair, and are planning to publish it.
 
 What should we do with this information?
 
-- @publicize
-- @nothing
-- @secret
+- @reveal
+- @support
 
-@publicize
-title: We will publicize the scandal to damage the KPD and Thälmann.
-on-arrival: workers_kpd -= 4; unemployed_kpd -= 2; 
+@reveal
+title: The Social Democrats have publicized the scandal to damage the KPD and Thälmann.
+on-arrival: workers_kpd -= 4; unemployed_kpd -= 2; workers_spd += 4; spd_relation += 4; 
+view if: spd_right >= spd_left 
+choose if: spd_right > spd_left
 
-Our newspapers are among the first to publicize the affair, bringing a torment of criticism to the hypocrisy of the communists. We have damaged the KPD's standing among the workers, but also perhaps closed the door on further cooperation.
+Vorwarts is the first to publicize the affair, bringing a torment of criticism to the hypocrisy of the communists. This has damaged the KPD's standing among the workers, while increasing our cooperation with the SPD.
 
 In the end, Stalin's pressure helps to keep Thälmann from facing much in the way of consequences.
 
-@nothing
-title: Do nothing with the information.
-on-arrival: workers_kpd -= 2; unemployed_kpd -= 2;
+@support
+title: The Social Democrats have defend the KPD throughout this ordeal. 
+on-arrival: workers_spd += 1; unemployed_spd += 1; workers_kpd -= 2; unemployed_kpd -= 2;
+view if: spd_right < spd_left 
+choose if: spd_right < spd_left
 
-The information spreads without our help, leading to some loss of KPD support among the workers.
-
-
-@secret
-title: It is best to keep this information secret. Prevent the Leninbund and dissident KPD members from spreading this.
-choose-if: levi_advisor or rosenfeld_advisor
-unavailable-subtitle: We do not have contacts among the dissident communists.
-on-arrival: wittorf_secret = 1; reformist_dissent += 5; left_dissent += 5
-
-Some among our leadership consider it unsavory to engage in cloak-and-dagger scheming. However, keeping this secret might be necessary to work with the KPD, and the information might become useful later.
+Vorwarts has openly defended the KPD, downplaying the scandal and denouncing it as right wing propaganda. The scandal has hit the KPD considerably less severe then expected, in part due to their friendly relations with the SPD.
