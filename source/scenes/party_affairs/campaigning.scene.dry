@@ -3,7 +3,7 @@ new-page: true
 on-arrival: month_actions += 1
 max-visits: 36
 is-card: true
-card-image: CenterCampaign.jpg
+card-image: img/CenterCampaign.jpg
 frequency: 100
 tags: party_affairs
 
@@ -11,7 +11,7 @@ tags: party_affairs
 
 Whether or not we are in an electoral campaign, the party is always trying to broaden its voter base. Who should we focus our campaign efforts on?
 
-- @workers: The urban working class, the largest demographi in Germany.
+- @workers: The urban working class, the largest demographic in Germany.
 - @new_middle: The "new middle class" of government employees and white-collar workers.
 - @old_middle: The "old middle class" of small independent businessmen and artisans.
 - @rural: Rural workers and small farmers, affiliated with the right wing of our party.
