@@ -55,6 +55,6 @@ It is expected that Hugenberg will turn the DNVP from a party based conservative
 
 @compromise
 on-arrival: dnvp_relation += 3; pro_republic -= 2; rural_dnvp -= 1; new_middle_dnvp -= 1; dnvp_leader = "Triumvirate"
-face-image: img/portraits/KaasLudwig.jpg
+face-image: img/portraits/WestarpKuno.jpg
 
 In part due to the efforts of the left and right of the <span style="color: #3E88B3;">**DNVP**</span> in garnering support since Westarp's resignation, the party congress has been inconclusive and no candidate has emerged victorious. Thus, a compromise has been reached in which Westarp, Hugenberg and the chairman of the <span style="color: #3E88B3;">**DNVP**</span>'s Prussian delegation would lead the <span style="color: #3E88B3;">**DNVP**</span> in a triumvirate. Hugenberg is content to sit in the sidelines and consolidate power via the regional organisations, while Westarp has begun to look to Martin Schiele and the Agrarian Wing for their aid.
