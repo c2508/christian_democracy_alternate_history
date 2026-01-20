@@ -6,7 +6,7 @@ choose-if: spd_prussia == 0
 
 Is it really that simple? Won't his supporters react violently to this suggestion? Some people might consider this to be an anti-democratic abuse of power, using the law in order to target a political opponent.
 
-- @arrest: Deport him!
+- @arrest: Arrest him!
 - @no_arrest: No, we must not.
 
 @arrest
@@ -17,7 +17,7 @@ go-to: deport_violence if rfb_strength >= 200; deport_success if sa_strength < 2
 When the police approach, he is surrounded by the RFB, preventing him from being extricated! We can attempt to force a confrontation, but that may have negative consequences. The Reichsbanner may also attempt to draw off the SA.
 
 - @force_approach: Force the approach!
-- @no_deport: Cancel the deportation.
+- @no_arrest: Cancel the deportation.
 
 @force_approach
 on-arrival: {!
@@ -35,7 +35,7 @@ if (total_allied_strength > enemy_strength) {
 go-to: force_fail if deportation_success == 0; force_success if deportation_success = 1
 
 @force_fail
-on-arrival: sa_strength += 50; workers_nsdap += 5; unemployed_nsdap += 5; new_middle_nsdap += 5; old_middle_nsdap += 5; rural_nsdap += 5; coup_progress += 3
+on-arrival: rfb_strength += 50; workers_kpd += 5; unemployed_kpd += 5; new_middle_nsdap += 5; old_middle_nsdap += 5; rural_nsdap += 5; coup_progress += 3
 
 Unfortunately, our forces fail to disloge the SA from their positions surrounding Hitler. He is seen as both a strong and powerful leader and a victim, further reinforcing his image. The Nazis are left stronger than ever.
 
@@ -47,7 +47,7 @@ The confrontation ends with the police and Reichsbanner prevailing, capturing Hi
 
 In Thalmann's absence, the Concillator Faction has become the leader of the <span style="color: #700000;">**KPD**</span>, with substantial influence from Joseph Stalin.
 
-@deport_success
+@arrest_success
 on-arrival: hitler_deported = 1; sa_strength = sa_strength/2; workers_nsdap -= 10; new_middle_nsdap -= 10; old_middle_nsdap -= 10; rural_nsdap -= 10; unemployed_nsdap -= 10; coup_progress -= 2; nsdap_leader = "Goebbels"
 achievement: deport_hitler
 
