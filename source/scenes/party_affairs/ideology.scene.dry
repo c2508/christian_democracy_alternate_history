@@ -15,6 +15,7 @@ The Center Party is torn between many different ideological currents. What shoul
 [? if ideology != 0 : We have previously chosen a [+ ideology +] ideology. Changing it will likely have drawbacks. ?]
 
 - @left: Republicanism and cooperation with the SPD are our primary goals.
+- @left_labor: E
 - @centrist: We should continue to advance the rights of Catholics through the democratic framework.
 - @right_labor: With a focus on protecting workers' welfare, we will staunchly oppose socialism and laissez-faire capitalism.
 - @right: By working with the moderate right, we will seek a return to the pre-war status quo. 
@@ -27,9 +28,19 @@ if (Q.ideology && Q.ideology != "left") {
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "left"; left_strength += 10; left_labor_strength += 5; left_labor_dissent -= 3; spd_relation += 3; dnvp_relation -= 5; ddp_relation += 1; democratization += 1
+on-departure: ideology = "left"; left_strength += 10; left_dissent -= 5; spd_relation += 5; dnvp_relation -= 5; ddp_relation += 3; democratization += 1
 
 The left wing of our party is staunchly pro-republic and seeks to continue the current constituitional order. 
+@left_labor
+on-arrival: {!
+if (Q.ideology && Q.ideology != "left_labor") {
+    Q.changed = 1;
+}
+!}
+go-to: changed if changed = 1
+on-departure: ideology = "left_labor"; left_labor_strength += 10; left_labor_dissent -= 5; spd_relation += 3; dnvp_relation -= 3; ddp_relation += 1;
+
+The left labor wing of our party is 
 @centrist
 on-arrival: {!
 if (Q.ideology && Q.ideology != "centrist") {
@@ -37,7 +48,7 @@ if (Q.ideology && Q.ideology != "centrist") {
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "centrist"; center_strength += 10; center_dissent -= 10; left_dissent -= 5; right_dissent -= 5
+on-departure: ideology = "centrist"; center_strength += 10; center_dissent -= 10; left_dissent -= 5; right_dissent -= 5; left_labor_dissent -= 8; right_labor_dissent -= 8;
  
 The Centrists, led by Marx and Guerard, are generally republican by reason. While they prefer to work with the DNVP, they do not rule out coalitions with the SPD.
 
