@@ -1,20 +1,20 @@
-title: We can deport Hitler.
-subtitle: He is a foreign citizen and a criminal, after all.
-unavailable-subtitle: [? if judicial_reform < 2 : Unfortunately, the reactionary judiciary will not cooperate. ?] [? if presidential_election_seen == 1 : Hitler has already been made a citizen of Germany, in the run-up to the presidential election. ?] [? if not spd_prussia : We cannot do this without the cooperation of the Prussian police, who are not currently in our control. ?]
-view-if: nazi_urgency >= 3 and hitler_deported = 0 and chancellor != "Papen" and chancellor != "Schleicher" and investigate_far_right >= 2
-choose-if: judicial_reform >= 2 and presidential_election_seen == 0 and spd_prussia == 1
+title: We can arrest Thalmann.
+subtitle: He is a well known communist revolutionary after all.
+unavailable-subtitle: [? if spd_prussia : We cannot do this without the cooperation of the Prussian police, who are currently under the control of the <span style="color: #c00000;">**SPD**</span>. ?]
+view-if: kpd_urgency >= 1 and thalmann_arrested = 0 and chancellor != "Thalmann" and investigate_far_left >= 1
+choose-if: spd_prussia == 0
 
-Is it really that simple? Won't his supporters react violently to this suggestion? And even if the deportation does succeed, won't he just re-enter the country, or perhaps organize from Austria? And, some people consider this to be an anti-democratic abuse of power, using the law in order to target a political opponent.
+Is it really that simple? Won't his supporters react violently to this suggestion? Some people might consider this to be an anti-democratic abuse of power, using the law in order to target a political opponent.
 
-- @deport: Deport him!
-- @no_deport: No, we must not.
+- @arrest: Deport him!
+- @no_arrest: No, we must not.
 
-@deport
-go-to: deport_violence if sa_strength >= 200; deport_success if sa_strength < 200
+@arrest
+go-to: deport_violence if rfb_strength >= 200; deport_success if sa_strength < 200
 
 @deport_violence
 
-When the police approach, he is surrounded by his SA guards, preventing him from being extricated! We can attempt to force a confrontation, but that may have negative consequences. The Reichsbanner may also attempt to draw off the SA.
+When the police approach, he is surrounded by the RFB, preventing him from being extricated! We can attempt to force a confrontation, but that may have negative consequences. The Reichsbanner may also attempt to draw off the SA.
 
 - @force_approach: Force the approach!
 - @no_deport: Cancel the deportation.
@@ -45,17 +45,17 @@ achievement: deport_hitler
 
 The confrontation ends with the police and Reichsbanner prevailing, capturing Hitler so he can be deported! This is a sign of weakness, and his physical distance makes organizing difficult, impeding the Nazi effort to win more votes.
 
-In Hitler's absence, Joseph Goebbels has become the temporary leader of the Nazi party, with substantial influence from Hermann Göring.
+In Thalmann's absence, the Concillator Faction has become the leader of the <span style="color: #700000;">**KPD**</span>, with substantial influence from Joseph Stalin.
 
 @deport_success
 on-arrival: hitler_deported = 1; sa_strength = sa_strength/2; workers_nsdap -= 10; new_middle_nsdap -= 10; old_middle_nsdap -= 10; rural_nsdap -= 10; unemployed_nsdap -= 10; coup_progress -= 2; nsdap_leader = "Goebbels"
 achievement: deport_hitler
 
-Somehow, the plan worked! There was minimal resistance to Hitler's deportation. This is a sign of weakness, and his physical distance makes organizing difficult, impeding the Nazi effort to win more votes.
+Somehow, the plan worked! There was minimal resistance to Thalmann's arrest. This is a sign of weakness, and his physical distance makes organizing difficult, impeding the Communist effort to win more votes.
 
-In Hitler's absence, Joseph Goebbels has become the temporary leader of the Nazi party, with substantial influence from Hermann Göring.
+In Thalmann's absence, the Concillator Faction has become the leader of the <span style="color: #700000;">**KPD**</span>, with substantial influence from Joseph Stalin.
 
-@no_deport
+@no_arrest
 go-to: root
 
-We will not be deporting Hitler.
+We will not be arresting Thalmann today.
