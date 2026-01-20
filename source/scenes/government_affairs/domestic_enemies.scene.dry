@@ -1,7 +1,7 @@
 title: Investigating Domestic Enemies
 on-arrival: month_actions += 1
 view-if: z_in_government = 1 and interior_minister_party = "Z"
-#card-image: img/portraits/SeveringCarl.jpg
+#card-image: img/portraits/WirthJoseph.jpg
 #is-card: true
 #new-page: true
 
