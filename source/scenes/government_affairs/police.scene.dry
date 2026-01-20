@@ -18,6 +18,7 @@ As with the state police units and the Reichswehr, the internal police tends to 
 - @investigate_far_left: Investigate illegal activity among the far left.
 - @domestic_enemies: Investigate or ban our domestic enemies.
 - @deport_hitler
+- @arrest_thalmann
 - @root: Take no action for now.
 - @easy_discard
 - @cancel_advisor_action
