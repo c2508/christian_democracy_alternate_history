@@ -1,7 +1,7 @@
 title: Friedrich Dessauer
 is-pinned-card: true
 tags: advisor, left
-card-image: img/portraits/SchumacherKurt.jpg
+card-image: img/portraits/DessauerFriedrich.jpg
 view-if: dessauer_advisor = 1
 new-page: true 
 
@@ -37,17 +37,17 @@ Which party should we criticise?
 - @against_nsdap: NSDAP
 
 @against_dvp
-on-arrival: dvp_relations -= 4; dvp_old_middle -= 3
+on-arrival: dvp_relations -= 4; dvp_old_middle -= 3; dvp_right += 1
 
 Rhein-Mainische Volkszeitung prints editorials to attack the policies of the DVP.
 
 @against_dnvp
-on-arrival: enemies = "NSDAP"; right_strength -= 3; rural_dnvp -= 3; dnvp_relations -= 4
+on-arrival: enemies = "DNVP"; right_strength -= 3; rural_dnvp -= 3; dnvp_relations -= 4
 
 Rhein-Mainische Volkszeitung prints editorials to attack the policies of the DNVP.
 
 @against_nsdap
-on-arrival: enemies = "NSDAP"; left_labor_strength += 5; nazi_urgency += 1; workers_nsdap -= 3;
+on-arrival: enemies = "NSDAP"; left_strength += 5; nazi_urgency += 1; workers_nsdap -= 3;
 
 Rhein-Mainische Volkszeitung prints editorials to attack the policies of the NSDAP.
 
@@ -55,6 +55,7 @@ Rhein-Mainische Volkszeitung prints editorials to attack the policies of the NSD
 title: Reichsbanner
 subtitle: Dessauer supports providing more resources to the Reichsbanner.
 choose-if: advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if z_endorse_rb = 0: The <span style="color: #000000;">Center Party</span> has not endorsed the Reichbanner yet. ?] 
+
 on-arrival: advisor_action_timer = 6; reichsbanner_timer -= 6; last_advisor_action = 1
 go-to: reichsbanner
