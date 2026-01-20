@@ -10,9 +10,9 @@ Is it really that simple? Won't his supporters react violently to this suggestio
 - @no_arrest: No, we must not.
 
 @arrest
-go-to: deport_violence if rfb_strength >= 200; deport_success if sa_strength < 200
+go-to: arrest_violence if rfb_strength >= 200; arrest_success if sa_strength < 200
 
-@deport_violence
+@arrest_violence
 
 When the police approach, he is surrounded by the RFB, preventing him from being extricated! We can attempt to force a confrontation, but that may have negative consequences. The Reichsbanner may also attempt to draw off the SA.
 
@@ -27,28 +27,28 @@ console.log('Deporting Hitler - force approach');
 console.log(total_allied_strength, enemy_strength);
 
 if (total_allied_strength > enemy_strength) {
-    Q.deportation_success = 1;
+    Q.arrest_success = 1;
 } else {
-    Q.deportation_success = 0;
+    Q.arrest_success = 0;
 }
 !}
 go-to: force_fail if deportation_success == 0; force_success if deportation_success = 1
 
 @force_fail
-on-arrival: rfb_strength += 50; workers_kpd += 5; unemployed_kpd += 5; new_middle_nsdap += 5; old_middle_nsdap += 5; rural_nsdap += 5; coup_progress += 3
+on-arrival: rfb_strength += 50; workers_kpd += 5; unemployed_kpd += 5; new_middle_kpd += 5; old_middle_kpd += 5; rural_kpd += 5; coup_progress += 3
 
 Unfortunately, our forces fail to disloge the SA from their positions surrounding Hitler. He is seen as both a strong and powerful leader and a victim, further reinforcing his image. The Nazis are left stronger than ever.
 
 @force_success
-on-arrival: hitler_deported = 1; sa_strength = sa_strength/2; workers_nsdap -= 10; new_middle_nsdap -= 10; old_middle_nsdap -= 10; rural_nsdap -= 10; unemployed_nsdap -= 10; sa_banned = 1; coup_progress -= 2; nsdap_leader = "Goebbels"
+on-arrival: thalmann_arrested = 1; rfb_strength = rfb_strength/2; workers_kpd -= 10; new_middle_kpd -= 10; old_middle_nsdap -= 10; rural_kpd -= 10; unemployed_kpd -= 10; rfb_banned = 1; coup_progress -= 2; nsdap_leader = "Goebbels"
 achievement: deport_hitler
 
-The confrontation ends with the police and Reichsbanner prevailing, capturing Hitler so he can be deported! This is a sign of weakness, and his physical distance makes organizing difficult, impeding the Nazi effort to win more votes.
+The confrontation ends with the police and Reichsbanner prevailing, capturing Thalmann so he can be arrested! This is a sign of weakness, and his physical distance makes organizing difficult, impeding the Communist effort to win more votes.
 
 In Thalmann's absence, the Concillator Faction has become the leader of the <span style="color: #700000;">**KPD**</span>, with substantial influence from Joseph Stalin.
 
 @arrest_success
-on-arrival: hitler_deported = 1; sa_strength = sa_strength/2; workers_nsdap -= 10; new_middle_nsdap -= 10; old_middle_nsdap -= 10; rural_nsdap -= 10; unemployed_nsdap -= 10; coup_progress -= 2; nsdap_leader = "Goebbels"
+on-arrival: thalmann_arrested = 1; rfb_strength = rfb_strength/2; workers_kpd -= 10; new_middle_kpd -= 10; old_middle_kpd -= 10; rural_kpd -= 10; unemployed_kpd -= 10; coup_progress -= 2; nsdap_leader = "Goebbels"
 achievement: deport_hitler
 
 Somehow, the plan worked! There was minimal resistance to Thalmann's arrest. This is a sign of weakness, and his physical distance makes organizing difficult, impeding the Communist effort to win more votes.
