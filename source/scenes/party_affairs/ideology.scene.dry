@@ -14,7 +14,7 @@ The Center Party is torn between many different ideological currents. What shoul
 
 [? if ideology != 0 : We have previously chosen a [+ ideology +] ideology. Changing it will likely have drawbacks. ?]
 
-- @left: Republicanism and cooperation with the SPD are our primary goals.
+- @left: Consisting of social progressives and staunch republicans, we seek extensive cooperation with the <span style="color: #c00000;">**SPD**</span> to preserve democracy.
 - @left_labor: E
 - @centrist: We should continue to advance the rights of Catholics through the democratic framework.
 - @right_labor: With a focus on protecting workers' welfare, we will staunchly oppose socialism and laissez-faire capitalism.
@@ -40,7 +40,7 @@ if (Q.ideology && Q.ideology != "left_labor") {
 go-to: changed if changed = 1
 on-departure: ideology = "left_labor"; left_labor_strength += 10; left_labor_dissent -= 5; spd_relation += 3; dnvp_relation -= 3; ddp_relation += 1;
 
-The left labor wing of our party is 
+The left labor wing of our party is open to cooperation with the SPD
 @centrist
 on-arrival: {!
 if (Q.ideology && Q.ideology != "centrist") {
