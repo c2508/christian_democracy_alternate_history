@@ -183,138 +183,37 @@ go-to: coalition_menu
   <th>Landtag Seats</th>
 </tr>!}
 
-{!<tr>
-  <td><div class="box" style="background-color: var(--dvp-color); outline: 2px solid;"></div></td>
-  <td>[+ dvp_name +]:</td>
-  <td>[+ dvp_votes_wurttemberg +]%</td>
-  <td>[+ votes_change_dvp_wurttemberg +]</td>
-  <td>[+ dvp_wl +]%</td>
-  <td>[+ change_dvp_wl +]</td>
-</tr>!}
+{!<table>!} 
+{!<tr><td>Party</td><td>Vote Share</td><td>% Change</td><td>Landtag Seats</td><td>% Change</td></tr>!}
+{!<tr><td><div class="box" style='background-color: var(--dvp-color); outline: 2px; outline-style: solid;'> </div> !} **[+ dvp_name +]**: {!</td><td>!} **[+ dvp_votes_wurttemberg +]%** {!</td><td>!} **[+ votes_change_dvp_wurttemberg +]** {!</td><td>!} **[+ dvp_wl +]%** {!</td><td>!} **[+ change_dvp_wl +]** {!</td></tr>!}
 
-{!<tr>
-  <td><div class="box" style="background-color:#8B0000; outline: 2px solid;"></div></td>
-  <td>KPD:</td>
-  <td>[+ kpd_votes_wurttemberg +]%</td>
-  <td>[+ votes_change_kpd_wurttemberg +]</td>
-  <td>[+ kpd_wl +]%</td>
-  <td>[+ change_kpd_wl +]</td>
-</tr>!}
+{!<tr><td><div class="box" style='background-color:#8B0000'> </div> !} KPD: {!</td><td>!} [+ kpd_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_kpd_wurttemberg +] {!</td><td>!} [+ kpd_wl +]% {!</td><td>!} [+ change_kpd_wl +] {!</td></tr>!}
 
-{!<tr>
-  <td><div class="box" style="background-color:#E3000F; outline: 2px solid;"></div></td>
-  <td>SPD:</td>
-  <td>[+ spd_votes_wurttemberg +]%</td>
-  <td>[+ votes_change_spd_wurttemberg +]</td>
-  <td>[+ spd_wl +]%</td>
-  <td>[+ change_spd_wl +]</td>
-</tr>!}
+{!<tr><td><div class="box" style='background-color:#E3000F'> </div> !} SPD: {!</td><td>!} [+ spd_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_spd_wurttemberg +] {!</td><td>!} [+ spd_wl +]% {!</td><td>!} [+ change_spd_wl +] {!</td></tr>!}
 
-[? if aspd_exist:
-{!<tr>
-  <td><div class="box" style="background-color:#FE9E00; outline: 2px solid;"></div></td>
-  <td>ASPD:</td>
-  <td>[+ aspd_votes_wurttemberg +]%</td>
-  <td>[+ votes_change_aspd_wurttemberg +]</td>
-  <td>[+ aspd_wl +]%</td>
-  <td>[+ change_aspd_wl +]</td>
-</tr>!}
-?]
+[? if aspd_exist: {!<tr><td><div class="box" style='background-color:#FE9E00'> </div> !} ASPD: {!</td><td>!} [+ aspd_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_aspd_wurttemberg +] {!</td><td>!} [+ aspd_wl +]% {!</td><td>!} [+ change_aspd_wl +] {!</td><td>!} ?]
 
-[? if ddp_exist:
-{!<tr>
-  <td><div class="box" style="background-color:#DCCA4A; outline: 2px solid;"></div></td>
-  <td>[+ ddp_name +]:</td>
-  <td>[+ ddp_votes_wurttemberg +]%</td>
-  <td>[+ votes_change_ddp_wurttemberg +]</td>
-  <td>[+ ddp_wl +]%</td>
-  <td>[+ change_ddp_wl +]</td>
-</tr>!}
-?]
+[? if ddp_exist: {!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} [+ ddp_name +]: {!</td><td>!} [+ ddp_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_ddp_wurttemberg +] {!</td><td>!} [+ ddp_wl +]% {!</td><td>!} [+ change_ddp_wl +] {!</td></tr>!} ?]
 
-[? if csrp_exist:
-{!<tr>
-  <td><div class="box" style="background-color:#FF6B21; outline: 2px solid;"></div></td>
-  <td>CSRP:</td>
-  <td>[+ csrp_votes_wurttemberg +]%</td>
-  <td>[+ votes_change_csrp_wurttemberg +]</td>
-  <td>[+ csrp_wl +]%</td>
-  <td>[+ change_csrp_wl +]</td>
-</tr>!}
-?]
+[? if csrp_exist: {!<tr><td><div class="box" style='background-color:#FF6B21'> </div> !} CSRP: {!</td><td>!} [+ csrp_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_csrp_wurttemberg +] {!</td><td>!} [+ csrp_wl +]% {!</td><td>!} [+ change_csrp_wl +] {!</td></tr>!} ?]
 
-[? if csvd_exist:
-{!<tr>
-  <td><div class="box" style="background-color:#8ED8E4; outline: 2px solid;"></div></td>
-  <td>CSVD:</td>
-  <td>[+ csvd_votes_wurttemberg +]%</td>
-  <td>[+ votes_change_csvd_wurttemberg +]</td>
-  <td>[+ csvd_wl +]%</td>
-  <td>[+ change_csvd_wl +]</td>
-</tr>!}
-?]
+{!<tr><td><div class="box" style='background-color:#000'> </div> !} Z: {!</td><td>!} [+ z_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_z_wurttemberg +] {!</td><td>!} [+ z_wl +]% {!</td><td>!} [+ change_z_wl +] {!</td></tr>!}
 
-[? if cnblp_exist:
-{!<tr>
-  <td><div class="box" style="background-color:#006400; outline: 2px solid;"></div></td>
-  <td>WBWB:</td>
-  <td>[+ cnblp_votes_wurttemberg +]%</td>
-  <td>[+ votes_change_cnblp_wurttemberg +]</td>
-  <td>[+ cnblp_wl +]%</td>
-  <td>[+ change_cnblp_wl +]</td>
-</tr>!}
-?]
+[? if csvd_exist: {!<tr><td><div class="box" style='background-color:#8ED8E4'> </div> !} CSVD: {!</td><td>!} [+ csvd_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_csvd_wurttemberg +] {!</td><td>!} [+ csvd_wl +]% {!</td><td>!} [+ change_csvd_wl +] {!</td><td>!} ?]
 
-[? if kvp_formed:
-{!<tr>
-  <td><div class="box" style="background-color:#455B95; outline: 2px solid;"></div></td>
-  <td>KVP:</td>
-  <td>[+ kvp_votes_wurttemberg +]%</td>
-  <td>[+ votes_change_kvp_wurttemberg +]</td>
-  <td>[+ kvp_wl +]%</td>
-  <td>[+ change_kvp_wl +]</td>
-</tr>!}
-?]
+[? if cnblp_exist: {!<tr><td><div class="box" style='background-color:#006400'> </div> !} WBWB: {!</td><td>!} [+ cnblp_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_cnblp_wurttemberg +] {!</td><td>!} [+ cnblp_wl +]% {!</td><td>!} [+ change_cnblp_wl +] {!</td><td>!} ?]
 
-{!<tr>
-  <td><div class="box" style="background-color:#3f7bc1; outline: 2px solid;"></div></td>
-  <td>DNVP:</td>
-  <td>[+ dnvp_votes_wurttemberg +]%</td>
-  <td>[+ votes_change_dnvp_wurttemberg +]</td>
-  <td>[+ dnvp_wl +]%</td>
-  <td>[+ change_dnvp_wl +]</td>
-</tr>!}
+[? if kvp_formed: {!<tr><td><div class="box" style='background-color:#455B95'> </div> !} KVP: {!</td><td>!} [+ kvp_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_kvp_wurttemberg +] {!</td><td>!} [+ kvp_wl +]% {!</td><td>!} [+ change_kvp_wl +] {!</td></tr>!} ?]
 
-[? if dnf_formed:
-{!<tr>
-  <td><div class="box" style="background-color:#003755; outline: 2px solid;"></div></td>
-  <td>DNF:</td>
-  <td>[+ dnf_votes_wurttemberg +]%</td>
-  <td>[+ votes_change_dnf_wurttemberg +]</td>
-  <td>[+ dnf_wl +]%</td>
-  <td>[+ change_dnf_wl +]</td>
-</tr>!}
-?]
+{!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} DNVP: {!</td><td>!} [+ dnvp_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_dnvp_wurttemberg +] {!</td><td>!} [+ dnvp_wl +]% {!</td><td>!} [+ change_dnvp_wl +] {!</td></tr>!}
 
-{!<tr>
-  <td><div class="box" style="background-color:#954B00; outline: 2px solid;"></div></td>
-  <td>NSDAP:</td>
-  <td>[+ nsdap_votes_wurttemberg +]%</td>
-  <td>[+ votes_change_nsdap_wurttemberg +]</td>
-  <td>[+ nsdap_wl +]%</td>
-  <td>[+ change_nsdap_wl +]</td>
-</tr>!}
+[? if dnf_formed: {!<tr><td><div class="box" style='background-color:#003755'> </div> !} DNF: {!</td><td>!} [+ dnf_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_dnf_wurttemberg +] {!</td><td>!} [+ dnf_wl +]% {!</td><td>!} [+ change_dnf_wl +] {!</td></tr>!} ?]
 
-{!<tr>
-  <td><div class="box" style="background-color:#a0a0a0; outline: 2px solid;"></div></td>
-  <td>Others:</td>
-  <td>[+ other_votes_wurttemberg +]%</td>
-  <td>[+ votes_change_other_wurttemberg +]</td>
-  <td>[+ other_wl +]%</td>
-  <td>[+ change_other_wl +]</td>
-</tr>!}
+{!<tr><td><div class="box" style='background-color:#954B00'> </div> !} NSDAP: {!</td><td>!} [+ nsdap_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_nsdap_wurttemberg +] {!</td><td>!} [+ nsdap_wl +]% {!</td><td>!} [+ change_nsdap_wl +] {!</td></tr>!}
 
+{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_other_wurttemberg +] {!</td><td>!} [+ other_wl +]% {!</td><td>!} [+ change_other_wl +] {!</td></tr>!}
 {!</table>!}
+
 **Potential coalitions:**
 
 Weimar Coalition (<span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> + [? if ddp_exist: <span style="color: #DCCA4A;">**[+ ddp_name +]**</span>?][? if lvp_formed or nfvp_formed: <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span>?][? if csrp_exist: + <span style="color: #FF6B21;">**CSRP**</span>?][? if aspd_exist and aspd_ideology = "Moderate": + <span style="color: #FE9E00;">**ASPD**</span>?]): [+ weimar_coalition_wurttemberg +]%
