@@ -372,7 +372,7 @@ There are some potential coalition arrangements.
 - @no_majority
 
 @weimar_coalition_wurttemberg
-title: [? if not lvp_formed and not nfvp_formed: Refuse to participate in a government, so that a Weimar Coalition may be formed. ?][? if lvp_formed or nfvp_formed: We can form a Weimar Coalition. ?]
+title: We can form a Weimar Coalition.
 subtitle: <span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> + [? if ddp_exist: <span style="color: #DCCA4A;">**[+ ddp_name +]**</span>?][? if lvp_formed or nfvp_formed: <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span>?][? if csrp_exist: + <span style="color: #FF6B21;">**CSRP**</span>?][? if aspd_exist and aspd_ideology = "Moderate": + <span style="color: #FE9E00;">**ASPD**</span>?] ([+ weimar_coalition_wurttemberg +]%)
 view-if: weimar_coalition_wurttemberg >= 50
 
