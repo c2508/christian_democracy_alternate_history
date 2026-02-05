@@ -373,6 +373,36 @@ Q.previous_dnvp_last_election_votes_prussia = 23.7;
 Q.previous_nsdap_last_election_votes_prussia = 2.5;
 Q.previous_other_last_election_votes_prussia = 6.0;
 
+Q.spd_wl = 16.3;
+Q.aspd_wl = 0.0;
+Q.kpd_wl = 12.5;
+Q.z_wl = 21.3;
+Q.csrp_wl = 0.0;
+Q.ddp_wl = 11.2;
+Q.dvp_wl = 3.7;
+Q.csvd_wl = 0.0;
+Q.cnblp_wl = 21.3;
+Q.kvp_wl = 0.0;
+Q.dnvp_wl = 10.0;
+Q.dnf_wl = 0.0;
+Q.nsdap_wl = 3.7;
+Q.other_wl = 0.0;
+
+Q.old_spd_votes_wurttemberg = 16.0;
+Q.old_aspd_votes_wurttemberg = 0.0;
+Q.old_kpd_votes_wurttemberg = 11.7;
+Q.old_z_votes_wurttemberg = 20.9;
+Q.old_csrp_votes_wurttemberg = 0.0;
+Q.old_ddp_votes_wurttemberg = 10.6;
+Q.old_dvp_votes_wurttemberg = 4.6;
+Q.old_csvd_votes_wurttemberg = 0.0;
+Q.old_cnblp_votes_wurttemberg = 20.2;
+Q.old_kvp_votes_wurttemberg = 0.0;
+Q.old_dnvp_votes_wurttemberg = 10.4;
+Q.old_dnf_votes_wurttemberg = 0.0;
+Q.old_nsdap_votes_wurttemberg = 4.0;
+Q.old_other_votes_wurttemberg = 1.6;
+
 // sapd isn't formed yet, but it may be formed
 Q.sapd_r = 0;
 Q.old_sapd_r = 0;
