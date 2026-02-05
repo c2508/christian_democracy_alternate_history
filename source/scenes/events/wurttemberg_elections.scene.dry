@@ -143,7 +143,7 @@ if (Q.dnf_formed) Q.far_right_coalition_wurttemberg = parseFloat((Q.dnf_wl + Q.n
 
 
 
-}
+
 !}
 go-to: coalition_menu
 
