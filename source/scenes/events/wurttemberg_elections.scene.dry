@@ -142,11 +142,11 @@ if (Q.dnf_formed) Q.far_right_coalition_wurttemberg = parseFloat((Q.dnf_wl + Q.n
 
 
 
-if (Q.dvp_wurttemberg) {
-    Q.was_dvp_wurttemberg = 1
+if (Q.z_wurttemberg) {
+    Q.was_z_wurttemberg = 1
 }
-if (Q.in_dvp_majority_wurttemberg) {
-    Q.was_in_dvp_majority_wurttemberg = 1
+if (Q.in_z_majority_wurttemberg) {
+    Q.was_in_z_majority_wurttemberg = 1
 } else if (Q.in_weimar_coalition_wurttemberg) {
     Q.was_in_weimar_coalition_wurttemberg = 1
 } else if (Q.in_grand_coalition_wurttemberg) {
@@ -364,7 +364,7 @@ There are some potential coalition arrangements.
 
 @coalition_menu
 
-- @dvp_majority_wurttemberg
+- @z_majority_wurttemberg
 - @weimar_coalition_wurttemberg
 - @grand_coalition_wurttemberg
 - @bourgeois_coalition_wurttemberg
@@ -403,7 +403,7 @@ A Weimar Coalition is formed.
 title: We can form a Grand Coalition.
 view-if: grand_coalition_wurttemberg >= 50 and not (lvp_formed or nfvp_formed)
 subtitle: <span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span> ?] + <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span>[? if csrp_exist: + <span style="color: #FF6B21;">**CSRP**</span>?][? if aspd_exist and aspd_ideology = "Moderate": + <span style="color: #FE9E00;">**ASPD**</span>?] ([+ grand_coalition_wurttemberg +]%)
-on-arrival: in_grand_coalition_wurttemberg = 1; dvp_wurttemberg = 1;
+on-arrival: in_grand_coalition_wurttemberg = 1; z_wurttemberg = 1;
 
 We will form a Grand Coalition.
 
@@ -413,7 +413,7 @@ We will form a Grand Coalition.
 title: We can form a Bourgeois Coalition.
 view-if: bourgeois_coalition_wurttemberg >= 50
 subtitle: <span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span> ?] + <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span> [? if kvp_formed: + <span style="color: #455B95;">**KVP**</span>?][? if cnblp_exist: + <span style="color: #006400;">**WBWB**</span>?][? if csvd_exist: + <span style="color: #8ED8E4;">**CSVD**</span>?][? if csrp_exist: + <span style="color: #FF6B21;">**CSRP**</span>?][? if aspd_exist and aspd_ideology = "Moderate": + <span style="color: #FE9E00;">**ASPD**</span>?] + <span style="color: #909090;">**Others**</span> ([+ bourgeois_coalition_wurttemberg +]%)
-on-arrival: in_bourgeois_coalition_wurttemberg = 1; dvp_wurttemberg = 1;
+on-arrival: in_bourgeois_coalition_wurttemberg = 1; z_wurttemberg = 1;
 
 A Bourgeois Coalition is formed.
 
@@ -429,9 +429,9 @@ A Far-right Coalition is formed.
 
 - @wurttemberg_sp
 
-@dvp_majority_wurttemberg
+@z_majority_wurttemberg
 title: We can rule alone!
-view-if: dvp_wl >= 50
+view-if: z_wl >= 50
 subtitle: <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span> ([+ dvp_wl +]%)
 on-arrival: in_dvp_majority_wurttemberg = 1; dvp_wurttemberg = 1;
 
@@ -444,15 +444,14 @@ A <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span> majority gove
 @wurttemberg_sp
 title: The coalition will choose the State President.
 
-WIP
 
 - @bickes: Theodor Bickes
 - @maier: Reinhold Maier
 - @bolz: Eugen Bolz
 
 @bickes
-view-if: dvp_wurttemberg
-choose-if: in_dvp_majority_wurttemberg or ((in_grand_coalition_wurttemberg or in_bourgeois_coalition_wurttemberg) and (dvp_wl + ddp_wl) > z_wl) or (in_weimar_coalition_wurttemberg and dvp_wurttemberg and (dvp_wl + ddp_wl) > z_wl)
+view-if: in_grand_coalition_wurttemberg or in_bourgeois_coalition_wurttemberg
+choose-if: ((in_grand_coalition_wurttemberg or in_bourgeois_coalition_wurttemberg) and (dvp_wl + ddp_wl) > z_wl) or (in_weimar_coalition_wurttemberg and dvp_wurttemberg and (dvp_wl + ddp_wl) > z_wl)
 unavailable-subtitle: The <span style="color: #000000;">**Center Party**</span> can prevent him from becoming the Minister-President.
 on-arrival: wurttemberg_leader = "Bickes"; wurttemberg_leader_party = dvp_name
 face-image: img/portraits/BickesTheodor.jpg
@@ -460,7 +459,7 @@ face-image: img/portraits/BickesTheodor.jpg
 Theodor Bickes was chosen.
 
 @maier
-view-if: (dvp_wurttemberg and (nfvp_formed or lvp_formed)) or in_weimar_coalition_wurttemberg or in_grand_coalition_wurttemberg or in_bourgeois_coalition_wurttemberg
+view-if: (z_wurttemberg and (nfvp_formed or lvp_formed)) or in_weimar_coalition_wurttemberg or in_grand_coalition_wurttemberg or in_bourgeois_coalition_wurttemberg
 choose-if: in_dvp_majority_wurttemberg or ((in_grand_coalition_wurttemberg or in_bourgeois_coalition_wurttemberg) and (dvp_wl + ddp_wl) > z_wl) or (in_weimar_coalition_wurttemberg and dvp_wurttemberg and (dvp_wl + ddp_wl) > z_wl) or (in_weimar_coalition_wurttemberg and not dvp_wurttemberg and ddp_wl > z_wl)
 unavailable-subtitle: The <span style="color: #000000;">**Center Party**</span> can prevent him from becoming the Minister-President.
 on-arrival: wurttemberg_leader = "Maier"; wurttemberg_leader_party = ddp_name if ddp_exist; wurttemberg_leader_party = dvp_name if lvp_formed or nfvp_formed
@@ -469,7 +468,7 @@ face-image: img/portraits/MaierReinhold.jpg
 Reinhold Maier was chosen.
 
 @bolz
-view-if: in_weimar_coalition_wurttemberg or in_grand_coalition_wurttemberg or in_bourgeois_coalition_wurttemberg
+view-if: z_wurttemburg
 on-arrival: wurttemberg_leader = "Bolz"; wurttemberg_leader_party = "Z"
 face-image: img/portraits/BolzEugen.jpg
 
@@ -480,6 +479,6 @@ Eugen Bolz was chosen.
 @no_majority
 title: There is no clear governing majority.
 view-if: weimar_coalition_wurttemberg < 50 and bourgeois_coalition_wurttemberg < 50 and grand_coalition_wurttemberg < 50 and far_right_coalition_wurttemberg < 50
-on-arrival: workers_nsdap += 2; unemployed_nsdap += 2; old_middle_nsdap += 1; new_middle_nsdap += 1; rural_nsdap += 1; dvp_wurttemberg = 1 if was_dvp_wurttemberg; in_dvp_majority_wurttemberg = 1 if was_in_dvp_majority_wurttemberg; in_weimar_coalition_wurttemberg = 1 if was_in_weimar_coalition_wurttemberg; in_grand_coalition_wurttemberg = 1 if was_in_grand_coalition_wurttemberg; in_bourgeois_coalition_wurttemberg = 1 if was_in_bourgeois_coalition_wurttemberg; in_far_right_coalition_wurttemberg = 1 if was_in_far_right_coalition_wurttemberg;
+on-arrival: workers_nsdap += 2; unemployed_nsdap += 2; old_middle_nsdap += 1; new_middle_nsdap += 1; rural_nsdap += 1; z_wurttemberg = 1 if was_z_wurttemberg; in_z_majority_wurttemberg = 1 if was_in_z_majority_wurttemberg; in_weimar_coalition_wurttemberg = 1 if was_in_weimar_coalition_wurttemberg; in_grand_coalition_wurttemberg = 1 if was_in_grand_coalition_wurttemberg; in_bourgeois_coalition_wurttemberg = 1 if was_in_bourgeois_coalition_wurttemberg; in_far_right_coalition_wurttemberg = 1 if was_in_far_right_coalition_wurttemberg;
 
 There is no path to a majority government for now. The current government will stay in power as a minority coalition.
