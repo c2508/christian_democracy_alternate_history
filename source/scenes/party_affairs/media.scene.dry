@@ -9,7 +9,7 @@ card-image: img/sangerbund.jpg
 
 = Media
 
-The Centre Party runs a veritable media empire, with many newspapers throughout every German city and region. We could use the media for various purposes...
+The Centre Party wields much influence in Germany's media scene, with control over many local and regional newspapers throughout every German city and region. We could use the media for various purposes...
 
 - @commercial
 - @campaign
@@ -32,26 +32,26 @@ Our commercialized newspapers are able to bring in more funds. However, the left
 @campaign
 title: The purpose of our media is to elect more Catholics.
 subtitle: Our newspapers will focus on the electoral campaign.
-on-arrival: campaign_media += 1; catholics_z += 6*(1 - dissent)
+on-arrival: campaign_media += 1; catholics_z += 5*(1 - dissent)
 
 Our campaign media is mostly reaching the Catholics who are already saturated with Catholic propaganda, but it must be doing *something*, or at least that is what we hope.
 
 @ideological
-title: We will have vibrant ideological debate within our newspapers.
-subtitle: There will be space for all factions to air their views.
-on-arrival: left_labor_dissent -= 6; right_labor_dissent -= 6; center_dissent -= 6; right_dissent -= 6; young_conservative_dissent -= 6
+title: We will continue to follow the official party line regarding important issues. 
+subtitle: This helps prevent fragmentation amongst the party and preserves party unity.
+on-arrival: left_dissent -= 6; left_labor_dissent -= 6; center_dissent -= 6; right_labor_dissent -= 6; right_dissent -= 6; young_conservatives_dissent -= 6
 
 This has been our media course historically, and it has successfully paved over the many tensions in our party.
 
 @newspaper
-title: Allocate funds to Germania, our newspaper.  
+title: Allocate funds to Germania
 subtitle: -1 resource
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 view-if: newspaper = 0
-on-arrival: newspaper += 1; resources -= 1; new_middle_z += 4*(1 - dissent); old_middle_z += 3*(1 - dissent); workers_z += 2*(1 - dissent); left_labor_dissent += 5; right_labor_dissent += 5; right_strength += 5; socialism += 3*(1 - dissent); nationalism -= 3*(1 - dissent) if pacifism > 1; pro_republic += 3*(1-dissent) if democratization > 1
+on-arrival: newspaper += 1; resources -= 1; new_middle_z += 3*(1 - dissent); old_middle_z += 3*(1 - dissent); catholics_z += 2*(1 - dissent); pro_republic += 3*(1-dissent) if democratization > 1
 
-Our expanded newspaper allows us to connect to people in a more intimate setting than before, spreading the message of christian democracy along with music and other popular content. Since most proletarians cannot afford family radios right now, we are reaching the middle class, a fact of which our labor comrades are painfully aware.
+Our expanded newspaper allows us to connect to people in a more intimate setting than before, spreading the message of political catholicism along with music and other popular content. 
 
 @newspaper_2
 title: We must keep on building up our newspaper network.
@@ -59,7 +59,7 @@ subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 view-if: newspaper > 0 and newspaper <= 3
-on-arrival: newspaper += 1; resources -= 1; new_middle_z += 5*(1 - dissent); old_middle_z += 3*(1 - dissent); workers_z += 3*(1 - dissent); socialism += 3*(1 - dissent); nationalism -= 3*(1 - dissent)*(pacifism-2) if pacifism > 2; pro_republic += 3*(1-dissent)*(democratization-2) if democratization > 2
+on-arrival: newspaper += 1; resources -= 1; new_middle_z += 5*(1 - dissent); old_middle_z += 3*(1 - dissent); workers_z += 3*(1 - dissent); pro_republic += 3*(1-dissent)*(democratization-2) if left_strength > right_strength; pro_republic += 3*(1-dissent)*(democratization-2) if left_labor_strength > right_strength
 
 Our new newspaper network has a mix of popular and political programming, and is proving a success.
 
@@ -67,7 +67,7 @@ Our new newspaper network has a mix of popular and political programming, and is
 title: We must keep on building up our newspaper network. 
 subtitle: It is now financially self-sufficient, and does not require any more resources.
 view-if: newspaper > 3 and newspaper <= 5 and year <= 1931
-on-arrival: newspaper += 1; new_middle_z += 5*(1 - dissent); old_middle_z += 4*(1 - dissent); workers_z += 4*(1 - dissent); rural_z += 3*(1 - dissent); unemployed_z += 2*(1-dissent); socialism += 3*(1 - dissent); nationalism -= 3*(1 - dissent)*(pacifism-2) if pacifism > 2; pro_republic += 3*(1-dissent)*(democratization-2) if democratization > 2
+on-arrival: newspaper += 1; new_middle_z += 5*(1 - dissent); old_middle_z += 4*(1 - dissent); workers_z += 2*(1 - dissent); rural_z += 3*(1 - dissent); catholics_z += 2*(1-dissent); pro_republic += 3*(1-dissent)*(democratization-2) if left_strength > right_strength; pro_republic += 3*(1-dissent)*(democratization-2) if left_labor_strength > right_strength
 
 Our newspaper network has become a successful tool for spreading our message.
 
@@ -77,6 +77,6 @@ subtitle: As newspapers becomes more common, the novelty is beginning to wear of
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 view-if: newspaper > 3 and (newspaper >= 6 or year >= 1932) and radio <= 9
-on-arrival: newspaper += 1; resources -= 1; new_middle_z += 3*(1 - dissent); old_middle_z += 2*(1 - dissent); workers_z += 3*(1 - dissent); rural_z += 2*(1 - dissent); unemployed_z += 2*(1-dissent); socialism += 2*(1 - dissent); nationalism -= 2*(1 - dissent)*(pacifism-2) if pacifism > 2; pro_republic += 2*(1-dissent)*(democratization-2) if democratization > 2
+on-arrival: newspaper += 1; resources -= 1; new_middle_z += 2*(1 - dissent); old_middle_z += 1*(1 - dissent); catholics_z += 2*(1 - dissent); rural_z += 1*(1 - dissent); pro_republic += 3*(1-dissent)*(democratization-2) if left_strength > right_strength; pro_republic += 3*(1-dissent)*(democratization-2) if left_labor_strength > right_strength
 
 We are continuing to invest in our newspaper network. Both commercial and political radio are becoming more prevalent, making it harder to spread our message amidst the competition.
