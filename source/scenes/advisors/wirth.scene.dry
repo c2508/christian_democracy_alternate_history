@@ -36,7 +36,7 @@ Wirth was in the SPD before and is able to use his close ties with <span style="
 @build_reichsbanner
 title: Reichsbanner
 subtitle: Wirth supports providing more resources to the Reichsbanner.
-choose-if: advisor_action_timer = 0; z_rb = 1; z_endorse_rb = 1
+choose-if: advisor_action_timer = 0 and z_rb = 1 and z_endorse_rb = 1
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if z_rb = 0 : The Center Party is not part of the Reichsbanner. ?][? if z_endorse_rb = 0 : The Center Party does not officially endorse the Reichsbanner. ?]
 on-arrival: advisor_action_timer = 6; reichsbanner_timer -= 6; last_advisor_action = 1
 go-to: reichsbanner 
