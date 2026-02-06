@@ -415,7 +415,7 @@ A Far-right Coalition is formed.
 title: We can rule alone!
 view-if: z_wl >= 50
 subtitle: <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span> ([+ dvp_wl +]%)
-on-arrival: in_dvp_majority_wurttemberg = 1; dvp_wurttemberg = 1;
+on-arrival: in_z_majority_wurttemberg = 1; z_wurttemberg = 1;
 
 A <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span> majority government is formed.
 
@@ -446,7 +446,7 @@ face-image: img/portraits/MaierReinhold.jpg
 Reinhold Maier was chosen.
 
 @bolz
-view-if: z_wurttemburg = 1
+view-if: in_weimar_coalition_wurttemberg or in_grand_coalition_wurttemberg or in_bourgeois_coalition_wurttemberg or in_z_majority_wurttemberg = 1
 on-arrival: wurttemberg_leader = "Bolz"; wurttemberg_leader_party = "Z"
 face-image: img/portraits/BolzEugen.jpg
 
