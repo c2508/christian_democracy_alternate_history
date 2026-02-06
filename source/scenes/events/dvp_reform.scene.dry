@@ -10,7 +10,7 @@ if (Q.dvp_relation >= 60) {
 if (!Q.in_grand_coalition) {
     Q.dvp_right += 1;
 }
-if (Q.foreign_minister_party = 'DVP' and Q.in_grand_coalition) {
+if (Q.foreign_minister_party = 'DVP' && Q.in_grand_coalition) {
     Q.dvp_left += 1; 
 }
 if (Q.new_middle_dvp + Q.new_middle_dnvp + Q.new_middle_z < 50) {
