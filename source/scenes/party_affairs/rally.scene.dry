@@ -75,15 +75,15 @@ Mass rallies are a common feature of Christian Democratic life, especially in th
 - @catholic: Advancing the rights of Catholics through parliamentary means
 - @welfare: Sozialpolitik - the maintenance and expansion of social welfare programs.
 - @democracy: Expanding our nascent democracy and defending it against dictatorship and fascism.
-- @right: Working with the conservative right to make Germany great again 
+- @right: Working with the Protestant Right to 
 - @wtb: Support the WTB plan!
 - @local: A mixture of various local and national concerns that resonate most with the audience.
 - @easy_discard
 
 @catholic
-on-arrival: catholics_z += 7*(1-dissent); catholics_z += 4*(1-dissent) if democratization >= 3; center_strength += 5; center_dissent -= 5
+on-arrival: catholics_z += 6*(1-dissent); catholics_z += 3*(1-dissent) if prussian_concordat = 1; center_strength += 5; center_dissent -= 5
 
-Reminding our constituents of our confessional nature is a good way of energising our electoral base. [? if democratization >= 3 : Our achievements in securing equal rights of Catholics have assisted our messaging. ?]
+Reminding our constituents of our confessional nature is a good way of energising our electoral base. [? if prussian_concordat = 1 : Our work in the Prussian Concordat have assisted our messaging. ?]
 
 @welfare
 on-arrival: workers_spd += 3*(1-dissent); workers_z += 3*(1-dissent) if welfare > 0; unemployed_spd += 3*(1-dissent) if welfare > 0; unemployed_z += 4*(1-dissent) if welfare > 1; right_labor_strength += 3; left_labor_strength += 4; right_labor_dissent -= 3; left_labor_dissent -= 3;
