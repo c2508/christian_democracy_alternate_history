@@ -446,7 +446,7 @@ face-image: img/portraits/MaierReinhold.jpg
 Reinhold Maier was chosen.
 
 @bolz
-view-if: z_wurttemburg == 1;
+view-if: z_wurttemburg == 1
 on-arrival: wurttemberg_leader = "Bolz"; wurttemberg_leader_party = "Z"
 face-image: img/portraits/BolzEugen.jpg
 
