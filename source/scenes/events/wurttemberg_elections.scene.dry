@@ -158,8 +158,8 @@ if (Q.in_z_majority_wurttemberg) {
 }
 
 
-Q.dvp_wurttemberg = 0;
-Q.in_dvp_majority_wurttemberg = 0;
+Q.z_wurttemberg = 0;
+Q.in_z_majority_wurttemberg = 0;
 Q.in_weimar_coalition_wurttemberg = 0;
 Q.in_grand_coalition_wurttemberg = 0;
 Q.in_bourgeois_coalition_wurttemberg = 0;
@@ -321,8 +321,6 @@ go-to: coalition_menu
 
 {!<table>!} 
 {!<tr><td>Party</td><td>Vote Share</td><td>% Change</td><td>Landtag Seats</td><td>% Change</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#C0A054'> </div> !} DVP: {!</td><td>!} [+ dvp_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_dvp_wurttemberg +] {!</td><td>!} [+ dvp_wl +]% {!</td><td>!} [+ change_dvp_wl +] {!</td></tr>!}
-
 {!<tr><td><div class="box" style='background-color:#8B0000'> </div> !} KPD: {!</td><td>!} [+ kpd_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_kpd_wurttemberg +] {!</td><td>!} [+ kpd_wl +]% {!</td><td>!} [+ change_kpd_wl +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#E3000F'> </div> !} SPD: {!</td><td>!} [+ spd_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_spd_wurttemberg +] {!</td><td>!} [+ spd_wl +]% {!</td><td>!} [+ change_spd_wl +] {!</td></tr>!}
@@ -334,6 +332,8 @@ go-to: coalition_menu
 [? if csrp_exist: {!<tr><td><div class="box" style='background-color:#FF6B21'> </div> !} CSRP: {!</td><td>!} [+ csrp_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_csrp_wurttemberg +] {!</td><td>!} [+ csrp_wl +]% {!</td><td>!} [+ change_csrp_wl +] {!</td></tr>!} ?]
 
 {!<tr><td><div class="box" style='background-color:#000'> </div> !} Z: {!</td><td>!} [+ z_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_z_wurttemberg +] {!</td><td>!} [+ z_wl +]% {!</td><td>!} [+ change_z_wl +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#C0A054'> </div> !} DVP: {!</td><td>!} [+ dvp_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_dvp_wurttemberg +] {!</td><td>!} [+ dvp_wl +]% {!</td><td>!} [+ change_dvp_wl +] {!</td></tr>!}
 
 [? if csvd_exist: {!<tr><td><div class="box" style='background-color:#8ED8E4'> </div> !} CSVD: {!</td><td>!} [+ csvd_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_csvd_wurttemberg +] {!</td><td>!} [+ csvd_wl +]% {!</td><td>!} [+ change_csvd_wl +] {!</td><td>!} ?]
 
@@ -375,6 +375,7 @@ There are some potential coalition arrangements.
 title: We can form a Weimar Coalition.
 subtitle: <span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> + [? if ddp_exist: <span style="color: #DCCA4A;">**[+ ddp_name +]**</span>?][? if lvp_formed or nfvp_formed: <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span>?][? if csrp_exist: + <span style="color: #FF6B21;">**CSRP**</span>?][? if aspd_exist and aspd_ideology = "Moderate": + <span style="color: #FE9E00;">**ASPD**</span>?] ([+ weimar_coalition_wurttemberg +]%)
 view-if: weimar_coalition_wurttemberg >= 50
+on-arrival: in_weimar_coalition_wurttemberg = 1; z_wurttemberg = 1;
 
 There are enough votes for a majority Weimar Coalition of the <span style="color: #000000;">**Center**</span>, <span style="color: #E3000F;">**SPD**</span> and [? if not lvp_formed and not nfvp_formed: <span style="color: #DCCA4A;">**[+ ddp_name +]**</span>?][? if lvp_formed or nfvp_formed: <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span>?].
 
