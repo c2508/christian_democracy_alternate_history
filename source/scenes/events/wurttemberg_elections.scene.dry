@@ -446,7 +446,7 @@ face-image: img/portraits/MaierReinhold.jpg
 Reinhold Maier was chosen.
 
 @bolz
-view-if: in_weimar_coalition_wurttemberg or in_grand_coalition_wurttemberg or in_bourgeois_coalition_wurttemberg or in_z_majority_wurttemberg = 1
+view-if: in_weimar_coalition_wurttemberg or in_grand_coalition_wurttemberg or in_bourgeois_coalition_wurttemberg or in_z_majority_wurttemberg 
 on-arrival: wurttemberg_leader = "Bolz"; wurttemberg_leader_party = "Z"
 face-image: img/portraits/BolzEugen.jpg
 
