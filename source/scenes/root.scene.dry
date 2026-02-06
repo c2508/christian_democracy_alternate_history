@@ -137,6 +137,7 @@ Q.nsdap_leader = "Hitler";
 Q.z_party_name = "Z";
 Q.ddp_name = "DDP";
 Q.ddp_exist = 1;
+Q.dnf_formed = 0;
 
 // hmm... maybe we can play nice with Hindenburg???
 Q.hindenburg_relation = 25;
@@ -574,7 +575,7 @@ Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
             'sa_ban', 'sh_ban', 'papen_chancellor',
             'kpd_policy', 'kpd_ultimatum', 'popular_front_dispute',
             'high_inflation', 'banking_crisis', 'march_on_berlin',
-            'understanding_enemy', 'schleichers_schemes', 'dnvp_congress', 'prussia_elections', 'wurttemberg_elections'];
+            'understanding_enemy', 'schleichers_schemes', 'dnvp_congress', 'prussia_elections', 'wurttemberg_elections', 'dnf_formation', dnf_formed'];
 Q.advisor_action_timer = 0;
 // party affairs timers
 Q.confronting_nazis_timer = 0;
