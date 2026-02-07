@@ -218,16 +218,71 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 **Detailed results for each demographic**
 
-Workers: <span style="color: #c00000;">**SPD**</span>: [+ workers_spd_display +]%, <span style="color: #000000;">Z</span>: [+ workers_z_display +]%, <span style="color: #700000;">**KPD**</span>: [+ workers_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : <span style="color: #D3C24D;">**[+ ddp_name =]**</span>?]: [+ workers_ddp_display +]%, [? if dvp_exist: <span style="color: #C0A054;">**DVP**</span>]: [+ workers_dvp_display +]%; <span style="color: #3E88B3;">**DNVP**</span>: [+ workers_dnvp_display +]%, <span style="color: #7A3C00;">**NSDAP**</span>: [+ workers_nsdap_display +]%, **Others**: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
+**Detailed results for each demographic**
 
-New Middle Class: <span style="color: #c00000;">**SPD**</span>: [+ new_middle_spd_display +]%, <span style="color: #000000;">Z</span>: [+ new_middle_z_display +]%, <span style="color: #700000;">**KPD**</span>: [+ new_middle_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : <span style="color: #D3C24D;">**[+ ddp_name =]**</span>?]: [+ new_middle_ddp_display +]%, [? if dvp_exist: <span style="color: #C0A054;">**DVP**</span>]: [+ new_middle_dvp_display +]%; <span style="color: #3E88B3;">**DNVP**</span>: [+ new_middle_dnvp_display +]%, <span style="color: #7A3C00;">**NSDAP**</span>: [+ new_middle_nsdap_display +]%, **Others**: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
+Workers: <span style="color: #c00000;">**SPD**</span>: [+ workers_spd_display ]%, 
+<span style="color: #000000;">Z</span>: [+ workers_z_display ]%, 
+<span style="color: #700000;">**KPD**</span>: [+ workers_kpd_display ]%, 
+[? if not ddp_name: DDP ] 
+[? if ddp_name != 0: <span style="color: #D3C24D;">**[+ ddp_name ]**</span> ]: [+ workers_ddp_display ]%, 
+[? if dvp_exist: <span style="color: #C0A054;">**DVP**</span> ]: [+ workers_dvp_display ]%; 
+<span style="color: #3E88B3;">**DNVP**</span>: [+ workers_dnvp_display ]%, 
+<span style="color: #7A3C00;">**NSDAP**</span>: [+ workers_nsdap_display ]%, 
+**Others**: [+ workers_other_display ]% 
+[? if sapd_formed: SAPD: [+ workers_sapd_display ]% ]
 
-Old Middle Class: <span style="color: #c00000;">**SPD**</span>: [+ old_middle_spd_display +]%, <span style="color: #000000;">Z</span>: [+ old_middle_z_display +]%, <span style="color: #700000;">**KPD**</span>: [+ old_middle_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : <span style="color: #D3C24D;">**[+ ddp_name =]**</span>?]: [+ old_middle_ddp_display +]%, [? if dvp_exist: <span style="color: #C0A054;">**DVP**</span>]: [+ old_middle_dvp_display +]%; <span style="color: #3E88B3;">**DNVP**</span>: [+ old_middle_dnvp_display +]%, <span style="color: #7A3C00;">**NSDAP**</span>: [+ old_middle_nsdap_display +]%, **Others**: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
+New Middle Class: <span style="color: #c00000;">**SPD**</span>: [+ new_middle_spd_display ]%, 
+<span style="color: #000000;">Z</span>: [+ new_middle_z_display ]%, 
+<span style="color: #700000;">**KPD**</span>: [+ new_middle_kpd_display ]%, 
+[? if not ddp_name: DDP ] 
+[? if ddp_name != 0: <span style="color: #D3C24D;">**[+ ddp_name ]**</span> ]: [+ new_middle_ddp_display ]%, 
+[? if dvp_exist: <span style="color: #C0A054;">**DVP**</span> ]: [+ new_middle_dvp_display ]%; 
+<span style="color: #3E88B3;">**DNVP**</span>: [+ new_middle_dnvp_display ]%, 
+<span style="color: #7A3C00;">**NSDAP**</span>: [+ new_middle_nsdap_display ]%, 
+**Others**: [+ new_middle_other_display ]% 
+[? if sapd_formed: SAPD: [+ new_middle_sapd_display ]% ]
 
-Rural: <span style="color: #c00000;">**SPD**</span>: [+ rural_spd_display +]%, <span style="color: #000000;">Z</span>: [+ rural_z_display +]%, <span style="color: #700000;">**KPD**</span>: [+ rural_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : <span style="color: #D3C24D;">**[+ ddp_name =]**</span>?]: [+ rural_ddp_display +]%, [? if dvp_exist: <span style="color: #C0A054;">**DVP**</span>]: [+ rural_dvp_display +]%; <span style="color: #3E88B3;">**DNVP**</span>: [+ rural_dnvp_display +]%, <span style="color: #7A3C00;">**NSDAP**</span>: [+ rural_nsdap_display +]%, **Others**: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
+Old Middle Class: <span style="color: #c00000;">**SPD**</span>: [+ old_middle_spd_display ]%, 
+<span style="color: #000000;">Z</span>: [+ old_middle_z_display ]%, 
+<span style="color: #700000;">**KPD**</span>: [+ old_middle_kpd_display ]%, 
+[? if not ddp_name: DDP ] 
+[? if ddp_name != 0: <span style="color: #D3C24D;">**[+ ddp_name ]**</span> ]: [+ old_middle_ddp_display ]%, 
+[? if dvp_exist: <span style="color: #C0A054;">**DVP**</span> ]: [+ old_middle_dvp_display ]%; 
+<span style="color: #3E88B3;">**DNVP**</span>: [+ old_middle_dnvp_display ]%, 
+<span style="color: #7A3C00;">**NSDAP**</span>: [+ old_middle_nsdap_display ]%, 
+**Others**: [+ old_middle_other_display ]% 
+[? if sapd_formed: SAPD: [+ old_middle_sapd_display ]% ]
 
-Unemployed: <span style="color: #c00000;">**SPD**</span>: [+ unemployed_spd_display +]%, <span style="color: #000000;">Z</span>: [+ unemployed_z_display +]%, <span style="color: #700000;">**KPD**</span>: [+ unemployed_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : <span style="color: #D3C24D;">**[+ ddp_name =]**</span>?]: [+ unemployed_ddp_display +]%, [? if dvp_exist: <span style="color: #C0A054;">**DVP**</span>]: [+ unemployed_dvp_display +]%; <span style="color: #3E88B3;">**DNVP**</span>: [+ unemployed_dnvp_display +]%, <span style="color: #7A3C00;">**NSDAP**</span>: [+ unemployed_nsdap_display +]%, **Others**: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
+Rural: <span style="color: #c00000;">**SPD**</span>: [+ rural_spd_display ]%, 
+<span style="color: #000000;">Z</span>: [+ rural_z_display ]%, 
+<span style="color: #700000;">**KPD**</span>: [+ rural_kpd_display ]%, 
+[? if not ddp_name: DDP ] 
+[? if ddp_name != 0: <span style="color: #D3C24D;">**[+ ddp_name ]**</span> ]: [+ rural_ddp_display ]%, 
+[? if dvp_exist: <span style="color: #C0A054;">**DVP**</span> ]: [+ rural_dvp_display ]%; 
+<span style="color: #3E88B3;">**DNVP**</span>: [+ rural_dnvp_display ]%, 
+<span style="color: #7A3C00;">**NSDAP**</span>: [+ rural_nsdap_display ]%, 
+**Others**: [+ rural_other_display ]% 
+[? if sapd_formed: SAPD: [+ rural_sapd_display ]% ]
 
-Catholics: <span style="color: #c00000;">**SPD**</span>: [+ catholics_spd_display +]%, <span style="color: #000000;">Z</span>: [+ catholics_z_display +]%, <span style="color: #700000;">**KPD**</span>: [+ catholics_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : <span style="color: #D3C24D;">**[+ ddp_name =]**</span>?]: [+ catholics_ddp_display +]%, [? if dvp_exist: <span style="color: #C0A054;">**DVP**</span>]: [+ catholics_dvp_display +]%; <span style="color: #3E88B3;">**DNVP**</span>: [+ catholics_dnvp_display +]%, <span style="color: #7A3C00;">**NSDAP**</span>: [+ catholics_nsdap_display +]%, **Others**: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
+Unemployed: <span style="color: #c00000;">**SPD**</span>: [+ unemployed_spd_display ]%, 
+<span style="color: #000000;">Z</span>: [+ unemployed_z_display ]%, 
+<span style="color: #700000;">**KPD**</span>: [+ unemployed_kpd_display ]%, 
+[? if not ddp_name: DDP ] 
+[? if ddp_name != 0: <span style="color: #D3C24D;">**[+ ddp_name ]**</span> ]: [+ unemployed_ddp_display ]%, 
+[? if dvp_exist: <span style="color: #C0A054;">**DVP**</span> ]: [+ unemployed_dvp_display ]%; 
+<span style="color: #3E88B3;">**DNVP**</span>: [+ unemployed_dnvp_display ]%, 
+<span style="color: #7A3C00;">**NSDAP**</span>: [+ unemployed_nsdap_display ]%, 
+**Others**: [+ unemployed_other_display ]% 
+[? if sapd_formed: SAPD: [+ unemployed_sapd_display ]% ]
 
-Support for the Republic: [+ pro_republic_disp +]%
+Catholics: <span style="color: #c00000;">**SPD**</span>: [+ catholics_spd_display ]%, 
+<span style="color: #000000;">Z</span>: [+ catholics_z_display ]%, 
+<span style="color: #700000;">**KPD**</span>: [+ catholics_kpd_display ]%, 
+[? if not ddp_name: DDP ] 
+[? if ddp_name != 0: <span style="color: #D3C24D;">**[+ ddp_name ]**</span> ]: [+ catholics_ddp_display ]%, 
+[? if dvp_exist: <span style="color: #C0A054;">**DVP**</span> ]: [+ catholics_dvp_display ]%; 
+<span style="color: #3E88B3;">**DNVP**</span>: [+ catholics_dnvp_display ]%, 
+<span style="color: #7A3C00;">**NSDAP**</span>: [+ catholics_nsdap_display ]%, 
+**Others**: [+ catholics_other_display ]% 
+[? if sapd_formed: SAPD: [+ catholics_sapd_display ]% ]
+
