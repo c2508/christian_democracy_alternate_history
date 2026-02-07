@@ -222,4 +222,4 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 **Detailed results for each demographic**
 
-[? if dvp_exist: <span style="color: #C0A054;">**DVP**</span> ]: [+ workers_dvp_display +]%, DNVP: [+ workers_dnvp_display +]%, NSDAP: [+ workers_nsdap_display +]%, Others: [+ workers_other_display +]%
+[? if dvp_exist: <span style="color: #C0A054;">**DVP**</span> ]: [+ workers_dvp_display +]%;, DNVP: [+ workers_dnvp_display +]%, NSDAP: [+ workers_nsdap_display +]%, Others: [+ workers_other_display +]%
