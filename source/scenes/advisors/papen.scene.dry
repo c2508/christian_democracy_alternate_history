@@ -19,7 +19,7 @@ Papen is a Catholic aristocrat who advocates for an overall shift of the Center 
 title: Influencing Germania
 subtitle: Taking more control of party media
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if center_strength > 25 : The Centrists have too much control. ?][? if left_strength > 35 : The Left Wing of our party is too influential. ?][? if left_labor_strength > 30 : The Left Labor faction is too strong. ?]
-choose-if: advisor_action_timer = 0; center_strength < 26; left_strength < 36; left_labor_strength < 36
+choose-if: advisor_action_timer = 0 and center_strength < 26 and left_strength < 36 and left_labor_strength < 36
 on-arrival: advisor_action_timer = 6; right_strength += 6; right_dissent -= 7; rural_z += 2; left_labor_dissent += 3; left_dissent += 5
 
 We have pressured Germania to adopt more right wing positions. 
