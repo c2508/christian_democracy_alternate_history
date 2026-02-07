@@ -116,12 +116,12 @@ Q.dvp_right = 1;
 // organizations
 
 // inter-party relations
-Q.kpd_relation = 15;
+Q.kpd_relation = 5;
 Q.spd_relation = 50;
 Q.ddp_relation = 60;
 Q.dvp_relation = 60;
 Q.dnvp_relation = 40;
-Q.nsdap_relation = 20;
+Q.nsdap_relation = 10;
 
 Q.kpd_leader = "Thälmann";
 Q.spd_leader = "Wels";
@@ -258,10 +258,11 @@ Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['spd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
+Q.parties = ['spd', 'sapd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'dnf', 'nsdap', 'other'];
 
 // TODO: add 'sapd' later on
 Q.sapd_formed = 0;
+Q.dvp_exist = 1;
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
