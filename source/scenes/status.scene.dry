@@ -228,5 +228,5 @@ Workers:
 <span style="color: #3E88B3;">**DNVP**</span>: [+ workers_dnvp_display ]%, 
 <span style="color: #7A3C00;">**NSDAP**</span>: [+ workers_nsdap_display ]%, 
 **Others**: [+ workers_other_display ]% 
-[? if sapd_formed: SAPD: [+ workers_sapd_display ]% ]
+
 
