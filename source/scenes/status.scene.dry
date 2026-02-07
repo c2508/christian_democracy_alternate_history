@@ -219,14 +219,14 @@ Q.socialism_disp = Math.round(Q.socialism);
 **Detailed results for each demographic**
 
 Workers: 
-<span style="color: #c00000;">**SPD**</span>: [+ workers_spd_display ]%, 
-<span style="color: #000000;">Z</span>: [+ workers_z_display ]%, 
-<span style="color: #700000;">**KPD**</span>: [+ workers_kpd_display ]%, 
+<span style="color: #c00000;">**SPD**</span>: [+ workers_spd_display +]%, 
+<span style="color: #000000;">Z</span>: [+ workers_z_display +]%, 
+<span style="color: #700000;">**KPD**</span>: [+ workers_kpd_display +]%, 
 [? if not ddp_name: DDP ] 
-[? if ddp_name != 0: <span style="color: #D3C24D;">**[+ ddp_name ]**</span> ]: [+ workers_ddp_display ]%, 
-[? if dvp_exist: <span style="color: #C0A054;">**DVP**</span> ]: [+ workers_dvp_display ]%; 
-<span style="color: #3E88B3;">**DNVP**</span>: [+ workers_dnvp_display ]%, 
-<span style="color: #7A3C00;">**NSDAP**</span>: [+ workers_nsdap_display ]%, 
-**Others**: [+ workers_other_display ]% 
-
+[? if ddp_name != 0: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ]: [+ workers_ddp_display +]%, 
+[? if dvp_exist: <span style="color: #C0A054;">**DVP**</span> ]: [+ workers_dvp_display +]%; 
+<span style="color: #3E88B3;">**DNVP**</span>: [+ workers_dnvp_display +]%, 
+<span style="color: #7A3C00;">**NSDAP**</span>: [+ workers_nsdap_display +]%, 
+**Others**: [+ workers_other_display +]% 
+[? if sapd_formed: SAPD: [+ workers_sapd_display +]% ]
 
