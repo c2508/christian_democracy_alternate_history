@@ -82,15 +82,15 @@ Economic growth: [+ economic_growth_2 +]%
 
 <span class="tooltip-text" title="Communist Party of Germany" style="color: #700000;">**KPD**</span>: [+ kpd_relation : relationships +]
 
-{!<span class="tooltip-text" title="Social Democratic Party">SPD</span>!}: [+ spd_relation : relationships +]
+<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #c00000;">**SPD**</span>: [+ spd_relation : relationships +]
 
-{!<span class="tooltip-text" title="German Democratic Party">!}[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]{!</span>!}: [+ ddp_relation : relationships +]
+[? if not lvp_formed or not ddp_name: [? if not ddp_name:<span class="tooltip-text" title="German Democratic Party" style="color: #D3C24D;">**DDP**</span>?][? if ddp_name = "DDP":<span class="tooltip-text" title="German Democratic Party" style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if ddp_name = "DStP":<span class="tooltip-text" title="German State Party" style="color: #D3C24D;">**[+ ddp_name +]**</span>?]: [+ ddp_relation : relationships +] ?]
 
-{!<span class="tooltip-text" title="German People's Party">DVP</span>!}: [+ dvp_relation : relationships +]
+{!<span class="tooltip-text" title="German People's Party" style="color: #C0A054;">**DVP**</span>!}: [+ dvp_relation : relationships +]
 
-{!<span class="tooltip-text" title="German National People's Party">DNVP</span>!}: [+ dnvp_relation : relationships +]
+{!<span class="tooltip-text" title="German National People's Party" style="color: #3E88B3;">**DNVP**</span>!}: [+ dnvp_relation : relationships +]
 
-{!<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)">NSDAP</span>!}: [+ nsdap_relation : relationships +]
+{!<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)" style="color: #7A3C00;">**NSDAP**</span>!}: [+ nsdap_relation : relationships +]
 
 = Internal Factions of the Centre Party
 
