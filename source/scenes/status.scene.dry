@@ -96,17 +96,17 @@ Economic growth: [+ economic_growth_2 +]%
 
 = Internal Factions of the Centre Party
 
-{!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the KPD.">Left </span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
+{!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the KPD.">left </span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
 
-{!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the KPD.">Left Labor</span>!} strength: [+ left_labor_strength : strength +], dissent: [+ left_labor_dissent : dissent +]
+{!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the KPD.">left labor</span>!} strength: [+ left_labor_strength : strength +], dissent: [+ left_labor_dissent : dissent +]
 
-{!<span class="tooltip-text" title="The Center is a faction of Center Marxists, between reform and revolution.">Center</span>!} strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
+{!<span class="tooltip-text" title="The Center is a faction of Center Marxists, between reform and revolution.">center</span>!} strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
 
-{!<span class="tooltip-text" title="Labor's goal is economic reform and benefits for organized workers.">Right Labor</span>!} strength: [+ right_labor_strength : strength +], dissent: [+ right_labor_dissent : dissent +]
+{!<span class="tooltip-text" title="Labor's goal is economic reform and benefits for organized workers.">right labor</span>!} strength: [+ right_labor_strength : strength +], dissent: [+ right_labor_dissent : dissent +]
 
-{!<span class="tooltip-text" title="Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy.">Right</span>!} strength: [+ right_strength : strength +], dissent: [+ right_dissent : dissent +]
+{!<span class="tooltip-text" title="Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy.">right</span>!} strength: [+ right_strength : strength +], dissent: [+ right_dissent : dissent +]
 
-[? if neorevisionism > 0 : Young Conservatives strength: [+ young_conservatives_strength : strength +], dissent: [+ young_conservatives_dissent : dissent +] ?]
+[? if neorevisionism > 0 : young conservatives strength: [+ young_conservatives_strength : strength +], dissent: [+ young_conservatives_dissent : dissent +] ?]
 
 
 @paramilitaries
