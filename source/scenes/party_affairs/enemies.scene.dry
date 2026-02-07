@@ -13,11 +13,11 @@ In our media and campaign materials, who should we consider as our main opponent
 
 [? if enemies != 0 : Previously, we had considered the [+ enemies +] as our prior enemies. Is a change of direction necessary? ?]
 
-- @anti_dem: The anti democratic parties - the KPD, NSDAP and DNVP.
-- @far_right_and_left: The far right and far left - the KPD and NSDAP.
-- @nsdap: The NSDAP alone.
-- @kpd: The KPD.
-- @marxist: The Marxist parties - the KPD and SPD.
+- @anti_dem: The anti democratic parties - the <span style="color: #700000;">**KPD**</span>, <span style="color: #7A3C00;">**NSDAP**</span> and <span style="color: #3E88B3;">**DNVP**</span>.
+- @far_right_and_left: The far right and far left - the <span style="color: #700000;">**KPD**</span> and <span style="color: #7A3C00;">**NSDAP**</span>.
+- @nsdap: The <span style="color: #7A3C00;">**NSDAP**</span> alone.
+- @kpd: The <span style="color: #700000;">**KPD**</span> alone.
+- @marxist: The Marxist parties - the <span style="color: #700000;">**KPD**</span> and <span style="color: #c00000;">**SPD**</span>.
 - @easy_discard
 
 @anti_dem
