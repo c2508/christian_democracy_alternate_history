@@ -7,7 +7,8 @@ new-page: true
 
 = Christine Teusch
 
-Teusch has held influential roles in Catholic Women organsations since 1915 and has much appeal amongst her peers.
+A holdover from the era of the Kaiser, Teusch has held influential positions in Catholic Women Associations since 1915.
+ 
 
 - @curriculum_
 - @structure_
@@ -16,7 +17,7 @@ Teusch has held influential roles in Catholic Women organsations since 1915 and 
 
 @curriculum_
 title: Change the educational curriculum.
-choose-if: advisor_action_timer = 0 and spd_in_government and chancellor_party = "SPD" and spd_prussia and curriculum_timer = 0
+choose-if: advisor_action_timer = 0 and z_in_government and chancellor_party = "Z" and z_prussia and curriculum_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_in_government : The SPD is not currently in government. ?][? if chancellor_party != "SPD": The SPD must control the chancellorship. ?][? if not spd_prussia: The SPD must control the Prussian government. ?][? if curriculum_timer > 0 : It is too early to change the curriculum again. ?]
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1
 go-to: education_science.curriculum
