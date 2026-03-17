@@ -6,13 +6,13 @@ Q.lemmer_points = 0;
 Q.heuss_points = 0;
 Q.dietrich_points = 0;
 
-if (Q.ddp_relation < 45) {
-    Q.ddp_right += 2;
-    Q.ddp_cohesion -= 1;
-}
-if (Q.ddp_relation >= 45) {
+if (Q.ddp_relation < 60) {
     Q.ddp_left += 2;
     Q.ddp_cohesion += 2;
+}
+if (Q.ddp_relation >= 60) {
+    Q.ddp_right += 2;
+    Q.ddp_cohesion -= 1;
 }
 
 if (Q.unemployed >= 18) {
@@ -26,11 +26,6 @@ if (Q.nationalization_progress) {
 if (Q.capital_strike_progress >= 6) {
     Q.dietrich_points += 1;
     Q.heuss_points += 1;
-}
-if (Q.reformists_resign) {
-    Q.lemmer_points += 3;
-} else if (Q.reformist_dissent >= 31) {
-    Q.lemmer_points += 1;
 }
 if (Q.major_curriculum == "humanist") {
     Q.lemmer_points += 1;
