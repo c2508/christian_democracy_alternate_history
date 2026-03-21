@@ -292,37 +292,25 @@ view-if: neorevisionism > 0 and n_advisors < 3
 @nonfactional
 view-if: n_advisors < 3
 
-- #nonfactional_advisor
-
-@add_adenauer
-title: Konrad Adenauer
-subtitle: Adenauer is the Mayor of Cologne and is a strong advocate for leaving the tower.
-is-card: true
-card-image: img/portraits/HilferdingRudolf.jpg
-tags: center_advisor
-view-if: adenauer_advisor = 0 and n_advisors < 3 and centrists_resign = 0
-on-arrival: adenauer_advisor = 1; n_advisors += 1
-go-to: advisor_menu
-
-Konrad Adenauer is now an advisor.
+#center
 
 @add_guerard
-title: Theodor Von Guerard
-subtitle: Guerard is the current Vice Chairman of the Zentrum Parlimentary Delegation and is ideologically dead center. 
-is-card: true
+title: Theodor von Guerard
+subtitle: Guerard is a civil servant who is the Vice-Chairman of the Center Reichstag delegation. 
 card-image: img/portraits/MüllerHermann.jpg
 tags: center_advisor
 view-if: guerard_advisor = 0 and n_advisors < 3 and centrists_resign = 0
 on-arrival: guerard_advisor = 1; n_advisors += 1
 go-to: advisor_menu
+tags: center_advisor
 
-Theodor Von Guerard is now an advisor.
+Theodor von Guerard is now an advisor.
 
 @add_kohler
 title: Heinrich Kohler
-subtitle: Heinrich Kohler is our longtime Finance Minister in Baden and was briefly the State President of Baden on two seperate occasions.
+subtitle: Kohler is an influential figure in Baden state politics. 
 card-image: img/portraits/BreitscheidRudolf.jpg
-view-if: kohler_advisor = 0 and n_advisors < 3
+view-if: kohler_advisor = 0 and n_advisors < 3 and centrists_resign = 0
 on-arrival: kohler_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 tags: center_advisor
@@ -331,10 +319,10 @@ Heinrich Kohler is now an advisor.
 
 @add_marx
 title: Wilhelm Marx
-subtitle: Marx was the Chairman of the Center Party and our presidential candidate in 1925. 
+subtitle: Marx [? if year >= 1928 : was ?][? if year_1928 = 1 : is ?] the Chairman of the Center Party.
 card-image: img/portraits/BreitscheidRudolf.jpg
 view-if: marx_advisor = 0 and n_advisors < 3
-on-arrival: marx_advisor = 1; n_advisors += 1
+on-arrival: marx_advisor = 1; n_advisors += 1 and centrists_resign = 0
 go-to: advisor_menu
 tags: center_advisor
 
@@ -342,46 +330,33 @@ Wilhelm Marx is now an advisor.
 
 # left labor
 
-
 @add_becker
 title: Johannes Becker
-subtitle: Carl Severing is a one-time Prussian interior minister and police reformer. {!<br><br>!}[? if difficulty < 0 : Actions - Prussian Bulwark, Police Affairs ?]
+subtitle: Becker is a leading Christian trade unionist and a supporter of the Weimar Republic. 
 is-card: true
 card-image: img/portraits/SeveringCarl.jpg
-tags: left_labor_advisor
 view-if: becker_advisor = 0 and n_advisors < 3
 on-arrival: becker_advisor = 1; n_advisors += 1; left_labor_strength += 5
 go-to: advisor_menu
+tags: left_labor_advisor
 
 Johannes Becker is now an advisor.
 
 @add_joos
 title: Joseph Joos
-subtitle: Otto Braun is the Minister-President of Prussia, and one of the most recognizable and well-known Social Democratic leaders. {!<br><br>!}[? if difficulty < 0 : Actions - Prussian Bulwark, Negotiating with the Coalition ?]
+subtitle: Joos is the Chairman of the Reich Association of Catholic Workers' Associations and a prominent figure on the party’s left.
 is-card: true
 card-image: img/portraits/JoosJoseph.jpg
-tags: left_labor_advisor
 view-if: joos_advisor = 0 and n_advisors < 3
 on-arrival: joos_advisor = 1; n_advisors += 1; left_labor_strength += 5
 go-to: advisor_menu
+tags: left_labor_advisor
 
 Joseph Joos is now an advisor.
 
-@add_hess
-title: Joseph Hess
-subtitle: Hess is the leader of the Prussian Center Party.
-is-card: true
-card-image: img/portraits/JuchaczMarie.jpg
-view-if: hess_advisor = 0 and n_advisors < 3
-on-arrival: hess_advisor = 1; n_advisors += 1; left_labor_strength += 5
-go-to: advisor_menu
-tags: left_labor_advisor
-
-Joseph Hess is now an advisor.
-
 @add_imbusch
 title: Heinrich Imbusch
-subtitle: Imbusch is a trade unionist and the first Chairman of the Christians’ Miners Association. He is first-in-line for the chairmanship of the DGB. 
+subtitle: Imbusch is a trade unionist and Member of the Reichstag. 
 is-card: true
 card-image: img/portraits/JuchaczMarie.jpg
 view-if: imbusch_advisor = 0 and n_advisors < 3
@@ -391,25 +366,48 @@ tags: left_labor_advisor
 
 Heinrich Imbusch is now an advisor.
 
-@add_wirth
-title: Joseph Wirth
-subtitle: Wirth is a former chancellor and figure of the Zentrum's left wing who has been devotedly republican, to the extent of angering his former party members. He is a strong supporter of maintaining democracy and cooperation with the SPD.
-is-card: true
+#left
+
+@add_dessauer
+title: Friedrich Dessauer
+subtitle: Dessauer is a journalist and the founder of a prominent Catholic Left newspaper.
 card-image: img/portraits/PfülfAntonie.jpg
-view-if: wirth_advisor = 0 and n_advisors < 3
-on-arrival: wirth_advisor = 1; n_advisors += 1
+view-if: dessauer_advisor = 0 and n_advisors < 3
+on-arrival: dessauer_advisor = 1; n_advisors += 1; left_strength += 5
 go-to: advisor_menu
-tags: left_labor_advisor
+tags: left_advisor
 
 Joseph Wirth is now an advisor.
 
 
+@add_hess
+title: Joseph Hess
+subtitle: Hess is the head of the Center Party delegation in the Prussian Parliament.
+is-card: true
+card-image: img/portraits/JuchaczMarie.jpg
+view-if: hess_advisor = 0 and n_advisors < 3
+on-arrival: hess_advisor = 1; n_advisors += 1; left_strength += 5
+go-to: advisor_menu
+tags: left_advisor
+
+Joseph Hess is now an advisor.
+
+@add_wirth
+title: Joseph Wirth
+subtitle: Wirth is the de-facto leader of the Center Party's left wing.
+card-image: img/portraits/PfülfAntonie.jpg
+view-if: wirth_advisor = 0 and n_advisors < 3
+on-arrival: wirth_advisor = 1; n_advisors += 1; left_strength += 5
+go-to: advisor_menu
+tags: left_advisor
+
+Joseph Wirth is now an advisor.
 
 # right labor
 
 @add_brauns
 title: Heinrich Brauns
-subtitle: Brauns has been our long time labor minister and is an expert on social policy issues.
+subtitle: Brauns is a Catholic Priest who has been Labor Minister since 1920.
 is-card: true
 card-image: img/portraits/LeviPaul.jpg
 view-if: right_labor_advisor = 0 and n_advisors < 3 and right_labor_defect = 0
@@ -421,18 +419,18 @@ Heinrich Brauns is now an advisor.
 
 @add_bruning
 title: Heinrich Bruning
-subtitle: Bruning is our lead economist and managing director of the DGB.
+subtitle: Bruning is our lead economist and managing director of the DGB. 
 card-image: img/portraits/BruningHeinrich.jpg
-tags: bruning_advisor
 view-if: bruning_advisor = 0 and n_advisors < 3 and centrists_resign = 0
 on-arrival: bruning_advisor = 1; n_advisors += 1
 go-to: advisor_menu
+tags: right_labor_advisor
 
 Heinrich Bruning is now an advisor.
 
 @add_stegerwald
 title: Adam Stegerwald
-subtitle: Stegerwald is the leader of the DGB, the Catholic Trade Union Association.
+subtitle: Stegerwald  [? if year >= 1928 : was ?][? if year_1928 = 1 : is ?]  the chairman of the Christian Trade Union Federation (DGB). 
 is-card: true
 card-image: img/portraits/SenderToni.jpg
 view-if: stegerwald_advisor = 0 and n_advisors < 3
@@ -442,95 +440,56 @@ tags: right_labor_advisor
 
 Adam Stegerwald is now an advisor.
 
-@add_rosenfeld
-title: Kurt Rosenfeld
-subtitle: Kurt Rosenfeld is a lawyer, anti-militarist activist, and Reichstag member. {!<br><br>!}[? if difficulty < 0 : Actions - Building the Left, Cooperation with the KPD, Against Toleration ?]
-is-card: true
-card-image: img/portraits/RosenfeldKurt.jpg
-view-if: rosenfeld_advisor = 0 and n_advisors < 3 and left_split = 0
-on-arrival: rosenfeld_advisor = 1; n_advisors += 1; left_strength += 5
-go-to: advisor_menu
-tags: right_labor_advisor
+#right
 
-Kurt Rosenfeld is now an advisor.
+@add_adenauer
+title: Konrad Adenauer
+subtitle: Adenauer is the popular mayor of Cologne. 
+is-card: true
+card-image: img/portraits/HilferdingRudolf.jpg
+tags: right_advisor
+view-if: adenauer_advisor = 0 and n_advisors < 3 and right_resign = 0
+on-arrival: adenauer_advisor = 1; n_advisors += 1; right_strength += 5
+go-to: advisor_menu
+tags: right_advisor
+
+Konrad Adenauer is now an advisor.
 
 @add_hermes
 title: Andreas Hermes 
-subtitle: Max Seydewitz is a former leader of the youth wing, current supporter of the left wing of the SPD, and advocates for class struggle. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Class Struggle, Socialist Youth, Against Toleration ?]
-is-card: true
+subtitle: Hermes is the head of the VdB, the Association of German Farmer Associations.
 card-image: img/portraits/SeydewitzMax.jpg
-view-if: seydewitz_advisor = 0 and n_advisors < 3 and left_split = 0
-on-arrival: seydewitz_advisor = 1; n_advisors += 1; left_strength += 5
+view-if: seydewitz_advisor = 0 and n_advisors < 3 and right_resign = 0
+on-arrival: seydewitz_advisor = 1; n_advisors += 1; right_strength += 5
 go-to: advisor_menu
 tags: right_advisor
 
 Andreas Hermes is now an advisor.
 
-@add_siemsen
-title: Anna Siemsen
-subtitle: Anna Siemsen is an and educational reform advocate and pacifist, who was one of the few German women to receive a PhD in the pre-war period. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Pacifism, Educational Curriculum, Educational Structure ?]
-is-card: true
-card-image: img/portraits/SiemsenAnna.jpg
-view-if: siemsen_advisor = 0 and n_advisors < 3 and left_split = 0
-on-arrival: siemsen_advisor = 1; n_advisors += 1; left_strength += 5
-go-to: advisor_menu
-tags: right_labor_advisor
-
-Anna Siemsen is now an advisor.
-
-
-
-# right
-
 @add_papen
 title: Franz von Papen
-subtitle: Theodor Leipart is the leader of the ADGB, the German Trade Union Federation. {!<br><br>!}[? if difficulty < 0 : Actions - Organizing Workers, Addressing the Economic Crisis ?]
+subtitle: Papen is a Catholic aristocrat who is influential in the Westphalian party organisation.
 is-card: true
 card-image: img/portraits/LeipartTheodor.jpg
 tags: right_advisor
-view-if: papen_advisor = 0 and n_advisors < 3 and unions_independent = 0
+view-if: papen_advisor = 0 and n_advisors < 3 and right_resign = 0
 on-arrival: papen_advisor = 1; n_advisors += 1; right_strength += 5
 go-to: advisor_menu
+tags: right_advisor
 
 Franz von Papen is now an advisor.
 
 @add_kaas
 title: Ludwig Kaas
-subtitle: Siegfried Aufhäuser is the leader of the AfA-Bund, the white-collar trade union federation. {!<br><br>!}[? if difficulty < 0 : Actions - Organizing White-Collar Workers, Union-Party Coordination, Addressing the Economic Crisis ?]
+subtitle: Kaas is a German Catholic Priest and a unifying figure on the party’s right.
 is-card: true
 card-image: img/portraits/AufhäuserSiegfried.jpg
 tags: right_advisor
-view-if: kaas_advisor = 0 and n_advisors < 3
+view-if: kaas_advisor = 0 and n_advisors < 3 and right_resign = 0
 on-arrival: kaas_advisor = 1; n_advisors += 1; right_strength += 5
 go-to: advisor_menu
 
 Ludwig Kaas is now an advisor.
-
-@add_wissell
-title: Rudolf Wissell
-subtitle: Rudolf Wissell is an economist who has been the Labor Minister, and is an advocate for the interests of labor within the government. {!<br><br>!}[? if difficulty < 0 : Actions - Union-Party Coordination, Labor Rights ?]
-is-card: true
-card-image: img/portraits/WissellRudolf.jpg
-tags: right_advisor
-view-if: wissell_advisor = 0 and n_advisors < 3 and unions_independent = 0
-on-arrival: wissell_advisor = 1; n_advisors += 1; right_strength += 3
-go-to: advisor_menu
-
-Rudolf Wissell is now an advisor.
-
-
-@add_woytinsky
-title: Wladimir Woytinsky
-subtitle: Wladimir Woytinsky is a former Russian Menshevik who is now the lead trade union economist. {!<br><br>!}[? if difficulty < 0 : Actions - Addressing the Economic Crisis, Carrying Out the Economic Plan ?]
-is-card: true
-card-image: img/portraits/WoytinskyWladimir.jpg
-tags: right_advisor
-view-if: woytinsky_advisor = 0 and n_advisors < 3 and unions_independent = 0
-on-arrival: woytinsky_advisor = 1; n_advisors += 1; right_strength += 3
-go-to: advisor_menu
-
-Wladimir Woytinsky is now an advisor.
-
 
 # neorevisionist leaders
 
@@ -574,54 +533,24 @@ Julius Leber is now an advisor.
 
 @add_teusch
 title: Christine Teusch
-subtitle: Teusch has held influential roles in Catholic Women organsations since 1915 and has much appeal amongst her peers.
-is-card: true
+subtitle: Teusch has much appeal amongst her peers and is a strong supporter of the Catholic women movement. 
 card-image: img/portraits/BaadeFritz.jpg
-view-if: baade_advisor = 0 and n_advisors < 3
-on-arrival: baade_advisor = 1; n_advisors += 1
+view-if: teusch_advisor = 0 and n_advisors < 3
+on-arrival: teusch_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 tags: nonfactional_advisor
 
 Christine Teusch is now an advisor.
 
-
 @add_hirschfeld
-title: Magnus Hirschfeld
-subtitle: Magnus Hirschfeld is the founder of the Institut für Sexualwissenschaft and an advocate for the rights of sexual minorities. {!<br><br>!}[? if difficulty < 0 : Actions - Homosexual Rights, Women's Rights, Science Funding ?]
-is-card: true
+title: George Schreiber
+subtitle: Schreiber is a professor and a Member of the Reichstag. 
 card-image: img/portraits/HirschfeldMagnus.jpg
-view-if: hirschfeld_advisor = 0 and n_advisors < 3
-on-arrival: hirschfeld_advisor = 1; n_advisors += 1
+view-if: schreiber_advisor = 0 and n_advisors < 3
+on-arrival: schreiber_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 tags: nonfactional_advisor
 
-Magnus Hirschfeld is now an advisor.
-
-# TODO: add radbruch, stampfer
-
-@add_radbruch
-title: Gustav Radbruch
-subtitle: Gustav Radbruch is a renowned legal scholar and long-time SPD justice minister. {!<br><br>!}[? if difficulty < 0 : Actions - Judicial Affairs, Constitutional Reform ?]
-is-card: true
-card-image: img/portraits/RadbruchGustav.jpg
-view-if: radbruch_advisor = 0 and n_advisors < 3
-on-arrival: radbruch_advisor = 1; n_advisors += 1
-go-to: advisor_menu
-tags: nonfactional_advisor
-
-Gustav Radbruch is now an advisor.
-
-
-@add_stampfer
-title: Friedrich Stampfer
-subtitle: Friedrich Stampfer is the long-time editor-in-chief of Vorwärts, our party newspaper. {!<br><br>!}[? if difficulty < 0 : Actions - Media, Editorial Line, Cooperation with the KPD ?]
-is-card: true
-card-image: img/portraits/StampferFriedrich.jpg
-view-if: stampfer_advisor = 0 and n_advisors < 3
-on-arrival: stampfer_advisor = 1; n_advisors += 1
-go-to: advisor_menu
-tags: nonfactional_advisor
-
-Friedrich Stampfer is now an advisor.
+George Schreiber is now an advisor.
 
 
