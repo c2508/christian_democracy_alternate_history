@@ -260,12 +260,18 @@ frequency: 1
 
 - @center: Add Centrists
 - @left_labor: Add Left Labor
+- @left: Add Left
 - @right_labor: Add Right Labor
 - @right: Add Right 
 - @young_conservatives: Add Young Conservatives
 - @nonfactional: Add non-factional advisors
 - @rm_main: Remove advisors instead.
 - @remove_none: Stop changing advisors.
+
+@left
+view-if: n_advisors < 3
+
+- #left_advisor
 
 @left_labor
 view-if: n_advisors < 3
@@ -541,7 +547,7 @@ tags: nonfactional_advisor
 
 Christine Teusch is now an advisor.
 
-@add_hirschfeld
+@add_schreiber
 title: George Schreiber
 subtitle: Schreiber is a professor and a Member of the Reichstag. 
 card-image: img/portraits/HirschfeldMagnus.jpg
