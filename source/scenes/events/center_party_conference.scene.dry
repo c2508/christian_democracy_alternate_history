@@ -45,7 +45,7 @@ on-arrival: z_party_leader = "Kaas"; spd_relations -= 5; prussian_concordat_prog
 face-image: img/portraits/KaasLudwig.jpg
 
 While a suggestion about a collegium with Joos, Stegerwald and Kaas won some approval from delegates, concerns about Stegerwald's personality and the desire of the Windhorstbund for a strong leader has sunk the idea. Thus, in a secret vote by the delegates, Ludwig Kaas has been selected as the chairman of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] as a compromise candidate between Stegerwald and Joos. He seems to represent a rightward turn from Marx, and will preside over a [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] less inclined to compromise with the left. 
-In response to the <span style="color: #000000;">Center Party's</span> poor electoral performance in 1928, the Executive Committee has elevated a cleric to the chairmanship to win back disaffected Catholics 
+In response to the <span style="color: #000000;">Center Party's</span> poor electoral performance in 1928, the Executive Committee has elevated a cleric to the chairmanship to win back disaffected Catholics.
 Despite this, Kaas is committed to the current constitutional order and the republic. He maintains a close friendship with Eugenio Pacelli, the Papal Nuncio to Germany, which may prove useful during concordat negotiations.
 
 
