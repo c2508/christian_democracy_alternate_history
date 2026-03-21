@@ -32,6 +32,6 @@ view-if: stolper_program_adopted = 0
 on-arrival: new_middle_other += 2; old_middle_other += 2; ddp_cohesion -= 1;
 face-image: img/portraits/heuss.jpg
 
-In the face of strong opposition from the left wing and Young Democrats faction of the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, the Stolper Program has been shot down in a decisive internal party vote. This represents a repudiation of the policies Dietrich has implemented since his appointment as Minister of Agriculture and has left the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> more divided than ever before.
+In the face of strong opposition from the left wing and Young Democrats faction of the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, the Stolper Program has been shot down in a decisive internal party vote. [? if agriculture_minister_party = 'DDP': This represents a repudiation of the policies Dietrich has implemented since his appointment as Minister of Agriculture and has left the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> more divided than ever before. ?]
 While the reelection of Koch Weser has gone on without a hitch, internal tensions in the party are brewing. Although internal party reforms have been undertaken to give the younger generation more of a say in the party, whether it is sufficient to hold back the growing tide of special interest parties remain to be seen. 
 
