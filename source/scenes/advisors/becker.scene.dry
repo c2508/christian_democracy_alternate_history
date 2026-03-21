@@ -7,7 +7,7 @@ new-page: true
 
 = Johannes Becker
 
-As the founder of the General Association of Health Insurance Funds, Becker supports the <span style="color: #000000;">DGB</span> and <span style="color: #D3C24D;">**Hirsch-Dunker**</span> unions as a counterweight to the <span style="color: #c00000;">**ADGB**</span> and is an advocate for democratic reforms.
+As the founder of the General Association of Health Insurance Funds, Becker supports the <span style="color: #000000;">**DGB**</span> and <span style="color: #D3C24D;">**Hirsch-Dunker**</span> unions as a counterweight to the <span style="color: #c00000;">**ADGB**</span> and is an advocate for democratic reforms.
 
 - @liberal_relations 
 - @democratic_reforms
@@ -20,7 +20,7 @@ choose-if: advisor_action_timer == 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 on arrival: advisor_action_timer = 6; ddp_relation += 4*(1-dissent); dvp_relation += 6*(1-dissent); center_strength += 5
 
-We have improved our relations with the <span style="color: #D3C24D;">**liberals**</span>.
+We have improved our relations with the <span style="color: #D3C24D;">liberals</span>.
 
 @democratic_reforms
 title: Democratic Reforms
