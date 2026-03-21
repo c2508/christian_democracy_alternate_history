@@ -21,7 +21,7 @@ choose-if: spd_in_government == 1 and chancellor != "Braun"
 on-arrival: panzerkreuzer_funded = 1; spd_relation += 5; workers_spd -= 3
 
 The <span style="color: #c00000;">**SPD**</span> has surprising voted for the battlecruiser in order to maintain the current governing coalition. Their grassroot leaders are shocked at their intransigence and many party branches have begun agitating against the cabinet.
-The campaign against the battlecruiser fails, with only the dissident SPD and KPD members voting against. The ship will be built.
+The campaign against the battlecruiser fails, with only the dissident <span style="color: #c00000;">**SPD**</span> and <span style="color: #700000;">**KPD**</span> members voting against. The ship will be built.
 
 @vote_no
 view-if: spd_in_government == 0 or chancellor == "Braun"
