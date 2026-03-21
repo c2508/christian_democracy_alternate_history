@@ -298,7 +298,6 @@ view-if: n_advisors < 3
 title: Theodor von Guerard
 subtitle: Guerard is a civil servant who is the Vice-Chairman of the Center Reichstag delegation. 
 card-image: img/portraits/MüllerHermann.jpg
-tags: center_advisor
 view-if: guerard_advisor = 0 and n_advisors < 3 and centrists_resign = 0
 on-arrival: guerard_advisor = 1; n_advisors += 1
 go-to: advisor_menu
