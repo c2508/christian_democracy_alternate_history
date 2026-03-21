@@ -446,7 +446,6 @@ title: Konrad Adenauer
 subtitle: Adenauer is the popular mayor of Cologne. 
 is-card: true
 card-image: img/portraits/HilferdingRudolf.jpg
-tags: right_advisor
 view-if: adenauer_advisor = 0 and n_advisors < 3 and right_resign = 0
 on-arrival: adenauer_advisor = 1; n_advisors += 1; right_strength += 5
 go-to: advisor_menu
@@ -458,8 +457,8 @@ Konrad Adenauer is now an advisor.
 title: Andreas Hermes 
 subtitle: Hermes is the head of the VdB, the Association of German Farmer Associations.
 card-image: img/portraits/SeydewitzMax.jpg
-view-if: seydewitz_advisor = 0 and n_advisors < 3 and right_resign = 0
-on-arrival: seydewitz_advisor = 1; n_advisors += 1; right_strength += 5
+view-if: hermes_advisor = 0 and n_advisors < 3 and right_resign = 0
+on-arrival: hermes_advisor = 1; n_advisors += 1; right_strength += 5
 go-to: advisor_menu
 tags: right_advisor
 
@@ -470,7 +469,6 @@ title: Franz von Papen
 subtitle: Papen is a Catholic aristocrat who is influential in the Westphalian party organisation.
 is-card: true
 card-image: img/portraits/LeipartTheodor.jpg
-tags: right_advisor
 view-if: papen_advisor = 0 and n_advisors < 3 and right_resign = 0
 on-arrival: papen_advisor = 1; n_advisors += 1; right_strength += 5
 go-to: advisor_menu
@@ -483,10 +481,10 @@ title: Ludwig Kaas
 subtitle: Kaas is a German Catholic Priest and a unifying figure on the party’s right.
 is-card: true
 card-image: img/portraits/AufhäuserSiegfried.jpg
-tags: right_advisor
 view-if: kaas_advisor = 0 and n_advisors < 3 and right_resign = 0
 on-arrival: kaas_advisor = 1; n_advisors += 1; right_strength += 5
 go-to: advisor_menu
+tags: right_advisor
 
 Ludwig Kaas is now an advisor.
 
