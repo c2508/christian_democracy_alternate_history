@@ -190,23 +190,23 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 (if the election were to be held now):
 
-SPD: [+ spd_votes +]%
+<span style="color: #8B0000;">**KPD**</span>: [+ kpd_votes +]%
 
-[? if sapd_formed: SAPD: [+ sapd_votes +]% ?]
+<span style="color: #E3000F;">**SPD**</span>: [+ spd_votes +]%
 
-Z + BVP: [+ z_votes +]%
-
-KPD: [+ kpd_votes +]%
+[? if sapd_formed: <span style="color: #9B0000;">**SAPD**</span>: [+ sapd_votes +]% ?]
 
 [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ ddp_votes +]%
 
-DVP: [+ dvp_votes +]%
+<span style="color: #000000;">**Z**</span> + <span style="color: #69A2BE;">**BVP**</span>: [+ z_votes +]%
 
-DNVP: [+ dnvp_votes +]%
+<span style="color: #C0A054;">**DVP**</span>: [+ dvp_votes +]%
 
-NSDAP: [+ nsdap_votes +]%
+<span style="color: #3F7BC1;">**DNVP**</span>: [+ dnvp_votes +]%
 
-Others: [+ other_votes +]%
+<span style="color: #954B00;">**NSDAP**</span>: [+ nsdap_votes +]%
+
+<span style="color: #909090;">**Others**</span>: [+ other_votes +]%
 
 **Detailed results for each demographic**
 
