@@ -15,7 +15,7 @@ As the founder of the General Association of Health Insurance Funds, Becker supp
 
 @liberal_relations
 title: Liberal relations
-subtitle: Forming closer ties with the <span style="color: #D3C24D;">**liberals**</span>
+subtitle: Forming closer ties with the <span style="color: #D3C24D;">liberals</span>
 choose-if: advisor_action_timer == 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 on arrival: advisor_action_timer = 6; ddp_relation += 4*(1-dissent); dvp_relation += 6*(1-dissent); center_strength += 5
@@ -24,12 +24,12 @@ We have improved our relations with the <span style="color: #D3C24D;">liberals</
 
 @democratic_reforms
 title: Democratic Reforms
-subtitle: Reforming the #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Constitution
+subtitle: Reforming the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Constitution
 choose-if: advisor_action_timer == 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if pro_republic <= 51 : Support for the Republic is not high enough. ?]
 on arrival: advisor_action_timer = 6; pro_republic += 3; left_strength += 3; left_labor_strength += 1; democratization += 1; 
 
-We have pushed for the #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Constitution to undergo amendment and reform.
+We have pushed for the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Constitution to undergo amendment and reform.
 
 
 
