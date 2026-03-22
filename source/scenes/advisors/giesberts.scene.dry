@@ -1,0 +1,33 @@
+title: Johannes Giesberts
+is-pinned-card: true
+tags: advisor, left labor
+card-image: img/portraits/GiesbertsJohannes.jpg
+view-if: giesberts_advisor = 1
+new-page: true 
+
+= Johannes Giesberts
+
+Giesberts is a prominent union spokesman who was the first workers' representative of the <span style="color: #000000;">**Center Party**</span>  in the Reichstag. 
+
+- @democratic_rally
+- @organising
+- @root: Return to main
+
+@democratic_rally
+title: Rally for class struggle
+subtitle: Rally our party and the German people to defend democracy and freedom.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer = 0
+on-arrival: advisor_action_timer = 6; pro_republic += 6; democratization += 1; left_labor_strength += 5; center_strength += 3; workers_z += 2*(1-dissent) if democratization >= 4; catholics_z += 3*(1-dissent) if democratization >= 5
+
+Giesberts helps us to rally the people in defense of democracy.
+
+@organising
+title: Organising Workers
+subtitle: Improve our standing among the workers. 
+choose-if: advisor_action_timer <= 0
+unavailable subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; workers_z += 6*(1-dissent); left_labor_strength += 3
+
+Giesberts has rallied workers to support the <span style="color: #000000;">Center Party</span>.
+
