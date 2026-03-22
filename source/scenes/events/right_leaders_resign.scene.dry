@@ -1,9 +1,9 @@
 title: Right leaders resign
 new-page: true 
-subtitle: Right disagreements with our policies have grown too severe.
+subtitle: The right's disagreements with our policies have grown too severe.
 tags: event
 view-if: right_dissent >= 90
-on-arrival: right_strength *= 0.3; old_middle_class_z -= 10; old_middle_class_others += 5; n_advisors -= 1 if braun_advisor == 1; n_advisors -= 1 if severing_advisor == 1; braun_advisor = 0; severing_advisor = 0; rb_strength -= 250; reformists_resign = 1
+on-arrival: right_strength *= 0.3; old_middle_class_z -= 10; old_middle_class_others += 5; right_resign = 1
 max-visits: 1
 
 = Right leaders resign
