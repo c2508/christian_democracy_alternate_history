@@ -6,11 +6,11 @@ view-if: party_organizations_timer <= 0
 on-arrival: month_actions += 1; party_organizations_timer = 6;
 card-image: img/Mann_der_Arbeit.jpg
 max-visits: 6
-#subtitle: Outside of electoral politics, the Centre Party runs a social world onto itself.
+#subtitle: Outside of electoral politics, the <span style="color: #000000;">**Center Party**</span> runs a social world onto itself.
 
 = Party Organizations
 
-In addition to being a political party, the Centre Party is a social world onto itself, with a vast array of associated organizations which serve the social needs of their members from cradle to grave.
+In addition to being a political party, the <span style="color: #000000;">**Center Party**</span> is a social world onto itself, with a vast array of associated organizations which serve the social needs of their members from cradle to grave.
 
 - @radio: Fund the creation of a radio station. 
 - @radio_2: Fund the building up of our radio network. 
@@ -45,7 +45,7 @@ Our new radio network has a mix of popular and political programming, and is pro
 view-if: radio > 3 and radio <= 5 and year <= 1931
 on-arrival: radio += 1; new_middle_z += 5*(1 - dissent); old_middle_z += 4*(1 - dissent); workers_z += 4*(1 - dissent); rural_z += 3*(1 - dissent); unemployed_z += 2*(1-dissent); socialism += 3*(1 - dissent); nationalism -= 3*(1 - dissent)*(pacifism-2) if pacifism > 2; pro_republic += 3*(1-dissent)*(democratization-2) if democratization > 2
 
-Our radio network has become a successful tool for spreading our message and it is now financially self sufficient and does not require any more resources. 
+Our radio network has become a successful tool for spreading our message. It is now financially self sufficient and does not require any more resources. 
 
 @radio_4
 choose-if: resources >= 1
@@ -65,7 +65,7 @@ unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
 on-arrival: resources -= 1; workers_aid += 1; unemployed_z += 5*(1 - dissent);
 
-We have increased funding to Catholic Charities. [? if black_thursday_seen > 0 : In an age of economic crisis, this will be helpful for improving our standing among the unemployed. ?]
+We have increased funding to Catholic Charities. [? if black_thursday_seen > 0 : In an age of economic crisis, this will be helpful for improving our standing among the impoverished. ?]
 
 @culture
 choose-if: resources > 0
@@ -73,13 +73,14 @@ unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
 on-arrival: resources -= 1; cultural_organizations += 1; left_dissent -= 6; center_dissent -= 6; labor_dissent -= 6; reformist_dissent -= 6; neorevisionist_dissent -= 6
 
-It is not enough for the SPD to solely be a political party. The Worker Singer's League, Worker's Sports, and our schools and libraries are crucial to our members' lives. Funding these organizations makes our members more committed to the party, even when our policies might not be to their liking.
+It is not enough for the <span style="color: #000000;">**Center Party**</span> to solely be a political party. The Catholic Workers Associations, Windthorstbund and our schools and libraries are crucial to our members' lives. Funding these organizations makes our members more committed to the party, even when our policies might not be to their liking.
 
 [? if sa_strength > 500 : However, it feels frivolous to spend on sports and choirs when the fascists are murdering us in the streets. ?]
+[? if rfb_strength > 250 : However, it feels frivolous to spend on sports and choirs when the communists are murdering us in the streets. ?]
 
 @rb
 choose-if: resources > 0 and z_endorse_rb = 1
-unavailable-subtitle: [? if resources < 0: Not enough resources. ?][? if z_endorse_rb = 0: The Center Party has not offically endorsed the Reichsbanner yet. ?]
+unavailable-subtitle: [? if resources < 0: Not enough resources. ?][? if z_endorse_rb = 0: The <span style="color: #000000;">**Center Party**</span> has not offically endorsed the Reichsbanner yet. ?]
 subtitle: -1 resources
 on-arrival: resources -= 1; rb_strength  += 100; rb_militancy += 0.01; reichsbanner_timer = 0; funded_reichsbanner += 1
 
