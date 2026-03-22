@@ -72,7 +72,7 @@ if (Q.ideology && Q.ideology != "right") {
 go-to: changed if changed = 1
 on-departure: ideology = "right"; right_strength += 10; right_dissent -= 5; dnvp_relation += 5; dvp_relation += 5; spd_relation -= 8; moderate_plan_support += 1
 
-Represented by bourgeouisie aristocrats and agarian interests, the right wing of the party is skeptical of parlimentary democracy.
+Represented by bourgeouisie aristocrats and agrarian interests, the right wing of the party is skeptical of parlimentary democracy.
 
 @changed
 on-arrival: left_dissent += 5; left_labor_dissent += 5; center_dissent += 5; right_labor_dissent += 5; right_dissent += 5
