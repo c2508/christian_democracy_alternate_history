@@ -32,6 +32,8 @@ choose-if: advisor_action_timer <= 0
 unavailable subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 on-arrival: advisor_action_timer = 6; workers_z += 5*(1-dissent); right_labor_strength += 2
 
+Brauns has rallied workers to support the <span style="color: #000000;">Center Party</span>.
+
 @support_peoples_party
 title: Build support for an interconfessional Christian Party
 subtitle: Can we expand our party beyond Catholics?
