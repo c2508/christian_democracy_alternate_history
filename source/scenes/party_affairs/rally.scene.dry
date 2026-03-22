@@ -70,12 +70,12 @@ The SA have won this show of strength.
 
 @main_rally
 
-Mass rallies are a common feature of Christian Democratic life, especially in the lead-up to an election. What is the primary theme of this rally?
+Mass rallies are a common feature of German political life life, especially in the lead-up to an election. What is the primary theme of this rally?
 
 - @catholic: Advancing the rights of Catholics through parliamentary means
 - @welfare: Sozialpolitik - the maintenance and expansion of social welfare programs.
 - @democracy: Expanding our nascent democracy and defending it against dictatorship and fascism.
-- @right: Working with the Protestant Right to 
+- @right: Working with the Protestant Right to reclaim our lost territories.
 - @wtb: Support the WTB plan!
 - @local: A mixture of various local and national concerns that resonate most with the audience.
 - @easy_discard
@@ -88,15 +88,15 @@ Reminding our constituents of our confessional nature is a good way of energisin
 @welfare
 on-arrival: workers_spd += 3*(1-dissent); workers_z += 3*(1-dissent) if welfare > 0; unemployed_spd += 3*(1-dissent) if welfare > 0; unemployed_z += 4*(1-dissent) if welfare > 1; right_labor_strength += 3; left_labor_strength += 4; right_labor_dissent -= 3; left_labor_dissent -= 3;
 
-The pro-labor message appeals to the organized workers, whose benefits are the accomplishments of Christian Democracy. [? if welfare > 1 : Our achievements in expanding welfare have made this message more effective. ?]
+The pro-labor message appeals to the organized workers, whose benefits are the accomplishments of our time in government. [? if welfare > 1 : Our achievements in expanding welfare have made this message more effective. ?]
 
 @democracy
 on-arrival: democratization += 1; pro_republic += 2*(1 - dissent); workers_spd += 4*(1-dissent) if democratization >= 3; unemployed_spd += 3*(1-dissent) if democratization >= 3; pro_republic += 4*(1 - dissent) if democratization >= 3; new_middle_spd += 4*(1-dissent) if democratization >= 3 
 
 Our speakers defend the status quo and rail against the communists and fascists who threaten it.
 
-[? if democratization < 3 : Talk of democracy does not excite the workers as much as more practical issues. But that may change; part of our job is to provide political education to the proletariat. ?]
-[? if democratization >= 3 : Since we have consistently made democratization a theme of our campaign, the workers are enthusiastic about our message. ?]
+[? if democratization < 3 : Talk of democracy does not excite our Catholic base as much as more practical issues. ?]
+[? if democratization >= 3 : Since we have consistently made democratization a theme of our campaign, our Catholic base is enthusiastic about our message. ?]
 
 @right
 on-arrival: right_strength += 5; right_labor_strength += 3; right_dissent -= 5; right_labour_dissent -= 3; dnvp_relation += 3; dnvp_relation +=3
@@ -113,6 +113,6 @@ The WTB plan has become a popular rallying cry for our party. The workers are ea
 
 
 @local
-on-arrival: workers_z += 1*(1-dissent); old_middle_z += 2*(1-dissent); new_middle_z += 3*(1-dissent); unemployed_spd += 2*(1-dissent);
+on-arrival: workers_z += 1*(1-dissent); old_middle_z += 2*(1-dissent); new_middle_z += 3*(1-dissent); unemployed_z += 2*(1-dissent);
 
-Our speakers have gauged the mood and are speaking to the issues that seem to most affect the workers in this moment.
+Our speakers have gauged the mood and are speaking to the issues that seem to most affect the people in this moment.
