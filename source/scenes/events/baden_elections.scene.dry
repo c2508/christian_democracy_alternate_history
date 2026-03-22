@@ -130,9 +130,11 @@ if (Q.in_z_majority_baden) {
     Q.was_in_z_majority_baden = 1
 } else if (Q.in_weimar_coalition_baden) {
     Q.was_in_weimar_coalition_baden = 1
+} else if (Q.in_social_catholic_coalition_baden) {
+    Q.was_in_social_catholic_coalition_baden = 1
 } else if (Q.in_grand_coalition_baden) {
     Q.was_in_grand_coalition_baden = 1
-} else if (Q.in_bourgeois_coalition_baden {
+} else if (Q.in_bourgeois_coalition_baden) {
     Q.was_in_bourgeois_coalition_baden = 1
 } else if (Q.in_far_right_coalition_baden) {
     Q.was_in_far_right_coalition_baden = 1
