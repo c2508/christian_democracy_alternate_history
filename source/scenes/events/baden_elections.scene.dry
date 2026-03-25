@@ -371,7 +371,7 @@ title: The coalition will choose the State President.
 - @schmitt: Josef Schmitt
 - @hellpach: Willy Hellpach
 
-@bickes
+@schmitt
 view-if: z_baden = 1
 on-arrival: baden_leader = "Schmitt"; baden_leader_party = z_name
 
