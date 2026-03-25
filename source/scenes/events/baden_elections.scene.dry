@@ -141,15 +141,14 @@ if (Q.in_z_majority_baden) {
 }
 
 
-Q.z_baden = 1;
-Q.in_social_catholic_coalition_baden = 1;
+Q.z_baden = 0;
+Q.in_social_catholic_coalition_baden = 0;
 Q.in_z_majority_baden = 0;
 Q.in_weimar_coalition_baden = 0;
 Q.in_grand_coalition_baden = 0;
 Q.in_bourgeois_coalition_baden = 0;
 Q.in_far_right_coalition_baden = 0;
 !}
-
 on-display: {!
 data = []
 if (Q.kpd_baden) {
