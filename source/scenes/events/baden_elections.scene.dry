@@ -304,7 +304,7 @@ There are some potential coalition arrangements.
 
 @social_catholic_coalition_baden
 title: We can form a Social Catholic Coalition.
-subtitle: <span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span>?] ([+ social_catholic_coalition_baden +]%)
+subtitle: <span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> ([+ social_catholic_coalition_baden +]%)
 view-if: social_catholic_coalition_baden >= 50
 on-arrival: in_social_catholic_coalition_baden = 1; z_baden = 1;
 
