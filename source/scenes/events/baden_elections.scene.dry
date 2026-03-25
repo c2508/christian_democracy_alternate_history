@@ -148,6 +148,7 @@ Q.in_weimar_coalition_baden = 0;
 Q.in_grand_coalition_baden = 0;
 Q.in_bourgeois_coalition_baden = 0;
 Q.in_far_right_coalition_baden = 0;
+}
 
 on-display: {!
 data = []
