@@ -4,7 +4,7 @@ view-if: year = next_election_year_baden and month >= next_election_month_baden
 new-page: true
 tags: event
 priority: 3
-on-arrival: next_election_year_baden = next_election_year_baden + 4; next_election_time_baden = time + 48; was_z_baden = 0; was_in_z_majority_baden = 0; was_in_weimar_coalition_baden = 0; was_in_grand_coalition_baden = 0; was_in_bourgeois_coalition_baden = 0; was_in_far_right_coalition_baden = 0;
+on-arrival: next_election_year_baden = next_election_year_baden + 4; next_election_time_baden = time + 48; was_z_in_baden = 0; was_in_z_majority_baden = 0; was_in_weimar_coalition_baden = 0; was_in_grand_coalition_baden = 0; was_in_bourgeois_coalition_baden = 0; was_in_far_right_coalition_baden = 0;
 set-jump: new_elections
 
 = Baden Elections, [+ month : month +] [+ year +]
@@ -32,7 +32,7 @@ for (var c of Q.classes) {
 Q.adjustmentFactors_kpd_baden = 0.62;
 Q.adjustmentFactors_spd_baden = 0.73;
 Q.adjustmentFactors_ddp_baden = 1.39;
-Q.adjustmentFactors_z_baden = 2.85;
+Q.adjustmentFactors_z_in_baden = 2.85;
 Q.adjustmentFactors_dvp_baden = 0.93;
 Q.adjustmentFactors_kvp_baden = 0.84;
 Q.adjustmentFactors_dnvp_baden = 0.75;
@@ -109,22 +109,22 @@ if (new_party_sum > 0) {
 
 
 
-if (!Q.lvp_formed && !Q.nfvp_formed) Q.weimar_coalition_baden = parseFloat((Q.spd_baden + Q.ddp_baden + Q.z_baden).toFixed(1));
-if (Q.lvp_formed || Q.nfvp_formed) Q.weimar_coalition_baden = parseFloat((Q.spd_baden + Q.dvp_baden + Q.z_baden).toFixed(1));
+if (!Q.lvp_formed && !Q.nfvp_formed) Q.weimar_coalition_baden = parseFloat((Q.spd_baden + Q.ddp_baden + Q.z_in_baden).toFixed(1));
+if (Q.lvp_formed || Q.nfvp_formed) Q.weimar_coalition_baden = parseFloat((Q.spd_baden + Q.dvp_baden + Q.z_in_baden).toFixed(1));
 
-Q.grand_coalition_baden = parseFloat((Q.spd_baden + Q.ddp_baden + Q.z_baden + Q.dvp_baden).toFixed(1));
+Q.grand_coalition_baden = parseFloat((Q.spd_baden + Q.ddp_baden + Q.z_in_baden + Q.dvp_baden).toFixed(1));
 
-Q.social_catholic_coalition_baden = parseFloat((Q.spd_baden + Q.z_baden).toFixed(1));
+Q.social_catholic_coalition_baden = parseFloat((Q.spd_baden + Q.z_in_baden).toFixed(1));
 
-Q.bourgeois_coalition_baden = parseFloat((Q.ddp_baden + Q.z_baden + Q.dvp_baden + Q.other_baden + Q.kvp_baden).toFixed(1));
+Q.bourgeois_coalition_baden = parseFloat((Q.ddp_baden + Q.z_in_baden + Q.dvp_baden + Q.other_baden + Q.kvp_baden).toFixed(1));
 
 if (Q.dnvp_ideology === "Radical") Q.far_right_coalition_baden = parseFloat((Q.dnvp_baden + Q.nsdap_baden).toFixed(1));
 if (Q.dnf_formed) Q.far_right_coalition_baden = parseFloat((Q.dnf_baden + Q.nsdap_baden).toFixed(1));
 
 
 
-if (Q.z_baden) {
-    Q.was_z_baden = 1
+if (Q.z_in_baden) {
+    Q.was_z_in_baden = 1
 }
 if (Q.in_z_majority_baden) {
     Q.was_in_z_majority_baden = 1
@@ -141,7 +141,7 @@ if (Q.in_z_majority_baden) {
 }
 
 
-Q.z_baden = 0;
+Q.z_in_baden = 0;
 Q.in_social_catholic_coalition_baden = 0;
 Q.in_z_majority_baden = 0;
 Q.in_weimar_coalition_baden = 0;
@@ -183,12 +183,12 @@ if (Q.lvp_formed && Q.dvp_baden) {
         "seats": Math.round(Q.dvp_baden*0.8),
     });
 }
-if (Q.z_baden) {
+if (Q.z_in_baden) {
     data.push({
         "id": "z",
         "legend": "Center",
         "name": "Center",
-        "seats": Math.round(Q.z_baden*0.8),
+        "seats": Math.round(Q.z_in_baden*0.8),
     });
 }
 if (Q.other_baden) {
@@ -263,7 +263,7 @@ go-to: coalition_menu
 
 [? if ddp_exist: {!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} [+ ddp_name +]: {!</td><td>!} [+ ddp_votes_baden +]% {!</td><td>!} [+ votes_change_ddp_baden +] {!</td><td>!} [+ ddp_baden +]% {!</td><td>!} [+ change_ddp_baden +] {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#000'> </div> !} Z: {!</td><td>!} [+ z_votes_baden +]% {!</td><td>!} [+ votes_change_z_baden +] {!</td><td>!} [+ z_baden +]% {!</td><td>!} [+ change_z_baden +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#000'> </div> !} Z: {!</td><td>!} [+ z_votes_baden +]% {!</td><td>!} [+ votes_change_z_in_baden +] {!</td><td>!} [+ z_in_baden +]% {!</td><td>!} [+ change_z_in_baden +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#C0A054'> </div> !} DVP: {!</td><td>!} [+ dvp_votes_baden +]% {!</td><td>!} [+ votes_change_dvp_baden +] {!</td><td>!} [+ dvp_baden +]% {!</td><td>!} [+ change_dvp_baden +] {!</td></tr>!}
 
@@ -306,7 +306,7 @@ There are some potential coalition arrangements.
 title: We can form a Social Catholic Coalition.
 subtitle: <span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> ([+ social_catholic_coalition_baden +]%)
 view-if: social_catholic_coalition_baden >= 50
-on-arrival: in_social_catholic_coalition_baden = 1; z_baden = 1;
+on-arrival: in_social_catholic_coalition_baden = 1; z_in_baden = 1;
 
 There are enough votes for a majority Social Catholic Coalition of the <span style="color: #000000;">**Center**</span>, <span style="color: #E3000F;">**SPD**</span>. This has been our prefered governing coalition in Baden since 1925.
 
@@ -316,7 +316,7 @@ There are enough votes for a majority Social Catholic Coalition of the <span sty
 title: We can form a Weimar Coalition.
 subtitle: <span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> + [? if ddp_exist: <span style="color: #DCCA4A;">**[+ ddp_name +]**</span>?][? if lvp_formed or nfvp_formed: <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span>?][? if csrp_exist: + <span style="color: #FF6B21;">**CSRP**</span>?][? if aspd_exist and aspd_ideology = "Moderate": + <span style="color: #FE9E00;">**ASPD**</span>?] ([+ weimar_coalition_baden +]%)
 view-if: weimar_coalition_baden >= 50
-on-arrival: in_weimar_coalition_baden = 1; z_baden = 1;
+on-arrival: in_weimar_coalition_baden = 1; z_in_baden = 1;
 
 There are enough votes for a majority Weimar Coalition of the <span style="color: #000000;">**Center**</span>, <span style="color: #E3000F;">**SPD**</span> and [? if not lvp_formed and not nfvp_formed: <span style="color: #DCCA4A;">**[+ ddp_name +]**</span>?][? if lvp_formed or nfvp_formed: <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span>?].
 
@@ -326,7 +326,7 @@ There are enough votes for a majority Weimar Coalition of the <span style="color
 title: We can form a Grand Coalition.
 view-if: grand_coalition_baden >= 50 and not (lvp_formed or nfvp_formed)
 subtitle: <span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span> ?] + <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span>[? if csrp_exist: + <span style="color: #FF6B21;">**CSRP**</span>?][? if aspd_exist and aspd_ideology = "Moderate": + <span style="color: #FE9E00;">**ASPD**</span>?] ([+ grand_coalition_baden +]%)
-on-arrival: in_grand_coalition_baden = 1; z_baden = 1;
+on-arrival: in_grand_coalition_baden = 1; z_in_baden = 1;
 
 We will form a Grand Coalition.
 
@@ -336,7 +336,7 @@ We will form a Grand Coalition.
 title: We can form a Bourgeois Coalition.
 view-if: bourgeois_coalition_baden >= 50
 subtitle: <span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span> ?] + <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span> [? if kvp_formed: + <span style="color: #455B95;">**KVP**</span>?][? if cnblp_exist: + <span style="color: #006400;">**WBWB**</span>?][? if csvd_exist: + <span style="color: #8ED8E4;">**CSVD**</span>?][? if csrp_exist: + <span style="color: #FF6B21;">**CSRP**</span>?][? if aspd_exist and aspd_ideology = "Moderate": + <span style="color: #FE9E00;">**ASPD**</span>?] + <span style="color: #909090;">**Others**</span> ([+ bourgeois_coalition_baden +]%)
-on-arrival: in_bourgeois_coalition_baden = 1; z_baden = 1;
+on-arrival: in_bourgeois_coalition_baden = 1; z_in_baden = 1;
 
 A Bourgeois Coalition is formed.
 
@@ -354,9 +354,9 @@ A Far-right Coalition is formed.
 
 @z_majority_baden
 title: We can rule alone!
-view-if: z_baden >= 50
+view-if: z_in_baden >= 50
 subtitle: <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span> ([+ dvp_baden +]%)
-on-arrival: in_z_majority_baden = 1; z_baden = 1;
+on-arrival: in_z_majority_baden = 1; z_in_baden = 1;
 
 A <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span> majority government is formed.
 
@@ -372,7 +372,7 @@ title: The coalition will choose the State President.
 - @hellpach: Willy Hellpach
 
 @schmitt
-view-if: z_baden = 1
+view-if: z_in_baden = 1
 on-arrival: baden_leader = "Schmitt"; baden_leader_party = z_name
 
 Josef Schmitt was chosen.
@@ -387,6 +387,6 @@ Willy Hellpach was chosen.
 @no_majority
 title: There is no clear governing majority.
 view-if: social_catholic_coalition_baden < 50 and weimar_coalition_baden < 50 and bourgeois_coalition_baden < 50 and grand_coalition_baden < 50 and far_right_coalition_baden < 50
-on-arrival: workers_nsdap += 2; unemployed_nsdap += 2; old_middle_nsdap += 1; new_middle_nsdap += 1; rural_nsdap += 1; z_baden = 1 if was_z_baden; in_z_majority_baden = 1 if was_in_z_majority_baden; in_weimar_coalition_baden = 1 if was_in_weimar_coalition_baden; in_grand_coalition_baden = 1 if was_in_grand_coalition_baden; in_bourgeois_coalition_baden = 1 if was_in_bourgeois_coalition_baden; in_far_right_coalition_baden = 1 if was_in_far_right_coalition_baden;
+on-arrival: workers_nsdap += 2; unemployed_nsdap += 2; old_middle_nsdap += 1; new_middle_nsdap += 1; rural_nsdap += 1; z_in_baden = 1 if was_z_in_baden; in_z_majority_baden = 1 if was_in_z_majority_baden; in_weimar_coalition_baden = 1 if was_in_weimar_coalition_baden; in_grand_coalition_baden = 1 if was_in_grand_coalition_baden; in_bourgeois_coalition_baden = 1 if was_in_bourgeois_coalition_baden; in_far_right_coalition_baden = 1 if was_in_far_right_coalition_baden;
 
 There is no path to a majority government for now. The current government will stay in power as a minority coalition.
