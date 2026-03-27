@@ -183,7 +183,7 @@ if (Q.lvp_formed && Q.dvp_baden) {
         "seats": Math.round(Q.dvp_baden*0.8),
     });
 }
-if (Q.z_in_baden) {
+if (Q.z_baden) {
     data.push({
         "id": "z",
         "legend": "Center",
@@ -295,12 +295,22 @@ There are some potential coalition arrangements.
 @coalition_menu
 
 - @z_majority_baden
+- @social_catholic_coalition_baden
 - @weimar_coalition_baden
 - @grand_coalition_baden
 - @bourgeois_coalition_baden
 - @far_right_coalition_baden
 - @no_majority
 
+@social_catholic_coalition_baden
+title: We can form a Social Catholic Coalition.
+subtitle: <span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> ([+ social_catholic_coalition_baden +]%)
+view-if: social_catholic_coalition_baden >= 50
+on-arrival: in_social_catholic_coalition_baden = 1; z_in_baden = 1;
+
+There are enough votes for a majority Social Catholic Coalition of the <span style="color: #000000;">**Center**</span>, <span style="color: #E3000F;">**SPD**</span>. This has been our prefered governing coalition in Baden since 1925.
+
+- @baden_sp
 
 @weimar_coalition_baden
 title: We can form a Weimar Coalition.
