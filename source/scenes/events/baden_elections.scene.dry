@@ -109,14 +109,14 @@ if (new_party_sum > 0) {
 
 
 
-if (!Q.lvp_formed && !Q.nfvp_formed) Q.weimar_coalition_baden = parseFloat((Q.spd_baden + Q.ddp_baden + Q.z_in_baden).toFixed(1));
-if (Q.lvp_formed || Q.nfvp_formed) Q.weimar_coalition_baden = parseFloat((Q.spd_baden + Q.dvp_baden + Q.z_in_baden).toFixed(1));
+if (!Q.lvp_formed && !Q.nfvp_formed) Q.weimar_coalition_baden = parseFloat((Q.spd_baden + Q.ddp_baden + Q.z_baden).toFixed(1));
+if (Q.lvp_formed || Q.nfvp_formed) Q.weimar_coalition_baden = parseFloat((Q.spd_baden + Q.dvp_baden + Q.z_baden).toFixed(1));
 
-Q.grand_coalition_baden = parseFloat((Q.spd_baden + Q.ddp_baden + Q.z_in_baden + Q.dvp_baden).toFixed(1));
+Q.grand_coalition_baden = parseFloat((Q.spd_baden + Q.ddp_baden + Q.z_baden + Q.dvp_baden).toFixed(1));
 
 Q.social_catholic_coalition_baden = parseFloat((Q.spd_baden + Q.z_baden).toFixed(1));
 
-Q.bourgeois_coalition_baden = parseFloat((Q.ddp_baden + Q.z_in_baden + Q.dvp_baden + Q.other_baden + Q.kvp_baden).toFixed(1));
+Q.bourgeois_coalition_baden = parseFloat((Q.ddp_baden + Q.z_baden + Q.dvp_baden + Q.other_baden + Q.kvp_baden).toFixed(1));
 
 if (Q.dnvp_ideology === "Radical") Q.far_right_coalition_baden = parseFloat((Q.dnvp_baden + Q.nsdap_baden).toFixed(1));
 if (Q.dnf_formed) Q.far_right_coalition_baden = parseFloat((Q.dnf_baden + Q.nsdap_baden).toFixed(1));
@@ -263,7 +263,7 @@ go-to: coalition_menu
 
 [? if ddp_exist: {!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} [+ ddp_name +]: {!</td><td>!} [+ ddp_votes_baden +]% {!</td><td>!} [+ votes_change_ddp_baden +] {!</td><td>!} [+ ddp_baden +]% {!</td><td>!} [+ change_ddp_baden +] {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#000'> </div> !} Z: {!</td><td>!} [+ z_votes_baden +]% {!</td><td>!} [+ votes_change_z_in_baden +] {!</td><td>!} [+ z_baden +]% {!</td><td>!} [+ change_z_baden +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#000'> </div> !} Z: {!</td><td>!} [+ z_votes_baden +]% {!</td><td>!} [+ votes_change_z_baden +] {!</td><td>!} [+ z_baden +]% {!</td><td>!} [+ change_z_baden +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#C0A054'> </div> !} DVP: {!</td><td>!} [+ dvp_votes_baden +]% {!</td><td>!} [+ votes_change_dvp_baden +] {!</td><td>!} [+ dvp_baden +]% {!</td><td>!} [+ change_dvp_baden +] {!</td></tr>!}
 
