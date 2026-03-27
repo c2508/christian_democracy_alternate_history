@@ -188,7 +188,7 @@ if (Q.z_in_baden) {
         "id": "z",
         "legend": "Center",
         "name": "Center",
-        "seats": Math.round(Q.z_in_baden*0.8),
+        "seats": Math.round(Q.z_baden*0.8),
     });
 }
 if (Q.other_baden) {
@@ -263,7 +263,7 @@ go-to: coalition_menu
 
 [? if ddp_exist: {!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} [+ ddp_name +]: {!</td><td>!} [+ ddp_votes_baden +]% {!</td><td>!} [+ votes_change_ddp_baden +] {!</td><td>!} [+ ddp_baden +]% {!</td><td>!} [+ change_ddp_baden +] {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#000'> </div> !} Z: {!</td><td>!} [+ z_votes_baden +]% {!</td><td>!} [+ votes_change_z_in_baden +] {!</td><td>!} [+ z_in_baden +]% {!</td><td>!} [+ change_z_in_baden +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#000'> </div> !} Z: {!</td><td>!} [+ z_votes_baden +]% {!</td><td>!} [+ votes_change_z_in_baden +] {!</td><td>!} [+ z_baden +]% {!</td><td>!} [+ change_z_baden +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#C0A054'> </div> !} DVP: {!</td><td>!} [+ dvp_votes_baden +]% {!</td><td>!} [+ votes_change_dvp_baden +] {!</td><td>!} [+ dvp_baden +]% {!</td><td>!} [+ change_dvp_baden +] {!</td></tr>!}
 
@@ -354,8 +354,8 @@ A Far-right Coalition is formed.
 @z_majority_baden
 title: We can rule alone!
 view-if: z_in_baden >= 50
-subtitle: <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span> ([+ dvp_baden +]%)
-on-arrival: in_z_majority_baden = 1; z_in_baden = 1;
+subtitle: <span style="color: #000000;">**Z**</span> 
+on-arrival: in_z_majority_baden = 1; z_baden = 1;
 
 A <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span> majority government is formed.
 
@@ -371,7 +371,7 @@ title: The coalition will choose the State President.
 - @hellpach: Willy Hellpach
 
 @schmitt
-view-if: z_in_baden = 1
+view-if: z_baden = 1
 on-arrival: baden_leader = "Schmitt"; baden_leader_party = z_name
 
 Josef Schmitt was chosen.
