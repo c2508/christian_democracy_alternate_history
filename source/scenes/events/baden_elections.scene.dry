@@ -3,7 +3,7 @@ title: Baden Landtag Election
 view-if: year = next_election_year_baden and month >= next_election_month_baden
 new-page: true
 tags: event
-priority: 3
+priority: 1
 on-arrival: next_election_year_baden = next_election_year_baden + 4; next_election_time_baden = time + 48; was_z_in_baden = 0; was_in_z_majority_baden = 0; was_in_weimar_coalition_baden = 0; was_in_grand_coalition_baden = 0; was_in_bourgeois_coalition_baden = 0; was_in_far_right_coalition_baden = 0;
 set-jump: new_elections
 
