@@ -4,7 +4,7 @@ frequency: 1000
 new-page: true
 on-arrival: left_dissent += 5; left_labor_dissent += 5; center_dissent += 5; right_labor += 5; right_dissent += 5
 tags: event
-view-if: year = 1928 and month >= 2
+view-if: year = 1928 and month = 2
 max-visits: 1
 face-image: img/Bundesarchiv_Bild_146-2004-0143,_Berlin,_Kabinett_Marx_IV.jpg
 
