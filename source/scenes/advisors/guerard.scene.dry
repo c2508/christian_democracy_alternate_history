@@ -5,9 +5,9 @@ card-image: img/portraits/GuerardTheodor.jpg
 view-if: guerard_advisor = 1
 new-page: true 
 
-= Theodar von Guerard
+= Theodor von Guerard
 
-Guerard is a civil servant who is the Vice-Chairman of the Center Reichstag delegation. Originally on the right wing of the party, he has since moderated over time.
+Guerard is a civil servant who is the vice-chairman of the <span style="color: #000000;">**Center Party**</span> Reichstag delegation. Originally on the right wing of the party, he has since moderated over time.
 
 - @coalition
 - @judiciary_
@@ -19,10 +19,10 @@ Guerard is a civil servant who is the Vice-Chairman of the Center Reichstag dele
 title: Negotiating with the Coalition
 subtitle: Guerard can improve our relationships with our centrist and center-[? if spd_government = 1 : left ?][? if spd_government = 0 : right ?] coalition partners in the Reichstag.
 choose-if: advisor_action_timer <= 0 and z_in_government = 1 
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if z_in_government = 0 : The Centre Party is not in government. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if z_in_government = 0 : The <span style="color: #000000;">**Center Party**</span> is not in government. ?]
 on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if spd_in_government = 1 and coalition_dissent > 0; z_relation += 6; ddp_relation += 6; dvp_relation += 2; dvp_relation += 3 if in_grand_coalition
 
-We have improved our relations with the [? if in_grand_coalition : Center (Zentrum) Party, [+ ddp_name +], and DVP, ?][? if not in_grand_coalition: Center (Zentrum) Party and [+ ddp_name +], ?] and reduced tensions with the coalition
+We have improved our relations with the [? if in_grand_coalition : <span style="color: #c00000;">**SPD**</span>, <span style="color: #D3C24D;">**[+ ddp_name +]**</span> and <span style="color: #C0A054;">**DVP**</span>, ?][? if in_weimar_coalition: <span style="color: #c00000;">**SPD**</span> and [+ ddp_name +], ?][? if in_right_coalition <span style="color: #C0A054;">**DVP**</span> and <span style="color: #3E88B3;">**DNVP**</span>, ?] and reduced tensions with the coalition
 
 @judiciary_
 title: Judicial Affairs
@@ -45,6 +45,6 @@ title: Against Right and Left
 subtitle: As a Centrist, Guerard seeks to steer a course between the party's factions.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer = 0
-on-arrival: advisor_action_timer = 5; advisor_action_time = time; center_strength += 10; left_labor_strength -= 5; right_labor_strength -= 5; right_strength -= 5; center_dissent -= 10
+on-arrival: advisor_action_timer = 5; advisor_action_time = time; center_strength += 10; left_strength -= 5; left_labor_strength -= 5; right_labor_strength -= 5; right_strength -= 5; center_dissent -= 10
 
 We have reduced the strength of the dissident factions in the party.
