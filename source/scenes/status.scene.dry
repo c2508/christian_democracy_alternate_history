@@ -45,7 +45,7 @@ Reichstag composition:
 <span style="color: #c00000;">**SPD**</span>: [+ spd_r +]%
 [? if sapd_formed and sapd_r > 0: SAPD: [+ sapd_r +]% ?]
 # 1928: 15, 1930: 15, 1932: 
-<span style="color: #000000;">**Center Party**</span> + <span style="color: #A2D8E0;">**BVP**</span></span>: [+ z_r +]%
+<span style="color: #000000;">**Z**</span> + <span style="color: #A2D8E0;">**BVP**</span></span>: [+ z_r +]%
 # 1928: 10, 1930: 13
 <span style="color: #700000;">**KPD**</span>: [+ kpd_r +]%
 # 1928: 5, 1930: 4 (as DstP)
@@ -84,7 +84,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 <span style="color: #c00000;">**SPD**</span>: [+ spd_relation : relationships +]
 
-[? if not lvp_formed or not ddp_name: [? if not ddp_name:<span style="color: #D3C24D;">**DDP**</span>?][? if ddp_name = "DDP":<span class="tooltip-text" title="German Democratic Party" style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if ddp_name = "DStP":<span class="tooltip-text" title="German State Party" style="color: #D3C24D;">**[+ ddp_name +]**</span>?]: [+ ddp_relation : relationships +] ?]
+[? if not lvp_formed or not ddp_name: [? if not ddp_name:<span style="color: #D3C24D;">**DDP**</span>?][? if ddp_name = "DDP":<span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if ddp_name = "DStP":<span style="color: #D3C24D;">**[+ ddp_name +]**</span>?]: [+ ddp_relation : relationships +] ?]
 
 <span style="color: #C0A054;">**DVP**</span>: [+ dvp_relation : relationships +]
 
