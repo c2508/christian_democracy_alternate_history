@@ -63,7 +63,7 @@ is-deck: true
 
 @regional
 title: Regional Affairs
-card-image: img/regional_affairs.png
+card-image: img/regionalaffairs.png
 is-deck: true
 
 - #regional_affairs
