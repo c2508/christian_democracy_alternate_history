@@ -7,7 +7,7 @@ new-page: true
 
 = Wilhelm Marx
 
-Marx [? if year >= 1928 : was ?][? if year_1928 = 1 : is ?] the Chairman of the Center Party and our presidential candidate in 1925. While he prefers to work with the right, he is not opposed to cooperation with the SPD.
+Marx [? if year >= 1928 : was ?][? if year_1928 = 1 : is ?] the Chairman of the <span style="color: #000000;">**Center Party**</span>  and our presidential candidate in 1925. While he prefers to work with the right, he is not opposed to cooperation with the SPD.
  
 
 - @emergency_fundraising
