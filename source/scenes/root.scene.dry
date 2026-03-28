@@ -632,7 +632,7 @@ Q.next_election_month_wurttemberg = 5;
 Q.next_election_time_wurttemberg = 5;
 Q.next_election_year_baden = 1929;
 Q.next_election_month_baden = 10;
-
+Q.next_election_time_baden = 22;
 // government affairs timers
 Q.agricultural_policy_timer = 0;
 Q.domestic_enemies_timer = 0;
