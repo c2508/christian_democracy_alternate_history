@@ -1,5 +1,6 @@
 title: The Fourth <span style="color: #000000;">Marx</span> Cabinet has fallen
 subtitle: The <span style="color: #3E88B3;">**Bürgerblock**</span> coalition has collapsed
+frequency: 1000
 new-page: true
 on-arrival: left_dissent += 5; left_labor_dissent += 5; center_dissent += 5; right_labor += 5; right_dissent += 5
 tags: event
