@@ -15,8 +15,8 @@ A left-wing intellectual, Dessauer plays a pivotal role in the Reichbanner and i
 - @root: Return to main
 
 @relation
-title: Improve relations with the Weimar Coalition Parties
-subtitle: Dessauer supports further cooperation with the Weimar Coalition Parties. 
+title: Improve relations with the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition Parties
+subtitle: Dessauer supports further cooperation with the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition Parties. 
 choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 on-arrival: advisor_action_timer = 6; spd_relation += 5*(1-dissent); ddp_relation += 5*(1-dissent)
