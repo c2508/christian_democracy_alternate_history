@@ -46,8 +46,9 @@ We also aim to improve relations with our eastern neighbors, Poland and Czechosl
 
 @trade_war
 title: Stop the trade war with Poland
-subtitle: This is highly unpopular among the nationalist right.
-on-arrival: inflation -= 0.5; workers_z += 2*(1-dissent); unemployed_z += 2*(1-dissent); rural_spd -= 2; old_middle_spd -= 2; west_relation += 1; east_relation += 1; eu_progress += 1 if eu_progress > 0; economic_growth += 0.4; nationalism -= 3; dnvp_relation -= 5
+choose-if: budget >= 1
+subtitle: -1 budget
+on-arrival: inflation -= 0.5; workers_z += 2*(1-dissent); unemployed_z += 2*(1-dissent); rural_spd -= 2; old_middle_spd -= 2; west_relation += 1; east_relation += 1; eu_progress += 1 if eu_progress > 0; economic_growth += 0.4; nationalism -= 3; dnvp_relation -= 5; right_dissent += 5;
 
 Stopping the trade war helps workers and the urban poor by reducing prices for basic necessities. In addition, other countries are pleased by this and are more willing to negotiate on many issues.
 
