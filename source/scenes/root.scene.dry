@@ -138,6 +138,7 @@ Q.ddp_name = "DDP";
 Q.ddp_exist = 1;
 Q.dnf_formed = 0;
 Q.bvp_reunified = 0;
+Q.green_front = 0;
 
 // hmm... maybe we can play nice with Hindenburg???
 Q.hindenburg_relation = 25;
