@@ -168,9 +168,9 @@ Q.sa_strength_2 = Q.sa_strength.toFixed(1);
 
 Influence in the <span style="color: #c00000;">**Reichsbanner**</span>: [+ z_dominance +]%
 
-Reichswehr: [+ reichswehr_strength +] thousand troops.
+<span style="color: #808080;">Reichswehr</span>: [+ reichswehr_strength +] thousand troops.
 
-Reichswehr Loyalty: [+ reichswehr_loyalty : loyalty +]
+<span style="color: #808080;">Reichswehr</span> Loyalty: [+ reichswehr_loyalty : loyalty +]
 
 Prussian police: [+ prussian_police_strength +] thousand members.
 
