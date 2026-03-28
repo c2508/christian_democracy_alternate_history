@@ -604,7 +604,7 @@ Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
             'constitutional_reform', 'labor_rights',
             'education_science', 'curriculum',
             // events
-            'emergency_cuts', 'unemployment_insurance',
+            'emergency_cuts', 'unemployment_insurance', '1928_collapse',
             'sa_ban', 'sh_ban', 'papen_chancellor',
             'kpd_policy', 'kpd_ultimatum', 'popular_front_dispute',
             'high_inflation', 'banking_crisis', 'march_on_berlin',
