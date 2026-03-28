@@ -164,7 +164,7 @@ Q.sa_strength_2 = Q.sa_strength.toFixed(1);
 
 = Official military/paramilitaries
 
-<span style="color: #c00000;">**Reichsbanner**</span> Unity: [+ rb_unity +] 
+<span style="color: #c00000;">**Reichsbanner**</span> Unity: [+ rb_unity +]%
 
 Influence in the <span style="color: #c00000;">**Reichsbanner**</span>: [+ z_dominance +]%
 
