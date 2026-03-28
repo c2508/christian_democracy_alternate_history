@@ -7,7 +7,9 @@ tags: event
 face-image: img/ddp.jpg
 new-page: true
 
-
+on-arrival: {!
+if (Q.ddp_cohesion > 12 && Q.ddp_left < Q.ddp_right && Q.ddp_r < 4.5) Q.stolper_program_adopted = 1;
+!}
 = <span style="color: #D3C24D;">**[+ ddp_name +]**</span> Party Congress
 
 Following the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>'s crushing defeat in the 1928 Reichstag Elections, a special committee has been tasked with providing the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> with a comprehensive social and economic program.
@@ -17,7 +19,7 @@ Headed by esteemed economist and journalist Gustav Stolper, the newly coined 'St
 - @program_nay: The party votes...
 
 @program_yay
-view-if: stopler_program_adopted = 1
+view-if: stolper_program_adopted = 1
 on-arrival: liberal_cooperation += 3; new_middle_ddp += 4; old_middle_ddp += 4; new_middle_other -= 4; old_middle_other -= 4; catholics_ddp += 1; workers_ddp -= 1; ddp_right += 2; ddp_cohesion += 2; ddp_relation += 3;
 face-image: img/portraits/lemmer.jpg
 
