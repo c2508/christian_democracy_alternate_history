@@ -145,7 +145,16 @@ Q.hindenburg_relation = 25;
 // whether or not hindenburg can dismiss the government.
 Q.hindenburg_enabled = 1;
 
-
+//Who's in Prussia?
+Q.kpd_in_prussia = 0
+Q.spd_in_prussia = 1
+Q.ddp_in_prussia = 1
+Q.z_in_prussia = 1
+Q.dvp_in_prussia = 0
+Q.kvp_in_prussia = 0
+Q.others_in_prussia = 0
+Q.dnvp_in_prussia = 0
+Q.nsdap_in_prussa = 0
 // Does the SPD lead in Prussia?
 Q.spd_prussia = 1;
 // Options: spd, z, dnvp, papen, nsdap
