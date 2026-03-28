@@ -1,6 +1,6 @@
 
 title: Baden Landtag Election
-view-if: year = (year == next_election_year_baden and month >= next_election_month_baden) or (year > next_election_year_baden)
+view-if: year = next_election_year_baden and month >= next_election_month_baden
 new-page: true
 tags: event
 priority: 1
