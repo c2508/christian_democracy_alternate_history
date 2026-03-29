@@ -1,6 +1,6 @@
 title: Protests have broken out 
 new-page: true
-subtitle: The rural discontent grows
+subtitle: Rural discontent grows
 tags: event
 view-if: year = 1928 and month = 2
 priority: 2
@@ -12,9 +12,9 @@ Q.rep = 0
 Q.agri_minister = 0
 Q.fund = 0
 Q.coop = 0
-
-
-
+Q.trade_war = 0
+Q.tariff = 0
+Q.tax_breaks = 0
 !}
 go-to: ministries
 
@@ -27,7 +27,7 @@ On the right is Alfred Hugenberg, a prominent industrialist and head of a media 
 
 @ministries 
 
-We can pick from any number of ministries. Controlling a ministry allows us to directly effect policy in that area.
+We can give them any number of concessions. The less we give them, the angrier they will be.
 
 
 - #demands
@@ -70,70 +70,55 @@ title: Support agricultural cooperatives
 subtitle: -1 budget
 unavailable-subtitle: Not enough budget.
 tags: demands
-choose-if: coop = 0
+choose-if: coop = 0 and budget >= 1
 view-if: coop = 0
 on-arrival: rpm_points += 3; coop += 1; budget -= 1;
 go-to: ministries
 
 We shall allocate more government funds to support agriculture cooperatives.
 
-@justice
-title: Justice Ministry
-subtitle: Taking the Justice Ministry is expected of us. The Justice Ministry controls the courts.
-unavailable-subtitle: We do not have enough leverage.
+@trade_war
+title: Prolong the trade war with Poland until at least 1932 
 tags: demands
-choose-if: leverage >= 10 
-view-if: justice_minister_party != "Z"
-on-arrival: leverage -= 10; justice_minister_party = "Z"; justice_minister = "Guerard"
+choose-if: trade_war = 0
+view-if: trade_war = 0
+on-arrival: rpm_points += 4; trade_war += 1
 go-to: ministries
 
-Theodor von Guerard of the Center Party has been appointed Justice Minister.
+We shall continue the trade war with Poland. 
 
-@foreign
-title: Foreign Ministry
-subtitle: This is usually the domain of Gustav Stresemann of the DVP.
-unavailable-subtitle: We do not have enough leverage.
+@tariff
+title: Increase tariffs to protect German agriculture products 
+subtitle: +1 budget
 tags: demands
-choose-if: leverage >= 10 
-view-if: foreign_minister_party != "Z"
-on-arrival: leverage -= 10; foreign_minister_party = "Z"; foreign_minister = "Bruning"
+choose-if: tariff = 0
+view-if: tariff = 0
+on-arrival: rpm_points += 4; tariff += 1; budget += 2
 go-to: ministries
 
-Heinrich Bruning of the Center Party has been appointed Foreign Minister.
+We shall raise tariffs to protect the interests of German agriculture to prevent competition with foreign goods.
 
 
-@agriculture
-title: Agricultural Ministry
-subtitle: This is not our usual domain.
-unavailable-subtitle: We do not have enough leverage.
-choose-if: leverage >= 10 
-view-if: agriculture_minister_party != "Z"
-on-arrival: leverage -= 10; agriculture_minister_party = "Z"; agriculture_minister = "Hermes"
+@tax_breaks
+title: Fund tax breaks and agriculture credits for more farm machinery 
+subtitle: -2 budget
+unavailable-subtitle: Not enough budget.
+tags: demands
+choose-if: tax_breaks = 0 and budget >= 2
+view-if: tax_breaks = 0
+on-arrival: rpm_points += 5; tax_breaks += 1; budget -= 1;
 go-to: ministries
 tags: demands
 
-Andreas Hermes of the Center Party has been appointed Agriculture Minister.
-
-@reichswehr
-title: Reichswehr Ministry
-subtitle: The Ministry responsible for the armed forces is not typically our domain.
-unavailable-subtitle: We do not have enough leverage.
-tags: demands
-choose-if: leverage >= 15 
-view-if: reichswehr_minister_party != "Z"
-on-arrival: leverage -= 15; reichswehr_minister_party = "Z"; reichswehr_minister = "Groener"
-go-to: ministries
-
-Wilhelm Groener has been appointed Reichswehr Minister.
-
+We shall give handouts to farmers to increase agriculture output.
 
 
 @no_more
-title: No more ministries.
-subtitle: [? if leverage >= 5 : We still have some more leverage to gain ministries. ?][? if leverage < 5 : We do not have much leverage left. ?]
+title: No more concessions
+subtitle: We shall not make any more concessions
 tags: demands
 
-This coalition arrangement is tolerable to all.
+We shall see if the farmers are satisfied with these concessions.
 
 @drop_labor
 title: Drop the Labor Ministry.
