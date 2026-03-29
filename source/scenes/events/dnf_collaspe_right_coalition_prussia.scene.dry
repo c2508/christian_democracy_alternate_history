@@ -28,6 +28,7 @@ We shall look for alternative arrangments.
 - @prussian_coalition_formation: Negotiate a new Prussian coalition.
 
 @center_right
+title: The <span style="color: #D3C24D;">**DDP**</span> has agreed to join the coalition.
 view-if: center_right_coalition_prussia >= 50
 on-arrival: in_right_coalition_prussia = 0; in_center_right_coalition_prussia = 1; right_prussia = 1; bourgeois_cooperation += 1; liberal_cooperation += 1
 
