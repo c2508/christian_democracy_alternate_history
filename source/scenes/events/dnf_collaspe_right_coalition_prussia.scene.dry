@@ -14,24 +14,20 @@ Hugenberg has also attracted some members of the <span style="color: #3E88B3;">*
 We have an opportunity to change the composition of the Prussian coalition.
 
 
-- @prussia_coalition
-- @new_prussia_election_oppo: We will stay in opposition.
-- @prussian_coalition_formation: Negotiate a new Prussian coalition.
+- @other
+- @center_right
 - @new_prussia_election_called: Refuse to form a coalition, so new elections are to be called.
 
-@prussia_coalition
-title: Use our resources to convince the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> to reconsider.
-subtitle: -1 resources
-unavailable-subtitle: Not enough resources (need 1).
-view-if: center_right_coalition_prussia >= 50
-choose-if: resources >= 1
-on-arrival: resources -= 1; ddp_left += 2; ddp_cohesion -= 1; liberal_cooperation -= 1 if liberal_parliament = 1; prussia_coalition_trigger = 1
+@other
+title: Can we form another governing coalition?
+view-if: center_right_coalition_prussia < 50
+on-arrival: prussia_coalition_trigger = 1;
 
-We have successfully bribed the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>. 
+We shall look for alternative arrangments.
 
 - @prussian_coalition_formation: Negotiate a new Prussian coalition.
 
-@new_prussia_election_oppo
+@center_right
 view-if: center_right_coalition_prussia >= 50
 on-arrival: in_right_coalition_prussia = 0; in_center_right_coalition_prussia = 1; right_prussia = 1; bourgeois_cooperation += 1; liberal_cooperation += 1
 
