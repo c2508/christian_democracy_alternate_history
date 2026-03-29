@@ -69,7 +69,7 @@ Who should be the chancellor?
 
 @tolerate
 title: Can the <span style="color: #c00000;">**SPD**</span> be persuaded to tolerate a center right coalition?
-subtitle: We would  
+subtitle: We would have to offer them concessions.
 view-if: center_right_coalition < 50
 
 
