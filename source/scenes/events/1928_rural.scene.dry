@@ -57,9 +57,8 @@ We shall have the a right wing agriculture minister in the next cabinet.
 title: Fund the Centre Party aligned Association of German Farmers’ Association (VdB) for more low interest loans 
 subtitle: -2 resources
 unavailable-subtitle: Not enough resources.
-choose-if: resources >= 2
+choose-if: resources >= 2 and fund = 0
 tags: demands
-choose-if: fund = 0
 view-if: fund = 0
 on-arrival: rpm_points += 3; fund += 1; resources -= 2;
 go-to: ministries
