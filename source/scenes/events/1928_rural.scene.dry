@@ -79,6 +79,7 @@ We shall allocate more government funds to support agriculture cooperatives.
 
 @trade_war
 title: Prolong the trade war with Poland until at least 1932 
+subtitle: Continuing the trade war is popular amongst the majority of our party.
 tags: demands
 choose-if: trade_war = 0
 view-if: trade_war = 0
@@ -89,11 +90,11 @@ We shall continue the trade war with Poland.
 
 @tariff
 title: Increase tariffs to protect German agriculture products 
-subtitle: +1 budget
+subtitle: +1 budget 
 tags: demands
 choose-if: tariff = 0
 view-if: tariff = 0
-on-arrival: rpm_points += 4; tariff += 1; budget += 2
+on-arrival: rpm_points += 4; tariff += 1; budget += 1
 go-to: ministries
 
 We shall raise tariffs to protect the interests of German agriculture to prevent competition with foreign goods.
