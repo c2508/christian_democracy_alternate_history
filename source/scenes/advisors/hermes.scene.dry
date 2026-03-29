@@ -7,7 +7,8 @@ new-page: true
 
 = Andreas Hermes
 
-Hermes is an agriculture scientist who seeks to represent the interests of small and medium-sized peasants in the party. 
+Hermes is an agriculture scientist who seeks to represent the interests of small and medium-sized peasants in the party. [? if green_front = 1: He is also an important figure in the <span style="color: #0dba1e;">**Green Front**</span> through his leadership of the <span style="color: #000000;">**VdB**</span>. ?]
+
 
 
 
@@ -20,7 +21,7 @@ Hermes is an agriculture scientist who seeks to represent the interests of small
 title: Agricultural Policy
 subtitle: Hermes is the Minister of Agriculture.
 choose-if: advisor_action_timer <= 0 and z_in_government and agriculture_minister_party == "Z"
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not z_in_government : The <span style="color: #c00000;">SPD</span> is not in government. ?][? if agriculture_minister_party != "Z": The Zentrum does not have the Agriculture Ministry. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not z_in_government : The <span style="color: #000000;">**Center Party**</span> is not in government. ?][? if agriculture_minister_party != "Z": The <span style="color: #000000;">**Center Party**</span> does not have the Agriculture Ministry. ?]
 on-arrival: advisor_action_timer = 6; agricultural_policy_timer -= 6; last_advisor_action = 1
 go-to: agricultural_policy
 
