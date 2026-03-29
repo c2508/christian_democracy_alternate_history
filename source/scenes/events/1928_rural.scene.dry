@@ -1,1 +1,9 @@
-
+title: Protests have broken out 
+new-page: true
+subtitle: The rural discontent grows
+tags: event
+view-if: year = 1928 and month = 2
+priority: 2
+max-visits: 1
+face-image: img/redfront.jpg
+ 
