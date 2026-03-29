@@ -8,9 +8,14 @@ max-visits: 1
 face-image: img/redfront.jpg
 on-arrival: {! Q.rpm_points = 0 !}
 
-@ministries
+= <span style="color: #3E88B3;">**DNVP**</span> Conference
 
-We can pick from any number of ministries. Controlling a ministry allows us to directly effect policy in that area. [? if in_left_front : Any ministry that we do not take will be given to the KPD. ?] [? if in_left_front and reichswehr_minister_party == "KPD" : If the KPD controls the Reichswehr Ministry, the army will most likely revolt. ?]
+A leadership vote is being held at the <span style="color: #3E88B3;">German National People's Party</span>(<span style="color: #3E88B3;">**DNVP**</span>) congress following the resignation of former leader Kuno von Westarp. The in-fighting resulting from their electoral defeat last election, coupled with the question of governmental participation in a system they're fundamentally opposed to has come to a head at this congress.
+
+On the right is Alfred Hugenberg, a prominent industrialist and head of a media empire. He is vehemently opposed by the left of the party for his "<i>Katastrophenpolitik</i>", as he prefers to see the republic fall than participate in parliamentary government. With Westarp's refusal to run for re-election, despite urgent pleas from the moderates within the party, they have convinced the reluctant Oskar Hergt, former leader of the <span style="color: #3E88B3;">**DNVP**</span> from 1918—1924, himself ousted by the right. The results of this congress may very well be a turning point in the history of the entire German nation.
+
+- @ministries: We can pick from any number of ministries. Controlling a ministry allows us to directly effect policy in that area.
+
 
 - #mins_1928
 - #drop_mins_1928
