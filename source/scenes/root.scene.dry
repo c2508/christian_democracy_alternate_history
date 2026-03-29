@@ -105,6 +105,7 @@ Q.moderate_plan_adopted = 0;
 
 Q.bruning_points = 0;
 Q.dnvp_points = 0;
+Q.rpm_strength = 0;
 
 Q.spd_left = 0; 
 Q.spd_right = 1;
