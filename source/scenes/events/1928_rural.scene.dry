@@ -33,16 +33,6 @@ We can give them any number of concessions. The less we give them, the angrier t
 - #demands
 - #drop_demands
 
-@rep
-title: More agriculture representation within the <span style="color: #000000;">**Center Party's**</span>  Reichstag delegation 
-tags: demands
-choose-if: rep = 0
-view-if: rep = 0
-on-arrival: rpm_points += 2; rep += 1
-go-to: ministries
-
-We have agreed to allow for greater agricultural influence within our party.
-
 @agri_minister
 title: Have a <span style="color: #000000;">**Center Party**</span> or <span style="color: #3E88B3;">**DNVP**</span> politician as Agriculture Minister in the next cabinet 
 tags: demands
@@ -63,7 +53,7 @@ view-if: fund = 0
 on-arrival: rpm_points += 3; fund += 1; resources -= 2;
 go-to: ministries
 
-We shall give handouts to the Catholic farmers. 
+While this appeases the Catholic peasants, Protestant farmers are unhappy at their exclusion.
 
 @coop
 title: Support agricultural cooperatives
@@ -88,20 +78,8 @@ go-to: ministries
 
 We shall continue the trade war with Poland. 
 
-@tariff
-title: Increase tariffs to protect German agriculture products 
-subtitle: +1 budget 
-tags: demands
-choose-if: tariff = 0
-view-if: tariff = 0
-on-arrival: rpm_points += 4; tariff += 1; budget += 1
-go-to: ministries
-
-We shall raise tariffs to protect the interests of German agriculture to prevent competition with foreign goods.
-
-
 @tax_breaks
-title: Fund tax breaks and agriculture credits for more farm machinery 
+title: Fund agriculture credits for more farm machinery 
 subtitle: -2 budget
 unavailable-subtitle: Not enough budget.
 tags: demands
@@ -110,7 +88,7 @@ view-if: tax_breaks = 0
 on-arrival: rpm_points += 5; tax_breaks += 1; budget -= 1;
 go-to: ministries
 
-We shall give handouts to farmers to increase agriculture output.
+Giving farmers more credit allow them to modernise their farm equipment and rely less on costly manual labor. 
 
 
 @no_more
