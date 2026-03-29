@@ -17,7 +17,7 @@ In our media and campaign materials, who should we consider as our main opponent
 - @far_right_and_left: The far right and far left - the <span style="color: #700000;">**KPD**</span> and <span style="color: #7A3C00;">**NSDAP**</span>.
 - @nsdap: The <span style="color: #7A3C00;">**NSDAP**</span> alone.
 - @kpd: The <span style="color: #700000;">**KPD**</span> alone.
-- @marxist: The <span style="color: #c00000;">**Marxist**</span parties - the <span style="color: #700000;">**KPD**</span> and <span style="color: #c00000;">**SPD**</span>.
+- @marxist: The <span style="color: #c00000;">**Marxist**</span> parties - the <span style="color: #700000;">**KPD**</span> and <span style="color: #c00000;">**SPD**</span>.
 - @easy_discard
 
 @anti_dem
@@ -43,4 +43,4 @@ Attacking the <span style="color: #700000;">**KPD**</span> is supported by all b
 @marxist
 on-arrival: enemies = "marxist parties"; left_dissent += 5; left_labor_dissent += 5; right_strength += 8; right_dissent -= 5; spd_relation -= 5; dvp_relation += 5; dnvp_relation += 5; workers_spd -= 3; workers_kpd -= 3
 
-Our anti-Marxist rhetoric is popular among the right, but may make it harder to build the coalitions that are necessary for government in the future. 
+Our anti-<span style="color: #c00000;">Marxist</span> rhetoric is popular among the right, but may make it harder to build the coalitions that are necessary for government in the future. 
