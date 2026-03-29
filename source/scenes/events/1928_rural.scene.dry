@@ -108,7 +108,6 @@ choose-if: tax_breaks = 0 and budget >= 2
 view-if: tax_breaks = 0
 on-arrival: rpm_points += 5; tax_breaks += 1; budget -= 1;
 go-to: ministries
-tags: demands
 
 We shall give handouts to farmers to increase agriculture output.
 
