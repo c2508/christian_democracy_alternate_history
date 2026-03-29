@@ -34,7 +34,7 @@ We can pick from any number of ministries. Controlling a ministry allows us to d
 - #drop_demands
 
 @rep
-title: More agriculture representation within the Centre Party's Reichstag delegation 
+title: More agriculture representation within the <span style="color: #000000;">**Center Party's**</span>  Reichstag delegation 
 tags: demands
 choose-if: rep = 0
 view-if: rep = 0
@@ -44,7 +44,7 @@ go-to: ministries
 We have agreed to allow for greater agricultural influence within our party.
 
 @agri_minister
-title: Have a Centre or DNVP politician as Agriculture Minister in the next cabinet 
+title: Have a <span style="color: #000000;">**Center Party**</span> or <span style="color: #3E88B3;">**DNVP**</span> politician as Agriculture Minister in the next cabinet 
 tags: demands
 choose-if: agri_minister = 0
 view-if: agri_minister = 0
@@ -54,7 +54,7 @@ go-to: ministries
 We shall have the a right wing agriculture minister in the next cabinet.
 
 @fund
-title: Fund the Centre Party aligned Association of German Farmers’ Association (VdB) for more low interest loans 
+title: Fund the <span style="color: #000000;">**Center Party**</span> aligned Association of German Farmers’ Association <span style="color: #000000;">**(VdB)**</span> for more low interest loans 
 subtitle: -2 resources
 unavailable-subtitle: Not enough resources.
 choose-if: resources >= 2 and fund = 0
