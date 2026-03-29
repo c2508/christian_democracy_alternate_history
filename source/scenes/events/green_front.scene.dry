@@ -1,4 +1,4 @@
-title: The <span style="color: #0dba1e;">Green Front</span>
+title: The <span style="color: #0dba1e;">**Green Front**</span>
 subtitle: Can a united agrarian front be formed?
 view-if: year = 1929 and month = 3
 on-arrival: {!
@@ -47,9 +47,9 @@ max-visits: 1
 tags: event
 new-page: true
 
-= The formation of the <span style="color: #0dba1e;">Green Front</span>
+= The formation of the <span style="color: #0dba1e;">**Green Front**</span>
 
-With the rise of the Rurul People's Movement and the proliferation of <span style="color: #909090;">special interest</span> agrarian parties like the <span style="color: #909090;">**CNBLP**</span>, it is evident that much of the German peasantry has been dissatisfied with the agricultural policies of the government. 
+With the rise of the Rurul People's Movement and the proliferation of <span style="color: #909090;">**special interest**</span> agrarian parties like the <span style="color: #909090;">**CNBLP**</span>, it is evident that much of the German peasantry has been dissatisfied with the agricultural policies of the government. 
 Amidst growing grassroots pressure from local chapters to quell rural unrest, various organisations representing organised agriculture have been pushed to find a panacea for all the ills plauging the agricultural sector. As such, negotiations have been undertaken between the RLB, our very own <span style="color: #000000;">**VdB**</span>, the <span style="color: #909090;">**DBP**</span> and the German Chamber of Agriculture to come together to draft a comprehensive farm program.
 While some hold hopes for the formation of a 'single interest organisation for the entire agricultural community', the confessional divide between the RLB and the <span style="color: #000000;">**VdB**</span> make it very unlikely.
 
@@ -82,7 +82,7 @@ view-if: green_front_points < 3
 on-arrival: dnvp_relation -= 3; rural_z -= 3; rural_dnvp -= 3; rural_other -= 2; rural_nsdap += 4; pro_republic -= 3; right_dissent += 6;
 face-image: img/portraits/WestarpKuno.jpg
 
-Surprisingly, negotiations for the formation of a <span style="color: #0dba1e;">Green Front</span> have broken down. Part of the reason can be attributed to the RLB's fear of being overwhelmed by the numerically superior <span style="color: #000000;">**VdB**</span>, while the <span style="color: #000000;">**VdB**</span> holds concerns over the possible defections of their regional branches to the more politically significant RLB.
-Furthermore, the <span style="color: #909090;">**DBP**</span> refusal to form a <span style="color: #0dba1e;">Green Front</span> stems from their aversion to any sort of affliation with the establishment parties which could compromise their status as a <span style="color: #909090;">special interest</span> party. In this increasingly desperate situation for German farmers, radical parties like the <span style="color: #7A3C00;">**NSDAP**</span> stand to gain.
+Surprisingly, negotiations for the formation of a <span style="color: #0dba1e;">**Green Front**</span> have broken down. Part of the reason can be attributed to the RLB's fear of being overwhelmed by the numerically superior <span style="color: #000000;">**VdB**</span>, while the <span style="color: #000000;">**VdB**</span> holds concerns over the possible defections of their regional branches to the more politically significant RLB.
+Furthermore, the <span style="color: #909090;">**DBP**</span>'s refusal to form a <span style="color: #0dba1e;">**Green Front**</span> stems from their aversion to any sort of affliation with the establishment parties which could compromise their status as a <span style="color: #909090;">special interest</span> party. In this increasingly desperate situation for German farmers, radical parties like the <span style="color: #7A3C00;">**NSDAP**</span> stand to gain.
 
 
