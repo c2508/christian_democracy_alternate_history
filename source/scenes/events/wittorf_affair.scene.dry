@@ -1,5 +1,5 @@
 title: Wittorf Affair
-subtitle: A crisis in the KPD?
+subtitle: A crisis in the <span style="color: #700000;">**KPD**</span>?
 new-page: true
 view-if: year = 1928 and month >= 8 and month <= 10
 max-visits: 1
@@ -8,29 +8,29 @@ tags: event
 
 = Wittorf Affair
 
-There has been rumors of a scandal engulfing the KPD leadership. An associate of KPD chairman Ernst Thälmann, a KPD official named John Wittorf, is accused of embezzling campaign funds, diverting thousands of Reichsmarks for personal use, and Thälmann is accused of covering up the affair. The party's central committee considers this charge serious.
+There has been rumors of a scandal engulfing the <span style="color: #700000;">**KPD**</span> leadership. An associate of <span style="color: #700000;">**KPD**</span> chairman Ernst Thälmann, a <span style="color: #700000;">**KPD**</span> official named John Wittorf, is accused of embezzling campaign funds, diverting thousands of Reichsmarks for personal use, and Thälmann is accused of covering up the affair. The party's central committee considers this charge serious.
 
-The Conciliators in the KPD, a faction opposed to the party's present hard-line policy, are said to have leaked this information to aid them in the intra-party struggle. Dissident communists in the Leninbund also have information about this affair, and are planning to publish it.
+The <span style="color: #700000;">Concillators</span> in the <span style="color: #700000;">**KPD**</span>, a faction opposed to the party's present hard-line policy, are said to have leaked this information to aid them in the intra-party struggle. Dissident <span style="color: #700000;">communists</span> in the Leninbund also have information about this affair, and are planning to publish it.
 
-What should we do with this information?
+How will this hurt the standing of the <span style="color: #700000;">**KPD**</span>?
 
 - @reveal
 - @support
 
 @reveal
-title: The Social Democrats have publicized the scandal to damage the KPD and Thälmann.
+title: The <span style="color: #c00000;">**SPD**</span> has publicized the scandal to damage the <span style="color: #700000;">**KPD**</span> and Thälmann.
 on-arrival: workers_kpd -= 4; unemployed_kpd -= 2; workers_spd += 4; spd_relation += 4; 
 view if: spd_right >= spd_left 
 choose if: spd_right >= spd_left
 
-Vorwarts is the first to publicize the affair, bringing a torment of criticism to the hypocrisy of the communists. This has damaged the KPD's standing among the workers, while increasing our cooperation with the SPD.
+<span style="color: #c00000;">Vorwarts</span> is the first to publicize the affair, bringing a torment of criticism to the hypocrisy of the communists. This has damaged the <span style="color: #700000;">**KPD**</span>'s standing among the workers, while increasing our cooperation with the SPD.
 
 In the end, Stalin's pressure helps to keep Thälmann from facing much in the way of consequences.
 
 @support
-title: The Social Democrats have defended the KPD throughout this ordeal. 
-on-arrival: workers_spd += 1; unemployed_spd += 1; workers_kpd -= 2; unemployed_kpd -= 2;
+title: The <span style="color: #c00000;">**SPD**</span> defends the <span style="color: #700000;">**KPD**</span> throughout this ordeal. 
+on-arrival: workers_spd += 1; unemployed_spd += 1; workers_kpd -= 2; unemployed_kpd -= 2; spd_left += 1; spd_relation -= 2;
 view if: spd_right < spd_left 
 choose if: spd_right < spd_left
 
-Vorwarts has openly defended the KPD, downplaying the scandal and denouncing it as right wing propaganda. The scandal has hit the KPD considerably less severe then expected, in part due to their friendly relations with the SPD.
+<span style="color: #c00000;">Vorwarts</span> has openly defended the <span style="color: #700000;">**KPD**</span>, downplaying the scandal and denouncing it as right wing propaganda. The scandal's impact has been less severe then expected, in part due to their friendly relations with the SPD.
