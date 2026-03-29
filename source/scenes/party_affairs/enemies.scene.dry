@@ -17,13 +17,13 @@ In our media and campaign materials, who should we consider as our main opponent
 - @far_right_and_left: The far right and far left - the <span style="color: #700000;">**KPD**</span> and <span style="color: #7A3C00;">**NSDAP**</span>.
 - @nsdap: The <span style="color: #7A3C00;">**NSDAP**</span> alone.
 - @kpd: The <span style="color: #700000;">**KPD**</span> alone.
-- @marxist: The Marxist parties - the <span style="color: #700000;">**KPD**</span> and <span style="color: #c00000;">**SPD**</span>.
+- @marxist: The <span style="color: #c00000;">**Marxist**</span parties - the <span style="color: #700000;">**KPD**</span> and <span style="color: #c00000;">**SPD**</span>.
 - @easy_discard
 
 @anti_dem
 on-arrival: enemies = "anti-democratic parties"; center_strength += 5; left_labor_strength += 5; right_dissent += 5; workers_kpd -= 2; old_middle_nsdap -= 2; rural_dnvp -= 2; dnvp_relation -= 10
 
-Attacking the anti-democratic parties is popular among all but the right wing of our party, who would prefer to be fighting the Marxist parties. This might also hamper our ability to reconcile with the DNVP in the future.
+Attacking the anti-democratic parties is popular among all but the right wing of our party, who would prefer to be fighting the <span style="color: #c00000;">**SPD**</span parties. This might also hamper our ability to reconcile with the <span style="color: #3E88B3;">**DNVP**</span> in the future.
 
 @far_right_and_left
 on-arrival: enemies = "far right and left"; left_dissent -= 5; left_labor_dissent -= 5; center_dissent -= 5; right_labor_dissent -= 5; right_dissent -= 5; old_middle_nsdap -= 3; workers_kpd -= 3;
@@ -33,14 +33,14 @@ Our rhetoric against the extremist parties are popular among most of the party.
 @nsdap
 on-arrival: enemies = "NSDAP"; neorevisionist_strength += 5; nazi_urgency += 1; workers_nsdap -= 4;
 
-[? if nazi_urgency == 0 or nsdap_r < 10 : The NSDAP is a tiny party right now, with more bark than bite. Many in our party are questioning our choices. ?][? if nazi_urgency > 0 and nsdap_r >= 10 : The Nazis are the most urgent problem for us to deal with. ?]
+[? if nazi_urgency == 0 or nsdap_r < 10 : The <span style="color: #7A3C00;">**NSDAP**</span> is a tiny party right now, with more bark than bite. Many in our party are questioning our choices. ?][? if nazi_urgency > 0 and nsdap_r >= 10 : The <span style="color: #7A3C00;">**Nazis**</span> are the most urgent problem for us to deal with. ?]
 
 @kpd
 on-arrival: enemies = "KPD"; right_dissent -= 5; dvp_relation += 5; ddp_relation += 5; workers_kpd -= 4;
 
-Attacking the KPD is supported by all but the most left-wing in our party, and wins us some measure of approval among the other bourgeois parties.
+Attacking the <span style="color: #700000;">**KPD**</span> is supported by all but the most left-wing in our party, and wins us some measure of approval among the other bourgeois parties.
 
 @marxist
 on-arrival: enemies = "marxist parties"; left_dissent += 5; left_labor_dissent += 5; right_strength += 8; right_dissent -= 5; spd_relation -= 5; dvp_relation += 5; dnvp_relation += 5; workers_spd -= 3; workers_kpd -= 3
 
-Our anti-marxist rhetoric is popular among the right, but may make it harder to build the coalitions that are necessary for government in the future. 
+Our anti-Marxist rhetoric is popular among the right, but may make it harder to build the coalitions that are necessary for government in the future. 
