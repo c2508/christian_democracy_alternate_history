@@ -34,7 +34,7 @@ We can pick from any number of ministries. Controlling a ministry allows us to d
 - #drop_demands
 
 @rep
-title: More Agriculture Representation within the Centre Party's Reichstag Delegation 
+title: More agriculture representation within the Centre Party's Reichstag delegation 
 tags: demands
 choose-if: rep = 0
 view-if: rep = 0
@@ -44,7 +44,7 @@ go-to: ministries
 We have agreed to allow for greater agricultural influence within our party.
 
 @agri_minister
-title: Have a Centre or DNVP Politician as Agriculture Minister in the next cabinet 
+title: Have a Centre or DNVP politician as Agriculture Minister in the next cabinet 
 tags: demands
 choose-if: agri_minister = 0
 view-if: agri_minister = 0
