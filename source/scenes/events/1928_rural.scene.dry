@@ -7,6 +7,8 @@ priority: 2
 max-visits: 1
 face-image: img/redfront.jpg
 on-arrival: {! Q.rpm_points = 0 !}
+go-to: ministries
+
 
 = <span style="color: #3E88B3;">**DNVP**</span> Conference
 
