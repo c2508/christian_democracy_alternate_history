@@ -3,7 +3,7 @@ new-page: true
 subtitle: The influence of organised agriculture grows...
 tags: event
 on-arrival: rural_z += 3; rural_dnvp += 3; rural_other += 2; rural_nsdap -= 5; right_strength += 5; right_dissent -= 5; pro_republic += 2; dnvp_relations += 3; left_labor_dissent += 2; right_dissent += 2; left_dissent += 4
-view-if: year = 1929 and month = 10
+view-if: year = 1929 and month = 10 and green_front = 1
 priority: 1
 max-visits: 1
 
