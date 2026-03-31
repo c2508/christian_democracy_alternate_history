@@ -23,7 +23,7 @@ on-arrival: workers_nsdap -= 2; new_middle_nsdap -= 2; old_middle_nsdap -= 2; ca
 The organization’s main effort is to steer people away from the allure of the <span style="color: #7A3C00;">Nazis</span> and expose the contradictions and demagoguery inherent in their politics.
 
 @endorse_ddp
-view-if: ddp_relation > 65; pro_republic < 50; ddp_left > ddp_right 
+view-if: ddp_relation > 65 and pro_republic < 50 and ddp_left > ddp_right 
 on-arrival: workers_nsdap -= 2; new_middle_nsdap -= 2; old_middle_nsdap -= 2; catholics_nsdap -= 2
 
 The organization’s main effort is to steer people away from the allure of the <span style="color: #7A3C00;">Nazis</span> and expose the contradictions and demagoguery inherent in their politics.
