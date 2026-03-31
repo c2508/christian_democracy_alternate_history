@@ -12,13 +12,12 @@ max-visits: 6
 
 The *Reichsbanner Schwarz-Rot-Gold* is a mass organization for the defense of the Republic against the extremists who threaten it. Some would call it a paramilitary, although currently it is hardly any sort of military. It is officially associated with the pro-democratic parties -the SPD, Center, and [+ ddp_name +], but by far the largest component is with the SPD.
 
-[? if workers_spd < 46 or workers_spd < workers_nsdap or workers_spd < workers_kpd : The Reichsbanner is having a more difficult time recruiting, as the SPD is no longer the dominant party among the workers. Many of its members have left. ?]
+[? if pro_republic < 20: The unpopularity of the republic that the Reichbanner strives to defend has led to difficulties in recruitment. ?]
 
 - @militant: Fund more military-style training and equipment for the Reichsbanner.
 - @militant_2: Use our existing resources to support more training for the Reichsbanner.
 - @same: Keep the Reichsbanner as it is.
 - @cut_rb: Cut funding for the Reichsbanner.
-- @women_rb
 - @easy_discard
 - @cancel_advisor_action
 
@@ -28,7 +27,7 @@ The *Reichsbanner Schwarz-Rot-Gold* is a mass organization for the defense of th
 choose-if: resources >= rb_militarization_cost
 unavailable-subtitle: Not enough resources ([+ rb_militarization_cost +] needed).
 subtitle: -[+ rb_militarization_cost +] resources
-on-arrival: resources -= rb_militarization_cost; rb_investment += 1; rb_strength += 100; rb_militancy += 0.05; left_strength += 2; left_dissent -= 2; right_dissent += 5; workers_z += 2*(1-dissent); unemployed_z += 2*(1-dissent); z_dominance += 5;
+on-arrival: resources -= rb_militarization_cost; rb_investment += 1; rb_strength += 100; rb_militancy += 0.05; left_strength += 2; left_dissent -= 2; right_dissent += 5; workers_z += 2*(1-dissent); unemployed_z += 2*(1-dissent); z_dominance += 4;
 
 Some in our party decry the increasing militarization of the Reichsbanner. They say it is emulating the right-wing nationalists or the communists, and risks alienating our allies in the centrist parties. On the other hand, more left-leaning radicals are being lured to our organizations, away from the communists.
 
@@ -48,24 +47,7 @@ The Reichsbanner is already serving the purpose it needs to serve. There is no r
 
 @cut_rb
 subtitle: +1 resources
-on-arrival: resources += 1; rb_strength -= 100; rb_militancy -= 0.05; left_strength -= 2; left_dissent -= 2; spd_militancy -= 0.05; workers_kpd += 2; unemployed_kpd += 2; z_dominance += 5;
+on-arrival: resources += 1; rb_strength -= 100; rb_militancy -= 0.05; left_strength -= 4; left_dissent += 4; spd_militancy -= 0.05; workers_kpd += 2; unemployed_kpd += 2; z_dominance -= 4;
 
-Cutting resources to the Reichsbanner causes a drop in the membership, and leads some would-be members to join the Communists instead.
+Cutting resources to the Reichsbanner causes a drop in the membership and our support. 
 
-
-@women_rb
-title: Allow women to join the Reichsbanner.
-subtitle: -1 resources - This might cause a backlash from existing members.
-choose-if: resources > 0
-view-if: womens_rights >= 4 and sender_advisor == 1 and iron_front_formed == 1
-on-arrival: resources -= 1; rb_militancy *= 0.85; rb_strength += 400; women_in_rb = 1; rb_militancy += 0.05 if repealed_175; rb_militancy += 0.04 if trans_rights; rb_militancy += 0.02 if reformed_183;
-go-to: homosexual if trans_rights or repealed_175 or reformed_183
-max-visits: 1
-achievement: women_reichsbanner
-
-The suggestion to allow women into the Reichsbanner is ridiculed by most, except for Toni Sender. But this is an exceptional time, and we need anyone who is willing to join. Thus, we organize specialized units for women, [? if homosexual_rights > 0: and even some covert units for transsexuals and homosexuals ?].
-
-After allowing women to join, the number of comrades who leave is more than balanced out by the number of radicalized women and others who join. However, many of our departed members were veterans, and many of the new members have no experience with military-style training.
-
-@homosexual
-achievement: anders_als_die_andern
