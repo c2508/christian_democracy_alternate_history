@@ -55,7 +55,7 @@ The <span style="color: #3E88B3;">nationalist</span> right decry our attempts at
 
 @secret_rearmament
 title: Contine secret rearmament with the <span style="color: #750e0e;">**Soviet Union**</span>
-choose-if: budget >= 1; spd_in_government = 0
+choose-if: budget >= 1 and spd_in_government = 0
 unavailable_subtitle: The <span style="color: #c00000;">**SPD**</span>'s presence in the government makes secret rearmament too risky to carry out
 subtitle: -1 budget
 on-arrival: budget -= 1; soviet_relation += 1; reichswehr_militancy += 0.2; reichswehr_loyalty += 0.05; foreign_goal_completed += 1
