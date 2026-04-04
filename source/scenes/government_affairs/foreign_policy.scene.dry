@@ -21,7 +21,6 @@ What should our foreign policy priority be?
 - @customs_union
 - @negotiate
 - @reduce_reparations
-- @expose
 - @european_union
 - @european_union_2
 - @concordat_negotiate
@@ -36,31 +35,32 @@ What should our foreign policy priority be?
 title: Improve our relations with the Western Allies.
 on-arrival: west_relation += 2; reparations_negotiation += 1
 
-The key to peace in Europe is a rapproachment between France and Germany. We are taking steps towards that rapproachment. [? if young_plan_seen == 0 : This is difficult to do when France is occupying a major portion of Germany's territory, but we are working on that part. ?]
+The key to peace in Europe is a rapprochement between <span style="color: #002654;">France</span> and Germany. We are taking steps towards that rapprochement. [? if young_plan_seen == 0 : This is difficult to do when <span style="color: #002654;">France</span> is occupying a major portion of Germany's territory, but we are working on that part. ?]
 
 @improve_east
 title: Improve our relations with our eastern neighbors.
 on-arrival: east_relation += 2;
 
-We also aim to improve relations with our eastern neighbors, Poland and Czechoslovakia, who are righfully terrified of German aggression. Hopefully we can convince them of our peaceful intentions.
+We also aim to improve relations with our eastern neighbors, <span style="color: #DC143C;">Pol</span><span style="color: #FFFFFF;">and</span> and <span style="color: #11457E;">Czech</span><span style="color: #FFFFFF;">oslo</span><span style="color: #D7141A;">vakia</span>, who are rightfully terrified of German aggression. Hopefully we can convince them of our peaceful intentions.
 
 @trade_war
 title: Stop the trade war with Poland
 choose-if: budget >= 1
 subtitle: -1 budget
-on-arrival: inflation -= 0.5; workers_z += 2*(1-dissent); unemployed_z += 2*(1-dissent); rural_spd -= 2; old_middle_spd -= 2; west_relation += 1; east_relation += 1; eu_progress += 1 if eu_progress > 0; economic_growth += 0.4; nationalism -= 3; dnvp_relation -= 5; right_dissent += 5;
+on-arrival: inflation -= 0.5; workers_z += 2*(1-dissent); unemployed_z += 2*(1-dissent); rural_z -= 1; old_middle_z -= 1; west_relation += 1; east_relation += 1; eu_progress += 1 if eu_progress > 0; economic_growth += 0.4; nationalism -= 3; dnvp_relation -= 5; right_dissent += 5; nationalism -= 5*(1-dissent)
 
 Stopping the trade war helps workers and the urban poor by reducing prices for basic necessities. In addition, other countries are pleased by this and are more willing to negotiate on many issues.
 
-The nationalist right is angered by this policy due to their strong hate of Poland. 
+The <span style="color: #3E88B3;">nationalist</span> right decry our attempts at conciliation. 
 
 @secret_rearmament
-title: Contine secret rearmament with the Soviet Union
-choose-if: budget >= 1
+title: Contine secret rearmament with the <span style="color: #750e0e;">**Soviet Union**</span>
+choose-if: budget >= 1; spd_in_government = 0
+unavailable_subtitle: The <span style="color: #c00000;">**SPD**</span>'s presence in the government makes secret rearmament too risky to carry out
 subtitle: -1 budget
 on-arrival: budget -= 1; soviet_relation += 1; reichswehr_militancy += 0.2; reichswehr_loyalty += 0.05; foreign_goal_completed += 1
 
-The Soviet Union and the Reichswehr are pleased that we have decided to continue secret rearmament. 
+The <span style="color: #750e0e;">**Soviet Union**</span> and the Reichswehr are pleased that we have decided to continue secret rearmament. 
 
 @customs_union
 title: Form a customs union with Austria?
@@ -80,7 +80,7 @@ However, the Allies, especially France, are likely to object. This agreement wou
 on-arrival: banking_crisis_timer = 2; customs_union = 1; west_relation -= 2; east_relation -= 2; spd_relation -= 10; dvp_relation += 8; dnvp_relation += 8; right_dissent -= 8; coalition_dissent += 1 if spd_government = 1; coup_progress += 1
 max-visits: 1
 
-We have formed a customs union with Austria! Our right faction is pleased. The right-wing parties are also praising us for this.
+We have formed a customs union with Austria! The parties to our right, the <span style="color: #C0A054;">**DVP**</span> and the <span style="color: #3E88B3;">**DNVP**</span> are pleased with our actions, as is the right of our party.
 
 Immediately, France and other neighboring countries lodge their protests. The longer-term response is yet to be seen.
 
@@ -105,20 +105,10 @@ Finally, given both the economic circumstances and our continued negotiations, t
 
 This has reduced tensions within our government, and our party has gotten credit for the achievement.
 
-@expose
-title: Expose the secret rearmament plans of the previous foreign ministry!
-view-if: rearmament_exposed == 0
-on-arrival: west_relation += 2; east_relation += 1; nationalism -= 5*(1-dissent); pro_republic += 5*(1-dissent); coalition_dissent -= 1 if coalition_dissent > 0; rearmament_exposed += 1; reparations_negotiation += 3; coup_progress -= 1; right_dissent += 10; spd_relations += 8; ddp_relations += 2; dvp_relations -= 5; dnvp_relations -= 5
-
-The previous foreign ministry, despite its benevolent and peaceful face, was secretly helping the Reichswehr to build up its forces, in contravention of the Treaty of Versailles.
-
-The Allies are grateful of our exposure and repudiation of militarism. The right wing parties are less supportive.
-
-
 @concordat_negotiate
 title: Negotiate a Concordat between the Germany and the Vatican.
 view-if: prussian_concordat = 1 and reichskonkordat = 0 and reichskonkordat_progress < 4
-on-arrival: reichskonkordat_progress += 1; left_labor_dissent -= 3; right_labor_dissent -= 3; center_dissent -= 3; right_dissent -= 3
+on-arrival: reichskonkordat_progress += 1; left_dissent -= 3; left_labor_dissent -= 3; right_labor_dissent -= 3; center_dissent -= 3; right_dissent -= 3
 
 The Roman Catholic Church is interested in furthering relations with the German Republic, seeing us as preferable to the old anti-Catholic policies of the Empire. We are working towards the signing of a Concordat, an agreement between the Vatican and the Republic that formally recognizes the Church's rights and interests in the country. The Center Party is especially interested in making this agreement.
 
@@ -127,7 +117,7 @@ The Roman Catholic Church is interested in furthering relations with the German 
 @concordat
 title: We can sign a Concordat with the Vatican!
 view-if: reichskonkordat_progress >= 4 and reichskonkordat = 0
-on-arrival: reichskonkordat = 1; z_relation += 15*(1-dissent); catholics_z += 8*(1-dissent); catholics_z += 5 if in_weimar_coalition or in_grand_coalition or in_popular_front; left_labor_dissent -= 10; right_labor_dissent -= 10; center_dissent -= 10; right_dissent -= 10
+on-arrival: reichskonkordat = 1; dvp_relation -= 6; ddp_relation -= 4; catholics_z += 8*(1-dissent); catholics_z += 5 if in_weimar_coalition or in_grand_coalition or in_popular_front; left_dissent -= 10; left_labor_dissent -= 10; right_labor_dissent -= 10; center_dissent -= 10; right_dissent -= 10
 achievement: reichskonkordat
 
 We have successfully signed a Concordat between Germany and the Roman Catholic Church! This treaty defines a formal relationship between the Church and the German state, guaranteeing freedom of worship for Catholics, and the right of the church to appoint their own clergy. Catholics in Germany are pleased, as are their representatives in the Center Party.
