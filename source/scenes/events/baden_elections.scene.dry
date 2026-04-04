@@ -31,7 +31,7 @@ for (var c of Q.classes) {
 Q.adjustmentFactors_kpd_baden = 0.62;
 Q.adjustmentFactors_spd_baden = 0.73;
 Q.adjustmentFactors_ddp_baden = 1.39;
-Q.adjustmentFactors_z_in_baden = 2.85;
+Q.adjustmentFactors_z_baden = 2.85;
 Q.adjustmentFactors_dvp_baden = 0.93;
 Q.adjustmentFactors_kvp_baden = 0.84;
 Q.adjustmentFactors_dnvp_baden = 0.75;
@@ -285,7 +285,7 @@ Weimar Coalition (<span style="color: #E3000F;">**SPD**</span> + <span style="co
 
 Grand Coalition (<span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span> ?] + <span style="color: #C0A054;">**[+ dvp_name +]**</span>): [+ grand_coalition_baden +]%
 
-Bourgeois Coalition (<span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span> ?] + <span style="color: #C0A054;"**[+ dvp_name +]**</span> [? if kvp_formed: + <span style="color: #455B95;">**KVP**</span>?] + <span style="color: #909090;">**Others**</span>): [+ bourgeois_coalition_baden +]%
+Bourgeois Coalition (<span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span> ?] + <span style="color: #C0A054;">**[+ dvp_name +]**</span> [? if kvp_formed: + <span style="color: #455B95;">**KVP**</span>?] + <span style="color: #909090;">**Others**</span>): [+ bourgeois_coalition_baden +]%
 
 Far-Right Coalition (<span style="color: #954B00;">**NSDAP**</span> + [? if dnvp_ideology = "Radical": <span style="color: #3F7BC1;">**DNVP**</span>?][? if dnf_formed: <span style="color: #003755;">**DNF**</span>?]): [+ far_right_coalition_baden +]%
 
