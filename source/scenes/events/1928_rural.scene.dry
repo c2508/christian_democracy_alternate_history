@@ -101,7 +101,7 @@ We shall see if the farmers are satisfied with these concessions.
 @drop_agri_minister
 title: Have a <span style="color: #000000;">**Center Party**</span> or <span style="color: #3E88B3;">**DNVP**</span> politician as Agriculture Minister in the next cabinet 
 subtitle: Drop this concession
-tags: demands
+tags: drop_demands
 choose-if: agri_minister = 1
 view-if: agri_minister = 1
 on-arrival: rpm_points -= 2; agri_minister -= 1
@@ -113,7 +113,7 @@ We have decided to drop this concession.
 title: Fund the <span style="color: #000000;">**Center Party**</span> aligned Association of German Farmers’ Association <span style="color: #000000;">**(VdB)**</span> for more low interest loans 
 subtitle: Drop this concession +2 resources
 choose-if: fund = 1
-tags: demands
+tags: drop_demands
 view-if: fund = 1
 on-arrival: rpm_points -= 3; fund -= 1; resources += 2;
 go-to: ministries
@@ -123,7 +123,7 @@ We have decided to drop this concession.
 @drop_coop
 title: Support agricultural cooperatives
 subtitle: Drop this concession +1 budget
-tags: demands
+tags: drop_demands
 choose-if: coop = 1
 view-if: coop = 1
 on-arrival: rpm_points -= 3; coop -= 1; budget += 1;
@@ -134,7 +134,7 @@ We have decided to drop this concession.
 @drop_trade_war
 title: Prolong the trade war with Poland until at least 1932 
 subtitle: Drop this concession
-tags: demands
+tags: drop_demands
 choose-if: trade_war = 1
 view-if: trade_war = 1
 on-arrival: rpm_points -= 3; trade_war -= 1
@@ -145,7 +145,7 @@ We have decided to drop this concession.
 @drop_foreclosure
 title: Impose a rent moratorium and postpone the foreclosure of insolvent farms
 subtitle: Drop this concession +2 budget
-tags: demands
+tags: drop_demands
 choose-if: tax_breaks = 1 and budget >= 2
 view-if: tax_breaks = 1
 on-arrival: rpm_points -= 5; tax_breaks -= 1; budget += 2;
