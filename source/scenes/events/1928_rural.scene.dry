@@ -78,14 +78,14 @@ go-to: ministries
 
 We shall continue the trade war with Poland. 
 
-@tax_breaks
+@foreclosure
 title: Impose a rent moratorium and postpone the foreclosure of insolvent farms
 subtitle: -2 budget
 unavailable-subtitle: Not enough budget.
 tags: demands
 choose-if: tax_breaks = 0 and budget >= 2
 view-if: tax_breaks = 0
-on-arrival: rpm_points += 5; tax_breaks += 1; budget -= 1;
+on-arrival: rpm_points += 5; tax_breaks += 1; budget -= 2;
 go-to: ministries
 
 This will relieve the financial burden of the farmers.
