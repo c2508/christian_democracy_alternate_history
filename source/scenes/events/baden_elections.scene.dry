@@ -116,7 +116,7 @@ Q.grand_coalition_baden = parseFloat((Q.spd_baden + Q.ddp_baden + Q.z_baden + Q.
 Q.social_catholic_coalition_baden = parseFloat((Q.spd_baden + Q.z_baden).toFixed(1));
 
 Q.bourgeois_coalition_baden = parseFloat((Q.ddp_baden + Q.z_baden + Q.dvp_baden + Q.other_baden + Q.kvp_baden).toFixed(1));
-
+Q.bourgeoise_coalition_baden = parseFloat((Q.z_baden + Q.dvp_baden).toFixed(1));
 if (Q.dnvp_ideology === "Radical") Q.far_right_coalition_baden = parseFloat((Q.dnvp_baden + Q.nsdap_baden).toFixed(1));
 if (Q.dnf_formed) Q.far_right_coalition_baden = parseFloat((Q.dnf_baden + Q.nsdap_baden).toFixed(1));
 
@@ -135,6 +135,8 @@ if (Q.in_z_majority_baden) {
     Q.was_in_grand_coalition_baden = 1
 } else if (Q.in_bourgeois_coalition_baden) {
     Q.was_in_bourgeois_coalition_baden = 1
+} else if (Q.in_bourgeoise_coalition_baden) {
+    Q.was_in_bourgeoise_coalition_baden = 1
 } else if (Q.in_far_right_coalition_baden) {
     Q.was_in_far_right_coalition_baden = 1
 }
@@ -146,6 +148,7 @@ Q.in_z_majority_baden = 0;
 Q.in_weimar_coalition_baden = 0;
 Q.in_grand_coalition_baden = 0;
 Q.in_bourgeois_coalition_baden = 0;
+Q.in_bourgeoise_coalition_baden = 0;
 Q.in_far_right_coalition_baden = 0;
 !}
 on-display: {!
@@ -285,6 +288,8 @@ Weimar Coalition (<span style="color: #E3000F;">**SPD**</span> + <span style="co
 
 Grand Coalition (<span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span> ?] + <span style="color: #C0A054;">**[+ dvp_name +]**</span>): [+ grand_coalition_baden +]%
 
+Bourgeois Coalition (<span style="color: #000000;">**Z**</span> + <span style="color: #C0A054;">**[+ dvp_name +]**</span>): [+ bourgeoise_coalition_baden +]%
+
 Bourgeois Coalition (<span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span> ?] + <span style="color: #C0A054;">**[+ dvp_name +]**</span> [? if kvp_formed: + <span style="color: #455B95;">**KVP**</span>?] + <span style="color: #909090;">**Others**</span>): [+ bourgeois_coalition_baden +]%
 
 Far-Right Coalition (<span style="color: #954B00;">**NSDAP**</span> + [? if dnvp_ideology = "Radical": <span style="color: #3F7BC1;">**DNVP**</span>?][? if dnf_formed: <span style="color: #003755;">**DNF**</span>?]): [+ far_right_coalition_baden +]%
@@ -298,6 +303,7 @@ There are some potential coalition arrangements.
 - @weimar_coalition_baden
 - @grand_coalition_baden
 - @bourgeois_coalition_baden
+- @bourgeoise_coalition_baden
 - @far_right_coalition_baden
 - @no_majority
 
@@ -336,6 +342,16 @@ title: We can form a Bourgeois Coalition.
 view-if: bourgeois_coalition_baden >= 50
 subtitle: <span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span> ?] + <span style="color: #C0A054;"**[+ dvp_name +]**</span> [? if kvp_formed: + <span style="color: #455B95;">**KVP**</span>?][? if cnblp_exist: + <span style="color: #006400;">**WBWB**</span>?][? if csvd_exist: + <span style="color: #8ED8E4;">**CSVD**</span>?][? if csrp_exist: + <span style="color: #FF6B21;">**CSRP**</span>?][? if aspd_exist and aspd_ideology = "Moderate": + <span style="color: #FE9E00;">**ASPD**</span>?] + <span style="color: #909090;">**Others**</span> ([+ bourgeois_coalition_baden +]%)
 on-arrival: in_bourgeois_coalition_baden = 1; z_in_baden = 1;
+
+A Bourgeois Coalition is formed.
+
+- @baden_sp
+
+@bourgeoise_coalition_baden
+title: We can form a Bourgeois Coalition.
+view-if: bourgeoise_coalition_baden >= 50
+subtitle: <span style="color: #000000;">**Z**</span> + <span style="color: #C0A054;"**[+ dvp_name +]**</span> ([+ bourgeoise_coalition_baden +]%)
+on-arrival: in_bourgeoise_coalition_baden = 1; z_in_baden = 1;
 
 A Bourgeois Coalition is formed.
 
