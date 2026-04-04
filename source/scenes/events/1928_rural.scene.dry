@@ -98,58 +98,57 @@ tags: demands
 
 We shall see if the farmers are satisfied with these concessions.
 
-@drop_labor
-title: Drop the Labor Ministry.
-view-if: labor_minister_party = "Z"
-on-arrival: labor_minister_party = "SPD"; labor_minister = "Wissel"; leverage += 5; justice_minister_party = "DNVP" if in_right_coalition or in_center_right_coalition; justice_minister = "Lambach" if in_right_coalition or in_center_right_coalition
-tags: drop_demands
+@drop_agri_minister
+title: Have a <span style="color: #000000;">**Center Party**</span> or <span style="color: #3E88B3;">**DNVP**</span> politician as Agriculture Minister in the next cabinet 
+subtitle: Drop this concession
+tags: demands
+choose-if: agri_minister = 1
+view-if: agri_minister = 1
+on-arrival: rpm_points -= 2; agri_minister -= 1
 go-to: ministries
 
-@drop_interior
-title: Drop the Interior Ministry.
-view-if: interior_minister_party = "Z"
-on-arrival: interior_minister_party = "SPD"; interior_minister = "Severing"; leverage += 5; justice_minister_party = "DNVP" if in_right_coalition or in_center_right_coalition; justice_minister = "Keudall" if in_right_coalition or in_center_right_coalition
-tags: drop_demands
+We have decided to drop this concession.
+
+@drop_fund
+title: Fund the <span style="color: #000000;">**Center Party**</span> aligned Association of German Farmers’ Association <span style="color: #000000;">**(VdB)**</span> for more low interest loans 
+subtitle: Drop this concession +2 resources
+choose-if: fund = 1
+tags: demands
+view-if: fund = 1
+on-arrival: rpm_points -= 3; fund -= 1; resources += 2;
 go-to: ministries
 
-@drop_finance
-title: Drop the Finance Ministry.
-view-if: finance_minister_party = "Z"
-on-arrival: finance_minister_party = "DVP"; finance_minister = "Moldenhauer"; leverage += 10; finance_minister_party = "SPD" if in_weimar_coalition or in_popular_front; finance_minister = "Hilferding" if in_weimar_coalition or in_popular_front
-tags: drop_demands
+We have decided to drop this concession.
+
+@drop_coop
+title: Support agricultural cooperatives
+subtitle: Drop this concession +1 budget
+tags: demands
+choose-if: coop = 1
+view-if: coop = 1
+on-arrival: rpm_points -= 3; coop -= 1; budget += 1;
 go-to: ministries
 
-@drop_economic
-title: Drop the Economic Ministry.
-view-if: economic_minister_party = "Z"
-on-arrival: economic_minister_party = "DVP"; economic_minister = "Curtius"; leverage += 10; economic_minister_party = ddp_name if in_weimar_coalition or in_popular_front; economic_minister = "Dietrich" if in_weimar_coalition or in_popular_front;
-tags: drop_demands
+We have decided to drop this concession.
+
+@trade_war
+title: Prolong the trade war with Poland until at least 1932 
+subtitle: Drop this concession
+tags: demands
+choose-if: trade_war = 1
+view-if: trade_war = 1
+on-arrival: rpm_points -= 4; trade_war -= 1
 go-to: ministries
 
-@drop_justice
-title: Drop the Justice Ministry.
-view-if: justice_minister_party = "Z"
-on-arrival: justice_minister_party = ddp_name; justice_minister = "Koch-Weser"; leverage += 10; justice_minister_party = "DNVP" if in_right_coalition or in_center_right_coalition; justice_minister = "Hergt" if in_weimar_coalition or in_center_right_coalition
-tags: drop_demands
+We have decided to drop this concession.
+
+@tax_breaks
+title: Fund agriculture credits for more farm machinery 
+subtitle: Drop this concession +2 budget
+tags: demands
+choose-if: tax_breaks = 1 and budget >= 2
+view-if: tax_breaks = 1
+on-arrival: rpm_points -= 5; tax_breaks -= 1; budget += 2;
 go-to: ministries
 
-@drop_foreign
-title: Drop the Foreign Ministry.
-view-if: foreign_minister_party = "Z"
-on-arrival: foreign_minister_party = "DVP"; foreign_minister = "Stresemann"; foreign_minister = "Curtius" if streseman_dead; leverage += 10; foreign_minister_party = "SPD" if in_weimar_coalition or in_popular_front; foreign_minister = "Breitscheid" if in_weimar_coalition or in_popular_front;
-tags: drop_demands
-go-to: ministries
-
-@drop_agriculture
-title: Drop the Agriculture Ministry.
-view-if: agriculture_minister_party = "Z"
-on-arrival: agriculture_minister_party = ddp_name; agriculture_minister = "Dietrich"; leverage += 10; agriculture_minister_party = "DNVP" if in_right_coalition or in_center_right_coalition; agriculture_minister = "Schiele" if in_weimar_coalition or in_center_right_coalition
-tags: drop_demands
-go-to: ministries
-
-@drop_reichswehr
-title: Drop the Reichswehr Ministry.
-view-if: reichswehr_minister_party = "Z"
-on-arrival: reichswehr_minister_party = "I"; reichswehr_minister = "Groener"; leverage += 15;
-tags: drop_demands
-go-to: ministries
+We have decided to drop this concession.
