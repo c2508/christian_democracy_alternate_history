@@ -94,7 +94,7 @@ This will relieve the financial burden of the farmers.
 title: No more concessions
 subtitle: We shall not make any more concessions
 tags: demands
-go-to: high if (rpm_points > 9); low if (rpm_points < 3); medium if (dnvp_points > 2 and < 10 )
+go-to: high if (rpm_points > 9); low if (rpm_points < 3); medium if (rpm_points > 2 and < 10 )
 
 We shall see if the farmers are satisfied with these concessions.
 
@@ -152,9 +152,6 @@ on-arrival: rpm_points -= 5; tax_breaks -= 1; budget += 2;
 go-to: ministries
 
 We have decided to drop this concession.
-
-@resultsdnvp
-go-to: hergt if (dnvp_points > 3); hugenberg if (dnvp_points < 3); compromise if (dnvp_points = 3)
 
 
 @low
