@@ -17,7 +17,7 @@ However, our socially heterogeneous base might not take kindly to such cooperati
 - @reject: Surprisingly, we have rejected the overtures from the <span style="color: #c00000;">**SPD**</span>.
 
 @endorse
-view-if z_party_leader = "Joos" or z_party_leader = "Kaas"
+view-if: z_party_leader = "Joos" or z_party_leader = "Kaas"
 on-arrival: pro_republic += 5; spd_right += 1; spd_relation += 5; ddp_relation += 3; ddp_left += 1; z_new_middle += 3; z_catholics += 3; nsdap_workers -= 3; kpd_workers += 2; nsdap_rural -= 2; z_dominance += 5; right_dissent += 6; endorse_seen += 1; rb_strength += 700; rb_militancy += 0.15; z_endorse_rb += 1
 
 blah blah ble blah blah bloo
