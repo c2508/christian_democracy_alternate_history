@@ -2,7 +2,7 @@ title: The <span style="color: #000000;">**Center**</span> and the Reichbanner
 new-page: true
 subtitle: A new era of cooperation between the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> coalition parties?
 tags: event
-view-if: year > 1930 and z_party_leader = !"Stegerwald" and left_strength > right_strength and left_strength > 30 and pro_republic < 60 and spd_relations > 55 and z_rb = 1 and nazi_r > 15 and unemployment > 15 and endorse_seen = 0 and right_strength > 10 and green_front < 1
+view-if: year > 1930 and !Q.z_party_leader = "Stegerwald" and left_strength > right_strength and left_strength > 30 and pro_republic < 60 and spd_relations > 55 and z_rb = 1 and nazi_r > 15 and unemployment > 15 and endorse_seen = 0 and right_strength > 10 and green_front < 1
 max-visits: 1
 face-image: img/redfront.jpg
 
