@@ -40,7 +40,7 @@ if (Q.ideology && Q.ideology != "left_labor") {
 go-to: changed if changed = 1
 on-departure: ideology = "left_labor"; left_labor_strength += 10; left_labor_dissent -= 5; spd_relation += 3; dnvp_relation -= 3; ddp_relation += 1;
 
-The Left Labor wing of our party has strong ties with the <span style="color: #c00000;">**SPD**</span> and supports the republic.
+The left labor wing of our party has strong ties with the <span style="color: #c00000;">**SPD**</span> and supports the republic.
 @centrist
 on-arrival: {!
 if (Q.ideology && Q.ideology != "centrist") {
@@ -61,7 +61,7 @@ if (Q.ideology && Q.ideology != "right_labor") {
 go-to: changed if changed = 1
 on-departure: ideology = "right_labor"; right_labor_strength += 10; peoples_party_support += 1; right_labor_dissent -= 5; spd_relation -= 3
 
-The Right Labor wing of the party supports continued participation in government in order to provide benefits to the workers, but detests <span style="color: #c00000;">socialism</span> and would prefer to work with the <span style="color: #3E88B3;">**conservative**</span> right.
+The right labor wing of the party supports continued participation in government in order to provide benefits to the workers, but detests <span style="color: #c00000;">socialism</span> and would prefer to work with the <span style="color: #3E88B3;">**conservative**</span> right.
 
 @right
 on-arrival: {!
@@ -72,7 +72,7 @@ if (Q.ideology && Q.ideology != "right") {
 go-to: changed if changed = 1
 on-departure: ideology = "right"; right_strength += 10; right_dissent -= 5; dnvp_relation += 5; dvp_relation += 5; spd_relation -= 8; moderate_plan_support += 1
 
-Represented by bourgeouisie aristocrats and agrarian interests, the Right wing of the party is skeptical of parlimentary democracy.
+Represented by bourgeoisie aristocrats and agrarian interests, the right wing of the party is skeptical of parlimentary democracy.
 
 @changed
 on-arrival: left_dissent += 5; left_labor_dissent += 5; center_dissent += 5; right_labor_dissent += 5; right_dissent += 5
