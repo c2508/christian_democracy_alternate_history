@@ -10,6 +10,8 @@ set-jump: new_elections
 
 The Württemberg elections are to be held now.
 
+- @new_elections: May we do our best...
+
 @new_elections
 on-arrival: {!
 for (var c of Q.classes) {
