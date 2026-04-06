@@ -1,35 +1,32 @@
 
-title: The <span style="color: #000000;">**Center Party**</span> and the Reichbanner
+title: The <span style="color: #000000;">**Center**</span> and the Reichbanner
 new-page: true
 subtitle: A new era of cooperation between the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> coalition parties?
 tags: event
-view-if: year > 1930 and z_party_leader = "Joos" and left_strength > right_strength and left_strength > 30 and pro_republic < 70 and spd_relations > 55 and z_rb = 1 and nazi_r > 15 and unemployment > 15
+view-if: year > 1930 and !z_party_leader = "Stegerwald" and left_strength > right_strength and left_strength > 30 and pro_republic < 60 and spd_relations > 55 and z_rb = 1 and nazi_r > 15 and unemployment > 15 and endorse_seen = 0 and right_strength > 10 and green_front < 1
 max-visits: 1
 face-image: img/redfront.jpg
 
 =  The <span style="color: #000000;">**Center Party**</span> and the Reichbanner
   
 Since the founding of the Reichbanner in 1926, it has mostly been dominated by politicians from the <span style="color: #c00000;">**SPD**</span>, with a bulk of its membership being <span style="color: #c00000;">socialist</span> workers.
-Meanwhile, the reaction of the <span style="color: #000000;">**Center Party**</span> has been lukewarm to say the least, with only ardent republicans from the left of our party like Wirth and Joos being involved in the affairs of the Reichbanner.
-In light of the increasingly volatile political landscape and the <span style="color: #000000;">**Center Party**</span>'s swing to the left in recent times, there has been growing pressure from the left of the party of officially affiliate the <span style="color: #000000;">**Center Party**</span> with the Reichabnner.
+However, with the fear of the Reichbanner "diluting religious fervour" and the strong disapproval from the clerics, the reaction of the <span style="color: #000000;">**Center**</span> has been lukewarm to say the least. Despite nominal membership from ccentrists like Marx and Kohler, enthusiasm for the Reichbanner exists solely amidst ardent republicans such as Joos or Wirth. 
+In light of the increasingly volatile political landscape and rise of the miltant <span style="color: #7A3C00;">**SA**</span>, there has been growing pressure from the left of the party of officially affiliate the <span style="color: #000000;">**Center**</span> with the Reichabnner.
 However, our socially heterogeneous base might not take kindly to such cooperation with the <span style="color: #c00000;">socialists</span>. Now, as German democracy is under siege, how will we respond to the <span style="color: #c00000;">**SPD**</span>'s overtures?
 
-- @endorse: The <span style="color: #000000;">**Center Party**</span> officially affliates itself with the Reichbanner.
-- @endorse_ddp: The <span style="color: #000000;">**Center Party**</span> officially affliates itself with the Reichbanner and the <span style="color: #D3C24D;">**DDP**</span> is persuaded to do so too.
+- @endorse: The <span style="color: #000000;">**Center**</span> officially affliates itself with the Reichbanner.
 - @reject: Surprisingly, we have rejected the overtures from the <span style="color: #c00000;">**SPD**</span>.
 
 @endorse
-on-arrival: workers_nsdap -= 2; new_middle_nsdap -= 2; old_middle_nsdap -= 2; catholics_nsdap -= 2
+on-arrival: pro_republic += 5; spd_right += 1; spd_relation += 5; ddp_relation += 3; ddp_left += 1; z_new_middle += 3; z_catholics += 3; nsdap_workers -= 3; kpd_workers += 2; nsdap_rural -= 2; z_dominance += 5; right_dissent += 6; endorse_seen += 1; rb_strength += 700; rb_militancy += 0.15
 
-The organization’s main effort is to steer people away from the allure of the <span style="color: #7A3C00;">Nazis</span> and expose the contradictions and demagoguery inherent in their politics.
+blah blah ble blah blah bloo
 
-@endorse_ddp
-view-if: ddp_relation > 65 and pro_republic < 50 and ddp_left > ddp_right 
-on-arrival: workers_nsdap -= 2; new_middle_nsdap -= 2; old_middle_nsdap -= 2; catholics_nsdap -= 2
-
-The organization’s main effort is to steer people away from the allure of the <span style="color: #7A3C00;">Nazis</span> and expose the contradictions and demagoguery inherent in their politics.
-  
 @reject
-on-arrival: workers_nsdap -= 2; new_middle_nsdap -= 2; old_middle_nsdap -= 2; catholics_nsdap -= 2
+view-if: z_party_leader = "Kaas"
+on-arrival: pro_republic -= 5; spd_left += 1; spd_relation -= 5; ddp_relation -= 3; left_dissent += 5; left_labor_dissent += 3; z_workers -= 3; z_new_middle -= 2; nsdap_workers += 3; nsdap_catholics += 1; endorse_seen += 1; ddp_right += 1; rb_strength -= 300; 
 
-The organization’s main effort is to steer people away from the allure of the <span style="color: #7A3C00;">Nazis</span> and expose the contradictions and demagoguery inherent in their politics.
+Despite the our friendly relations with the <span style="color: #c00000;">**SPD**</span>, our party has decided to rebuff the overtures of the <span style="color: #c00000;">**SPD**</span>, with this direct repudiation of the Reichbanner causing some from our party to leave. While the Christian Left in the party question our commitment to the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> system, the Windhorostbund is furious at our inactivity in the face of the growing strength of the <span style="color: #7A3C00;">**NSDAP**</span>.
+Meanwhile, Catholic <span style="color: #3E88B3;">conservatives</span>are pleased with our commitment to being a party of the center, but others question how we have let cooperation with the <span style="color: #c00000;">**SPD**</span> come this far. 
+
+ 
