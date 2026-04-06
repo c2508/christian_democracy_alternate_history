@@ -43,7 +43,7 @@ unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1
 go-to: dvp_stresemann if stresemann_dead = 0; dvp_loss if stresemann_dead = 1 and year <= 1930; dvp_moribund if year > 1930
 
-The [+ ddp_name +] has been one of our closest allies through the course of the Republic.
+The <span style="color: #C0A054;">**DVP**</span> has been one of our closest allies through the course of the Republic.
 
 @dvp_stresemann
 on-arrival: dvp_relation += 8*(1 - dissent)
