@@ -351,7 +351,7 @@ go-to: coalition_menu
 
 **Potential coalitions:**
 
-Weimar Coalition (<span style="color: #E3000F;">SPD</span> + <span style="color: #000000;">Z</span> [? if ddp_exist: + <span style="color: #DCCA4A;">[+ ddp_name +]</span>?] [? if lvp_formed: + <span style="color: var(--dvp-color);">[+ dvp_name +]</span>?]): [+ weimar_coalition_wurttemberg +]%
+Weimar Coalition (<span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span>?] [? if lvp_formed: + <span style="color: var(--dvp-color);">[+ dvp_name +]</span>?]): [+ weimar_coalition_wurttemberg +]%
 
 Grand Coalition (<span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span> ?] + <span style="color: var(--dvp-color);">**[+ dvp_name +]**): [+ grand_coalition_wurttemberg +]%
 
@@ -372,7 +372,7 @@ There are some potential coalition arrangements.
 
 @weimar_coalition_wurttemberg
 title: We can form a Weimar Coalition.
-subtitle: Weimar Coalition (<span style="color: #E3000F;">SPD</span> + <span style="color: #000000;">Z</span> [? if ddp_exist: + <span style="color: #DCCA4A;">[+ ddp_name +]</span>?] [? if lvp_formed: + <span style="color: var(--dvp-color);">[+ dvp_name +]</span>?]): [+ weimar_coalition_wurttemberg +]%
+subtitle: (<span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span>?] [? if lvp_formed: + <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span>?]): [+ weimar_coalition_wurttemberg +]%
 on-arrival: in_weimar_coalition_wurttemberg = 1; z_wurttemberg = 1;
 
 There are enough votes for a majority Weimar Coalition of the <span style="color: #000000;">**Center**</span>, <span style="color: #E3000F;">**SPD**</span> and [? if not lvp_formed and not nfvp_formed: <span style="color: #DCCA4A;">**[+ ddp_name +]**</span>?][? if lvp_formed or nfvp_formed: <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span>?].
