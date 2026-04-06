@@ -1281,7 +1281,7 @@ view-if: labor_minister_party != "Z"
 on-arrival: leverage -= 5; labor_minister_party = "Z"; labor_minister = "Stegerwald"
 go-to: ministries
 
-Adam Stegerwald of the Center Party has been appointed labor minister.
+Adam Stegerwald of the <span style="color: #000000;">**Center Party**</span> has been appointed labor minister.
 
 @interior
 title: Interior Ministry
@@ -1293,7 +1293,7 @@ view-if: interior_minister_party != "Z"
 on-arrival: leverage -= 5; interior_minister_party = "Z"; interior_minister = "Wirth"
 go-to: ministries
 
-Joseph Wirth of the Center Party has been appointed Interior Minister.
+Joseph Wirth of the <span style="color: #000000;">**Center Party**</span>  has been appointed Interior Minister.
 
 @finance
 title: Finance Ministry
@@ -1305,7 +1305,7 @@ view-if: finance_minister_party != "Z"
 on-arrival: leverage -= 10; finance_minister_party = "Z"; finance_minister = "Kohler"
 go-to: ministries
 
-Heinrich Kohler of the Center Party has been appointed Finance Minister.
+Heinrich Kohler of the <span style="color: #000000;">**Center Party**</span> has been appointed Finance Minister.
 
 @economic
 title: Economic Ministry
@@ -1317,7 +1317,7 @@ view-if: economic_minister_party != "Z"
 on-arrival: leverage -= 10; economic_minister_party = "Z"; economic_minister = "Bruning"
 go-to: ministries
 
-Heinrich Bruning of the Center Party has been appointed Economic Minister.
+Heinrich Bruning of the <span style="color: #000000;">**Center Party**</span>  has been appointed Economic Minister.
 
 @justice
 title: Justice Ministry
@@ -1329,11 +1329,11 @@ view-if: justice_minister_party != "Z"
 on-arrival: leverage -= 10; justice_minister_party = "Z"; justice_minister = "Guerard"
 go-to: ministries
 
-Theodor von Guerard of the Center Party has been appointed Justice Minister.
+Theodor von Guerard of the <span style="color: #000000;">**Center Party**</span>  has been appointed Justice Minister.
 
 @foreign
 title: Foreign Ministry
-subtitle: This is usually the domain of Gustav Stresemann of the DVP.
+subtitle: This is usually the domain of Gustav Stresemann of the <span style="color: #C0A054;">**DVP**</span>.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 10 
@@ -1341,7 +1341,7 @@ view-if: foreign_minister_party != "Z"
 on-arrival: leverage -= 10; foreign_minister_party = "Z"; foreign_minister = "Bruning"
 go-to: ministries
 
-Heinrich Bruning of the Center Party has been appointed Foreign Minister.
+Heinrich Bruning of the <span style="color: #000000;">**Center Party**</span>  has been appointed Foreign Minister.
 
 
 @agriculture
@@ -1354,7 +1354,7 @@ on-arrival: leverage -= 10; agriculture_minister_party = "Z"; agriculture_minist
 go-to: ministries
 tags: mins_1928
 
-Andreas Hermes of the Center Party has been appointed Agriculture Minister.
+Andreas Hermes of the <span style="color: #000000;">**Center Party**</span>  has been appointed Agriculture Minister.
 
 @reichswehr
 title: Reichswehr Ministry
