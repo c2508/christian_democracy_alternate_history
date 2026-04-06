@@ -556,7 +556,7 @@ subtitle: Z + BVP + DVP + DNVP + Others ([+ right_coalition +]%)
 view-if: right_coalition >= 50
 on arrival: in_right_coalition = 1
 
-There are enough votes for a right-wing coalition of the Center (+ BVP), DVP, DNVP, and minor conservative parties. 
+There are enough votes for a right-wing coalition of the <span style="color: #000000;">**Center**</span>  (+ <span style="color: #A2D8E0;">**BVP**</span>), <span style="color: #C0A054;">**DVP**</span>, <span style="color: #3E88B3;">**DNVP**</span>, and <span style="color: #808080;">**minor conservative parties**</span>.
 
 Who should be the chancellor?
 
@@ -567,7 +567,7 @@ Who should be the chancellor?
 
 @luther
 title: Hans Luther for Chancellor
-subtitle: Hans Luther is a moderate DVP member and is our preferred candidate for Chancellor.
+subtitle: Hans Luther is a moderate <span style="color: #C0A054;">**DVP**</span> member and is our preferred candidate for Chancellor.
 on-arrival: spd_in_government = 0; chancellor = "Luther"; chancellor_party = "DVP";
 go-to: ministries
 
@@ -575,7 +575,7 @@ Hans Luther's appointment as chancellor is approved by all our potential allies.
 
 @scholz
 title: Ernst Scholz for Chancellor
-subtitle: Ernst Scholz sits on the right wing of the DVP and is the preferred candidate of President Hindenburg.
+subtitle: Ernst Scholz sits on the right wing of the <span style="color: #C0A054;">**DVP**</span> and is the preferred candidate of President <span style="color: #808080;">Hindenburg</span>.
 on-arrival: spd_in_government = 0; chancellor = "Scholz"; chancellor_party = "DVP";
 go-to: ministries
 
@@ -583,7 +583,7 @@ Ernst Scholz's appointment as chancellor is approved by our potential allies.
 
 @treviranus
 title: Gottfried Treviranus for Chancellor
-subtitle: Gottfried Treviranus is part of Young Conservative Wing and is an acceptable candidate for Chancellor.
+subtitle: Gottfried Treviranus is part of Young Conservative Wing of the <span style="color: #3E88B3;">**DNVP**</span> and is an acceptable candidate for Chancellor.
 on-arrival: spd_in_government = 0; chancellor = "Treviranus"; chancellor_party = "DNVP";
 go-to: ministries
 
