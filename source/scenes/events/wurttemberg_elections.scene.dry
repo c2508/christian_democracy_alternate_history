@@ -5,12 +5,6 @@ tags: event
 priority: 3
 on-arrival: next_election_year_wurttemberg = next_election_year_wurttemberg + 4; next_election_time_wurttemberg = time + 48; was_dvp_wurttemberg = 0; was_in_dvp_majority_wurttemberg = 0; was_in_weimar_coalition_wurttemberg = 0; was_in_grand_coalition_wurttemberg = 0; was_in_bourgeois_coalition_wurttemberg = 0; was_in_far_right_coalition_wurttemberg = 0;
 set-jump: new_elections
-# Updated contents of wurttemberg_elections.scene.dry file
-
-= Württemberg Elections, [+ month : month +] [+ year +]
-In this update, the formatting of conditional blocks has been fixed. Each consecutive conditional block now has a space separating them: `[...] [...]`. 
-
-**Revised Lines:**
 
 @new_elections
 on-arrival: {!
@@ -362,6 +356,9 @@ Bourgeois Coalition (<span style="color: #000000;">**Z**</span> [? if ddp_exist:
 Far-Right Coalition (<span style="color: #954B00;">**NSDAP**</span> + [? if dnvp_ideology = "Radical": <span style="color: #3F7BC1;">**DNVP**</span>?][? if dnf_formed: <span style="color: #003755;">**DNF**</span>?]): [+ far_right_coalition_wurttemberg +]%
 
 There are some potential coalition arrangements.
+
+console.log(range.content);
+assert(range.content[1]?.type === 'magic');
 
 @coalition_menu
 
