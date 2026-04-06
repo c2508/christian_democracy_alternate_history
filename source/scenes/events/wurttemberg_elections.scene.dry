@@ -324,8 +324,6 @@ go-to: coalition_menu
 
 [? if ddp_exist: {!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} [+ ddp_name +]: {!</td><td>!} [+ ddp_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_ddp_wurttemberg +] {!</td><td>!} [+ ddp_wl +]% {!</td><td>!} [+ change_ddp_wl +] {!</td></tr>!} ?]
 
-[? if csrp_exist: {!<tr><td><div class="box" style='background-color:#FF6B21'> </div> !} CSRP: {!</td><td>!} [+ csrp_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_csrp_wurttemberg +] {!</td><td>!} [+ csrp_wl +]% {!</td><td>!} [+ change_csrp_wl +] {!</td></tr>!} ?]
-
 {!<tr><td><div class="box" style='background-color:#000'> </div> !} Z: {!</td><td>!} [+ z_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_z_wurttemberg +] {!</td><td>!} [+ z_wl +]% {!</td><td>!} [+ change_z_wl +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#C0A054'> </div> !} DVP: {!</td><td>!} [+ dvp_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_dvp_wurttemberg +] {!</td><td>!} [+ dvp_wl +]% {!</td><td>!} [+ change_dvp_wl +] {!</td></tr>!}
@@ -356,9 +354,6 @@ Bourgeois Coalition (<span style="color: #000000;">**Z**</span> [? if ddp_exist:
 Far-Right Coalition (<span style="color: #954B00;">**NSDAP**</span> + [? if dnvp_ideology = "Radical": <span style="color: #3F7BC1;">**DNVP**</span>?][? if dnf_formed: <span style="color: #003755;">**DNF**</span>?]): [+ far_right_coalition_wurttemberg +]%
 
 There are some potential coalition arrangements.
-
-console.log(range.content);
-assert(range.content[1]?.type === 'magic');
 
 @coalition_menu
 
