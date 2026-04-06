@@ -15,6 +15,7 @@ The party is being torn apart by internal dissent. Upset at the leadership and g
 
 [? if right_dissent > 45 : The right is upset at our direction.  ?]
 [? if center_dissent > 45 : The centrists are displeased with the direction of our party. ?]
+[? if left_dissent > 45 : The left is upset at our direction. ?]
 [? if left_labor_dissent > 45 : The Catholic Workers Associations disagree with our present course of action. ?]
 [? if right_labor_dissent > 45: The Christian trade unions disagree with our present course of action. ?]
 [? if young_conservatives_dissent > 45 and young_conservatives = 1 : The young conservatives are in disagreement about our political direction. ?]
@@ -82,20 +83,4 @@ on-arrival: right_labor_dissent += 1; left_labor_dissent += 1; left_dissent += 1
 
 Let the factions bicker; perhaps dissent is healthy for the party.
 
-# TODO: should we be allowed to preemptively expel factions?
 
-@expel_reformists
-title: Expel the dissident reformists.
-view-if: reformist_dissent > 30
-
-@expel_left
-title: Expel the dissident leftists.
-view-if: left_dissent > 30
-
-@expel_center
-title: Expel the centrists.
-view-if: center_dissent > 30
-
-@expel_labor
-title: Expel the labor supporters.
-view-if: labor_dissent > 30
