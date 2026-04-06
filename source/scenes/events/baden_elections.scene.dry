@@ -372,7 +372,8 @@ title: We can rule alone!
 view-if: z_baden >= 50
 subtitle: <span style="color: #000000;">**Z**</span> ([+ z_baden +]%)
 on-arrival: in_z_majority_baden = 1; z_in_baden = 1;
-A <span style="color: #000000;">**Center Party**</span>  majority government is formed.
+
+A <span style="color: #000000;">**Center Party**</span> majority government is formed.
 
 - @baden_sp
 
