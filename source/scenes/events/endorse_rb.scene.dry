@@ -2,7 +2,7 @@ title: The <span style="color: #000000;">**Center**</span> and the <span style="
 new-page: true
 subtitle: A new era of cooperation between the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> coalition parties?
 tags: event
-view-if: year = 1930 and month = 1
+view-if: year = 1929 and month = 1
 max-visits: 1
 face-image: img/redfront.jpg
 
