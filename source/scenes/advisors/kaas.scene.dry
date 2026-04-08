@@ -1,10 +1,10 @@
 title: Ludwig Kaas
 is-pinned-card: true
 tags: advisor, right
-card-image: img/portraits/KaasLudwig.jpg
+card-image: img/portraits/KaasLudwig.webp
 view-if: kaas_advisor = 1
 new-page: true
-#face-image: img/portraits/KaasLudwig.jpg
+#face-image: img/portraits/KaasLudwig.webp
 
 = Ludwig Kaas
 
