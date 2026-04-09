@@ -29,15 +29,15 @@ title: Cooperation with the <span style="color: #c00000;">**SPD**</span>
 subtitle: Push the party to be more friendly towards the <span style="color: #c00000;">**SPD**</span>.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer = 0
-on-arrival: advisor_action_timer = 6; left_labor_strength += 5; spd_relation += 5*(1-dissent); right_dissent += 5; right_labor_dissent +=3; left_labor_dissent -= 1
+on-arrival: advisor_action_timer = 6; left_strength += 5; spd_relation += 5*(1-dissent); right_dissent += 5; right_labor_dissent += 3; left_labor_dissent -= 1
 
-Wirth was in the SPD before and is able to use his close ties with <span style="color: #c00000;">**SPD**</span> members to deepen cooperation between both parties. 
+Wirth was in the <span style="color: #c00000;">**SPD**</span> before and is able to use his close ties with their members to deepen cooperation between both parties. 
 
 @build_reichsbanner
 title: Reichsbanner
 subtitle: Wirth supports providing more resources to the Reichsbanner.
 choose-if: advisor_action_timer = 0 and z_rb = 1 and z_endorse_rb = 1
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if z_rb = 0 : The Center Party is not part of the Reichsbanner. ?][? if z_endorse_rb = 0 : The Center Party does not officially endorse the Reichsbanner. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if z_rb = 0 : The <span style="color: #000000;">**Center Party**</span> is not part of the <span style="color: #c00000;">**Reichbanner**</span>. ?][? if z_endorse_rb = 0 : The <span style="color: #000000;">**Center Party**</span> does not officially endorse the <span style="color: #c00000;">**Reichbanner**</span>. ?]
 on-arrival: advisor_action_timer = 6; reichsbanner_timer -= 6; last_advisor_action = 1
 go-to: reichsbanner 
 
@@ -46,7 +46,7 @@ title: Rally for democracy
 subtitle: Rally our party and the German people to defend democracy and freedom.
 choose-if: advisor_action_timer == 0 
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; pro_republic += 5; democratization += 1; left_labor_strength += 5; right_dissent += 2; workers_spd += 4*(1-dissent) if democratization >= 4; new_middle_spd += 3*(1-dissent) if democratization >= 4
+on-arrival: advisor_action_timer = 6; pro_republic += 5; democratization += 1; left_strength += 5; right_dissent += 2; workers_spd += 4*(1-dissent) if democratization >= 4; new_middle_z += 3*(1-dissent) if democratization >= 4
 
 Wirth helps us to rally the people in defense of democracy.
 
