@@ -4,7 +4,6 @@ tags: advisor, right
 card-image: img/portraits/KaasLudwig.jpg
 view-if: kaas_advisor = 1
 new-page: true
-#face-image: img/portraits/KaasLudwig.jpg
 
 = Ludwig Kaas
 
