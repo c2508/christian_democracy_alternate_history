@@ -301,13 +301,13 @@ go-to: coalition_menu
 
 **Potential coalitions:**
 
-<span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition (<span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> + <span style="color: #DCCA4A;">**DDP**</span>): [+ weimar_coalition +]%
+<span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition (<span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> + <span style="color: #D3C24D;">**[+ ddp_name +]**</span>): [+ weimar_coalition +]%
 
-Grand Coalition (<span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> + <span style="color: #69A2BE;">**BVP**</span> + <span style="color: #DCCA4A;">**DDP**</span> + <span style="color: #DCCA4A;">**DVP**</span>): [+ grand_coalition +]%
+Grand Coalition (<span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> + <span style="color: #69A2BE;">**BVP**</span> + <span style="color: #D3C24D;">**[+ ddp_name +]**</span> + <span style="color: #DCCA4A;">**DVP**</span>): [+ grand_coalition +]%
 
-Centrist Coalition (<span style="color: #000000;">**Z**</span> + <span style="color: #69A2BE;">**BVP**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span> ?]+ <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span> + [? if dnvp_ideology = "Moderate": <span style="color: #3F7BC1;">**DNVP**</span> +  ?][? if kvp_formed: <span style="color: #455B95;">**KVP**</span> +  ?][? if wp_exist: <span style="color: #B8996F;">**WP**</span> +  ?][? if dbp_exist: <span style="color: #38C538;">**DBP**</span> +  ?][? if cnblp_exist: <span style="color: #7FCEB1;">**CNBLP**</span> +  ?][? if csvd_exist: <span style="color: #8ED8E4;">**CSVD**</span> +  ?][? if csrp_exist: <span style="color: #FF6B21;">**CSRP**</span> +  ?][? if aspd_exist and aspd_ideology = "Moderate": <span style="color: #FE9E00;">**ASPD**</span> +  ?] <span style="color: #909090;">**Others**</span>): [+ bourgeois_coalition +]%
+Bourgeois Coalition (<span style="color: #000000;">**Z**</span> + <span style="color: #69A2BE;">**BVP**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span> ?]+ <span style="color: #DCCA4A;">**DVP**</span> + [? if dnvp_ideology = "Moderate": <span style="color: #3F7BC1;">**DNVP**</span> +  ?][? if kvp_formed: <span style="color: #455B95;">**KVP**</span> +  ?][? if wp_exist: <span style="color: #B8996F;">**WP**</span> +  ?][? if dbp_exist: <span style="color: #38C538;">**DBP**</span> +  ?][? if cnblp_exist: <span style="color: #7FCEB1;">**CNBLP**</span> +  ?][? if csvd_exist: <span style="color: #8ED8E4;">**CSVD**</span> +  ?][? if csrp_exist: <span style="color: #FF6B21;">**CSRP**</span> +  ?][? if aspd_exist and aspd_ideology = "Moderate": <span style="color: #FE9E00;">**ASPD**</span> +  ?] <span style="color: #909090;">**Others**</span>): [+ bourgeois_coalition +]%
 
-<span style="color: #3E88B3;">Bürgerblock</span> Coalition (<span style="color: #000000;">**Z**</span> + <span style="color: #69A2BE;">**BVP**</span> + <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span> + [? if wp_exist: <span style="color: #B8996F;">**WP**</span> +  ?][? if cnblp_exist: <span style="color: #7FCEB1;">**CNBLP**</span> +  ?][? if kvp_formed: <span style="color: #455B95;">**KVP**</span> +  ?] <span style="color: #3F7BC1;">**DNVP**</span> + <span style="color: #909090;">**Others**</span>): [+ right_coalition +]%
+<span style="color: #3E88B3;">Bürgerblock</span> Coalition (<span style="color: #000000;">**Z**</span> + <span style="color: #69A2BE;">**BVP**</span> + <span style="color: #DCCA4A;">**DVP**</span> + [? if cnblp_exist: <span style="color: #7FCEB1;">**CNBLP**</span> +  ?][? if kvp_formed: <span style="color: #455B95;">**KVP**</span> +  ?] <span style="color: #3F7BC1;">**DNVP**</span> + <span style="color: #909090;">**Others**</span>): [+ right_coalition +]%
 
 [? if nazi_urgency <= 1 and nsdap_r >= 15 : The rapid rise in NSDAP votes is extremely worrying. Many had believed that the party was moribund; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
 
@@ -335,8 +335,8 @@ There are some potential coalition arrangements.
 
 @popular_front_coalition
 title: A new "Popular Front" coalition?
-subtitle: <span style="color: #E3000F;">**SPD**</span> + KPD + <span style="color: #000000;">**Z**</span> + [+ ddp_name +]  [? if sapd_formed: + SAPD ?]([+ popular_front_coalition +]%)
-unavailable-subtitle: <span style="color: #E3000F;">**SPD**</span> + KPD + Z + [+ ddp_name +] [? if sapd_formed: + SAPD ?]([+ popular_front_coalition +]%) - [? if ((kpd_relation < 65 and kpd_party_leader == "Thälmann") or (kpd_relation < 45 and kpd_party_leader == "Conciliators")): We do not have good enough relations with the KPD. ?][? if (z_relation < 45 and z_party_leader == "Joos") or (z_relation < 65 and z_party_leader != "Joos" and kpd_party_leader != "Conciliators") or (z_relation < 55 and z_party_leader != "Joos" and kpd_party_leader == "Conciliators"): We do not have good enough relations with the Center Party. ?][? if communist_coalition < 3 : The Communists are unwilling to compromise at all. ?]
+subtitle: <span style="color: #E3000F;">**SPD**</span> + KPD + <span style="color: #000000;">**Z**</span> + <span style="color: #D3C24D;">**[+ ddp_name +]**</span>  [? if sapd_formed: + SAPD ?]([+ popular_front_coalition +]%)
+unavailable-subtitle: <span style="color: #E3000F;">**SPD**</span> + KPD + <span style="color: #000000;">**Z**</span> + <span style="color: #D3C24D;">**[+ ddp_name +]**</span> [? if sapd_formed: + SAPD ?]([+ popular_front_coalition +]%) - [? if ((kpd_relation < 65 and kpd_party_leader == "Thälmann") or (kpd_relation < 45 and kpd_party_leader == "Conciliators")): We do not have good enough relations with the KPD. ?][? if (z_relation < 45 and z_party_leader == "Joos") or (z_relation < 65 and z_party_leader != "Joos" and kpd_party_leader != "Conciliators") or (z_relation < 55 and z_party_leader != "Joos" and kpd_party_leader == "Conciliators"): We do not have good enough relations with the Center Party. ?][? if communist_coalition < 3 : The Communists are unwilling to compromise at all. ?]
 view-if: popular_front_coalition >= 50
 choose-if: (((kpd_relation >= 65 and kpd_party_leader == "Thälmann") or (kpd_relation >= 45 and kpd_party_leader == "Conciliators")) and ((z_relation >= 45 and z_party_leader == "Joos") or (z_relation >= 65 and z_party_leader != "Joos" and kpd_party_leader != "Conciliators") or (z_relation >= 55 and z_party_leader != "Joos" and kpd_party_leader == "Conciliators")) and ddp_relation >= 50 and communist_coalition >= 3) or (z_party_leader == "Joos" and kpd_party_leader == "Conciliators" and z_relation >= 30 and kpd_relation >= 30)
 
@@ -537,7 +537,7 @@ In response to the KPD's entrance into the government, the right-wing immediatel
 
 @bourgeois_coalition
 title: We can form a bourgeois coalition.
-subtitle: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> + <span style="color: #000000;">**Z**</span> + <span style="color: #A2D8E0;">**BVP**</span> + DVP + Others ([+ bourgeois_coalition +]%)
+subtitle: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> + <span style="color: #000000;">**Z**</span> + <span style="color: #A2D8E0;">**BVP**</span> + <span style="color: #DCCA4A;">**DVP**</span> + Others ([+ bourgeois_coalition +]%)
 view if: bourgeois_coalition >= 50
 on arrival: in_bourgeois_coalition = 1
 go to: ministries
@@ -583,7 +583,7 @@ Ernst Scholz's appointment as chancellor is approved by our potential allies.
 
 @treviranus
 title: Gottfried Treviranus for Chancellor
-subtitle: Gottfried Treviranus is part of Young Conservative Wing of the <span style="color: #3E88B3;">**DNVP**</span> and is an acceptable candidate for Chancellor.
+subtitle: Gottfried Treviranus is part of <span style="color: #0087DC;">Young Conservatives</span>  Wing of the <span style="color: #3E88B3;">**DNVP**</span> and is an acceptable candidate for Chancellor.
 on-arrival: spd_in_government = 0; chancellor = "Treviranus"; chancellor_party = "DNVP";
 go-to: ministries
 
@@ -646,12 +646,12 @@ The third option is to have new elections.
 
 @new_grand_coalition
 title: A "New Grand Coalition" of all the constitutional parties?
-subtitle: <span style="color: #c00000;">**SPD**</span> + <span style="color: #000000;">**Z**</span> + <span style="color: #A2D8E0;">**BVP**</span> + <span style="color: #D3C24D;">**[+ ddp_name +]**</span> + DVP + Others ([+ neo_weimar_coalition +]%)
+subtitle: <span style="color: #c00000;">**SPD**</span> + <span style="color: #000000;">**Z**</span> + <span style="color: #A2D8E0;">**BVP**</span> + <span style="color: #D3C24D;">**[+ ddp_name +]**</span> + <span style="color: #C0A054;">**DVP**</span> + Others ([+ neo_weimar_coalition +]%)
 view-if: neo_weimar_coalition >= 50 and grand_coalition < 50
 choose-if: spd_relation >= 50 and dvp_relation >= 50
-unavailable-subtitle: <span style="color: #c00000;">**SPD**</span> + <span style="color: #000000;">**Z**</span> + <span style="color: #A2D8E0;">**BVP**</span> + <span style="color: #D3C24D;">**[+ ddp_name +]**</span> + DVP + Others ([+ neo_weimar_coalition +]%) - [? if spd_relation < 50 : We do not have adequate relations with the SPD. ?][? if dvp_relation < 50 : We do not have adequate relations with the DVP. ?]
+unavailable-subtitle: <span style="color: #c00000;">**SPD**</span> + <span style="color: #000000;">**Z**</span> + <span style="color: #A2D8E0;">**BVP**</span> + <span style="color: #D3C24D;">**[+ ddp_name +]**</span> + <span style="color: #C0A054;">**DVP**</span> + Others ([+ neo_weimar_coalition +]%) - [? if spd_relation < 50 : We do not have adequate relations with the SPD. ?][? if dvp_relation < 50 : We do not have adequate relations with the DVP. ?]
 
-How do we convince parties with opposing viewpoints to join us in forming a majority coalition? Our largely benevolent relations with the <span style="color: #c00000;">**SPD**</span> and DVP may allow us some leverage.
+How do we convince parties with opposing viewpoints to join us in forming a majority coalition? Our largely benevolent relations with the <span style="color: #c00000;">**SPD**</span> and <span style="color: #C0A054;">**DVP**</span> may allow us some leverage.
 
 - @use_resources
 - @toleration_bruning: No. We will tolerate a minority government.
@@ -687,7 +687,7 @@ We have assembled a new coalition under Otto Braun.
 
 @unity_government
 title: The Center Party offers a "Government of National Unity" under Chancellor Joseph Wirth.
-subtitle: <span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> + BVP + <span style="color: #D3C24D;">**[+ ddp_name +]**</span> + DVP + Others ([+ neo_weimar_coalition +]%)
+subtitle: <span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> + <span style="color: #A2D8E0;">**BVP**</span> + <span style="color: #D3C24D;">**[+ ddp_name +]**</span> + <span style="color: #C0A054;">**DVP**</span> + Others ([+ neo_weimar_coalition +]%)
 view-if: z_party_leader == "Joos" and neo_weimar_coalition >= 50 and weimar_coalition < 50 and z_relation >= 10
 
 Our leader, Joseph Joos, sees the threat from the ascension of the anti-democratic extremist parties, and thus tries to negotiate a "Government of National Unity" to save the republic. This coalition would be led by Joseph Wirth, a left-leaning member of the Center Party and former chancellor, and would encompass all of the constitutional parties. Our role in this government might be limited, however.
