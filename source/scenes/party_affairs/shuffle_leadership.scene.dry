@@ -420,6 +420,7 @@ view-if: right_labor_advisor = 0 and n_advisors < 3 and right_labor_defect = 0
 on-arrival: brauns_advisor = 1; n_advisors += 1; right_labor_strength += 5
 go-to: advisor_menu
 tags: right_labor_advisor
+is-card: true
 
 Heinrich Brauns is now an advisor.
 
@@ -437,7 +438,7 @@ Heinrich Bruning is now an advisor.
 
 @add_stegerwald
 title: Adam Stegerwald
-subtitle: Stegerwald  [? if year >= 1928 : was ?][? if year_1928 = 1 : is ?]  the chairman of the Christian Trade Union Federation (DGB). 
+subtitle: Stegerwald  [? if year >= 1928 : was ?][? if year_1928 = 1 : is ?]  the chairman of the Christian Trade Union Federation (<span style="color: #000000;">**DGB**</span>). 
 is-card: true
 card-image: img/portraits/SenderToni.jpg
 view-if: stegerwald_advisor = 0 and n_advisors < 3and right_labor_defect = 0
@@ -463,7 +464,7 @@ Konrad Adenauer is now an advisor.
 
 @add_hermes
 title: Andreas Hermes 
-subtitle: Hermes is the head of the VdB, the Association of German Farmer Associations.
+subtitle: Hermes is the head of the <span style="color: #000000;">**VdB**</span> , the Association of German Farmer Associations.
 card-image: img/portraits/SeydewitzMax.jpg
 view-if: hermes_advisor = 0 and n_advisors < 3 and right_resign = 0
 on-arrival: hermes_advisor = 1; n_advisors += 1; right_strength += 5
