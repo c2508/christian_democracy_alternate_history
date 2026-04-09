@@ -17,16 +17,18 @@ However, our socially heterogeneous base might not take kindly to such cooperati
 - @reject: Surprisingly, we have rejected the overtures from the <span style="color: #c00000;">**SPD**</span>.
 
 @endorse
+subtitle: This is will strengthen the forces of democracy in the fight against <span style="color: #7A3C00;">**NSDAP**</span>. 
 choose-if: z_party_leader = "Joos" or z_party_leader = "Kaas"
 on-arrival: pro_republic += 5; spd_right += 1; spd_relation += 5; ddp_relation += 3; ddp_left += 1; z_new_middle += 3; z_catholics += 3; nsdap_workers -= 3; kpd_workers += 2; nsdap_rural -= 2; z_dominance += 5; right_dissent += 6; endorse_seen += 1; rb_strength += 700; rb_militancy += 0.15; z_endorse_rb += 1
 
 blah blah ble blah blah bloo
 
 @reject
+subtitle: Such a move is a sharp rebuff to the <span style="color: #FF7F00;">Christian Left</span> faction and will be unpopular amongst rank-and-file members.
 choose-if: z_party_leader = "Kaas" or z_party_leader = "Stegerwald"
 on-arrival: pro_republic -= 5; spd_left += 1; spd_relation -= 5; ddp_relation -= 3; left_dissent += 5; left_labor_dissent += 3; z_workers -= 3; z_new_middle -= 2; nsdap_workers += 3; nsdap_catholics += 1; endorse_seen += 1; ddp_right += 1; rb_strength -= 300; 
 
-Despite the our friendly relations with the <span style="color: #c00000;">**SPD**</span>, our party has decided to rebuff the overtures of the <span style="color: #c00000;">**SPD**</span>, with this direct repudiation of the <span style="color: #c00000;">**Reichsbanner**</span> causing some from our party to leave. While the Christian Left in the party question our commitment to the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> system, the Windthorstbund is furious at our inactivity in the face of the growing strength of the <span style="color: #7A3C00;">**NSDAP**</span>.
-Meanwhile, Catholic <span style="color: #3E88B3;">conservatives</span>are pleased with our commitment to being a party of the center, but others question how we have let cooperation with the <span style="color: #c00000;">**SPD**</span> come this far. 
+Despite our friendly relations with the <span style="color: #c00000;">**SPD**</span>, our party has decided to rebuff the overtures of the <span style="color: #c00000;">**SPD**</span>, with this direct repudiation of the <span style="color: #c00000;">**Reichsbanner**</span> causing some from our party to leave. While the Christian Left in the party question our commitment to the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> system, the Windthorstbund is furious at our inactivity in the face of the growing strength of the <span style="color: #7A3C00;">**NSDAP**</span>.
+Meanwhile, Catholic <span style="color: #3E88B3;">conservatives</span> are pleased with our commitment to being a party of the center, but others question how we have let cooperation with the <span style="color: #c00000;">**SPD**</span> come this far. 
 
  
