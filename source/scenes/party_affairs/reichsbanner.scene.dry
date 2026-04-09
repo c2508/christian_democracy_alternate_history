@@ -8,16 +8,16 @@ on-arrival: month_actions += 1; reichsbanner_timer += 6; rb_militarization_cost 
 max-visits: 6
 #subtitle: Paramilitary organizing in defense of the republic.
 
-= Reichsbanner
+= <span style="color: #c00000;">**Reichsbanner**</span>
 
-The *Reichsbanner Schwarz-Rot-Gold* is a mass organization for the defense of the Republic against the extremists who threaten it. Some would call it a paramilitary, although currently it is hardly any sort of military. It is officially associated with the pro-democratic parties -the <span style="color: #c00000;">**SPD**</span>, <span style="color: #000000;">**Center**</span> , and <span style="color: #D3C24D;">**[+ ddp_name +]**</span, but by far the largest component is with the <span style="color: #c00000;">**SPD**</span>.
+The *<span style="color: #c00000;">**Reichsbanner**</span> Schwarz-Rot-Gold* is a mass organization for the defense of the Republic against the extremists who threaten it. Some would call it a paramilitary, although currently it is hardly any sort of military. It is officially associated with the pro-democratic parties -the <span style="color: #c00000;">**SPD**</span>, <span style="color: #000000;">**Center**</span> and <span style="color: #D3C24D;">**[+ ddp_name +]**</span, but by far the largest component is with the <span style="color: #c00000;">**SPD**</span>.
 
-[? if pro_republic < 20: The unpopularity of the republic that the Reichbanner strives to defend has led to difficulties in recruitment. ?]
+[? if pro_republic < 20: The unpopularity of the republic that the <span style="color: #c00000;">**Reichsbanner**</span> strives to defend has led to difficulties in recruitment. ?]
 
-- @militant: Fund more military-style training and equipment for the Reichsbanner.
-- @militant_2: Use our existing resources to support more training for the Reichsbanner.
-- @same: Keep the Reichsbanner as it is.
-- @cut_rb: Cut funding for the Reichsbanner.
+- @militant: Fund more military-style training and equipment for the R<span style="color: #c00000;">**Reichsbanner**</span>.
+- @militant_2: Use our existing resources to support more training for the <span style="color: #c00000;">**Reichsbanner**</span>.
+- @same: Keep the R<span style="color: #c00000;">**Reichsbanner**</span> as it is.
+- @cut_rb: Cut funding for the <span style="color: #c00000;">**Reichsbanner**</span>.
 - @easy_discard
 - @cancel_advisor_action
 
@@ -29,18 +29,18 @@ unavailable-subtitle: Not enough resources ([+ rb_militarization_cost +] needed)
 subtitle: -[+ rb_militarization_cost +] resources
 on-arrival: resources -= rb_militarization_cost; rb_investment += 1; rb_strength += 100; rb_militancy += 0.05; left_strength += 2; left_dissent -= 2; right_dissent += 5; workers_z += 2*(1-dissent); unemployed_z += 2*(1-dissent); z_dominance += 4;
 
-Not all in our party are supportive of the Reichbanner and its goals, let alone funding the Reichbanner. Others critisise our continued cooperation with the <span style="color: #c00000;">**SPD**</span> and weakening our right flank. However, militarising the Reichbanner has the effect of luring disaffected workers back from the <span style="color: #700000;">**KPD**</span> and <span style="color: #909090;">**CSRP**</span>.
+Not all in our party are supportive of the <span style="color: #c00000;">**Reichsbanner**</span> and its goals, let alone funding the Reichbanner. Others critisise our continued cooperation with the <span style="color: #c00000;">**SPD**</span> and weakening our right flank. However, militarising the <span style="color: #c00000;">**Reichsbanner**</span> has the effect of luring disaffected workers back from the <span style="color: #700000;">**KPD**</span> and <span style="color: #909090;">**CSRP**</span>.
 
 @militant_2
 view-if: funded_reichsbanner >= 1
 on-arrival: rb_militancy += 0.02; funded_reichsbanner -= 1
 
-As we have already funded resources towards the Reichsbanner, we can invest in building up their militancy.
+As we have already funded resources towards the <span style="color: #c00000;">**Reichsbanner**</span>, we can invest in building up their militancy.
 
 
 @same
 
-The Reichsbanner is already serving the purpose it needs to serve. There is no reason to change what already works.
+The <span style="color: #c00000;">**Reichsbanner**</span> is already serving the purpose it needs to serve. There is no reason to change what already works.
 
 - @return: Continue...
 
@@ -49,5 +49,5 @@ The Reichsbanner is already serving the purpose it needs to serve. There is no r
 subtitle: +1 resources
 on-arrival: resources += 1; rb_strength -= 100; rb_militancy -= 0.05; left_strength -= 4; left_dissent += 4; spd_militancy -= 0.05; workers_kpd += 2; unemployed_kpd += 2; z_dominance -= 4;
 
-Cutting resources to the Reichsbanner causes a drop in the membership and our support. The Christian Left critisise our lack of commitment to the defense of the republic. 
+Cutting resources to the <span style="color: #c00000;">**Reichsbanner**</span> causes a drop in the membership and our support. The <span style="color: #FF7F00;">Christian Left</span>  critisise our lack of commitment to the defense of the republic. 
 
