@@ -341,7 +341,7 @@ choose-if: dnvp_relation >= 30 and dvp_relation >= 25
 on-arrival: in_right_coalition_prussia = 1; spd_relation -= 10; ddp_relation -= 10; dvp_relation += 10; dnvp_relation += 10; left_dissent += 10; right_strength += 10
 go-to: prussia_minister_president_right
 
-Our decision to form a right coalition has shocked our "<span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition" partners in Prussia. The DVP and DNVP are pleased with our actions.
+Our decision to form a right coalition has shocked our "<span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition" partners in Prussia. The <span style="color: #C0A054;">**DVP**</span> and <span style="color: #3E88B3;">**DNVP**</span> are pleased with our actions.
 
 @prussia_minister_president_right
 
@@ -361,13 +361,13 @@ Adam Stegerwald has been appointed as the Minister-President of Prussia.
 title: Hans Luther shall be Minister-President. 
 on arrival: prussia_leader = "Luther"; dvp_relation += 5; 
 
-Hans Luther has been appointed as the Minister President of Prussia. The DVP is pleasantly surprised at our unexpected decision.
+Hans Luther has been appointed as the Minister President of Prussia. The <span style="color: #C0A054;">**DVP**</span> is pleasantly surprised at our unexpected decision.
 
 @westarp
 title: Kuno von Westarp shall be Minister-President. 
 on arrival: prussia_leader = "Westarp"; pro_republic -= 5; dnvp_relation += 5; 
 
-Kuno von Westarp has been appointed as Minister President of Prussia. The DNVP is pleasantly surprised at our decision. 
+Kuno von Westarp has been appointed as Minister President of Prussia. The <span style="color: #3E88B3;">**DNVP**</span> is pleasantly surprised at our decision. 
 
 [? if year = 1928: Westarp has begun dismantling the democratic bulwark and reversing the pro democratic reforms of the previous government. ?]
 
