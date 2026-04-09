@@ -14,9 +14,9 @@ The *<span style="color: #c00000;">**Reichsbanner**</span> Schwarz-Rot-Gold* is 
 
 [? if pro_republic < 20: The unpopularity of the republic that the <span style="color: #c00000;">**Reichsbanner**</span> strives to defend has led to difficulties in recruitment. ?]
 
-- @militant: Fund more military-style training and equipment for the R<span style="color: #c00000;">**Reichsbanner**</span>.
+- @militant: Fund more military-style training and equipment for the <span style="color: #c00000;">**Reichsbanner**</span>.
 - @militant_2: Use our existing resources to support more training for the <span style="color: #c00000;">**Reichsbanner**</span>.
-- @same: Keep the R<span style="color: #c00000;">**Reichsbanner**</span> as it is.
+- @same: Keep the <span style="color: #c00000;">**Reichsbanner**</span> as it is.
 - @cut_rb: Cut funding for the <span style="color: #c00000;">**Reichsbanner**</span>.
 - @easy_discard
 - @cancel_advisor_action
