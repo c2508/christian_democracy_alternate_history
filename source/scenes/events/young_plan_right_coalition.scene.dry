@@ -1,6 +1,6 @@
 title: Young Plan
 new-page: true
-subtitle: The right-wing coalition has collapsed...
+subtitle: The <span style="color: #3E88B3;">**Bürgerblock**</span> coalition has collapsed...
 tags: event
 view-if: year = 1929 and month >= 7 and in_right_coalition = 1
 on-arrival: young_plan_seen = 1
@@ -8,39 +8,125 @@ max-visits: 1
 
 = The Young Plan and the fall of the coalition
 
-The Foreign Ministry under Gustav Streseman has agreed to the Young Plan, an agreement with the Western powers to reduce Germany's reparation payments and give us more fiscal autonomy. Simultaneously, France will agree to withdraw its military occupation from the Rhineland.
+The Foreign Ministry under [? if foreign_minister_party = "Z": Heinrich Bruning ?][? if foreign_minister_party = "DVP": Gustav Stresemann ?] has agreed to the Young Plan, an agreement with the Western powers to reduce Germany's reparation payments and give us more fiscal autonomy. Simultaneously, France will agree to withdraw its military occupation from the Rhineland.
 
 While this seems to be a positive development for the country, the <span style="color: #3E88B3;">**DNVP**</span> opposes the plan, claiming that any reparations are a form of national slavery. They have called for a vote of no confidence against the government, supported by the [? if dnf_formed = 1: <span style="color: #003755;">**DNF**</span>, ?] <span style="color: #7A3C00;">**NSDAP**</span> and the <span style="color: #700000;">**KPD**</span>, and for a referendum on the Young Plan.
 
 Whether the government shall fall is dependent on the vote
 
-- @vonc_yes
-- @vonc_no
+- @tolerate
+- @weimar
+- @grand
 - @no_matter
 
-@vonc_yes
-title: Support the vote of no confidence, voting against the government.
-subtitle: The government will collapse, and there will be new elections.
-view-if: neo_weimar_coalition >= 50
-on-arrival: time_to_election = 3; spd_in_government = 0; in_right_coalition = 0; in_grand_coalition = 0; spd_toleration = 0; pro_republic -= 5; dvp_relation -= 5; z_relation -= 5;
-call: set_next_election_time
+@tolerate
+title: Can the <span style="color: #c00000;">**SPD**</span> be persuaded to tolerate us?
+subtitle:  The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> will enter the government. 
+view-if: grand_coalition >= 50; right_strength > 40; left_strenght < 20; spd_relation > 40; ddp_relation > 25
+on-arrival: spd_toleration = 1; pro_republic -= 3; in_right_coalition = 0;
 
-The right-wing coalition has fallen. New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+By supporting the government, the <span style="color: #c00000;">**SPD**</span> has essentially entered into a toleration arrangement with us. They will not have a voice in the government, but we will have to fufill our concessions to them. The right of our party opposes this plan, and would rather that we hold new elections.
+
+@weimar
+title: Could we form a <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> coalition?
+subtitle: A center left government will form.
+unavailable-subtitle: <span style="color: #c00000;">SPD</span> + <span style="color: #000000;">[+ z_party_name +]</span> + [? if not lvp_formed: <span style="color: #D3C24D;">[+ ddp_name +]</span>?][? if lvp_formed:<span style="color: #FFCC00;">LVP</span>?][? if sapd_formed and kpd_relation >= 30 :&nbsp;+ <span style="color: #9B0000;">SAPD</span> toleration?] ([+ weimar_coalition_prussia +]%) [? if far_right_coalition_prussia >= 50: - The <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> are able to form a government. ?] [? if not ((z_relation >= 30 and z_ideology == "Right") or (z_relation >= 25 and z_leader == "Joos") or (z_relation >= 20 and z_leader == "Kaiser")): - We do not have the adequate relations with the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]. ?] [? if not (ddp_relation >= 30 and ddp_ideology == "Right") and not (ddp_relation >= 25 and ddp_ideology == "Moderate") and not (ddp_relation >= 20 and ddp_ideology == "Left") and not lvp_formed: - We do not have the adequate relations with the <span style="color: #D3C24D;">[+ ddp_name +]</span>. ?] [? if not ((lvp_relation >= 40 and lvp_ideology == "Right") or (lvp_relation >= 35 and lvp_ideology == "Moderate") or (lvp_relation >= 30 and lvp_ideology == "Left")) and lvp_formed: - We do not have adequate relations with the <span style="color: #FFCC00;">LVP</span>. ?]
+view-if: weimar_coalition >= 50 and not cvp_formed
+choose-if: weimar_coalition >= 50 and spd_relation >= 30 and ddp_relation >= 25
+on-arrival: leverage += 5; in_weimar_coalition = 1; spd_in_government = 1; in_popular_front = 0; in_left_front = 0; foreign_minister_party = "SPD"; interior_minister_party = "SPD"; justice_minister_party = ddp_name; labor_minister_party = "SPD"; reichswehr_minister_party = "I"; economic_minister_party = ddp_name; finance_minister_party = ddp_name; agriculture_minister_party = "SPD"; foreign_minister = "Breitscheid"; interior_minister = "Severing"; justice_minister = "Koch-Weser"; labor_minister = "Wissel"; reichswehr_minister = "Groener"; economic_minister = "Dietrich"; finance_minister = "Moldenhauer"; agriculture_minister = "Baade";
+achievement: weimar_coalition
+
+We have enough votes to form a <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition government consisting of the <span style="color: #c00000;">**SPD**</span>, <span style="color: #000000;">**Center Party**</span> (<span style="color: #000000;">**Z**</span> ) and <span style="color: #D3C24D;">**Democratic**</span> (<span style="color: #D3C24D;">**[+ ddp_name +]**</span>) parties! This has been our preferred governing coalition since 1919.
+
+Who should be the chancellor?
+
+- @muller
+- @braun
+- @wels
+- @z_chancellor
+- @z_chancellor_wirth
+
+@grand
+title: Can the <span style="color: #c00000;">**SPD**</span> enter the government?
+subtitle: The <span style="color: #c00000;">**SPD**</span> will replace the <span style="color: #3E88B3;">**DNVP**</span> in government.
+unavailable-subtitle: <span style="color: #c00000;">SPD</span> + <span style="color: #000000;">[+ z_party_name +]</span> + <span style="color: #D3C24D;">[+ ddp_name +]</span> + <span style="color: #C0A054;">DVP</span> ([+ grand_coalition_prussia +]%) [? if not ((z_relation >= 30 and z_ideology == "Right") or (z_relation >= 25 and z_leader == "Joos") or (z_relation >= 20 and z_leader == "Kaiser")): - We do not have the adequate relations with the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]. ?] [? if not (ddp_relation >= 30 and ddp_ideology == "Right") and not (ddp_relation >= 25 and ddp_ideology == "Moderate") and not (ddp_relation >= 20 and ddp_ideology == "Left") and not lvp_formed: - We do not have the adequate relations with the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>. ?][? if not (lvp_relation >= 40 and lvp_ideology == "Right") and not (lvp_relation >= 35 and lvp_ideology == "Moderate") and not (lvp_relation >= 30 and lvp_ideology == "Left") and lvp_formed: - We do not have the adequate relations with the <span style="color: #FFCC00;">LVP</span>. ?] [? if not (dvp_relation >= 25 and dvp_ideology == "Left") and not (dvp_relation >= 30 and dvp_ideology == "Moderate") and not (dvp_relation >= 45 and dvp_ideology == "Right") and not lvp_formed: - We do not have the adequate relations with the <span style="color: #C0A054;">**DVP**</span>. ?]
+view-if: grand_coalition >= 50; right_strength <= 40; left_strenght >= 20; spd_relation >= 50; ddp_relation > 25
+choose-if: grand_coalition >= 50; right_strength <= 40; left_strenght >= 20; spd_relation >= 50; ddp_relation > 25
+on-arrival: in_grand_coalition = 1; in_popular_front = 0; in_left_front = 0
+
+As expected, the <span style="color: #c00000;">**SPD**</span> is the largest party, and this time, they are expected to take the lead role in the formation of the next government, including selecting the chancellor. President [+ president +] has asked them to form a majority coalition with the Center (Z), Bavarian People's (BVP), Democratic ([+ ddp_name +]), and People's (DVP) parties.
+
+Who should be the chancellor?
+
+- @muller
+- @braun
+- @wels
+- @z_chancellor
+- @z_chancellor_wirth
+
+@muller
+title: Hermann Müller for Chancellor
+view-if: muller_dead = 0
+subtitle: Müller is popular within the <span style="color: #c00000;">**SPD**</span>, and is our preferred candidate for Chancellor.
+on-arrival: spd_in_government = 1; chancellor = "Müller"; chancellor_party = "SPD"; in_grand_coalition = 1 if in_weimar_coalition == 0
+go-to: election_1928.ministries
+
+Müller's appointment as chancellor is approved by all our potential allies.
+
+@wels
+title: Otto Wels for Chancellor
+view-if: muller_dead = 1
+subtitle: Otto Wels is a party leader in the <span style="color: #c00000;">**SPD**</span>, but can he also be chancellor?
+on-arrival: spd_in_government = 1; chancellor = "Wels"; chancellor_party = "SPD"; in_grand_coalition = 1 if in_weimar_coalition == 0
+go-to: election_1928.ministries
+
+Otto Wels's appointment as chancellor is approved by our potential allies.
+
+@braun
+title: Otto Braun for Chancellor
+view-if: not historical_mode or not spd_prussia
+subtitle: Braun is currently the Minister-President of Prussia, and is one the <span style="color: #c00000;">**SPD's**</span> most popular leaders. However, we have qualms about concentrating too much power in one man.
+
+We have significant qualms about appointing Braun as chancellor, given that he is already Minister-President of Prussia. We can ask for either more cabinet positions, or for Braun to resign his state government role.
+
+- @muller
+- @wels
+- @braun_2: We will have our cabinet positions.
+
+@braun_2
+subtitle: Otto Braun will be Chancellor.
+view-if: not historical_mode
+on-arrival: spd_in_government = 1; chancellor = "Braun"; chancellor_party = "SPD"; leverage += 10; in_grand_coalition = 1 if in_weimar_coalition == 0
+go-to: election_1928.ministries
+
+We have been promised by the <span style="color: #c00000;">**SPD**</span> to have more influence in the government in response to the appointment of Braun as chancellor.
 
 
-@vonc_no
-title: Support the rump Center-led government, voting in favor of the government.
-subtitle: We would essentially provide "toleration" to a bourgeois government.
-view-if: neo_weimar_coalition >= 50
-on-arrival: spd_toleration = 1; in_right_coalition = 0; left_dissent += 8; 
+@z_chancellor
+title: We will have the chancellorship.
+subtitle: Heinrich Brüning will be chancellor. This will cause internal dissent within the SPD and we will need to grant them more influence in the government.
+on-arrival: spd_relation -= 5; dvp_relation += 5; kpd_relation -= 5; in_grand_coalition = 1 if in_weimar_coalition == 0; chancellor = "Bruning"; chancellor_party = "Z"; spd_in_government = 1; leverage -= 5
+go-to: election_1928.ministries
 
-By supporting the government, we have essentially entered into a "toleration" arrangement with the [+ chancellor +] government. We do not have a voice in the government, but we are responsible for its continued stability. The left of our party opposes this plan, and would rather that we hold new elections.
+This is highly unexpected, and those on the left wing of the <span style="color: #c00000;">**SPD**</span> are displeased.
+
+[? if year == 1928 : Since Wilhelm Marx resigned, Heinrich Brüning has been appointed chancellor. ?]
+[? if year > 1928: Heinrich Brüning of the <span style="color: #000000;">**Center Party**</span> has been appointed chancellor. ?]
+
+@z_chancellor_wirth
+title: Let Joseph Wirth be chancellor.
+view-if: z_party_leader == "Joos"
+subtitle: Wirth is on the left wing of the <span style="color: #000000;">**Center Party**</span> . We will need to grant the <span style="color: #c00000;">**SPD**</span> more influence in the government.
+on-arrival: left_labor_dissent -= 10; spd_relation += 6; ddp_relation += 3; kpd_relation -= 5; in_grand_coalition = 1 if in_weimar_coalition == 0; chancellor = "Wirth"; chancellor_party = "Z"; spd_in_government = 1; leverage += 5
+go-to: election_1928.ministries
+
+
 
 @no_matter
-title: It does not matter what we do.
-subtitle: The anti-government parties have over 50% of the vote, no matter our choices.
-view-if: neo_weimar_coalition < 50
+title: It does not matter.
+subtitle: The anti-government parties have over 50% of the vote.
+view-if: grand_coalition < 50
 call: set_next_election_time
 on-arrival: time_to_election = 3; spd_in_government = 0; in_right_coalition = 0; in_grand_coalition = 0; spd_toleration = 0; pro_republic -= 5
 
-The right-wing coalition has fallen. New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+The <span style="color: #3E88B3;">**Bürgerblock**</span> coalition has fallen. New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
