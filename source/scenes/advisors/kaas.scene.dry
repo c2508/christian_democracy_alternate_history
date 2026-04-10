@@ -19,7 +19,7 @@ Kaas has a close friendship with Eugenio Pacelli, the Papal Nuncio to Germany, w
 title: Negotiate a Concordat in Prussia
 subtitle: Kaas leverages his contacts within the Vatican to start negotiations for a Prussian Concordat.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-view-if: prussian_concordat_progress < 3 and z_prussia = 1
+view-if: prussian_concordat_progress < 3 and z_in_prussia = 1
 on-arrival: prussian_concordat_progress += 1; left_labor_dissent -= 2; right_labor_dissent -= 2; left_dissent -= 2; center_dissent -= 2; right_dissent -= 2
 
 We are making progress towards negotiating a concordat between Prussia and the Catholic church.
@@ -29,15 +29,15 @@ We are making progress towards negotiating a concordat between Prussia and the C
 title: We can sign a Concordat in Prussia now
 subtitle: We are done negotiating the terms of a Prussian Concordat.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-view-if: prussian_concordat_progress >= 3 and prussian_concordat = 0 and z_prussia = 1
+view-if: prussian_concordat_progress >= 3 and prussian_concordat = 0 and z_in_prussia = 1
 on-arrival: prussian_concordat = 1; catholics_z += 5*(1-dissent); left_dissent -= 6; left_labor_dissent -= 6; right_labor_dissent -= 6; center_dissent -= 6; right_dissent -= 6
 
 We have signed a Concordat between the Free State of Prussia and the Roman Catholic Church, guaranteeing religious freedom for Catholics in Prussia. This sets the stage for the negotiation of a national Concordat covering all of Germany.
 
 @concordat_negotiate
 title: Negotiate a Concordat between the Germany and the Vatican.
-view-if: (prussian_concordat = 1 or not spd_prussia) and reichskonkordat = 0 and reichskonkordat_progress < 4
-on-arrival: reichskonkordat_progress += 1; reichskonkordat_progress += 1 if z_leader == "Kaas"; dvp_relation -= 1; ddp_relation -= 2; ddp_cohesion -= 0.25; lvp_relation -= 1
+view-if: prussian_concordat = 1 and reichskonkordat = 0 and reichskonkordat_progress < 4 and z_in_government = 1
+on-arrival: reichskonkordat_progress += 1; reichskonkordat_progress += 1 if z_leader == "Kaas"; dvp_relation -= 3; ddp_relation -= 3; ddp_cohesion -= 0.25; lvp_relation -= 1
 
 Using his connections to the Vatican, Kaas is able to speed up concordat negotiations. We are working towards the signing of a Concordat, an agreement between the Vatican and the Republic that formally recognizes the Church's rights and interests in the country.
 
