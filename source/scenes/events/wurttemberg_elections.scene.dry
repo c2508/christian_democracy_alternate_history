@@ -33,11 +33,8 @@ Q.adjustmentFactors_spd_wurttemberg = 0.85;
 Q.adjustmentFactors_aspd_wurttemberg = 0.2;
 Q.adjustmentFactors_kpd_wurttemberg = 0.85;
 Q.adjustmentFactors_ddp_wurttemberg = 3.0;
-Q.adjustmentFactors_dbp_wurttemberg = 0.0;
-Q.adjustmentFactors_csrp_wurttemberg = 2.0;
 Q.adjustmentFactors_z_wurttemberg = 1.45;
 Q.adjustmentFactors_dvp_wurttemberg = 1.0;
-Q.adjustmentFactors_csvd_wurttemberg = 2.5;
 Q.adjustmentFactors_wp_wurttemberg = 0.0;
 Q.adjustmentFactors_cnblp_wurttemberg = 7.0;
 Q.adjustmentFactors_kvp_wurttemberg = 0.8;
@@ -135,9 +132,9 @@ if (Q.aspd_exist && Q.aspd_ideology == "Moderate") Q.weimar_coalition_wurttember
 Q.grand_coalition_wurttemberg = parseFloat((Q.spd_wl + Q.ddp_wl + Q.z_wl + Q.dvp_wl + Q.csrp_wl).toFixed(1));
 
 Q.bourgeois_coalition_wurttemberg = parseFloat((Q.ddp_wl + Q.z_wl + Q.dvp_wl + Q.other_wl + Q.cnblp_wl + Q.kvp_wl ).toFixed(1));
-Q.christian_coalition_wurttemberg =  parseFloat((Q.z_wl + Q.dnvp_wl + Q.dvp_wl + Q.other_wl ).toFixed(1));
-Q.christian_coalition_toleration_wurttemberg =  parseFloat((Q.z_wl + Q.dnvp_wl + Q.other_wl ).toFixed(1));
-Q.right_coalition_wurttemberg = parseFloat(( Q.z_wl + Q.dvp_wl + Q.other_wl + Q.kvp_wl + Q.dnvp_wl ).toFixed(1));
+Q.christian_coalition_wurttemberg =  parseFloat((Q.z_wl + Q.dnvp_wl + Q.dvp_wl + Q.other_wl).toFixed(1));
+Q.christian_coalition_toleration_wurttemberg =  parseFloat((Q.z_wl + Q.dnvp_wl + Q.other_wl).toFixed(1));
+Q.right_coalition_wurttemberg = parseFloat(( Q.z_wl + Q.dvp_wl + Q.other_wl + Q.kvp_wl + Q.dnvp_wl).toFixed(1));
 if (Q.dnvp_ideology === "Radical") Q.far_right_coalition_wurttemberg = parseFloat((Q.dnvp_wl + Q.nsdap_wl).toFixed(1));
 if (Q.dnf_formed) Q.far_right_coalition_wurttemberg = parseFloat((Q.dnf_wl + Q.nsdap_wl).toFixed(1));
 
