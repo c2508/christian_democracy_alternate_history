@@ -44,7 +44,7 @@ Q.adjustmentFactors_kvp_wurttemberg = 0.8;
 Q.adjustmentFactors_dnvp_wurttemberg = 0.6;
 Q.adjustmentFactors_dnf_wurttemberg = 0.5;
 Q.adjustmentFactors_nsdap_wurttemberg = 0.7;
-Q.adjustmentFactors_other_wurttemberg = 0.9;
+Q.adjustmentFactors_other_wurttemberg = 1.2;
 
 if (Q.lvp_formed || Q.nfvp_formed) {
     Q.adjustmentFactors_dvp_wurttemberg += 1.5
@@ -135,9 +135,10 @@ if (Q.aspd_exist && Q.aspd_ideology == "Moderate") Q.weimar_coalition_wurttember
 Q.grand_coalition_wurttemberg = parseFloat((Q.spd_wl + Q.ddp_wl + Q.z_wl + Q.dvp_wl + Q.csrp_wl).toFixed(1));
 if (Q.aspd_exist && Q.aspd_ideology == "Moderate") Q.grand_coalition_wurttemberg = parseFloat((Q.grand_coalition_wurttemberg + Q.aspd_wl).toFixed(1));
 
-Q.bourgeois_coalition_wurttemberg = parseFloat((Q.ddp_wl + Q.z_wl + Q.dvp_wl + Q.other_wl + Q.cnblp_wl + Q.kvp_wl + Q.csvd_wl + Q.csrp_wl).toFixed(1));
-if (Q.aspd_exist && Q.aspd_ideology == "Moderate") Q.bourgeois_coalition_wurttemberg = parseFloat((Q.bourgeois_coalition_wurttemberg + Q.aspd_wl).toFixed(1));
-
+Q.bourgeois_coalition_wurttemberg = parseFloat((Q.ddp_wl + Q.z_wl + Q.dvp_wl + Q.other_wl + Q.cnblp_wl + Q.kvp_wl ).toFixed(1));
+Q.christian_coalition_wurttemberg =  parseFloat((Q.z_wl + Q.dnvp_wl + Q.dvp_wl + Q.other_wl ).toFixed(1));
+Q.christian_coalition_toleration_wurttemberg =  parseFloat((Q.z_wl + Q.dnvp_wl + Q.other_wl ).toFixed(1));
+Q.right_coalition_wurttemberg = parseFloat((Q.ddp_wl + Q.z_wl + Q.dvp_wl + Q.other_wl + Q.cnblp_wl + Q.kvp_wl + Q.dnvp_wl ).toFixed(1));
 if (Q.dnvp_ideology === "Radical") Q.far_right_coalition_wurttemberg = parseFloat((Q.dnvp_wl + Q.nsdap_wl).toFixed(1));
 if (Q.dnf_formed) Q.far_right_coalition_wurttemberg = parseFloat((Q.dnf_wl + Q.nsdap_wl).toFixed(1));
 
@@ -154,6 +155,12 @@ if (Q.in_z_majority_wurttemberg) {
     Q.was_in_grand_coalition_wurttemberg = 1
 } else if (Q.in_bourgeois_coalition_wurttemberg) {
     Q.was_in_bourgeois_coalition_wurttemberg = 1
+} else if (Q.in_christian_coalition_wurttemberg) {
+    Q.in_christian_coalition_wurttemberg = 1
+} else if (Q.in_christian_coalition_toleration_wurttemberg) {
+    Q.in_christian_coalition_tolerationwurttemberg = 1
+} else if (Q.in_right_coalition_wurttemberg) {
+    Q.in_right_coalition_wurttemberg = 1
 } else if (Q.in_far_right_coalition_wurttemberg) {
     Q.was_in_far_right_coalition_wurttemberg = 1
 }
@@ -164,6 +171,9 @@ Q.in_z_majority_wurttemberg = 1;
 Q.in_weimar_coalition_wurttemberg = 0;
 Q.in_grand_coalition_wurttemberg = 0;
 Q.in_bourgeois_coalition_wurttemberg = 0;
+Q.in_christian_coalition_wurttemberg = 0;
+Q.in_christian_coalition_toleration_wurttemberg = 0;
+Q.in_right_coalition_wurttemberg = 0;
 Q.in_far_right_coalition_wurttemberg = 0;
 !}
 on-display: {!
@@ -357,6 +367,10 @@ Grand Coalition (<span style="color: #E3000F;">**SPD**</span> + <span style="col
 
 Bourgeois Coalition (<span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span> ?] + <span style="color: #C0A054;">**DVP**</span> [? if kvp_formed: + <span style="color: #455B95;">**KVP**</span>?][? if cnblp_exist: + <span style="color: #006400;">**WBWB**</span>?][? if csvd_exist: + <span style="color: #8ED8E4;">**CSVD**</span>?][? if csrp_exist: + <span style="color: #FF6B21;">**CSRP**</span>?][? if aspd_exist and aspd_ideology = "Moderate": + <span style="color: #FE9E00;">**ASPD**</span>?] + <span style="color: #909090;">**Others**</span>): [+ bourgeois_coalition_wurttemberg +]%
 
+<span style="color: #3E88B3;">**Bürgerblock**</span> Coalition (<span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span> ?] + <span style="color: #C0A054;">**DVP**</span> [? if kvp_formed: + <span style="color: #455B95;">**KVP**</span>?] + <span style="color: #3E88B3;">**DNVP**</span>): [+ right_coalition_wurttemberg +]%
+
+Christian Coalition (<span style="color: #000000;">**Z**</span> + <span style="color: #3E88B3;">**DNVP**</span> + <span style="color: #909090;">**Others**</span>): [+ christian_coalition_wurttemberg +]%
+
 Far-Right Coalition (<span style="color: #954B00;">**NSDAP**</span> + [? if dnvp_ideology = "Radical": <span style="color: #3F7BC1;">**DNVP**</span>?][? if dnf_formed: <span style="color: #003755;">**DNF**</span>?]): [+ far_right_coalition_wurttemberg +]%
 
 There are some potential coalition arrangements.
@@ -367,6 +381,9 @@ There are some potential coalition arrangements.
 - @weimar_coalition_wurttemberg
 - @grand_coalition_wurttemberg
 - @bourgeois_coalition_wurttemberg
+- @right_coalition_wurttemberg
+- @christian_coalition_toleration_wurttemberg
+- @christian_coalition_wurttemberg
 - @far_right_coalition_wurttemberg
 - @no_majority
 
@@ -399,6 +416,36 @@ A Bourgeois Coalition is formed.
 
 - @wurttemberg_sp
 
+@right_coalition_wurttemberg
+title: We can form a <span style="color: #3E88B3;">**Bürgerblock**</span> Coalition.
+view-if: right_coalition_wurttemberg >= 50
+subtitle: <span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span> ?] + <span style="color: #C0A054;">**DVP**</span> [? if kvp_formed: + <span style="color: #455B95;">**KVP**</span>?] + <span style="color: #3E88B3;">**DNVP**</span> ([+ right_coalition_wurttemberg +]%)
+on-arrival: in_right_coalition_wurttemberg = 1; z_wurttemberg = 1;
+
+A <span style="color: #3E88B3;">**Bürgerblock**</span> Coalition is formed.
+
+- @wurttemberg_sp
+
+@christian_coalition_toleration_wurttemberg
+title: We can form a Christian Coalition.
+view-if: christian_coalition_toleration_wurttemberg >= 50 and christian_coalition_wurttemberg < 50
+subtitle: <span style="color: #000000;">**Z**</span> + <span style="color: #3E88B3;">**DNVP**</span> + <span style="color: #909090;">**Others**</span> + <span style="color: #C0A054;">**DVP**</span> toleration ([+ christian_coalition_toleration_wurttemberg +]%)
+on-arrival: in_christian_coalition_toleration_wurttemberg = 1; z_wurttemberg = 1;
+
+A Christian Coalition is formed with the toleration of the <span style="color: #C0A054;">**DVP**</span>.
+
+- @wurttemberg_sp
+
+@christian_coalition_wurttemberg
+title: We can form a Christian Coalition.
+view-if: christian_coalition_wurttemberg >= 50
+subtitle: <span style="color: #000000;">**Z**</span> + <span style="color: #3E88B3;">**DNVP**</span> + <span style="color: #909090;">**Others**</span> ([+ christian_coalition_wurttemberg +]%)
+on-arrival: in_christian_coalition_toleration_wurttemberg = 1; z_wurttemberg = 1;
+
+A Christian Coalition is formed.
+
+- @wurttemberg_sp
+
 @far_right_coalition_wurttemberg
 title: Far-right Coalition is formed!
 view-if: far_right_coalition_wurttemberg >= 50
@@ -426,7 +473,7 @@ title: The coalition will choose the State President.
 
 
 - @bickes: Theodor Bickes
-- @maier: Reinhold Maier
+- @bazille: Wilhelm Bazille
 - @bolz: Eugen Bolz
 
 @bickes
@@ -436,9 +483,9 @@ face-image: img/portraits/BickesTheodor.jpg
 
 Theodor Bickes was chosen.
 
-@maier
-view-if: in_weimar_coalition_wurttemberg or in_grand_coalition_wurttemberg or in_bourgeois_coalition_wurttemberg
-on-arrival: wurttemberg_leader = "Maier"; wurttemberg_leader_party = ddp_name if ddp_exist; wurttemberg_leader_party = dvp_name if lvp_formed or nfvp_formed
+@bazille
+view-if: in_weimar_coalition_wurttemberg or in_right_coalition_wurttemberg or in_christian_coalition_toleration_wurttemberg or in_christian_coalition_wurttemberg
+on-arrival: wurttemberg_leader = "Bazille"; wurttemberg_leader_party = "DNVP"
 face-image: img/portraits/MaierReinhold.jpg
 
 Reinhold Maier was chosen.
