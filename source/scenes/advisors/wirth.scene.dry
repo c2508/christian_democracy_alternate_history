@@ -7,7 +7,7 @@ view-if: wirth_advisor = 1
 
 = Joseph Wirth
 
-Wirth is a former chancellor and figure of the <span style="color: #000000;">**Center's**</span> left wing who has been devotedly republican, to the extent of angering his former party members. He is a strong supporter of maintaining democracy and cooperation with the <span style="color: #c00000;">**SPD**</span>.
+Wirth is a former chancellor and figure of the <span style="color: #000000;">**Center's**</span> <span style="color: #FF7F00;">Christian Left</span> wing who has been devotedly republican, to the extent of angering his former party members. He is a strong supporter of maintaining democracy and cooperation with the <span style="color: #c00000;">**SPD**</span>.
 
 - @police_affairs
 - @spd_cooperation
@@ -20,7 +20,7 @@ Wirth is a former chancellor and figure of the <span style="color: #000000;">**C
 title: Police affairs 
 subtitle: We can set our police policy. 
 choose-if: advisor_action_timer == 0 and z_in_government and interior_minister_party == "Z"
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_in_government : The <span style="color: #c00000;">SPD</span> is not in government. ?][? if interior_minister_party != "SPD": The <span style="color: #c00000;">SPD</span> does not have the Interior ministry. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not z_in_government : The <span style="color: #000000;">**Center Party**</span> is not in government. ?][? if interior_minister_party != "Z": The <span style="color: #000000;">**Center Party**</span> does not have the Interior ministry. ?]
 on-arrival: advisor_action_timer = 6; police_timer -= 6; last_advisor_action = 1
 go-to: police
 
@@ -35,11 +35,13 @@ Wirth was in the <span style="color: #c00000;">**SPD**</span> before and is able
 
 @build_reichsbanner
 title: Reichsbanner
-subtitle: Wirth supports providing more resources to the Reichsbanner.
+subtitle: Wirth supports providing more resources to the <span style="color: #c00000;">**Reichbanner**</span>.
 choose-if: advisor_action_timer = 0 and z_rb = 1 and z_endorse_rb = 1
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if z_rb = 0 : The <span style="color: #000000;">**Center Party**</span> is not part of the <span style="color: #c00000;">**Reichbanner**</span>. ?][? if z_endorse_rb = 0 : The <span style="color: #000000;">**Center Party**</span> does not officially endorse the <span style="color: #c00000;">**Reichbanner**</span>. ?]
-on-arrival: advisor_action_timer = 6; reichsbanner_timer -= 6; last_advisor_action = 1
-go-to: reichsbanner 
+on-arrival: advisor_action_timer = 6; reichsbanner_timer -= 6; last_advisor_action = 1; z_dominance += 2; rb_strength += 50; rb_militancy += 0.02
+
+Wirth has encouraged more members of our party to join the <span style="color: #c00000;">**Reichbanner**</span>.
+
 
 @democratic_rally
 title: Rally for democracy
