@@ -22,7 +22,7 @@ Whether the government shall fall is dependent on the vote
 @tolerate
 title: Can the <span style="color: #c00000;">**SPD**</span> be persuaded to tolerate us?
 subtitle:  The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> will enter the government. 
-view-if: grand_coalition >= 50 and right_strength < 40 and left_strength > 20 and spd_relation > 40 and ddp_relation > 25;
+view-if: grand_coalition >= 50 and right_strength < 40 and left_strength > 20 and spd_relation > 40 and ddp_relation > 25
 on-arrival: spd_toleration = 1; pro_republic -= 3; in_right_coalition = 0;
 
 By supporting the government, the <span style="color: #c00000;">**SPD**</span> has essentially entered into a toleration arrangement with us. They will not have a voice in the government, but we will have to fufill our concessions to them. The right of our party opposes this plan, and would rather that we hold new elections.
