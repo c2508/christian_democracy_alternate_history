@@ -9,17 +9,14 @@ face-image: img/bankrun.jpg
 
 = Black Thursday
 
-The stock market in America has had its biggest crash in history. It is too early to tell what the international effects will be, but it cannot be good. Our economy is already feeling the effects - unemployment will rise even more, and wages will fall. As always, it is the capitalists' crisis, and the workers' burden.
+Wall Street has had its biggest crash in history, with its effects being felt everywhere around the world, especially in Europe. With Germany's heavy dependence on post-war American loans, the meltdown of the American economy is sure to impact us greatly, which will put the unemployment insurance system under further strain. The Roaring Twenties have come to an abrupt halt... 
 
 
-- @cap: It is the nature of capitalism...
+
 - @do_something: We must do something to stop the suffering...
 
-@cap
-
-Perhaps this is simply one of the periodic crises of capitalism. Perhaps this moment will simply pass.
 
 @do_something
 on-arrival: crisis_urgency += 1
 
-What can we do to staunch the workers' suffering? It is becoming a hotly debated question.
+What can we do to staunch the suffering? It is becoming a hotly debated question.
