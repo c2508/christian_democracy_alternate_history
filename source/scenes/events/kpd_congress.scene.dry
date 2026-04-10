@@ -43,26 +43,28 @@ I HATE THE KPD
 - @resultskpd: The party votes...
   
 @resultskpd
-go-to: fascist if (kpd_points > 3); coup if (kpd_points > 40); united if (kpd_points > 3 and kpd_points < 40)
+go-to: fascist if (kpd_points < 3); coup if (kpd_points > 40); united if (kpd_points > 3 and kpd_points < 40)
 
 - @fascist: The <span style="color: #700000;">**KPD**</span> adopts the Third Period thesis of 'Social Fascism'.
-- @united: The <span style="color: #700000;">**KPD**</span> continues the Second Period thesis of the ' United Front '.
-- @coup: The <span style="color: #700000;">Concillators</span> wrest control of the party from the <span style="color: #700000;">Stalinists</span> and continue the Second Period thesis of the 'United Front'.
+- @united: The <span style="color: #700000;">**KPD**</span> continues the Second Period thesis of the 'United Front'.
+- @coup: The <span style="color: #700000;">**Concillators**</span> wrest control of the party from the <span style="color: #700000;">**Stalinists**</span> and continue the Second Period thesis of the 'United Front'.
 
 @fascist
+view-if: kpd_points < 3
 on-arrival: spd_relation += 4; spd_worker -= 3; kpd_worker += 2; pro_republic -= 3
 face-image: img/portraits/JoosJoseph.jpg
 
 WIP                                                                                                           
                                                                                                              
 @united
+view_if: kpd_points > 3 and kpd_points < 40
 on-arrival: z_worker += 1
 face-image: img/portraits/JoosJoseph.jpg
 
 WIP
 
 @coup
-subtitle: The <span style="color: #700000;">Stalinists</span> have been decisively defeated in a party vote. 
+view-if: kpd_points > 40
 on-arrival: kpd_party_leader = "Concillators"
 face-image: img/portraits/KaasLudwig.jpg
 
