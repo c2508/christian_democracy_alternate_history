@@ -23,7 +23,7 @@ In our media and campaign materials, who should we consider as our main opponent
 @anti_dem
 on-arrival: enemies = "anti-democratic parties"; center_strength += 5; left_labor_strength += 5; right_dissent += 5; workers_kpd -= 2; old_middle_nsdap -= 2; rural_dnvp -= 2; dnvp_relation -= 10
 
-Attacking the anti-democratic parties is popular among all but the right wing of our party, who would prefer to be fighting the <span style="color: #c00000;">**SPD**</span parties. This might also hamper our ability to reconcile with the <span style="color: #3E88B3;">**DNVP**</span> in the future.
+Attacking the anti-democratic parties is popular among all but the right wing of our party, who would prefer to be fighting the <span style="color: #c00000;">**Marxist**</span> parties. This might also hamper our ability to reconcile with the <span style="color: #3E88B3;">**DNVP**</span> in the future.
 
 @far_right_and_left
 on-arrival: enemies = "far right and left"; left_dissent -= 5; left_labor_dissent -= 5; center_dissent -= 5; right_labor_dissent -= 5; right_dissent -= 5; old_middle_nsdap -= 3; workers_kpd -= 3;
