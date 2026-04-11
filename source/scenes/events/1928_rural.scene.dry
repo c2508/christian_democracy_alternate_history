@@ -67,7 +67,7 @@ go-to: ministries
 We shall allocate more government funds to support agriculture cooperatives.
 
 @trade_war
-title: Prolong the trade war with Poland until at least 1932 
+title: Prolong the trade war with <span style="color: #DC143C;">Pol</span><span style="color: #FFFFFF;">and</span> until at least 1932 
 subtitle: Continuing the trade war is popular amongst the majority of our party.
 tags: demands
 choose-if: trade_war = 0
@@ -75,7 +75,7 @@ view-if: trade_war = 0
 on-arrival: rpm_points += 3; trade_war += 1
 go-to: ministries
 
-We shall continue the trade war with Poland. 
+We shall continue the trade war with <span style="color: #DC143C;">Pol</span><span style="color: #FFFFFF;">and</span>. 
 
 @foreclosure
 title: Impose a rent moratorium and postpone the foreclosure of insolvent farms
@@ -131,7 +131,7 @@ go-to: ministries
 We have decided to drop this concession.
 
 @drop_trade_war
-title: Prolong the trade war with Poland until at least 1932 
+title: Prolong the trade war with <span style="color: #DC143C;">Pol</span><span style="color: #FFFFFF;">and</span> until at least 1932 
 subtitle: Drop this concession
 tags: drop_demands
 choose-if: trade_war = 1
