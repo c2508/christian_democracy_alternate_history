@@ -430,7 +430,7 @@ view-if: christian_coalition_toleration_wurttemberg >= 50 and christian_coalitio
 subtitle: <span style="color: #000000;">**Z**</span> + <span style="color: #3E88B3;">**DNVP**</span> + <span style="color: #909090;">**Others**</span> + <span style="color: #C0A054;">**DVP**</span> toleration ([+ christian_coalition_toleration_wurttemberg +]%)
 on-arrival: in_christian_coalition_toleration_wurttemberg = 1; z_wurttemberg = 1;
 
-A Christian Coalition is formed with the toleration of the <span style="color: #C0A054;">**DVP**</span>.
+With the Wurttemberg Chapter's dislike of the <span style="color: #c00000;">**SPD**</span>, a B<span style="color: #3E88B3;">**Bürgerblock**</span> would have been the obvious choice. However, with the animosity of the liberals towards the <span style="color: #3E88B3;">**DNVP's**</span> William Bazille, it appears that such a coalition is unlikely, especially due to Bazille's <span style="color: #385A38;">agrarian</span> bias during his tenure as Minister of Education. As such, a Christian Coalition will be formed, with the <span style="color: #C0A054;">**DVP**</span> and <span style="color: #909090;">**minor parties**</span> willing to at least abstain on motions of no confidence. 
 
 - @wurttemberg_sp
 
