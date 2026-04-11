@@ -44,7 +44,7 @@ on-arrival: east_relation += 2;
 We also aim to improve relations with our eastern neighbors, <span style="color: #DC143C;">Pol</span><span style="color: #FFFFFF;">and</span> and <span style="color: #11457E;">Czech</span><span style="color: #FFFFFF;">oslo</span><span style="color: #D7141A;">vakia</span>, who are rightfully terrified of German aggression. Hopefully we can convince them of our peaceful intentions.
 
 @trade_war
-title: Stop the trade war with Poland
+title: Stop the trade war with <span style="color: #DC143C;">Pol</span><span style="color: #FFFFFF;">and</span>
 choose-if: budget >= 1
 subtitle: -1 budget
 on-arrival: inflation -= 0.5; workers_z += 2*(1-dissent); unemployed_z += 2*(1-dissent); rural_z -= 1; old_middle_z -= 1; west_relation += 1; east_relation += 1; eu_progress += 1 if eu_progress > 0; economic_growth += 0.4; nationalism -= 3; dnvp_relation -= 5; right_dissent += 5; nationalism -= 5*(1-dissent)
