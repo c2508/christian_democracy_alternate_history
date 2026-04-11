@@ -159,7 +159,7 @@ This is highly unexpected, and those on the left wing of the <span style="color:
 @z_chancellor_wirth
 title: Let Joseph Wirth be chancellor.
 view-if: z_party_leader == "Joos"
-subtitle: Wirth is on the left wing of the <span style="color: #000000;">**Center Party**</span> . We will need to grant the <span style="color: #c00000;">**SPD**</span> more influence in the government.
+subtitle: Wirth is part of the <span style="color: #FF7F00;">Christian Left</span> in the <span style="color: #000000;">**Center Party**</span>. We will need to grant the <span style="color: #E3000F;">**SPD**</span> more influence in the government.
 on-arrival: left_labor_dissent -= 10; spd_relation += 6; ddp_relation += 3; kpd_relation -= 5; in_grand_coalition = 1 if in_weimar_coalition == 0; chancellor = "Wirth"; chancellor_party = "Z"; spd_in_government = 1; leverage += 5
 go-to: election_1928.ministries
 
