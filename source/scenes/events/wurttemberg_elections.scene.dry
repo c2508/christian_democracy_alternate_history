@@ -133,7 +133,7 @@ Q.grand_coalition_wurttemberg = parseFloat((Q.spd_wl + Q.ddp_wl + Q.z_wl + Q.dvp
 
 Q.bourgeois_coalition_wurttemberg = parseFloat((Q.ddp_wl + Q.z_wl + Q.dvp_wl + Q.other_wl + Q.kvp_wl ).toFixed(1));
 Q.christian_coalition_toleration_wurttemberg =  parseFloat((Q.z_wl + Q.dnvp_wl + Q.dvp_wl + Q.cnblp.wl + Q.other_wl).toFixed(1));
-Q.christian_coalition_wurttemberg =  parseFloat((Q.z_wl + Q.dnvp_wl + Q.other_wl).toFixed(1));
+Q.christian_coalition_wurttemberg =  parseFloat((Q.z_wl + Q.dnvp_wl + Q.cnblp.wl + Q.other_wl ).toFixed(1));
 Q.right_coalition_wurttemberg = parseFloat(( Q.z_wl + Q.dvp_wl + Q.other_wl + Q.kvp_wl + Q.dnvp_wl).toFixed(1));
 if (Q.dnvp_ideology === "Radical") Q.far_right_coalition_wurttemberg = parseFloat((Q.dnvp_wl + Q.nsdap_wl).toFixed(1));
 if (Q.dnf_formed) Q.far_right_coalition_wurttemberg = parseFloat((Q.dnf_wl + Q.nsdap_wl).toFixed(1));
