@@ -18,7 +18,7 @@ In addition to being a political party, the <span style="color: #000000;">Center
 - @radio_4: Keep on supporting our radio network. 
 - @charity: Fund more Catholic charities.
 - @culture: Fund sports leagues, educational, and cultural programs.
-- @rb: Fund the Reichsbanner, our self-defense organization.
+- @rb: Fund the <span style="color: #c00000;">**Reichsbanner**</span>, our self-defense organization.
 - @youth: Fund the Windthorstbund, our Catholic youth organization.
 - @nothing: Do not increase funding for any program.
 - @easy_discard
@@ -71,7 +71,7 @@ We have increased funding to Catholic Charities. [? if black_thursday_seen > 0 :
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
-on-arrival: resources -= 1; cultural_organizations += 1; left_dissent -= 6; center_dissent -= 6; left_labor_dissent -= 6; right_labor_dissent -= 6; right_dissent -= 6; young_conservative_dissent -= 6
+on-arrival: resources -= 1; cultural_organizations += 1; left_dissent -= 6; center_dissent -= 6; left_labor_dissent -= 6; right_labor_dissent -= 6; right_dissent -= 6; young_conservatives_dissent -= 6
 
 It is not enough for the <span style="color: #000000;">Center Party</span> to solely be a political party. The Catholic Workers Association, our schools and libraries are crucial to our members' lives. Funding these organizations makes our members more committed to the party, even when our policies might not be to their liking.
 
@@ -80,11 +80,11 @@ It is not enough for the <span style="color: #000000;">Center Party</span> to so
 
 @rb
 choose-if: resources > 0 and z_endorse_rb = 1
-unavailable-subtitle: [? if resources < 0: Not enough resources. ?][? if z_endorse_rb = 0: The <span style="color: #000000;">Center Party</span> has not offically endorsed the Reichsbanner yet. ?]
+unavailable-subtitle: [? if resources < 0: Not enough resources. ?][? if z_endorse_rb = 0: The <span style="color: #000000;">Center Party</span> has not offically endorsed the <span style="color: #c00000;">**Reichsbanner**</span> yet. ?]
 subtitle: -1 resources
 on-arrival: resources -= 1; rb_strength  += 100; rb_militancy += 0.01; reichsbanner_timer = 0; funded_reichsbanner += 1
 
-We have increased recruiting to the Reichsbanner.
+We have increased recruiting to the <span style="color: #c00000;">**Reichsbanner**</span>.
 
 @youth
 choose-if: resources > 0
@@ -92,7 +92,7 @@ unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
 on-arrival: resources -= 1; rb_strength += 50; rb_militancy += 0.02; young_socialists += 1; left_strength += 5; neorevisionist_strength += 5; radicalization += 1;
 
-Our new youth members flock to the left or neorevisionist wings of the party, and also bring new radicalism to the Reichsbanner.
+Our new youth members flock to the <span style="color: #FF7F00;">left</span> wing of the party, and also bring new radicalism to the <span style="color: #c00000;">**Reichsbanner**</span>.
 
 @nothing
 
