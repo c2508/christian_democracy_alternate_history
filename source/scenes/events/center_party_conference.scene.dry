@@ -12,7 +12,7 @@ new-page: true
 
 Wilhelm Marx, former <span style="color: #000000;">**Center Party**</span> chancellor and presidential candidate, has chosen to resign from leadership of the <span style="color: #000000;">**Center Party**</span> . Now, the party holds a conference to replace him. Several names have been floated around, including Heinrich Brauns, Joseph Joos and Adam Stegerwald.
 
-The party has splintered in two over the vote to decide his sucessor. The nominee of the National Committee is Christian Trade Union chairman Adam Stegerwald. On the other hand, there is Joseph Joos, who has been more supportive of cooperation with the <span style="color: #c00000;">**SPD**</span> than most of the party. However, if the vote remains deadlocked, a compromise candidate will be selected instead.
+The party has splintered in two over the vote to decide his sucessor. The nominee of the National Committee is Christian Trade Union (<span style="color: #000000;">**DGB**</span>) chairman Adam Stegerwald. On the other hand, there is Joseph Joos, who has been more supportive of cooperation with the <span style="color: #c00000;">**SPD**</span> than most of the party. However, if the vote remains deadlocked, a compromise candidate will be selected instead.
 
 - @stegerwald: The <span style="color: #000000;">Center Party</span> elects Adam Stegerwald as the party chair. 
 - @joos: The <span style="color: #000000;">Center Party</span> to select Joseph Joos as the party chair.
@@ -20,7 +20,7 @@ The party has splintered in two over the vote to decide his sucessor. The nomine
 
 @stegerwald
 unavailable-subtitle: [? if right_dissent > 15: There is too much infighting with the right of the party. ?][? if right__labor_dissent > 15: The white collar unions are still unhappy with Stegerwald's decision oppose wage increases in 1927. ?][? if right_labor_strength < 45: Stegerwald does not have enough influence to secure the nomination. ?] 
-subtitle: Stegerwald belongs to the Right Labor faction and would rather work with the political right than the SPD.
+subtitle: Stegerwald belongs to the right labor faction and would rather work with the political right than the <span style="color: #c00000;">**SPD**</span>.
 on-arrival: z_party_leader = "Stegerwald"; spd_relation -= 8; dnvp_relation += 8; 
 choose-if: right_dissent <= 15 and right_labor_dissent <= 15 and right_labor_strength >= 35
 
@@ -28,12 +28,12 @@ Adam Stegerwald has been elected as the chairman of the [? if z_party_name != "C
 
 @joos
 unavailable-subtitle: [? if right_dissent <= 15 and right_labor_dissent <= 15 and right_labor_strength >= 30: Stegerwald has a strong following within the party. ?][? if not (right_dissent <= 15 and right_labor_dissent <= 15 and right_labor_strength >= 30): The vote is deadlocked. ?]
-subtitle: Joos belongs to the left labor faction and supports increased cooperation with the <span style="color: #c00000;">**SPD**</span>. However, he might have trouble controlling the right within our party. 
+subtitle: Joos belongs to the <span style="color: #FF7F00;">left</span> and supports increased cooperation with the <span style="color: #c00000;">**SPD**</span>. However, he might have trouble controlling the right within our party. 
 choose-if: spd_relation >= 67 and left_labor_strength >= right_strength and left_labor_strength >= right_labor_strength and not (right_dissent <= 15 and right_labor_dissent <= 15 and right_labor_strength >= 35)
 on-arrival: z_party_leader = "Joos"; catholics_spd += 3; workers_z += 3*(1-dissent); z_party_leader1 += 1; spd_relation += 8*(1-dissent); z_rural -= 2*(1-dissent); left_labour_strength += 4*(1-dissent); right_dissent += 3; pro_republic += 4
 face-image: img/portraits/JoosJoseph.jpg
 
-With the National Council's rejection of Stegerwald, the party's close relations with the <span style="color: #c00000;">**SPD**</span> has led the delegates to nominate Joseph Joos as chairman to continue further cooperation with the <span style="color: #c00000;">**SPD**</span>. Hailing from the Left Labor Wing, he also increases the appeal of the <span style="color: #000000;">**Center Party**</span> to workers. 
+With the National Council's rejection of Stegerwald, the party's close relations with the <span style="color: #c00000;">**SPD**</span> has led the delegates to nominate Joseph Joos as chairman to continue further cooperation with the <span style="color: #c00000;">**SPD**</span>. Hailing from the left labor faction, he also increases the appeal of the <span style="color: #000000;">**Center Party**</span> to workers. 
 
 
 @kaas
