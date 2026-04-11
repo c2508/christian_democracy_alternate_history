@@ -131,7 +131,7 @@ if (Q.aspd_exist && Q.aspd_ideology == "Moderate") Q.weimar_coalition_wurttember
 
 Q.grand_coalition_wurttemberg = parseFloat((Q.spd_wl + Q.ddp_wl + Q.z_wl + Q.dvp_wl + Q.csrp_wl).toFixed(1));
 
-Q.bourgeois_coalition_wurttemberg = parseFloat((Q.ddp_wl + Q.z_wl + Q.dvp_wl + Q.other_wl + Q.cnblp_wl + Q.kvp_wl ).toFixed(1));
+Q.bourgeois_coalition_wurttemberg = parseFloat((Q.ddp_wl + Q.z_wl + Q.dvp_wl + Q.other_wl + Q.kvp_wl ).toFixed(1));
 Q.christian_coalition_wurttemberg =  parseFloat((Q.z_wl + Q.dnvp_wl + Q.dvp_wl + Q.other_wl).toFixed(1));
 Q.christian_coalition_toleration_wurttemberg =  parseFloat((Q.z_wl + Q.dnvp_wl + Q.other_wl).toFixed(1));
 Q.right_coalition_wurttemberg = parseFloat(( Q.z_wl + Q.dvp_wl + Q.other_wl + Q.kvp_wl + Q.dnvp_wl).toFixed(1));
@@ -257,8 +257,8 @@ if (Q.csvd_exist && Q.csvd_wl) {
 if (Q.cnblp_exist && Q.cnblp_wl) {
     data.push({
         "id": "wbwb",
-        "legend": "WBWB",
-        "name": "WBWB",
+        "legend": "CNBLP",
+        "name": "CNBLP",
         "seats": Math.round(Q.cnblp_wl*0.8),
     });
 }
@@ -342,7 +342,7 @@ go-to: coalition_menu
 
 [? if csvd_exist: {!<tr><td><div class="box" style='background-color:#8ED8E4'> </div> !} CSVD: {!</td><td>!} [+ csvd_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_csvd_wurttemberg +] {!</td><td>!} [+ csvd_wl +]% {!</td><td>!} [+ change_csvd_wl +] {!</td><td>!} ?]
 
-[? if cnblp_exist: {!<tr><td><div class="box" style='background-color:#006400'> </div> !} WBWB: {!</td><td>!} [+ cnblp_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_cnblp_wurttemberg +] {!</td><td>!} [+ cnblp_wl +]% {!</td><td>!} [+ change_cnblp_wl +] {!</td><td>!} ?]
+[? if cnblp_exist: {!<tr><td><div class="box" style='background-color:#006400'> </div> !} CNBLP: {!</td><td>!} [+ cnblp_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_cnblp_wurttemberg +] {!</td><td>!} [+ cnblp_wl +]% {!</td><td>!} [+ change_cnblp_wl +] {!</td><td>!} ?]
 
 [? if kvp_formed: {!<tr><td><div class="box" style='background-color:#455B95'> </div> !} KVP: {!</td><td>!} [+ kvp_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_kvp_wurttemberg +] {!</td><td>!} [+ kvp_wl +]% {!</td><td>!} [+ change_kvp_wl +] {!</td></tr>!} ?]
 
@@ -405,7 +405,7 @@ We will form a Grand Coalition.
 @bourgeois_coalition_wurttemberg
 title: We can form a Bourgeois Coalition.
 view-if: bourgeois_coalition_wurttemberg >= 50
-subtitle: <span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span> ?] + <span style="color: #C0A054;">**DVP**</span> [? if kvp_formed: + <span style="color: #455B95;">**KVP**</span>?][? if cnblp_exist: + <span style="color: #006400;">**WBWB**</span>?][? if csvd_exist: + <span style="color: #8ED8E4;">**CSVD**</span>?][? if csrp_exist: + <span style="color: #FF6B21;">**CSRP**</span>?][? if aspd_exist and aspd_ideology = "Moderate": + <span style="color: #FE9E00;">**ASPD**</span>?] + <span style="color: #909090;">**Others**</span> ([+ bourgeois_coalition_wurttemberg +]%)
+subtitle: <span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span> ?] + <span style="color: #C0A054;">**DVP**</span> [? if kvp_formed: + <span style="color: #455B95;">**KVP**</span>?] + <span style="color: #909090;">**Others**</span> ([+ bourgeois_coalition_wurttemberg +]%)
 on-arrival: in_bourgeois_coalition_wurttemberg = 1; z_wurttemberg = 1;
 
 A Bourgeois Coalition is formed.
