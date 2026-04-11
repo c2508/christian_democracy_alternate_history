@@ -80,7 +80,7 @@ It is not enough for the <span style="color: #000000;">Center Party</span> to so
 
 @rb
 choose-if: resources > 0 and z_endorse_rb = 1
-unavailable-subtitle: [? if resources < 0: Not enough resources. ?][? if z_endorse_rb = 0: The <span style="color: #000000;">**Center Party**</span> has not offically endorsed the <span style="color: #c00000;">**Reichsbanner**</span> yet. ?]
+unavailable-subtitle: [? if resources < 1: Not enough resources. ?][? if z_endorse_rb = 0: The <span style="color: #000000;">**Center Party**</span> has not offically endorsed the <span style="color: #c00000;">**Reichsbanner**</span> yet. ?]
 subtitle: -1 resources
 on-arrival: resources -= 1; rb_strength  += 100; rb_militancy += 0.01; reichsbanner_timer = 0; funded_reichsbanner += 1
 
