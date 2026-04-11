@@ -1,5 +1,5 @@
 title: Right coalition in Prussia collapses
-subtitle: The right-wing coalition in Prussia has collapsed...
+subtitle: The <span style="color: #3E88B3;">**Bürgerblock**</span> coalition in Prussia has collapsed...
 new-page: true
 tags: event
 view-if: dnf_formed and year = 1928 and month = 11 and (in_center_right_coalition_prussia or in_right_coalition_prussia)
