@@ -2,7 +2,7 @@ title: The formation of a true interconfessional Christian Party
 new-page: true
 subtitle: The tower falls...
 tags: event
-on-arrival: catholic_z -= 10; worker_z += 5(1-dissent); old_middle_z += 5(1-dissent); new_middle_z += 5(1-dissent); rural_z += 5(1-dissent); unemployed_z += 5(1-dissent); right_labor_strength += 15; dnvp_relations += 5; left_labor_dissent += 5; right_dissent += 10; left_dissent += 15
+on-arrival: catholic_z -= 10; worker_z += 5*(1-dissent); old_middle_z += 5*(1-dissent); new_middle_z += 5*(1-dissent); rural_z += 5*(1-dissent); unemployed_z += 5*(1-dissent); right_labor_strength += 15; dnvp_relations += 5; left_labor_dissent += 5; right_dissent += 10; left_dissent += 15
 view-if: year > 1929 and peoples_party_support >= 6 and z_party_leader = "Stegerwald" or z_party_leader = "Kaiser" or z_party_leader = "Adenauer" and prussian_concordat = 1 and right_labor_strength >= left_strength and right_labor_strength >= left_labor_strength
 priority: 1
 max-visits: 1
