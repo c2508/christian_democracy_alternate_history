@@ -93,7 +93,7 @@ This will relieve the financial burden of the farmers.
 title: No more concessions
 subtitle: We shall not make any more concessions
 tags: demands
-go-to: high if (rpm_points > 9); low if (rpm_points < 3); medium if (rpm_points > 2 ) and (rpm_points < 10 ) 
+go-to: low if (rpm_points > 9); high if (rpm_points < 3); medium if (rpm_points > 2 ) and (rpm_points < 10 ) 
 
 We shall see if the farmers are satisfied with these concessions.
 
