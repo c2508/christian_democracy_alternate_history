@@ -436,7 +436,7 @@ A Christian Coalition is formed with the toleration of the <span style="color: #
 title: We can form a Christian Coalition.
 view-if: christian_coalition_wurttemberg >= 50
 subtitle: <span style="color: #000000;">**Z**</span> + <span style="color: #3E88B3;">**DNVP**</span> + <span style="color: #909090;">**Others**</span> ([+ christian_coalition_wurttemberg +]%)
-on-arrival: in_christian_coalition_toleration_wurttemberg = 1; z_wurttemberg = 1;
+on-arrival: in_christian_coalition_wurttemberg = 1; z_wurttemberg = 1;
 
 A Christian Coalition is formed.
 
