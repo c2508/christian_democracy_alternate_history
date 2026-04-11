@@ -1,0 +1,15 @@
+title: The formation of a true interconfessional Christian Party
+new-page: true
+subtitle: The tower falls...
+tags: event
+on-arrival: rural_z += 3; rural_dnvp += 3; rural_other += 2; rural_nsdap -= 5; right_labor_strength += 15; dnvp_relations += 5; left_labor_dissent += 5; right_dissent += 10; left_dissent += 15
+view-if: year > 1929 and peoples_party_support >= 6 and z_party_leader = "Stegerwald" or z_party_leader = "Kaiser" or z_party_leader = "Adenauer" and prussian_concordat = 1  right_labor_strength >= left_strength and right_labor_strength >= left_labor_strength
+priority: 1
+max-visits: 1
+
+= The <span style="color: #000000;">**Center Party**</span> begins reaching out
+
+In an effort to act as a counterweight to the growing strength of the Rural People's Movement, the bulk of organised agrculture has formed an umbrella organisation called the <span style="color: #0dba1e;">**Green Front**</span>, affording agricultural interests in the <span style="color: #000000;">**Center Party**</span> and <span style="color: #3E88B3;">**DNVP**</span> more influence in their respective parties.
+Built on the negotiations back in March, the <span style="color: #0dba1e;">**Green Front**</span> aims for the economic rehabiltion of the German farmer in the face of growing economic hardship.
+With members from the <span style="color: #3E88B3;">**DNVP**</span>, <span style="color: #909090;">**CNBLP**</span> and <span style="color: #909090;">**DBP**</span>, this disparate coalition is testament to the increasingly concering plight of farmers in the countryside.
+[? if agriculture_minister_party = 'Z': As we currently hold the Agriculture Ministry, the onus falls on us to implement the <span style="color: #0dba1e;">**Green Front**</span>'s economic program in the coming months. ?] This increased focus on agricultural issues might alienate our substantial worker base while this extensive cooperation with anti-republican parties has led to outcry from the left of the party.
