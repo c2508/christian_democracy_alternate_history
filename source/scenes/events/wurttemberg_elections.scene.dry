@@ -480,7 +480,7 @@ face-image: img/portraits/BickesTheodor.jpg
 Theodor Bickes was chosen.
 
 @bazille
-view-if: in_weimar_coalition_wurttemberg or in_right_coalition_wurttemberg or in_christian_coalition_toleration_wurttemberg or in_christian_coalition_wurttemberg
+view-if: in_right_coalition_wurttemberg or in_christian_coalition_toleration_wurttemberg or in_christian_coalition_wurttemberg
 on-arrival: wurttemberg_leader = "Bazille"; wurttemberg_leader_party = "DNVP"
 face-image: img/portraits/MaierReinhold.jpg
 
