@@ -154,7 +154,7 @@ We have decided to drop this concession.
 
 
 @low
-on-arrival: dnvp_relation += 8; rural_other -= 2; old_middle_other -= 1; pro_republic += 3; dvp_right += 1; ddp_right += 1; dnvp_leader = "Hergt"
+on-arrival: pro_republic += 3;
 face-image: img/portraits/HergtOscar.jpg
 
 After substantial concessions to the Landvolkbewegung, most farmers are content for now, as is the <span style="color: #000000;">**VdB**</span>, but the more radical elements still agitate against our policies. However, our worker base is unhappy with our capitulation to organised agriculture. In light of rising worker unemployment, this focus on agricultural issues is viewed as blatant pandering to the RLB and <span style="color: #000000;">**VdB**</span>. 
@@ -162,15 +162,14 @@ After substantial concessions to the Landvolkbewegung, most farmers are content 
 Despite the successful talks, Karl Hepp from the <span style="color: #C0A054;">**DVP**</span> and elements from the <span style="color: #3E88B3;">**DNVP's**</span> <span style="color: #385A38;">agrarian</span> wing have formed a new political party called the <span style="color: #909090;">**CNBLP**</span> in response to the preeminence of industrial interests in the <span style="color: #C0A054;">**DVP**</span> and <span style="color: #3E88B3;">**DNVP**</span>. Although the Rural People’s Movement has been pacified, the <span style="color: #909090;">**CNBLP's**</span> appeal as an <span style="color: #385A38;">agrarian</span> <span style="color: #909090;">**special interest**</span> party can only spell trouble for the <span style="color: #C0A054;">**DVP**</span> and <span style="color: #3E88B3;">**DNVP**</span> in the upcoming elections.
 
 @medium
-on-arrival: dnvp_relation -= 8; pro_republic -= 4; new_middle_dnvp -= 2; rural_dnvp -= 2; rural_other += 3; dvp_left += 1; dnvp_leader = "Hugenberg"
-face-image: img/portraits/HugenbergAlfred.jpg
-
+on-arrival: pro_republic -= 2;
+face-image: img/portraits/WestarpKuno.jpg
 Despite some concessions to the Landvolkbewegung, some feel that our policies do not go far enough in helping German farmers, but the <span style="color: #000000;">**VdB**</span>  is satisfied with our handling of the situation. As such, the radical elements of the movement have been significantly empowered and will seek to use this initially moderate movement to resort to increasingly violent acts of protest. This will have a destabilising effect in the countryside and may serve to further radicalise the already disenfranchised rural electorate.
 
 Meanwhile, Karl Hepp from the <span style="color: #C0A054;">**DVP**</span> has formed a new political party called the <span style="color: #909090;">**CNBLP**</span> along with elements from the <span style="color: #3E88B3;">**DNVP's**</span> <span style="color: #385A38;">agrarian</span> wing in response to the preeminence of industrial interests in the <span style="color: #C0A054;">**DVP**</span> and <span style="color: #3E88B3;">**DNVP**</span>. With its appeal as an <span style="color: #385A38;">agrarian</span> <span style="color: #909090;">**special interest**</span> party, this can only spell trouble for the <span style="color: #C0A054;">**DVP**</span> and <span style="color: #3E88B3;">**DNVP**</span> in the upcoming elections
 
 @high
-on-arrival: dnvp_relation += 3; pro_republic -= 2; rural_dnvp -= 1; new_middle_dnvp -= 1; dnvp_leader = "Triumvirate"
+on-arrival: pro_republic -= 5;
 face-image: img/portraits/WestarpKuno.jpg
 
 Talks with the Landvolkbewegung have broken down due to our refusal to offer them any substantial concessions, much to the disapproval of the <span style="color: #000000;">**VdB**</span>. As such, the radical elements of the movement have been significantly empowered and will seek to use this initially moderate movement to resort to increasingly violent acts of protest. This will have a destabilising effect in the countryside and may serve to further radicalise the already disenfranchised rural electorate.
