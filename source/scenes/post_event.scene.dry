@@ -11,7 +11,7 @@ for (var c of Q.classes) {
         }
     }
 }
-    if (Q.month = 1) {
+    if (Q.month = 13) {
         Q.month = 1;
         Q.year += 1;
         Q.resources += Q.dues;
@@ -22,6 +22,9 @@ for (var c of Q.classes) {
         }
     }
 
+ if (Q.month = 1) {
+        Q.resources += Q.dues;
+        } 
 
 Q.pro_republic = Math.round(Q.pro_republic);
 Q.nationalism = Math.round(Q.nationalism);
