@@ -11,7 +11,7 @@ for (var c of Q.classes) {
         }
     }
 }
-    if (Q.month >= 13) {
+    if (Q.month = 1) {
         Q.month = 1;
         Q.year += 1;
         Q.resources += Q.dues;
