@@ -4,8 +4,8 @@ is-special: true
 
 = [? z_in_government: Scheming?][? spd_in_government: The House of Cards?]
 
-[? z_in_government: <div style="text-align: center;">President: Paul von Hindenburg (<span style="color: #808080;">I</span>)</div> ?]
-[? z_in_government: <div><img src="img/portraits/hindenburger.jpg" alt="Paul von Hindenburg" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div> ?]
+[? z_in_government: <div style="text-align: center;">Chancellor: Heinrich Bruning (<span style="color: #000000;">**Z**</span>)</div> ?]
+[? z_in_government: <div><img src="img/portraits/BrüningHeinrich.jpg" alt="Heinrich Bruning" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div> ?]
 [? z_in_government: <p style="text-align: center;margin-bottom: 0;">Favorite: [? if schleicher_strength >= papen_strength: Kurt von Schleicher?][? if schleicher_strength < papen_strength: Franz von Papen?]</p> ?]
 [? z_in_government: <p style="text-align: center;margin-bottom: 5px;">[+ nsdap_chancellor +] chancellorship: [+ hindenburg_hitler_r : hindenburg_hitler +]</p> ?]
 [? z_in_government: <h1>The Camarilla</h1> ?]
