@@ -189,6 +189,17 @@ Q.z_sh = 0;
 Q.z_dominance = 15;
 Q.rb_unity = 55;
 Q.endorse_seen = 0; 
+Q.industrialist_funding = 0
+Q.antitrust_legislation = 0
+Q.low_interest_loans = 0
+Q.agriculture_credits = 0
+Q.trade_war_polan d= 0
+Q.democratic_reform = 0
+Q.bvp_relation = 0
+Q.reunify_fervour = 0
+Q.cnblp_exist = 0
+Q.rubicon_crossed = 0
+
 
 Q.interior_police_strength = 50;
 Q.interior_police_militancy = 1;
