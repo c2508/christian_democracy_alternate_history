@@ -192,7 +192,6 @@ Q.endorse_seen = 0;
 Q.industrialist_funding = 0
 Q.antitrust_legislation = 0
 Q.low_interest_loans = 0
-Q.agriculture_credits = 0
 Q.trade_war_polan d= 0
 Q.democratic_reform = 0
 Q.bvp_relation = 0
