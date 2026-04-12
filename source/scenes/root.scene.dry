@@ -189,7 +189,6 @@ Q.z_sh = 0;
 Q.z_dominance = 15;
 Q.rb_unity = 55;
 Q.endorse_seen = 0; 
-Q.industrialist_funding = 0
 Q.rubicon_crossed = 0
 
 
