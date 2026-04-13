@@ -37,10 +37,10 @@ title: Have a <span style="color: #000000;">**Center Party**</span> or <span sty
 tags: demands
 choose-if: agri_minister = 0
 view-if: agri_minister = 0
-on-arrival: rpm_points += 2; agri_minister += 1
+on-arrival: rpm_points += 2; agri_minister += 1; right_strength += 5;
 go-to: ministries
 
-We shall have the a right wing agriculture minister in the next cabinet.
+We shall have the a conservative agriculture minister in the next cabinet.
 
 @fund
 title: Fund the <span style="color: #000000;">**Center Party**</span> aligned Association of German Farmers’ Association <span style="color: #000000;">**(VdB)**</span> for more low interest loans 
@@ -49,7 +49,7 @@ unavailable-subtitle: Not enough resources.
 choose-if: resources >= 2 and fund = 0
 tags: demands
 view-if: fund = 0
-on-arrival: rpm_points += 3; fund += 1; resources -= 2;
+on-arrival: rpm_points += 3; fund += 1; resources -= 2; right_dissent -= 4; catholic_z += 4*(1-dissent)
 go-to: ministries
 
 While this appeases the Catholic peasants, Protestant farmers are unhappy at their exclusion.
@@ -61,7 +61,7 @@ unavailable-subtitle: Not enough budget.
 tags: demands
 choose-if: coop = 0 and budget >= 1
 view-if: coop = 0
-on-arrival: rpm_points += 3; coop += 1; budget -= 1;
+on-arrival: rpm_points += 3; coop += 1; budget -= 1; economic_growth += 0.3; unemployed -= 0.3; 
 go-to: ministries
 
 We shall allocate more government funds to support agriculture cooperatives.
@@ -72,7 +72,7 @@ subtitle: Continuing the trade war is popular amongst the majority of our party.
 tags: demands
 choose-if: trade_war = 0
 view-if: trade_war = 0
-on-arrival: rpm_points += 3; trade_war += 1
+on-arrival: rpm_points += 3; trade_war += 1; nationalism += 5*(1-dissent); spd_left += 1; z_old_middle += 3*(1-dissent); dnvp_relations += 5; dvp_relations += 5;
 go-to: ministries
 
 We shall continue the trade war with <span style="color: #DC143C;">Pol</span><span style="color: #FFFFFF;">and</span>. 
@@ -84,7 +84,7 @@ unavailable-subtitle: Not enough budget.
 tags: demands
 choose-if: tax_breaks = 0 and budget >= 2
 view-if: tax_breaks = 0
-on-arrival: rpm_points += 5; tax_breaks += 1; budget -= 2;
+on-arrival: rpm_points += 5; tax_breaks += 1; budget -= 2; ddp_relation -= 5; dvp_relation -= 5; ddp_right += 1; economic_growth += 0.5
 go-to: ministries
 
 This will relieve the financial burden of the farmers.
@@ -103,7 +103,7 @@ subtitle: Drop this concession
 tags: drop_demands
 choose-if: agri_minister = 1
 view-if: agri_minister = 1
-on-arrival: rpm_points -= 2; agri_minister -= 1
+on-arrival: rpm_points -= 2; agri_minister -= 1; right_strength -= 5;
 go-to: ministries
 
 We have decided to drop this concession.
@@ -114,7 +114,7 @@ subtitle: Drop this concession +2 resources
 choose-if: fund = 1
 tags: drop_demands
 view-if: fund = 1
-on-arrival: rpm_points -= 3; fund -= 1; resources += 2;
+on-arrival: rpm_points -= 3; fund -= 1; resources += 2; right_dissent += 4; catholic_z -= 4*(1-dissent)
 go-to: ministries
 
 We have decided to drop this concession.
@@ -125,7 +125,7 @@ subtitle: Drop this concession +1 budget
 tags: drop_demands
 choose-if: coop = 1
 view-if: coop = 1
-on-arrival: rpm_points -= 3; coop -= 1; budget += 1;
+on-arrival: rpm_points -= 3; coop -= 1; budget += 1; economic_growth -= 0.3; unemployed += 0.3; 
 go-to: ministries
 
 We have decided to drop this concession.
@@ -136,7 +136,7 @@ subtitle: Drop this concession
 tags: drop_demands
 choose-if: trade_war = 1
 view-if: trade_war = 1
-on-arrival: rpm_points -= 3; trade_war -= 1
+on-arrival: rpm_points -= 3; trade_war -= 1; nationalism -= 5*(1-dissent); spd_left -= 1; z_old_middle -= 3*(1-dissent); dnvp_relations -= 5; dvp_relations -= 5;
 go-to: ministries
 
 We have decided to drop this concession.
@@ -145,9 +145,9 @@ We have decided to drop this concession.
 title: Impose a rent moratorium and postpone the foreclosure of insolvent farms
 subtitle: Drop this concession +2 budget
 tags: drop_demands
-choose-if: tax_breaks = 1 and budget >= 2
+choose-if: tax_breaks = 1 
 view-if: tax_breaks = 1
-on-arrival: rpm_points -= 5; tax_breaks -= 1; budget += 2;
+on-arrival: rpm_points -= 5; tax_breaks -= 1; budget += 2; ddp_relation += 5; dvp_relation += 5; ddp_right -= 1; economic_growth -= 0.5
 go-to: ministries
 
 We have decided to drop this concession.
