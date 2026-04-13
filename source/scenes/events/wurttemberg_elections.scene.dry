@@ -411,7 +411,8 @@ on-arrival: in_bourgeois_coalition_wurttemberg = 1; z_wurttemberg = 1;
 
 - @sure
 
-@sure: Are we sure?
+@sure
+title: Are we sure?
 subtitle: The Wurttemberg Chapter prefers a Christian Coalition. Our conservative base might not take too kindly to this.
 
 
