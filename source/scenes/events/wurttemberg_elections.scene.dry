@@ -420,13 +420,13 @@ subtitle: The Wurttemberg Chapter prefers a Christian Coalition. Our conservativ
 - @no
 
 @yes
-title: Yes I want to form a bourgeois coalition
-on-arrival: in_bourgeois_coalition_wurttemberg = 1; z_wurttemberg = 1;
+title: A bourgeois coalition it is
+on-arrival: in_bourgeois_coalition_wurttemberg = 1; z_wurttemberg = 1; rural_z -= 3; rural_dnvp += 2
 
 A Bourgeois Coalition is formed.
 
 @no
-title: No I will not
+title: We will have to look elsewhere for coalitions
 go-to: coalition_menu
 
 
