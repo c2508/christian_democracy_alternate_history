@@ -410,7 +410,25 @@ on-arrival: in_bourgeois_coalition_wurttemberg = 1; z_wurttemberg = 1;
 
 A Bourgeois Coalition is formed.
 
-- @wurttemberg_sp
+- @sure
+
+@sure
+title: Are we sure? The Wurttemberg Chapter prefers a Christian Coalition. Our conservative base might not take too kindly to this.
+
+
+- @yes
+- @no
+
+@yes
+title: Yes I want to form a bourgeois coalition
+on-arrival: in_bourgeois_coalition_wurttemberg = 1; z_wurttemberg = 1;
+
+A Bourgeois Coalition is formed.
+
+@no
+title: No I will not
+go-to: coalition_menu
+
 
 @right_coalition_wurttemberg
 title: We can form a <span style="color: #3E88B3;">**Bürgerblock**</span> Coalition.
