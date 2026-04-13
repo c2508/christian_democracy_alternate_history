@@ -2,7 +2,7 @@ title: The Fourth <span style="color: #000000;">Marx</span> Cabinet has fallen
 subtitle: The <span style="color: #3E88B3;">**Bürgerblock**</span> coalition has collapsed
 frequency: 1000
 new-page: true
-on-arrival: left_dissent += 5; left_labor_dissent += 5; center_dissent += 5; right_labor += 5; right_dissent += 5
+on-arrival: left_dissent += 5; left_labor_dissent += 5; center_dissent += 5; right_labor_dissent += 5; right_dissent += 5
 tags: event
 view-if: year == 1928 and month == 2
 max-visits: 1
@@ -10,6 +10,6 @@ face-image: img/Kabinett_Marx_IV.jpg
 
 = Coalition Disagreements
 
-  Following the fierce opposition of the <span style="color: #C0A054;">**DVP**</span> towards <span style="color: #3E88B3;">Keudell's</span> proposed Reich School Law, our party has dissolved the current governmental coalition. The failure of the Fourth <span style="color: #000000;">Marx</span> Cabinet to pass a school law which would allow the establishment of interdenominational schools in Southwestern Germany has led to much outrage throughout the party.
-  With the formation of the <span style="color: #909090;">**CSRP**</span> and the growing appeal of the <span style="color: #c00000;">**SPD**</span>, the outlook for the upcoming election in May looks increasingly bleak.
+Following the fierce opposition of the <span style="color: #C0A054;">**DVP**</span> towards <span style="color: #3E88B3;">Keudell's</span> proposed Reich School Law, our party has dissolved the current governmental coalition. The failure of the Fourth <span style="color: #000000;">Marx</span> Cabinet to pass a school law which would allow the establishment of interdenominational schools in Southwestern Germany has led to much outrage throughout the party.
+With the formation of the <span style="color: #909090;">**CSRP**</span> and the growing appeal of the <span style="color: #c00000;">**SPD**</span>, the outlook for the upcoming election in May looks increasingly bleak. 
 
