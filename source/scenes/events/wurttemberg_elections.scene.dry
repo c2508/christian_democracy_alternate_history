@@ -421,12 +421,13 @@ subtitle: The Wurttemberg Chapter prefers a Christian Coalition. Our conservativ
 
 @yes
 title: A bourgeois coalition it is
+subtitle: <span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span> ?] + <span style="color: #C0A054;">**DVP**</span> [? if kvp_formed: + <span style="color: #455B95;">**KVP**</span>?] + <span style="color: #909090;">**Others**</span> ([+ bourgeois_coalition_wurttemberg +]%)
 on-arrival: in_bourgeois_coalition_wurttemberg = 1; z_wurttemberg = 1; rural_z -= 3; rural_dnvp += 2
 
 A Bourgeois Coalition is formed.
 
 @no
-title: We will have to look elsewhere for coalitions
+title: Back to the drawing board it is
 go-to: coalition_menu
 
 
