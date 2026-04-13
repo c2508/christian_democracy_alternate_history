@@ -408,13 +408,11 @@ view-if: bourgeois_coalition_wurttemberg >= 50
 subtitle: <span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span> ?] + <span style="color: #C0A054;">**DVP**</span> [? if kvp_formed: + <span style="color: #455B95;">**KVP**</span>?] + <span style="color: #909090;">**Others**</span> ([+ bourgeois_coalition_wurttemberg +]%)
 on-arrival: in_bourgeois_coalition_wurttemberg = 1; z_wurttemberg = 1;
 
-A Bourgeois Coalition is formed.
+ Are we sure? The Wurttemberg Chapter prefers a Christian Coalition. Our conservative base might not take too kindly to this.
 
 - @sure
 
 @sure
-title: Are we sure? The Wurttemberg Chapter prefers a Christian Coalition. Our conservative base might not take too kindly to this.
-
 
 - @yes
 - @no
