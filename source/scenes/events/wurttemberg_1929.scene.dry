@@ -1,0 +1,42 @@
+title: A crisis in Wurttemberg
+subtitle: The Christian Coalition's position is precarious...
+frequency: 1000
+new-page: true
+tags: event
+view-if: year == 1929 and month == 8 and christian_coalition_toleration_wurttemberg <= 52.5
+max-visits: 1
+face-image: img/Kabinett_Marx_IV.jpg
+
+=  
+Following the Wurttemberg elections in 1928, investigations into election proceedings have led a ruling by the Court of Appeals for three seats in the Landtag to be given to the <span style="color: #7A3C00;">**NSDAP**</span> and <span style="color: #909090;">**VRP**</span>. As such, the incumbent Christian Coalition has lost two seats and no longer holds a majority in the Landtag, even with the abstantion of the <span style="color: #C0A054;">**DVP**</span> and <span style="color: #909090;">**VRP**</span>. 
+Should the <span style="color: #c00000;">**SPD**</span> call a motion of no-confidence, this could very well lead to the fall of the Wurttemberg Cabinet. As a result, we might even be forced to cooperate with the <span style="color: #c00000;">**SPD**</span> in a <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition or call for new elections, something that our state chapter desperately wants to prevent. With the <span style="color: #3E88B3;">**DNVP's**</span> obstinacy regarding Bazille and his popularity in our party, the <span style="color: #C0A054;">**DVP**</span> is still unwilling to form a <span style="color: #3E88B3;">**Bürgerblock**</span>	with us.
+Is the fall of Bolz I inevitable?
+
+- @ddp_toleration
+- @weimar
+- @snap
+
+@ddp_toleration
+title: The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> has agreed to tolerate us!
+subtitle: This is unexpected
+choose-if: ddp_relation > 40 and ddp_right > ddp left and dvp_right < dvp_left
+unavailable-subtitle: [? if ddp_relation > 40 : Our relations with the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> are too low. ?][? if ddp_left > ddp_right : The left of the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> has reservations about this arrangement. ?][? if dvp_left < dvp_right : The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> has no reason to tolerate us. ?]
+on-arrival: pro_republic += 3; ddp_relation += 2; ddp_right += 2; dvp_left += 1; ddp_new_middle -= 1; christian_coalition_toleration_both_wurttemberg = 1: christian_coalition_toleration_wurttemberg = 0
+
+During the <span style="color: #c00000;">**SPD's**</span> motion of no-confidence, the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> has surprisingly voted for the current Christian Coalition. This is part of the <span style="color: #D3C24D;">**[+ ddp_name +]'s**</span> efforts in maintaining good relations with the <span style="color: #C0A054;">**DVP**</span> to keep the spirit of liberal unity alive, in hopes of a future merger with the <span style="color: #C0A054;">**DVP**</span>. Nonetheless, some in the <span style="color: #D3C24D;">**[+ ddp_name +]'s**</span> are unhappy due to Bazille's continued presence in the Bolz Cabinet. 
+
+@weimar
+title: A <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition has the necessary seats...
+subtitle: Our state chapter has a strong distrust of the <span style="color: #c00000;">**Social Democrats**</span>
+choose-if: spd_relation > 60 and right_dissent < 15
+unavailable_subtitle: [? if spd_relation < 60 : Our relations with the <span style="color: #c00000;">**SPD**</span> are too poor. ?][? if right_dissent < 15 : The right of the party will not let this stand. ?]
+on-arrival: right_dissent += 5; z_rural -= 2; in_weimar_coalition_wurttemberg = 1; christian_coalition_toleration_wurttemberg = 0
+
+blah blah blah
+  
+@snap
+title: The cabinet falls...
+subtitle: An election now will only disadvantage us
+on-arrival: pro_republic -= 3; left_dissent += 3; z_catholic -= 4; z_rural -= 2; dnvp_rural -= 3; nsdap_rural += 2; others_rural += 3: christian_coalition_toleration_wurttemberg = 0; next_election_time_wurttemberg = time + 3
+
+The fall of the Bolz cabinet has led the <span style="color: #FF7F00;">Christian Left</span> to critisise our unwillingness to cooperate with the <span style="color: #c00000;">**SPD**</span>. 
