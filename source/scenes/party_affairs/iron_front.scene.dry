@@ -1,44 +1,43 @@
-title: The Iron Front
+title: The <span style="color: #0dba1e;">**Green Front**</span>
 new-page: true
 is-card: true
-view-if: iron_front_formed == 1 and iron_front_timer = 0
-on-arrival: iron_front_timer = 7; month_actions += 1; rb_militarization_cost = 2 if rb_militancy > 0.1 else rb_militarization_cost = 1; rb_militarization_cost = 3 if rb_militancy > 0.25
+view-if: green_front_formed > 0 and green_front_timer = 0
+on-arrival: green_front_timer = 7; month_actions += 1; 
 card-image: img/iron_front.png
 frequency: 200
-tags: party_affairs, antifascism
+tags: party_affairs, 
 
-= The Iron Front
+= The <span style="color: #0dba1e;">**Green Front**</span>
 
-The Iron Front is our new antifascist coordination front, consisting of the SPD, the trade unions, and the Reichsbanner. How should we use the Iron Front?
+The <span style="color: #0dba1e;">**Green Front**</span> is our new antifascist coordination front, consisting of the SPD, the trade unions, and the Reichsbanner. How should we use the Iron Front?
 
 [? if workers_spd < 45 or workers_spd < workers_nsdap or workers_spd < workers_kpd : Unfortunately, the Iron Front's effectiveness is dragged down by the SPD's unpopularity, as the SPD is no longer the dominant party among the workers. Many Reichsbanner members have left, and many workers are not interested. ?]
 
-- @defense: Rally for defense against the fascists with the Reichsbanner.
-- @pacifism: Rally for pacifism, against nationalism and war.
-- @republic: Rally to save the democratic republic against dictatorship.
+- @dnvp: Improve our relations with the <span style="color: #3E88B3;">**DNVP**</span>
+- @influence: Root out those with <span style="color: #7A3C00;">**NSDAP**</span> sympathies within the <span style="color: #0dba1e;">**Green Front**</span>
+- @republic: Start formulating the <span style="color: #0dba1e;">Green Front</span> program
 - @wtb: Rally for economic change and the WTB-Plan.
 - @antisemitism
 - @easy_discard
 
-@defense
-subtitle: -[+ rb_militarization_cost +] resources
-choose-if: resources >= rb_militarization_cost
-on-arrival: resources -= rb_militarization_cost; rb_strength += 50; rb_militancy += 0.05; z_relation -= 5 if historical_mode
+@dnvp
+subtitle: Use our connections within the <span style="color: #0dba1e;">**Green Front**</span> to reach out to the <span style="color: #3E88B3;">**DNVP's**</span> <span style="color: #385A38;">agrarian</span> wing
+on-arrival: dnvp_relation += 8; 
 
-The Iron Front rallies for the militant defense of the republic against the fascist paramilitaries, strengthening the Reichsbanner.
+The <span style="color: #385A38;">agrarians</span> within our party has reached out to the friendly portions of the <span style="color: #3E88B3;">**DNVP**</span>.
 
-[? if historical_mode : The Center Party decries the militarization of the Reichsbanner and Iron Front, and its members are leaving the republican organization. ?]
+@influence
+subtitle: Reduce the <span style="color: #7A3C00;">**NSDAP's**</span> influence within the <span style="color: #0dba1e;">**Green Front**</span>
+on-arrival: nsadp_rural -= 3; 
 
+blah poo poo
 
-@pacifism
-on-arrival: pacifism += 1; nationalism -= 5 if pacifism >= 3; workers_spd += 5*(1-dissent) if pacifism >= 4; unemployed_spd += 4*(1-dissent) if pacifism >= 4; new_middle_spd += 4*(1-dissent) if pacifism >= 4
+@program
+subtitle: The <span style="color: #0dba1e;">Green Front</span> program
+view-if: green_front_program_start = 0
+on-arrival: green_front_program_start += 2; green_front_program_timer -= 2;
 
-The Iron Front rallies against nationalism and war.
-
-@republic
-on-arrival: pro_republic += 5*(1-dissent); democratization += 1; workers_spd += 5*(1-dissent) if democratization >= 4; unemployed_spd += 4*(1-dissent) if democratization >= 4; new_middle_spd += 4*(1-dissent) if democratization >= 4
-
-The Iron Front rallies in defense of the democratic republic and against dictatorship.
+pee pee poopy
 
 @wtb
 choose-if: return_to_normalcy = 0
