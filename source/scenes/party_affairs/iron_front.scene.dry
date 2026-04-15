@@ -16,36 +16,37 @@ The <span style="color: #0dba1e;">**Green Front**</span> is our new antifascist 
 - @dnvp: Improve our relations with the <span style="color: #3E88B3;">**DNVP**</span>
 - @influence: Root out those with <span style="color: #7A3C00;">**NSDAP**</span> sympathies within the <span style="color: #0dba1e;">**Green Front**</span>
 - @program: Start formulating the <span style="color: #0dba1e;">Green Front</span> program
-- @wtb: Rally for economic change and the WTB-Plan.
+- @speedup: Organise more meetings to draft the <span style="color: #0dba1e;">Green Front</span> program
 - @antisemitism
 - @easy_discard
 
 @dnvp
-subtitle: Use our connections within the <span style="color: #0dba1e;">**Green Front**</span> to reach out to the <span style="color: #3E88B3;">**DNVP's**</span> <span style="color: #385A38;">agrarian</span> wing
+subtitle: Amidst the deepening agricultural crisis, a coordinated response with <span style="color: #385A38;">agrarian</span> interests in the <span style="color: #3E88B3;">**DNVP**</span> is crucial in slowing the radicalisation of the rural people. Deepening ties with them can also pave the way for further cooperation with the <span style="color: #3E88B3;">**DNVP**</span> in the future.
 on-arrival: dnvp_relation += 8; 
 
-The <span style="color: #385A38;">agrarians</span> within our party has reached out to the friendly portions of the <span style="color: #3E88B3;">**DNVP**</span>.
+The <span style="color: #385A38;">agrarians</span> within our party has reached out to the friendly portions of the <span style="color: #3E88B3;">**DNVP**</span> and found some common ground with them. This has also helped strengthen the <span style="color: #385A38;">agrarian</span> faction in the <span style="color: #3E88B3;">**DNVP**</span>.
+
 
 @influence
-subtitle: Reduce the <span style="color: #7A3C00;">**NSDAP's**</span> influence within the <span style="color: #0dba1e;">**Green Front**</span>
+subtitle: The radicalism of the <span style="color: #7A3C00;">**NSDAP**</span> and their propagation of the 'Blood and Soil' ideology has much appeal amongst some members of the <span style="color: #0dba1e;">**Green Front**</span>. We must strengthen the <span style="color: #000000;">**Center Party's**</span> and <span style="color: #3E88B3;">**DNVP**</span> influence in the <span style="color: #0dba1e;">**Green Front**</span>, lest the rural electorate turn to the demagogic <span style="color: #7A3C00;">**Nazis**</span> for a solution. 
 on-arrival: nsadp_rural -= 3; 
 
-blah poo poo
+
 
 @program
-subtitle: The <span style="color: #0dba1e;">Green Front</span> program
+subtitle: Agriculture is the backbone of Germany, yet the countryside's situation is dire and German farmers are struggling to make a living. Only through the unification of agricultural interests under the auspices of the <span style="color: #0dba1e;">**Green Front**</span> can we start drafting a comprehensive farm program to aid the peasants.
 view-if: green_front_program_start = 0
-on-arrival: green_front_program_start += 2; green_front_program_timer -= 2;
+on-arrival: green_front_program_start += 1; green_front_program_timer += 24;
 
-pee pee poopy
+We have started discussions with the other organisations under the <span style="color: #0dba1e;">**Green Front**</span> to draft a farm program satisfactory to all. Given the strong influence labor holds in the <span style="color: #000000;">**Center Party's**</span>, this will not be an easy task.
 
-@wtb
+@speedup
 choose-if: return_to_normalcy = 0
-unavailable-subtitle: The economic crisis is largely over now, and the public is no longer interested in hearing about it.
-view-if: wtb_adopted == 1
-on-arrival: workers_spd += 8*(1-dissent); unemployed_spd += 8*(1-dissent); new_middle_spd += 5*(1-dissent); old_middle_spd += 3*(1-dissent); rural_spd += 3*(1-dissent);
+unavailable-subtitle: We must speed up the creation of the <span style="color: #0dba1e;">**Green Front's**</span> program to address the agricultural crisis at once. The <span style="color: #7A3C00;">**Nazis**</span> have been encroaching on our rural base and they must be stopped at once.
+view-if: green_front_program_start = 1
+on-arrival: green_front_program_timer -= 2;
 
-The WTB-Plan is the rallying point for the entire SPD and its affiliated organizations, including the Iron Front.
+The program will be available sooner.
 
 @antisemitism
 title: Rally against antisemitism and in defense of Jewish Germans.
