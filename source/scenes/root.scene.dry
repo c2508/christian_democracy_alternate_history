@@ -90,9 +90,10 @@ Q.communist_coalition = 0;
 // economic_plan: have we adopted *any* economic plan?
 // 1 - WTB plan, 2 - AfA-bund plan, 3 - radical plan (mass nationalization of industries)
 // green front
-Q.green_front_program = 0
-Q.green_front_points = 0
-Q.green_front_timer = 0
+Q.green_front_program = 0;
+Q.green_front_points = 0;
+Q.green_front_timer = 0;
+Q.green_front_program_start = 0;
 Q.economic_plan = 0;
 // have we officially adopted the WTB plan?
 Q.wtb_adopted = 0;
