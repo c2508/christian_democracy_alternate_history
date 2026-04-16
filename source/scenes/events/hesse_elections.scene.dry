@@ -1,0 +1,526 @@
+title: Hesse Landtag Election
+view-if: year = next_election_year_hesse and month >= next_election_month_hesse
+new-page: true
+tags: event
+priority: 3
+on-arrival: next_election_year_hesse = next_election_year_hesse + 4; next_election_time_hesse = time + 48; was_dvp_hesse = 0; was_in_dvp_majority_hesse = 0; was_in_weimar_coalition_hesse = 0; was_in_grand_coalition_hesse = 0; was_in_bourgeois_coalition_hesse = 0; was_in_far_right_coalition_hesse = 0;
+set-jump: new_elections
+
+= Hesse Elections, [+ month : month +] [+ year +]
+
+The Hesse elections are to be held now.
+
+- @new_elections: May we do our best...
+
+@new_elections
+on-arrival: {!
+for (var c of Q.classes) {
+    var class_votes = 0;
+    for (var party of Q.parties) {
+        if (Q[c + '_' + party] < 0) {
+            Q[c + '_' + party] = 0;
+        }
+        class_votes += Q[c + '_' + party];
+    }
+    for (var party of Q.parties) {
+        Q[c + '_' + party + '_normalized_hesse'] = Math.round(100 * Q[c + '_' + party] / class_votes);
+    }
+}
+
+
+// Define adjustment factors
+Q.adjustmentFactors_spd_hesse = 1.08;
+Q.adjustmentFactors_aspd_hesse = 0.2;
+Q.adjustmentFactors_kpd_hesse = 0.79;
+Q.adjustmentFactors_ddp_hesse = 1.47;
+Q.adjustmentFactors_z_hesse = 1.32;
+Q.adjustmentFactors_dvp_hesse = 1.20;
+Q.adjustmentFactors_wp_hesse = 0.0;
+Q.adjustmentFactors_cnblp_hesse = 0.0;
+Q.adjustmentFactors_kvp_hesse = 0.45;
+Q.adjustmentFactors_dnvp_hesse = 0.35;
+Q.adjustmentFactors_dnf_hesse = 0.40;
+Q.adjustmentFactors_nsdap_hesse = 1.22;
+Q.adjustmentFactors_other_hesse = 1.2;
+
+if (Q.lvp_formed || Q.nfvp_formed) {
+    Q.adjustmentFactors_dvp_hesse += 1.5
+}
+
+if (Q.cnblp_kvp) {
+    Q.adjustmentFactors_kvp_hesse += 1.5
+}
+if (Q.cnblp_dnvp) {
+    Q.adjustmentFactors_dnvp_hesse += 1.5
+}
+
+
+
+// Calculate support for each of the parties
+var total_support = 0;
+for (var party of Q.parties) {
+    var party_support = 0;
+    for (var c of Q.classes) {
+        if (Q.old_demographics) {
+            party_support += Q[c] * Q[c + '_' + party];
+        } else {
+            party_support += Q[c] * Q[c + '_' + party + '_normalized_hesse'];
+        }
+    }
+    // Apply adjustment factor
+    Q[party + '_support'] = party_support * Q['adjustmentFactors_' + party + '_hesse']
+    total_support += Q[party + '_support'];
+}
+
+// Normalize support (fraction)
+for (var party of Q.parties) {
+    Q[party + '_normalized_hesse'] = Q[party + '_support'] / total_support;
+    Q[party + '_votes_hesse'] = Math.round(Q[party + '_normalized_hesse'] * 1000) / 10;
+}
+
+var new_party_sum = 0;
+for (var party of Q.parties) {
+    Q['old_' + party + '_hesse'] = Q[party + '_hesse'];
+    Q[party + '_votes_hesse'] = parseFloat((Q[party + '_votes_hesse']).toFixed(1))
+    if (Q.electoral_threshold > 0) {
+        if (Q[party + '_votes_hesse'] < Q.electoral_threshold || (Q.electoral_threshold > 1 && party == 'other') || Q[party + '_banned']) {
+            Q[party + '_hesse'] = 0;
+        } else {
+            Q[party + '_hesse'] = Q[party + '_votes_hesse'];
+        }
+        new_party_sum += Q[party + '_hesse'];
+    } else {
+        Q[party + '_hesse'] = Q[party + '_votes_hesse'];
+        if (party == 'other') Q[party + '_hesse'] = Q[party + '_votes_hesse'] * 0.3;
+        new_party_sum += Q[party + '_hesse'];
+    }
+
+    Q['change_' + party + '_votes_hesse'] = Q[party + '_votes_hesse'] - Q['old_' + party + '_votes_hesse'];
+    var sign2 = Q['change_' + party + '_votes_hesse'] > 0 
+                    ? '<img src="img/arrowup.png"> ' 
+                    : Q['change_' + party + '_votes_hesse'] < 0 
+                      ? '<img src="img/arrowdown.png"> ' 
+                      : '<img src="img/steady.png"> ';
+    Q['votes_change_' + party + '_hesse'] = sign2 + Math.abs(parseFloat(Q['change_' + party + '_votes_hesse'])).toFixed(1);
+
+    Q['old_' + party + '_votes_hesse'] = parseFloat((Q[party + '_votes_hesse']).toFixed(1));
+}
+// calculate new party sum if electoral reform
+if (new_party_sum > 0) {
+    for (var party of Q.parties) {
+        if (Q[party + '_hesse'] > 0) {
+            Q[party + '_hesse'] = Math.round(Q[party + '_hesse']*1000/new_party_sum)/10;
+        }
+        Q[party + '_hesse'] = parseFloat((Q[party+'_hesse']).toFixed(1));
+        
+        Q['change_' + party + '_hesse'] = Q[party + '_hesse'] - Q['old_' + party + '_hesse'];
+        var sign = Q['change_' + party + '_hesse'] > 0 
+                   ? '<img src="img/arrowup.png"> ' 
+                   : Q['change_' + party + '_hesse'] < 0
+                     ? '<img src="img/arrowdown.png"> '
+                     : '<img src="img/steady.png"> ';
+        Q['change_' + party + '_hesse'] = sign + Math.abs(parseFloat(Q['change_' + party + '_hesse'])).toFixed(1);
+    }
+}
+
+
+
+if (!Q.lvp_formed && !Q.nfvp_formed) Q.weimar_coalition_hesse = parseFloat((Q.spd_hesse + Q.ddp_hesse + Q.z_hesse + Q.csrp_hesse).toFixed(1));
+if (Q.lvp_formed || Q.nfvp_formed) Q.weimar_coalition_hesse = parseFloat((Q.spd_hesse + Q.dvp_hesse + Q.z_hesse + Q.csrp_hesse).toFixed(1));
+if (Q.aspd_exist && Q.aspd_ideology == "Moderate") Q.weimar_coalition_hesse = parseFloat((Q.weimar_coalition_hesse + Q.aspd_hesse).toFixed(1));
+
+Q.grand_coalition_hesse = parseFloat((Q.spd_hesse + Q.ddp_hesse + Q.z_hesse + Q.dvp_hesse + Q.csrp_hesse).toFixed(1));
+Q.christian_coalition_toleration_both_hesse =  parseFloat((Q.z_hesse + Q.dnvp_hesse + Q.ddp_hesse + Q.dvp_hesse + Q.other_hesse).toFixed(1));
+Q.bourgeois_coalition_hesse = parseFloat((Q.ddp_hesse + Q.z_hesse + Q.dvp_hesse + Q.other_hesse + Q.kvp_hesse).toFixed(1));
+Q.christian_coalition_toleration_hesse =  parseFloat((Q.z_hesse + Q.dnvp_hesse + Q.dvp_hesse + Q.other_hesse).toFixed(1));
+Q.christian_coalition_hesse =  parseFloat((Q.z_hesse + Q.dnvp_hesse + Q.other_hesse ).toFixed(1));
+Q.right_coalition_hesse = parseFloat(( Q.z_hesse + Q.dvp_hesse + Q.other_hesse + Q.kvp_hesse + Q.dnvp_hesse).toFixed(1));
+if (Q.dnvp_ideology === "Radical") Q.far_right_coalition_hesse = parseFloat((Q.dnvp_hesse + Q.nsdap_hesse).toFixed(1));
+if (Q.dnf_formed) Q.far_right_coalition_hesse = parseFloat((Q.dnf_hesse + Q.nsdap_hesse).toFixed(1));
+
+
+
+if (Q.z_hesse) {
+    Q.was_z_hesse = 1
+}
+if (Q.in_z_majority_hesse) {
+    Q.was_in_z_majority_hesse = 1
+} else if (Q.in_weimar_coalition_hesse) {
+    Q.was_in_weimar_coalition_hesse = 1
+} else if (Q.in_grand_coalition_hesse) {
+    Q.was_in_grand_coalition_hesse = 1
+} else if (Q.in_bourgeois_coalition_hesse) {
+    Q.was_in_bourgeois_coalition_hesse = 1
+} else if (Q.in_christian_coalition_hesse) {
+    Q.in_christian_coalition_hesse = 1
+} else if (Q.in_christian_coalition_toleration_hesse) {
+    Q.in_christian_coalition_toleration_hesse = 1
+} else if (Q.in_christian_coalition_toleration_both_hesse) {
+    Q.in_christian_coalition_toleration_both_hesse = 1
+} else if (Q.in_right_coalition_hesse) {
+    Q.in_right_coalition_hesse = 1
+} else if (Q.in_far_right_coalition_hesse) {
+    Q.was_in_far_right_coalition_hesse = 1
+}
+
+
+Q.z_hesse = 1;
+Q.in_z_majority_hesse = 1;
+Q.in_weimar_coalition_hesse = 0;
+Q.in_grand_coalition_hesse = 0;
+Q.in_bourgeois_coalition_hesse = 0;
+Q.in_christian_coalition_hesse = 0;
+Q.in_christian_coalition_toleration_hesse = 0;
+Q.in_right_coalition_hesse = 0;
+Q.in_far_right_coalition_hesse = 0;
+!}
+on-display: {!
+data = []
+if (Q.kpd_hesse) {
+    data.push({
+        "id": "kpd",
+        "legend": "KPD",
+        "name": "KPD",
+        "seats": Math.round(Q.kpd_hesse*0.8),
+    });
+}
+if (Q.spd_hesse) {
+    data.push({
+        "id": "spd",
+        "legend": "SPD",
+        "name": "SPD",
+        "seats": Math.round(Q.spd_hesse*0.8),
+    });
+}
+if (Q.aspd_exist && Q.aspd_hesse) {
+    data.push({
+            "id": "aspd",
+            "legend": "ASPD",
+            "name": "ASPD",
+            "seats": Math.round(Q.aspd_hesse*0.8),
+    });
+}
+if (Q.ddp_exist && Q.ddp_hesse) {
+    data.push({
+        "id": "ddp",
+        "legend": Q.ddp_name,
+        "name": Q.ddp_name,
+        "seats": Math.round(Q.ddp_hesse*0.8),
+    });
+}
+if (Q.lvp_formed && Q.dvp_hesse) {
+    data.push({
+        "id": "lvp",
+        "legend": Q.dvp_name,
+        "name": Q.dvp_name,
+        "seats": Math.round(Q.dvp_hesse*0.8),
+    });
+}
+if (Q.csrp_exist && Q.csrp_hesse) {
+    data.push({
+        "id": "csrp",
+        "legend": "CSRP",
+        "name": "CSRP",
+        "seats": Math.round(Q.csrp_hesse*0.8),
+    });
+}
+if (Q.z_hesse) {
+    data.push({
+        "id": "z",
+        "legend": "Center",
+        "name": "Center",
+        "seats": Math.round(Q.z_hesse*0.8),
+    });
+}
+if (Q.nfvp_formed && Q.dvp_hesse) {
+    data.push({
+        "id": "nfvp",
+        "legend": Q.dvp_name,
+        "name": Q.dvp_name,
+        "seats": Math.round(Q.dvp_hesse*0.8),
+    });
+}
+if (!Q.lvp_formed && !Q.nfvp_formed && Q.dvp_hesse) {
+    data.push({
+        "id": "dvp",
+        "legend": Q.dvp_name,
+        "name": Q.dvp_name,
+        "seats": Math.round(Q.dvp_hesse*0.8),
+    });
+}
+if (Q.csvd_exist && Q.csvd_hesse) {
+    data.push({
+        "id": "csvd",
+        "legend": "CSVD",
+        "name": "CSVD",
+        "seats": Math.round(Q.csvd_hesse*0.8),
+    });
+}
+if (Q.cnblp_exist && Q.cnblp_hesse) {
+    data.push({
+        "id": "wbwb",
+        "legend": "CNBLP",
+        "name": "CNBLP",
+        "seats": Math.round(Q.cnblp_hesse*0.8),
+    });
+}
+if (Q.other_hesse) {
+    data.push({
+        "id": "other",
+        "legend": "Other",
+        "name": "Other",
+        "seats": Math.round(Q.other_hesse*0.8),
+    });
+}
+if (Q.kvp_formed && Q.kvp_hesse) {
+    data.push({
+        "id": "kvp",
+        "legend": "KVP",
+        "name": "KVP",
+        "seats": Math.round(Q.kvp_hesse*0.8),
+    });
+}
+if (Q.dnvp_hesse) {
+    data.push({
+        "id": "dnvp",
+        "legend": "DNVP",
+        "name": "DNVP",
+        "seats": Math.round(Q.dnvp_hesse*0.8),
+    });
+}
+if (Q.dnf_formed && Q.dnf_hesse) {
+    data.push({
+        "id": "dnf",
+        "legend": "DNF",
+        "name": "DNF",
+        "seats": Math.round(Q.dnf_hesse*0.8),
+    });
+}
+if (Q.nsdap_hesse) {
+    data.push({
+        "id": "nsdap",
+        "legend": "NSDAP",
+        "name": "NSDAP",
+        "seats": Math.round(Q.nsdap_hesse*0.8),
+    });
+}
+
+if (window && d3) {
+    var width = 500;
+    var height = 500;
+    var screenWidth = document.getElementById('content').offsetWidth;
+    if (screenWidth < width - 50) {
+        width = screenWidth - 50;
+        height = width;
+        document.getElementById("reichstag").style.height = screenWidth/2 + "px";
+    } 
+
+    var parliament = d3.parliament();
+    parliament.width(width).height(height).innerRadiusCoef(0.4);
+    parliament.enter.fromCenter(true).smallToBig(true);
+    parliament.exit.toCenter(false).bigToSmall(true);
+    d3.select("#reichstag").datum(data).call(parliament);
+}
+!}
+go-to: coalition_menu
+
+= Election results
+
+{!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
+
+{!<table>!} 
+{!<tr><td>Party</td><td>Vote Share</td><td>% Change</td><td>Landtag Seats</td><td>% Change</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#8B0000'> </div> !} KPD: {!</td><td>!} [+ kpd_votes_hesse +]% {!</td><td>!} [+ votes_change_kpd_hesse +] {!</td><td>!} [+ kpd_hesse +]% {!</td><td>!} [+ change_kpd_hesse +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#E3000F'> </div> !} SPD: {!</td><td>!} [+ spd_votes_hesse +]% {!</td><td>!} [+ votes_change_spd_hesse +] {!</td><td>!} [+ spd_hesse +]% {!</td><td>!} [+ change_spd_hesse +] {!</td></tr>!}
+
+[? if aspd_exist: {!<tr><td><div class="box" style='background-color:#FE9E00'> </div> !} ASPD: {!</td><td>!} [+ aspd_votes_hesse +]% {!</td><td>!} [+ votes_change_aspd_hesse +] {!</td><td>!} [+ aspd_hesse +]% {!</td><td>!} [+ change_aspd_hesse +] {!</td><td>!} ?]
+
+[? if ddp_exist: {!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} [+ ddp_name +]: {!</td><td>!} [+ ddp_votes_hesse +]% {!</td><td>!} [+ votes_change_ddp_hesse +] {!</td><td>!} [+ ddp_hesse +]% {!</td><td>!} [+ change_ddp_hesse +] {!</td></tr>!} ?]
+
+{!<tr><td><div class="box" style='background-color:#000'> </div> !} Z: {!</td><td>!} [+ z_votes_hesse +]% {!</td><td>!} [+ votes_change_z_hesse +] {!</td><td>!} [+ z_hesse +]% {!</td><td>!} [+ change_z_hesse +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#C0A054'> </div> !} DVP: {!</td><td>!} [+ dvp_votes_hesse +]% {!</td><td>!} [+ votes_change_dvp_hesse +] {!</td><td>!} [+ dvp_hesse +]% {!</td><td>!} [+ change_dvp_hesse +] {!</td></tr>!}
+
+[? if csvd_exist: {!<tr><td><div class="box" style='background-color:#8ED8E4'> </div> !} CSVD: {!</td><td>!} [+ csvd_votes_hesse +]% {!</td><td>!} [+ votes_change_csvd_hesse +] {!</td><td>!} [+ csvd_hesse +]% {!</td><td>!} [+ change_csvd_hesse +] {!</td><td>!} ?]
+
+[? if cnblp_exist: {!<tr><td><div class="box" style='background-color:#006400'> </div> !} CNBLP: {!</td><td>!} [+ cnblp_votes_hesse +]% {!</td><td>!} [+ votes_change_cnblp_hesse +] {!</td><td>!} [+ cnblp_hesse +]% {!</td><td>!} [+ change_cnblp_hesse +] {!</td><td>!} ?]
+
+[? if kvp_formed: {!<tr><td><div class="box" style='background-color:#455B95'> </div> !} KVP: {!</td><td>!} [+ kvp_votes_hesse +]% {!</td><td>!} [+ votes_change_kvp_hesse +] {!</td><td>!} [+ kvp_hesse +]% {!</td><td>!} [+ change_kvp_hesse +] {!</td></tr>!} ?]
+
+{!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} DNVP: {!</td><td>!} [+ dnvp_votes_hesse +]% {!</td><td>!} [+ votes_change_dnvp_hesse +] {!</td><td>!} [+ dnvp_hesse +]% {!</td><td>!} [+ change_dnvp_hesse +] {!</td></tr>!}
+
+[? if dnf_formed: {!<tr><td><div class="box" style='background-color:#003755'> </div> !} DNF: {!</td><td>!} [+ dnf_votes_hesse +]% {!</td><td>!} [+ votes_change_dnf_hesse +] {!</td><td>!} [+ dnf_hesse +]% {!</td><td>!} [+ change_dnf_hesse +] {!</td></tr>!} ?]
+
+{!<tr><td><div class="box" style='background-color:#954B00'> </div> !} NSDAP: {!</td><td>!} [+ nsdap_votes_hesse +]% {!</td><td>!} [+ votes_change_nsdap_hesse +] {!</td><td>!} [+ nsdap_hesse +]% {!</td><td>!} [+ change_nsdap_hesse +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_votes_hesse +]% {!</td><td>!} [+ votes_change_other_hesse +] {!</td><td>!} [+ other_hesse +]% {!</td><td>!} [+ change_other_hesse +] {!</td></tr>!}
+{!</table>!}
+
+**Potential coalitions:**
+
+<span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition (<span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span>?] [? if lvp_formed: + <span style="color: var(--dvp-color);">[+ dvp_name +]</span>?]): [+ weimar_coalition_hesse +]%
+
+Grand Coalition (<span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span> ?] + <span style="color: #C0A054;">**DVP**</span>): [+ grand_coalition_hesse +]%
+
+Bourgeois Coalition (<span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span> ?] + <span style="color: #C0A054;">**DVP**</span> [? if kvp_formed: + <span style="color: #455B95;">**KVP**</span>?][? if cnblp_exist: + <span style="color: #006400;">**WBWB**</span>?][? if csvd_exist: + <span style="color: #8ED8E4;">**CSVD**</span>?][? if csrp_exist: + <span style="color: #FF6B21;">**CSRP**</span>?][? if aspd_exist and aspd_ideology = "Moderate": + <span style="color: #FE9E00;">**ASPD**</span>?] + <span style="color: #909090;">**Others**</span>): [+ bourgeois_coalition_hesse +]%
+
+<span style="color: #3E88B3;">Bürgerblock</span> Coalition (<span style="color: #000000;">**Z**</span> + <span style="color: #C0A054;">**DVP**</span> [? if kvp_formed: + <span style="color: #455B95;">**KVP**</span>?] + <span style="color: #3E88B3;">**DNVP**</span>): [+ right_coalition_hesse +]%
+
+Christian Coalition (<span style="color: #000000;">**Z**</span> + <span style="color: #3E88B3;">**DNVP**</span> + <span style="color: #909090;">**Others**</span>): [+ christian_coalition_hesse +]%
+
+Far-Right Coalition (<span style="color: #954B00;">**NSDAP**</span> + [? if dnvp_ideology = "Radical": <span style="color: #3F7BC1;">**DNVP**</span>?][? if dnf_formed: <span style="color: #003755;">**DNF**</span>?]): [+ far_right_coalition_hesse +]%
+
+There are some potential coalition arrangements.
+
+@coalition_menu
+
+- @z_majority_hesse
+- @weimar_coalition_hesse
+- @grand_coalition_hesse
+- @bourgeois_coalition_hesse
+- @right_coalition_hesse
+- @christian_coalition_toleration_hesse
+- @christian_coalition_hesse
+- @far_right_coalition_hesse
+- @no_majority
+
+@weimar_coalition_hesse
+title: We can form a <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition.
+subtitle: <span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span>?] [? if lvp_formed: + <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span>?]: [+ weimar_coalition_hesse +]%
+on-arrival: in_weimar_coalition_hesse = 1; z_hesse = 1;
+
+There are enough votes for a majority <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition of the <span style="color: #E3000F;">**SPD**</span>, <span style="color: #000000;">**Center**</span> and [? if not lvp_formed and not nfvp_formed: <span style="color: #DCCA4A;">**[+ ddp_name +]**</span>?][? if lvp_formed or nfvp_formed: <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span>?].
+
+- @hesse_sp
+
+@grand_coalition_hesse
+title: We can form a Grand Coalition.
+view-if: grand_coalition_hesse >= 50 and not (lvp_formed or nfvp_formed)
+subtitle: <span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span> ?] + <span style="color: #C0A054;">**DVP**</span>[? if csrp_exist: + <span style="color: #FF6B21;">**CSRP**</span>?][? if aspd_exist and aspd_ideology = "Moderate": + <span style="color: #FE9E00;">**ASPD**</span>?] ([+ grand_coalition_hesse +]%)
+on-arrival: in_grand_coalition_hesse = 1; z_hesse = 1;
+
+We will form a Grand Coalition.
+
+- @hesse_sp
+
+@bourgeois_coalition_hesse
+title: We can form a Bourgeois Coalition.
+view-if: bourgeois_coalition_hesse >= 50
+subtitle: <span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span> ?] + <span style="color: #C0A054;">**DVP**</span> [? if kvp_formed: + <span style="color: #455B95;">**KVP**</span>?] + <span style="color: #909090;">**Others**</span> ([+ bourgeois_coalition_hesse +]%)
+on-arrival: in_bourgeois_coalition_hesse = 1; z_hesse = 1;
+
+
+- @sure
+
+@sure
+title: Are we sure?
+subtitle: The hesse Chapter prefers a Christian Coalition. Our conservative base might not take too kindly to this.
+
+
+- @yes
+- @no
+
+@yes
+title: A bourgeois coalition it is
+subtitle: <span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span> ?] + <span style="color: #C0A054;">**DVP**</span> [? if kvp_formed: + <span style="color: #455B95;">**KVP**</span>?] + <span style="color: #909090;">**Others**</span> ([+ bourgeois_coalition_hesse +]%)
+on-arrival: in_bourgeois_coalition_hesse = 1; z_hesse = 1; rural_z -= 3; rural_dnvp += 2
+
+A Bourgeois Coalition is formed.
+
+@no
+title: Back to the drawing board it is
+go-to: coalition_menu
+
+
+@right_coalition_hesse
+title: We can form a <span style="color: #3E88B3;">**Bürgerblock**</span> Coalition.
+view-if: right_coalition_hesse >= 50 
+choose-if: right_coalition_hesse >= 50 and year >= 1929
+unavailable-subtitle: The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> and <span style="color: #C0A054;">**DVP**</span> despise Wilhelm Bazille.
+subtitle: <span style="color: #000000;">**Z**</span> + <span style="color: #C0A054;">**DVP**</span> [? if kvp_formed: + <span style="color: #455B95;">**KVP**</span>?] + <span style="color: #3E88B3;">**DNVP**</span> ([+ right_coalition_hesse +]%)
+on-arrival: in_right_coalition_hesse = 1; z_hesse = 1;
+
+A <span style="color: #3E88B3;">**Bürgerblock**</span> Coalition is formed.
+
+- @hesse_sp
+
+@christian_coalition_toleration_hesse
+title: We can form a Christian Coalition.
+view-if: christian_coalition_toleration_hesse >= 50 and christian_coalition_hesse < 50
+subtitle: <span style="color: #000000;">**Z**</span> + <span style="color: #3E88B3;">**DNVP**</span> + <span style="color: #909090;">**Others**</span> + <span style="color: #C0A054;">**DVP**</span> toleration ([+ christian_coalition_toleration_hesse +]%)
+on-arrival: in_christian_coalition_toleration_hesse = 1; z_hesse = 1;
+
+With the hesse Chapter's dislike of the <span style="color: #c00000;">**SPD**</span>, a <span style="color: #3E88B3;">**Bürgerblock**</span> would have been the obvious choice. However, with the animosity of the liberals towards the <span style="color: #3E88B3;">**DNVP's**</span> William Bazille, it appears that such a coalition is unlikely, especially due to Bazille's <span style="color: #385A38;">agrarian</span> bias during his tenure as Minister of Education. As such, a Christian Coalition will be formed, with the <span style="color: #C0A054;">**DVP**</span> and <span style="color: #909090;">**minor parties**</span> willing to at least abstain on motions of no confidence. 
+
+- @hesse_sp
+
+@christian_coalition_hesse
+title: We can form a Christian Coalition.
+view-if: christian_coalition_hesse >= 50
+subtitle: <span style="color: #000000;">**Z**</span> + <span style="color: #3E88B3;">**DNVP**</span> + <span style="color: #909090;">**Others**</span> ([+ christian_coalition_hesse +]%)
+on-arrival: in_christian_coalition_hesse = 1; z_hesse = 1;
+
+A Christian Coalition is formed.
+
+- @hesse_sp
+
+@far_right_coalition_hesse
+title: Far-right Coalition is formed!
+view-if: far_right_coalition_hesse >= 50
+subtitle: <span style="color: #954B00;">**NSDAP**</span> + [? if dnvp_ideology = "Radical": <span style="color: #3F7BC1;">**DNVP**</span>?][? if dnf_formed: <span style="color: #003755;">**DNF**</span>?] ([+ far_right_coalition_hesse +]%)
+on-arrival: in_far_right_coalition_hesse = 1;
+
+A Far-right Coalition is formed.
+
+- @hesse_sp
+
+@z_majority_hesse
+title: We can rule alone!
+view-if: z_hesse >= 50
+subtitle: <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span> ([+ dvp_hesse +]%)
+on-arrival: in_z_majority_hesse = 1; z_hesse = 1;
+
+A <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span> majority government is formed.
+
+- @hesse_sp
+
+
+
+@hesse_sp
+title: The coalition will choose the State President.
+
+
+- @bickes: Theodor Bickes
+- @bazille: Wilhelm Bazille
+- @bolz: Eugen Bolz
+
+@bickes
+view-if: in_grand_coalition_hesse or in_bourgeois_coalition_hesse
+on-arrival: hesse_leader = "Bickes"; hesse_leader_party = dvp_name
+face-image: img/portraits/BickesTheodor.jpg
+
+Theodor Bickes was chosen.
+
+@bazille
+view-if: in_right_coalition_hesse or in_christian_coalition_toleration_hesse or in_christian_coalition_hesse
+on-arrival: hesse_leader = "Bazille"; hesse_leader_party = "DNVP"
+face-image: img/portraits/MaierReinhold.jpg
+
+Wilhelm Bazille was chosen.
+
+@bolz
+view-if: in_weimar_coalition_hesse or in_grand_coalition_hesse or in_bourgeois_coalition_hesse or in_z_majority_hesse 
+on-arrival: hesse_leader = "Bolz"; hesse_leader_party = "Z"
+face-image: img/portraits/BolzEugen.jpg
+
+Eugen Bolz was chosen.
+
+
+
+@no_majority
+title: There is no clear governing majority.
+view-if: weimar_coalition_hesse < 50 and bourgeois_coalition_hesse < 50 and grand_coalition_hesse < 50 and far_right_coalition_hesse < 50
+on-arrival: workers_nsdap += 2; unemployed_nsdap += 2; old_middle_nsdap += 1; new_middle_nsdap += 1; rural_nsdap += 1; z_hesse = 1 if was_z_hesse; in_z_majority_hesse = 1 if was_in_z_majority_hesse; in_weimar_coalition_hesse = 1 if was_in_weimar_coalition_hesse; in_grand_coalition_hesse = 1 if was_in_grand_coalition_hesse; in_bourgeois_coalition_hesse = 1 if was_in_bourgeois_coalition_hesse; in_far_right_coalition_hesse = 1 if was_in_far_right_coalition_hesse;
+
+There is no path to a majority government for now. The current government will stay in power as a minority coalition.
