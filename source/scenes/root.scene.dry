@@ -599,6 +599,7 @@ Q.eu_progress = 0;
 // science/education
 Q.science = 0;
 Q.education_science = 0;
+Q.trade_war_poland = 1;
 
 
 // Tax rates relative to 1928 baseline
