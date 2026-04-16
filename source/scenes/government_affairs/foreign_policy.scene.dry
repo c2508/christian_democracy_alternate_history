@@ -45,9 +45,11 @@ We also aim to improve relations with our eastern neighbors, <span style="color:
 
 @trade_war
 title: Stop the trade war with <span style="color: #DC143C;">Pol</span><span style="color: #FFFFFF;">and</span>
-choose-if: budget >= 1
+view-if: trade_war_poland = 1
+choose-if: budget >= 1 and trade_war = 0 or year > 1932
+unavailable_subtitle: [? if trade_war > 0 and year < 1932: We have promised to continue the trade war with <span style="color: #DC143C;">Pol</span><span style="color: #FFFFFF;">and</span> until 1932. ?]
 subtitle: -1 budget
-on-arrival: inflation -= 0.5; workers_z += 2*(1-dissent); unemployed_z += 2*(1-dissent); rural_z -= 1; old_middle_z -= 1; west_relation += 1; east_relation += 1; eu_progress += 1 if eu_progress > 0; economic_growth += 0.4; nationalism -= 3; dnvp_relation -= 5; right_dissent += 5; nationalism -= 5*(1-dissent)
+on-arrival: trade_war_poland -= 1; inflation -= 0.5; workers_z += 2*(1-dissent); unemployed_z += 2*(1-dissent); rural_z -= 1; old_middle_z -= 1; west_relation += 1; east_relation += 1; eu_progress += 1 if eu_progress > 0; economic_growth += 0.4; nationalism -= 3; dnvp_relation -= 5; right_dissent += 5; nationalism -= 5*(1-dissent); trade_war -= 1
 
 Stopping the trade war helps workers and the urban poor by reducing prices for basic necessities. In addition, other countries are pleased by this and are more willing to negotiate on many issues.
 
