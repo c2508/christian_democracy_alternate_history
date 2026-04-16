@@ -449,6 +449,28 @@ Q.old_dnf_votes_baden = 0.0;
 Q.old_nsdap_votes_baden = 1.2;
 Q.old_other_votes_baden = 4.7;
 
+Q.spd_hesse = 32.2;
+Q.kpd_hesse = 8.4;
+Q.z_hesse = 16.0;
+Q.ddp_hesse = 7.1;
+Q.dvp_hesse = 10.4;
+Q.kvp_hesse = 0.0;
+Q.dnvp_hesse = 5.0;
+Q.dnf_hesse = 0.0;
+Q.nsdap_hesse = 3.2;
+Q.other_hesse = 17.7;
+
+Q.old_spd_votes_hesse = 32.6;
+Q.old_kpd_votes_hesse = 8.6;
+Q.old_z_votes_hesse = 17.7;
+Q.old_ddp_votes_hesse = 7.8;
+Q.old_dvp_votes_hesse= 10.7;
+Q.old_kvp_votes_hesse= 0.0;
+Q.old_dnvp_votes_hesse = 5.0;
+Q.old_dnf_votes_hesse = 0.0;
+Q.old_nsdap_votes_hesse = 0.0;
+Q.old_other_votes_hesse = 17.7;
+
 // sapd isn't formed yet, but it may be formed
 Q.sapd_r = 0;
 Q.old_sapd_r = 0;
@@ -655,6 +677,9 @@ Q.next_election_time_wurttemberg = 5;
 Q.next_election_year_baden = 1929;
 Q.next_election_month_baden = 10;
 Q.next_election_time_baden = 22;
+Q.next_election_year_baden = 1931;
+Q.next_election_month_baden = 11;
+Q.next_election_time_baden = 45;
 // government affairs timers
 Q.agricultural_policy_timer = 0;
 Q.domestic_enemies_timer = 0;
