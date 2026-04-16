@@ -410,28 +410,9 @@ view-if: bourgeois_coalition_hesse >= 50
 subtitle: <span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span> ?] + <span style="color: #C0A054;">**DVP**</span> [? if kvp_formed: + <span style="color: #455B95;">**KVP**</span>?] + <span style="color: #909090;">**Others**</span> ([+ bourgeois_coalition_hesse +]%)
 on-arrival: in_bourgeois_coalition_hesse = 1; z_hesse = 1;
 
+A Bourgeois coalition is formed.
 
-- @sure
-
-@sure
-title: Are we sure?
-subtitle: The hesse Chapter prefers a Christian Coalition. Our conservative base might not take too kindly to this.
-
-
-- @yes
-- @no
-
-@yes
-title: A bourgeois coalition it is
-subtitle: <span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span> ?] + <span style="color: #C0A054;">**DVP**</span> [? if kvp_formed: + <span style="color: #455B95;">**KVP**</span>?] + <span style="color: #909090;">**Others**</span> ([+ bourgeois_coalition_hesse +]%)
-on-arrival: in_bourgeois_coalition_hesse = 1; z_hesse = 1; rural_z -= 3; rural_dnvp += 2
-
-A Bourgeois Coalition is formed.
-
-@no
-title: Back to the drawing board it is
-go-to: coalition_menu
-
+- @hesse_sp
 
 @right_coalition_hesse
 title: We can form a <span style="color: #3E88B3;">**Bürgerblock**</span> Coalition.
