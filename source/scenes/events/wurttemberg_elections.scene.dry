@@ -428,6 +428,8 @@ on-arrival: in_bourgeois_coalition_wurttemberg = 1; z_wurttemberg = 1; rural_z -
 
 A Bourgeois Coalition is formed.
 
+- @wurttemberg_sp
+
 @no
 title: Back to the drawing board it is
 go-to: coalition_menu
