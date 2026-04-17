@@ -1,4 +1,4 @@
-title: The formation of a true interconfessional Christian Party
+title: The formation of a true Interconfessional Christian Party
 new-page: true
 subtitle: The tower falls...
 tags: event
@@ -9,7 +9,7 @@ max-visits: 1
 
 = The <span style="color: #000000;">**Center Party**</span> begins reaching out from the tower
 
-In an effort to act as a counterweight to the growing strength of the Rural People's Movement, the bulk of organised agrculture has formed an umbrella organisation called the <span style="color: #0dba1e;">**Green Front**</span>, affording agricultural interests in the <span style="color: #000000;">**Center Party**</span> and <span style="color: #3E88B3;">**DNVP**</span> more influence in their respective parties.
-Built on the negotiations back in March, the <span style="color: #0dba1e;">**Green Front**</span> aims for the economic rehabiltion of the German farmer in the face of growing economic hardship.
-With members from the <span style="color: #3E88B3;">**DNVP**</span>, <span style="color: #909090;">**CNBLP**</span> and <span style="color: #909090;">**DBP**</span>, this disparate coalition is testament to the increasingly concering plight of farmers in the countryside.
-[? if agriculture_minister_party = 'Z': As we currently hold the Agriculture Ministry, the onus falls on us to implement the <span style="color: #0dba1e;">**Green Front**</span>'s economic program in the coming months. ?] This increased focus on agricultural issues might alienate our substantial worker base while this extensive cooperation with anti-republican parties has led to outcry from the left of the party.
+Since the ascension of [+ z_party_leader +] to the chairmanship, he has been hard at work transforming the <span style="color: #000000;">**Center Party**</span> 
+into an interconfessional party based on his 1920 Essen Program, much to the chagrin of the <span style="color: #FF7F00;">Christian Left</span> and the clericals. 
+While the priests still harbour a grudge for the Kulterkampf back in the 1870s, the <span style="color: #FF7F00;">Christian Left</span> are worried that this could damage relations with the <span style="color: #c00000;">**SPD**</span>. 
+However, with the help of Brauns and Bruning, [+ z_party_leader +] has been able to push through a resolution supporting leaving the self-imposed ‘tower’ at a contentious party congress, faced with much heckling from dissident factions. As such, the <span style="color: #000000;">**Center Party**</span> will now make an effort to downplay its predominantly Catholic nature to appeal to more conservative protestants.
