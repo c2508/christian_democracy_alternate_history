@@ -39,6 +39,17 @@ if (Q.spd_relation > 60) {
     Q.green_front_points -= 1;
 }
 
+if (Q.rpm_strength = 1) {
+    Q.green_front_points += 1;
+}
+
+if (Q.rpm_strength = 2) {
+    Q.green_front_points += 2;
+}
+
+if (Q.rpm_strength = 0) {
+    Q.green_front_points -= 2;
+}
 if (Q.rural_z + Q.rural_dnvp < 45) {
     Q.green_front_points += 1;
 }
@@ -61,7 +72,7 @@ While some hold hopes for the formation of a 'single interest organisation for t
 
 
 @front_yay
-view-if: green_front_points > 5
+view-if: green_front_points > 6
 on-arrival: dnvp_relation += 5; rural_z += 3; rural_dnvp += 3; rural_other += 2; rural_nsdap -= 3; pro_republic += 3; right_dissent -= 6; right_strength += 4; green_front += 1
 face-image: img/portraits/HergtOscar.jpg
 
@@ -70,7 +81,7 @@ While its creation will take some time, it is expected that the new organisation
 
 
 @front_meh
-view-if: not (green_front_points > 5) and not (green_front_points < 3)
+view-if: not (green_front_points > 6) and not (green_front_points < 3)
 on-arrival: dnvp_relation += 3; rural_z += 1; rural_dnvp += 1; rural_nsdap += 1; right_dissent += 3; green_front += 0.5
 face-image: img/portraits/HugenbergAlfred.jpg
 
