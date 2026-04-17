@@ -29,6 +29,8 @@ Resources available: [+ resources +]
 
 [? if z_in_government and (in_left_front or in_popular_front): <span style="color: #700000;">**KPD**</span> coalition dissent: [+ kpd_coalition_dissent : coalition_dissent +] ?]
 
+[? if z_in_government and president == "Hindenburg" : Hindenburg's approval: [+ hindenburg_angry : hindenburg_angry +] ?]
+
 Internal dissent: [+ dissent_percent : dissent +]
 
 Party dues: [+ dues : funding +]
