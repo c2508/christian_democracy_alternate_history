@@ -7,7 +7,7 @@ new-page: true
 
 = Wilhelm Marx
 
-Marx [? if year >= 1928 : was ?][? if year_1928 = 1 : is ?] the Chairman of the <span style="color: #000000;">**Center Party**</span>  and our presidential candidate in 1925. While he prefers to work with the right, he is not opposed to cooperation with the SPD.
+Marx [? if year >= 1928 : was ?][? if year_1928 = 1 : is ?] the Chairman of the <span style="color: #000000;">**Center Party**</span> and our presidential candidate in 1925. While he prefers to work with the right, he is not opposed to cooperation with the <span style="color: #c00000;">**SPD**</span>.
  
 
 - @emergency_fundraising
@@ -21,26 +21,26 @@ subtitle: An emergency infusion of resources.
 view-if: difficulty < 1
 choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; emergency_used += 1; resources += 2; workers_z -= 2 if emergency_used > 1; left_labor_dissent += 3 if emergency_used > 1; right_labor_dissent += 3 if emergency_used > 1; unemployed_z -= 2 if emergency_used > 1; rural_z -= 2 if emergency_used > 2; unemployed_z -= 2 if emergency_used > 2; left_labor_dissent += 5 if emergency_used > 2; right_labor_dissent += 5 if emergency_used > 2; labor_dissent += 5 if emergency_used > 2
+on-arrival: advisor_action_timer = 6; emergency_used += 1; resources += 2; workers_z -= 2 if emergency_used > 1; labor_dissent += 3 if emergency_used > 1; unemployed_z -= 2 if emergency_used > 1; rural_z -= 2 if emergency_used > 2; unemployed_z -= 2 if emergency_used > 2; left_labor_dissent += 5 if emergency_used > 2; labor_dissent += 5 if emergency_used > 2
 
 [? if emergency_used <= 1: Marx has leveraged his position to pull in donations and arrange quick loans. ?][? if emergency_used > 1 and emergency_used < 3: Discontent is brewing among the Center's rank and file due to our persistent attempts at begging for money. ?][? if emergency_used > 2: We’re really scraping the barrel now—committed members are pressured into selling their valuables, while many others leave in frustration. ?]
 
 We have gained 2 resources.
 
 @liberal_relation
-title: Liberal Relations
-subtitle: Forge closer cooperation with the centrist parties
+title: <span style="color: #D3C24D;">Liberal</span> Relations
+subtitle: Forge closer cooperation with the <span style="color: #D3C24D;">liberal</span> parties
 choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; ddp_relation += 6; dnvp_relation += 6; lvp_relation += 6
+on-arrival: advisor_action_timer = 6; ddp_relation += 6; dvp_relation += 6; lvp_relation += 6
 
-We have managed to improve our relations with the liberals. 
+We have managed to improve our relations with the <span style="color: #D3C24D;">liberals</span>. 
 
 @party_discipline
 title: Party Discipline
 subtitle: Reduce dissent across the party.
 choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; left_labor_dissent -= 10; right_labor_dissent -= 10; center_dissent -= 10; right_dissent -= 10; left_dissent -= 10;
+on-arrival: advisor_action_timer = 6; labor_dissent -= 10; center_dissent -= 10; right_dissent -= 10; left_dissent -= 10;
 
 We have enforced party discipline to reduce dissent across all factions.
