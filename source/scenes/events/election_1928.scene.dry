@@ -1374,6 +1374,7 @@ Wilhelm Groener has been appointed Reichswehr Minister.
 @no_more
 title: No more ministries.
 subtitle: [? if leverage >= 5 : We still have some more leverage to gain ministries. ?][? if leverage < 5 : We do not have much leverage left. ?]
+on-arrival: agri_minister -= 1;
 tags: mins_1928
 
 This coalition arrangement is tolerable to all.
