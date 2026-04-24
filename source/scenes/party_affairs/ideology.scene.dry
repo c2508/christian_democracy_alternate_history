@@ -15,9 +15,8 @@ The <span style="color: #000000;">**Center Party**</span> is torn between many d
 [? if ideology != 0 : We have previously chosen a [+ ideology +] ideology. Changing it will likely have drawbacks. ?]
 
 - @left: In favor of socially progressive policies and republicanism, we seek extensive cooperation with the <span style="color: #c00000;">**SPD**</span> to preserve democracy.
-- @left_labor: Advancing the rights of workers together with the <span style="color: #c00000;">**SPD**</span> is our primary goal.
+- @labor: Advancing the rights and welfare of workers is our primary goal.
 - @centrist: We should continue to advance the rights of Catholics through the democratic framework.
-- @right_labor: With a focus on protecting workers' welfare, we will staunchly oppose socialism and laissez-faire capitalism.
 - @right: By working with the moderate right, we will seek a return to the pre-war status quo. 
 - @easy_discard
 
@@ -31,16 +30,17 @@ go-to: changed if changed = 1
 on-departure: ideology = "left"; left_strength += 10; left_dissent -= 5; spd_relation += 5; dnvp_relation -= 5; ddp_relation += 3; democratization += 1
 
 The Left wing of our party is decidedly pro-republic and seeks to continue the current constituitional order. 
-@left_labor
+@labor
 on-arrival: {!
 if (Q.ideology && Q.ideology != "left_labor") {
     Q.changed = 1;
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "left_labor"; left_labor_strength += 10; left_labor_dissent -= 5; spd_relation += 3; dnvp_relation -= 3; ddp_relation += 1;
+on-departure: ideology = "labor"; left_labor_strength += 10; left_labor_dissent -= 5; spd_relation += 3; dnvp_relation -= 3; ddp_relation += 1;
 
 The left labor wing of our party has strong ties with the <span style="color: #c00000;">**SPD**</span> and supports the republic.
+
 @centrist
 on-arrival: {!
 if (Q.ideology && Q.ideology != "centrist") {
@@ -51,17 +51,6 @@ go-to: changed if changed = 1
 on-departure: ideology = "centrist"; center_strength += 10; center_dissent -= 10; left_dissent -= 5; right_dissent -= 5; left_labor_dissent -= 8; right_labor_dissent -= 8;
  
 The Centrists, led by Marx and Guerard, are generally republican by reason. While they prefer to work with the <span style="color: #3E88B3;">**DNVP**</span>, they do not rule out coalitions with the <span style="color: #c00000;">**SPD**</span>.
-
-@right_labor
-on-arrival: {!
-if (Q.ideology && Q.ideology != "right_labor") {
-    Q.changed = 1;
-}
-!}
-go-to: changed if changed = 1
-on-departure: ideology = "right_labor"; right_labor_strength += 10; peoples_party_support += 1; right_labor_dissent -= 5; spd_relation -= 3
-
-The right labor wing of the party supports continued participation in government in order to provide benefits to the workers, but detests <span style="color: #c00000;">socialism</span> and would prefer to work with the <span style="color: #3E88B3;">**conservative**</span> right.
 
 @right
 on-arrival: {!
