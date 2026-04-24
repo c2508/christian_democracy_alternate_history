@@ -1425,6 +1425,7 @@ title: Drop the Agriculture Ministry.
 view-if: agriculture_minister_party = "Z"
 choose-if: agri_minister = 0
 on-arrival: agriculture_minister_party = ddp_name; agriculture_minister = "Dietrich"; leverage += 10; agriculture_minister_party = "DNVP" if in_right_coalition or in_center_right_coalition; agriculture_minister = "Schiele" if in_weimar_coalition or in_center_right_coalition
+unavailable-subtitle: We have promised to have a conservative agriculture minister in the next cabinet.
 tags: drop_mins_1928
 go-to: ministries
 
