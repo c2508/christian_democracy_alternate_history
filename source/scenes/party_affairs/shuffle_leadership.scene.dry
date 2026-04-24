@@ -21,7 +21,7 @@ Removing advisors will increase dissent from their faction of the party, while s
 
 @rm_main
 title: Remove advisors.
-tags: center_advisor, left_labor_advisor, left_advisor, right_advisor, young_conservatives_advisor, nonfactional_advisor 
+tags: center_advisor, labor_advisor, left_advisor, right_advisor, young_conservatives_advisor, nonfactional_advisor 
 frequency: 1
 
 - #remove_advisor
