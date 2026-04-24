@@ -99,7 +99,7 @@ Marx has been removed as an advisor. The Centrist faction disapproves.
 title: Remove Becker
 view-if: becker_advisor = 1
 tags: remove_advisor
-on-arrival: becker_advisor = 0; left_labor_dissent += 5; n_advisors -= 1
+on-arrival: becker_advisor = 0; labor_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
 Becker has been removed as an advisor. The Labor faction disapproves.
@@ -108,7 +108,7 @@ Becker has been removed as an advisor. The Labor faction disapproves.
 title: Remove Joos
 view-if: joos_advisor = 1
 tags: remove_advisor
-on-arrival: joos_advisor = 0; left_labor_dissent += 5; n_advisors -= 1
+on-arrival: joos_advisor = 0; labor_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
 Joos has been removed as an advisor. The Labor faction disapproves.
@@ -117,7 +117,7 @@ Joos has been removed as an advisor. The Labor faction disapproves.
 title: Remove Imbusch
 view-if: imbusch_advisor = 1
 tags: remove_advisor
-on-arrival: imbusch_advisor = 0; left_labor_dissent += 5; n_advisors -= 1
+on-arrival: imbusch_advisor = 0; labor_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
 Imbusch has been removed as an advisor. The Labor faction disapproves.
@@ -126,7 +126,7 @@ Imbusch has been removed as an advisor. The Labor faction disapproves.
 title: Remove Brauns
 view-if: brauns_advisor = 1
 tags: remove_advisor
-on-arrival: brauns_advisor = 0; left_labor_dissent += 5; n_advisors -= 1
+on-arrival: brauns_advisor = 0; labor_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
 Brauns has been removed as an advisor. The Labor faction disapproves.
@@ -135,16 +135,16 @@ Brauns has been removed as an advisor. The Labor faction disapproves.
 title: Remove Bruning
 view-if: bruning_advisor = 1
 tags: remove_advisor
-on-arrival: bruning_advisor = 0; left_labor_dissent += 5; n_advisors -= 1
+on-arrival: bruning_advisor = 0; labor_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
 Bruning has been removed as an advisor. The Labor faction disapproves. 
 
 @remove_stegerwald
 title: Remove Stegerwald
-view-if: aufhauser_advisor = 1
+view-if: stegerwald_advisor = 1
 tags: remove_advisor
-on-arrival: stegerwald_advisor = 0; left_labor_dissent += 5; n_advisors -= 1
+on-arrival: stegerwald_advisor = 0; labor_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
 Stegerwald has been removed as an advisor. The Labor faction disapproves.
@@ -158,7 +158,7 @@ on-arrival: adenauer_advisor = 0; right_dissent += 3; n_advisors -= 1
 tags: remove_advisor
 go-to: rm_main
 
-Adenauer has been removed as an advisor. The Right faction disapproves.
+Adenauer has been removed as an advisor. The Catholic Conservative faction disapproves.
 
 
 @remove_hermes
@@ -168,7 +168,7 @@ tags: remove_advisor
 on-arrival: hermes_advisor = 0; right_dissent += 3; n_advisors -= 1
 go-to: rm_main
 
-Hermes has been removed as an advisor. The Right faction disapproves.
+Hermes has been removed as an advisor. The Catholic Conservative faction disapproves.
 
 
 @remove_kaas
@@ -178,7 +178,7 @@ tags: remove_advisor
 on-arrival: kass_advisor = 0; right_dissent += 3; n_advisors -= 1
 go-to: rm_main
 
-Kaas has been removed as an advisor. The Right faction disapproves.
+Kaas has been removed as an advisor. The Catholic Conservative faction disapproves.
 
 @remove_papen
 title: Remove Papen
@@ -187,7 +187,7 @@ tags: remove_advisor
 on-arrival: papen_advisor = 0; right_dissent += 3; n_advisors -= 1
 go-to: rm_main
 
-Papen has been removed as an advisor. The Right faction disapproves. 
+Papen has been removed as an advisor. The Catholic Conservative faction disapproves. 
 
 # young conservatives
 
@@ -252,15 +252,14 @@ go-to: advisor_menu
 
 @advisor_menu
 title: Add other advisors.
-tags: center_advisor, left_labor_advisor, right_advisor, right_labor_advisor, young_conservative_advisor, nonfactional_advisor
+tags: center_advisor, right_advisor, labor_advisor, young_conservative_advisor, nonfactional_advisor
 frequency: 1
 
 
 - @center: Add Centrists
-- @left_labor: Add Left Labor
+- @labor: Add Labor
 - @left: Add Left
-- @right_labor: Add Right Labor
-- @right: Add Right 
+- @right: Add Catholic Conservatives
 - @young_conservatives: Add Young Conservatives
 - @nonfactional: Add non-factional advisors
 - @rm_main: Remove advisors instead.
@@ -342,7 +341,7 @@ subtitle: Becker is a leading Christian trade unionist and a supporter of the We
 is-card: true
 card-image: img/portraits/SeveringCarl.jpg
 view-if: becker_advisor = 0 and n_advisors < 3
-on-arrival: becker_advisor = 1; n_advisors += 1; left_labor_strength += 5
+on-arrival: becker_advisor = 1; n_advisors += 1; labor_strength += 5
 go-to: advisor_menu
 tags: left_labor_advisor
 
@@ -354,7 +353,7 @@ subtitle: Joos is the Chairman of the Reich Association of Catholic Workers' Ass
 is-card: true
 card-image: img/portraits/JoosJoseph.jpg
 view-if: joos_advisor = 0 and n_advisors < 3
-on-arrival: joos_advisor = 1; n_advisors += 1; left_labor_strength += 5
+on-arrival: joos_advisor = 1; n_advisors += 1; labor_strength += 5
 go-to: advisor_menu
 tags: left_labor_advisor
 
@@ -366,7 +365,7 @@ subtitle: Imbusch is a trade unionist and Member of the Reichstag.
 is-card: true
 card-image: img/portraits/JuchaczMarie.jpg
 view-if: imbusch_advisor = 0 and n_advisors < 3
-on-arrival: imbusch_advisor = 1; n_advisors += 1; left_labor_strength += 5
+on-arrival: imbusch_advisor = 1; n_advisors += 1; labor_strength += 5
 go-to: advisor_menu
 tags: left_labor_advisor
 
@@ -376,7 +375,7 @@ Heinrich Imbusch is now an advisor.
 
 @add_dessauer
 title: Friedrich Dessauer
-subtitle: Dessauer is a journalist and the founder of a prominent Catholic Left newspaper.
+subtitle: Dessauer is a journalist and the founder of a prominent Catholic <span style="color: #FF7F00;">Left</span> newspaper.
 card-image: img/portraits/PfülfAntonie.jpg
 view-if: dessauer_advisor = 0 and n_advisors < 3
 on-arrival: dessauer_advisor = 1; n_advisors += 1; left_strength += 5
@@ -408,14 +407,14 @@ tags: left_advisor
 
 Joseph Wirth is now an advisor.
 
-# right labor
+
 
 @add_brauns
 title: Heinrich Brauns
 subtitle: Brauns is a Catholic Priest who has been Labor Minister since 1920.
 card-image: img/portraits/LeviPaul.jpg
-view-if: right_labor_advisor = 0 and n_advisors < 3 and right_labor_defect = 0
-on-arrival: brauns_advisor = 1; n_advisors += 1; right_labor_strength += 5
+view-if: brauns_advisor = 0 and n_advisors < 3 
+on-arrival: brauns_advisor = 1; n_advisors += 1; labor_strength += 5
 go-to: advisor_menu
 tags: right_labor_advisor
 is-card: true
@@ -424,11 +423,11 @@ Heinrich Brauns is now an advisor.
 
 @add_bruning
 title: Heinrich Bruning
-subtitle: Bruning is our lead economist and managing director of the DGB. 
+subtitle: Bruning is our lead economist and managing director of the <span style="color: #000000;">**DGB**</span>.
 is-card: true
 card-image: img/portraits/BruningHeinrich.jpg
-view-if: bruning_advisor = 0 and n_advisors < 3 and right_labor_defect = 0
-on-arrival: bruning_advisor = 1; n_advisors += 1
+view-if: bruning_advisor = 0 and n_advisors < 3 
+on-arrival: bruning_advisor = 1; n_advisors += 1; labor_strength += 5
 go-to: advisor_menu
 tags: right_labor_advisor
 
@@ -436,11 +435,11 @@ Heinrich Bruning is now an advisor.
 
 @add_stegerwald
 title: Adam Stegerwald
-subtitle: Stegerwald  [? if year >= 1928 : was ?][? if year_1928 = 1 : is ?]  the chairman of the Christian Trade Union Federation (<span style="color: #000000;">**DGB**</span>). 
+subtitle: Stegerwald  [? if year >= 1928 : was ?][? if year_1928 = 1 : is ?] the chairman of the Christian Trade Union Federation (<span style="color: #000000;">**DGB**</span>). 
 is-card: true
 card-image: img/portraits/SenderToni.jpg
-view-if: stegerwald_advisor = 0 and n_advisors < 3and right_labor_defect = 0
-on-arrival: stegerwald_advisor = 1; n_advisors += 1; right_labor_strength += 5
+view-if: stegerwald_advisor = 0 and n_advisors < 3
+on-arrival: stegerwald_advisor = 1; n_advisors += 1; labor_strength += 5
 go-to: advisor_menu
 tags: right_labor_advisor
 
