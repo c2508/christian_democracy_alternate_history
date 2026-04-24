@@ -32,7 +32,7 @@ title: Stop changing advisors.
 go-to: root
 tags: remove_advisor
 
-#left
+# left
 
 @remove_wirth
 title: Remove Wirth
@@ -62,7 +62,7 @@ go-to: rm_main
 Dessauer has been removed as an advisor. The Left faction disapproves.
 
 
-#center
+# center
 
 @remove_guerard
 title: Remove Guerard
@@ -93,7 +93,7 @@ go-to: rm_main
 
 Marx has been removed as an advisor. The Centrist faction disapproves.
 
-# left labor
+# labor
 
 @remove_becker
 title: Remove Becker
