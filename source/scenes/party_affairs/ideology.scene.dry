@@ -39,7 +39,7 @@ if (Q.ideology && Q.ideology != "left_labor") {
 go-to: changed if changed = 1
 on-departure: ideology = "labor"; left_labor_strength += 10; left_labor_dissent -= 5; spd_relation += 3; dnvp_relation -= 3; ddp_relation += 1;
 
-The left labor wing of our party has strong ties with the <span style="color: #c00000;">**SPD**</span> and supports the republic.
+The labor wing of our party has strong ties with the <span style="color: #c00000;">**SPD**</span> and most support the republic.
 
 @centrist
 on-arrival: {!
