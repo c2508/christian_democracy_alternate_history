@@ -16,7 +16,7 @@ In our media and campaign materials, who should we consider as our main opponent
 - @anti_dem: The anti democratic parties - the <span style="color: #700000;">**KPD**</span>, <span style="color: #7A3C00;">**NSDAP**</span> and <span style="color: #3E88B3;">**DNVP**</span>.
 - @far_right_and_left: The far right and far left - the <span style="color: #700000;">**KPD**</span> and <span style="color: #7A3C00;">**NSDAP**</span>.
 - @nsdap: The <span style="color: #7A3C00;">**NSDAP**</span> alone.
-- @special_interest: The <span style="color: #909090;">**CNBLP**</span>, <span style="color: #909090;">**CSRP*</span> and <span style="color: #B8996F;">**WP**</span>.
+- @special_interest: The <span style="color: #909090;">**special interest**</span> parties, the <span style="color: #909090;">**CNBLP**</span>, <span style="color: #909090;">**CSRP*</span> and <span style="color: #B8996F;">**WP**</span>.
 - @marxist: The <span style="color: #c00000;">**Marxist**</span> parties - the <span style="color: #700000;">**KPD**</span> and <span style="color: #c00000;">**SPD**</span>.
 - @easy_discard
 
@@ -40,7 +40,7 @@ choose-if: year <= 1932
 unavailable-subtitle: [? if year <= 1932: The <span style="color: #909090;">**special interest**</span> parties have become irrelevant in light of the rise of the <span style="color: #7A3C00;">**NSDAP**</span>. ?}
 on-arrival: enemies = "special interests"; rural_other -= 3; old_middle_other -= 2
 
-Attacking the <span style="color: #700000;">**KPD**</span> is supported by all but the most left-wing in our party, and wins us some measure of approval among the other bourgeois parties.
+We critisise the increasing materialism of the German electorate and their pivot towards narrow <span style="color: #909090;">**special interest**</span> parties. 
 
 @marxist
 on-arrival: enemies = "marxist parties"; left_dissent += 5; labor_dissent += 3; right_strength += 8; right_dissent -= 5; spd_relation -= 5; dvp_relation += 5; dnvp_relation += 5; workers_spd -= 3; workers_kpd -= 3
