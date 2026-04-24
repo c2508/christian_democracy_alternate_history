@@ -40,7 +40,7 @@ view-if: agri_minister = 0
 on-arrival: rpm_points += 2; agri_minister += 1; right_strength += 5;
 go-to: ministries
 
-We shall have the a conservative agriculture minister in the next cabinet.
+We shall have a conservative agriculture minister in the next cabinet.
 
 @fund
 title: Fund the <span style="color: #000000;">**Center Party**</span> aligned Association of German Farmers’ Association <span style="color: #000000;">**(VdB)**</span> for more low interest loans 
