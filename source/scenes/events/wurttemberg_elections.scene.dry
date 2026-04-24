@@ -483,7 +483,7 @@ view-if: z_wl >= 50
 subtitle: <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span> ([+ dvp_wl +]%)
 on-arrival: in_z_majority_wurttemberg = 1; z_wurttemberg = 1;
 
-A <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span> majority government is formed.
+A <span style="color: #000000;">**Z**</span> majority government is formed.
 
 - @wurttemberg_sp
 
