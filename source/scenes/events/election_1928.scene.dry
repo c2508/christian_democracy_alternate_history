@@ -970,7 +970,7 @@ Who should be the chancellor?
 title: Rudolf Breitscheid for Chancellor
 subtitle: Breitscheid is viewed as friendlier towards the left of the <span style="color: #E3000F;">**SPD**</span>.
 view-if: year >= 1930
-on-arrival: chancellor = "Breitscheid"; chancellor_party = "SPD";
+on-arrival: chancellor = "Breitscheid"; chancellor_party = "SPD"; agriculture_minister_party = "Z" if agri_minister = 1; agriculture_minister = "Hermes" if agri_minister = 1;
 go-to: ministries
 
 Rudolf Breitscheid has been appointed chancellor.
@@ -1163,7 +1163,7 @@ Who should be the chancellor?
 title: Hermann Müller for Chancellor
 view-if: muller_dead = 0
 subtitle: Müller is popular within the <span style="color: #E3000F;">**SPD**</span>, and is our preferred candidate for Chancellor.
-on-arrival: spd_in_government = 1; chancellor = "Müller"; chancellor_party = "SPD"; in_grand_coalition = 1 if in_weimar_coalition == 0
+on-arrival: spd_in_government = 1; chancellor = "Müller"; chancellor_party = "SPD"; in_grand_coalition = 1 if in_weimar_coalition == 0; agriculture_minister_party = "Z" if agri_minister = 1; agriculture_minister = "Hermes" if agri_minister = 1; leverage -= 10 if agri_minister = 1;
 go-to: ministries
 
 Müller's appointment as chancellor is approved by all our potential allies.
@@ -1172,7 +1172,7 @@ Müller's appointment as chancellor is approved by all our potential allies.
 title: Otto Wels for Chancellor
 view-if: muller_dead = 1
 subtitle: Otto Wels is a party leader in the <span style="color: #E3000F;">**SPD**</span>, but can he also be chancellor?
-on-arrival: spd_in_government = 1; chancellor = "Wels"; chancellor_party = "SPD"; in_grand_coalition = 1 if in_weimar_coalition == 0
+on-arrival: spd_in_government = 1; chancellor = "Wels"; chancellor_party = "SPD"; in_grand_coalition = 1 if in_weimar_coalition == 0; agriculture_minister_party = "Z" if agri_minister = 1; agriculture_minister = "Hermes" if agri_minister = 1; leverage -= 10 if agri_minister = 1;
 go-to: ministries
 
 Otto Wels's appointment as chancellor is approved by our potential allies.
@@ -1191,7 +1191,7 @@ We have significant qualms about appointing Braun as chancellor, given that he i
 @braun_2
 subtitle: Otto Braun will be Chancellor.
 view-if: not historical_mode
-on-arrival: spd_in_government = 1; chancellor = "Braun"; chancellor_party = "SPD"; leverage += 10; in_grand_coalition = 1 if in_weimar_coalition == 0
+on-arrival: spd_in_government = 1; chancellor = "Braun"; chancellor_party = "SPD"; leverage += 10; in_grand_coalition = 1 if in_weimar_coalition == 0; agriculture_minister_party = "Z" if agri_minister = 1; agriculture_minister = "Hermes" if agri_minister = 1; leverage -= 10 if agri_minister = 1;
 go-to: ministries
 
 We have been promised by the SPD to have more influence in the government in response to the appointment of Braun as chancellor.
@@ -1200,7 +1200,7 @@ We have been promised by the SPD to have more influence in the government in res
 @z_chancellor
 title: We will have the chancellorship.
 subtitle: Heinrich Brüning will be chancellor. This will cause internal dissent within the <span style="color: #c00000;">**SPD**</span> and we will need to grant them more influence in the government.
-on-arrival: spd_relation -= 5; dvp_relation += 5; kpd_relation -= 5; in_grand_coalition = 1 if in_weimar_coalition == 0; chancellor = "Bruning"; chancellor_party = "Z"; spd_in_government = 1; leverage -= 5
+on-arrival: spd_relation -= 5; dvp_relation += 5; kpd_relation -= 5; in_grand_coalition = 1 if in_weimar_coalition == 0; chancellor = "Bruning"; chancellor_party = "Z"; spd_in_government = 1; leverage -= 5; agriculture_minister_party = "Z" if agri_minister = 1; agriculture_minister = "Hermes" if agri_minister = 1; leverage -= 10 if agri_minister = 1;
 go-to: ministries
 
 This is highly unexpected, and those in the left wing of the <span style="color: #c00000;">**SPD**</span> are displeased.
@@ -1212,7 +1212,7 @@ This is highly unexpected, and those in the left wing of the <span style="color:
 title: Let Joseph Wirth be chancellor.
 view-if: z_party_leader == "Joos"
 subtitle: Wirth is part of the <span style="color: #FF7F00;">Christian Left</span> in the <span style="color: #000000;">**Center Party**</span>. We will need to grant the <span style="color: #E3000F;">**SPD**</span> more influence in the government.
-on-arrival: left_labor_dissent -= 10; spd_relation += 6; ddp_relation += 3; kpd_relation -= 5; in_grand_coalition = 1 if in_weimar_coalition == 0; chancellor = "Wirth"; chancellor_party = "Z"; spd_in_government = 1; leverage += 5
+on-arrival: left_labor_dissent -= 10; spd_relation += 6; ddp_relation += 3; kpd_relation -= 5; in_grand_coalition = 1 if in_weimar_coalition == 0; chancellor = "Wirth"; chancellor_party = "Z"; spd_in_government = 1; leverage += 5; agriculture_minister_party = "Z" if agri_minister = 1; agriculture_minister = "Hermes" if agri_minister = 1; leverage -= 10 if agri_minister = 1;
 go-to: ministries
 
 
@@ -1423,6 +1423,7 @@ go-to: ministries
 @drop_agriculture
 title: Drop the Agriculture Ministry.
 view-if: agriculture_minister_party = "Z"
+choose-if: agri_minister = 0
 on-arrival: agriculture_minister_party = ddp_name; agriculture_minister = "Dietrich"; leverage += 10; agriculture_minister_party = "DNVP" if in_right_coalition or in_center_right_coalition; agriculture_minister = "Schiele" if in_weimar_coalition or in_center_right_coalition
 tags: drop_mins_1928
 go-to: ministries
