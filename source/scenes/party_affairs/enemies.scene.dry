@@ -36,8 +36,8 @@ on-arrival: enemies = "NSDAP"; left_strength += 5; nazi_urgency += 1; workers_ns
 [? if nazi_urgency == 0 or nsdap_r < 10 : The <span style="color: #7A3C00;">**NSDAP**</span> is a tiny party right now, with more bark than bite. Many in our party are questioning our choices. ?][? if nazi_urgency > 0 and nsdap_r >= 10 : The <span style="color: #7A3C00;">**Nazis**</span> are the most urgent problem for us to deal with. ?]
 
 @special_interest
-choose-if: year => 1931
-unavailable-subtitle: [? if year => 1931: The <span style="color: #909090;">**special interest**</span> parties have become irrelevant in light of the rise of the <span style="color: #7A3C00;">**NSDAP**</span>. ?}
+choose-if: year <= 1932
+unavailable-subtitle: [? if year <= 1932: The <span style="color: #909090;">**special interest**</span> parties have become irrelevant in light of the rise of the <span style="color: #7A3C00;">**NSDAP**</span>. ?}
 on-arrival: enemies = "special interests"; rural_other -= 3; old_middle_other -= 2
 
 Attacking the <span style="color: #700000;">**KPD**</span> is supported by all but the most left-wing in our party, and wins us some measure of approval among the other bourgeois parties.
