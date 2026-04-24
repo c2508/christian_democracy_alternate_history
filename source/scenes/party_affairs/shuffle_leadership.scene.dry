@@ -270,20 +270,15 @@ view-if: n_advisors < 3
 
 - #left_advisor
 
-@left_labor
+@labor
 view-if: n_advisors < 3
 
-- #left_labor_advisor
+- #labor_advisor
 
 @center
 view-if: n_advisors < 3
 
 - #center_advisor
-
-@right_labor
-view-if: n_advisors < 3
-
-- #right_labor_advisor
 
 @right
 view-if: n_advisors < 3
