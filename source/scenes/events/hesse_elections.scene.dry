@@ -125,9 +125,9 @@ if (new_party_sum > 0) {
 
 
 
-if (!Q.lvp_formed && !Q.nfvp_formed) Q.weimar_coalition_hesse = parseFloat((Q.spd_hesse + Q.ddp_hesse + Q.z_hesse + Q.csrp_hesse).toFixed(1));
-if (Q.lvp_formed || Q.nfvp_formed) Q.weimar_coalition_hesse = parseFloat((Q.spd_hesse + Q.dvp_hesse + Q.z_hesse + Q.csrp_hesse).toFixed(1));
-if (Q.aspd_exist && Q.aspd_ideology == "Moderate") Q.weimar_coalition_hesse = parseFloat((Q.weimar_coalition_hesse + Q.aspd_hesse).toFixed(1));
+if (!Q.lvp_formed && !Q.nfvp_formed) Q.weimar_coalition_hesse = parseFloat((Q.spd_hesse + Q.ddp_hesse + Q.z_hesse e).toFixed(1));
+if (Q.lvp_formed || Q.nfvp_formed) Q.weimar_coalition_hesse = parseFloat((Q.spd_hesse + Q.dvp_hesse + Q.z_hesse ).toFixed(1));
+if (Q.aspd_exist && Q.aspd_ideology == "Moderate") Q.weimar_coalition_hesse = parseFloat((Q.weimar_coalition_hesse ).toFixed(1));
 
 Q.grand_coalition_hesse = parseFloat((Q.spd_hesse + Q.ddp_hesse + Q.z_hesse + Q.dvp_hesse + Q.csrp_hesse).toFixed(1));
 Q.christian_coalition_toleration_both_hesse =  parseFloat((Q.z_hesse + Q.dnvp_hesse + Q.ddp_hesse + Q.dvp_hesse + Q.other_hesse).toFixed(1));
