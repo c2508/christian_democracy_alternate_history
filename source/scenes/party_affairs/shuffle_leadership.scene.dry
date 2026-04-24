@@ -21,7 +21,7 @@ Removing advisors will increase dissent from their faction of the party, while s
 
 @rm_main
 title: Remove advisors.
-tags: center_advisor, left_labor_advisor, left_advisor, right_labor_advisor, right_advisor, young_conservatives_advisor, nonfactional_advisor 
+tags: center_advisor, left_labor_advisor, left_advisor, right_advisor, young_conservatives_advisor, nonfactional_advisor 
 frequency: 1
 
 - #remove_advisor
@@ -102,7 +102,7 @@ tags: remove_advisor
 on-arrival: becker_advisor = 0; left_labor_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Becker has been removed as an advisor. The Left Labor faction disapproves.
+Becker has been removed as an advisor. The Labor faction disapproves.
 
 @remove_joos
 title: Remove Joos
@@ -111,7 +111,7 @@ tags: remove_advisor
 on-arrival: joos_advisor = 0; left_labor_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Joos has been removed as an advisor. The Left Labor faction disapproves.
+Joos has been removed as an advisor. The Labor faction disapproves.
 
 @remove_imbusch
 title: Remove Imbusch
@@ -120,36 +120,34 @@ tags: remove_advisor
 on-arrival: imbusch_advisor = 0; left_labor_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Imbusch has been removed as an advisor. The Left Labor faction disapproves.
-
-# right labor
+Imbusch has been removed as an advisor. The Labor faction disapproves.
 
 @remove_brauns
 title: Remove Brauns
 view-if: brauns_advisor = 1
 tags: remove_advisor
-on-arrival: brauns_advisor = 0; right_labor_dissent += 5; n_advisors -= 1
+on-arrival: brauns_advisor = 0; left_labor_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Brauns has been removed as an advisor. The Right Labor faction disapproves.
+Brauns has been removed as an advisor. The Labor faction disapproves.
 
 @remove_bruning
 title: Remove Bruning
 view-if: bruning_advisor = 1
 tags: remove_advisor
-on-arrival: bruning_advisor = 0; right_labor_dissent += 5; n_advisors -= 1
+on-arrival: bruning_advisor = 0; left_labor_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Bruning has been removed as an advisor. The Right Labor faction disapproves. 
+Bruning has been removed as an advisor. The Labor faction disapproves. 
 
 @remove_stegerwald
 title: Remove Stegerwald
 view-if: aufhauser_advisor = 1
 tags: remove_advisor
-on-arrival: stegerwald_advisor = 0; right_labor_dissent += 5; n_advisors -= 1
+on-arrival: stegerwald_advisor = 0; left_labor_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Stegerwald has been removed as an advisor. The Right Labor faction disapproves.
+Stegerwald has been removed as an advisor. The Labor faction disapproves.
 
 # right
 
