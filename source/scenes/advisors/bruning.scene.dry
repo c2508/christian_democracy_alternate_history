@@ -1,6 +1,6 @@
 title: Heinrich Brüning
 is-pinned-card: true 
-tags: advisor, right_labor 
+tags: advisor, labor 
 card-image: img/portraits/BrüningHeinrich.jpg
 new-page: true
 view-if: bruning_advisor = 1
@@ -8,7 +8,7 @@ view-if: bruning_advisor = 1
 = Heinrich Brüning
 
 
-Bruning is our lead economist and the managing director of the Christian Trade Union Federation (DGB). With many connections to the political right, he is a rising star in the party.
+Bruning is our lead economist and the managing director of the Christian Trade Union Federation (<span style="color: #000000;">**DGB**</span>). With many connections to the political right, he is a rising star in the party.
 
 - @coalition
 - @bruning_international
@@ -20,7 +20,7 @@ Bruning is our lead economist and the managing director of the Christian Trade U
 title: Negotiating with the Coalition
 subtitle: Brüning can improve our relationships with our coalition partners.
 choose-if: advisor_action_timer <= 0 and z_in_government = 1
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_in_government: The Center Party is not in government. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_in_government: The <span style="color: #000000;">**Center Party**</span> is not in government. ?]
 on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if spd_in_government = 1 and coalition_dissent > 0; spd_relation += 5; ddp_relation += 5; dvp_relation += 5 if in_grand_coalition = 1
 
 We have improved our relations with our coalition partners and reduced tensions with the coalition.
@@ -36,7 +36,7 @@ go-to: international_relations
 @bruning_foreign
 title: Foreign Policy
 subtitle: As Foreign Minister, Brüning can set our foreign policy.
-unavailable-subtitle: [? if not z_in_government: The Center Party is not in government. ?] [? if foreign_minister_party != "Z" : The Center Party does not control the Foreign Ministry. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if not z_in_government: The <span style="color: #000000;">**Center Party**</span> is not in government. ?] [? if foreign_minister_party != "Z" : The <span style="color: #000000;">**Center Party**</span> does not control the Foreign Ministry. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer == 0 and z_in_government and foreign_minister_party == "Z"
 on-arrival: advisor_action_timer = 6; foreign_policy_timer -= 8; last_advisor_action = 1
 go-to: foreign_policy
