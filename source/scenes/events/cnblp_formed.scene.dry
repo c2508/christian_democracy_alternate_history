@@ -18,5 +18,13 @@ Q.old_rural_cnblp_display = 0
 Q.old_unemployed_cnblp_display = 0
 Q.old_catholics_cnblp_display = 0
 
+for (var record of Q.election_records) {
+    record['cnblp'] = 0;
+}
+for (var record of Q.party_support_records) {
+    record['cnblp'] = 0;
+}
+
+
   !}
 
