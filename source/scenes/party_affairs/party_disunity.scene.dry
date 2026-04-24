@@ -16,8 +16,7 @@ The party is being torn apart by internal dissent. Upset at the leadership and g
 [? if right_dissent > 45 : The right is upset at our direction.  ?]
 [? if center_dissent > 45 : The centrists are displeased with the direction of our party. ?]
 [? if left_dissent > 45 : The left is upset at our direction. ?]
-[? if left_labor_dissent > 45 : The Catholic Workers Associations disagree with our present course of action. ?]
-[? if right_labor_dissent > 45: The Christian trade unions disagree with our present course of action. ?]
+[? if left_labor_dissent > 45 : The Christian Trade Unions disagree with our present course of action. ?]
 [? if young_conservatives_dissent > 45 and young_conservatives = 1 : The young conservatives are in disagreement about our political direction. ?]
 
 Something must be done to reinforce party unity.
@@ -64,22 +63,22 @@ We have promised that we will listen to the left wing of the party. Of course, t
 
 @concessions_labor
 title: Give concessions to labor.
-view-if: labor_dissent > 30
-on-arrival: left_labor_dissent -= 7; right_labor_dissent -= 7; center_dissent += 5
+view-if: left_labor_dissent > 30
+on-arrival: left_labor_dissent -= 7; center_dissent += 5
 
 The trade unions will be granted more influence in party decision making. This upsets the centrists, who would prefer to centralize political decision making within the party.
 
 @concessions_neorevisionists
-title: Give concessions to the neorevisionists.
-view-if: neorevisionist_dissent > 30 and neorevisionism = 1
-on-arrival: neorevisionist_dissent -= 7; center_dissent += 5;
+title: Give concessions to the Young Conservatives.
+view-if: young_conservatives_dissent > 30 and neorevisionism = 1
+on-arrival: young_conservaties_dissent -= 7; center_dissent += 5;
 
 Giving the neorevisionists more influence will cause increased dissent from the centrists.
 
 
 @do_nothing
 title: Let the factions argue with themselves.
-on-arrival: right_labor_dissent += 1; left_labor_dissent += 1; left_dissent += 1; center_dissent += 1; right_dissent += 1
+on-arrival: left_labor_dissent += 1; left_dissent += 1; center_dissent += 1; right_dissent += 1
 
 Let the factions bicker; perhaps dissent is healthy for the party.
 
