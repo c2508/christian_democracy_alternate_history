@@ -1,0 +1,22 @@
+on-arrival: {!
+
+Q.cnblp_formed = 1;
+Q.parties.push('cnblp');
+
+Q.workers_cnblp = 0;
+
+Q.old_middle_class_cnblp = 1;             
+  
+Q.new_middle_class_cnblp = 0; 
+
+Q.unemployed_cnblp = 1;              
+
+Q.old_workers_cnblp_display = 0
+Q.old_new_middle_cnblp_display = 0
+Q.old_old_middle_cnblp_display = 0
+Q.old_rural_cnblp_display = 0
+Q.old_unemployed_cnblp_display = 0
+Q.old_catholics_cnblp_display = 0
+
+  !}
+
