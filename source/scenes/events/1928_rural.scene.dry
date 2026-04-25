@@ -156,7 +156,7 @@ We have decided to drop this concession.
 @low
 on-arrival: pro_republic += 3; nationalism -= 3*(1-dissent); dnvp_relation += 5; catholics_z += 4*(1-dissent); rural_dnvp += 5; rural_z += 2*(1-dissent); right_dissent -= 5; cnblp_formed = 1
 face-image: img/portraits/HergtOscar.jpg
-
+go-to: cnblp_formed
 
 After substantial concessions to the Landvolkbewegung, most farmers are content for now, as is the <span style="color: #000000;">**VdB**</span>, but the more radical elements still agitate against our policies. However, our worker base is unhappy with our capitulation to organised agriculture. In light of rising worker unemployment, this focus on agricultural issues is viewed as blatant pandering to the <span style="color: #385A38;">**RLB**</span> and <span style="color: #000000;">**VdB**</span>. 
 
@@ -165,7 +165,7 @@ Despite the successful talks, Karl Hepp from the <span style="color: #C0A054;">*
 @medium
 on-arrival: pro_republic -= 2; nationalism += 2*(1-dissent); dnvp_relation -= 4; rural_nsdap += 4; rural_dnvp -= 3; rural_z -= 1; catholics_z += 3; right_dissent += 5; rpm_strength += 1; cnblp_formed = 1
 face-image: img/portraits/WestarpKuno.jpg
-
+go-to: cnblp_formed
 
 Despite some concessions to the Landvolkbewegung, some feel that our policies do not go far enough in helping German farmers, but the <span style="color: #000000;">**VdB**</span>  is satisfied with our handling of the situation. As such, the radical elements of the movement have been significantly empowered and will seek to use this initially moderate movement to resort to increasingly violent acts of protest. This will have a destabilising effect in the countryside and may serve to further radicalise the already disenfranchised rural electorate.
 
@@ -174,7 +174,7 @@ Meanwhile, Karl Hepp from the <span style="color: #C0A054;">**DVP**</span> has f
 @high
 on-arrival: pro_republic -= 5; nationalism += 5*(1-dissent); dnvp_relation -= 8; rural_nsdap += 7; rural_z -= 3; rural_dnvp -= 4; catholics_nsdap += 5; catholics_z -= 4; catholics_dnvp -= 1; right_dissent -= 8; rpm_strength += 2; cnblp_formed = 1
 face-image: img/portraits/WestarpKuno.jpg
-
+go-to: cnblp_formed
 
 Talks with the Landvolkbewegung have broken down due to our refusal to offer them any substantial concessions, much to the disapproval of the <span style="color: #000000;">**VdB**</span>. As such, the radical elements of the movement have been significantly empowered and will seek to use this initially moderate movement to resort to increasingly violent acts of protest. This will have a destabilising effect in the countryside and may serve to further radicalise the already disenfranchised rural electorate.
 
