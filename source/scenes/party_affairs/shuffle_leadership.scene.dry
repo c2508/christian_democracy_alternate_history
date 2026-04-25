@@ -252,7 +252,7 @@ go-to: advisor_menu
 
 @advisor_menu
 title: Add other advisors.
-tags: center_advisor, right_advisor, labor_advisor, young_conservative_advisor, nonfactional_advisor
+tags: center_advisor, left_advisor, right_advisor, labor_advisor, young_conservative_advisor, nonfactional_advisor
 frequency: 1
 
 
@@ -292,6 +292,8 @@ view-if: neorevisionism > 0 and n_advisors < 3
 
 @nonfactional
 view-if: n_advisors < 3
+
+- #nonfactional_advisor
 
 #center
 
@@ -376,6 +378,7 @@ view-if: dessauer_advisor = 0 and n_advisors < 3
 on-arrival: dessauer_advisor = 1; n_advisors += 1; left_strength += 5
 go-to: advisor_menu
 tags: left_advisor
+is-card: true
 
 Friedrich Dessauer is now an advisor.
 
@@ -388,6 +391,7 @@ view-if: hess_advisor = 0 and n_advisors < 3
 on-arrival: hess_advisor = 1; n_advisors += 1; left_strength += 5
 go-to: advisor_menu
 tags: left_advisor
+is-card: true
 
 Joseph Hess is now an advisor.
 
@@ -399,6 +403,7 @@ view-if: wirth_advisor = 0 and n_advisors < 3
 on-arrival: wirth_advisor = 1; n_advisors += 1; left_strength += 5
 go-to: advisor_menu
 tags: left_advisor
+is-card: true
 
 Joseph Wirth is now an advisor.
 
