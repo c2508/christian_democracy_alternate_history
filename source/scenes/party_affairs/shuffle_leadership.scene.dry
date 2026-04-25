@@ -297,7 +297,7 @@ view-if: n_advisors < 3
 
 @add_guerard
 title: Theodor von Guerard
-subtitle: Guerard is a civil servant who is the Vice-Chairman of the Center Reichstag delegation. 
+subtitle: Guerard is a civil servant who is the Vice-Chairman of the <span style="color: #000000;">**Center**</span> Reichstag delegation. 
 card-image: img/portraits/MüllerHermann.jpg
 view-if: guerard_advisor = 0 and n_advisors < 3 and centrists_resign = 0
 on-arrival: guerard_advisor = 1; n_advisors += 1; center_strength += 5
@@ -319,7 +319,7 @@ Heinrich Kohler is now an advisor.
 
 @add_marx
 title: Wilhelm Marx
-subtitle: Marx [? if year >= 1928 : was ?][? if year_1928 = 1 : is ?] the Chairman of the Center Party.
+subtitle: Marx [? if year >= 1928 : was ?][? if year_1928 = 1 : is ?] the Chairman of the <span style="color: #000000;">**Center Party**</span> .
 card-image: img/portraits/BreitscheidRudolf.jpg
 view-if: marx_advisor = 0 and n_advisors < 3 and centrists_resign = 0
 on-arrival: marx_advisor = 1; n_advisors += 1; center_strength += 5
@@ -344,7 +344,7 @@ Johannes Becker is now an advisor.
 
 @add_joos
 title: Joseph Joos
-subtitle: Joos is the Chairman of the Reich Association of Catholic Workers' Associations and a prominent figure on the party’s left.
+subtitle: Joos is the Chairman of the Reich Association of Catholic Workers' Associations and a prominent figure on the party’s <span style="color: #FF7F00;">left</span>.
 is-card: true
 card-image: img/portraits/JoosJoseph.jpg
 view-if: joos_advisor = 0 and n_advisors < 3
@@ -382,7 +382,7 @@ Joseph Wirth is now an advisor.
 
 @add_hess
 title: Joseph Hess
-subtitle: Hess is the head of the Center Party delegation in the Prussian Parliament.
+subtitle: Hess is the head of the <span style="color: #000000;">**Center Party**</span> delegation in the Prussian Parliament.
 card-image: img/portraits/JuchaczMarie.jpg
 view-if: hess_advisor = 0 and n_advisors < 3
 on-arrival: hess_advisor = 1; n_advisors += 1; left_strength += 5
