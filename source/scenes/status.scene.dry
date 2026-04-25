@@ -104,7 +104,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the KPD.">Labor</span>!} strength: [+ left_labor_strength : strength +], dissent: [+ left_labor_dissent : dissent +]
 
-{!<span class="tooltip-text" title="The Center is a faction of Center Marxists, between reform and revolution.">center</span>!} strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
+{!<span class="tooltip-text" title="The Center is a faction of Center Marxists, between reform and revolution.">Center</span>!} strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
 
 {!<span class="tooltip-text" title="Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy.">Catholic Conservatives</span>!} strength: [+ right_strength : strength +], dissent: [+ right_dissent : dissent +]
 
