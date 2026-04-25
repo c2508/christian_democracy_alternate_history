@@ -391,8 +391,6 @@ on-arrival: in_weimar_coalition_hesse = 1; z_hesse = 1;
 
 There are enough votes for a majority <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition of the <span style="color: #E3000F;">**SPD**</span>, <span style="color: #000000;">**Center**</span> and [? if not lvp_formed and not nfvp_formed: <span style="color: #DCCA4A;">**[+ ddp_name +]**</span>?][? if lvp_formed or nfvp_formed: <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span>?].
 
-- @hesse_sp
-
 @grand_coalition_hesse
 title: We can form a Grand Coalition.
 view-if: grand_coalition_hesse >= 50 and not (lvp_formed or nfvp_formed)
@@ -401,8 +399,6 @@ on-arrival: in_grand_coalition_hesse = 1; z_hesse = 1;
 
 We will form a Grand Coalition.
 
-- @hesse_sp
-
 @bourgeois_coalition_hesse
 title: We can form a Bourgeois Coalition.
 view-if: bourgeois_coalition_hesse >= 50
@@ -410,8 +406,6 @@ subtitle: <span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span st
 on-arrival: in_bourgeois_coalition_hesse = 1; z_hesse = 1;
 
 A Bourgeois coalition is formed.
-
-- @hesse_sp
 
 @right_coalition_hesse
 title: We can form a <span style="color: #3E88B3;">**Bürgerblock**</span> Coalition.
@@ -423,8 +417,6 @@ on-arrival: in_right_coalition_hesse = 1; z_hesse = 1;
 
 A <span style="color: #3E88B3;">**Bürgerblock**</span> Coalition is formed.
 
-- @hesse_sp
-
 @christian_coalition_toleration_hesse
 title: We can form a Christian Coalition.
 view-if: christian_coalition_toleration_hesse >= 50 and christian_coalition_hesse < 50
@@ -432,8 +424,6 @@ subtitle: <span style="color: #000000;">**Z**</span> + <span style="color: #3E88
 on-arrival: in_christian_coalition_toleration_hesse = 1; z_hesse = 1;
 
 With the hesse Chapter's dislike of the <span style="color: #c00000;">**SPD**</span>, a <span style="color: #3E88B3;">**Bürgerblock**</span> would have been the obvious choice. However, with the animosity of the liberals towards the <span style="color: #3E88B3;">**DNVP's**</span> William Bazille, it appears that such a coalition is unlikely, especially due to Bazille's <span style="color: #385A38;">agrarian</span> bias during his tenure as Minister of Education. As such, a Christian Coalition will be formed, with the <span style="color: #C0A054;">**DVP**</span> and <span style="color: #909090;">**minor parties**</span> willing to at least abstain on motions of no confidence. 
-
-- @hesse_sp
 
 @christian_coalition_hesse
 title: We can form a Christian Coalition.
@@ -443,8 +433,6 @@ on-arrival: in_christian_coalition_hesse = 1; z_hesse = 1;
 
 A Christian Coalition is formed.
 
-- @hesse_sp
-
 @far_right_coalition_hesse
 title: Far-right Coalition is formed!
 view-if: far_right_coalition_hesse >= 50
@@ -453,48 +441,18 @@ on-arrival: in_far_right_coalition_hesse = 1;
 
 A Far-right Coalition is formed.
 
-- @hesse_sp
-
 @z_majority_hesse
 title: We can rule alone!
 view-if: z_hesse >= 50
-subtitle: <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span> ([+ dvp_hesse +]%)
+subtitle: <span style="color: #000000;">**Z**</span> ([+ z_hesse +]%)
 on-arrival: in_z_majority_hesse = 1; z_hesse = 1;
 
-A <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span> majority government is formed.
-
-- @hesse_sp
+A <span style="color: #000000;">**Center Party**</span> majority government is formed.
 
 
 
-@hesse_sp
-title: The coalition will choose the State President.
 
 
-- @bickes: Theodor Bickes
-- @bazille: Wilhelm Bazille
-- @bolz: Eugen Bolz
-
-@bickes
-view-if: in_grand_coalition_hesse or in_bourgeois_coalition_hesse
-on-arrival: hesse_leader = "Bickes"; hesse_leader_party = dvp_name
-face-image: img/portraits/BickesTheodor.jpg
-
-Theodor Bickes was chosen.
-
-@bazille
-view-if: in_right_coalition_hesse or in_christian_coalition_toleration_hesse or in_christian_coalition_hesse
-on-arrival: hesse_leader = "Bazille"; hesse_leader_party = "DNVP"
-face-image: img/portraits/MaierReinhold.jpg
-
-Wilhelm Bazille was chosen.
-
-@bolz
-view-if: in_weimar_coalition_hesse or in_grand_coalition_hesse or in_bourgeois_coalition_hesse or in_z_majority_hesse 
-on-arrival: hesse_leader = "Bolz"; hesse_leader_party = "Z"
-face-image: img/portraits/BolzEugen.jpg
-
-Eugen Bolz was chosen.
 
 
 
