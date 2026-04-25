@@ -2,7 +2,7 @@ on-arrival: {!
 
 Q.cnblp_formed = 1;
 Q.parties.push('cnblp');
-Q.parties_graph.push('sapd');
+Q.parties_graph.push('cnblp');
 
 Q.workers_cnblp = 0;
 
