@@ -36,7 +36,7 @@ Q.adjustmentFactors_ddp_wurttemberg = 3.0;
 Q.adjustmentFactors_z_wurttemberg = 1.45;
 Q.adjustmentFactors_dvp_wurttemberg = 1.0;
 Q.adjustmentFactors_wp_wurttemberg = 0.0;
-Q.adjustmentFactors_cnblp_wurttemberg = 7.0;
+Q.adjustmentFactors_cnblp_wurttemberg = 0.7;
 Q.adjustmentFactors_kvp_wurttemberg = 0.8;
 Q.adjustmentFactors_dnvp_wurttemberg = 0.6;
 Q.adjustmentFactors_dnf_wurttemberg = 0.5;
@@ -256,7 +256,7 @@ if (Q.csvd_exist && Q.csvd_wl) {
         "seats": Math.round(Q.csvd_wl*0.8),
     });
 }
-if (Q.cnblp_exist && Q.cnblp_wl) {
+if (Q.cnblp_formed && Q.cnblp_wl) {
     data.push({
         "id": "wbwb",
         "legend": "CNBLP",
@@ -278,6 +278,14 @@ if (Q.kvp_formed && Q.kvp_wl) {
         "legend": "KVP",
         "name": "KVP",
         "seats": Math.round(Q.kvp_wl*0.8),
+    });
+}
+if (Q.wbwb_wl) {
+    data.push({
+        "id": "wbwb",
+        "legend": "WBWB",
+        "name": "WBWB",
+        "seats": Math.round(Q.other_wl*0.8),
     });
 }
 if (Q.dnvp_wl) {
@@ -344,9 +352,11 @@ go-to: coalition_menu
 
 [? if csvd_exist: {!<tr><td><div class="box" style='background-color:#8ED8E4'> </div> !} CSVD: {!</td><td>!} [+ csvd_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_csvd_wurttemberg +] {!</td><td>!} [+ csvd_wl +]% {!</td><td>!} [+ change_csvd_wl +] {!</td><td>!} ?]
 
-[? if cnblp_exist: {!<tr><td><div class="box" style='background-color:#006400'> </div> !} CNBLP: {!</td><td>!} [+ cnblp_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_cnblp_wurttemberg +] {!</td><td>!} [+ cnblp_wl +]% {!</td><td>!} [+ change_cnblp_wl +] {!</td><td>!} ?]
+[? if cnblp_formed: {!<tr><td><div class="box" style='background-color:#006400'> </div> !} CNBLP: {!</td><td>!} [+ cnblp_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_cnblp_wurttemberg +] {!</td><td>!} [+ cnblp_wl +]% {!</td><td>!} [+ change_cnblp_wl +] {!</td><td>!} ?]
 
 [? if kvp_formed: {!<tr><td><div class="box" style='background-color:#455B95'> </div> !} KVP: {!</td><td>!} [+ kvp_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_kvp_wurttemberg +] {!</td><td>!} [+ kvp_wl +]% {!</td><td>!} [+ change_kvp_wl +] {!</td></tr>!} ?]
+
+{!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} WBWB: {!</td><td>!} [+ dnvp_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_wbwb_wurttemberg +] {!</td><td>!} [+ wbwb_wl +]% {!</td><td>!} [+ change_wbwb_wl +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} DNVP: {!</td><td>!} [+ dnvp_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_dnvp_wurttemberg +] {!</td><td>!} [+ dnvp_wl +]% {!</td><td>!} [+ change_dnvp_wl +] {!</td></tr>!}
 
@@ -388,20 +398,16 @@ There are some potential coalition arrangements.
 @weimar_coalition_wurttemberg
 title: We can form a <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition.
 subtitle: <span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span>?] [? if lvp_formed: + <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span>?]: [+ weimar_coalition_wurttemberg +]%
-choose-if: spd_relation = 99
-unavailable-subtitle: Our Wurttemberg Chapter distrusts the <span style="color: #c00000;">**Social Democrats**</span>.
 on-arrival: in_weimar_coalition_wurttemberg = 1; z_wurttemberg = 1;
 
-There are enough votes for a majority <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition of the <span style="color: #E3000F;">**SPD**</span>, <span style="color: #000000;">**Center**</span> and [? if not lvp_formed and not nfvp_formed: <span style="color: #DCCA4A;">**[+ ddp_name +]**</span>?][? if lvp_formed: <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span>?].
+There are enough votes for a majority <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition of the <span style="color: #E3000F;">**SPD**</span>, <span style="color: #000000;">**Center**</span> and [? if not lvp_formed and not nfvp_formed: <span style="color: #DCCA4A;">**[+ ddp_name +]**</span>?][? if lvp_formed or nfvp_formed: <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span>?].
 
 - @wurttemberg_sp
 
 @grand_coalition_wurttemberg
 title: We can form a Grand Coalition.
-view-if: grand_coalition_wurttemberg >= 50 and not (lvp_formed)
+view-if: grand_coalition_wurttemberg >= 50 and not (lvp_formed or nfvp_formed)
 subtitle: <span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span> ?] + <span style="color: #C0A054;">**DVP**</span>[? if csrp_exist: + <span style="color: #FF6B21;">**CSRP**</span>?][? if aspd_exist and aspd_ideology = "Moderate": + <span style="color: #FE9E00;">**ASPD**</span>?] ([+ grand_coalition_wurttemberg +]%)
-choose-if: spd_relation = 99
-unavailable-subtitle: Our Wurttemberg Chapter distrusts the <span style="color: #c00000;">**Social Democrats**</span>.
 on-arrival: in_grand_coalition_wurttemberg = 1; z_wurttemberg = 1;
 
 We will form a Grand Coalition.
