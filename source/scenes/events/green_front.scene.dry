@@ -60,7 +60,7 @@ new-page: true
 
 = The formation of the <span style="color: #0dba1e;">**Green Front**</span>
 
-With the rise of the Rural People's Movement and the proliferation of <span style="color: #909090;">**special interest**</span> parties like the <span style="color: #909090;">**CNBLP**</span>, it is evident that much of the German peasantry has been dissatisfied with the agricultural policies of the government. 
+With the rise of the Rural People's Movement and the proliferation of <span style="color: #909090;">**special interest**</span> parties like the <span style="color: #006400;">**CNBLP**</span>, it is evident that much of the German peasantry has been dissatisfied with the agricultural policies of the government. 
 Amidst growing grassroots pressure from local chapters to quell rural unrest, various organisations representing organised agriculture have been pushed to find a panacea for all the ills plauging the agricultural sector. As such, negotiations have been undertaken between the <span style="color: #385A38;">**RLB**</span>, our very own <span style="color: #000000;">**VdB**</span>, the <span style="color: #909090;">**DBP**</span> and the German Chamber of Agriculture to come together to draft a comprehensive farm program.
 While some hold hopes for the formation of a 'single interest organisation for the entire agricultural community', the confessional divide between the <span style="color: #385A38;">**RLB**</span> and the <span style="color: #000000;">**VdB**</span> make it very unlikely.
 
@@ -77,7 +77,7 @@ on-arrival: dnvp_relation += 5; rural_z += 3; rural_dnvp += 3; rural_other += 2;
 face-image: img/portraits/HergtOscar.jpg
 
 Following intense negotiations, the <span style="color: #0dba1e;">Green Front</span has finally been formed! Whlie negotiations were tricky, <span style="color: #3E88B3;">Schiele</span> has been able to present a comprehensive agricultural program aimed at the economic rehabilitation of the German farmer. Our close relations with the <span style="color: #3E88B3;">**DNVP**</span> and the growing strength of the Rural People's Movement [? if dnvp_leader = 'Hugenberg': as well as the ascension of Hugenberg to the chairmanship of the  <span style="color: #3E88B3;">**DNVP**</span> ?] have provided a renewed impetus to the unification of organised agriculture under a single umbrella organisation.
-While its creation will take some time, it is expected that the new organisation's clout will make it a formidable force in German Politics
+While its creation will take some time, it is expected that the new organisation's clout will make it a formidable force in German Politics.
 
 
 @front_meh
@@ -85,8 +85,8 @@ view-if: not (green_front_points > 6) and not (green_front_points < 3)
 on-arrival: dnvp_relation += 3; rural_z += 1; rural_dnvp += 1; rural_nsdap += 1; right_dissent += 3; green_front += 0.5
 face-image: img/portraits/HugenbergAlfred.jpg
 
-Following intense negotiations, the <span style="color: #0dba1e;">Green Front</span> has finally been formed. Whlie negotiations were tricky, <span style="color: #3E88B3;">Schiele</span> has been able to present a comprehensive agricultural program aimed at the economic rehabilitation of the German farmer. However, this falls short of the creation of a united umbrella organisation representing all of organised agriculture. Instead, it represents a bid by <span style="color: #3E88B3;">Schiele</span> and <span style="color: #000000;">Hermes</span> to slow the growing radicalisation of the Rural People's Movement. 
-Following this, the Westaphalia and Rhineland chapters of the <span style="color: #385A38;">RLB</span> and <span style="color: #000000;">**VdB**</span> have issued the 'Hagen Ultimatum' to pressure <span style="color: #3E88B3;">Schiele</span> and <span style="color: #000000;">Hermes</span> into the creation of such an organisation. This has resulted in a sharp rebuke from <span style="color: #000000;">Hermes</span>, but this is indicative of the increasingly volative agricultural landscape in Germany, in which radical parties like the <span style="color: #7A3C00;">**NSDAP**</span> stand to gain.
+After intense negotiations, the <span style="color: #0dba1e;">Green Front</span> has finally been formed. Whlie negotiations were tricky, <span style="color: #3E88B3;">Schiele</span> has been able to present a comprehensive agricultural program aimed at the economic rehabilitation of the German farmer. However, this falls short of the creation of a united umbrella organisation representing all of organised agriculture. Instead, it represents a bid by <span style="color: #3E88B3;">Schiele</span> and <span style="color: #000000;">Hermes</span> to slow the growing radicalisation of the Rural People's Movement. 
+Following this, the Westaphalia and Rhineland chapters of the <span style="color: #385A38;">RLB</span> and <span style="color: #000000;">**VdB**</span> have issued an ultimatum to <span style="color: #000000;">Hermes</span> to further cooperation with the <span style="color: #3E88B3;">**DNVP**</span>. This has resulted in a sharp rebuke from <span style="color: #000000;">Hermes</span>, but this is indicative of the increasingly volative agricultural landscape in Germany, in which radical parties like the <span style="color: #7A3C00;">**NSDAP**</span> stand to gain.
 
 @front_nay
 view-if: green_front_points < 3
@@ -94,6 +94,6 @@ on-arrival: dnvp_relation -= 3; rural_z -= 3; rural_dnvp -= 3; rural_other -= 2;
 face-image: img/portraits/WestarpKuno.jpg
 
 Surprisingly, negotiations for the formation of a <span style="color: #0dba1e;">**Green Front**</span> have broken down. Part of the reason can be attributed to the <span style="color: #385A38;">**RLB's**</span> fear of being overwhelmed by the numerically superior <span style="color: #000000;">**VdB**</span>, while the <span style="color: #000000;">**VdB**</span> holds concerns over the possible defections of their regional branches to the more politically significant <span style="color: #385A38;">**RLB**</span>.
-Furthermore, the <span style="color: #909090;">**DBP**</span>'s refusal to form a <span style="color: #0dba1e;">**Green Front**</span> stems from their aversion to any sort of affliation with the establishment parties which could compromise their status as a <span style="color: #909090;">**special interest party**</span> . In this increasingly desperate situation for German farmers, radical parties like the <span style="color: #7A3C00;">**NSDAP**</span> stand to gain.
+Furthermore, the <span style="color: #909090;">**DBP**</span>'s refusal to form a <span style="color: #0dba1e;">**Green Front**</span> stems from their aversion to any sort of affliation with the establishment parties which could compromise their status as a <span style="color: #909090;">**special interest**</span> party. In this increasingly desperate situation for German farmers, radical parties like the <span style="color: #7A3C00;">**NSDAP**</span> stand to gain.
 
 
