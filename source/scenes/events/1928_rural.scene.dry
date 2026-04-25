@@ -154,7 +154,7 @@ We have decided to drop this concession.
 
 
 @low
-on-arrival: pro_republic += 3; nationalism -= 3*(1-dissent); dnvp_relation += 5; catholics_z += 4*(1-dissent); rural_dnvp += 5; rural_z += 2*(1-dissent); right_dissent -= 5;
+on-arrival: pro_republic += 3; nationalism -= 3*(1-dissent); dnvp_relation += 5; catholics_z += 4*(1-dissent); rural_dnvp += 5; rural_z += 2*(1-dissent); right_dissent -= 5; cnblp_formed = 1
 face-image: img/portraits/HergtOscar.jpg
 go-to: cnblp_formed
 
@@ -163,7 +163,7 @@ After substantial concessions to the Landvolkbewegung, most farmers are content 
 Despite the successful talks, Karl Hepp from the <span style="color: #C0A054;">**DVP**</span> and elements from the <span style="color: #3E88B3;">**DNVP's**</span> <span style="color: #385A38;">agrarian</span> wing have formed a new political party called the <span style="color: #909090;">**CNBLP**</span> in response to the preeminence of industrial interests in the <span style="color: #C0A054;">**DVP**</span> and <span style="color: #3E88B3;">**DNVP**</span>. Although the Rural People’s Movement has been pacified, the <span style="color: #909090;">**CNBLP's**</span> appeal as an <span style="color: #385A38;">agrarian</span> <span style="color: #909090;">**special interest**</span> party can only spell trouble for the <span style="color: #C0A054;">**DVP**</span> and <span style="color: #3E88B3;">**DNVP**</span> in the upcoming elections.
 
 @medium
-on-arrival: pro_republic -= 2; nationalism += 2*(1-dissent); dnvp_relation -= 4; rural_nsdap += 4; rural_dnvp -= 3; rural_z -= 1; catholics_z += 3; right_dissent += 5; rpm_strength += 1;
+on-arrival: pro_republic -= 2; nationalism += 2*(1-dissent); dnvp_relation -= 4; rural_nsdap += 4; rural_dnvp -= 3; rural_z -= 1; catholics_z += 3; right_dissent += 5; rpm_strength += 1; cnblp_formed = 1
 face-image: img/portraits/WestarpKuno.jpg
 go-to: cnblp_formed
 
@@ -172,7 +172,7 @@ Despite some concessions to the Landvolkbewegung, some feel that our policies do
 Meanwhile, Karl Hepp from the <span style="color: #C0A054;">**DVP**</span> has formed a new political party called the <span style="color: #909090;">**CNBLP**</span> along with elements from the <span style="color: #3E88B3;">**DNVP's**</span> <span style="color: #385A38;">agrarian</span> wing in response to the preeminence of industrial interests in the <span style="color: #C0A054;">**DVP**</span> and <span style="color: #3E88B3;">**DNVP**</span>. With its appeal as an <span style="color: #385A38;">agrarian</span> <span style="color: #909090;">**special interest**</span> party, this can only spell trouble for the <span style="color: #C0A054;">**DVP**</span> and <span style="color: #3E88B3;">**DNVP**</span> in the upcoming elections
 
 @high
-on-arrival: pro_republic -= 5; nationalism += 5*(1-dissent); dnvp_relation -= 8; rural_nsdap += 7; rural_z -= 3; rural_dnvp -= 4; catholics_nsdap += 5; catholics_z -= 4; catholics_dnvp -= 1; right_dissent -= 8; rpm_strength += 2;
+on-arrival: pro_republic -= 5; nationalism += 5*(1-dissent); dnvp_relation -= 8; rural_nsdap += 7; rural_z -= 3; rural_dnvp -= 4; catholics_nsdap += 5; catholics_z -= 4; catholics_dnvp -= 1; right_dissent -= 8; rpm_strength += 2; cnblp_formed = 1
 face-image: img/portraits/WestarpKuno.jpg
 go-to: cnblp_formed
 
