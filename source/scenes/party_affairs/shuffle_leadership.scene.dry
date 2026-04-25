@@ -338,7 +338,7 @@ card-image: img/portraits/SeveringCarl.jpg
 view-if: becker_advisor = 0 and n_advisors < 3
 on-arrival: becker_advisor = 1; n_advisors += 1; labor_strength += 5
 go-to: advisor_menu
-tags: left_labor_advisor
+tags: labor_advisor
 
 Johannes Becker is now an advisor.
 
@@ -350,7 +350,7 @@ card-image: img/portraits/JoosJoseph.jpg
 view-if: joos_advisor = 0 and n_advisors < 3
 on-arrival: joos_advisor = 1; n_advisors += 1; labor_strength += 5
 go-to: advisor_menu
-tags: left_labor_advisor
+tags: labor_advisor
 
 Joseph Joos is now an advisor.
 
@@ -362,7 +362,7 @@ card-image: img/portraits/JuchaczMarie.jpg
 view-if: imbusch_advisor = 0 and n_advisors < 3
 on-arrival: imbusch_advisor = 1; n_advisors += 1; labor_strength += 5
 go-to: advisor_menu
-tags: left_labor_advisor
+tags: labor_advisor
 
 Heinrich Imbusch is now an advisor.
 
@@ -393,7 +393,7 @@ Joseph Hess is now an advisor.
 
 @add_wirth
 title: Joseph Wirth
-subtitle: Wirth is the de-facto leader of the Center Party's left wing.
+subtitle: Wirth is the de-facto leader of the <span style="color: #000000;">**Center Party's**</span> <span style="color: #FF7F00;">left</span> wing.
 card-image: img/portraits/PfülfAntonie.jpg
 view-if: wirth_advisor = 0 and n_advisors < 3
 on-arrival: wirth_advisor = 1; n_advisors += 1; left_strength += 5
@@ -411,7 +411,7 @@ card-image: img/portraits/LeviPaul.jpg
 view-if: brauns_advisor = 0 and n_advisors < 3 
 on-arrival: brauns_advisor = 1; n_advisors += 1; labor_strength += 5
 go-to: advisor_menu
-tags: right_labor_advisor
+tags: labor_advisor
 is-card: true
 
 Heinrich Brauns is now an advisor.
@@ -424,7 +424,7 @@ card-image: img/portraits/BruningHeinrich.jpg
 view-if: bruning_advisor = 0 and n_advisors < 3 
 on-arrival: bruning_advisor = 1; n_advisors += 1; labor_strength += 5
 go-to: advisor_menu
-tags: right_labor_advisor
+tags: labor_advisor
 
 Heinrich Bruning is now an advisor.
 
@@ -436,7 +436,7 @@ card-image: img/portraits/SenderToni.jpg
 view-if: stegerwald_advisor = 0 and n_advisors < 3
 on-arrival: stegerwald_advisor = 1; n_advisors += 1; labor_strength += 5
 go-to: advisor_menu
-tags: right_labor_advisor
+tags: labor_advisor
 
 Adam Stegerwald is now an advisor.
 
