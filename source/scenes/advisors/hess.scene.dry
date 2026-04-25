@@ -39,14 +39,14 @@ subtitle: Hess can improve our relationships with our coalition partners in Prus
 choose-if: advisor_action_timer = 0 and z_prussia = 1
 unavailable-subtitle:
   [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-  [? if not z_prussia : The <span style="color: #c00000;">Center</span> is not in the Prussian government. ?]
+  [? if not z_prussia : The <span style="color: #000000;">Center</span> is not in the Prussian government. ?]
 
 on-arrival:
   advisor_action_timer = 6;
   spd_relation += 4 if in_grand_coalition_prussia;
   ddp_relation += 4 if in_grand_coalition_prussia;
   dvp_relation += 2 if in_grand_coalition_prussia;
-  lvp_relation += 4 in_grand_coalition_prussia;
+  lvp_relation += 4 if in_grand_coalition_prussia;
   dvp_relation += 2 if in_grand_coalition_prussia;
   dvp_left += 1 if in_grand_coalition_prussia;
   lvp_left += 0.5;
