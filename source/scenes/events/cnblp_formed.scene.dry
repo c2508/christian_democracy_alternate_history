@@ -2,6 +2,7 @@ on-arrival: {!
 
 Q.cnblp_formed = 1;
 Q.parties.push('cnblp');
+Q.parties_graph.push('sapd');
 
 Q.workers_cnblp = 0;
 
@@ -18,13 +19,13 @@ Q.old_rural_cnblp_display = 0
 Q.old_unemployed_cnblp_display = 0
 Q.old_catholics_cnblp_display = 0
 
+Q.cnblp_r = 0;
+Q.old_cnblp_r = 0;
 for (var record of Q.election_records) {
     record['cnblp'] = 0;
 }
 for (var record of Q.party_support_records) {
     record['cnblp'] = 0;
 }
-
-
-  !}
+!}
 
