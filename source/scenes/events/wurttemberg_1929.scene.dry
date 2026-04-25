@@ -34,7 +34,7 @@ choose-if: spd_relation > 60 and right_dissent < 15
 unavailable_subtitle: [? if spd_relation < 60 : Our relations with the <span style="color: #c00000;">**SPD**</span> are too poor. ?][? if right_dissent < 15 : The right of the party will not let this happen. ?]
 on-arrival: right_dissent += 5; z_rural -= 2; in_weimar_coalition_wurttemberg = 1; in_christian_coalition_toleration_wurttemberg = 0; dnvp_relation -= 3; pro_republic += 3
 
-Due to the unwillingness of our Wurttemberg Chapter to face new elections, they have overcome their anti-<span style="color: #c00000;">**socialist**</span> bias and formed a <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span>. This has its expected detractors, but it is a necessary evil to maintain stability
+Due to the unwillingness of our Wurttemberg Chapter to face new elections, they have overcome their anti-<span style="color: #c00000;">**socialist**</span> bias and formed a <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition. This has its expected detractors within our party, but it is a necessary measure to maintain stability.
   
 @snap
 title: The cabinet falls...
