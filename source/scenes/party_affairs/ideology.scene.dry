@@ -22,12 +22,12 @@ The <span style="color: #000000;">**Center Party**</span> is torn between the di
 
 @left
 on-arrival: {!
-if (Q.ideology && Q.ideology != "<span style="color: #FF7F00;">Christian Left</span>") {
+if (Q.ideology && Q.ideology != "Christian Left") {
     Q.changed = 1;
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "<span style="color: #FF7F00;">Christian Left</span>"; left_strength += 10; left_dissent -= 5; spd_relation += 5; dnvp_relation -= 5; ddp_relation += 3; democratization += 1
+on-departure: ideology = "Christian Left"; left_strength += 10; left_dissent -= 5; spd_relation += 5; dnvp_relation -= 5; ddp_relation += 3; democratization += 1
 
 The <span style="color: #FF7F00;">Christian Left</span> faction is decidedly pro-republic and seeks to continue the current constituitional order. 
 @labor
