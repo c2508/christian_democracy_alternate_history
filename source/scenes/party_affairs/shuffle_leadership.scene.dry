@@ -377,7 +377,7 @@ on-arrival: dessauer_advisor = 1; n_advisors += 1; left_strength += 5
 go-to: advisor_menu
 tags: left_advisor
 
-Joseph Wirth is now an advisor.
+Friedrich Dessauer is now an advisor.
 
 
 @add_hess
