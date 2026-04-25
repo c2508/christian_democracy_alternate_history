@@ -1,4 +1,4 @@
-title: Questions of Ideology
+title: Questions of Direction
 new-page: true
 is-card: true
 tags: party_affairs
@@ -6,38 +6,38 @@ view-if: ideology_timer = 0
 on-arrival: month_actions += 1; old_ideology = ideology; ideology_timer = 18
 card-image: img/arbeiterbew.jpg
 max-visits: 3
-#subtitle: Setting the party's ideological direction.
+#subtitle: Determining the party's direction.
 
-= Questions of Ideology
+= Questions of Direction
 
-The <span style="color: #000000;">**Center Party**</span> is torn between many different ideological currents. What should be our primary ideological guidance for now?
+The <span style="color: #000000;">**Center Party**</span> is torn between the divergent demands of its socially heterogenous base. Which faction shall we empower to guide the <span style="color: #000000;">**Center Party**</span>?
 
-[? if ideology != 0 : We have previously chosen a [+ ideology +] ideology. Changing it will likely have drawbacks. ?]
+[? if ideology != 0 : We have previously chosen to empower the [+ ideology +] faction. Changing it will likely have drawbacks. ?]
 
 - @left: In favor of socially progressive policies and republicanism, we seek extensive cooperation with the <span style="color: #c00000;">**SPD**</span> to preserve democracy.
 - @labor: Advancing the rights and welfare of workers is our primary goal.
-- @centrist: We should continue to advance the rights of Catholics through the democratic framework.
+- @centrist: We should continue to push for the rights of Catholics through the democratic framework.
 - @right: By working with the moderate right, we will seek a return to the pre-war status quo. 
 - @easy_discard
 
 @left
 on-arrival: {!
-if (Q.ideology && Q.ideology != "left") {
+if (Q.ideology && Q.ideology != "<span style="color: #FF7F00;">Christian Left</span>") {
     Q.changed = 1;
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "left"; left_strength += 10; left_dissent -= 5; spd_relation += 5; dnvp_relation -= 5; ddp_relation += 3; democratization += 1
+on-departure: ideology = "<span style="color: #FF7F00;">Christian Left</span>"; left_strength += 10; left_dissent -= 5; spd_relation += 5; dnvp_relation -= 5; ddp_relation += 3; democratization += 1
 
-The Left wing of our party is decidedly pro-republic and seeks to continue the current constituitional order. 
+The <span style="color: #FF7F00;">Christian Left</span> faction is decidedly pro-republic and seeks to continue the current constituitional order. 
 @labor
 on-arrival: {!
-if (Q.ideology && Q.ideology != "left_labor") {
+if (Q.ideology && Q.ideology != "Labor") {
     Q.changed = 1;
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "labor"; left_labor_strength += 10; left_labor_dissent -= 5; spd_relation += 3; dnvp_relation -= 3; ddp_relation += 1;
+on-departure: ideology = "Labor"; labor_strength += 10; labor_dissent -= 5; spd_relation += 3; dnvp_relation -= 2; ddp_relation += 1;
 
 The labor wing of our party has strong ties with the <span style="color: #c00000;">**SPD**</span> and most support the republic.
 
@@ -48,22 +48,22 @@ if (Q.ideology && Q.ideology != "centrist") {
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "centrist"; center_strength += 10; center_dissent -= 10; left_dissent -= 5; right_dissent -= 5; left_labor_dissent -= 8; right_labor_dissent -= 8;
+on-departure: ideology = "centrist"; center_strength += 10; center_dissent -= 10; left_dissent -= 5; right_dissent -= 5; labor_dissent -= 8;
  
 The Centrists, led by Marx and Guerard, are generally republican by reason. While they prefer to work with the <span style="color: #3E88B3;">**DNVP**</span>, they do not rule out coalitions with the <span style="color: #c00000;">**SPD**</span>.
 
 @right
 on-arrival: {!
-if (Q.ideology && Q.ideology != "right") {
+if (Q.ideology && Q.ideology != "Catholic Conservative") {
     Q.changed = 1;
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "right"; right_strength += 10; right_dissent -= 5; dnvp_relation += 5; dvp_relation += 5; spd_relation -= 8; moderate_plan_support += 1
+on-departure: ideology = "Catholic Conservative"; right_strength += 10; right_dissent -= 5; dnvp_relation += 5; dvp_relation += 5; spd_relation -= 8; moderate_plan_support += 1
 
-Represented by bourgeoisie aristocrats and agrarian interests, the right wing of the party is skeptical of parlimentary democracy.
+Represented by bourgeois aristocrats and <span style="color: #385A38;">agrarian</span> interests, the right wing of the party is skeptical of parlimentary democracy.
 
 @changed
-on-arrival: left_dissent += 5; left_labor_dissent += 5; center_dissent += 5; right_labor_dissent += 5; right_dissent += 5
+on-arrival: left_dissent += 5; labor_dissent += 5; center_dissent += 5; right_dissent += 5
 
 We have changed ideologies. Many in the party feel unmoored.
