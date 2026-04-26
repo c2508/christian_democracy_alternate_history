@@ -34,7 +34,7 @@ title: The purpose of our media is to elect more Catholics.
 subtitle: Our newspapers will focus on the electoral campaign.
 on-arrival: campaign_media += 1; catholics_z += 5*(1-dissent)
 
-Our campaign media is mostly reaching the Catholics who are already saturated with Catholic propaganda, but it must be doing *something*, or at least that is what we hope.
+Our campaign media is mostly reaching the Catholics who already vote for us, but it must be doing *something*, or at least that is what we hope.
 
 @ideological
 title: We will continue to follow the official party line regarding important issues. 
