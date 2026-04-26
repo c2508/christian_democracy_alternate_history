@@ -258,7 +258,7 @@ if (Q.csvd_exist && Q.csvd_wl) {
 }
 if (Q.cnblp_formed && Q.cnblp_wl) {
     data.push({
-        "id": "wbwb",
+        "id": "cnblp",
         "legend": "CNBLP",
         "name": "CNBLP",
         "seats": Math.round(Q.cnblp_wl*0.8),
