@@ -33,7 +33,10 @@ if (rpm_strength == 1) {
 }
 
 if (rpm_strength == 2) {
-    Q.rural_cnblp += 12;
+    Q.rural_cnblp += 14;
+    Q.catholics_cnblp += 1;
+    Q.rural_z -= 2;
+    Q.catholics_z -= 1;
     Q.rural_dvp -= 3;
     Q.rural_dnvp -= 5;
     Q.rural_others -= 4;
