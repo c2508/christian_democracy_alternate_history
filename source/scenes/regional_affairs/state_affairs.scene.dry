@@ -7,11 +7,11 @@ tags: regional_affairs
 card-image: img/braun.jpg
 #subtitle: We can implement our state policies
 
-= Prussian Affairs
+= State Affairs
 
 Prussia, by far the largest and most important state in Germany, is governed by our party, in a coalition with the <span style="color: #c00000;">**SPD**</span> and <span style="color: #D3C24D;">**DDP**</span>. It is the most stable and democratic state government in Germany, led by the able <span style="color: #c00000;">**Otto Braun**</span>.
 
-We can enact policies in Prussia.
+We can enact policies through our state governments. 
 
 - @police_loyalty: Bolster the loyalty of the police.
 - @police_strength: Recruit additional police.
