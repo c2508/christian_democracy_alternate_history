@@ -64,6 +64,15 @@ Dessauer has been removed as an advisor. The Left faction disapproves.
 
 # center
 
+@remove_bruning
+title: Remove Bruning
+view-if: bruning_advisor = 1
+tags: remove_advisor
+on-arrival: bruning_advisor = 0; center_dissent += 5; n_advisors -= 1
+go-to: rm_main
+
+Bruning has been removed as an advisor. The Centrist faction disapproves. 
+
 @remove_guerard
 title: Remove Guerard
 view-if: guerard_advisor = 1
@@ -130,15 +139,6 @@ on-arrival: brauns_advisor = 0; labor_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
 Brauns has been removed as an advisor. The Labor faction disapproves.
-
-@remove_bruning
-title: Remove Bruning
-view-if: bruning_advisor = 1
-tags: remove_advisor
-on-arrival: bruning_advisor = 0; labor_dissent += 5; n_advisors -= 1
-go-to: rm_main
-
-Bruning has been removed as an advisor. The Labor faction disapproves. 
 
 @remove_stegerwald
 title: Remove Stegerwald
@@ -297,6 +297,18 @@ view-if: n_advisors < 3
 
 #center
 
+@add_bruning
+title: Heinrich Bruning
+subtitle: Bruning is our lead economist and managing director of the <span style="color: #000000;">**DGB**</span>.
+is-card: true
+card-image: img/portraits/BruningHeinrich.jpg
+view-if: bruning_advisor = 0 and n_advisors < 3 
+on-arrival: bruning_advisor = 1; n_advisors += 1; center_strength += 5
+go-to: advisor_menu
+tags: center_advisor
+
+Heinrich Bruning is now an advisor.
+
 @add_guerard
 title: Theodor von Guerard
 subtitle: Guerard is a civil servant who is the Vice-Chairman of the <span style="color: #000000;">**Center**</span> Reichstag delegation. 
@@ -407,8 +419,6 @@ is-card: true
 
 Joseph Wirth is now an advisor.
 
-
-
 @add_brauns
 title: Heinrich Brauns
 subtitle: Brauns is a Catholic Priest who has been Labor Minister since 1920.
@@ -421,17 +431,7 @@ is-card: true
 
 Heinrich Brauns is now an advisor.
 
-@add_bruning
-title: Heinrich Bruning
-subtitle: Bruning is our lead economist and managing director of the <span style="color: #000000;">**DGB**</span>.
-is-card: true
-card-image: img/portraits/BruningHeinrich.jpg
-view-if: bruning_advisor = 0 and n_advisors < 3 
-on-arrival: bruning_advisor = 1; n_advisors += 1; labor_strength += 5
-go-to: advisor_menu
-tags: labor_advisor
 
-Heinrich Bruning is now an advisor.
 
 @add_stegerwald
 title: Adam Stegerwald
