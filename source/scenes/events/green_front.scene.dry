@@ -19,7 +19,7 @@ if (Q.z_leader == "Stegerwald") {
     Q.green_front_points += 1;
 
 }
-if (Q.others_r > 11) {
+if (Q.cnblp_r > 3) {
     Q.green_front_points += 1;
 }
 
