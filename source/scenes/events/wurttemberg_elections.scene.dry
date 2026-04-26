@@ -377,7 +377,7 @@ Bourgeois Coalition (<span style="color: #000000;">**Z**</span> [? if ddp_exist:
 
 <span style="color: #3E88B3;">Bürgerblock</span> Coalition (<span style="color: #000000;">**Z**</span> + <span style="color: #C0A054;">**DVP**</span> [? if kvp_formed: + <span style="color: #455B95;">**KVP**</span>?] + <span style="color: #3E88B3;">**DNVP**</span>): [+ right_coalition_wurttemberg +]%
 
-Christian Coalition (<span style="color: #000000;">**Z**</span> + <span style="color: #3E88B3;">**DNVP**</span> + <span style="color: #909090;">**Others**</span>): [+ christian_coalition_wurttemberg +]%
+Christian Coalition (<span style="color: #000000;">**Z**</span> + <span style="color: #3E88B3;">**DNVP**</span> + <span style="color: #3F7BC1;">**WBWB**</span> + <span style="color: #909090;">**Others**</span>): [+ christian_coalition_wurttemberg +]%
 
 Far-Right Coalition (<span style="color: #954B00;">**NSDAP**</span> + [? if dnvp_ideology = "Radical": <span style="color: #3F7BC1;">**DNVP**</span>?][? if dnf_formed: <span style="color: #003755;">**DNF**</span>?]): [+ far_right_coalition_wurttemberg +]%
 
