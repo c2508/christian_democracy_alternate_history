@@ -557,8 +557,14 @@ table {
 .seat.dvp {
     fill: #D5AC27;
 }
+.seat.wp {
+    fill: #B8996F;
+}
 .seat.other {
     fill: #909090;
+}
+.seat.cnblp {
+    fill: #006400;
 }
 .seat.dnvp {
     fill: #3F7BC1;
