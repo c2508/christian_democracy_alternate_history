@@ -171,6 +171,7 @@ Q.in_grand_coalition_wurttemberg = 0;
 Q.in_bourgeois_coalition_wurttemberg = 0;
 Q.in_christian_coalition_wurttemberg = 0;
 Q.in_christian_coalition_toleration_wurttemberg = 0;
+Q.in_christian_coalition_toleration_both_wurttemberg = 0;
 Q.in_right_coalition_wurttemberg = 0;
 Q.in_far_right_coalition_wurttemberg = 0;
 !}
