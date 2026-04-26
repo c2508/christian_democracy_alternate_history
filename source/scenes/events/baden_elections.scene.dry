@@ -324,7 +324,7 @@ subtitle: <span style="color: #E3000F;">**SPD**</span> + <span style="color: #00
 view-if: social_catholic_coalition_baden >= 50
 on-arrival: in_social_catholic_coalition_baden = 1; z_in_baden = 1;
 
-There are enough votes for a majority Social Catholic Coalition of the <span style="color: #000000;">**Center**</span>, <span style="color: #E3000F;">**SPD**</span>. This has been our prefered governing coalition in Baden since 1925.
+There are enough votes for a majority Social Catholic Coalition of the <span style="color: #000000;">**Center**</span> and <span style="color: #E3000F;">**SPD**</span>. This has been our prefered governing coalition in Baden since 1925.
 
 - @baden_sp
 
