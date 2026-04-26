@@ -26,7 +26,7 @@ on-arrival: enemies = "anti-democratic parties"; center_strength += 5; left_stre
 Attacking the anti-democratic parties is popular among all but the right wing of our party, who would prefer to be fighting the <span style="color: #c00000;">**Marxist**</span> parties. This might also hamper our ability to reconcile with the <span style="color: #3E88B3;">**DNVP**</span> in the future.
 
 @far_right_and_left
-on-arrival: enemies = "far right and left"; left_dissent -= 5; left_labor_dissent -= 5; center_dissent -= 5; right_labor_dissent -= 5; right_dissent -= 5; old_middle_nsdap -= 3; workers_kpd -= 3;
+on-arrival: enemies = "far right and left"; left_dissent -= 5; left_dissent -= 5; center_dissent -= 5; right_dissent -= 5; old_middle_nsdap -= 3; workers_kpd -= 3;
 
 Our rhetoric against the extremist parties are popular among most of the party. 
 
@@ -45,4 +45,4 @@ We critisise the increasing materialism of the German electorate and their pivot
 @marxist
 on-arrival: enemies = "marxist parties"; left_dissent += 5; labor_dissent += 3; right_strength += 8; right_dissent -= 5; spd_relation -= 5; dvp_relation += 5; dnvp_relation += 5; workers_spd -= 3; workers_kpd -= 3
 
-Our anti-<span style="color: #c00000;">Marxist</span> rhetoric is popular among the right, but may make it harder to build the coalitions that are necessary for government in the future. 
+Our anti-<span style="color: #c00000;">Marxist</span> rhetoric is popular among the right, but may make it harder for continued cooperation with the left. 
