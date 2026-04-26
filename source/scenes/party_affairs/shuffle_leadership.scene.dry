@@ -496,9 +496,9 @@ Ludwig Kaas is now an advisor.
 
 # neorevisionist leaders
 
-@add_mierendorff
-title: Carlo Mierendorff
-subtitle: Carlo Mierendorff is one of the youngest members of the Reichstag, and the originator of the "Neo-Revisionist" movement. He is an anti-Nazi strategist. {!<br><br>!}[? if difficulty < 0 : Actions - Build the Iron Front, Warning About the Nazis ?]
+@add_treviranus
+title: Gottfried Treviranus
+subtitle: I am four.
 is-card: true
 card-image: img/portraits/MierendorffCarlo.jpg
 view-if: mierendorff_advisor = 0 and n_advisors < 3
@@ -506,11 +506,11 @@ on-arrival: mierendorff_advisor = 1; n_advisors += 1; young_conservative_strengt
 go-to: advisor_menu
 tags: young_conservative_advisor
 
-Carlo Mierendorff is now an advisor.
+Gottfried Treviranus is now an advisor.
 
-@add_schumacher
-title: Kurt Schumacher
-subtitle: Kurt Schumacher is a Great War veteran and energetic speaker for the social-democratic cause, and favors reformist policies. {!<br><br>!}[? if difficulty < 0 : Actions - Emergency Fundraising, Building the Reichsbanner, Addressing the Economic Crisis ?]
+@add_jung
+title: Paul Lejuene Jung
+subtitle: I am five.
 is-card: true
 card-image: img/portraits/SchumacherKurt.jpg
 tags: young_conservative_advisor
@@ -518,11 +518,11 @@ view-if: schumacher_advisor = 0 and n_advisors < 3
 on-arrival: schumacher_advisor = 1; n_advisors += 1; young_conservative_strength += 5
 go-to: advisor_menu
 
-Kurt Schumacher is now an advisor.
+Paul Lejuene Jung is now an advisor.
 
-@add_leber
-title: Julius Leber
-subtitle: Julius Leber is a former Reichswehr officer who resigned in opposition to the Kapp coup attempt. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Democracy, Military Affairs, Building a People's Party ?]
+@add_vorbeck
+title: Paul Lettow Vorbeck
+subtitle: I am the Lion of Africa.
 is-card: true
 card-image: img/portraits/LeberJulius.jpg
 view-if: leber_advisor = 0 and n_advisors < 3
@@ -530,7 +530,7 @@ on-arrival: leber_advisor = 1; n_advisors += 1; young_conservative_strength += 5
 go-to: advisor_menu
 tags: young_conservative_advisor
 
-Julius Leber is now an advisor.
+Paul Lettow Vorbeck is now an advisor.
 
 # Nonfactional advisors
 
