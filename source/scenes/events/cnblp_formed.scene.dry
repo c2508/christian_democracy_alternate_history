@@ -12,21 +12,21 @@ Q.catholics_cnblp = 3;
 Q.unemployed_cnblp = 1;
 
 
-if (rpm_strength == 0) {
+if (Q.rpm_strength == 0) {
     Q.rural_cnblp += 5;
     Q.rural_dvp -= 1;
     Q.rural_dnvp -= 2;
     Q.rural_others -= 2;
 }
 
-if (rpm_strength == 1) {
+if (Q.rpm_strength == 1) {
     Q.rural_cnblp += 8;
     Q.rural_dvp -= 2;
     Q.rural_dnvp -= 3;
     Q.rural_others -= 3;
 }
 
-if (rpm_strength == 2) {
+if (Q.rpm_strength == 2) {
     Q.rural_cnblp += 14;
     Q.catholics_cnblp += 1;
     Q.rural_z -= 2;
