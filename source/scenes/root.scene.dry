@@ -370,10 +370,10 @@ Q.old_kpd_r = 9;
 Q.old_z_r = 17;
 Q.old_ddp_r = 6;
 Q.old_dvp_r = 10;
-Q.old_wp_r = 0;
+Q.old_wp_r = 2;
 Q.old_dnvp_r = 20;
 Q.old_nsdap_r = 3;
-Q.old_other_r = 9;
+Q.old_other_r = 7;
 
 // prussian gov right now
 Q.spd_r_prussia = 25.3;
