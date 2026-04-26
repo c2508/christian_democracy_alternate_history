@@ -204,6 +204,8 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 <span style="color: #C0A054;">**DVP**</span>: [+ dvp_votes +]%
 
+<span style="color: #B8996F;">**WP**</span>: [+ wp_votes +]%
+
 [? if cnblp_formed : <span style="color: #006400;">**CNBLP**</span>: [+ cnblp_votes +]% ?]
 
 <span style="color: #3F7BC1;">**DNVP**</span>: [+ dnvp_votes +]%
