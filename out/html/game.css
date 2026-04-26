@@ -542,14 +542,14 @@ table {
 }
 .seat.spd {
     fill: #E3000F;
-    stroke: var(--border-color);
-    stroke-width: 1.5px;
 }
 .seat.ddp {
     fill: #DCCA4A;
 }
 .seat.z {
     fill: #000;
+    stroke: var(--border-color);
+    stroke-width: 1.5px;
 }
 .seat.bvp {
     fill: #69A2BE;
