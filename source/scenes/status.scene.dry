@@ -108,7 +108,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy.">Catholic Conservatives</span>!} strength: [+ right_strength : strength +], dissent: [+ right_dissent : dissent +]
 
-[? if neorevisionism > 0 : young conservatives strength: [+ young_conservatives_strength : strength +], dissent: [+ young_conservatives_dissent : dissent +] ?]
+[? if neorevisionism > 0 : Young Conservatives strength: [+ young_conservatives_strength : strength +], dissent: [+ young_conservatives_dissent : dissent +] ?]
 
 
 @paramilitaries
