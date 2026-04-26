@@ -1,7 +1,7 @@
 title: Constitutional Reform
 new-page: true
 is-card: true
-view-if: spd_in_government = 1 and justice_minister_party = "SPD" and constitutional_reform_timer = 0 and judicial_reform >= 4 and neorevisionism and ((in_weimar_coalition) or (in_spd_majority) or (in_left_front) or (in_popular_front)) and constitutional_reform < 3
+view-if: z_in_government = 1 and justice_minister_party = "Z" and constitutional_reform_timer = 0 and judicial_reform >= 4 and neorevisionism and ((in_weimar_coalition) or (in_spd_majority) or (in_left_front) or (in_popular_front)) and constitutional_reform < 3
 frequency: 25
 on-arrival: month_actions += 1; constitutional_reform_timer += 12; pass_threshold = 0.51; pass_threshold = 0.6 if pro_republic < 65;
 card-image: img/portraits/GuerardTheodor.jpg
@@ -26,6 +26,8 @@ A constitutional reform requires either a two-thirds supermajority in the Reichs
 - @vote_threshold: Change the vote threshold.
 - @constructive_vonc: Ban non-constructive votes of no confidence.
 - @presidential_powers: Reduce presidential powers.
+- @dissolve: Dissolve Prussia 
+- @federalise: Convert Prussia into a Federal District
 - @as_is: Do not pursue constitutional reform.
 - @easy_discard
 - @cancel_advisor_action
@@ -124,7 +126,15 @@ achievement: verfassungsreform
 
 We have successfully passed a constitutional amendment to limit presidential powers! Hopefully this results in a less authoritarian Germany.
 
+@dissolve
+on-arrival: spd_relation += 1
 
+blah blah
+
+@federalise
+on-arrival: spd_relation += 1
+
+askodks
 
 @constitutional_bans
 
