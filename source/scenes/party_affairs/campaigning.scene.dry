@@ -24,7 +24,7 @@ Whether or not we are in an electoral campaign, the party is always trying to br
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: workers_z += 6*(1-dissent); workers_z -= 2 if unemployed >= 15; workers_z -= 2 if unemployed >= 25; workers_z += 6*(1-dissent) if peoples_party == 1; resources -= 1
+on-arrival: workers_z += 4*(1-dissent); workers_z -= 2 if unemployed >= 15; workers_z -= 2 if unemployed >= 25; workers_z += 6*(1-dissent) if peoples_party == 1; resources -= 1
 
 We have increased our campaigning among the workers. [? if unemployed >= 15: The high levels of unemployment make our campaign more difficult. ?][? if peoples_party == 1 : Our transformation into a Christian People's Party has allowed to appeal to Christians of all denominations. ?]
 
@@ -32,7 +32,7 @@ We have increased our campaigning among the workers. [? if unemployed >= 15: The
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: new_middle_z += 6*(1-dissent); resources -= 1; new_middle_z += 3 if peoples_party == 1
+on-arrival: new_middle_z += 5*(1-dissent); resources -= 1; new_middle_z += 3 if peoples_party == 1
 
 We have increased our campaigning among the new middle class. [? if peoples_party == 1 : Our transformation into a Christian People's Party has allowed to appeal to Christians of all denominations.?] [? if republican_union > 2: Our work in removing anti-republican elements of the unions has made campaigning among the new middle class easier.?]
 
