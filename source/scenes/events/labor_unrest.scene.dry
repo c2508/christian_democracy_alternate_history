@@ -17,19 +17,19 @@ The industrial Ruhr region is aflame with labor unrest. The employers have start
 
 @support_labor
 subtitle: Popular among the workers, this will alienate the bourgeoisie.
-on-arrival: left_labor_strength += 5; left_labor_dissent -= 5; right_labor_strength -= 5; right_labor_dissent -= 5; right_dissent += 5; workers_z += 6*(1-dissent); coalition_dissent += 1; spd_relations += 4; dvp_relation -= 4; capital_strike_progress += 1 if dvp_relation <= 30; capital_strike_progress += 1 if unemployed > 15; capital_strike_progress += 1 if unemployed > 24; labor_goal_completed += 1; inflation += 0.1; pro_labor += 1; strike_term_seen += 1; economic_growth -= 0.1;
+on-arrival: labor_strength += 5; labor_dissent -= 5; right_dissent += 5; workers_z += 4*(1-dissent); coalition_dissent += 1; spd_relations += 4; dvp_relation -= 4; capital_strike_progress += 1 if dvp_relation <= 30; capital_strike_progress += 1 if unemployed > 15; capital_strike_progress += 1 if unemployed > 24; labor_goal_completed += 1; inflation += 0.1; pro_labor += 1; strike_term_seen += 1; economic_growth -= 0.1;
 
 Supporting the workers is popular amongst the labor factions in our party, although many of our coalition partners represent employers, and they are less enthused.
 
 @support_employers
 subtitle: Popular among the bourgeoisie, much less so among the workers.
-on-arrival: left_labor_dissent += 8; right_labor_dissent += 8; workers_z -= 3; coalition_dissent -= 1 if coalition_dissent > 0; dvp_relation += 5; dnvp_relation += 5; spd_relation -= 5; workers_kpd += 3; kpd_coalition_dissent += 1; kpd_relation -= 8; capital_strike_progress -= 1 if capital_strike_progress > 1; capital_strike_progress -= 1 if capital_strike_progress > 8; pro_labor -= 1; strike_term_seen += 1
+on-arrival: labor_dissent += 8; workers_z -= 3; coalition_dissent -= 1 if coalition_dissent > 0; dvp_relation += 5; dnvp_relation += 5; spd_relation -= 5; workers_kpd += 3; kpd_coalition_dissent += 1; kpd_relation -= 8; capital_strike_progress -= 1 if capital_strike_progress > 1; capital_strike_progress -= 1 if capital_strike_progress > 8; pro_labor -= 1; strike_term_seen += 1
 
 Supporting employers is popular amongst the right faction of our party. The bourgeoisie parties also approve of our actions.
 
 @balance
 subtitle: Both sides need to share the pain in the current crisis.
-on-arrival: left_labor_dissent += 4; right_labor_dissent += 4; workers_z -= 2; kpd_coalition_dissent += 1; kpd_relation -= 5; strike_term_seen += 1
+on-arrival: left_labor_dissent += 3; right_labor_dissent += 3; workers_z -= 2; kpd_coalition_dissent += 1; kpd_relation -= 5; strike_term_seen += 1
 
 Many workers are unhappy at our compromises, but they will learn to accept that we are all in a shared struggle against economic forces.
 
