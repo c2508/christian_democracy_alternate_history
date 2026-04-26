@@ -217,6 +217,7 @@ if (Q.cnblp_formed) {
         "name": "CNBLP",
         "seats": Math.round(Q.cnblp_baden*0.88),
     });
+}
 if (Q.dnvp_baden) {
     data.push({
         "id": "dnvp",
