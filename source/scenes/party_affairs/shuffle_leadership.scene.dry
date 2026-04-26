@@ -501,10 +501,10 @@ title: Gottfried Treviranus
 subtitle: I am four.
 is-card: true
 card-image: img/portraits/MierendorffCarlo.jpg
-view-if: mierendorff_advisor = 0 and n_advisors < 3
-on-arrival: mierendorff_advisor = 1; n_advisors += 1; young_conservative_strength += 5
+view-if: treviranus_advisor = 0 and n_advisors < 3
+on-arrival: treviranus_advisor = 1; n_advisors += 1; young_conservatives_strength += 5
 go-to: advisor_menu
-tags: young_conservative_advisor
+tags: young_conservatives_advisor
 
 Gottfried Treviranus is now an advisor.
 
@@ -513,9 +513,9 @@ title: Paul Lejuene Jung
 subtitle: I am five.
 is-card: true
 card-image: img/portraits/SchumacherKurt.jpg
-tags: young_conservative_advisor
-view-if: schumacher_advisor = 0 and n_advisors < 3
-on-arrival: schumacher_advisor = 1; n_advisors += 1; young_conservative_strength += 5
+tags: young_conservatives_advisor
+view-if: jung_advisor = 0 and n_advisors < 3
+on-arrival: jung_advisor = 1; n_advisors += 1; young_conservatives_strength += 5
 go-to: advisor_menu
 
 Paul Lejuene Jung is now an advisor.
@@ -525,10 +525,10 @@ title: Paul Lettow Vorbeck
 subtitle: I am the Lion of Africa.
 is-card: true
 card-image: img/portraits/LeberJulius.jpg
-view-if: leber_advisor = 0 and n_advisors < 3
-on-arrival: leber_advisor = 1; n_advisors += 1; young_conservative_strength += 5
+view-if: vorbeck_advisor = 0 and n_advisors < 3
+on-arrival: vorbeck_advisor = 1; n_advisors += 1; young_conservatives_strength += 5
 go-to: advisor_menu
-tags: young_conservative_advisor
+tags: young_conservatives_advisor
 
 Paul Lettow Vorbeck is now an advisor.
 
