@@ -1,4 +1,4 @@
-title: The Prussian Bulwark
+title: State Affairs
 new-page: true
 is-card: true
 view-if: state_affairs_timer <= 0
