@@ -34,6 +34,7 @@ Q.adjustmentFactors_ddp_baden = 1.39;
 Q.adjustmentFactors_z_baden = 2.85;
 Q.adjustmentFactors_dvp_baden = 0.93;
 Q.adjustmentFactors_kvp_baden = 0.84;
+Q.adjustmentFactors_cnblp_baden = 1.0;
 Q.adjustmentFactors_dnvp_baden = 0.75;
 Q.adjustmentFactors_dnf_baden = 0.62;
 Q.adjustmentFactors_nsdap_baden = 0.51;
@@ -158,7 +159,7 @@ if (Q.kpd_baden) {
         "id": "kpd",
         "legend": "KPD",
         "name": "KPD",
-        "seats": Math.round(Q.kpd_baden*0.8),
+        "seats": Math.round(Q.kpd_baden*0.88),
     });
 }
 if (Q.spd_baden) {
@@ -166,7 +167,7 @@ if (Q.spd_baden) {
         "id": "spd",
         "legend": "SPD",
         "name": "SPD",
-        "seats": Math.round(Q.spd_baden*0.8),
+        "seats": Math.round(Q.spd_baden*0.88),
     });
 }
 if (Q.ddp_exist && Q.ddp_baden) {
@@ -174,7 +175,7 @@ if (Q.ddp_exist && Q.ddp_baden) {
         "id": "ddp",
         "legend": Q.ddp_name,
         "name": Q.ddp_name,
-        "seats": Math.round(Q.ddp_baden*0.8),
+        "seats": Math.round(Q.ddp_baden*0.88),
     });
 }
 if (Q.lvp_formed && Q.dvp_baden) {
@@ -182,7 +183,7 @@ if (Q.lvp_formed && Q.dvp_baden) {
         "id": "lvp",
         "legend": Q.dvp_name,
         "name": Q.dvp_name,
-        "seats": Math.round(Q.dvp_baden*0.8),
+        "seats": Math.round(Q.dvp_baden*0.88),
     });
 }
 if (Q.z_baden) {
@@ -190,7 +191,7 @@ if (Q.z_baden) {
         "id": "z",
         "legend": "Center",
         "name": "Center",
-        "seats": Math.round(Q.z_baden*0.8),
+        "seats": Math.round(Q.z_baden*0.88),
     });
 }
 if (Q.other_baden) {
@@ -198,7 +199,7 @@ if (Q.other_baden) {
         "id": "other",
         "legend": "Other",
         "name": "Other",
-        "seats": Math.round(Q.other_baden*0.8),
+        "seats": Math.round(Q.other_baden*0.88),
     });
 }
 if (Q.kvp_formed && Q.kvp_baden) {
@@ -206,15 +207,22 @@ if (Q.kvp_formed && Q.kvp_baden) {
         "id": "kvp",
         "legend": "KVP",
         "name": "KVP",
-        "seats": Math.round(Q.kvp_baden*0.8),
+        "seats": Math.round(Q.kvp_baden*0.88),
     });
 }
+if (Q.cnblp_formed && Q.cnblp_baden) {
+    data.push({
+        "id": "cnblp",
+        "legend": "CNBLP",
+        "name": "CNBLP",
+        "seats": Math.round(Q.cnblp_*0.88),
+    });
 if (Q.dnvp_baden) {
     data.push({
         "id": "dnvp",
         "legend": "DNVP",
         "name": "DNVP",
-        "seats": Math.round(Q.dnvp_baden*0.8),
+        "seats": Math.round(Q.dnvp_baden*0.88),
     });
 }
 if (Q.dnf_formed && Q.dnf_baden) {
@@ -222,7 +230,7 @@ if (Q.dnf_formed && Q.dnf_baden) {
         "id": "dnf",
         "legend": "DNF",
         "name": "DNF",
-        "seats": Math.round(Q.dnf_baden*0.8),
+        "seats": Math.round(Q.dnf_baden*0.88),
     });
 }
 if (Q.nsdap_baden) {
@@ -230,7 +238,7 @@ if (Q.nsdap_baden) {
         "id": "nsdap",
         "legend": "NSDAP",
         "name": "NSDAP",
-        "seats": Math.round(Q.nsdap_baden*0.8),
+        "seats": Math.round(Q.nsdap_baden*0.88),
     });
 }
 
@@ -268,6 +276,8 @@ go-to: coalition_menu
 {!<tr><td><div class="box" style='background-color:#000'> </div> !} Z: {!</td><td>!} [+ z_votes_baden +]% {!</td><td>!} [+ votes_change_z_baden +] {!</td><td>!} [+ z_baden +]% {!</td><td>!} [+ change_z_baden +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#C0A054'> </div> !} DVP: {!</td><td>!} [+ dvp_votes_baden +]% {!</td><td>!} [+ votes_change_dvp_baden +] {!</td><td>!} [+ dvp_baden +]% {!</td><td>!} [+ change_dvp_baden +] {!</td></tr>!}
+
+[? if cnblp_formed: {!<tr><td><div class="box" style='background-color:#006400'> </div> !} CNBLP: {!</td><td>!} [+ cnblp_votes_baden +]% {!</td><td>!} [+ votes_change_cnblp_baden +] {!</td><td>!} [+ cnblp_baden +]% {!</td><td>!} [+ change_cnblp_baden +] {!</td><td>!} ?]
 
 [? if kvp_formed: {!<tr><td><div class="box" style='background-color:#455B95'> </div> !} KVP: {!</td><td>!} [+ kvp_votes_baden +]% {!</td><td>!} [+ votes_change_kvp_baden +] {!</td><td>!} [+ kvp_baden +]% {!</td><td>!} [+ change_kvp_baden +] {!</td></tr>!} ?]
 
