@@ -33,6 +33,7 @@ Q.adjustmentFactors_spd_baden = 0.73;
 Q.adjustmentFactors_ddp_baden = 1.39;
 Q.adjustmentFactors_z_baden = 2.85;
 Q.adjustmentFactors_dvp_baden = 0.93;
+Q.adjustmentFactors_wp_baden = 1.01;
 Q.adjustmentFactors_kvp_baden = 0.84;
 Q.adjustmentFactors_cnblp_baden = 1.0;
 Q.adjustmentFactors_dnvp_baden = 0.75;
@@ -202,6 +203,14 @@ if (Q.other_baden) {
         "seats": Math.round(Q.other_baden*0.88),
     });
 }
+if (Q.wp_baden) {
+    data.push({
+        "id": "wp",
+        "legend": "WP",
+        "name": "WP",
+        "seats": Math.round(Q.wp_baden*0.88),
+    });
+}
 if (Q.kvp_formed && Q.kvp_baden) {
     data.push({
         "id": "kvp",
@@ -277,6 +286,8 @@ go-to: coalition_menu
 {!<tr><td><div class="box" style='background-color:#000'> </div> !} Z: {!</td><td>!} [+ z_votes_baden +]% {!</td><td>!} [+ votes_change_z_baden +] {!</td><td>!} [+ z_baden +]% {!</td><td>!} [+ change_z_baden +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#C0A054'> </div> !} DVP: {!</td><td>!} [+ dvp_votes_baden +]% {!</td><td>!} [+ votes_change_dvp_baden +] {!</td><td>!} [+ dvp_baden +]% {!</td><td>!} [+ change_dvp_baden +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#B8996F'> </div> !} WP: {!</td><td>!} [+ wp_votes_baden +]% {!</td><td>!} [+ votes_change_wp_baden +] {!</td><td>!} [+ wp_baden +]% {!</td><td>!} [+ change_wp_baden +] {!</td></tr>!}
 
 [? if cnblp_formed: {!<tr><td><div class="box" style='background-color:#006400'> </div> !} CNBLP: {!</td><td>!} [+ cnblp_votes_baden +]% {!</td><td>!} [+ votes_change_cnblp_baden +] {!</td><td>!} [+ cnblp_baden +]% {!</td><td>!} [+ change_cnblp_baden +] {!</td><td>!} ?]
 
