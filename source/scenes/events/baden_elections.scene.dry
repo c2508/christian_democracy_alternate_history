@@ -215,7 +215,7 @@ if (Q.cnblp_formed && Q.cnblp_baden) {
         "id": "cnblp",
         "legend": "CNBLP",
         "name": "CNBLP",
-        "seats": Math.round(Q.cnblp_*0.88),
+        "seats": Math.round(Q.cnblp_baden*0.88),
     });
 if (Q.dnvp_baden) {
     data.push({
