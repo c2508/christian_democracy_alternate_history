@@ -18,14 +18,14 @@ A holdover from the era of the Kaiser, Teusch has held influential positions in 
 @curriculum_
 title: Change the educational curriculum.
 choose-if: advisor_action_timer = 0 and z_in_government and chancellor_party = "Z" and z_prussia and curriculum_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_in_government : The SPD is not currently in government. ?][? if chancellor_party != "SPD": The SPD must control the chancellorship. ?][? if not spd_prussia: The SPD must control the Prussian government. ?][? if curriculum_timer > 0 : It is too early to change the curriculum again. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not z_in_government : The <span style="color: #000000;">**Center Party**</span> is not currently in government. ?][? if chancellor_party != "Z": The <span style="color: #000000;">**Center Party**</span> must control the chancellorship. ?][? if not spd_prussia: The SPD must control the Prussian government. ?][? if curriculum_timer > 0 : It is too early to change the curriculum again. ?]
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1
 go-to: education_science.curriculum
 
 @structure_
 title: Change the structure and funding of education.
 choose-if: advisor_action_timer = 0 and z_in_government and chancellor_party = "Z" and z_prussia
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not z_in_government : The Zentrum is not currently in government. ?][? if chancellor_party != "Z": The Zentrum must control the chancellorship. ?][? if not z_prussia: The Zentrum must control the Prussian government. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not z_in_government : The <span style="color: #000000;">**Center Party**</span> is not currently in government. ?][? if chancellor_party != "Z": The Zentrum must control the chancellorship. ?][? if not z_prussia: The <span style="color: #000000;">**Center Party**</span> does not control the Prussian government. ?]
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1
 go-to: education_science.structure
 
@@ -34,7 +34,7 @@ title: Organizing women
 subtitle: Teusch's strategies are aimed at Catholic women.
 choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: womens_rights += 1; workers_z += 2*(1-dissent); rural_z += 1*(1-dissent); catholics_z += 5*(1-dissent); advisor_action_timer = 6
+on-arrival: womens_rights += 1; workers_z += 2*(1-dissent); rural_z += 1*(1-dissent); catholics_z += 4*(1-dissent); advisor_action_timer = 6
 
 Teusch's strategies for organizing women are aimed at women in the workforce, and is part of her vision of a Catholic's women movement.
 
