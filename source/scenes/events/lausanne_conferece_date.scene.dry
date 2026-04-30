@@ -1,1 +1,25 @@
+title: Lausanne Conference
+subtitle: On the question of reparations...
+view-if: year = 1931 and month >= 12 and unemployed >= 15
+new-page: true
+max-visits: 1
+tags: event
 
+= Lausanne Conference
+
+The British have sent out invitations for a international reperations conference in Lausanne on 18 January. However, there can be no permanent revisions of the Young Plan until the French Parlimentary Elections in May 1932.
+
+- @jan
+- @june
+
+@jan
+subtitle: We shall attend the conference in January. 
+on-arrival: right_strength += 5
+
+Yes Hitler
+
+@june
+subtitle: We will delay the conference until June.
+on-arrival: right_strength += 5;
+
+No Hitler
