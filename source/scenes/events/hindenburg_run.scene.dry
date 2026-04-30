@@ -24,7 +24,9 @@ if (Q.right_strength >= Q.left_strength) {
     Q.hindenburg_run_points += 1;
 }
 if (Q.spd_votes + (Q.z_votes*0.8) + Q.ddp_votes + (Q.lvp_votes / 2) >= 50) Q.hindenburg_run_points += 2;
-if (Q.kpd_relation >= 40) Q.hindenburg_run_points += 1;
+if (Q.kpd_votes >= 15) Q.hindenburg_run_points += 1;
+if (Q.nsdap_votes >= 30) Q.hindenburg_run_points += 1;
+if (Q.nsdap_votes >= 35) Q.hindenburg_run_points += 1;
 if (Q.capital_strike_progress >= 6) Q.hindenburg_run_points += 1;
 if (Q.coup_progress >= 5) Q.hindenburg_run_points += 1;
 if (Q.pro_republic >= 70) Q.hindenburg_run_points -= 1;
