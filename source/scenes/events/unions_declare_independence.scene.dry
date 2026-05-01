@@ -2,14 +2,14 @@ title: Unions Declare Independence
 new-page: true 
 subtitle: Labor's disagreements with our policies have grown too severe.
 tags: event
-view-if: right_labor_dissent >= 90 and left_labor_dissent >= 90
-on-arrival: labor_unions_independent = 1; left_labor_strength = left_labor_strength/2; right_labor_strength = right_labor_strength/2; workers_z -= 15; catholics_z -= 5; workers_other += 3; workers_spd += 4; workers_nsdap += 4; workers_dvp += 2; workers_dnvp += 2; rb_strength -= 300;
+view-if: labor_dissent >= 90
+on-arrival: labor_unions_independent = 1; labor_strength = left_labor_strength/2; workers_z -= 15; catholics_z -= 5; workers_other += 3; workers_spd += 4; workers_nsdap += 4; workers_dvp += 2; workers_dnvp += 2; rb_strength -= 300;
 max-visits: 1
 
 = Unions Declare Independence
 
 Our policy choices have greatly offended the labor movement. Union leaders have declared that they are independent of any political party, and some have been seen seeking accomodation with the <span style="color: #c00000;">**SPD**</span> and even the <span style="color: #7A3C00;">**NSDAP**</span>.
 
-Most workers still remain loyal to the <span style="color: #000000;">Center Party</span> due to our shared faith, although their affiliation is less solid. Many workers move left to the <span style="color: #c00000;">**SPD**</span> or even the <span style="color: #700000;">**KPD**</span>. Others move in a more nationalist direction, as the DGB signals its willingness to work with the right to solve the economic crisis.
+Most workers still remain loyal to the <span style="color: #000000;">**Center Party**</span> due to our shared faith, although their affiliation is less solid. Many workers move left to the <span style="color: #c00000;">**SPD**</span> or even the <span style="color: #700000;">**KPD**</span>. Others move in a more nationalist direction, as the DGB signals its willingness to work with the right to solve the economic crisis.
 
 Much of our working-class base has defected, and labor's influence in our party has greatly diminished.
