@@ -27,7 +27,7 @@ Our Hesse government is set to continue in a caretaker capacity for the foreseea
 
 @nothing
 view-if: judicial_reform < 4
-on-arrival: ; left_dissent -= 10; left_strength += 5; workers_nsdap -= 2; new_middle_nsdap -= 6; old_middle_nsdap -= 6; rural_nsdap -= 2; pro_republic += 5; sa_militancy -= 0.05; catholics_z += 2
+on-arrival: left_dissent -= 10; left_strength += 5; workers_nsdap -= 2; new_middle_nsdap -= 6; old_middle_nsdap -= 6; rural_nsdap -= 2; pro_republic += 5; sa_militancy -= 0.05; catholics_z += 2;
 
 Expectedly, the Ministry of Justice believes that the documents did not constitute a crime of high treason, as they argue that the document was directed against <span style="color: #700000;">communist</span> putschists, rather than the government. [? if bruning_time: We are sure that Chancellor Brüning is behind this downplaying, to keep cooperation with the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> open. ?]
 
