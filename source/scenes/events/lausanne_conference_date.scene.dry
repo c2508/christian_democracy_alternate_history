@@ -13,13 +13,13 @@ The British have sent out invitations for a international reperations conference
 - @june
 
 @jan
-subtitle: We shall attend the conference in January. 
+title: We shall attend the conference in January. 
 on-arrival: right_strength += 5
 
 Yes Hitler
 
 @june
-subtitle: We will delay the conference until June.
+title: We will delay the conference until June.
 on-arrival: right_strength += 5;
 
 No Hitler
