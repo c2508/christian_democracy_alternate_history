@@ -51,14 +51,14 @@ go-to: fascist if (kpd_points < 3); coup if (kpd_points > 40); united if (kpd_po
 
 @fascist
 view-if: kpd_points < 3
-on-arrival: spd_relation += 4; spd_worker -= 3; kpd_worker += 2; pro_republic -= 3
+on-arrival: spd_relation += 4; workers_z -= 3; workers_z += 2; pro_republic -= 3
 face-image: img/portraits/JoosJoseph.jpg
 
 WIP                                                                                                           
                                                                                                              
 @united
 view_if: kpd_points > 3 and kpd_points < 40
-on-arrival: z_worker += 1
+on-arrival: workers_z += 1
 face-image: img/portraits/JoosJoseph.jpg
 
 WIP
