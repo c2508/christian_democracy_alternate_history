@@ -2,7 +2,7 @@ title: The Boxheim Documents
 new-page: true
 subtitle: A set of documents detailing a violent seizure of power by the <span style="color: #7A3C00;">Nazis</span> is discovered...
 view-if: year = 1931 and month == 11 and investigate_far_right >= 3 and nsdap_votes > 20
-on-arrival: nazi_urgency += 1; investigate_far_right = +1 0
+on-arrival: nazi_urgency += 1; investigate_far_right += 1
 max-visits: 1
 tags: event
 
