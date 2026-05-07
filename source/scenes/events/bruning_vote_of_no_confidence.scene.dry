@@ -11,9 +11,9 @@ go_to: convince
 
 Parties supporting the government (0/500)
 
-<span style="color: #000000;">**Z**</span> Seats (Math.round(3*5)/500)
+<span style="color: #000000;">**Z**</span> Seats (Math.round(Q.z_r - 3)*5)/500)
 
-<span style="color: #A2D8E0;">**BVP**</span> Seats (Math.round((Q.z_r - 3)*5)/500)
+<span style="color: #A2D8E0;">**BVP**</span> Seats (Math.round(3*5)/500)
 
 Parties against the government (0/500)
 
