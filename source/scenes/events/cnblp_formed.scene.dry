@@ -16,14 +16,14 @@ if (Q.rpm_strength == 0) {
     Q.rural_cnblp += 5;
     Q.rural_dvp -= 1;
     Q.rural_dnvp -= 2;
-    Q.rural_others -= 2;
+    Q.rural_others -= 3;
 }
 
 if (Q.rpm_strength == 1) {
     Q.rural_cnblp += 8;
     Q.rural_dvp -= 2;
     Q.rural_dnvp -= 3;
-    Q.rural_others -= 3;
+    Q.rural_others -= 5;
 }
 
 if (Q.rpm_strength == 2) {
@@ -33,7 +33,7 @@ if (Q.rpm_strength == 2) {
     Q.catholics_z -= 1;
     Q.rural_dvp -= 2;
     Q.rural_dnvp -= 4;
-    Q.rural_others -= 4;
+    Q.rural_others -= 7;
 }
 
 
