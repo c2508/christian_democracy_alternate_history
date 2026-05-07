@@ -8,29 +8,28 @@ tags: event
 
 = Labor Unrest
 
-The industrial Ruhr region is aflame with labor unrest. The employers have started a major lockout to force the workers to take more cuts to wages and benefits. There is a need for the Labor Ministry to arbitrate in conflicts between employers and workers.
+Following the passage of a decree to increase wages of miners in the Ruhr by 7%, steel industrialists have instead locked out 230,000 workers to protest to the Reich Government over the sharp increase in real wages, which has affected the competitiveness of German industry worldwide. With Germany's system of state-labor arbitation, the responsibilty for this situation falls on the Labor Minister. How do we convince the industrialists to open up the factories?
 
-- @support_labor: Support labor in their demands.
-- @support_employers: Support the employers in their demands.
-- @balance: Try to strike a compromise between the sides.
+- @support_labor: Enforce the 7% wage increase 
+- @support_employers: Accede to the demands of the industrialists
+- @balance: Scale back the wage increases for the miners
 
 
 @support_labor
-subtitle: Popular among the workers, this will alienate the bourgeoisie.
+subtitle: Popular amongst our labor unions, this will alienate the industrialists.
 on-arrival: labor_strength += 5; labor_dissent -= 5; right_dissent += 5; workers_z += 4*(1-dissent); coalition_dissent += 1; spd_relations += 4; dvp_relation -= 4; capital_strike_progress += 1 if dvp_relation <= 30; capital_strike_progress += 1 if unemployed > 15; capital_strike_progress += 1 if unemployed > 24; labor_goal_completed += 1; inflation += 0.1; pro_labor += 1; strike_term_seen += 1; economic_growth -= 0.1;
 
-Supporting the workers is popular amongst the labor faction in our party, although many of our coalition partners represent employers, and they are less enthused.
+By declaring the affected workers as 'unemployed' to make them eligible for unemployment insurance benefits, we have mitigated the worst effects of the lockout. As a result, the industrialists have been forced to reopen the factories. 
 
 @support_employers
-subtitle: Popular among the bourgeoisie, much less so among the workers.
-on-arrival: labor_dissent += 8; workers_z -= 3; coalition_dissent -= 1 if coalition_dissent > 0; dvp_relation += 5; dnvp_relation += 5; spd_relation -= 5; workers_kpd += 3; kpd_coalition_dissent += 1; kpd_relation -= 8; capital_strike_progress -= 1 if capital_strike_progress > 1; capital_strike_progress -= 1 if capital_strike_progress > 8; pro_labor -= 1; strike_term_seen += 1
+subtitle: Popular among the industrialists, much less so among the workers.
+on-arrival: labor_dissent += 8; workers_z -= 5; coalition_dissent -= 1 if coalition_dissent > 0; dvp_relation += 5; dnvp_relation += 5; spd_relation -= 5; workers_kpd += 3; kpd_coalition_dissent += 1; kpd_relation -= 8; capital_strike_progress -= 1 if capital_strike_progress > 1; capital_strike_progress -= 1 if capital_strike_progress > 8; pro_labor -= 1; strike_term_seen += 1
 
-Supporting employers is popular amongst the right wing of our party. The bourgeoisie parties also approve of our actions.
+Rescinding the wage degree has led to massive backlash from our labor unions, with workers furious over our deference to the whims of heavy industry. Meanhwile, our coalition partners are supportive of this course of action.
 
 @balance
-subtitle: Both sides need to share the pain in the current crisis.
-on-arrival: left_labor_dissent += 3; right_labor_dissent += 3; workers_z -= 2; kpd_coalition_dissent += 1; kpd_relation -= 5; strike_term_seen += 1
+subtitle: Strike a compromise between the two opposing sides
+on-arrival: labor_dissent += 4; workers_z -= 2; spd_relation -= 3; strike_term_seen += 1
 
-Many workers are unhappy at our compromises, but they will learn to accept that we are all in a shared struggle against economic forces.
+Halving the proposed wage increase, industrialists are pleased with the concession and have opened up their factories, while workers are unhappy over the compromise.
 
-Many workers are unhappy at our compromises, but they will learn to accept that we are all in a shared struggle against economic forces. This is perhaps the best we could do given the present circumstances.
