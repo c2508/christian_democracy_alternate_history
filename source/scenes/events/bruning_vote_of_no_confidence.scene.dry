@@ -29,7 +29,7 @@ Following the Great Depression, Germany's finances have been in shambles, with m
 Composed primarily of <span style="color: #909090;">**special interest**</span> parties, their single-minded pursuit of <span style="color: #909090;">**special interest**</span> might jeopardise Bruning's goal of balancing the budget, making their support tenuous at best. Now, our task in the Reichstag is to somehow wrangle a majority in favour of Bruning's policies. 
 
 {!<table>!} 
-{!<tr><td>Party</td><td>Vote Share</td><td>% </td>Reichstag Seats</tr>!}
+{!<tr><td>Party</td><td>Vote Share</td><td>Reichstag Seats</td></tr>!}
 
 {!<tr><td>In Favor</td><td>([+ bruning_support_percentage +]%)</td><td>([+ bruning_support +]/500)</td></tr>!}
 
