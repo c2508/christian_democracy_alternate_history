@@ -35,7 +35,7 @@ Composed primarily of <span style="color: #909090;">**special interest**</span> 
 
 {!<tr><td>!} <span style="color: #000000;">**Z**</span> : {!</td><td>!} [+ z_minus_bvp_r +]% {!</td><td>!} [+ z_seats +] {!</td></tr>!}
 
-{!<tr><td>!} <span style="color: #A2D8E0;">**BVP**</span>: {!</td><td>!} 3% {!</td><td>!} 0 {!</td></tr>!}
+{!<tr><td>!} <span style="color: #A2D8E0;">**BVP**</span>: {!</td><td>!} 3% {!</td><td>!} 15 {!</td></tr>!}
 
 {!<tr><td>Undecided</td><td>([+ bruning_undecided_percentage +]%)</td><td>([+ bruning_undecided +]/500)</td></tr>!}
 
