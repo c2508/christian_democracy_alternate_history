@@ -1,7 +1,7 @@
 title: Vote of no Confidence
 subtitle: Bruning's government faces its first test
 new-page: true
-view-if: year = 1928 and month = 2
+view-if: year = 1928 and month = 7
 tags: event
 max-visits: 1
 go_to: convince
@@ -9,6 +9,8 @@ go_to: convince
 = Vote of no Confidence
 
 Parties supporting the government (0/500)
+
+<span style="color: #D3C24D;">**[+ ddp_name +]**</span> Seats ([+ ddp_seats +]/500)
 
 <span style="color: #000000;">**Z**</span> Seats ([+ z_seats +]/500)
 
@@ -25,8 +27,6 @@ Parties against the government (0/500)
 Uncertain (0/500)
 
 <span style="color: #c00000;">**SPD**</span> Seats ([+ spd_seats +]/500)
-
-<span style="color: #D3C24D;">**[+ ddp_name +]**</span> Seats ([+ ddp_seats +]/500)
 
 <span style="color: #C0A054;">**DVP**</span> Seats ([+ dvp_seats +]/500)
 
