@@ -10,31 +10,31 @@ go_to: convince
 
 Parties supporting the government (0/500)
 
-<span style="color: #000000;">**Z**</span> Seats (Q.z_seats /500)
+<span style="color: #000000;">**Z**</span> Seats ([+ z_seats +]/500)
 
-<span style="color: #A2D8E0;">**BVP**</span> Seats (bvp_seats /500)
+<span style="color: #A2D8E0;">**BVP**</span> Seats ([+ bvp_seats +]/500)
 
 Parties against the government (0/500)
 
-<span style="color: #700000;">**KPD**</span> Seats (kpd_seats /500)
+<span style="color: #700000;">**KPD**</span> Seats ([+ kpd_seats +]/500)
 
-<span style="color: #7A3C00;">**NSDAP**</span> Seats (nsdap_seats /500)
+<span style="color: #7A3C00;">**NSDAP**</span> Seats ([+ nsdap_seats +]/500)
 
-<span style="color: #003755;">**DNF**</span> Seats (dnf_seats /500)
+<span style="color: #003755;">**DNF**</span> Seats ([+ dnf_seats +]/500)
 
 Uncertain (0/500)
 
-<span style="color: #c00000;">**SPD**</span> Seats (spd_seats/500)
+<span style="color: #c00000;">**SPD**</span> Seats ([+ spd_seats +]/500)
 
-<span style="color: #D3C24D;">**[+ ddp_name +]**</span> Seats (ddp_seats/500)
+<span style="color: #D3C24D;">**[+ ddp_name +]**</span> Seats ([+ ddp_seats +]/500)
 
-<span style="color: #C0A054;">**DVP**</span> Seats (dvp_seats/500)
+<span style="color: #C0A054;">**DVP**</span> Seats ([+ dvp_seats +]/500)
 
-<span style="color: #B8996F;">**WP**</span> Seats (wp_seats/500)
+<span style="color: #B8996F;">**WP**</span> Seats ([+ wp_seats +]/500)
 
-<span style="color: #006400;">**CNBLP**</span> Seats (cnblp_seats/500)
+<span style="color: #006400;">**CNBLP**</span> Seats ([+ cnblp_seats +]/500)
 
-<span style="color: #3E88B3;">**DNVP**</span> Seats (dnvp_seats/500)
+<span style="color: #3E88B3;">**DNVP**</span> Seats ([+ dnvp_seats +]/500)
 
 @convince
 
