@@ -77,7 +77,7 @@ Composed primarily of <span style="color: #909090;">**special interest**</span> 
 subtitle: The workers will regard this as a betrayal.
 view-if: spd_support = 0
 on-arrival: spd_support += 1; bruning_support += spd_seats; bruning_support_percentage += spd_r
-go_to: convince
+go_to: bruning_vote_of_no_confidence_2.convince
 
 For budgetary reasons, we have cut unemployment insurance benefits. Unfortunately, our reasons for fiscal discipline are alien to the workers. They are furious at our betrayal, as are a good portion of our membership throughout the factions. Our loss is the KPD's gain, and even the NSDAP, those lapdogs of the bourgeoisie, have joined in criticizing us for our austerity.
 
@@ -86,7 +86,7 @@ For budgetary reasons, we have cut unemployment insurance benefits. Unfortunatel
 subtitle: Employers are strongly against this. 
 view-if: ddp_support = 0
 on-arrival: ddp_support += 1; bruning_support += ddp_seats; bruning_support_percentage += ddp_r
-go_to: convince
+go_to: bruning_vote_of_no_confidence_2.convince
 
 We have increased employer contributions to the unemployment insurance fund, allowing the program to continue without hurting workers and the unemployed. Perhaps understandably, the capitalists and their political parties are furious, while our base in the unions and among the unemployed are pleased.
 
@@ -95,7 +95,7 @@ We have increased employer contributions to the unemployment insurance fund, all
 subtitle: Neither workers nor employers will be entirely satisfied or dissatisfied. [? if in_grand_coalition and dvp_relation < 30: The DVP will likely consider the compromise unacceptable. ?][? if in_grand_coalition and dvp_relation >= 30: The DVP might grudgingly accept the compromise for now. ?]
 view-if: dvp_support = 0
 on-arrival: dvp_support += 1; bruning_support += dvp_seats; bruning_support_percentage += dvp_r
-go_to: convince
+go_to: bruning_vote_of_no_confidence_2.convince
 
 Neither side is entirely satisfied by our compromise solution. Many of the workers and unemployed see this as a betrayal, although we present it as the successful aversion of a much worse alternative. [? if in_grand_coalition: Meanwhile, the DVP is aghast at the prospect of raising any taxes on businesses at all. ?]
 
@@ -103,7 +103,7 @@ Neither side is entirely satisfied by our compromise solution. Many of the worke
 subtitle: The workers will regard this as a betrayal.
 view-if: wp_support = 0
 on-arrival: wp_support += 1; bruning_support += wp_seats; bruning_support_percentage += wp_r
-go_to: convince
+go_to: bruning_vote_of_no_confidence_2.convince
 
 For budgetary reasons, we have cut unemployment insurance benefits. Unfortunately, our reasons for fiscal discipline are alien to the workers. They are furious at our betrayal, as are a good portion of our membership throughout the factions. Our loss is the KPD's gain, and even the NSDAP, those lapdogs of the bourgeoisie, have joined in criticizing us for our austerity.
 
@@ -111,7 +111,7 @@ For budgetary reasons, we have cut unemployment insurance benefits. Unfortunatel
 subtitle: Employers are strongly against this. 
 view-if: cnblp_support = 0
 on-arrival: cnblp_support += 1; bruning_support += cnblp_seats; bruning_support_percentage += cnblp_r
-go_to: convince
+go_to: bruning_vote_of_no_confidence_2.convince
 
 We have increased employer contributions to the unemployment insurance fund, allowing the program to continue without hurting workers and the unemployed. Perhaps understandably, the capitalists and their political parties are furious, while our base in the unions and among the unemployed are pleased.
 
@@ -119,7 +119,7 @@ We have increased employer contributions to the unemployment insurance fund, all
 subtitle: Neither workers nor employers will be entirely satisfied or dissatisfied. [? if in_grand_coalition and dvp_relation < 30: The DVP will likely consider the compromise unacceptable. ?][? if in_grand_coalition and dvp_relation >= 30: The DVP might grudgingly accept the compromise for now. ?]
 view-if: dnvp_support = 0
 on-arrival: dnvp_support += 1; bruning_support += dnvp_seats; bruning_support_percentage += dnvp_r
-go_to: convince
+go_to: bruning_vote_of_no_confidence_2.convince
 
 Neither side is entirely satisfied by our compromise solution. Many of the workers and unemployed see this as a betrayal, although we present it as the successful aversion of a much worse alternative. [? if in_grand_coalition: Meanwhile, the DVP is aghast at the prospect of raising any taxes on businesses at all. ?]
 
