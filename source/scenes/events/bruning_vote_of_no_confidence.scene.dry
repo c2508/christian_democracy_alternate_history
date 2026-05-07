@@ -4,14 +4,13 @@ new-page: true
 view-if: year = 1930 and month = 5
 tags: event
 max-visits: 1
-face-image: img/Kollwitz_Arbeitslosigkeit.jpg
 go_to: convince
 
 = Vote of no Confidence
 
 Parties supporting the government (0/500)
 
-<span style="color: #000000;">**Z**</span> Seats (z_seats /500)
+<span style="color: #000000;">**Z**</span> Seats (Q.z_seats /500)
 
 <span style="color: #A2D8E0;">**BVP**</span> Seats (bvp_seats /500)
 
