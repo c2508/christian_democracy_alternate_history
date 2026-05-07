@@ -3,7 +3,7 @@ subtitle: Bruning's government faces its first test
 new-page: true
 view-if: year = 1928 and month = 6 and bruning_vonc = 0
 tags: event
-max-visits: 1000000
+max-visits: 1
 on-arrival: {! 
 Q.ddp_support = 0;
 Q.spd_support = 0;
