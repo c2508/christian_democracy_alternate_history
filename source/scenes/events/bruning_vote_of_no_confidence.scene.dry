@@ -4,13 +4,29 @@ new-page: true
 view-if: year = 1928 and month = 7
 tags: event
 max-visits: 1
+on-arrival: {! 
+Q.ddp_support = 0
+Q.spd_support = 0 
+Q.dvp_support = 0
+Q.wp_support = 0
+Q.cnblp_support = 0
+Q.dnvp_support = 0
+Q.bruning_support = 0
+Q.bruning_oppose = 0
+Q.bruning_undecided = 0
+!}
 go_to: convince
+
+
+
 
 = Vote of no Confidence
 
-Parties supporting the government (0/500)
+Following the Great Depression, Germany's finances have been in shambles, with most of the Landers running huge deficits every year. As such, Bruning has been tasked with balancing the budget through a ruthless austerity program, for which he requires the support of the Reichstag. However, <span style="color: #808080;">Hindenburg's</span> aversion towards <span style="color: #c00000;">socialist</span> governance and the <span style="color: #3E88B3;">**DNVP's**</span> vacillating stance mean that Bruning has to rely on the support of the parties of the middle.
+Composed primarily of <span style="color: #909090;">**special interest**</span> parties, their single-minded pursuit of <span style="color: #909090;">**special interest**</span> might jeopardise Bruning's goal of balancing the budget, making their support tenuous at best. Now, our task in the Reichstag is to somehow wrangle a majority in favour of Bruning's policies. 
 
-<span style="color: #D3C24D;">**[+ ddp_name +]**</span> Seats ([+ ddp_seats +]/500)
+
+Parties supporting the government (0/500)
 
 <span style="color: #000000;">**Z**</span> Seats ([+ z_seats +]/500)
 
@@ -27,6 +43,8 @@ Parties against the government (0/500)
 Uncertain (0/500)
 
 <span style="color: #c00000;">**SPD**</span> Seats ([+ spd_seats +]/500)
+
+<span style="color: #D3C24D;">**[+ ddp_name +]**</span> Seats ([+ ddp_seats +]/500)
 
 <span style="color: #C0A054;">**DVP**</span> Seats ([+ dvp_seats +]/500)
 
@@ -47,33 +65,45 @@ Uncertain (0/500)
 
 @spd
 subtitle: The workers will regard this as a betrayal.
+view-if: spd_support = 0
+on-arrival: spd_support += 1
 
 For budgetary reasons, we have cut unemployment insurance benefits. Unfortunately, our reasons for fiscal discipline are alien to the workers. They are furious at our betrayal, as are a good portion of our membership throughout the factions. Our loss is the KPD's gain, and even the NSDAP, those lapdogs of the bourgeoisie, have joined in criticizing us for our austerity.
 
 
 @ddp
 subtitle: Employers are strongly against this. 
+view-if: ddp_support = 0
+on-arrival: ddp_support += 1
 
 We have increased employer contributions to the unemployment insurance fund, allowing the program to continue without hurting workers and the unemployed. Perhaps understandably, the capitalists and their political parties are furious, while our base in the unions and among the unemployed are pleased.
 
 
 @dvp
 subtitle: Neither workers nor employers will be entirely satisfied or dissatisfied. [? if in_grand_coalition and dvp_relation < 30: The DVP will likely consider the compromise unacceptable. ?][? if in_grand_coalition and dvp_relation >= 30: The DVP might grudgingly accept the compromise for now. ?]
+view-if: dvp_support = 0
+on-arrival: dvp_support += 1
 
 Neither side is entirely satisfied by our compromise solution. Many of the workers and unemployed see this as a betrayal, although we present it as the successful aversion of a much worse alternative. [? if in_grand_coalition: Meanwhile, the DVP is aghast at the prospect of raising any taxes on businesses at all. ?]
 
 @wp
 subtitle: The workers will regard this as a betrayal.
+view-if: wp_support = 0
+on-arrival: wp_support += 1
 
 For budgetary reasons, we have cut unemployment insurance benefits. Unfortunately, our reasons for fiscal discipline are alien to the workers. They are furious at our betrayal, as are a good portion of our membership throughout the factions. Our loss is the KPD's gain, and even the NSDAP, those lapdogs of the bourgeoisie, have joined in criticizing us for our austerity.
 
 @cnblp
 subtitle: Employers are strongly against this. 
+view-if: cnblp_support = 0
+on-arrival: cnblp_support += 1
 
 We have increased employer contributions to the unemployment insurance fund, allowing the program to continue without hurting workers and the unemployed. Perhaps understandably, the capitalists and their political parties are furious, while our base in the unions and among the unemployed are pleased.
 
 @dnvp
 subtitle: Neither workers nor employers will be entirely satisfied or dissatisfied. [? if in_grand_coalition and dvp_relation < 30: The DVP will likely consider the compromise unacceptable. ?][? if in_grand_coalition and dvp_relation >= 30: The DVP might grudgingly accept the compromise for now. ?]
+view-if: dnvp_support = 0
+on-arrival: dnvp_support += 1
 
 Neither side is entirely satisfied by our compromise solution. Many of the workers and unemployed see this as a betrayal, although we present it as the successful aversion of a much worse alternative. [? if in_grand_coalition: Meanwhile, the DVP is aghast at the prospect of raising any taxes on businesses at all. ?]
 
