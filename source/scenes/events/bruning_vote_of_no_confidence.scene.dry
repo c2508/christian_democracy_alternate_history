@@ -29,13 +29,13 @@ Following the Great Depression, Germany's finances have been in shambles, with m
 Composed primarily of <span style="color: #909090;">**special interest**</span> parties, their single-minded pursuit of <span style="color: #909090;">**special interest**</span> might jeopardise Bruning's goal of balancing the budget, making their support tenuous at best. Now, our task in the Reichstag is to somehow wrangle a majority in favour of Bruning's policies. 
 
 
-Parties supporting the government ([+ bruning_support +]/500) 
+Parties supporting the government ([+ bruning_support +]/500) ([+ bruning_support_percentage +]%)
 
 <span style="color: #000000;">**Z**</span> Seats ([+ z_seats +]/500)
 
 <span style="color: #A2D8E0;">**BVP**</span> Seats ([+ bvp_seats +]/500)
 
-Parties against the government ([+ bruning_oppose +]/500)
+Parties against the government ([+ bruning_oppose +]/500) ([+ bruning_oppose_percentage +]%)
 
 <span style="color: #700000;">**KPD**</span> Seats ([+ kpd_seats +]/500)
 
@@ -43,7 +43,7 @@ Parties against the government ([+ bruning_oppose +]/500)
 
 <span style="color: #003755;">**DNF**</span> Seats ([+ dnf_seats +]/500)
 
-Uncertain ([+ bruning_undecided +]/500)
+Uncertain ([+ bruning_undecided +]/500) ([+ bruning_undecided_percentage +]%)
 
 <span style="color: #c00000;">**SPD**</span> Seats ([+ spd_seats +]/500)
 
