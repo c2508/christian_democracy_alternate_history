@@ -74,8 +74,8 @@ Mass rallies are a common feature of German political life life, especially in t
 
 - @catholic: Advancing the rights of Catholics through parliamentary means
 - @welfare: Sozialpolitik - the maintenance and expansion of social welfare programs.
-- @democracy: Expanding our nascent democracy and defending it against dictatorship and fascism.
-- @right: Working with the Protestant Right to reclaim our lost territories.
+- @democracy: Expanding our nascent democracy and defending it against communism and fascism.
+- @right: Working with the <span style="color: #000000;">Protestant Right</span> to reclaim our lost territories.
 - @wtb: Support the WTB plan!
 - @local: A mixture of various local and national concerns that resonate most with the audience.
 - @easy_discard
@@ -101,7 +101,7 @@ Our speakers defend the status quo and rail against the communists and fascists 
 @right
 on-arrival: old_middle_z += 3*(1-dissent); rural_z += 3*(1-dissent); old_middle_z += 3*(1-dissent) if dnvp_relation > 70; rural_z += 3*(1-dissent) if dnvp_relation > 70;
 
-Rallying the forces of the German Right together pages the way for future cooperation with them. 
+Rallying the forces of the German Right together paves the way for future cooperation with them. 
 [? if dnvp_relation > 70 : Our constant cooperation with the <span style="color: #3E88B3;">**DNVP**</span> has made our messaging more effective. ?]
 
 @wtb
