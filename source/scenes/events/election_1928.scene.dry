@@ -174,6 +174,22 @@ Q.strike_term_seen = 0;
 
 Q.z_minus_bvp_r = Q.z_r - 3;
 
+
+Q.kpd_seats = Math.round(Q.kpd_r*5)
+Q.spd_seats = Math.round(Q.spd_r*5)
+Q.ddp_seats = Math.round(Q.ddp_r*5)
+Q.z_seats = Math.round((Q.z_r - 3)*5)
+Q.bvp_seats = Math.round(Q.bvp_r*5)
+Q.bvp_seats = Math.round(Q.bvp_r*5)
+Q.dvp_seats = Math.round(Q.dvp_r*5)
+Q.wp_seats = Math.round(Q.wp_r*5)
+Q.cnblp_seats = Math.round(Q.cnblp_r*5)
+Q.dnvp_seats = Math.round(Q.dnvp_r*5)
+Q.nsdap_seats = Math.round(Q.nsdap_r*5)
+Q.dnf_seats = Math.round(Q.dnf_r*5)
+
+
+
 // understanding the enemy
 if (Q.nsdap_r >= 15) {
     Q.understanding_enemy_timer = 2;
