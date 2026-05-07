@@ -5,18 +5,18 @@ view-if: year = 1928 and month = 6 and bruning_vonc = 0
 tags: event
 max-visits: 1000000
 on-arrival: {! 
-Q.ddp_support = 0
-Q.spd_support = 0 
-Q.dvp_support = 0
-Q.wp_support = 0
-Q.cnblp_support = 0
-Q.dnvp_support = 0
-Q.bruning_support = Q.z_seats + Q.bvp_seats
-Q.bruning_oppose = Q.kpd_seats + Q.nsdap_seats 
-Q.bruning_undecided = Q.spd_seats + Q.ddp_seats + Q.dvp_seats + Q.wp_seats + Q.cnblp_seats + Q.dnvp_seats
-Q.bruning_support_percentage =  Math.round(Q.z_r*10.0)/10.0
-Q.bruning_oppose_percentage =  Math.round((Q.kpd_r + Q.nsdap_r)*10.0)/10.0
-Q.bruning_undecided_percentage = Math.round((Q.spd_r + Q.ddp_r + Q.dvp_r + Q.wp_r + Q.cnblp_r + Q.dnvp_r)*10.0)/10.0
+Q.ddp_support = 0;
+Q.spd_support = 0;
+Q.dvp_support = 0;
+Q.wp_support = 0;
+Q.cnblp_support = 0;
+Q.dnvp_support = 0;
+(Q.bruning_support = Q.z_seats + Q.bvp_seats);
+(Q.bruning_oppose = Q.kpd_seats + Q.nsdap_seats);
+(Q.bruning_undecided = Q.spd_seats + Q.ddp_seats + Q.dvp_seats + Q.wp_seats + Q.cnblp_seats + Q.dnvp_seats);
+(Q.bruning_support_percentage =  Math.round(Q.z_r*10.0)/10.0);
+(Q.bruning_opposed_percentage =  Math.round((Q.kpd_r + Q.nsdap_r)*10.0)/10.0)
+(Q.bruning_undecided_percentage = Math.round((Q.spd_r + Q.ddp_r + Q.dvp_r + Q.wp_r + Q.cnblp_r + Q.dnvp_r)*10.0)/10.0);
 !}
 go_to: convince
 
