@@ -1,0 +1,77 @@
+title: Vote of no Confidence
+subtitle: Bruning's government faces its first test
+new-page: true
+view-if: year = 1930 and month = 4
+tags: event
+max-visits: 2
+face-image: img/Kollwitz_Arbeitslosigkeit.jpg
+
+= Vote of no Confidence
+
+Parties supporting the government (0/491)
+
+<span style="color: #000000;">**Z**</span>  
+
+<span style="color: #A2D8E0;">**BVP**</span>
+
+Parties against the government (0/491)
+
+<span style="color: #700000;">**KPD**</span>
+
+<span style="color: #7A3C00;">**NSDAP**</span>
+
+<span style="color: #003755;">**DNF**</span>
+
+Uncertain (0/491)
+
+<span style="color: #c00000;">**SPD**</span>
+
+<span style="color: #D3C24D;">**[+ ddp_name +]**</span>
+
+<span style="color: #C0A054;">**DVP**</span>
+
+<span style="color: #B8996F;">**WP**</span>
+
+<span style="color: #006400;">**CNBLP**</span>
+
+<span style="color: #3E88B3;">**DNVP**</span>
+
+- @spd: Can we get the <span style="color: #c00000;">**SPD**</span> to tolerate Bruning's government?
+- @ddp: Can we get the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> to join Bruning's government?
+- @dvp: Can we get the <span style="color: #C0A054;">**DVP**</span> to join Bruning's government?
+- @wp: Can we get the <span style="color: #B8996F;">**WP**</span> to join Bruning's government?
+- @cnblp: Can we get the <span style="color: #006400;">**CNBLP**</span> to join Bruning's government?
+- @dnvp: Can we get the <span style="color: #3E88B3;">**DNVP**</span> to join Bruning's government?
+
+@spd
+subtitle: The workers will regard this as a betrayal.
+
+For budgetary reasons, we have cut unemployment insurance benefits. Unfortunately, our reasons for fiscal discipline are alien to the workers. They are furious at our betrayal, as are a good portion of our membership throughout the factions. Our loss is the KPD's gain, and even the NSDAP, those lapdogs of the bourgeoisie, have joined in criticizing us for our austerity.
+
+
+@ddp
+subtitle: Employers are strongly against this. 
+
+We have increased employer contributions to the unemployment insurance fund, allowing the program to continue without hurting workers and the unemployed. Perhaps understandably, the capitalists and their political parties are furious, while our base in the unions and among the unemployed are pleased.
+
+
+@dvp
+subtitle: Neither workers nor employers will be entirely satisfied or dissatisfied. [? if in_grand_coalition and dvp_relation < 30: The DVP will likely consider the compromise unacceptable. ?][? if in_grand_coalition and dvp_relation >= 30: The DVP might grudgingly accept the compromise for now. ?]
+
+Neither side is entirely satisfied by our compromise solution. Many of the workers and unemployed see this as a betrayal, although we present it as the successful aversion of a much worse alternative. [? if in_grand_coalition: Meanwhile, the DVP is aghast at the prospect of raising any taxes on businesses at all. ?]
+
+@wp
+subtitle: The workers will regard this as a betrayal.
+
+For budgetary reasons, we have cut unemployment insurance benefits. Unfortunately, our reasons for fiscal discipline are alien to the workers. They are furious at our betrayal, as are a good portion of our membership throughout the factions. Our loss is the KPD's gain, and even the NSDAP, those lapdogs of the bourgeoisie, have joined in criticizing us for our austerity.
+
+@cnblp
+subtitle: Employers are strongly against this. 
+
+We have increased employer contributions to the unemployment insurance fund, allowing the program to continue without hurting workers and the unemployed. Perhaps understandably, the capitalists and their political parties are furious, while our base in the unions and among the unemployed are pleased.
+
+@dnvp
+subtitle: Neither workers nor employers will be entirely satisfied or dissatisfied. [? if in_grand_coalition and dvp_relation < 30: The DVP will likely consider the compromise unacceptable. ?][? if in_grand_coalition and dvp_relation >= 30: The DVP might grudgingly accept the compromise for now. ?]
+
+Neither side is entirely satisfied by our compromise solution. Many of the workers and unemployed see this as a betrayal, although we present it as the successful aversion of a much worse alternative. [? if in_grand_coalition: Meanwhile, the DVP is aghast at the prospect of raising any taxes on businesses at all. ?]
+
