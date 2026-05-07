@@ -122,6 +122,7 @@ if (Q.kpd_relation >= 30) {
     Q.weimar_coalition += Q.sapd_r;
 }
 
+Q.z_r - 3 = Math.round((Q.z_r - 3)*10.0)/10.0
 Q.leverage = Q.z_r + 5;
 
 Q.grand_coalition_failed = 0;
