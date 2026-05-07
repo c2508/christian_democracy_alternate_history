@@ -31,13 +31,13 @@ Composed primarily of <span style="color: #909090;">**special interest**</span> 
 {!<table>!} 
 {!<tr><td>Party</td><td>Vote Share</td><td>Reichstag Seats</td></tr>!}
 
-{!<tr><td>In Favor</td><td>([+ bruning_support_percentage +]%)</td><td>([+ bruning_support +]/500)</td></tr>!}
+{!<tr><td>In Favor</td><td> ([+ bruning_support_percentage +]%) </td><td> ([+ bruning_support +]/500) </td></tr>!}
 
 {!<tr><td>!} <span style="color: #000000;">**Z**</span> : {!</td><td>!} [+ z_minus_bvp_r +]% {!</td><td>!} [+ z_seats +] {!</td></tr>!}
 
 {!<tr><td>!} <span style="color: #A2D8E0;">**BVP**</span>: {!</td><td>!} 3% {!</td><td>!} 15 {!</td></tr>!}
 
-{!<tr><td>Undecided</td><td>([+ bruning_undecided_percentage +]%)</td><td>([+ bruning_undecided +]/500)</td></tr>!}
+{!<tr><td>Undecided</td><td> ([+ bruning_undecided_percentage +]%) </td><td> ([+ bruning_undecided +]/500) </td></tr>!}
 
 {!<tr><td>!} <span style="color: #c00000;">**SPD**</span> {!</td><td>!} **[+ spd_r +]%** {!</td><td>!} **[+ spd_seats +]** {!</td></tr>!}
 
@@ -51,7 +51,7 @@ Composed primarily of <span style="color: #909090;">**special interest**</span> 
 
 {!<tr><td>!} <span style="color: #3E88B3;">**DNVP**</span>: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ dnvp_seats +] {!</td></tr>!}
 
-{!<tr><td>Opposed</td><td>([+ bruning_opposed_percentage +]%)</td><td>([+ bruning_oppposed +]/500)</td></tr>!}
+{!<tr><td>Opposed</td><td> ([+ bruning_opposed_percentage +]%) </td><td> ([+ bruning_oppposed +]/500) </td></tr>!}
 
 {!<tr><td>!} <span style="color: #700000;">**KPD**</span>: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ kpd_seats +] {!</td></tr>!}
 
