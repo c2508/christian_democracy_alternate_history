@@ -5,6 +5,7 @@ view-if: year = 1930 and month = 5
 tags: event
 max-visits: 1
 face-image: img/Kollwitz_Arbeitslosigkeit.jpg
+go_to: convince
 
 = Vote of no Confidence
 
@@ -35,6 +36,8 @@ Uncertain (0/500)
 <span style="color: #006400;">**CNBLP**</span> (0/500)
 
 <span style="color: #3E88B3;">**DNVP**</span> (0/500)
+
+@convince
 
 - @spd: Can we get the <span style="color: #c00000;">**SPD**</span> to tolerate Bruning's government?
 - @ddp: Can we get the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> to join Bruning's government?
