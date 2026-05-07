@@ -125,10 +125,12 @@ Neither side is entirely satisfied by our compromise solution. Many of the worke
 
 @yay
 subtitle: We shall proceed 
+on-arrival: bruning_vonc += 1
 
 We have enough support.
 
 @nay
 subtitle: We shall proceed
+on-arrival: bruning_vonc += 1
 
 boo boo
