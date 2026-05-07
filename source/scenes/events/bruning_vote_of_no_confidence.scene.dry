@@ -1,9 +1,9 @@
 title: Vote of no Confidence
 subtitle: Bruning's government faces its first test
 new-page: true
-view-if: year = 1930 and month = 4
+view-if: year = 1930 and month = 5
 tags: event
-max-visits: 2
+max-visits: 1
 face-image: img/Kollwitz_Arbeitslosigkeit.jpg
 
 = Vote of no Confidence
