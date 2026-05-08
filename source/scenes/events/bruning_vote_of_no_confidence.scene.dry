@@ -138,7 +138,6 @@ Neither side is entirely satisfied by our compromise solution. Many of the worke
 @yay
 subtitle: We shall proceed 
 view-if: bruning_support > 250
-on-arrival: bruning_vonc += 1
 
 We have enough support.
 
