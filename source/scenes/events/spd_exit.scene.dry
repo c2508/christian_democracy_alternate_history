@@ -1,5 +1,5 @@
 title: The <span style="color: #c00000;">**SPD's**</span> time in government draws to a close.
-subtitle: <span style="color: #808080;">Hindenburg</span> sees no more need for further <span style="color: #c00000;">socialist</span> governence.
+subtitle: President <span style="color: #808080;">Hindenburg</span> sees no more need for further <span style="color: #c00000;">socialist</span> governence.
 new-page: true
 view-if: (in_weimar_coalition = 1 or in_grand_coalition = 1) and year = 1930 and month = 4 
 on-arrival: spd_in_government = 0; in_grand_coalition = 0; in_weimar_coalition = 0; chancellor = "Brüning"; chancellor_party = "Z"; right_strength += 8; pro_republic -= 5; new_middle_z -= 1; rural_z -= 1; old_middle_z -= 1; catholics_spd -= 1; left_dissent += 5; dvp_right += 3; economic_growth -= 0.3
