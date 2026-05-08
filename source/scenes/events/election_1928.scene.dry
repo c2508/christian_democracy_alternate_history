@@ -342,9 +342,9 @@ Bourgeois Coalition (<span style="color: #000000;">**Z**</span> + <span style="c
 
 <span style="color: #3E88B3;">Bürgerblock</span> Coalition (<span style="color: #000000;">**Z**</span> + <span style="color: #69A2BE;">**BVP**</span> + <span style="color: #DCCA4A;">**DVP**</span> + [? if cnblp_exist: <span style="color: #7FCEB1;">**CNBLP**</span> +  ?][? if kvp_formed: <span style="color: #455B95;">**KVP**</span> +  ?] <span style="color: #3F7BC1;">**DNVP**</span> + <span style="color: #909090;">**Others**</span>): [+ right_coalition +]%
 
-[? if nazi_urgency <= 1 and nsdap_r >= 15 : The rapid rise in NSDAP votes is extremely worrying. Many had believed that the party was moribund; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
+[? if nazi_urgency <= 1 and nsdap_r >= 15 : The rapid rise in <span style="color: #7A3C00;">**NSDAP**</span votes is extremely worrying. Many had believed that the party was moribund; now, some of us consider it to be the greatest threat to stability in Germany. ?]
 
-[? if anti_democratic_coalition >= 50 : Together, the anti-democratic KPD, DNVP, and NSDAP have a majority in the Reichstag. A stable governing majority will be almost impossible. ?]
+[? if anti_democratic_coalition >= 50 : Together, the anti-democratic KPD, DNVP, <span style="color: #7A3C00;">**NSDAP**</span> and have a majority in the Reichstag. A stable governing majority will be almost impossible. ?]
 
 There are some potential coalition arrangements.
 
@@ -616,7 +616,7 @@ Ernst Scholz's appointment as chancellor is approved by our potential allies.
 
 @treviranus
 title: Gottfried Treviranus for Chancellor
-subtitle: Gottfried Treviranus is part of <span style="color: #0087DC;">Young Conservatives</span>  Wing of the <span style="color: #3E88B3;">**DNVP**</span> and is an acceptable candidate for Chancellor.
+subtitle: Gottfried Treviranus is part of <span style="color: #0087DC;">Young Conservatives</span> Wing of the <span style="color: #3E88B3;">**DNVP**</span> and is an acceptable candidate for Chancellor.
 on-arrival: spd_in_government = 0; chancellor = "Treviranus"; chancellor_party = "DNVP";
 go-to: ministries
 
