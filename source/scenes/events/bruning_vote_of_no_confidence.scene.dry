@@ -144,6 +144,7 @@ For budgetary reasons, we have cut unemployment insurance benefits. Unfortunatel
 subtitle: Employers are strongly against this. 
 view-if: ddp_support = 0
 on-arrival: ddp_support += 1; bruning_support += ddp_seats; bruning_support_percentage += ddp_r; bruning_undecided -= ddp_seats; bruning_undecided_percentage -= ddp_r
+go-to: convince
 
 We have increased employer contributions to the unemployment insurance fund, allowing the program to continue without hurting workers and the unemployed. Perhaps understandably, the capitalists and their political parties are furious, while our base in the unions and among the unemployed are pleased.
 
