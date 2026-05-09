@@ -27,7 +27,7 @@ title: Make our newspapers more commercialized by broadening their appeal beyond
 subtitle: This might upset ideological purists, but it may bring in more funds and woo Catholics back to the <span style="color: #000000;">**Center Party**</span>.
 on-arrival: resources += 1; commercialized_media += 1; new_middle_z += 2*(1-dissent); old_middle_z += 2*(1-dissent); left_dissent += 8; right_dissent += 8
 
-Our commercialized newspapers are able to bring in more funds. However, the left and right factions express their displeasure.
+Our commercialized newspapers are able to bring in more funds. However, the left and right of the party express their displeasure.
 
 @campaign
 title: The purpose of our media is to elect more Catholics.
