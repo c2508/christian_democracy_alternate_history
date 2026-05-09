@@ -49,7 +49,7 @@ subtitle: -1 resource
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 view-if: newspaper = 0
-on-arrival: newspaper += 1; resources -= 1; new_middle_z += 3*(1 - dissent); old_middle_z += 3*(1 - dissent); catholics_z += 2*(1-dissent); pro_republic += 3*(1-dissent) if democratization > 2
+on-arrival: newspaper += 1; resources -= 1; new_middle_z += 2*(1 - dissent); old_middle_z +=2*(1 - dissent); catholics_z += 2*(1-dissent); pro_republic += 3*(1-dissent) if democratization > 2
 
 Our expanded newspaper allows us to connect to people in a more intimate setting than before, spreading the message of political catholicism along with music and other popular content. 
 
