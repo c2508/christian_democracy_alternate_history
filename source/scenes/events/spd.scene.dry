@@ -65,13 +65,6 @@ Composed primarily of <span style="color: #909090;">**special interest**</span> 
 - @yay: We have managed to gather enough support.
 - @nay: We are unable to gather enough support.
 
-@spd
-subtitle: The workers will regard this as a betrayal.
-view-if: spd_support = 0
-on-arrival: spd_support += 1; bruning_support += spd_seats; bruning_support_percentage += spd_r
-go-to: bruning_vote_of_no_confidence.convince
-
-For budgetary reasons, we have cut unemployment insurance benefits. Unfortunately, our reasons for fiscal discipline are alien to the workers. They are furious at our betrayal, as are a good portion of our membership throughout the factions. Our loss is the KPD's gain, and even the NSDAP, those lapdogs of the bourgeoisie, have joined in criticizing us for our austerity.
 
 
 @ddp
