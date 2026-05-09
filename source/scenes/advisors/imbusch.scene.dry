@@ -32,7 +32,7 @@ on-arrival: advisor_action_timer = 6; left_labor_dissent -= 5; left_labor_streng
 
 We have reduced tensions with the labor factions, and increased their strength within the party.
 
-@union_opposition
+@labor_opposition
 title: Defending Austerity
 subtitle: Convince the labor unions to accept Bruning's salary cuts
 view-if: rubicon_crossed = 1
