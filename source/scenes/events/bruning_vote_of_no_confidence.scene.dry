@@ -33,7 +33,7 @@ Composed primarily of <span style="color: #909090;">**special interest**</span> 
 
 {!<tr><td>!}In Favor{!</td><td>!} ([+ bruning_support_percentage +]%) {!</td><td>!} ([+ bruning_support +]/500) {!</td></tr>!}
 
-{!<tr><td>!} <span style="color: #000000;">**Z**</span> : {!</td><td>!} [+ z_minus_bvp_r +]% {!</td><td>!} [+ z_seats +] {!</td></tr>!}
+{!<tr><td>!} <span style="color: #000000;">**Z**</span> : {!</td><td>!} [+ Math.round((Q.z_r - 3)*10.0)/10.0) +]% {!</td><td>!} [+ z_seats +] {!</td></tr>!}
 
 {!<tr><td>!} <span style="color: #A2D8E0;">**BVP**</span>: {!</td><td>!} 3% {!</td><td>!} 15 {!</td></tr>!}
 
