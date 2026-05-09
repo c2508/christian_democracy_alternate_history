@@ -1,25 +1,24 @@
 title: The <span style="color: #c00000;">**SPD's**</span> time in government draws to a close.
-subtitle: President <span style="color: #808080;">Hindenburg</span> sees no more need for further <span style="color: #c00000;">socialist</span> governence.
+subtitle: President <span style="color: #808080;">Hindenburg</span> sees no more need for <span style="color: #c00000;">socialist</span> governence.
 new-page: true
 view-if: (in_weimar_coalition = 1 or in_grand_coalition = 1) and year = 1930 and month = 4 
-on-arrival: spd_in_government = 0; in_grand_coalition = 0; in_weimar_coalition = 0; chancellor = "Brüning"; chancellor_party = "Z"; right_strength += 8; pro_republic -= 5; new_middle_z -= 1; rural_z -= 1; old_middle_z -= 1; catholics_spd -= 1; left_dissent += 5; dvp_right += 3; economic_growth -= 0.3
+on-arrival: spd_in_government = 0; in_grand_coalition = 0; in_weimar_coalition = 0; chancellor = "Brüning"; chancellor_party = "Z"; right_strength += 8; pro_republic -= 5; new_middle_z -= 1; rural_z -= 1; old_middle_z -= 1; catholics_spd -= 1; left_dissent += 5; dvp_right += 3; economic_growth -= 0.3; spd_relation -= 5
 tags: event
 max-visits: 1
 go-to: expelled
 face-image: img/Kollwitz_Arbeitslosigkeit.jpg
 
-= Unemployment Insurance Crisis
+= The <span style="color: #c00000;">**SPD**</span> breaks with the coalition
 
-The economic crisis has caused mass layoffs all throughout Germany, affecting the industrial working class the hardest. Our welfare spending is increasing due to the greater need.
+Following a sharp rise in unemployment after Black Thurdays, the unemployment insurance fund has been overstretched and is on the verge of insolvency. To ensure that the unemployed still receive their welfare cheques, we have worked out a compromise with the other centrist parties, in which contribution rates would be increased and welfare slightly cut. However, the <span style="color: #c00000;">**ADBG**</span> and the <span style="color: #c00000;">**SPD's**</span> intransigent left wing have rejected our compromise and pressure the <span style="color: #c00000;">**SPD's**</span> national leadership to leave government.
+Originally, the <span style="color: #c00000;">**SPD's**</span> presence in government has been tolerated due to the need for their support for the Young Plan. With the recent ratification of the Young Plan, <span style="color: #808080;">Hindenburg</span> sees no reason to persuade the <span style="color: #c00000;">**socialists**</span> to stay. 
 
-In the midst of all this, our right-wing coalition partners in the DVP and Center parties have a plan to cut benefits for the unemployed, lower taxes on the rich, and raise taxes on the working class, as part of a plan to balance the budget and discipline labor. They do not see a possibility for compromise. If we do not accept, they could blow up the coalition.
-
-- @expelled: 
+-@expelled
 
 @expelled
 title: The <span style="color: #c00000;">**SPD**</span> shall leave the coalition. 
 
-Heinrich Bruning has been appointed Chancellor by <span style="color: #808080;">Hindenburg</span> and it remains to be seen whether the new government can survive the vote of no confidence next month.
+With the <span style="color: #c00000;">**SPD's**</span> exit, the incumbent government no longer holds a majority in the Reichstag and a new cabinet must take its place. Due to Bruning's Christian Nationalist outlook and commitment to fiscal discipline, <span style="color: #808080;">Hindenburg</span> views him as an acceptable candidate for Chancellor and entrusts to him the mandate to broker a cabinet. Now, all we can do is wait and see whether he can survive the vote of no confidence next month.
 
 
 
