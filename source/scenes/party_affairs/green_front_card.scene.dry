@@ -9,7 +9,7 @@ tags: party_affairs,
 
 = The <span style="color: #0dba1e;">**Green Front**</span>
 
-
+As an umbrella organisation representing organised agriculture, the formation of the <span style="color: #0dba1e;">**Green Front**</span> is a response to the growing crisis in the countryside. With the elements of the <span style="color: #3E88B3;">**DNVP**</span>, the <span style="color: #000000;">**Center Party**</span> and the <span style="color: #006400;">**CNBLP**</span>, it possesses sizable influence in German Politics. How might we utilise the <span style="color: #0dba1e;">**Green Front**</span> to advance our goals?
 
 - @dnvp: Improve our relations with the <span style="color: #3E88B3;">**DNVP**</span>
 - @influence: Root out those with sympathies towards the <span style="color: #7A3C00;">**NSDAP**</span> within the <span style="color: #0dba1e;">**Green Front**</span>
@@ -29,7 +29,7 @@ The <span style="color: #385A38;">agrarians</span> within our party has reached 
 subtitle: The radicalism of the <span style="color: #7A3C00;">**NSDAP**</span> and their propagation of the 'Blood and Soil' ideology has much appeal amongst some members of the <span style="color: #0dba1e;">**Green Front**</span>. We must strengthen the <span style="color: #000000;">**Center Party's**</span> and <span style="color: #3E88B3;">**DNVP**</span> influence in the <span style="color: #0dba1e;">**Green Front**</span>, lest the rural electorate turn to the demagogic <span style="color: #7A3C00;">**Nazis**</span> for a solution. 
 on-arrival: nsadp_rural -= 3; nationalism -= 2;
 
-
+We rail against the <span style="color: #7A3C00;">**NSDAP's**</span> miltant tendencies and their irresponsible rhetoric, damaging their credibility in the eyes of the farmers.
 
 @program
 subtitle: Agriculture is the backbone of Germany, yet the countryside's situation is dire and German farmers are struggling to make a living. Only through the unification of agricultural interests under the auspices of the <span style="color: #0dba1e;">**Green Front**</span> can we start drafting a comprehensive farm program to aid the peasants.
