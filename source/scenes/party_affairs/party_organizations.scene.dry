@@ -30,7 +30,7 @@ unavailable-subtitle: Not enough resources.
 view-if: radio = 0
 on-arrival: radio += 1; resources -= 2; new_middle_z += 4*(1 - dissent); old_middle_z += 3*(1 - dissent); workers_z += 2*(1 - dissent); left_labor_dissent += 5; right_labor_dissent += 5; right_strength += 5; socialism += 3*(1 - dissent); nationalism -= 3*(1 - dissent) if pacifism > 1; pro_republic += 3*(1-dissent) if democratization > 1
 
-Our new radio station allows us to connect to people in a more intimate setting than before, spreading the message of christian democracy along with music and other popular content. Since most proletarians cannot afford family radios right now, we are reaching the middle class, a fact of which our labor comrades are painfully aware.
+Our new radio station allows us to connect to people in a more intimate setting than before, spreading our message along with music and other popular content. 
 
 @radio_2
 choose-if: resources >= 1
