@@ -35,7 +35,7 @@ Composed primarily of <span style="color: #909090;">**special interest**</span> 
 
 {!<tr><td>!} <span style="color: #000000;">**Z**</span> : {!</td><td>!} [+ z_minus_bvp_r +]% {!</td><td>!} [+ z_seats +] {!</td></tr>!}
 
-{!<tr><td>!} <span style="color: #A2D8E0;">**BVP**</span>: {!</td><td>!} 3% {!</td><td>!} 15 {!</td></tr>!}
+{!<tr><td>!} <span style="color: #69A2BE;">**BVP**</span>: {!</td><td>!} 3% {!</td><td>!} 15 {!</td></tr>!}
 
 [? if spd_support : {!<tr><td>!} <span style="color: #c00000;">**SPD**</span>: {!</td><td>!} [+ spd_r +]% {!</td><td>!} [+ spd_seats +] {!</td></tr>!} ?]
 
