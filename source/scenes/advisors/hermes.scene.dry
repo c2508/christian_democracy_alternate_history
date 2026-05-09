@@ -14,6 +14,7 @@ Hermes is an agriculture scientist who seeks to represent the interests of small
 
 - @agriculture
 - @rural_campaign
+- @green_front
 - @root: Return to main
 
 
@@ -34,5 +35,15 @@ unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +
 on-arrival: advisor_action_timer = 6; rural_z += 5*(1-dissent)
 
 We have increased our campaigning among farmers and the rural populace.
+
+@green_front
+title: The <span style="color: #0dba1e;">Green Front</span>
+subtitle: Making use of the <span style="color: #0dba1e;">Green Front</span> 
+view-if: green_front > 0
+choose-if: advisor_action_timer == 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6
+go-to: green_front_card
+
 
 
