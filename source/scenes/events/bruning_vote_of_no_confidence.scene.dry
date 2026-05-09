@@ -90,50 +90,314 @@ Composed primarily of <span style="color: #909090;">**special interest**</span> 
 subtitle: The workers will regard this as a betrayal.
 view-if: spd_support = 0
 on-arrival: spd_support += 1; bruning_support += spd_seats; bruning_support_percentage += spd_r
-go-to: bruning_vote_of_no_confidence_2.convince
 
 For budgetary reasons, we have cut unemployment insurance benefits. Unfortunately, our reasons for fiscal discipline are alien to the workers. They are furious at our betrayal, as are a good portion of our membership throughout the factions. Our loss is the KPD's gain, and even the NSDAP, those lapdogs of the bourgeoisie, have joined in criticizing us for our austerity.
+
+
+{!<table>!} 
+{!<tr><td>!}Party{!</td><td>!}Vote Share{!</td><td>!}Reichstag Seats{!</td></tr>!}
+
+{!<tr><td>!}In Favor{!</td><td>!} ([+ bruning_support_percentage +]%) {!</td><td>!} ([+ bruning_support +]/500) {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #000000;">**Z**</span> : {!</td><td>!} [+ z_minus_bvp_r +]% {!</td><td>!} [+ z_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #69A2BE;">**BVP**</span>: {!</td><td>!} 3% {!</td><td>!} 15 {!</td></tr>!}
+
+[? if spd_support : {!<tr><td>!} <span style="color: #c00000;">**SPD**</span>: {!</td><td>!} [+ spd_r +]% {!</td><td>!} [+ spd_seats +] {!</td></tr>!} ?]
+
+[? if ddp_support : {!<tr><td>!} <span style="color: #D3C24D;">**[+ ddp_name +]**</span>: {!</td><td>!} [+ ddp_r +]% {!</td><td>!} [+ ddp_seats +] {!</td></tr>!} ?]
+
+[? if dvp_support : {!<tr><td>!} <span style="color: #C0A054;">**DVP**</span>: {!</td><td>!} [+ dvp_r +]% {!</td><td>!} [+ dvp_seats +] {!</td></tr>!} ?]
+ 
+[? if wp_support : {!<tr><td>!} <span style="color: #B8996F;">**WP**</span>: {!</td><td>!} [+ wp_r +]% {!</td><td>!} [+ wp_seats +] {!</td></tr>!} ?]
+
+[? if cnblp_support : {!<tr><td>!} <span style="color: #006400;">**CNBLP**</span>: {!</td><td>!} [+ cnblp_r +] % {!</td><td>!} [+ cnblp_seats +] {!</td></tr>!} ?]
+
+[? if dnvp_support : {!<tr><td>!} <span style="color: #3E88B3;">**DNVP**</span>: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ dnvp_seats +] {!</td></tr>!} ?]
+
+{!<tr><td>!}Undecided{!</td><td>!} ([+ bruning_undecided_percentage +]%) {!</td><td>!} ([+ bruning_undecided +]/500) {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #c00000;">**SPD**</span>: {!</td><td>!} [+ spd_r +]% {!</td><td>!} [+ spd_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #D3C24D;">**[+ ddp_name +]**</span>: {!</td><td>!} [+ ddp_r +]% {!</td><td>!} [+ ddp_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #C0A054;">**DVP**</span>: {!</td><td>!} [+ dvp_r +]% {!</td><td>!} [+ dvp_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #B8996F;">**WP**</span>: {!</td><td>!} [+ wp_r +]% {!</td><td>!} [+ wp_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #006400;">**CNBLP**</span>: {!</td><td>!} [+ cnblp_r +] % {!</td><td>!} [+ cnblp_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #3E88B3;">**DNVP**</span>: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ dnvp_seats +] {!</td></tr>!}
+
+{!<tr><td>!}Opposed{!</td><td>!} ([+ bruning_opposed_percentage +]%) {!</td><td>!} ([+ bruning_opposed +]/500) {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #700000;">**KPD**</span>: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ kpd_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #7A3C00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ nsdap_seats +] {!</td></tr>!}#
+
+[? if dnf_formed : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} ?]
+
+{!</table>!}
 
 @ddp
 subtitle: Employers are strongly against this. 
 view-if: ddp_support = 0
 on-arrival: ddp_support += 1; bruning_support += ddp_seats; bruning_support_percentage += ddp_r
-go-to: bruning_vote_of_no_confidence_2.convince
 
 We have increased employer contributions to the unemployment insurance fund, allowing the program to continue without hurting workers and the unemployed. Perhaps understandably, the capitalists and their political parties are furious, while our base in the unions and among the unemployed are pleased.
 
+{!<table>!} 
+{!<tr><td>!}Party{!</td><td>!}Vote Share{!</td><td>!}Reichstag Seats{!</td></tr>!}
+
+{!<tr><td>!}In Favor{!</td><td>!} ([+ bruning_support_percentage +]%) {!</td><td>!} ([+ bruning_support +]/500) {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #000000;">**Z**</span> : {!</td><td>!} [+ z_minus_bvp_r +]% {!</td><td>!} [+ z_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #69A2BE;">**BVP**</span>: {!</td><td>!} 3% {!</td><td>!} 15 {!</td></tr>!}
+
+[? if spd_support : {!<tr><td>!} <span style="color: #c00000;">**SPD**</span>: {!</td><td>!} [+ spd_r +]% {!</td><td>!} [+ spd_seats +] {!</td></tr>!} ?]
+
+[? if ddp_support : {!<tr><td>!} <span style="color: #D3C24D;">**[+ ddp_name +]**</span>: {!</td><td>!} [+ ddp_r +]% {!</td><td>!} [+ ddp_seats +] {!</td></tr>!} ?]
+
+[? if dvp_support : {!<tr><td>!} <span style="color: #C0A054;">**DVP**</span>: {!</td><td>!} [+ dvp_r +]% {!</td><td>!} [+ dvp_seats +] {!</td></tr>!} ?]
+ 
+[? if wp_support : {!<tr><td>!} <span style="color: #B8996F;">**WP**</span>: {!</td><td>!} [+ wp_r +]% {!</td><td>!} [+ wp_seats +] {!</td></tr>!} ?]
+
+[? if cnblp_support : {!<tr><td>!} <span style="color: #006400;">**CNBLP**</span>: {!</td><td>!} [+ cnblp_r +] % {!</td><td>!} [+ cnblp_seats +] {!</td></tr>!} ?]
+
+[? if dnvp_support : {!<tr><td>!} <span style="color: #3E88B3;">**DNVP**</span>: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ dnvp_seats +] {!</td></tr>!} ?]
+
+{!<tr><td>!}Undecided{!</td><td>!} ([+ bruning_undecided_percentage +]%) {!</td><td>!} ([+ bruning_undecided +]/500) {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #c00000;">**SPD**</span>: {!</td><td>!} [+ spd_r +]% {!</td><td>!} [+ spd_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #D3C24D;">**[+ ddp_name +]**</span>: {!</td><td>!} [+ ddp_r +]% {!</td><td>!} [+ ddp_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #C0A054;">**DVP**</span>: {!</td><td>!} [+ dvp_r +]% {!</td><td>!} [+ dvp_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #B8996F;">**WP**</span>: {!</td><td>!} [+ wp_r +]% {!</td><td>!} [+ wp_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #006400;">**CNBLP**</span>: {!</td><td>!} [+ cnblp_r +] % {!</td><td>!} [+ cnblp_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #3E88B3;">**DNVP**</span>: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ dnvp_seats +] {!</td></tr>!}
+
+{!<tr><td>!}Opposed{!</td><td>!} ([+ bruning_opposed_percentage +]%) {!</td><td>!} ([+ bruning_opposed +]/500) {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #700000;">**KPD**</span>: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ kpd_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #7A3C00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ nsdap_seats +] {!</td></tr>!}#
+
+[? if dnf_formed : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} ?]
+
+{!</table>!}
 
 @dvp
 subtitle: Neither workers nor employers will be entirely satisfied or dissatisfied. [? if in_grand_coalition and dvp_relation < 30: The DVP will likely consider the compromise unacceptable. ?][? if in_grand_coalition and dvp_relation >= 30: The DVP might grudgingly accept the compromise for now. ?]
 view-if: dvp_support = 0
 on-arrival: dvp_support += 1; bruning_support += dvp_seats; bruning_support_percentage += dvp_r
-go-to: bruning_vote_of_no_confidence_2.convince
 
 Neither side is entirely satisfied by our compromise solution. Many of the workers and unemployed see this as a betrayal, although we present it as the successful aversion of a much worse alternative. [? if in_grand_coalition: Meanwhile, the DVP is aghast at the prospect of raising any taxes on businesses at all. ?]
+
+{!<table>!} 
+{!<tr><td>!}Party{!</td><td>!}Vote Share{!</td><td>!}Reichstag Seats{!</td></tr>!}
+
+{!<tr><td>!}In Favor{!</td><td>!} ([+ bruning_support_percentage +]%) {!</td><td>!} ([+ bruning_support +]/500) {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #000000;">**Z**</span> : {!</td><td>!} [+ z_minus_bvp_r +]% {!</td><td>!} [+ z_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #69A2BE;">**BVP**</span>: {!</td><td>!} 3% {!</td><td>!} 15 {!</td></tr>!}
+
+[? if spd_support : {!<tr><td>!} <span style="color: #c00000;">**SPD**</span>: {!</td><td>!} [+ spd_r +]% {!</td><td>!} [+ spd_seats +] {!</td></tr>!} ?]
+
+[? if ddp_support : {!<tr><td>!} <span style="color: #D3C24D;">**[+ ddp_name +]**</span>: {!</td><td>!} [+ ddp_r +]% {!</td><td>!} [+ ddp_seats +] {!</td></tr>!} ?]
+
+[? if dvp_support : {!<tr><td>!} <span style="color: #C0A054;">**DVP**</span>: {!</td><td>!} [+ dvp_r +]% {!</td><td>!} [+ dvp_seats +] {!</td></tr>!} ?]
+ 
+[? if wp_support : {!<tr><td>!} <span style="color: #B8996F;">**WP**</span>: {!</td><td>!} [+ wp_r +]% {!</td><td>!} [+ wp_seats +] {!</td></tr>!} ?]
+
+[? if cnblp_support : {!<tr><td>!} <span style="color: #006400;">**CNBLP**</span>: {!</td><td>!} [+ cnblp_r +] % {!</td><td>!} [+ cnblp_seats +] {!</td></tr>!} ?]
+
+[? if dnvp_support : {!<tr><td>!} <span style="color: #3E88B3;">**DNVP**</span>: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ dnvp_seats +] {!</td></tr>!} ?]
+
+{!<tr><td>!}Undecided{!</td><td>!} ([+ bruning_undecided_percentage +]%) {!</td><td>!} ([+ bruning_undecided +]/500) {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #c00000;">**SPD**</span>: {!</td><td>!} [+ spd_r +]% {!</td><td>!} [+ spd_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #D3C24D;">**[+ ddp_name +]**</span>: {!</td><td>!} [+ ddp_r +]% {!</td><td>!} [+ ddp_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #C0A054;">**DVP**</span>: {!</td><td>!} [+ dvp_r +]% {!</td><td>!} [+ dvp_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #B8996F;">**WP**</span>: {!</td><td>!} [+ wp_r +]% {!</td><td>!} [+ wp_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #006400;">**CNBLP**</span>: {!</td><td>!} [+ cnblp_r +] % {!</td><td>!} [+ cnblp_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #3E88B3;">**DNVP**</span>: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ dnvp_seats +] {!</td></tr>!}
+
+{!<tr><td>!}Opposed{!</td><td>!} ([+ bruning_opposed_percentage +]%) {!</td><td>!} ([+ bruning_opposed +]/500) {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #700000;">**KPD**</span>: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ kpd_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #7A3C00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ nsdap_seats +] {!</td></tr>!}#
+
+[? if dnf_formed : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} ?]
+
+{!</table>!}
 
 @wp
 subtitle: The workers will regard this as a betrayal.
 view-if: wp_support = 0
 on-arrival: wp_support += 1; bruning_support += wp_seats; bruning_support_percentage += wp_r
-go-to: bruning_vote_of_no_confidence_2.convince
 
 For budgetary reasons, we have cut unemployment insurance benefits. Unfortunately, our reasons for fiscal discipline are alien to the workers. They are furious at our betrayal, as are a good portion of our membership throughout the factions. Our loss is the KPD's gain, and even the NSDAP, those lapdogs of the bourgeoisie, have joined in criticizing us for our austerity.
+
+{!<table>!} 
+{!<tr><td>!}Party{!</td><td>!}Vote Share{!</td><td>!}Reichstag Seats{!</td></tr>!}
+
+{!<tr><td>!}In Favor{!</td><td>!} ([+ bruning_support_percentage +]%) {!</td><td>!} ([+ bruning_support +]/500) {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #000000;">**Z**</span> : {!</td><td>!} [+ z_minus_bvp_r +]% {!</td><td>!} [+ z_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #69A2BE;">**BVP**</span>: {!</td><td>!} 3% {!</td><td>!} 15 {!</td></tr>!}
+
+[? if spd_support : {!<tr><td>!} <span style="color: #c00000;">**SPD**</span>: {!</td><td>!} [+ spd_r +]% {!</td><td>!} [+ spd_seats +] {!</td></tr>!} ?]
+
+[? if ddp_support : {!<tr><td>!} <span style="color: #D3C24D;">**[+ ddp_name +]**</span>: {!</td><td>!} [+ ddp_r +]% {!</td><td>!} [+ ddp_seats +] {!</td></tr>!} ?]
+
+[? if dvp_support : {!<tr><td>!} <span style="color: #C0A054;">**DVP**</span>: {!</td><td>!} [+ dvp_r +]% {!</td><td>!} [+ dvp_seats +] {!</td></tr>!} ?]
+ 
+[? if wp_support : {!<tr><td>!} <span style="color: #B8996F;">**WP**</span>: {!</td><td>!} [+ wp_r +]% {!</td><td>!} [+ wp_seats +] {!</td></tr>!} ?]
+
+[? if cnblp_support : {!<tr><td>!} <span style="color: #006400;">**CNBLP**</span>: {!</td><td>!} [+ cnblp_r +] % {!</td><td>!} [+ cnblp_seats +] {!</td></tr>!} ?]
+
+[? if dnvp_support : {!<tr><td>!} <span style="color: #3E88B3;">**DNVP**</span>: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ dnvp_seats +] {!</td></tr>!} ?]
+
+{!<tr><td>!}Undecided{!</td><td>!} ([+ bruning_undecided_percentage +]%) {!</td><td>!} ([+ bruning_undecided +]/500) {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #c00000;">**SPD**</span>: {!</td><td>!} [+ spd_r +]% {!</td><td>!} [+ spd_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #D3C24D;">**[+ ddp_name +]**</span>: {!</td><td>!} [+ ddp_r +]% {!</td><td>!} [+ ddp_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #C0A054;">**DVP**</span>: {!</td><td>!} [+ dvp_r +]% {!</td><td>!} [+ dvp_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #B8996F;">**WP**</span>: {!</td><td>!} [+ wp_r +]% {!</td><td>!} [+ wp_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #006400;">**CNBLP**</span>: {!</td><td>!} [+ cnblp_r +] % {!</td><td>!} [+ cnblp_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #3E88B3;">**DNVP**</span>: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ dnvp_seats +] {!</td></tr>!}
+
+{!<tr><td>!}Opposed{!</td><td>!} ([+ bruning_opposed_percentage +]%) {!</td><td>!} ([+ bruning_opposed +]/500) {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #700000;">**KPD**</span>: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ kpd_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #7A3C00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ nsdap_seats +] {!</td></tr>!}#
+
+[? if dnf_formed : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} ?]
+
+{!</table>!}
 
 @cnblp
 subtitle: Employers are strongly against this. 
 view-if: cnblp_support = 0
 on-arrival: cnblp_support += 1; bruning_support += cnblp_seats; bruning_support_percentage += cnblp_r
-go-to: bruning_vote_of_no_confidence_2.convince
 
 We have increased employer contributions to the unemployment insurance fund, allowing the program to continue without hurting workers and the unemployed. Perhaps understandably, the capitalists and their political parties are furious, while our base in the unions and among the unemployed are pleased.
+
+{!<table>!} 
+{!<tr><td>!}Party{!</td><td>!}Vote Share{!</td><td>!}Reichstag Seats{!</td></tr>!}
+
+{!<tr><td>!}In Favor{!</td><td>!} ([+ bruning_support_percentage +]%) {!</td><td>!} ([+ bruning_support +]/500) {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #000000;">**Z**</span> : {!</td><td>!} [+ z_minus_bvp_r +]% {!</td><td>!} [+ z_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #69A2BE;">**BVP**</span>: {!</td><td>!} 3% {!</td><td>!} 15 {!</td></tr>!}
+
+[? if spd_support : {!<tr><td>!} <span style="color: #c00000;">**SPD**</span>: {!</td><td>!} [+ spd_r +]% {!</td><td>!} [+ spd_seats +] {!</td></tr>!} ?]
+
+[? if ddp_support : {!<tr><td>!} <span style="color: #D3C24D;">**[+ ddp_name +]**</span>: {!</td><td>!} [+ ddp_r +]% {!</td><td>!} [+ ddp_seats +] {!</td></tr>!} ?]
+
+[? if dvp_support : {!<tr><td>!} <span style="color: #C0A054;">**DVP**</span>: {!</td><td>!} [+ dvp_r +]% {!</td><td>!} [+ dvp_seats +] {!</td></tr>!} ?]
+ 
+[? if wp_support : {!<tr><td>!} <span style="color: #B8996F;">**WP**</span>: {!</td><td>!} [+ wp_r +]% {!</td><td>!} [+ wp_seats +] {!</td></tr>!} ?]
+
+[? if cnblp_support : {!<tr><td>!} <span style="color: #006400;">**CNBLP**</span>: {!</td><td>!} [+ cnblp_r +] % {!</td><td>!} [+ cnblp_seats +] {!</td></tr>!} ?]
+
+[? if dnvp_support : {!<tr><td>!} <span style="color: #3E88B3;">**DNVP**</span>: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ dnvp_seats +] {!</td></tr>!} ?]
+
+{!<tr><td>!}Undecided{!</td><td>!} ([+ bruning_undecided_percentage +]%) {!</td><td>!} ([+ bruning_undecided +]/500) {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #c00000;">**SPD**</span>: {!</td><td>!} [+ spd_r +]% {!</td><td>!} [+ spd_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #D3C24D;">**[+ ddp_name +]**</span>: {!</td><td>!} [+ ddp_r +]% {!</td><td>!} [+ ddp_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #C0A054;">**DVP**</span>: {!</td><td>!} [+ dvp_r +]% {!</td><td>!} [+ dvp_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #B8996F;">**WP**</span>: {!</td><td>!} [+ wp_r +]% {!</td><td>!} [+ wp_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #006400;">**CNBLP**</span>: {!</td><td>!} [+ cnblp_r +] % {!</td><td>!} [+ cnblp_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #3E88B3;">**DNVP**</span>: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ dnvp_seats +] {!</td></tr>!}
+
+{!<tr><td>!}Opposed{!</td><td>!} ([+ bruning_opposed_percentage +]%) {!</td><td>!} ([+ bruning_opposed +]/500) {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #700000;">**KPD**</span>: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ kpd_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #7A3C00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ nsdap_seats +] {!</td></tr>!}#
+
+[? if dnf_formed : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} ?]
+
+{!</table>!}
 
 @dnvp
 subtitle: Neither workers nor employers will be entirely satisfied or dissatisfied. [? if in_grand_coalition and dvp_relation < 30: The DVP will likely consider the compromise unacceptable. ?][? if in_grand_coalition and dvp_relation >= 30: The DVP might grudgingly accept the compromise for now. ?]
 view-if: dnvp_support = 0
 on-arrival: dnvp_support += 1; bruning_support += dnvp_seats; bruning_support_percentage += dnvp_r
-go-to: bruning_vote_of_no_confidence_2.convince
 
 Neither side is entirely satisfied by our compromise solution. Many of the workers and unemployed see this as a betrayal, although we present it as the successful aversion of a much worse alternative. [? if in_grand_coalition: Meanwhile, the DVP is aghast at the prospect of raising any taxes on businesses at all. ?]
+
+{!<table>!} 
+{!<tr><td>!}Party{!</td><td>!}Vote Share{!</td><td>!}Reichstag Seats{!</td></tr>!}
+
+{!<tr><td>!}In Favor{!</td><td>!} ([+ bruning_support_percentage +]%) {!</td><td>!} ([+ bruning_support +]/500) {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #000000;">**Z**</span> : {!</td><td>!} [+ z_minus_bvp_r +]% {!</td><td>!} [+ z_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #69A2BE;">**BVP**</span>: {!</td><td>!} 3% {!</td><td>!} 15 {!</td></tr>!}
+
+[? if spd_support : {!<tr><td>!} <span style="color: #c00000;">**SPD**</span>: {!</td><td>!} [+ spd_r +]% {!</td><td>!} [+ spd_seats +] {!</td></tr>!} ?]
+
+[? if ddp_support : {!<tr><td>!} <span style="color: #D3C24D;">**[+ ddp_name +]**</span>: {!</td><td>!} [+ ddp_r +]% {!</td><td>!} [+ ddp_seats +] {!</td></tr>!} ?]
+
+[? if dvp_support : {!<tr><td>!} <span style="color: #C0A054;">**DVP**</span>: {!</td><td>!} [+ dvp_r +]% {!</td><td>!} [+ dvp_seats +] {!</td></tr>!} ?]
+ 
+[? if wp_support : {!<tr><td>!} <span style="color: #B8996F;">**WP**</span>: {!</td><td>!} [+ wp_r +]% {!</td><td>!} [+ wp_seats +] {!</td></tr>!} ?]
+
+[? if cnblp_support : {!<tr><td>!} <span style="color: #006400;">**CNBLP**</span>: {!</td><td>!} [+ cnblp_r +] % {!</td><td>!} [+ cnblp_seats +] {!</td></tr>!} ?]
+
+[? if dnvp_support : {!<tr><td>!} <span style="color: #3E88B3;">**DNVP**</span>: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ dnvp_seats +] {!</td></tr>!} ?]
+
+{!<tr><td>!}Undecided{!</td><td>!} ([+ bruning_undecided_percentage +]%) {!</td><td>!} ([+ bruning_undecided +]/500) {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #c00000;">**SPD**</span>: {!</td><td>!} [+ spd_r +]% {!</td><td>!} [+ spd_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #D3C24D;">**[+ ddp_name +]**</span>: {!</td><td>!} [+ ddp_r +]% {!</td><td>!} [+ ddp_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #C0A054;">**DVP**</span>: {!</td><td>!} [+ dvp_r +]% {!</td><td>!} [+ dvp_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #B8996F;">**WP**</span>: {!</td><td>!} [+ wp_r +]% {!</td><td>!} [+ wp_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #006400;">**CNBLP**</span>: {!</td><td>!} [+ cnblp_r +] % {!</td><td>!} [+ cnblp_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #3E88B3;">**DNVP**</span>: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ dnvp_seats +] {!</td></tr>!}
+
+{!<tr><td>!}Opposed{!</td><td>!} ([+ bruning_opposed_percentage +]%) {!</td><td>!} ([+ bruning_opposed +]/500) {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #700000;">**KPD**</span>: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ kpd_seats +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #7A3C00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ nsdap_seats +] {!</td></tr>!}#
+
+[? if dnf_formed : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} ?]
+
+{!</table>!}
 
 @yay
 subtitle: We shall proceed 
