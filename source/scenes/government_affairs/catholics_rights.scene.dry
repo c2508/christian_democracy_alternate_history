@@ -4,15 +4,13 @@ is-card: true
 tags: govt_affairs, cabinet
 view-if: z_in_government = 1 and womens_rights_timer = 0 and chancellor_party == "Z"
 on-arrival: womens_rights_timer += 10; month_actions += 1
-card-image: img/portraits/PfülfAntonie.jpg
+card-image: img/portraits/KaasLudwig.jpg
 frequency: 50
 max-visits: 6
 
 = Catholic Rights
 
-According to the Constitution, Catholics are equal to Protestants, but this is not followed in practice. Women in the workforce are not paid equally for the same work, in addition to often being pushed out of employment after marriage. Men are still favored in marriage and family policy, and there are restrictions on women's rights in many other domains. And that is not to mention the overwhelming patriarchal culture present in Germany.
-
-For better or for worse, the Socialists stand virtually alone in supporting increased rights for women, and even within the party, the leadership does not consider it a priority. [? if spd_r < 50 : Unfortunately, women still disproportionately support the bourgeois parties. ?]
+Despite the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Constitution guarenteeing freedom of religion, many in our party cannot forget the Kulturkampf of the 1870s. As such, we must guarentee the safety of Catholics through constitutional means during our time in government.
 
 - @equal: Enforce equality of opportunity for Germans of all religions.
 - @pconcordat: Negotiate with Nuncio Pacelli regarding the Prussian Concordat.
@@ -27,10 +25,10 @@ subtitle: Ensure equal treatment for Jews and Catholics in the civil service
 on-arrival: dnvp_relation -= 3; catholics_z += 3*(1-dissent); nationalism -= 5; new_middle_z += 1
 max-visits: 3
 
-These policies strongly discourage discrimination on the basis of religion during the hiring process, enabling the entry of those from more diverse backgrounds to enter the traditionally reactionary bureaucracy. This has led to an influx of outsiders (Aussenseiter) in the civil service, with the right wing parties accusing us to turning the bureaucracy into a 'pork barrel institution'.
+These policies strongly discourage discrimination on the basis of religion during the hiring process, enabling the entry of those from more diverse backgrounds to enter the traditionally reactionary bureaucracy. This has led to an influx of Aussenseiter (outsiders) in the civil service, with the right wing parties accusing us to turning the bureaucracy into a 'pork barrel institution'.
 
 @pconcordat
-subtitle: The Prussian Concordat is an important conventioin in protecting the rights of Catholics throughout Prussia.
+subtitle: The Prussian Concordat is an important convention in protecting the rights of Catholics throughout Prussia and paves the way for a Reichskonkordat in the future.
 choose-if: z_in_prussia = 1
 unavailable_subtitle: The <span style="color: #000000;">**Center Party**</span> is not in Prussia.
 on-arrival: prussian_concordat_progress += 1
