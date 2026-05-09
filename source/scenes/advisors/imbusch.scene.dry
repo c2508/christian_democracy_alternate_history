@@ -11,7 +11,7 @@ Imbusch is the first Chairman of the Christians’ Miners Association and first-
 
 - @democratic_rally
 - @union_unity
-- @republicanising_union
+- @labor_opposition
 - @root: Return to main
 
 @democratic_rally
@@ -32,11 +32,12 @@ on-arrival: advisor_action_timer = 6; left_labor_dissent -= 5; left_labor_streng
 
 We have reduced tensions with the labor factions, and increased their strength within the party.
 
-@republicanising_union
-title: Republicanising the Unions
-subtitle: Make the unions more supportive of democracy
+@union_opposition
+title: Defending Austerity
+subtitle: Convince the labor unions to accept Bruning's salary cuts
+view-if: rubicon_crossed = 1
 choose-if: advisor_action_timer <= 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; republican_union += 1; new_middle_dvp -= 2; new_middle_z += 3*(1-dissent); left_labor_strength += 3; right_labor_strength -= 2; pro_republic += 2
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if labor_opposition < 10 : The labor unions are pleased with Bruning. ?]
+on-arrival: advisor_action_timer = 6; labor_opposition -= 10; 
 
-We have managed to persuade some union members to accept democracy.
+We have managed to soften the opposition of some union members towards Bruning's unpopular salary cuts
