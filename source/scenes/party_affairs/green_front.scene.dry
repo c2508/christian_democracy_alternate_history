@@ -9,15 +9,13 @@ tags: party_affairs,
 
 = The <span style="color: #0dba1e;">**Green Front**</span>
 
-The <span style="color: #0dba1e;">**Green Front**</span> is our new antifascist coordination front, consisting of the SPD, the trade unions, and the Reichsbanner. How should we use the Iron Front?
 
-[? if workers_spd < 45 or workers_spd < workers_nsdap or workers_spd < workers_kpd : Unfortunately, the Iron Front's effectiveness is dragged down by the SPD's unpopularity, as the SPD is no longer the dominant party among the workers. Many Reichsbanner members have left, and many workers are not interested. ?]
 
 - @dnvp: Improve our relations with the <span style="color: #3E88B3;">**DNVP**</span>
-- @influence: Root out those with <span style="color: #7A3C00;">**NSDAP**</span> sympathies within the <span style="color: #0dba1e;">**Green Front**</span>
+- @influence: Root out those with sympathies towards the <span style="color: #7A3C00;">**NSDAP**</span> within the <span style="color: #0dba1e;">**Green Front**</span>
 - @program: Start formulating the <span style="color: #0dba1e;">Green Front</span> program
 - @speedup: Organise more meetings to draft the <span style="color: #0dba1e;">Green Front</span> program
-- @antisemitism
+- @pacify: Reiterate our commitment to helping German farmers
 - @easy_discard
 
 @dnvp
@@ -29,7 +27,7 @@ The <span style="color: #385A38;">agrarians</span> within our party has reached 
 
 @influence
 subtitle: The radicalism of the <span style="color: #7A3C00;">**NSDAP**</span> and their propagation of the 'Blood and Soil' ideology has much appeal amongst some members of the <span style="color: #0dba1e;">**Green Front**</span>. We must strengthen the <span style="color: #000000;">**Center Party's**</span> and <span style="color: #3E88B3;">**DNVP**</span> influence in the <span style="color: #0dba1e;">**Green Front**</span>, lest the rural electorate turn to the demagogic <span style="color: #7A3C00;">**Nazis**</span> for a solution. 
-on-arrival: nsadp_rural -= 3; 
+on-arrival: nsadp_rural -= 3; nationalism -= 2;
 
 
 
@@ -48,10 +46,9 @@ on-arrival: green_front_program_timer -= 2;
 
 The program will be available sooner.
 
-@antisemitism
+@pacify
 title: Rally against antisemitism and in defense of Jewish Germans.
-view-if: confronting_antisemitism > 1
-on-arrival: nationalism -= 4*(1-dissent); pro_republic += 3*(1-dissent); confronting_antisemitism += 1; workers_nsdap -= 4*(1-dissent); unemployed_nsdap -= 4*(1-dissent);
+view-if: rubicon_crossed = 1 and agriculture_opposition > 10
+on-arrival: agriculture_opposition -= 10
 
-# TODO
-The Nazis and other far-right political movements are increasingly turning their hatred against the Jewish community of Germany. The Iron Front rallies in defense of individual Jews and the broader community against violence.
+We defend Bruning's unpopular policies and reassure elements of the <span style="color: #0dba1e;">**Green Front**</span> of our continued focus on agricultural issues. 
