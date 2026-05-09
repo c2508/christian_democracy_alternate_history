@@ -119,6 +119,7 @@ Q.social_catholic_coalition_baden = parseFloat((Q.spd_baden + Q.z_baden).toFixed
 
 Q.bourgeois_coalition_baden = parseFloat((Q.ddp_baden + Q.z_baden + Q.dvp_baden + Q.other_baden + Q.kvp_baden).toFixed(1));
 Q.bourgeoise_coalition_baden = parseFloat((Q.z_baden + Q.dvp_baden).toFixed(1));
+Q.christian_coalition_baden = parseFloat((Q.z_baden + Q.dnvp_baden).toFixed(1));
 if (Q.dnvp_ideology === "Radical") Q.far_right_coalition_baden = parseFloat((Q.dnvp_baden + Q.nsdap_baden).toFixed(1));
 if (Q.dnf_formed) Q.far_right_coalition_baden = parseFloat((Q.dnf_baden + Q.nsdap_baden).toFixed(1));
 
@@ -152,6 +153,7 @@ Q.in_grand_coalition_baden = 0;
 Q.in_bourgeois_coalition_baden = 0;
 Q.in_bourgeoise_coalition_baden = 0;
 Q.in_far_right_coalition_baden = 0;
+Q.in_christian_coalition = 0;
 !}
 on-display: {!
 data = []
@@ -314,6 +316,8 @@ Bourgeois Coalition (<span style="color: #000000;">**Z**</span> + <span style="c
 
 Bourgeois Coalition (<span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span> ?] + <span style="color: #C0A054;">**[+ dvp_name +]**</span> [? if kvp_formed: + <span style="color: #455B95;">**KVP**</span>?] + <span style="color: #909090;">**Others**</span>): [+ bourgeois_coalition_baden +]%
 
+Christian Coalition (<span style="color: #000000;">**Z**</span> + <span style="color: #3E88B3;">**DNVP**</span>): [+ christian_coalition_baden +]%
+
 Far-Right Coalition (<span style="color: #954B00;">**NSDAP**</span> + [? if dnvp_ideology = "Radical": <span style="color: #3F7BC1;">**DNVP**</span>?][? if dnf_formed: <span style="color: #003755;">**DNF**</span>?]): [+ far_right_coalition_baden +]%
 
 There are some potential coalition arrangements.
@@ -326,6 +330,7 @@ There are some potential coalition arrangements.
 - @grand_coalition_baden
 - @bourgeois_coalition_baden
 - @bourgeoise_coalition_baden
+- @christian_coalition_baden
 - @far_right_coalition_baden
 - @no_majority
 
@@ -376,6 +381,18 @@ subtitle: <span style="color: #000000;">**Z**</span> + <span style="color: #C0A0
 on-arrival: in_bourgeoise_coalition_baden = 1; z_in_baden = 1;
 
 A Bourgeois Coalition is formed.
+
+- @baden_sp
+
+@christian_coalition_baden
+title: We can form a Christian Coalition.
+view-if: christian_coalition_baden >= 50
+choose-if: dnvp_relation >= 65
+unavailable-subtitle: The Baden Chapter is too left for this.
+subtitle: <span style="color: #000000;">**Z**</span> + <span style="color: #3E88B3;">**DNVP**</span> ([+ christian_coalition_baden +]%)
+on-arrival: in_christian_coalition_baden = 1; z_in_baden = 1;
+
+A Christian Coalition is formed.
 
 - @baden_sp
 
