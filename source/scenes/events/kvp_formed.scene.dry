@@ -1,0 +1,43 @@
+on-arrival: {!
+
+Q.kvp_formed = 1;
+Q.parties.push('kvp');
+Q.parties_graph.push('kvp');
+
+Q.workers_kvp = 5;
+Q.workers_dnvp -= 3
+Q.workers_other -= 2
+
+Q.new_middle_kvp = 10;
+Q.new_middle_dnvp -= 4;
+Q.new_middle_other -= 6;
+
+Q.old_middle_kvp = 12;
+Q.old_middle_dnvp -= 4;
+Q.old_middle_other -= 8;
+
+Q.rural_kvp = 15;
+Q.rural_dnvp -= 5;
+Q.rural_other -= 10;
+
+Q.unemployed_kvp = 0;
+
+Q.catholics_kvp = 4;
+Q.catholics_dnvp -= 2;
+Q.catholics_other -= 2;
+
+Q.kvp_r = Math.round((Q.dnvp_r / 2 + 1) * 10) / 10;
+Q.dnvp_r = Math.round((Q.dnvp_r - Q.kvp_r) * 10) / 10;
+Q.kvp_r_prussia = Math.round((Q.dnvp_r_prussia / 2 + 2) * 10) / 10;
+Q.dnvp_r_prussia = Math.round((Q.dnvp_r_prussia - Q.kvp_r_prussia) * 10) / 10;
+Q.kvp_relation = 55;
+
+Q.old_workers_kvp_display = 0;
+Q.old_new_middle_kvp_display = 0;
+Q.old_old_middle_kvp_display = 0;
+Q.old_rural_kvp_display = 0;
+Q.old_unemployed_kvp_display = 0;
+Q.old_catholics_kvp_display = 0;
+
+
+!}
