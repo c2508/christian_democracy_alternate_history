@@ -43,7 +43,7 @@ Making the tax system more progressive is popular among our base, but it upsets 
 subtitle: +2 budget
 unavailable-subtitle: Tax rates are already too high.
 choose-if: upper_tax_rates <= 5
-on-arrival: upper_tax_rates += 1; capital_strike_progress += 1; capital_strike_progress += 1 if upper_tax_rates > 1; capital_strike_progress += 1 if upper_tax_rates > 3; workers_z += 4*(1-dissent); old_middle_z -= 4; new_middle_z -= 4; coalition_dissent += 1 if in_grand_coalition; coalition_dissent += 1 if capital_strike_progress >= 5; budget += 2; dvp_relation -= 4; unemployed += 1; finance_goal_completed += 1; inflation -= 0.6; economic_growth -= 0.4; new_middle_z -= 2 if upper_tax_rates > 1; old_middle_z -= 2 if upper_tax_rates > 1; left_dissent -= 3; labor_dissent -= 3
+on-arrival: upper_tax_rates += 1; capital_strike_progress += 1; capital_strike_progress += 1 if upper_tax_rates > 1; capital_strike_progress += 1 if upper_tax_rates > 3; old_middle_z -= 2; new_middle_z -= 2; coalition_dissent += 1 if in_grand_coalition; coalition_dissent += 1 if capital_strike_progress >= 5; budget += 2; dvp_relation -= 4; unemployed += 1; finance_goal_completed += 1; inflation -= 0.6; economic_growth -= 0.4; new_middle_z -= 2 if upper_tax_rates > 1; old_middle_z -= 2 if upper_tax_rates > 1; left_dissent -= 3; labor_dissent -= 3
 
 Raising taxes on the rich is popular among our base, but it alienates the bourgeoisie. Increasing taxes also decreases economic demand, which may lead to more unemployment.
 
