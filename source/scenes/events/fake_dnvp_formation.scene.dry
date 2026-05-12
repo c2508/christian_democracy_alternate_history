@@ -1,1 +1,6 @@
-
+title: The <span style="color: #8ED8E4;">**CSVD**</span>, <span style="color: #006400;">**CNBLP**</span> and <span style="color: #455B95;">**KVP**</span have merged.
+subtitle: A consolidation of the anti Hugenberg elements on the right
+view-if: year >= 1928
+max-visits: 1
+tags: event
+priority: 3
