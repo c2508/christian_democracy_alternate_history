@@ -16,9 +16,8 @@ Q.old_middle_csvd = 5;
 Q.old_middle_dnvp -= 2;
 Q.old_middle_other -= 3;
 
-Q.rural_csvd = 15;
-Q.rural_dnvp -= 5;
-Q.rural_other -= 10;
+Q.rural_csvd = 0;
+
 
 Q.unemployed_csvd = 0;
 
