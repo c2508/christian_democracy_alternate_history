@@ -8,13 +8,13 @@ Q.workers_csvd = 5;
 Q.workers_dnvp -= 3
 Q.workers_other -= 2
 
-Q.new_middle_csvd = 10;
-Q.new_middle_dnvp -= 4;
-Q.new_middle_other -= 6;
+Q.new_middle_csvd = 15;
+Q.new_middle_dnvp -= 5;
+Q.new_middle_other -= 10;
 
-Q.old_middle_csvd = 12;
-Q.old_middle_dnvp -= 4;
-Q.old_middle_other -= 8;
+Q.old_middle_csvd = 5;
+Q.old_middle_dnvp -= 2;
+Q.old_middle_other -= 3;
 
 Q.rural_csvd = 15;
 Q.rural_dnvp -= 5;
@@ -22,14 +22,8 @@ Q.rural_other -= 10;
 
 Q.unemployed_csvd = 0;
 
-Q.catholics_csvd = 4;
-Q.catholics_dnvp -= 2;
-Q.catholics_other -= 2;
+Q.catholics_csvd = 0;
 
-Q.csvd_r = Math.round((Q.dnvp_r / 2 + 1) * 10) / 10;
-Q.dnvp_r = Math.round((Q.dnvp_r - Q.csvd_r) * 10) / 10;
-Q.csvd_r_prussia = Math.round((Q.dnvp_r_prussia / 2 + 2) * 10) / 10;
-Q.dnvp_r_prussia = Math.round((Q.dnvp_r_prussia - Q.csvd_r_prussia) * 10) / 10;
 Q.csvd_relation = 55;
 
 Q.old_workers_csvd_display = 0;
