@@ -138,7 +138,6 @@ if (Q.year == 1928) {
         dnvp: 1.2,
         nsdap: 0.66,
         other: 0.88,
-        kvp: 1.2,
         dnf: 0.65
     };
 }
