@@ -32,5 +32,11 @@ Q.old_rural_csvd_display = 0;
 Q.old_unemployed_csvd_display = 0;
 Q.old_catholics_csvd_display = 0;
 
-
+Q.csvd_r = 0;
+Q.old_csvd_r = 0;
+for (var record of Q.election_records) {
+    record['csvd'] = 0;
+}
+for (var record of Q.party_support_records) {
+    record['csvd'] = 0;
 !}
