@@ -1,5 +1,5 @@
 title: <span style="color: #455B95;">**KVP**</span> Formed
-subtitle: A New Party forms on the right
+subtitle: A new party forms on the right
 view-if: year = 1930 and month = 7 and dnvp_leader = "Hugenberg"
 max-visits: 1
 tags: event
