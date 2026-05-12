@@ -54,6 +54,9 @@ if (Q.year == 1928) {
         lvp: 0.97,
         z: 1.02,
         dvp: 1.0,
+        cnblp: 2.34
+        csvd: 1.11,
+        kvp: 1.2,
         dnvp: 1.2,
         nsdap: 0.66,
         other: 0.88,
@@ -122,18 +125,21 @@ if (Q.year == 1928) {
     };
 } else if (Q.year >= 1932) {
     var adjustment_factors = {
-        spd: 0.95,
-        sapd: 1.5,
-        kpd: 1.0,
+        spd: 0.98,
+        sapd: 0.6,
+        kpd: 1.1,
         ddp: 0.95,
-        lvp: 1.0,
+        lvp: 0.97,
         z: 1.02,
         dvp: 1.0,
+        cnblp: 2.34
+        csvd: 1.11,
+        kvp: 1.2,
         dnvp: 1.2,
-        nsdap: 1.0,
-        other: 0.65,
-        kvp: 0.8,
-        dnf: 1.0
+        nsdap: 0.66,
+        other: 0.88,
+        kvp: 1.2,
+        dnf: 0.65
     };
 }
 
@@ -675,8 +681,23 @@ if (Q.other_r_prussia) {
         "seats": Math.round(Q.other_r_prussia * Q.landtag_size),
     });
 }
-
-if (Q.kvp_formed && Q.kvp_r_prussia && !Q.dnvp_dvp_formed) {
+if (Q.cnblp_formed && Q.cnblp_r_prussia) {
+    data.push({
+        "id": "cnblp",
+        "legend": "CNBLP",
+        "name": "CNBLP",
+        "seats": Math.round(Q.cnblp_r_prussia * Q.landtag_size),
+    });
+}
+if (Q.csvd_formed && Q.csvd_r_prussia) {
+    data.push({
+        "id": "csvd",
+        "legend": "CSVD",
+        "name": "CSVD",
+        "seats": Math.round(Q.csvd_r_prussia * Q.landtag_size),
+    });
+}
+if (Q.kvp_formed && Q.kvp_r_prussia) {
     data.push({
         "id": "kvp",
         "legend": "KVP",
@@ -684,7 +705,6 @@ if (Q.kvp_formed && Q.kvp_r_prussia && !Q.dnvp_dvp_formed) {
         "seats": Math.round(Q.kvp_r_prussia * Q.landtag_size),
     });
 }
-
 if (Q.dnvp_dvp_formed) {
     data.push({
         "id": "fkp",
@@ -811,7 +831,11 @@ go-to: coalition_menu
 
 [? if not other_dnef: {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_votes_prussia +]% {!</td><td>!} [+ str_votes_change_other_prussia +] {!</td><td>!} [+ other_r_prussia +]% {!</td><td>!} [+ str_change_other_prussia +] {!</td></tr>!} ?]
 
-[? if kvp_formed and not cvp_kvp_formed and not kvp_dnef: {!<tr><td><div class="box" style='background-color:#0087DC'> </div> !}KVP: {!</td><td>!} [+ kvp_votes_prussia +]% {!</td><td>!} [+ str_votes_change_kvp_prussia +] {!</td><td>!} [+ kvp_r_prussia +]% {!</td><td>!} [+ str_change_kvp_prussia +] {!</td></tr>!} ?]
+[? if cnblp_formed : {!<tr><td><div class="box" style='background-color:#006400'> </div> !}CNBLP: {!</td><td>!} [+ cnblp_votes_prussia +]% {!</td><td>!} [+ str_votes_change_cnblp_prussia +] {!</td><td>!} [+ cnblp_r_prussia +]% {!</td><td>!} [+ str_change_cnblp_prussia +] {!</td></tr>!} ?]
+
+[? if csvd_formed : {!<tr><td><div class="box" style='background-color:#8ED8E4'> </div> !}CSVD: {!</td><td>!} [+ csvd_votes_prussia +]% {!</td><td>!} [+ str_votes_change_csvd_prussia +] {!</td><td>!} [+ csvd_r_prussia +]% {!</td><td>!} [+ str_change_csvd_prussia +] {!</td></tr>!} ?]
+
+[? if kvp_formed : {!<tr><td><div class="box" style='background-color:#0087DC'> </div> !}KVP: {!</td><td>!} [+ kvp_votes_prussia +]% {!</td><td>!} [+ str_votes_change_kvp_prussia +] {!</td><td>!} [+ kvp_r_prussia +]% {!</td><td>!} [+ str_change_kvp_prussia +] {!</td></tr>!} ?]
 
 [? if not cvp_formed and not dnvp_dnef: {!<tr><td><div class="box" style='background-color:#3E88B3'> </div> !} DNVP: {!</td><td>!} [+ dnvp_votes_prussia +]% {!</td><td>!} [+ str_votes_change_dnvp_prussia +] {!</td><td>!} [+ dnvp_r_prussia +]% {!</td><td>!} [+ str_change_dnvp_prussia +] {!</td></tr>!}?]
 
