@@ -32,7 +32,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: right_strength += 8; right_dissent -= 4; resources -= 1; prussian_concordat_progress += 1; reichskonkordat_progress += 1 if prussian_concordat = 1
 
-Members of the Center Party have been sent to meet with the officals from the Holy See to discuss the possibility of a [? if prussian_concordat = 0 : Prussian Concordat ?][? if prussian_concordat = 1 : Reichskonkordat ?].
+Members of the <span style="color: #000000;">**Center Party**</span> have been sent to meet with the officals from the Holy See to discuss the possibility of a [? if prussian_concordat = 0 : Prussian Concordat ?][? if prussian_concordat = 1 : Reichskonkordat ?].
 
 @lon
 subtitle: -1 resources
@@ -40,7 +40,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; west_relation += 1; spd_relation += 3; ddp_relation += 3 
 
-The Western Powers are pleased with our commitment to the League of Nations and so are our Weimar coalition partners.
+The Western Powers are pleased with our commitment to the League of Nations and so are our <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> coalition partners.
 
 @america
 subtitle: -1 resources
