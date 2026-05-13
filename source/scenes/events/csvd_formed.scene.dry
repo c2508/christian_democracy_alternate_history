@@ -2,35 +2,19 @@ on-arrival: {!
 
 Q.csvd_formed = 1;
 Q.parties.push('csvd');
-Q.parties_graph.push('csvd');
 
-Q.workers_csvd = 5;
-Q.workers_dnvp -= 3
-Q.workers_other -= 2
-
-Q.new_middle_csvd = 15;
+Q.workers_csvd = 10;
+Q.workers_dnvp -= 6;
+Q.workers_others -= 4;
+Q.new_middle_csvd = 15; 
+Q.new_middle_dnvp -= 10;
 Q.new_middle_dnvp -= 5;
-Q.new_middle_other -= 10;
-
 Q.old_middle_csvd = 5;
-Q.old_middle_dnvp -= 2;
-Q.old_middle_other -= 3;
-
+Q.old_middle_dnvp -= 3;
+Q.old_middle_others -= 2;
 Q.rural_csvd = 0;
-
-
-Q.unemployed_csvd = 0;
-
-Q.catholics_csvd = 0;
-
-Q.csvd_relation = 55;
-
-Q.old_workers_csvd_display = 0;
-Q.old_new_middle_csvd_display = 0;
-Q.old_old_middle_csvd_display = 0;
-Q.old_rural_csvd_display = 0;
-Q.old_unemployed_csvd_display = 0;
-Q.old_catholics_csvd_display = 0;
+Q.catholics_csvd = 1;
+Q.unemployed_csvd = 1;
 
 Q.csvd_r = 0;
 Q.old_csvd_r = 0;
