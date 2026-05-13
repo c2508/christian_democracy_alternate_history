@@ -27,6 +27,6 @@ The <span style="color: #385A38;">agrarian</span>, industrialist, <span style="c
 
 @goodnews
 on-arrival: kvp_formed = 1
-go-to: dnf_formed
+go-to: kvp_formed
 
 The right has been considerably weakened, now is our chance to enact meaningful change without their disruption.
