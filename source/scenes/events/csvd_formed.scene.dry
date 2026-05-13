@@ -3,10 +3,10 @@ on-arrival: {!
 Q.csvd_formed = 1;
 Q.parties.push('csvd');
 
-Q.workers_csvd = 9;
-Q.workers_z -= 3; 
-Q.workers_dnvp -= 3;
-Q.workers_others -= 3;
+Q.workers_csvd = 6;
+Q.workers_z -= 2; 
+Q.workers_dnvp -= 2;
+Q.workers_others -= 2;
 Q.new_middle_csvd = 12; 
 Q.new_middle_dnvp -= 8;
 Q.new_middle_others -= 4;
