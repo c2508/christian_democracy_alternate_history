@@ -92,7 +92,7 @@ Composed primarily of <span style="color: #909090;">**special interest**</span> 
 - @dvp: Can we get the <span style="color: #C0A054;">**DVP**</span> to join Bruning's government?
 - @wp: Can we get the <span style="color: #B8996F;">**WP**</span> to join Bruning's government?
 - @cnblp: Can we get the <span style="color: #006400;">**CNBLP**</span> to join Bruning's government?
-- @csvc: Can we get the <span style="color: #8ED8E4;">**CSVD**</span> to join Bruning's government?
+- @csvd: Can we get the <span style="color: #8ED8E4;">**CSVD**</span> to join Bruning's government?
 - @kvp: Can we get the <span style="color: #455B95;">**KVP**</span> to join Bruning's government?
 - @dnvp: Can we get the <span style="color: #3E88B3;">**DNVP**</span> to join Bruning's government?
 - @yay: We have managed to gather enough support.
@@ -160,6 +160,7 @@ For budgetary reasons, we have cut unemployment insurance benefits. Unfortunatel
 [? if dnf_formed : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} ?]
 
 {!</table>!}
+
 @ddp
 subtitle: Employers are strongly against this. 
 view-if: ddp_support = 0
