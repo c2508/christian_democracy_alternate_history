@@ -1,6 +1,6 @@
 title: The Kassel Party Congress
 subtitle: Hugenburg continues his consolidation of power...
-view-if: year = 1929 and month = 11 and dnvp_party_leader = "Hugenburg"
+view-if: year = 1929 and month = 11 and dnvp_leader = "Hugenburg"
 max-visits: 1
 new-page: true
 face-image: img/Kollwitz_Weavers.jpg
