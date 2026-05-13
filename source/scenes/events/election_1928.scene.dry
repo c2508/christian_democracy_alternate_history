@@ -184,6 +184,9 @@ Q.bvp_seats = Math.round(3*5)
 Q.dvp_seats = Math.round(Q.dvp_r*5)
 Q.wp_seats = Math.round(Q.wp_r*5)
 Q.cnblp_seats = Math.round(Q.cnblp_r*5)
+Q.csvd_seats = Math.round(Q.csvd_r*5)
+Q.kvp_seats = Math.round(Q.kvp_r*5)
+Q.cnva_seats = Math.round(Q.cnva_r*5)
 Q.dnvp_seats = Math.round(Q.dnvp_r*5)
 Q.nsdap_seats = Math.round(Q.nsdap_r*5)
 Q.dnf_seats = Math.round(Q.dnf_r*5)
@@ -268,6 +271,18 @@ data = data.concat([
         "name": "CNBLP",
         "seats": Math.round(Q.cnblp_r*5),
     },
+   {
+        "id": "csvd",
+        "legend": "CSVD",
+        "name": "CSVD",
+        "seats": Math.round(Q.csvd_r*5),
+    },
+   {
+        "id": "kvp",
+        "legend": "KVP",
+        "name": "KVP",
+        "seats": Math.round(Q.kvp_r*5),
+    },
     {
         "id": "dnvp",
         "legend": "DNVP",
@@ -326,6 +341,10 @@ go-to: coalition_menu
 {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#006400'> </div> !} CNBLP: {!</td><td>!} [+ cnblp_r +] % {!</td><td>!} [+ str_change_cnblp +] {!</td></tr>!}
+
+[? if csvd_formed : {!<tr><td><div class="box" style='background-color:#8ED8E4'> </div> !} CSVD: {!</td><td>!} [+ csvd_r +] % {!</td><td>!} [+ str_change_csvd +] {!</td></tr>!} ?]
+
+[? if kvp_formed : {!<tr><td><div class="box" style='background-color:#006400'> </div> !} KVP: {!</td><td>!} [+ kvp_r +] % {!</td><td>!} [+ str_change_kvp +] {!</td></tr>!} ?]
 
 {!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} DNVP: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ str_change_dnvp +] {!</td></tr>!}
 
