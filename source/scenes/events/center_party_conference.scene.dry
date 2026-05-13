@@ -37,7 +37,7 @@ With the National Council's rejection of Stegerwald, the party's close relations
 
 
 @kaas
-view-if: not (spd_relation >= 67 and labor_strength >= right_strength and left_strength >= right_strength) and not (right_dissent < 15 and labor_dissent < 15 and labor_strength > 35)
+view-if: not (spd_relation >= 67 and labor_strength >= right_strength and left_strength >= right_strength) and not (right_dissent <= 15 and labor_dissent <= 15 and labor_strength >= 35)
 subtitle: The vote is deadlocked between Adam Stegerwald and Joseph Joos. 
 on-arrival: z_party_leader = "Kaas"; spd_relations -= 5; prussian_concordat_progress += 1; catholics_z += 4; dvp_right += 1
 face-image: img/portraits/KaasLudwig.jpg
