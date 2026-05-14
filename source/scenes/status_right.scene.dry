@@ -4,9 +4,9 @@ is-special: true
 
 = Status 
 
-President: 
+President: <span style="color: #808080;">Hindenburg</span> (<span style="color: #808080;">**I**</span>)
 
-Chancellor: 
+Chancellor: <span style="color: #000000;">Heinrich Bruning</span> (<span style="color: #000000;">**Z**</span>)
 
 Parties supporting the government: <span style="color: #000000;">**Z**</span>, <span style="color: #69A2BE;">**BVP**</span>
 
