@@ -197,6 +197,9 @@ Q.z_dominance = 15;
 Q.rb_unity = 55;
 Q.endorse_seen = 0; 
 Q.industrialist_funding = 1;
+Q.labor_opposition = 25;
+Q.agriculture_opposition = 30;
+Q.industrial_opposition = 35;
 
 
 Q.interior_police_strength = 50;
