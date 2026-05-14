@@ -81,9 +81,9 @@ Composed primarily of <span style="color: #909090;">**special interest**</span> 
 
 {!<tr><td>!} <span style="color: #006400;">**CNBLP**</span>: {!</td><td>!} [+ cnblp_r +] % {!</td><td>!} [+ cnblp_seats +] {!</td></tr>!}
 
-[? if csvd_formed : {!<tr><td>!} <span style="color: #8ED8E4;">**CSVD**</span>: {!</td><td>!} [+ csvd_r +] % {!</td><td>!} [+ csvd_seats +] {!</td></tr>!} ?]
+[? if csvd_formed and not csvd_support : {!<tr><td>!} <span style="color: #8ED8E4;">**CSVD**</span>: {!</td><td>!} [+ csvd_r +] % {!</td><td>!} [+ csvd_seats +] {!</td></tr>!} ?]
 
-[? if kvp_formed : {!<tr><td>!} <span style="color: #455B95;">**KVP**</span>: {!</td><td>!} [+ kvp_r +]% {!</td><td>!} [+ kvp_seats +] {!</td></tr>!} ?]
+[? if kvp_formed and not kvp_support : {!<tr><td>!} <span style="color: #455B95;">**KVP**</span>: {!</td><td>!} [+ kvp_r +]% {!</td><td>!} [+ kvp_seats +] {!</td></tr>!} ?]
 
 {!<tr><td>!} <span style="color: #3E88B3;">**DNVP**</span>: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ dnvp_seats +] {!</td></tr>!}
 
@@ -158,9 +158,9 @@ For budgetary reasons, we have cut unemployment insurance benefits. Unfortunatel
 
 {!<tr><td>!} <span style="color: #006400;">**CNBLP**</span>: {!</td><td>!} [+ cnblp_r +] % {!</td><td>!} [+ cnblp_seats +] {!</td></tr>!}
 
-[? if csvd_formed : {!<tr><td>!} <span style="color: #8ED8E4;">**CSVD**</span>: {!</td><td>!} [+ csvd_r +] % {!</td><td>!} [+ csvd_seats +] {!</td></tr>!} ?]
+[? if csvd_formed and not csvd_support : {!<tr><td>!} <span style="color: #8ED8E4;">**CSVD**</span>: {!</td><td>!} [+ csvd_r +] % {!</td><td>!} [+ csvd_seats +] {!</td></tr>!} ?]
 
-[? if kvp_formed : {!<tr><td>!} <span style="color: #455B95;">**KVP**</span>: {!</td><td>!} [+ kvp_r +]% {!</td><td>!} [+ kvp_seats +] {!</td></tr>!} ?]
+[? if kvp_formed and not kvp_support : {!<tr><td>!} <span style="color: #455B95;">**KVP**</span>: {!</td><td>!} [+ kvp_r +]% {!</td><td>!} [+ kvp_seats +] {!</td></tr>!} ?]
 
 {!<tr><td>!} <span style="color: #3E88B3;">**DNVP**</span>: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ dnvp_seats +] {!</td></tr>!}
 
@@ -219,9 +219,9 @@ We have increased employer contributions to the unemployment insurance fund, all
 
 {!<tr><td>!} <span style="color: #006400;">**CNBLP**</span>: {!</td><td>!} [+ cnblp_r +] % {!</td><td>!} [+ cnblp_seats +] {!</td></tr>!}
 
-[? if csvd_formed : {!<tr><td>!} <span style="color: #8ED8E4;">**CSVD**</span>: {!</td><td>!} [+ csvd_r +] % {!</td><td>!} [+ csvd_seats +] {!</td></tr>!} ?]
+[? if csvd_formed and not csvd_support : {!<tr><td>!} <span style="color: #8ED8E4;">**CSVD**</span>: {!</td><td>!} [+ csvd_r +] % {!</td><td>!} [+ csvd_seats +] {!</td></tr>!} ?]
 
-[? if kvp_formed : {!<tr><td>!} <span style="color: #455B95;">**KVP**</span>: {!</td><td>!} [+ kvp_r +]% {!</td><td>!} [+ kvp_seats +] {!</td></tr>!} ?]
+[? if kvp_formed and not kvp_support : {!<tr><td>!} <span style="color: #455B95;">**KVP**</span>: {!</td><td>!} [+ kvp_r +]% {!</td><td>!} [+ kvp_seats +] {!</td></tr>!} ?]
 
 {!<tr><td>!} <span style="color: #3E88B3;">**DNVP**</span>: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ dnvp_seats +] {!</td></tr>!}
 
@@ -280,9 +280,9 @@ Neither side is entirely satisfied by our compromise solution. Many of the worke
 
 {!<tr><td>!} <span style="color: #006400;">**CNBLP**</span>: {!</td><td>!} [+ cnblp_r +] % {!</td><td>!} [+ cnblp_seats +] {!</td></tr>!}
 
-[? if csvd_formed : {!<tr><td>!} <span style="color: #8ED8E4;">**CSVD**</span>: {!</td><td>!} [+ csvd_r +] % {!</td><td>!} [+ csvd_seats +] {!</td></tr>!} ?]
+[? if csvd_formed and not csvd_support : {!<tr><td>!} <span style="color: #8ED8E4;">**CSVD**</span>: {!</td><td>!} [+ csvd_r +] % {!</td><td>!} [+ csvd_seats +] {!</td></tr>!} ?]
 
-[? if kvp_formed : {!<tr><td>!} <span style="color: #455B95;">**KVP**</span>: {!</td><td>!} [+ kvp_r +]% {!</td><td>!} [+ kvp_seats +] {!</td></tr>!} ?]
+[? if kvp_formed and not kvp_support : {!<tr><td>!} <span style="color: #455B95;">**KVP**</span>: {!</td><td>!} [+ kvp_r +]% {!</td><td>!} [+ kvp_seats +] {!</td></tr>!} ?]
 
 {!<tr><td>!} <span style="color: #3E88B3;">**DNVP**</span>: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ dnvp_seats +] {!</td></tr>!}
 
@@ -341,9 +341,9 @@ For budgetary reasons, we have cut unemployment insurance benefits. Unfortunatel
 
 {!<tr><td>!} <span style="color: #006400;">**CNBLP**</span>: {!</td><td>!} [+ cnblp_r +] % {!</td><td>!} [+ cnblp_seats +] {!</td></tr>!}
 
-[? if csvd_formed : {!<tr><td>!} <span style="color: #8ED8E4;">**CSVD**</span>: {!</td><td>!} [+ csvd_r +] % {!</td><td>!} [+ csvd_seats +] {!</td></tr>!} ?]
+[? if csvd_formed and not csvd_support : {!<tr><td>!} <span style="color: #8ED8E4;">**CSVD**</span>: {!</td><td>!} [+ csvd_r +] % {!</td><td>!} [+ csvd_seats +] {!</td></tr>!} ?]
 
-[? if kvp_formed : {!<tr><td>!} <span style="color: #455B95;">**KVP**</span>: {!</td><td>!} [+ kvp_r +]% {!</td><td>!} [+ kvp_seats +] {!</td></tr>!} ?]
+[? if kvp_formed and not kvp_support : {!<tr><td>!} <span style="color: #455B95;">**KVP**</span>: {!</td><td>!} [+ kvp_r +]% {!</td><td>!} [+ kvp_seats +] {!</td></tr>!} ?]
 
 {!<tr><td>!} <span style="color: #3E88B3;">**DNVP**</span>: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ dnvp_seats +] {!</td></tr>!}
 
@@ -402,9 +402,9 @@ We have increased employer contributions to the unemployment insurance fund, all
 
 {!<tr><td>!} <span style="color: #006400;">**CNBLP**</span>: {!</td><td>!} [+ cnblp_r +] % {!</td><td>!} [+ cnblp_seats +] {!</td></tr>!}
 
-[? if csvd_formed : {!<tr><td>!} <span style="color: #8ED8E4;">**CSVD**</span>: {!</td><td>!} [+ csvd_r +] % {!</td><td>!} [+ csvd_seats +] {!</td></tr>!} ?]
+[? if csvd_formed and not csvd_support : {!<tr><td>!} <span style="color: #8ED8E4;">**CSVD**</span>: {!</td><td>!} [+ csvd_r +] % {!</td><td>!} [+ csvd_seats +] {!</td></tr>!} ?]
 
-[? if kvp_formed : {!<tr><td>!} <span style="color: #455B95;">**KVP**</span>: {!</td><td>!} [+ kvp_r +]% {!</td><td>!} [+ kvp_seats +] {!</td></tr>!} ?]
+[? if kvp_formed and not kvp_support : {!<tr><td>!} <span style="color: #455B95;">**KVP**</span>: {!</td><td>!} [+ kvp_r +]% {!</td><td>!} [+ kvp_seats +] {!</td></tr>!} ?]
 
 {!<tr><td>!} <span style="color: #3E88B3;">**DNVP**</span>: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ dnvp_seats +] {!</td></tr>!}
 
@@ -463,9 +463,9 @@ Neither side is entirely satisfied by our compromise solution. Many of the worke
 
 {!<tr><td>!} <span style="color: #006400;">**CNBLP**</span>: {!</td><td>!} [+ cnblp_r +] % {!</td><td>!} [+ cnblp_seats +] {!</td></tr>!}
 
-[? if csvd_formed : {!<tr><td>!} <span style="color: #8ED8E4;">**CSVD**</span>: {!</td><td>!} [+ csvd_r +] % {!</td><td>!} [+ csvd_seats +] {!</td></tr>!} ?]
+[? if csvd_formed and not csvd_support : {!<tr><td>!} <span style="color: #8ED8E4;">**CSVD**</span>: {!</td><td>!} [+ csvd_r +] % {!</td><td>!} [+ csvd_seats +] {!</td></tr>!} ?]
 
-[? if kvp_formed : {!<tr><td>!} <span style="color: #455B95;">**KVP**</span>: {!</td><td>!} [+ kvp_r +]% {!</td><td>!} [+ kvp_seats +] {!</td></tr>!} ?]
+[? if kvp_formed and not kvp_support : {!<tr><td>!} <span style="color: #455B95;">**KVP**</span>: {!</td><td>!} [+ kvp_r +]% {!</td><td>!} [+ kvp_seats +] {!</td></tr>!} ?]
 
 {!<tr><td>!} <span style="color: #3E88B3;">**DNVP**</span>: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ dnvp_seats +] {!</td></tr>!}
 
@@ -524,9 +524,9 @@ Neither side is entirely satisfied by our compromise solution. Many of the worke
 
 {!<tr><td>!} <span style="color: #006400;">**CNBLP**</span>: {!</td><td>!} [+ cnblp_r +] % {!</td><td>!} [+ cnblp_seats +] {!</td></tr>!}
 
-[? if csvd_formed : {!<tr><td>!} <span style="color: #8ED8E4;">**CSVD**</span>: {!</td><td>!} [+ csvd_r +] % {!</td><td>!} [+ csvd_seats +] {!</td></tr>!} ?]
+[? if csvd_formed and not csvd_support : {!<tr><td>!} <span style="color: #8ED8E4;">**CSVD**</span>: {!</td><td>!} [+ csvd_r +] % {!</td><td>!} [+ csvd_seats +] {!</td></tr>!} ?]
 
-[? if kvp_formed : {!<tr><td>!} <span style="color: #455B95;">**KVP**</span>: {!</td><td>!} [+ kvp_r +]% {!</td><td>!} [+ kvp_seats +] {!</td></tr>!} ?]
+[? if kvp_formed and not kvp_support : {!<tr><td>!} <span style="color: #455B95;">**KVP**</span>: {!</td><td>!} [+ kvp_r +]% {!</td><td>!} [+ kvp_seats +] {!</td></tr>!} ?]
 
 {!<tr><td>!} <span style="color: #3E88B3;">**DNVP**</span>: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ dnvp_seats +] {!</td></tr>!}
 
@@ -585,9 +585,9 @@ Neither side is entirely satisfied by our compromise solution. Many of the worke
 
 {!<tr><td>!} <span style="color: #006400;">**CNBLP**</span>: {!</td><td>!} [+ cnblp_r +] % {!</td><td>!} [+ cnblp_seats +] {!</td></tr>!}
 
-[? if csvd_formed : {!<tr><td>!} <span style="color: #8ED8E4;">**CSVD**</span>: {!</td><td>!} [+ csvd_r +] % {!</td><td>!} [+ csvd_seats +] {!</td></tr>!} ?]
+[? if csvd_formed and not csvd_support : {!<tr><td>!} <span style="color: #8ED8E4;">**CSVD**</span>: {!</td><td>!} [+ csvd_r +] % {!</td><td>!} [+ csvd_seats +] {!</td></tr>!} ?]
 
-[? if kvp_formed : {!<tr><td>!} <span style="color: #455B95;">**KVP**</span>: {!</td><td>!} [+ kvp_r +]% {!</td><td>!} [+ kvp_seats +] {!</td></tr>!} ?]
+[? if kvp_formed and not kvp_support : {!<tr><td>!} <span style="color: #455B95;">**KVP**</span>: {!</td><td>!} [+ kvp_r +]% {!</td><td>!} [+ kvp_seats +] {!</td></tr>!} ?]
 
 {!<tr><td>!} <span style="color: #3E88B3;">**DNVP**</span>: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ dnvp_seats +] {!</td></tr>!}
 
