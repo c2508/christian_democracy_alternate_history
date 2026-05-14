@@ -17,7 +17,6 @@ on-display: {!
     var contentDiv = document.querySelector("#page #mid_panel #content");
     contentDiv.appendChild(cardEl);
 !}
-new-page: true
 
 = The <span style="color: #3E88B3;">**DNVP**</span> Congress
 
