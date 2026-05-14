@@ -12,10 +12,10 @@ Bruning's Reichstag Mandate: ([+ bruning_support +]/500) ([+ bruning_support_per
 
 Parties supporting the government: <span style="color: #000000;">**Z**</span>, <span style="color: #69A2BE;">**BVP**</span>
 
-Labor opposition: [+ dissent_percent : labor_opposition +]
+Labor opposition: [+ labor_opposition : dissent +]
 
-Industrialist opposition: [+ dissent_percent : industrialist_opposition +]
+Industrialist opposition: [+ industrialist_opposition : dissent +]
 
-Agriculture opposition: [+ dissent_percent : agriculture_opposition +]
+Agriculture opposition: [+ agriculture_opposition : dissent +]
 
 
