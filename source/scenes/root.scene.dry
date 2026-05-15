@@ -322,12 +322,12 @@ Q.old_middle_other = 10;
 Q.new_middle_spd = 5;
 Q.new_middle_kpd = 1;
 Q.new_middle_z = 5;
-Q.new_middle_ddp= 30;
+Q.new_middle_ddp = 30;
 Q.new_middle_dvp = 25;
 Q.new_middle_wp = 20;
 Q.new_middle_dnvp = 10;
 Q.new_middle_nsdap = 5;
-Q.new_middle_other = 15;
+Q.new_middle_other = 10;
 
 Q.rural_spd = 10;
 Q.rural_kpd = 0;
@@ -340,7 +340,7 @@ Q.rural_nsdap = 5;
 Q.rural_other = 10;
 
 Q.unemployed_spd = 25;
-Q.unemployed_kpd = 55;
+Q.unemployed_kpd = 50;
 Q.unemployed_z = 1;
 Q.unemployed_ddp = 0;
 Q.unemployed_dvp = 0;
