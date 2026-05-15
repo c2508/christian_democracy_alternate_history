@@ -316,7 +316,7 @@ Q.old_middle_ddp = 5;
 Q.old_middle_dvp = 25;
 Q.old_middle_wp = 20;
 Q.old_middle_dnvp = 25;
-Q.old_middle_nsdap = 10;
+Q.old_middle_nsdap = 5;
 Q.old_middle_other = 10;
 
 Q.new_middle_spd = 5;
