@@ -155,6 +155,7 @@ Q.eckener_run = 0
 Q.bruning_run = 0
 Q.luther_run = 0
 Q.jarres_run = 0
+Q.hindenburg_run = 0
 Q.lettow_vorbeck_run = 0
 Q.westarp_run = 0
 Q.hugenburg_run = 0
@@ -165,7 +166,7 @@ Q.hitler_run = 0
 Q.young_plan_signatures = 0;
 
 // hmm... maybe we can play nice with Hindenburg???
-Q.hindenburg_relation = 25;
+Q.hindenburg_relation = 40;
 // whether or not hindenburg can dismiss the government.
 Q.hindenburg_enabled = 1;
 
@@ -568,7 +569,7 @@ Q.grand_coalition_failed = 0;
 // if the SPD is ruling as part of a minority government
 Q.in_minority_government = 0;
 // national unity governmet
-Q.hindenburg_relation = 40;
+
 
 // if you're in a coalition, this is an incremental counter for how many times dissent has happened from the right.
 Q.coalition_dissent = 0;
