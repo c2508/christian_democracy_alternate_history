@@ -1,6 +1,6 @@
 title: The Kassel Party Congress
 subtitle: Hugenburg continues his consolidation of power...
-view-if: year = 1929 and month = 11 and dnvp_leader = "Hugenberg"
+view-if: year = 1928 and month = 11 and dnvp_leader = "Hugenberg"
 max-visits: 1
 new-page: true
 face-image: img/Kollwitz_Weavers.jpg
@@ -20,8 +20,56 @@ on-display: {!
 
 = The <span style="color: #3E88B3;">**DNVP**</span> Congress
 
-  During the vote on the contentious ‘Freedom Law’ in the Reichstag, the dissidents around Treviranus have adhered to a previous agreement with Hugenburg and Westarp to abstain from voting altogether. Much to the dismay of Westarp, Hartwig, Hulser and Lambach have instead released a statement attacking Hugenburg’s actions as party chair and supporting Schiele in his opposition to the ‘Freedom Law’. In response, Hugenberg and his associates have overwhelmingly voted to expel the three renegade deputies and Treviranus from the <span style="color: #3E88B3;">**DNVP**</span>. Following the congress, large numbers of deputies from the <span style="color: #6D5298;">Christian Social</span> and <span style="color: #0087DC;">Young Conservative</span> factions have left the <span style="color: #3E88B3;">**DNVP**</span> in solidarity with those expelled. 
-  However, the decision of Schiele and the agrarian wing to remain, as well as Hugenberg’s strong support from the local organisations, has largely limited the scope of this secession from the <span style="color: #3E88B3;">**DNVP**</span>. 
+Following Hugenburg’s intransigence regarding the controversial imprisonment paragraph of the ‘Freedom Law’, internal dissent to his autocratic tendencies and centralisation of power have reached a boiling point.
+Meanwhile, a letter written by Treviranus has been leaked, in which he criticized Hugenburg’s leadership and discussed a secession from the <span style="color: #3E88B3;">**DNVP**</span>, with Hugenburg’s allies on the Executive Committee likely to use this as a pretext for expulsion. However, as the leader of the anti-Hugenburg faction on the left, it is certain that he will not go down without a fight. As such, despite Westarp’s best efforts, this party congress looks to culminate in a decisive showdown between the left and right of the <span style="color: #3E88B3;">**DNVP**</span>.
+
+  
+- @sacked_natcon: Hugenburg has been ousted in a vote of no-confidence, to be replaced by someone from the moderation faction of the <span style="color: #3E88B3;">**DNVP**</span>. 
+- @sacked_youngcon: Hugenburg has been ousted in a vote of no-confidence, to be replaced by someone from the left wing of the <span style="color: #3E88B3;">**DNVP**</span>.
+- @historical_split: The <span style="color: #6D5298;">Christian Socials</span> and <span style="color: #0087DC;">Young Conservatives</span> have split from the <span style="color: #3E88B3;">**DNVP**</span>.
+- @agrarian_split: The <span style="color: #6D5298;">Christian Socials</span>, <span style="color: #0087DC;">Young Conservatives</span> and <span style="color: #385A38;">agrarians</span> have split from the <span style="color: #3E88B3;">**DNVP**</span>.
 
 
+@sacked_youngcon
+view-if: young_plan_signatures < 10
+choose-if: pro_republic > 60 and dnvp_relation > 65 and young_plan_signatures < 10
+unavailable-subtitle: Another Westarp-lite leader is not what the party wants.
+on-arrival: dnvp_leader = "Treviranus"; pro_republic += 2; dnvp_relation += 5; dvp_right += 2; right_strength += 2
+face-image: img/portraits/Ludwig_Kaas.jpg
 
+Ludwig Kaas has been selected as the chairman of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]. He seems to represent a rightward turn from Marx, and will preside over a [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] less inclined to compromise with the left. 
+
+Despite this, Kaas is committed to the current constitutional order and the republic. He maintains a close friendship with Eugenio Pacelli, the Papal Nuncio to Germany, which may prove useful during concordat negotiations.
+
+@sacked_natcon
+view-if: young_plan_signatures < 10
+choose-if: young_plan_signatures < 10 and (not pro_republic > 60 or not dnvp_relation > 65)
+unavailable-subtitle: Most of the <span style="color: #3E88B3;">**DNVP**</span> is still skeptical of Treviranus' ideas. 
+on-arrival: dnvp_leader = "placeholder"; nationalism += 3; dnvp_relation += 3; dvp_right += 1
+face-image: img/portraits/Ludwig_Kaas.jpg
+
+Ludwig Kaas has been selected as the chairman of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]. He seems to represent a rightward turn from Marx, and will preside over a [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] less inclined to compromise with the left. 
+
+Despite this, Kaas is committed to the current constitutional order and the republic. He maintains a close friendship with Eugenio Pacelli, the Papal Nuncio to Germany, which may prove useful during concordat negotiations.
+
+@historical_split
+view-if: young_plan_signatures >= 10
+choose-if: young_plan_signatures >= 10 and (not rpm_strength = 2 or not green_front = 0) 
+unavailable-subtitle: Schiele is not yet willing to split from the <span style="color: #3E88B3;">**DNVP**</span>.
+on-arrival: historical_split += 1; 
+face-image: img/portraits/Ludwig_Kaas.jpg
+
+Ludwig Kaas has been selected as the chairman of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]. He seems to represent a rightward turn from Marx, and will preside over a [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] less inclined to compromise with the left. 
+
+Despite this, Kaas is committed to the current constitutional order and the republic. He maintains a close friendship with Eugenio Pacelli, the Papal Nuncio to Germany, which may prove useful during concordat negotiations.
+
+@agrarian_split
+view-if: young_plan_signatures >= 10
+choose-if: young_plan_signatures >= 10 and rpm_strength = 2 and green_front = 0
+unavailable-subtitle: The situation in the countryside is too dire for the <span style="color: #385A38;">agrarians</span> to continue their 'wait and see' approach. 
+on-arrival: agrarian_split += 1; 
+face-image: img/portraits/Ludwig_Kaas.jpg
+
+Ludwig Kaas has been selected as the chairman of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]. He seems to represent a rightward turn from Marx, and will preside over a [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] less inclined to compromise with the left. 
+
+Despite this, Kaas is committed to the current constitutional order and the republic. He maintains a close friendship with Eugenio Pacelli, the Papal Nuncio to Germany, which may prove useful during concordat negotiations.
