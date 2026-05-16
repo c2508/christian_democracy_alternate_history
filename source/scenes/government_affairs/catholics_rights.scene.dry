@@ -40,6 +40,7 @@ Schreiber and Kaas make some progress regarding the Prussian Concordat.
 @school
 subtitle: This has been our goal since 1927.
 on-arrival: welfare += 1; workers_spd += 5*(1-dissent); unemployed_spd += 5*(1-dissent); budget -= 1; womens_rights += 1; coalition_dissent += 1 if welfare >= 1 and unemployed >= 15; unemployed -= 0.4; inflation += 0.2; economic_growth += 0.3;
+max-visits: 1
 
 We have increased welfare spending on women and children. [? if welfare >= 1 and unemployed >= 15 : Some of our coalition partners consider increased welfare spending profligate at this time. ?]
 
@@ -47,5 +48,6 @@ We have increased welfare spending on women and children. [? if welfare >= 1 and
 @pulpit
 subtitle: The Pulpit Law was enacted in 1871 during the start of the German Kulterkampf and was used to arrest Catholic Clericals. Even though the law has not been enforced after 1878, we might want to repeal it to prevent it from being used by a hostile government in the future.
 on-arrival: catholics_z += 5;
+max-visits: 1
 
 Yay
