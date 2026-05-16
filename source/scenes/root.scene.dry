@@ -146,6 +146,21 @@ Q.green_front = 0;
 Q.cnblp_formed = 0;
 Q.kvp_formed = 0;
 Q.csvd_formed = 0;
+Q.thalmann_run = 0
+Q.braun_run = 0
+Q.schumacher_run = 0
+Q.gessler_run = 0
+Q.heuss_run = 0
+Q.eckener_run = 0
+Q.bruning_run = 0
+Q.luther_run = 0
+Q.jarres_run = 0
+Q.lettow_vorbeck_run = 0
+Q.westarp_run = 0
+Q.hugenburg_run = 0
+Q.duesterberg_run = 0
+Q.goring_run = 0
+Q.hitler_run = 0
 
 Q.young_plan_signatures = 0;
 
