@@ -281,6 +281,8 @@ Q.rubicon_crossed = 0;
 Q.agriculture_opposition = 0;
 Q.industry_opposition = 0;
 Q.labor_opposition = 0;
+Q.agrarian_split = 0;
+Q.historical_split = 0;
 
 
 // quality of life (as % of 1928 - currently unused - should be welfare-adjusted.)
