@@ -15,7 +15,7 @@ Despite the <span style="color: #000000;">We</span><span style="color: #DD0000;"
 - @equal: Enforce equality of opportunity for Germans of all religions.
 - @pconcordat: Negotiate with Nuncio Pacelli regarding the Prussian Concordat.
 - @school: Pass a Reich School Law.
-- @liberalize: Attempt to liberalize abortion laws.
+- @pulpit: Repeal the Pulpit Law.
 - @return: Do not enact any policies for now.
 - @easy_discard
 - @cancel_advisor_action
@@ -44,17 +44,8 @@ on-arrival: welfare += 1; workers_spd += 5*(1-dissent); unemployed_spd += 5*(1-d
 We have increased welfare spending on women and children. [? if welfare >= 1 and unemployed >= 15 : Some of our coalition partners consider increased welfare spending profligate at this time. ?]
 
 
-@liberalize
-max-visits: 1
-subtitle: [? if progressive_coalition < 50 : This is unlikely to succeed; we do not have majority support. ?]
-go-to: liberalize_fail if progressive_coalition < 50; liberalize_success if progressive_coalition >= 50
+@pulpit
+subtitle: The Pulpit Law was enacted in 1871 during the start of the German Kulterkampf and was used to arrest Catholic Clericals. Even though the law has not been enforced after 1878, we might want to repeal it to prevent it from being used by a hostile government in the future.
+on-arrival: catholics_z += 5;
 
-@liberalize_fail
-on-arrival: z_relation -= 5; coalition_dissent += 1; workers_spd += 3*(1-dissent); catholics_spd -= 5;
-
-Unfortunately, our proposal is voted down in the Reichstag, with the Catholic Center party (our long-time partners) speaking in particularly vehement opposition, and some of our own members breaking party discipline. The activists, feeling demoralized from this attempt, have decided to bide their time.
-
-@liberalize_success
-on-arrival: abortion_rights += 1; womens_rights += 1; coalition_dissent += 1; z_relation -= 8; catholics_spd -= 10; dvp_relation -= 5; workers_spd += 3*(1-dissent); new_middle_spd += 3*(1-dissent); workers_z += 3; new_middle_z += 3; old_middle_z += 3; old_middle_dnvp += 3; rural_dnvp += 3; workers_nsdap -= 3; new_middle_nsdap -= 3; old_middle_nsdap -= 2; rural_nsdap -= 2; unemployed_nsdap -= 2; unemployed_z += 3; unemployed_spd += 3*(1-dissent)
-
-With the support of a "progressive coalition" including the KPD and [+ ddp_name +], we have successfully passed a bill to legalize abortion in Germany! This has heartened our more progressive supporters, while hurting our relations with the Center Party. With the increasing political discourse around abortion, the religiously-oriented Center Party and DNVP have gained conservative votes at the expense of the NSDAP.
+Yay
