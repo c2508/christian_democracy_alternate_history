@@ -1,32 +1,6 @@
 title: Presidential Election Candidates
 subtitle: Should we field our own candidate?
 new-page: true
-on-arrival: {!
-Q.presidential_election_campaigning_seen = 1;
-if (!Q.hitler_deported && Q.hitler_citizen) {
-    Q.nsdap_candidate_1932 = "Hitler";
-    Q.nsdap_candidate_1932_disp = "Adolf Hitler";
-} else {
-    Q.nsdap_candidate_1932 = "Göring";
-    Q.nsdap_candidate_1932_disp = "Hermann Göring";
-}
-Q.spd_candidate_1932 = "Braun";
-if (Q.hindenburg_run) {
-    Q.reactionary_candidate_1932 = "Hindenburg";
-    // angry that he is running in the first place
-    Q.hindenburg_angry_bruning += 20;
-}
-Q.communist_candidate_1932 = "Thälmann";
-
-Q.spd_candidate_1932_disp = "Otto Braun";
-if (Q.hindenburg_run) Q.reactionary_candidate_1932_disp = "Paul von Hindenburg";
-Q.communist_candidate_1932_disp = "Ernst Thälmann";
-
-if (Q.nsdap_candidate_1932) {
-    Q.dnvp_candidate_1932 = "Duesterberg";
-    Q.dnvp_candidate_1932_disp = "Theodor Duesterberg";
-}
-!}
 tags: event
 view-if: year = 1932 and month >= 2 and not hindenburg_term_extended
 on-display: {!  
