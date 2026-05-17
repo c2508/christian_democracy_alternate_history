@@ -479,7 +479,7 @@ Neither side is entirely satisfied by our compromise solution. Many of the worke
 
 @csvd
 subtitle: Neither workers nor employers will be entirely satisfied or dissatisfied. [? if in_grand_coalition and dvp_relation < 30: The DVP will likely consider the compromise unacceptable. ?][? if in_grand_coalition and dvp_relation >= 30: The DVP might grudgingly accept the compromise for now. ?]
-view-if: csvd_support = 0
+view-if: csvd_support = 0 and csvd+_formed = 1
 on-arrival: csvd_support += 1; bruning_support += csvd_seats; bruning_support_percentage += csvd_r; bruning_undecided -= csvd_seats; bruning_undecided_percentage -= csvd_r
 go-to: convince
 
@@ -540,7 +540,7 @@ Neither side is entirely satisfied by our compromise solution. Many of the worke
 
 @kvp
 subtitle: Neither workers nor employers will be entirely satisfied or dissatisfied. [? if in_grand_coalition and dvp_relation < 30: The DVP will likely consider the compromise unacceptable. ?][? if in_grand_coalition and dvp_relation >= 30: The DVP might grudgingly accept the compromise for now. ?]
-view-if: kvp_support = 0
+view-if: kvp_support = 0 and kvp_formed = 1
 on-arrival: kvp_support += 1; bruning_support += kvp_seats; bruning_support_percentage += kvp_r; bruning_undecided -= kvp_seats; bruning_undecided_percentage -= kvp_r
 go-to: convince
 
