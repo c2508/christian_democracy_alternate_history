@@ -93,7 +93,7 @@ Composed primarily of <span style="color: #909090;">**special interest**</span> 
 
 {!<tr><td>!} <span style="color: #7A3C00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ nsdap_seats +] {!</td></tr>!} 
 
-[? if dnf_formed : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} 
+[? if dnf_formed : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} ?]
 
 {!</table>!}
 
@@ -169,7 +169,7 @@ For budgetary reasons, we have cut unemployment insurance benefits. Unfortunatel
 
 {!<tr><td>!} <span style="color: #7A3C00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ nsdap_seats +] {!</td></tr>!} 
 
-[? if dnf_formed : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} 
+[? if dnf_formed : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} ?]
 
 {!</table>!}
 @ddp
@@ -229,7 +229,7 @@ We have increased employer contributions to the unemployment insurance fund, all
 
 {!<tr><td>!} <span style="color: #7A3C00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ nsdap_seats +] {!</td></tr>!} 
 
-[? if dnf_formed : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} 
+[? if dnf_formed : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} ?]
 
 {!</table>!}
 
@@ -290,7 +290,7 @@ Neither side is entirely satisfied by our compromise solution. Many of the worke
 
 {!<tr><td>!} <span style="color: #7A3C00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ nsdap_seats +] {!</td></tr>!} 
 
-[? if dnf_formed : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} 
+[? if dnf_formed : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} ?]
 
 {!</table>!}
 
@@ -351,7 +351,7 @@ For budgetary reasons, we have cut unemployment insurance benefits. Unfortunatel
 
 {!<tr><td>!} <span style="color: #7A3C00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ nsdap_seats +] {!</td></tr>!} 
 
-[? if dnf_formed : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} 
+[? if dnf_formed : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} ?]
 
 {!</table>!}
 
@@ -412,7 +412,7 @@ We have increased employer contributions to the unemployment insurance fund, all
 
 {!<tr><td>!} <span style="color: #7A3C00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ nsdap_seats +] {!</td></tr>!} 
 
-[? if dnf_formed : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} 
+[? if dnf_formed : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} ?]
 
 {!</table>!}
 
@@ -473,7 +473,7 @@ Neither side is entirely satisfied by our compromise solution. Many of the worke
 
 {!<tr><td>!} <span style="color: #7A3C00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ nsdap_seats +] {!</td></tr>!} 
 
-[? if dnf_formed : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} 
+[? if dnf_formed : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} ?]
 
 {!</table>!}
 
@@ -534,7 +534,7 @@ Neither side is entirely satisfied by our compromise solution. Many of the worke
 
 {!<tr><td>!} <span style="color: #7A3C00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ nsdap_seats +] {!</td></tr>!} 
 
-[? if dnf_formed : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} 
+[? if dnf_formed : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} ?]
 
 {!</table>!}
 
@@ -595,7 +595,7 @@ Neither side is entirely satisfied by our compromise solution. Many of the worke
 
 {!<tr><td>!} <span style="color: #7A3C00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ nsdap_seats +] {!</td></tr>!} 
 
-[? if dnf_formed : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} 
+[? if dnf_formed : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} ?]
 
 {!</table>!}
 
