@@ -35,6 +35,7 @@ Anyhow, let's see who will be the candidates on <span class="tooltip-text" title
 
 @view_candidates_1
 
+- @thalmann: Ernst Thalmann
 - @braun: Otto Braun
 - @schumacher: Kurt Schumacher
 - @gessler: Otto Gessler
@@ -51,5 +52,100 @@ Anyhow, let's see who will be the candidates on <span class="tooltip-text" title
 - @goring: Hermann Goring
 - @hitler: Adolf Hitler
 
+@thalmann: Ernst Thalmann
+subtitle: The workers will regard this as a betrayal.
+view-if: z_in_prussia = 1
+on-arrival: thalmann_run = 1
+go-to: @view_candidates_1
+
+@braun: Otto Braun
+subtitle: The workers will regard this as a betrayal.
+view-if: z_in_prussia = 1
+on-arrival: braun_run = 1
+go-to: @view_candidates_1
+
+@schumacher: Kurt Schumacher
+subtitle: The workers will regard this as a betrayal.
+view-if: z_in_prussia = 1
+on-arrival: schumacher_run = 1
+go-to: @view_candidates_1
+
+@gessler: Otto Gessler
+subtitle: The workers will regard this as a betrayal.
+view-if: z_in_prussia = 1
+on-arrival: gessler_run = 1
+go-to: @view_candidates_1
+
+@heuss: Theodor Heuss
+subtitle: The workers will regard this as a betrayal.
+view-if: z_in_prussia = 1
+on-arrival: heuss_run = 1
+go-to: @view_candidates_1
+
+@eckener: Hugo Eckener
+subtitle: The workers will regard this as a betrayal.
+view-if: z_in_prussia = 1
+on-arrival: eckener_run = 1
+go-to: @view_candidates_1
+
+@bruning: Heinrich Bruning
+subtitle: The workers will regard this as a betrayal.
+view-if: z_in_prussia = 1
+on-arrival: bruning_run = 1
+go-to: @view_candidates_1
+
+@luther: Hans Luther
+subtitle: The workers will regard this as a betrayal.
+view-if: z_in_prussia = 1
+on-arrival: luther_run = 1
+go-to: @view_candidates_1
+
+@jarres: Karl Jarres
+subtitle: The workers will regard this as a betrayal.
+view-if: z_in_prussia = 1
+on-arrival: jarres_run = 1
+go-to: @view_candidates_1
+
+@hindenburg: Paul von Hindenburg
+subtitle: The workers will regard this as a betrayal.
+view-if: z_in_prussia = 1
+on-arrival: hindenburg_run = 1
+go-to: @view_candidates_1
+
+@lettow_vorbeck: Paul von Lettow-Vorbeck
+subtitle: The workers will regard this as a betrayal.
+view-if: z_in_prussia = 1
+on-arrival: lettow_vorbeck_run = 1
+go-to: @view_candidates_1
+
+@westarp: Kuno von Westarp
+subtitle: The workers will regard this as a betrayal.
+view-if: z_in_prussia = 1
+on-arrival: westarp_run = 1
+go-to: @view_candidates_1
+
+@hugenburg: Alfred Hugenberg
+subtitle: The workers will regard this as a betrayal.
+view-if: z_in_prussia = 1
+on-arrival: hugenburg_run = 1
+go-to: @view_candidates_1
+
+@duesterberg: Theodor Duesterberg
+subtitle: The workers will regard this as a betrayal.
+view-if: z_in_prussia = 1
+on-arrival: duesterberg_run = 1
+go-to: @view_candidates_1
+
+@goring: Hermann Goring
+subtitle: The workers will regard this as a betrayal.
+view-if: z_in_prussia = 1
+on-arrival: goring_run = 1
+go-to: @view_candidates_1
+
+@hitler: Adolf Hitler
+subtitle: The workers will regard this as a betrayal.
+view-if: z_in_prussia = 1
+on-arrival: hitler_run = 1
+go-to: @view_candidates_1
 
 
