@@ -89,13 +89,11 @@ Composed primarily of <span style="color: #909090;">**special interest**</span> 
 
 {!<tr><td>!}Opposed{!</td><td>!} ([+ bruning_opposed_percentage +]%) {!</td><td>!} ([+ bruning_opposed +]/500) {!</td></tr>!}
 
-[? if not cnblp_support : {!<tr><td>!} <span style="color: #006400;">**CNBLP**</span>: {!</td><td>!} [+ cnblp_r +] % {!</td><td>!} [+ cnblp_seats +] {!</td></tr>!} ?]
+{!<tr><td>!} <span style="color: #700000;">**KPD**</span>: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ kpd_seats +] {!</td></tr>!}
 
-[? if not kpd_support : {!<tr><td>!} <span style="color: #700000;">**KPD**</span>: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ kpd_seats +] {!</td></tr>!} ?]
+{!<tr><td>!} <span style="color: #7A3C00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ nsdap_seats +] {!</td></tr>!} 
 
-[? if not nsdap_support : {!<tr><td>!} <span style="color: #7A3C00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ nsdap_seats +] {!</td></tr>!} ?]
-
-[? if dnf_formed and not dnf_support : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} ?]
+[? if dnf_formed : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} 
 
 {!</table>!}
 
@@ -167,16 +165,13 @@ For budgetary reasons, we have cut unemployment insurance benefits. Unfortunatel
 
 {!<tr><td>!}Opposed{!</td><td>!} ([+ bruning_opposed_percentage +]%) {!</td><td>!} ([+ bruning_opposed +]/500) {!</td></tr>!}
 
-[? if not cnblp_support : {!<tr><td>!} <span style="color: #006400;">**CNBLP**</span>: {!</td><td>!} [+ cnblp_r +] % {!</td><td>!} [+ cnblp_seats +] {!</td></tr>!} ?]
+{!<tr><td>!} <span style="color: #700000;">**KPD**</span>: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ kpd_seats +] {!</td></tr>!}
 
-[? if not kpd_support : {!<tr><td>!} <span style="color: #700000;">**KPD**</span>: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ kpd_seats +] {!</td></tr>!} ?]
+{!<tr><td>!} <span style="color: #7A3C00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ nsdap_seats +] {!</td></tr>!} 
 
-[? if not nsdap_support : {!<tr><td>!} <span style="color: #7A3C00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ nsdap_seats +] {!</td></tr>!} ?]
-
-[? if dnf_formed and not dnf_support : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} ?]
+[? if dnf_formed : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} 
 
 {!</table>!}
-
 @ddp
 subtitle: Employers are strongly against this. 
 view-if: ddp_support = 0
@@ -230,13 +225,11 @@ We have increased employer contributions to the unemployment insurance fund, all
 
 {!<tr><td>!}Opposed{!</td><td>!} ([+ bruning_opposed_percentage +]%) {!</td><td>!} ([+ bruning_opposed +]/500) {!</td></tr>!}
 
-[? if not cnblp_support : {!<tr><td>!} <span style="color: #006400;">**CNBLP**</span>: {!</td><td>!} [+ cnblp_r +] % {!</td><td>!} [+ cnblp_seats +] {!</td></tr>!} ?]
+{!<tr><td>!} <span style="color: #700000;">**KPD**</span>: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ kpd_seats +] {!</td></tr>!}
 
-[? if not kpd_support : {!<tr><td>!} <span style="color: #700000;">**KPD**</span>: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ kpd_seats +] {!</td></tr>!} ?]
+{!<tr><td>!} <span style="color: #7A3C00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ nsdap_seats +] {!</td></tr>!} 
 
-[? if not nsdap_support : {!<tr><td>!} <span style="color: #7A3C00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ nsdap_seats +] {!</td></tr>!} ?]
-
-[? if dnf_formed and not dnf_support : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} ?]
+[? if dnf_formed : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} 
 
 {!</table>!}
 
@@ -293,13 +286,11 @@ Neither side is entirely satisfied by our compromise solution. Many of the worke
 
 {!<tr><td>!}Opposed{!</td><td>!} ([+ bruning_opposed_percentage +]%) {!</td><td>!} ([+ bruning_opposed +]/500) {!</td></tr>!}
 
-[? if not cnblp_support : {!<tr><td>!} <span style="color: #006400;">**CNBLP**</span>: {!</td><td>!} [+ cnblp_r +] % {!</td><td>!} [+ cnblp_seats +] {!</td></tr>!} ?]
+{!<tr><td>!} <span style="color: #700000;">**KPD**</span>: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ kpd_seats +] {!</td></tr>!}
 
-[? if not kpd_support : {!<tr><td>!} <span style="color: #700000;">**KPD**</span>: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ kpd_seats +] {!</td></tr>!} ?]
+{!<tr><td>!} <span style="color: #7A3C00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ nsdap_seats +] {!</td></tr>!} 
 
-[? if not nsdap_support : {!<tr><td>!} <span style="color: #7A3C00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ nsdap_seats +] {!</td></tr>!} ?]
-
-[? if dnf_formed and not dnf_support : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} ?]
+[? if dnf_formed : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} 
 
 {!</table>!}
 
@@ -356,13 +347,11 @@ For budgetary reasons, we have cut unemployment insurance benefits. Unfortunatel
 
 {!<tr><td>!}Opposed{!</td><td>!} ([+ bruning_opposed_percentage +]%) {!</td><td>!} ([+ bruning_opposed +]/500) {!</td></tr>!}
 
-[? if not cnblp_support : {!<tr><td>!} <span style="color: #006400;">**CNBLP**</span>: {!</td><td>!} [+ cnblp_r +] % {!</td><td>!} [+ cnblp_seats +] {!</td></tr>!} ?]
+{!<tr><td>!} <span style="color: #700000;">**KPD**</span>: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ kpd_seats +] {!</td></tr>!}
 
-[? if not kpd_support : {!<tr><td>!} <span style="color: #700000;">**KPD**</span>: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ kpd_seats +] {!</td></tr>!} ?]
+{!<tr><td>!} <span style="color: #7A3C00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ nsdap_seats +] {!</td></tr>!} 
 
-[? if not nsdap_support : {!<tr><td>!} <span style="color: #7A3C00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ nsdap_seats +] {!</td></tr>!} ?]
-
-[? if dnf_formed and not dnf_support : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} ?]
+[? if dnf_formed : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} 
 
 {!</table>!}
 
@@ -419,15 +408,14 @@ We have increased employer contributions to the unemployment insurance fund, all
 
 {!<tr><td>!}Opposed{!</td><td>!} ([+ bruning_opposed_percentage +]%) {!</td><td>!} ([+ bruning_opposed +]/500) {!</td></tr>!}
 
-[? if not cnblp_support : {!<tr><td>!} <span style="color: #006400;">**CNBLP**</span>: {!</td><td>!} [+ cnblp_r +] % {!</td><td>!} [+ cnblp_seats +] {!</td></tr>!} ?]
+{!<tr><td>!} <span style="color: #700000;">**KPD**</span>: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ kpd_seats +] {!</td></tr>!}
 
-[? if not kpd_support : {!<tr><td>!} <span style="color: #700000;">**KPD**</span>: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ kpd_seats +] {!</td></tr>!} ?]
+{!<tr><td>!} <span style="color: #7A3C00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ nsdap_seats +] {!</td></tr>!} 
 
-[? if not nsdap_support : {!<tr><td>!} <span style="color: #7A3C00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ nsdap_seats +] {!</td></tr>!} ?]
-
-[? if dnf_formed and not dnf_support : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} ?]
+[? if dnf_formed : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} 
 
 {!</table>!}
+
 @dnvp
 subtitle: Neither workers nor employers will be entirely satisfied or dissatisfied. [? if in_grand_coalition and dvp_relation < 30: The DVP will likely consider the compromise unacceptable. ?][? if in_grand_coalition and dvp_relation >= 30: The DVP might grudgingly accept the compromise for now. ?]
 view-if: dnvp_support = 0
@@ -481,13 +469,11 @@ Neither side is entirely satisfied by our compromise solution. Many of the worke
 
 {!<tr><td>!}Opposed{!</td><td>!} ([+ bruning_opposed_percentage +]%) {!</td><td>!} ([+ bruning_opposed +]/500) {!</td></tr>!}
 
-[? if not cnblp_support : {!<tr><td>!} <span style="color: #006400;">**CNBLP**</span>: {!</td><td>!} [+ cnblp_r +] % {!</td><td>!} [+ cnblp_seats +] {!</td></tr>!} ?]
+{!<tr><td>!} <span style="color: #700000;">**KPD**</span>: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ kpd_seats +] {!</td></tr>!}
 
-[? if not kpd_support : {!<tr><td>!} <span style="color: #700000;">**KPD**</span>: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ kpd_seats +] {!</td></tr>!} ?]
+{!<tr><td>!} <span style="color: #7A3C00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ nsdap_seats +] {!</td></tr>!} 
 
-[? if not nsdap_support : {!<tr><td>!} <span style="color: #7A3C00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ nsdap_seats +] {!</td></tr>!} ?]
-
-[? if dnf_formed and not dnf_support : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} ?]
+[? if dnf_formed : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} 
 
 {!</table>!}
 
@@ -544,13 +530,11 @@ Neither side is entirely satisfied by our compromise solution. Many of the worke
 
 {!<tr><td>!}Opposed{!</td><td>!} ([+ bruning_opposed_percentage +]%) {!</td><td>!} ([+ bruning_opposed +]/500) {!</td></tr>!}
 
-[? if not cnblp_support : {!<tr><td>!} <span style="color: #006400;">**CNBLP**</span>: {!</td><td>!} [+ cnblp_r +] % {!</td><td>!} [+ cnblp_seats +] {!</td></tr>!} ?]
+{!<tr><td>!} <span style="color: #700000;">**KPD**</span>: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ kpd_seats +] {!</td></tr>!}
 
-[? if not kpd_support : {!<tr><td>!} <span style="color: #700000;">**KPD**</span>: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ kpd_seats +] {!</td></tr>!} ?]
+{!<tr><td>!} <span style="color: #7A3C00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ nsdap_seats +] {!</td></tr>!} 
 
-[? if not nsdap_support : {!<tr><td>!} <span style="color: #7A3C00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ nsdap_seats +] {!</td></tr>!} ?]
-
-[? if dnf_formed and not dnf_support : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} ?]
+[? if dnf_formed : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} 
 
 {!</table>!}
 
@@ -607,13 +591,11 @@ Neither side is entirely satisfied by our compromise solution. Many of the worke
 
 {!<tr><td>!}Opposed{!</td><td>!} ([+ bruning_opposed_percentage +]%) {!</td><td>!} ([+ bruning_opposed +]/500) {!</td></tr>!}
 
-[? if not cnblp_support : {!<tr><td>!} <span style="color: #006400;">**CNBLP**</span>: {!</td><td>!} [+ cnblp_r +] % {!</td><td>!} [+ cnblp_seats +] {!</td></tr>!} ?]
+{!<tr><td>!} <span style="color: #700000;">**KPD**</span>: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ kpd_seats +] {!</td></tr>!}
 
-[? if not kpd_support : {!<tr><td>!} <span style="color: #700000;">**KPD**</span>: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ kpd_seats +] {!</td></tr>!} ?]
+{!<tr><td>!} <span style="color: #7A3C00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ nsdap_seats +] {!</td></tr>!} 
 
-[? if not nsdap_support : {!<tr><td>!} <span style="color: #7A3C00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ nsdap_seats +] {!</td></tr>!} ?]
-
-[? if dnf_formed and not dnf_support : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} ?]
+[? if dnf_formed : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} 
 
 {!</table>!}
 
