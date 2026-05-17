@@ -52,97 +52,97 @@ Anyhow, let's see who will be the candidates on <span class="tooltip-text" title
 - @goring: Hermann Goring
 - @hitler: Adolf Hitler
 
-@thalmann: Ernst Thalmann
+@thalmann
 subtitle: The workers will regard this as a betrayal.
 view-if: z_in_prussia = 1
 on-arrival: thalmann_run = 1
 go-to: @view_candidates_1
 
-@braun: Otto Braun
+@braun
 subtitle: The workers will regard this as a betrayal.
 view-if: z_in_prussia = 1
 on-arrival: braun_run = 1
 go-to: @view_candidates_1
 
-@schumacher: Kurt Schumacher
+@schumacher
 subtitle: The workers will regard this as a betrayal.
 view-if: z_in_prussia = 1
 on-arrival: schumacher_run = 1
 go-to: @view_candidates_1
 
-@gessler: Otto Gessler
+@gessler
 subtitle: The workers will regard this as a betrayal.
 view-if: z_in_prussia = 1
 on-arrival: gessler_run = 1
 go-to: @view_candidates_1
 
-@heuss: Theodor Heuss
+@heuss
 subtitle: The workers will regard this as a betrayal.
 view-if: z_in_prussia = 1
 on-arrival: heuss_run = 1
 go-to: @view_candidates_1
 
-@eckener: Hugo Eckener
+@eckener
 subtitle: The workers will regard this as a betrayal.
 view-if: z_in_prussia = 1
 on-arrival: eckener_run = 1
 go-to: @view_candidates_1
 
-@bruning: Heinrich Bruning
+@bruning
 subtitle: The workers will regard this as a betrayal.
 view-if: z_in_prussia = 1
 on-arrival: bruning_run = 1
 go-to: @view_candidates_1
 
-@luther: Hans Luther
+@luther
 subtitle: The workers will regard this as a betrayal.
 view-if: z_in_prussia = 1
 on-arrival: luther_run = 1
 go-to: @view_candidates_1
 
-@jarres: Karl Jarres
+@jarres
 subtitle: The workers will regard this as a betrayal.
 view-if: z_in_prussia = 1
 on-arrival: jarres_run = 1
 go-to: @view_candidates_1
 
-@hindenburg: Paul von Hindenburg
+@hindenburg
 subtitle: The workers will regard this as a betrayal.
 view-if: z_in_prussia = 1
 on-arrival: hindenburg_run = 1
 go-to: @view_candidates_1
 
-@lettow_vorbeck: Paul von Lettow-Vorbeck
+@lettow_vorbeck
 subtitle: The workers will regard this as a betrayal.
 view-if: z_in_prussia = 1
 on-arrival: lettow_vorbeck_run = 1
 go-to: @view_candidates_1
 
-@westarp: Kuno von Westarp
+@westarp
 subtitle: The workers will regard this as a betrayal.
 view-if: z_in_prussia = 1
 on-arrival: westarp_run = 1
 go-to: @view_candidates_1
 
-@hugenburg: Alfred Hugenberg
+@hugenburg
 subtitle: The workers will regard this as a betrayal.
 view-if: z_in_prussia = 1
 on-arrival: hugenburg_run = 1
 go-to: @view_candidates_1
 
-@duesterberg: Theodor Duesterberg
+@duesterberg
 subtitle: The workers will regard this as a betrayal.
 view-if: z_in_prussia = 1
 on-arrival: duesterberg_run = 1
 go-to: @view_candidates_1
 
-@goring: Hermann Goring
+@goring
 subtitle: The workers will regard this as a betrayal.
 view-if: z_in_prussia = 1
 on-arrival: goring_run = 1
 go-to: @view_candidates_1
 
-@hitler: Adolf Hitler
+@hitler
 subtitle: The workers will regard this as a betrayal.
 view-if: z_in_prussia = 1
 on-arrival: hitler_run = 1
