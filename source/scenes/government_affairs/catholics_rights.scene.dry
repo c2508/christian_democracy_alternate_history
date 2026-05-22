@@ -29,6 +29,7 @@ These policies strongly discourage discrimination on the basis of religion durin
 
 @pconcordat
 subtitle: The Prussian Concordat is an important convention in protecting the rights of Catholics throughout Prussia and paves the way for a Reichskonkordat in the future.
+view-if: prussian_concordat = 0
 choose-if: z_in_prussia = 1
 unavailable_subtitle: The <span style="color: #000000;">**Center Party**</span> is not in Prussia.
 on-arrival: prussian_concordat_progress += 1
