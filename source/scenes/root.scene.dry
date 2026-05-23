@@ -294,9 +294,9 @@ Q.economic_expansion = 0;
 // rubicon 
 Q.bruning_vonc = 0;
 Q.rubicon_crossed = 0;
-Q.agriculture_opposition = 0;
-Q.industry_opposition = 0;
-Q.labor_opposition = 0;
+Q.agriculture_opposition = 30;
+Q.industry_opposition = 35;
+Q.labor_opposition = 25;
 Q.agrarian_split = 0;
 Q.historical_split = 0;
 
@@ -793,6 +793,7 @@ Q.hermes_advisor = 0; // Andreas Hermes
 Q.kaas_advisor = 0; // Ludwig Kaas
 Q.papen_advisor = 0; // Franz Von Papen
 Q.adenauer_advisor = 0; // Konrad Adenauer
+Q.spahn_advisor = 0; // Martin Spahn
 
 // young conservatives advisors
 Q.trevanius_advisor = 0; // Gottfried Trevanius
