@@ -189,6 +189,15 @@ go-to: rm_main
 
 Papen has been removed as an advisor. The Catholic Conservative faction disapproves. 
 
+@remove_spahn
+title: Remove Spahn
+view-if: spahn_advisor = 1
+tags: remove_advisor
+on-arrival: spahn_advisor = 0; right_dissent += 3; n_advisors -= 1
+go-to: rm_main
+
+Spahn has been removed as an advisor. The Catholic Conservative faction disapproves. 
+
 # young conservatives
 
 @remove_treviranus
