@@ -211,6 +211,7 @@
   };
 
   window.onDisplayContent = function() {
+    window.updateSidebarRight();
       window.updateSidebar();
   };
 
