@@ -56,6 +56,7 @@ Reichstag composition:
 [? if ddp_exist: <span style="color: #DCCA4A;">**[+ ddp_name +]**</span>: [+ ddp_r +]% ?]
 # 1928: 9, 1930: 5
 <span style="color: #C0A054;">**DVP**</span>: [+ dvp_r +]%
+<span style="color: #B8996F;">**WP**</span>: [+ wp_r +]%
 # 1928: 14, 1930: 7
 <span style="color: #3E88B3;">**DNVP**</span>: [+ dnvp_r +]%
 # 1928: 3, 1930: 18
