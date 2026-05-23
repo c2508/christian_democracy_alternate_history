@@ -3,7 +3,7 @@ new-page: true
 subtitle: The prodigal son returns.....
 tags: event
 on-arrival: right_strength += 8; right_dissent -= 8; dnvp_relations += 3; catholics_z += 5; catholics_dnvp -= 5;
-view-if: year = 1929 and month = 1 and dnvp_leader = "Hugenberg" and (z_party_leader = "Kaas" or z_party_leader = "Stegerwald".
+view-if: year = 1929 and month = 1 and dnvp_leader = "Hugenberg" and (z_party_leader = "Kaas" or z_party_leader = "Stegerwald")
 priority: 1
 max-visits: 1
 
