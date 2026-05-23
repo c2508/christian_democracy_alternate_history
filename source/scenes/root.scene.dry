@@ -67,6 +67,7 @@ Q.right_resign = 0;
 
 // have we discovered young_conservatism?
 Q.young_conservatives = 0;
+Q.dnvp_catholics_join = 0;
 
 // desperation indicates how likely we are to coaltion with the KPD and NSDAP
 Q.desperation = 0;
