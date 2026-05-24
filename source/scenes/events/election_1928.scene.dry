@@ -104,9 +104,9 @@ if (Q.kpd_r >= Q.spd_r && Q.kpd_r >= Q.nsdap_r) {
 // coalitions
 Q.weimar_coalition =  Math.round((Q.spd_r + Q.ddp_r + Q.z_r - 3)*10.0)/10.0
 Q.grand_coalition = Math.round((Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r)*10.0)/10.0
-Q.bourgeois_coalition = Math.round((Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r + Q.wp_r + Q.kvp_r + Q.csvd_r + Q.cnblp_r)*10.0)/10.0
+Q.bourgeois_coalition = Math.round((Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r + Q.wp_r + Q.cnblp_r)*10.0)/10.0
 Q.center_right_coalition = Q.z_r + Q.ddp_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
-Q.right_coalition = Math.round((Q.z_r + Q.dvp_r + Q.other_r + Q.dnvp_r + Q.wp_r + Q.kvp_r + Q.csvd_r + Q.cnblp_r)*10.0)/10.0
+Q.right_coalition = Math.round((Q.z_r + Q.dvp_r + Q.other_r + Q.dnvp_r + Q.wp_r + Q.cnblp_r)*10.0)/10.0
 Q.far_right_coalition = Q.dnvp_r + Q.nsdap_r;
 Q.left_coalition = Q.spd_r + Q.kpd_r + Q.sapd_r;
 Q.popular_front_coalition = Q.spd_r + Q.kpd_r + Q.z_r + Q.ddp_r - 3 + Q.sapd_r;
@@ -121,7 +121,14 @@ Q.progressive_coalition = Q.spd_r + Q.kpd_r + Q.ddp_r + Q.sapd_r;
 if (Q.kpd_relation >= 30) {
     Q.weimar_coalition += Q.sapd_r;
 }
-
+if (Q.kvp_formed = 1) {
+    Q.bourgeois_coalition += Q.kvp_r;
+    Q.right_coalition += Q.kvp_r;
+}
+if (Q.csvd_formed = 1) {
+    Q.bourgeois_coalition += Q.csvd_r;
+    Q.right_coalition += Q.csvd_r;
+}
 
 Q.leverage = Q.z_r + 5;
 
