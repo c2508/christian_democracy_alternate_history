@@ -5,15 +5,6 @@ view-if: year = 1930 and month = 5 and bruning_vonc = 0
 tags: event
 max-visits: 1
 on-arrival: {! 
-Q.ddp_support = 0;
-Q.spd_support = 0;
-Q.dvp_support = 0;
-Q.wp_support = 0;
-Q.cnblp_support = 0;
-Q.csvd_support = 0;
-Q.kvp_support = 0;
-Q.dnvp_support = 0;
-Q.cnva_support = 0;
 Q.kvp_seats = 10;
 Q.csvd_seats = 10;
 Q.kvp_r = 5;
