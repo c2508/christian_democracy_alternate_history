@@ -1,13 +1,13 @@
-title: Friedrich Stampfer
+title: Martin Spahn
 is-pinned-card: true
 tags: advisor
 card-image: img/portraits/StampferFriedrich.jpg
-view-if: stampfer_advisor = 1
+view-if: spahn_advisor = 1
 new-page: true 
 
-= Friedrich Stampfer
+= Martin Spahn
 
-Friedrich Stampfer is the long-time editor-in-chief of Vorwärts, our party newspaper, and also a Reichstag member. He was historically part of the Majority SPD that supported our participation in the Great War, but also supports cooperation with the KPD to save the Republic.
+Martin Spahn is a 
 
 - @media_
 - @faction_support_
