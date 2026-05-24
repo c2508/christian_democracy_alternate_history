@@ -16,8 +16,8 @@ As an anti-war film, it is the target of major protest by far-right actors, espe
 - @stalhelm_win: The rest of the party prefer the <span style="color: #3E88B3;">**Stahlhelm's**</span> initial proposal.
 
 @hugy_win
-choose-if:
-unavailable_subtitle: 
+choose-if: nationalism = 1
+unavailable-subtitle: wip wipw dj
 on-arrival: old_middle_nsdap += 5; new_middle_nsdap += 4; workers_nsdap += 2; unemployed_nsdap += 2; sa_strength += 50; nationalism += 6; pro_republic -= 5
 
 When we ban the film, the Nazis immediately celebrate it as a major victory; they claim that even the red Marxists agree with them! It is a major boost to their morale.
