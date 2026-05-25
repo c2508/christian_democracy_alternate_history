@@ -345,7 +345,7 @@ For budgetary reasons, we have cut unemployment insurance benefits. Unfortunatel
 @cnblp
 subtitle: Employers are strongly against this. 
 view-if: cnblp_bruning_support = 0
-on-arrival: cnblp_bruning_support += 1; bruning_support += cnblp_seats; bruning_support_percentage += cnblp_r; bruning_undecided -= cnblp_seats; bruning_undecided_percentage -= cnblp_r agriculture_opposition -= 10;
+on-arrival: cnblp_bruning_support += 1; bruning_support += cnblp_seats; bruning_support_percentage += cnblp_r; bruning_undecided -= cnblp_seats; bruning_undecided_percentage -= cnblp_r; agriculture_opposition -= 10;
 go-to: convince
 
 We have increased employer contributions to the unemployment insurance fund, allowing the program to continue without hurting workers and the unemployed. Perhaps understandably, the capitalists and their political parties are furious, while our base in the unions and among the unemployed are pleased.
