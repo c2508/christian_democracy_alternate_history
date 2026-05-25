@@ -63,7 +63,7 @@ unavailable_subtitle: The <span style="color: #c00000;">**SPD**</span>'s presenc
 subtitle: -1 budget
 on-arrival: budget -= 1; soviet_relation += 1; reichswehr_militancy += 0.2; reichswehr_loyalty += 0.05; foreign_goal_completed += 1
 
-The <span style="color: #750e0e;">**Soviet Union**</span> and the Reichswehr are pleased that we have decided to continue secret rearmament. 
+The <span style="color: #750e0e;">**Soviet Union**</span> and the <span style="color: #808080;">**Reichswehr**</span> are pleased that we have decided to continue secret rearmament. 
 
 @customs_union
 title: Form a customs union with Austria?
@@ -74,7 +74,7 @@ view-if: black_thursday_seen = 1 and customs_union = 0
 
 We have long desired closer ties with Austria, with the eventual goal of the merger of the two German-speaking countries. A customs union with Austria is the first step towards this goal. Additionally, many believe that a union with Austria would improve our current economic circumstances.
 
-However, the Allies, especially France, are likely to object. This agreement would break the terms of the Versailles Treaty, and could lead to economic sanctions, further hurting our economy.
+However, the Allies, especially <span style="color: #002654;">France</span>, are likely to object. This agreement would break the terms of the Versailles Treaty, and could lead to economic sanctions, further hurting our economy.
 
 - @customs_union_2: Yes, do it!
 - @fp_menu: No, we should do something else.
@@ -85,7 +85,7 @@ max-visits: 1
 
 We have formed a customs union with Austria! The parties to our right, the <span style="color: #C0A054;">**DVP**</span> and the <span style="color: #3E88B3;">**DNVP**</span> are pleased with our actions, as is the right of our party.
 
-Immediately, France and other neighboring countries lodge their protests. The longer-term response is yet to be seen.
+Immediately, <span style="color: #002654;">France</span> and other neighboring countries lodge their protests. The longer-term response is yet to be seen.
 
 @anschluss
 title: Demand a reunification between Austria and Germany
@@ -135,17 +135,17 @@ title: Negotiate a Concordat between the Germany and the Vatican.
 view-if: prussian_concordat = 1 and reichskonkordat = 0 and reichskonkordat_progress < 4
 on-arrival: reichskonkordat_progress += 1; left_dissent -= 3; left_labor_dissent -= 3; right_labor_dissent -= 3; center_dissent -= 3; right_dissent -= 3
 
-The Roman Catholic Church is interested in furthering relations with the German Republic, seeing us as preferable to the old anti-Catholic policies of the Empire. We are working towards the signing of a Concordat, an agreement between the Vatican and the Republic that formally recognizes the Church's rights and interests in the country. The Center Party is especially interested in making this agreement.
+The Roman Catholic Church is interested in furthering relations with the German Republic, seeing us as preferable to the old anti-Catholic policies of the Empire. We are working towards the signing of a Concordat, an agreement between the Vatican and the Republic that formally recognizes the Church's rights and interests in the country. The <span style="color: #000000;">**Center Party**</span> is especially interested in making this agreement.
 
 [? if family_law : Our liberalized divorce policies make it difficult to build relations with the Vatican. ?] [? if abortion : Our legalization of abortion make it difficult to connect with the Church. ?]
 
 @concordat
 title: We can sign a Concordat with the Vatican!
 view-if: reichskonkordat_progress >= 4 and reichskonkordat = 0
-on-arrival: reichskonkordat = 1; dvp_relation -= 6; ddp_relation -= 4; catholics_z += 8*(1-dissent); catholics_z += 5 if in_weimar_coalition or in_grand_coalition or in_popular_front; left_dissent -= 10; left_labor_dissent -= 10; right_labor_dissent -= 10; center_dissent -= 10; right_dissent -= 10
+on-arrival: reichskonkordat = 1; dvp_relation -= 6; ddp_relation -= 4; catholics_z += 8*(1-dissent); catholics_z += 5 if in_weimar_coalition or in_grand_coalition or in_popular_front; left_dissent -= 10; labor_dissent -= 10; center_dissent -= 10; right_dissent -= 10
 achievement: reichskonkordat
 
-We have successfully signed a Concordat between Germany and the Roman Catholic Church! This treaty defines a formal relationship between the Church and the German state, guaranteeing freedom of worship for Catholics, and the right of the church to appoint their own clergy. Catholics in Germany are pleased, as are their representatives in the Center Party.
+We have successfully signed a Concordat between Germany and the Roman Catholic Church! This treaty defines a formal relationship between the Church and the German state, guaranteeing freedom of worship for Catholics, and the right of the church to appoint their own clergy. Catholics in Germany are pleased, as are their representatives in the <span style="color: #000000;">**Center Party**</span>.
 
 @support_austria
 title: Diplomatically support Austrian democracy against the Dollfuß dictatorship.
