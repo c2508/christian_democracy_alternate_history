@@ -121,15 +121,15 @@ Q.progressive_coalition = Q.spd_r + Q.kpd_r + Q.ddp_r + Q.sapd_r;
 if (Q.kpd_relation >= 30) {
     Q.weimar_coalition += Q.sapd_r;
 }
-if (Q.kvp_formed = 1) {
+if (Q.kvp_formed == 1) {
     Q.bourgeois_coalition += Q.kvp_r;
     Q.right_coalition += Q.kvp_r;
 }
-if (Q.csvd_formed = 1) {
+if (Q.csvd_formed == 1) {
     Q.bourgeois_coalition += Q.csvd_r;
     Q.right_coalition += Q.csvd_r;
 }
-if (Q.cnblp_formed = 1) {
+if (Q.cnblp_formed == 1) {
     Q.bourgeois_coalition += Q.cnblp_r;
     Q.right_coalition += Q.cnblp_r;
 }
@@ -282,18 +282,23 @@ data = data.concat([
         "name": "CNBLP",
         "seats": Math.round(Q.cnblp_r*5),
     },
-   {
+  if (Q.csvd_formed && Q.csvd_r) {
+    data.push({
         "id": "csvd",
         "legend": "CSVD",
         "name": "CSVD",
-        "seats": Math.round(Q.csvd_r*5),
-    },
-   {
+        "seats": Math.round(Q.csvd_r5),
+    });
+}
+
+if (Q.kvp_formed && Q.kvp_r) {
+    data.push({
         "id": "kvp",
         "legend": "KVP",
         "name": "KVP",
-        "seats": Math.round(Q.kvp_r*5),
-    },
+        "seats": Math.round(Q.kvp_r5),
+    });
+}
     {
         "id": "dnvp",
         "legend": "DNVP",
