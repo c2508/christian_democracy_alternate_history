@@ -50,6 +50,15 @@ if (Q.pro_republic < 0) {
 if (Q.pro_republic >= 100) {
     Q.pro_republic = 99;
 }
+if (Q.labor_opposition < 0) {
+    Q.labor_opposition = 0;
+}
+if (Q.agriculture_opposition < 0) {
+    Q.agriculture_opposition = 0;
+}
+if (Q.industrial_opposition < 0) {
+    Q.industrial_opposition = 0;
+}
 // re-calculate party support
 // calculate normalized class voting for the achievements
 for (var c of Q.classes) {
