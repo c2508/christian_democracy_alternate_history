@@ -282,12 +282,14 @@ data = data.concat([
         "name": "CNBLP",
         "seats": Math.round(Q.cnblp_r*5),
     },
-  if (Q.csvd_formed && Q.csvd_r) {
+]);
+
+if (Q.csvd_formed && Q.csvd_r) {
     data.push({
         "id": "csvd",
         "legend": "CSVD",
         "name": "CSVD",
-        "seats": Math.round(Q.csvd_r5),
+        "seats": Math.round(Q.csvd_r*5),
     });
 }
 
@@ -296,9 +298,11 @@ if (Q.kvp_formed && Q.kvp_r) {
         "id": "kvp",
         "legend": "KVP",
         "name": "KVP",
-        "seats": Math.round(Q.kvp_r5),
+        "seats": Math.round(Q.kvp_r*5),
     });
 }
+
+data = data.concat([
     {
         "id": "dnvp",
         "legend": "DNVP",
