@@ -95,7 +95,7 @@ choose-if: reichswehr_strength >= 140
 unavailable-subtitle: The <span style="color: #808080;">**Reichswehr**</span> is not strong enough. 
 on-arrival: west_relation -= 3; east_relation -= 2; nationalism += 5; workers_z += 2*(1-dissent); new_middle_z += 2*(1-dissent); old_middle_z += 2*(1-dissent); rural_z += 2*(1-dissent); catholics_z += 4*(1-dissent)
 
-How can anyone say that Austria isn't German?
+How can anyone say that Austria is not German?
 
 @negotiate
 title: Negotiate regarding our remaining obligations from the Treaty of Versailles.
