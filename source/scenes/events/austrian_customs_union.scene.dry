@@ -1,4 +1,4 @@
-title: Austrian customs union
+title: Austrian Customs Union
 subtitle: The Foreign Ministry seeks closer ties to Austria...
 new-page: true
 on-arrival: customs_union_seen = 1
@@ -21,7 +21,7 @@ However, the Allies, especially F<span style="color: #002654;">France</span>, ar
 - @let_it_happen: Let it happen.
 
 @let_it_happen
-on-arrival: banking_crisis_timer = 2; customs_union = 1; west_relation -= 2; east_relation -= 2
+on-arrival: banking_crisis_timer = 2; customs_union = 1; west_relation -= 2; east_relation -= 2; nationalism += 5;
 
 The customs union has been formed. Immediately, <span style="color: #002654;">France</span> and other neighboring countries lodge their protests. The longer-term response is yet to be seen.
 
