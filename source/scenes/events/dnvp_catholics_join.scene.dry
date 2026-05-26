@@ -2,7 +2,7 @@ title: The <span style="color: #3E88B3;">**DNVP**</span>'s Catholic Committee re
 new-page: true
 subtitle: The prodigal son returns.....
 tags: event
-on-arrival: right_strength += 8; right_dissent -= 8; dnvp_relations += 3; catholics_z += 8; catholics_dnvp -= 5;
+on-arrival: right_strength += 8; right_dissent -= 5; spd_relations -= 3; catholics_z += 6; catholics_dnvp -= 4;
 view-if: year = 1929 and month = 1 and dnvp_leader = "Hugenberg" and (z_party_leader = "Kaas" or z_party_leader = "Stegerwald")
 priority: 1
 max-visits: 1
