@@ -1,4 +1,4 @@
-title: The Death of Hindenburg
+title: The Death of <span style="color: #808080;">Hindenburg</span>
 subtitle: The Great War hero and one-time president has died...
 new-page: true
 view-if: year = 1934 and month >= 7 and president != "Hindenburg"
@@ -8,10 +8,10 @@ tags: event
 face-image: img/Hindenburg_head.jpg
 go-to: game_over_1934
 
-= The Death of Hindenburg
+= The Death of <span style="color: #808080;">Hindenburg</span>
 
-Paul von Hindenburg has passed away at age 86.
+<span style="color: #808080;">Paul von Hindenburg</span> has passed away at age 86.
 
 The nation engages in an outpouring of grief for its war hero and former president. Even for committed socialists and republicans, this is a bittersweet moment. Even though he was a manifestation of Prussian militarism and monarchism, he still led the nation through difficult times, without destroying democracy. It could always have been worse.
 
-With the passing of Hindenburg, it seems as if an era of history is closing. The worst years of crisis are over, and Nazism's days are numbered. Perhaps Germany will finally enter into a new era of genuine peace...
+With the passing of <span style="color: #808080;">Hindenburg</span>, it seems as if an era of history is closing. The worst years of crisis are over, and <span style="color: #7A3C00;">Nazism's</span> days are numbered. Perhaps Germany will finally enter into a new era of genuine peace...
