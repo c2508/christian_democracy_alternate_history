@@ -2,7 +2,7 @@ title: Presidential Election Candidates
 subtitle: Should we field our own candidate?
 new-page: true
 tags: event
-view-if: year = 1932 and month >= 2 and not hindenburg_term_extended
+view-if: year = 1938 and month >= 2 and not hindenburg_term_extended
 on-display: {!  
     var cardEl = document.createElement('div');  
     cardEl.className = "face-figure2";  
