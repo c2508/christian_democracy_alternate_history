@@ -184,7 +184,7 @@ Q.reichswehr_goal_completed = 0;
 
 Q.strike_term_seen = 0;
 
-Q.z_minus_bvp_r =  parsefloat((Q.z_r - 3).toFixed(1))
+Q.z_minus_bvp_r = parsefloat((Q.z_r - 3).toFixed(1))
 
 
 Q.kpd_seats = Math.round(Q.kpd_r*5)
