@@ -201,7 +201,7 @@ Q.cnva_seats = Math.round(Q.cnva_r*5)
 Q.dnvp_seats = Math.round(Q.dnvp_r*5)
 Q.nsdap_seats = Math.round(Q.nsdap_r*5)
 Q.dnf_seats = Math.round(Q.dnf_r*5)
-Q.z_r = Math.round(Q.z_r*10.0)/10.0;
+
 
 
 // understanding the enemy
