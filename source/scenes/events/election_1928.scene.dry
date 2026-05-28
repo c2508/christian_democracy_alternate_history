@@ -1413,7 +1413,7 @@ view-if: foreign_minister_party != "Z"
 on-arrival: leverage -= 10; foreign_minister_party = "Z"; foreign_minister = "Bruning"
 go-to: ministries
 
-Heinrich Bruning of the <span style="color: #000000;">**Center Party**</span>  has been appointed Foreign Minister.
+Heinrich Bruning of the <span style="color: #000000;">**Center Party**</span> has been appointed Foreign Minister.
 
 
 @agriculture
