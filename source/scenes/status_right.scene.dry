@@ -38,6 +38,8 @@ Opposition: [+ agriculture_opposition : opposition +]
 
 @politics
 
+= Party Satisfaction 
+
 [? if spd_bruning_support : , <span style="color: #c00000;">**SPD**</span> : [+ spd_satisfaction : opposition +] ?]
 
 [? if ddp_bruning_support : , <span style="color: #D3C24D;">**[+ ddp_name +]**</span> : [+ ddp_satisfaction : opposition +] ?]
@@ -55,6 +57,8 @@ Opposition: [+ agriculture_opposition : opposition +]
 [? if dnvp_bruning_support : , <span style="color: #3F7BC1;">**DNVP**</span> : [+ dnvp_satisfaction : opposition +] ?]
 
 @finances
+
+= Government Finances
 
 Monthly revenue:
 
