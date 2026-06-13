@@ -30,7 +30,7 @@ Opposition: [+ industrial_opposition : opposition +]
 Agriculture 
 
 Affiliated Organisations:
-[ ? if green_front > 0 : <span style="color: #0dba1e;">Green Front</span> ?] 
+[? if green_front > 0 : <span style="color: #0dba1e;">Green Front</span> ?] 
 <span style="color: #385A38;">**RLB**</span>
 <span style="color: #000000;">**VDB**</span> 
 
