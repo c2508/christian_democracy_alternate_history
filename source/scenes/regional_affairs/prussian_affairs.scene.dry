@@ -15,7 +15,7 @@ We can enact policies in Prussia.
 
 - @police_loyalty: Bolster the loyalty of the police.
 - @police_strength: Recruit additional police.
-- @bureaucracy: Purge the bureaucracy of reactionary elements.
+- @judiciary: Purge the judiciary of its reactionary elements.
 - @ban_sa: Ban the <span style="color: #7A3C00;">**SA**</span>, the Nazi paramilitary group.
 - @unban_sa: Reverse the <span style="color: #7A3C00;">**SA**</span> ban.
 - @ban_rfb: Ban the <span style="color: #8B0000;">**RFB**</span>, the Communist paramilitary.
@@ -42,10 +42,10 @@ on-arrival: prussian_police_strength += 20
 
 We have increased the size of the Prussian police.
 
-@bureaucracy
-on-arrival: prussian_police_loyalty += 0.05; nationalism -= 5; pacifism += 1; democratization += 1; pro_republic += 3*(1-dissent); new_middle_spd += 2*(1-dissent) if democratization >= 3; new_middle_spd += 2*(1-dissent) if democratization >= 4; coup_progress += 0.5
+@judiciary
+on-arrival: prussian_police_loyalty += 0.05; nationalism -= 3; judicial_reform += 0.5; democratization += 0.5; pro_republic += 2*(1-dissent); new_middle_z += 1*(1-dissent) if democratization >= 3; coup_progress += 0.5
 
-The bureaucracy is deeply reactionary, and many abuse their power to favor the political right. By removing the pro-monarchy and pro-dictatorship elements, we can democratize it. Some of our opponents claim that we are infringing on individual freedoms, but perhaps the security of the republic requires it.
+The Prussian judiciary is deeply reactionary, and many abuse their power to favor the political right. By removing the pro-monarchy and pro-dictatorship elements, we can democratize it. Some of our opponents claim that we are infringing on the independence of the judiciary and has caused much backlash amongst the right.
 
 @ban_sa
 view-if: nazi_urgency >= 3 and sa_banned == 0
