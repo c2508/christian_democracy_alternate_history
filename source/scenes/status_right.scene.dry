@@ -36,7 +36,7 @@ Affiliated Organisations:
 
 Opposition: [+ agriculture_opposition : opposition +]
 
-= Party Satisfaction
+@politics
 
 [? if spd_bruning_support : , <span style="color: #c00000;">**SPD**</span> : [+ spd_satisfaction : opposition +] ?]
 
@@ -54,7 +54,7 @@ Opposition: [+ agriculture_opposition : opposition +]
 
 [? if dnvp_bruning_support : , <span style="color: #3F7BC1;">**DNVP**</span> : [+ dnvp_satisfaction : opposition +] ?]
 
-= Government Finances
+@finances
 
 Monthly revenue:
 
