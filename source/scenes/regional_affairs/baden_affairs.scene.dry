@@ -1,7 +1,7 @@
 title: The Catholic Stronghold
 new-page: true
 is-card: true
-view-if: spd_support = 2
+view-if: spd_bruning_support = 2
 on-arrival: prussian_affairs_timer += 6; month_actions += 1
 tags: regional_affairs
 card-image: img/braun.jpg
