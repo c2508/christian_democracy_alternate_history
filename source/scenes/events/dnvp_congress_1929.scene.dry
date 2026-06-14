@@ -20,10 +20,14 @@ on-display: {!
 
 = The <span style="color: #3E88B3;">**DNVP**</span> Congress
 
-Following Hugenburg’s intransigence regarding the controversial imprisonment paragraph of the ‘Freedom Law’, internal dissent to his autocratic tendencies and centralisation of power have reached a boiling point.
-Meanwhile, a letter written by Treviranus has been leaked, in which he criticized Hugenburg’s leadership and discussed a secession from the <span style="color: #3E88B3;">**DNVP**</span>, with Hugenburg’s allies on the Executive Committee likely to use this as a pretext for expulsion. However, as the leader of the anti-Hugenburg faction on the left, it is certain that he will not go down without a fight. As such, despite Westarp’s best efforts, this party congress looks to culminate in a decisive showdown between the left and right of the <span style="color: #3E88B3;">**DNVP**</span>.
+Following Hugenburg’s intransigence regarding the controversial imprisonment paragraph of the ‘Freedom Law’, internal dissent to his autocratic tendencies and centralisation of power have reached a boiling point. 
 
-  
+Meanwhile, a letter written by Treviranus has been leaked, in which he criticized Hugenburg’s leadership and discussed a secession from the <span style="color: #3E88B3;">**DNVP**</span>, with Hugenburg’s allies on the Executive Committee likely to use this as a pretext for expulsion. However, as the leader of the anti-Hugenburg faction on the left, it is certain that his allies will not let him go down without a fight. Against the backdrop of the vote on the ‘Freedom Law’ in the Reichstag, the events of the upcoming week will culminate in a decisive showdown between the left and right of the <span style="color: #3E88B3;">**DNVP**</span>.
+
+[ ? if young_plan_signatures < 10: With the failure of the Young Plan initiative to reach the required 10% of signatures to be put into a referendum, some of Hugenburg's allies on the Executive Committee have begun to turn on him. His intransigence about the inclusion of the imprisonment paragraph and the surrounding controversy have alienated most of the party and has been attributed as the key cause of the failure. ?]
+
+[ ? if young_plan_signautres > 10: The ability of the Young Plan initiative to garner more than the required 10% of signatures has bolstered Hugenburg’s position within the party. With their goal of forging the <span style="color: #3E88B3;">**DNVP**</span> into a cohesive and rigid "</i>Sammelpartei</i>", Hugenburg’s associates have decided to utilise their influence on the Executive Committee to purge the party of dissidents from the <span style="color: #6D5298;">Christian Social</span>, <span style="color: #0087DC;">Young Conservative</span> wings. ?]
+
 - @sacked_natcon: The <span style="color: #3E88B3;">National Conservatives</span> wrest control of the <span style="color: #3E88B3;">**DNVP**</span> from Hugenburg and his volksich allies.
 - @sacked_youngcon: The <span style="color: #0087DC;">Young Conservatives</span> wrest control of the <span style="color: #3E88B3;">**DNVP**</span> from Hugenburg and his volksich allies.
 - @historical_split: The <span style="color: #6D5298;">Christian Socials</span> and <span style="color: #0087DC;">Young Conservatives</span> have split from the <span style="color: #3E88B3;">**DNVP**</span>.
@@ -35,22 +39,25 @@ view-if: young_plan_signatures < 10
 choose-if: pro_republic > 60 and dnvp_relation > 65 and young_plan_signatures < 10
 subtitle: Hugenburg's experiment comes to an end.
 unavailable-subtitle: Another leader like Westarp is not what the party wants.
-on-arrival: dnvp_leader = "Treviranus"; pro_republic += 2; dnvp_relation += 5; dvp_right += 2; right_strength += 2
+on-arrival: dnvp_leader = "Wildau"; pro_republic += 2; dnvp_relation += 5; dvp_right += 2; right_strength += 2
 face-image: img/portraits/Ludwig_Kaas.jpg
 
-Following the failure of the Young Plan intiative to reach the required 10% of signatures to be put into a referendum, some of Hugenburg's allies on the Execuetive Committee have begun to turn on him. His intransigence about the inclusion of the imprisonment paragraph and the surrounding controversy have alienated most of the party and has been attributed as the key cause of the failure. In the vote over the expulsion of Treviranus, the Execuetive Committee has overwhelmingly sided with Treviranus. 
+As such, in the vote over the expulsion of Treviranus, the Executive Committee has overwhelmingly sided with Treviranus. Emboldened by such a turn of events, the anti-Hugenburg elements on the left have initiated a vote of no-confidence in his leadership, which has passed with votes from the <span style="color: #6D5298;">Christian Socials</span>, <span style="color: #0087DC;">Young Conservatives</span> and the disgruntled <span style="color: #385A38;">agrarian</span> wing. After Hugenburg’s removal, the Executive Committee has voted in Hans-Erdmann von Lindeiner-Wildau as the new party chair.
+ 
+A close associate of Treviranus, Lindeiner-Wildau hails from the nascent <span style="color: #0087DC;">Young Conservatives</span> wing of the <span style="color: #3E88B3;">**DNVP**</span>. With the pre-eminence of industrial and agrarian interests in the <span style="color: #3E88B3;">**DNVP**</span>, Lindeiner-Wildau’s commitment to working within the framework of the republic has earned him the endorsement of influential conservatives like Reusch and Schiele. In light of the <span style="color: #3E88B3;">**DNVP**</span>’s turn to the left, Lindeiner-Wildau will preside over a more pragmatic <span style="color: #3E88B3;">**DNVP**</span>.
 
 @sacked_natcon
 view-if: young_plan_signatures < 10
 choose-if: young_plan_signatures < 10 and (not pro_republic > 60 or not dnvp_relation > 65)
 subtitle: Hugenburg's experiment comes to an end.
 unavailable-subtitle: Most of the <span style="color: #3E88B3;">**DNVP**</span> is still skeptical of Treviranus' ideas. 
-on-arrival: dnvp_leader = "placeholder"; nationalism += 3; dnvp_relation += 3; dvp_right += 1
+on-arrival: dnvp_leader = "Schlange"; nationalism += 3; dnvp_relation += 3; dvp_right += 1
 face-image: img/portraits/Ludwig_Kaas.jpg
 
-Ludwig Kaas has been selected as the chairman of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]. He seems to represent a rightward turn from Marx, and will preside over a [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] less inclined to compromise with the left. 
+As such, in the vote over the expulsion of Treviranus, the Executive Committee has overwhelmingly sided with Treviranus. Emboldened by such a turn of events, the anti-Hugenburg elements on the left have initiated a vote of no-confidence in his leadership, which has passed with votes from the <span style="color: #6D5298;">Christian Socials</span>, <span style="color: #0087DC;">Young Conservatives</span> and the disgruntled <span style="color: #385A38;">agrarian</span> wing. After Hugenburg’s removal, the Executive Committee has voted in Hans Schlange-Schöningen as the new party chair. 
 
-Despite this, Kaas is committed to the current constitutional order and the republic. He maintains a close friendship with Eugenio Pacelli, the Papal Nuncio to Germany, which may prove useful during concordat negotiations.
+An estate owner from Pomerania and a former candidate for the chairmanship back in 1926, Schlange-Schöningen belongs to the <span style="color: #3E88B3;">National Conservative</span> wing of the <span style="color: #3E88B3;">**DNVP**</span>.
+Despite his leadership of the anti-Hugenburg elements on the left, his staunch opposition to the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> has ingratiated him amongst the more intractable elements of the party. Nevertheless, he represents a sharp left from the "<i>Katastrophenpolitik</i>" of Hugenburg and looks to continue the policies of Westarp.
 
 @historical_split
 view-if: young_plan_signatures >= 10
@@ -59,9 +66,9 @@ unavailable-subtitle: Schiele is not yet willing to split from the <span style="
 on-arrival: historical_split += 1; 
 face-image: img/portraits/Ludwig_Kaas.jpg
 
-Ludwig Kaas has been selected as the chairman of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]. He seems to represent a rightward turn from Marx, and will preside over a [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] less inclined to compromise with the left. 
+Despite Westarp’s best attempts to preserve party unity, three rogue delegates from the <span style="color: #6D5298;">Christian Social</span> wing have reneged on an agreement made with Hugenburg and have publicly castigated the <span style="color: #3E88B3;">**DNVP**</span>’s leadership for ‘its inability to tolerate differences of political opinion’ during the vote on the Freedom Law in the Reichstag. Furious at such a betrayal, these three delegates and Treviranus were immediately expelled from the party by the Executive Committee. Overnight, eight other Reichstag deputies have left the party in a show of solidarity, leaving the <span style="color: #3E88B3;">**DNVP**</span> left a shadow of its former self. 
 
-Despite this, Kaas is committed to the current constitutional order and the republic. He maintains a close friendship with Eugenio Pacelli, the Papal Nuncio to Germany, which may prove useful during concordat negotiations.
+However, Schiele and the <span style="color: #385A38;">Agrarian</span> wing have decided to remain in the party in an attempt to change the <span style="color: #3E88B3;">**DNVP**</span>’s direction, limiting the damage of the succession on the party’s Reichstag delegation.
 
 @agrarian_split
 view-if: young_plan_signatures >= 10
@@ -70,6 +77,6 @@ unavailable-subtitle: The situation in the countryside is too dire for the <span
 on-arrival: agrarian_split += 1; 
 face-image: img/portraits/Ludwig_Kaas.jpg
 
-Ludwig Kaas has been selected as the chairman of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]. He seems to represent a rightward turn from Marx, and will preside over a [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] less inclined to compromise with the left. 
+Despite Westarp’s best attempts to preserve party unity, three rogue delegates from the <span style="color: #6D5298;">Christian Social</span> wing have reneged on an agreement made with Hugenburg and have publicly castigated the <span style="color: #3E88B3;">**DNVP**</span>’s leadership for ‘its inability to tolerate differences of political opinion’ during the vote on the Freedom Law in the Reichstag. Furious at such a betrayal, these three delegates and Treviranus were immediately expelled from the party by the Executive Committee. Overnight, eight other Reichstag deputies have left the party in a show of solidarity, leaving the <span style="color: #3E88B3;">**DNVP**</span> left a shadow of its former self. 
 
-Despite this, Kaas is committed to the current constitutional order and the republic. He maintains a close friendship with Eugenio Pacelli, the Papal Nuncio to Germany, which may prove useful during concordat negotiations.
+In light of the worsening agricultural crisis, Schiele and the <span style="color: #385A38;">Agrarian</span> wing have announced their departure from the party, which has led to massive desertions from the left and moderate factions of the <span style="color: #3E88B3;">**DNVP**</span>, Westarp included. The <span style="color: #3E88B3;">**DNVP**</span> now stands in the polls but a spectre of its former self…
