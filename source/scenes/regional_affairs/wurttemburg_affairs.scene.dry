@@ -11,11 +11,13 @@ card-image: img/braun.jpg
 
 Prussia, by far the largest and most important state in Germany, is governed by our party, in a coalition with the <span style="color: #c00000;">**SPD**</span> and <span style="color: #D3C24D;">**DDP**</span>. It is the most stable and democratic state government in Germany, led by the able <span style="color: #c00000;">**Otto Braun**</span>.
 
-We can enact policies in Prussia.
+We can enact policies in Wurttemburg.
 
-- @police_loyalty: Bolster the loyalty of the police.
-- @police_strength: Recruit additional police.
+- @rural: Enact a price floor for agriculture goods.
+- @school: Increase the compulsory school requirement time from 7 to 8 years
 - @judiciary: Purge the judiciary of its reactionary elements.
+- @merge: Begin drawing up plans for a merger of Baden and Wurttemburg.
+- @foreign: Convince foreign companies to set up factories in Wurttemburg.
 - @ban_sa: Ban the <span style="color: #7A3C00;">**SA**</span>, the Nazi paramilitary group.
 - @unban_sa: Reverse the <span style="color: #7A3C00;">**SA**</span> ban.
 - @ban_rfb: Ban the <span style="color: #8B0000;">**RFB**</span>, the Communist paramilitary.
@@ -28,24 +30,30 @@ We can enact policies in Prussia.
 - @easy_discard
 - @cancel_advisor_action
 
-@police_loyalty
-view-if: prussian_police_loyalty < 1
-on-arrival: prussian_police_loyalty += 0.1
+@rural
+on-arrival: rural_z += (4/3)*(1-dissent); unemployed_z -= 2/3; workers_z -= 2/3; dnvp_relation += 3; right_dissent -= 3
 
-# increase police loyalty
 The police have historically been overrun with reactionaries, and we are trying to change this, little by little. We have improved the training and recruitment process to select for a broader demographic than the traditional conservatives, and to put a tighter leash on their political activity. In addition, we set up committees to investigate the ranks of the police and remove those with far-right sympathies. It is a slow and arduous work.
 
-Current police loyalty: [+ prussian_police_loyalty : loyalty +].
-
-@police_strength
-on-arrival: prussian_police_strength += 20
+@school
+on-arrival: rural_z -= 1; dnvp_relation -= 1; ddp_relation += 1; dvp_relation += 1; spd_relation += 1 
 
 We have increased the size of the Prussian police.
 
 @judiciary
-on-arrival: prussian_police_loyalty += 0.05; nationalism -= 3; judicial_reform += 0.5; democratization += 0.5; pro_republic += 2*(1-dissent); new_middle_z += 1*(1-dissent) if democratization >= 3; coup_progress += 0.5
+on-arrival: coup_progress += 0.5
 
-The Prussian judiciary is deeply reactionary, and many abuse their power to favor the political right. By removing the pro-monarchy and pro-dictatorship elements, we can democratize it. Some of our opponents claim that we are infringing on the independence of the judiciary and has caused much backlash amongst the right.
+The judiciary is deeply reactionary, and many abuse their power to favor the political right. By removing the pro-monarchy and pro-dictatorship elements, we can democratize it. Some of our opponents claim that we are infringing on the independence of the judiciary and has caused much backlash amongst the right.
+
+@merge
+on-arrival: spd_relation += 1
+
+We have increased the size of the Prussian police.
+
+@foreign
+on-arrival: unemployment -= 0.1; economic_growth += 0.1; labor_dissent -= 3;
+
+We have increased the size of the Prussian police.
 
 @ban_sa
 view-if: nazi_urgency >= 3 and sa_banned == 0
@@ -85,13 +93,13 @@ on-arrival: rfb_banned = 0; rfb_strength += 50; prussian_police_loyalty -= 0.1
 The Communist <span style="color: #8B0000;">**RFB**</span> is no longer banned.
 
 @negotiate_concordat
-view-if: prussian_concordat_progress < 3
-on-arrival: prussian_concordat_progress += 1;
+view-if:wurttemburg_concordat_progress < 1
+on-arrival: wurttemburg_concordat_progress += 1;
 
 We are making progress towards negotiating a concordat between Wurttemburg and the Catholic church.
 
 @sign_concordat
-view-if: prussian_concordat_progress >= 3 and prussian_concordat = 0
-on-arrival: prussian_concordat = 1; dpv_relation -= 5; catholics_z += 5*(1-dissent)
+view-if: wurttemburg_concordat_progress >= 3 and wurttemburg_concordat = 0
+on-arrival: wurttemburg_concordat = 1; dvp_relation -= 3; catholics_z += 2*(1-dissent)
 
 We have signed a Concordat between the Free People's State of Wurttemburg and the Roman Catholic Church, guaranteeing religious freedom for Catholics in Prussia. This sets the stage for the negotiation of a national Concordat covering all of Germany.
