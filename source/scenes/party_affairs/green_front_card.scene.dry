@@ -27,7 +27,7 @@ The <span style="color: #385A38;">agrarians</span> within our party has reached 
 
 @influence
 subtitle: The radicalism of the <span style="color: #7A3C00;">**NSDAP**</span> and their propagation of the 'Blood and Soil' ideology has much appeal amongst some members of the <span style="color: #0dba1e;">**Green Front**</span>. We must strengthen the <span style="color: #000000;">**Center Party's**</span> and <span style="color: #3E88B3;">**DNVP**</span> influence in the <span style="color: #0dba1e;">**Green Front**</span>, lest the rural electorate turn to the demagogic <span style="color: #7A3C00;">**Nazis**</span> for a solution. 
-on-arrival: nsadp_rural -= 3; nationalism -= 2;
+on-arrival: nsdap_rural -= 3; nationalism -= 2;
 
 We rail against the <span style="color: #7A3C00;">**NSDAP's**</span> miltant tendencies and their irresponsible rhetoric, damaging their credibility in the eyes of the farmers.
 
@@ -42,7 +42,7 @@ We have started discussions with the other organisations under the <span style="
 choose-if: return_to_normalcy = 0
 unavailable-subtitle: We must speed up the creation of the <span style="color: #0dba1e;">**Green Front's**</span> program to address the agricultural crisis at once. The <span style="color: #7A3C00;">**Nazis**</span> have been encroaching on our rural base and they must be stopped at once.
 view-if: green_front_program_start = 1
-on-arrival: green_front_program_timer -= 2;
+on-arrival: green_front_program_timer -= 3;
 
 The program will be available sooner.
 
