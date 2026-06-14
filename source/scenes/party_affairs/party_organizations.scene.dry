@@ -28,7 +28,7 @@ choose-if: resources >= 2
 subtitle: -2 resources
 unavailable-subtitle: Not enough resources.
 view-if: radio = 0
-on-arrival: radio += 1; resources -= 2; new_middle_z += 4*(1 - dissent); old_middle_z += 3*(1 - dissent); workers_z += 2*(1 - dissent); left_labor_dissent += 5; right_labor_dissent += 5; right_strength += 5; socialism += 3*(1 - dissent); nationalism -= 3*(1 - dissent) if pacifism > 1; pro_republic += 3*(1-dissent) if democratization > 1
+on-arrival: radio += 1; resources -= 2; new_middle_z += (4/3)*(1-dissent); old_middle_z += 1*(1 - dissent); workers_z += (2/3)*(1 - dissent); right_dissent += 5; right_strength += 5
 
 Our new radio station allows us to connect to people in a more intimate setting than before, spreading our message along with music and other popular content. 
 
@@ -37,13 +37,13 @@ choose-if: resources >= 1
 subtitle: -1 resources
 unavailable-subtitle: Not enough resources.
 view-if: radio > 0 and radio <= 3
-on-arrival: radio += 1; resources -= 1; new_middle_z += 5*(1 - dissent); old_middle_z += 3*(1 - dissent); workers_z += 3*(1 - dissent); socialism += 3*(1 - dissent); nationalism -= 3*(1 - dissent)*(pacifism-2) if pacifism > 2; pro_republic += 3*(1-dissent)*(democratization-2) if democratization > 2
+on-arrival: radio += 1; resources -= 1; new_middle_z += 2*(1 - dissent); old_middle_z += 1*(1 - dissent); workers_z += 1*(1 - dissent)
 
 Our new radio network has a mix of popular and political programming, and is proving a success.
 
 @radio_3
 view-if: radio > 3 and radio <= 5 and year <= 1931
-on-arrival: radio += 1; new_middle_z += 5*(1 - dissent); old_middle_z += 4*(1 - dissent); workers_z += 4*(1 - dissent); rural_z += 3*(1 - dissent); unemployed_z += 2*(1-dissent); socialism += 3*(1 - dissent); nationalism -= 3*(1 - dissent)*(pacifism-2) if pacifism > 2; pro_republic += 3*(1-dissent)*(democratization-2) if democratization > 2
+on-arrival: radio += 1; new_middle_z +=(5/3)*(1 - dissent); old_middle_z += 1*(1 - dissent); workers_z += 1*(1 - dissent); rural_z += 1*(1 - dissent); unemployed_z += (2/3)*(1-dissent)
 
 Our radio network has become a successful tool for spreading our message. It is now financially self sufficient and does not require any more resources. 
 
@@ -52,8 +52,7 @@ choose-if: resources >= 1
 subtitle: -1 resources
 unavailable-subtitle: Not enough resources.
 view-if: radio > 3 and (radio >= 6 or year >= 1932) and radio <= 9
-on-arrival: radio += 1; resources -= 1; new_middle_z += 3*(1 - dissent); old_middle_z += 2*(1 - dissent); workers_z += 3*(1 - dissent); rural_z += 2*(1 - dissent); unemployed_z += 2*(1-dissent); socialism += 2*(1 - dissent); nationalism -= 2*(1 - dissent)*(pacifism-2) if pacifism > 2; pro_republic += 2*(1-dissent)*(democratization-2) if democratization > 2
-
+on-arrival: radio += 1; resources -= 1; new_middle_z += 1*(1 - dissent); old_middle_z += (2/3)*(1 - dissent); workers_z += 1*(1 - dissent); rural_z += (1/3)*(1 - dissent); unemployed_z += (2/3)*(1-dissent)
 We are continuing to invest in our radio stations. Both commercial and political radio are becoming more prevalent, making it harder to spread our message amidst the competition.
 
 # TODO: differing outcomes based on whether you've seen media, and what kind of media you've supported.
@@ -63,7 +62,7 @@ We are continuing to invest in our radio stations. Both commercial and political
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
-on-arrival: resources -= 1; workers_aid += 1; unemployed_z += 5*(1 - dissent);
+on-arrival: resources -= 1; workers_aid += 1; unemployed_z += 2*(1 - dissent); catholics_z += 1*(1-dissent)
 
 We have increased funding to Catholic Charities. [? if black_thursday_seen > 0 : In an age of economic crisis, this will be helpful for improving our standing among the impoverished. ?]
 
