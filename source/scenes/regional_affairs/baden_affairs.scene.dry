@@ -16,6 +16,7 @@ We can enact policies in Baden.
 - @school: Solve the Baden School Issue
 - @catholic: Protect Catholic Rights
 - @judiciary: Purge the judiciary of its reactionary elements.
+- @house: Build low-cost housing for workers in urban areas.
 - @ban_sa: Ban the <span style="color: #7A3C00;">**SA**</span>, the Nazi paramilitary group.
 - @unban_sa: Reverse the <span style="color: #7A3C00;">**SA**</span> ban.
 - @ban_rfb: Ban the <span style="color: #8B0000;">**RFB**</span>, the Communist paramilitary.
@@ -46,6 +47,13 @@ We have increased the size of the Prussian police.
 on-arrival: prussian_police_loyalty += 0.05; nationalism -= 3; judicial_reform += 0.5; democratization += 0.5; pro_republic += 2*(1-dissent); new_middle_z += 1*(1-dissent) if democratization >= 3; coup_progress += 0.5
 
 The Prussian judiciary is deeply reactionary, and many abuse their power to favor the political right. By removing the pro-monarchy and pro-dictatorship elements, we can democratize it. Some of our opponents claim that we are infringing on the independence of the judiciary and has caused much backlash amongst the right.
+
+@house
+choose-if: unemployed_2 < 15 
+unavailable-subtitle: There are more pressing matters at hand.
+on-arrival: workers_z += 2*(1-dissent); workers_sol += 1
+
+We have managed to build better housing for workers in cities such as Mannheim and Karlsruhe.
 
 @ban_sa
 view-if: nazi_urgency >= 3 and sa_banned == 0
