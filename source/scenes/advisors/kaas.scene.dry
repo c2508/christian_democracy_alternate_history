@@ -20,10 +20,9 @@ title: Negotiate a Concordat in Prussia
 subtitle: Kaas leverages his contacts within the Vatican to start negotiations for a Prussian Concordat.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 view-if: prussian_concordat_progress < 3 and z_in_prussia = 1
-on-arrival: prussian_concordat_progress += 1; left_labor_dissent -= 2; right_labor_dissent -= 2; left_dissent -= 2; center_dissent -= 2; right_dissent -= 2
+on-arrival: prussian_concordat_progress += 1; labor_dissent -= 2; right_dissent -= 2; left_dissent -= 2; center_dissent -= 2; advisor_action_timer = 6;
 
 We are making progress towards negotiating a concordat between Prussia and the Catholic church.
-
 
 @sign_prussian_concordat_
 title: We can sign a Concordat in Prussia now
