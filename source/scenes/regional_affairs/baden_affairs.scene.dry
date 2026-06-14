@@ -13,7 +13,7 @@ Prussia, by far the largest and most important state in Germany, is governed by 
 
 We can enact policies in Baden.
 
-- @schools: Solve the Baden School Issue
+- @school: Solve the Baden School Issue
 - @catholic: Protect Catholic Rights
 - @judiciary: Purge the judiciary of its reactionary elements.
 - @ban_sa: Ban the <span style="color: #7A3C00;">**SA**</span>, the Nazi paramilitary group.
@@ -28,9 +28,9 @@ We can enact policies in Baden.
 - @easy_discard
 - @cancel_advisor_action
 
-@schools
-view-if: prussian_police_loyalty < 1
-on-arrival: prussian_police_loyalty += 0.1
+@school
+view-if: baden_school_issue_solved = 0 and school_issue_solved = 0 
+on-arrival: baden_school_issue_solved += 1
 
 # increase police loyalty
 The police have historically been overrun with reactionaries, and we are trying to change this, little by little. We have improved the training and recruitment process to select for a broader demographic than the traditional conservatives, and to put a tighter leash on their political activity. In addition, we set up committees to investigate the ranks of the police and remove those with far-right sympathies. It is a slow and arduous work.
@@ -85,13 +85,17 @@ on-arrival: rfb_banned = 0; rfb_strength += 50; prussian_police_loyalty -= 0.1
 The Communist <span style="color: #8B0000;">**RFB**</span> is no longer banned.
 
 @negotiate_concordat
-view-if: prussian_concordat_progress < 3
-on-arrival: prussian_concordat_progress += 1;
+view-if: baden_concordat_progress = 0 
+choose-if: baden_school_issue_solved = 1 or school_issue_solved = 1
+unavailable-subititle: The status of education in the concordat is in question.
+on-arrival: baden_concordat_progress += 1;
 
 We are making progress towards negotiating a concordat between Baden and the Catholic church.
 
 @sign_concordat
-view-if: prussian_concordat_progress >= 1 and prussian_concordat = 0
-on-arrival: prussian_concordat = 1; dvp_relation -= 5; catholics_z += 5*(1-dissent)
+view-if: baden_concordat_progress >= 1 and baden_concordat = 0 
+choose-if: baden_school_issue_solved = 1 or school_issue_solved = 1
+unavailable-subititle: The status of education in the concordat is in question.
+on-arrival: baden_concordat = 1; dvp_relation -= 3; catholics_z += 3*(1-dissent)
 
 We have signed a Concordat between the Republic of Baden and the Roman Catholic Church, guaranteeing religious freedom for Catholics in Prussia. This sets the stage for the negotiation of a national Concordat covering all of Germany.
