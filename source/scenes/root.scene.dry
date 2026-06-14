@@ -185,6 +185,9 @@ Q.hugenburg_run = 0
 Q.duesterberg_run = 0
 Q.goring_run = 0
 Q.hitler_run = 0
+Q.baden_school_issue_solved = 0;
+Q.school_issue_solved = 0;
+
 
 Q.young_plan_signatures = 0;
 
