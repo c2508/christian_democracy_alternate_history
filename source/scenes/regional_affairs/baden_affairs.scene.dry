@@ -2,7 +2,7 @@ title: The Bastion of <span style="color: #FFCC00;">Liberalism</span>
 new-page: true
 is-card: true
 view-if: spd_bruning_support = 2
-on-arrival: month_actions += 1
+on-arrival: prussian_affairs_timer += 2; month_actions += 1
 tags: regional_affairs
 card-image: img/braun.jpg
 #subtitle: The state government of Baden is a <span style="color: #FFCC00;">liberal</span> stronghold ...
