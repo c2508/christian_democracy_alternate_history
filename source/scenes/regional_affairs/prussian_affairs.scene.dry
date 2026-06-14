@@ -104,6 +104,6 @@ We are making progress towards negotiating a concordat between Prussia and the C
 
 @sign_concordat
 view-if: prussian_concordat_progress >= 3 and prussian_concordat = 0
-on-arrival: prussian_concordat = 1; dvp_relation -= 5; catholics_z += 5*(1-dissent)
+on-arrival: prussian_concordat = 1; dvp_relation -= 5; catholics_z += 5*(1-dissent); adjustmentFactors_z_prussia += 0.03;
 
 We have signed a Concordat between the Free State of Prussia and the Roman Catholic Church, guaranteeing religious freedom for Catholics in Prussia. This sets the stage for the negotiation of a national Concordat covering all of Germany.
