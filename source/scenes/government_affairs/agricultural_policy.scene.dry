@@ -15,7 +15,7 @@ Agricultural policy has been the domain of the Center Party and there is much ne
 - @land_reform
 - @agricultural_finance
 - @rural_infrastructure
-- @state_buyer
+- @subsidies
 - @root: Do not enact any policies for now.
 - @easy_discard
 - @cancel_advisor_action
@@ -24,27 +24,26 @@ Agricultural policy has been the domain of the Center Party and there is much ne
 title: Support agricultural cooperatives.
 subtitle: Advance legislation to aid agricultural cooperatives.
 view-if: works_councils == 0
-on-arrival: rural_z += 1*(1-dissent); right_dissent -= 3; right_strength += 4; rural_nsdap -= 1*(1-dissent); rural_others -= 1*(1-dissent); unemployed -= 0.2; unemployed -= 0.8 if unemployed > 9; economic_growth += 0.2
+on-arrival: rural_z += (1/3)*(1-dissent); right_dissent -= 3; right_strength += 4; rural_nsdap -= 1*(1-dissent); rural_others -= 1*(1-dissent); unemployed -= 0.2; unemployed -= 0.8 if unemployed > 9; economic_growth += 0.2
 max-visits: 1
 
-In line with the VdB's policies, we have supported the establishment and expansion of agricultural cooperatives to aid small farmers. Our rural base is pleased.
+In line with the <span style="color: #000000;">**VdB's**</span> policies, we have supported the establishment and expansion of agricultural cooperatives to aid small farmers. Our rural base is pleased.
 
 @land_reform
 title: Land Reform
-subtitle: -1 budget - Break up the large aristocratic estates and give land to landless workers.
-unavailable-subtitle: [? if budget <= 0 : Requires 1 budget. ?] [? if judicial_reform < 2 : The judiciary would never allow this. ?]
-choose-if: judicial_reform >= 2 and budget > 0
+subtitle: -2 budget - Break up indebted land estates and distribute it to smallholder farmers
+unavailable-subtitle: [? if budget <= 1 : Requires 2 budget. ?] [? if judicial_reform < 2 : The judiciary would never allow this. ?][? if rubicon_crossed = 0 : Why would we do this? ?][ ? if agricultural_opposition > 80 : The <span style="color: #385A38;">**RLB**</span> would never allow this. ?]
+choose-if: judicial_reform >= 2 and budget > 1 and rubicon_crossed = 1 and agricultural_opposition <= 80 and spd_r > 67
 on-arrival: budget -= 1; land_reform += 1; coalition_dissent += 1; rural_z += (4/3)*(1-dissent); rural_nsdap -= 2*(1-dissent); unemployed -= 1 if unemployed >= 5; dvp_relation -= 5; spd_relation += 4; dnvp_relation -= 5; left_strength += 8; left_dissent -= 5; right_dissent += 3; rural_sol += 3; rural_policy += 1; coup_progress += 1; agriculture_goal_completed += 1;
 max-visits: 4
 
-With our policy of land reform, we are acquiring farmland from large estates, and giving the land to farmworkers' associations and small peasants. In essence, this makes German agriculture more productive while breaking the insolvent semi-feudal property relations present in East Prussia and other areas with large estates. The Junkers and our right wing despise our intrusion into the sacredness of private property, while leftists are cautiously optimistic.
-
+dcijdjmdcidcmd
 
 @agricultural_finance
 title: Agricultural Financing
 subtitle: -1 budget - Increase financing for agricultural credit and insurance.
 choose-if: budget >= 1
-on-arrival: budget -= 1; agricultural_finance += 1; rural_z += 1*(1-dissent); rural_nsdap -= 1*(1-dissent); right_dissent -= 4; rural_sol += 4; rural_policy += 1; economic_growth += 0.2;
+on-arrival: budget -= 1; agricultural_finance += 1; rural_z += (1/3)*(1-dissent); rural_nsdap -= 1*(1-dissent); right_dissent -= 4; rural_sol += 4; rural_policy += 1; economic_growth += 0.2; spd_left += 1;
 
 We have increased financial support for small farmers, providing access to credit and insurance, saving them from privation. The right in our party are pleased with our support for German agriculture.
 
@@ -53,15 +52,16 @@ We have increased financial support for small farmers, providing access to credi
 title: Rural Infrastructure
 subtitle: -1 budget - Invest in the more rural regions of Germany
 choose-if: budget >= 1
-on-arrival: budget -= 1; rural_z += (4/3)*(1-dissent); rural_sol += 3; economic_growth += 0.2; right_dissent -= 3;
+on-arrival: budget -= 1; rural_z += (4/3)*(1-dissent); rural_sol += 3; economic_growth += 0.2; right_dissent -= 3; spd_left += 1
 
 We have increased investment in infrastructure for the less developed parts of Germany, building roads and bridges for farmers to use. [? if black_thursday_seen : This also helps to reduce unemployment in these dire times. ?]
 
-@state_buyer
-title: State Buyer
-subtitle: -2 budget - Create a state monopoly for grain purchases, guaranteeing prices for farmers and stable prices for consumers. [? if judicial_reform < 2 : The judiciary would never allow this. ?]
+@subsidies
+title: Agricultural Subsidies
+subtitle: -2 budget - Expand state subsidies for agricultural goods
 choose-if: budget >= 2 and judicial_reform >= 2
-on-arrival: budget -= 2; state_buyer = 1; rural_z += 2*(1-dissent); rural_nsdap -= 1*(1-dissent); workers_z += 1*(1-dissent); unemployed_spd += 1*(1-dissent); coalition_dissent += 1 if (in_grand_coalition or in_weimar_coalition); dvp_relation -= 5; rural_policy += 2; capital_strike_progress += 1; economic_growth += 0.4;
+on-arrival: budget -= 2; rural_z += 2*(1-dissent); rural_nsdap -= 1*(1-dissent); workers_z += (1/3)*(1-dissent); unemployed_spd += 1*(1-dissent); coalition_dissent += 1 if (in_grand_coalition or in_weimar_coalition); dvp_relation -= 5; rural_policy += 2; economic_growth += 0.4; worker_sol += 1; rural_sol += 2;
 max-visits: 1
 
-Our new purchasing agency guarantees fair prices for farmers, while also providing lower food prices for workers and the urban poor. This policy necessitates heavy spending and an unprecedented level of state intervention in the economy, raising the ire of conservative economists.
+Subsidising the production of agricutltural goods for German farmers helps keep their costs of production low, which leads to lower prices for consumers. While our rural and industrial electorate stand to gain from this policy, this does not solve the structural problems plaguing German Agriculture.
+
