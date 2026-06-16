@@ -18,7 +18,7 @@ title: Liberal relations
 subtitle: Forming closer ties with the <span style="color: #D3C24D;">liberals</span>
 choose-if: advisor_action_timer == 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on arrival: advisor_action_timer = 6; ddp_relation += 4*(1-dissent); dvp_relation += 6*(1-dissent); center_strength += 5
+on arrival: advisor_action_timer = 6; ddp_relation += 5*(1-dissent); dvp_relation += 5*(1-dissent); center_strength += 5
 
 We have improved our relations with the <span style="color: #D3C24D;">liberals</span>.
 
