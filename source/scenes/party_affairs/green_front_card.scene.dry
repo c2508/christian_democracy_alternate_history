@@ -12,7 +12,7 @@ tags: party_affairs
 As an umbrella organisation representing organised agriculture, the formation of the <span style="color: #0dba1e;">**Green Front**</span> is a response to the growing crisis in the countryside. With the elements of the <span style="color: #3E88B3;">**DNVP**</span>, the <span style="color: #000000;">**Center Party**</span> and the <span style="color: #006400;">**CNBLP**</span>, it possesses sizable influence in German Politics. How might we utilise the <span style="color: #0dba1e;">**Green Front**</span> to advance our goals?
 
 - @dnvp: Improve our relations with the <span style="color: #3E88B3;">**DNVP**</span>
-- @influence: Root out those with sympathies towards the <span style="color: #7A3C00;">**NSDAP**</span> within the <span style="color: #0dba1e;">**Green Front**</span>
+- @influence: Root out those with sympathies towards the <span style="color: #7A3C00;">**NSDAP**</span> within the <span style="color: #0dba1e;">Green Front</span>
 - @program: Start formulating the <span style="color: #0dba1e;">Green Front</span> program
 - @speedup: Organise more meetings to draft the <span style="color: #0dba1e;">Green Front</span> program
 - @pacify: Reiterate our commitment to helping German farmers
@@ -36,7 +36,7 @@ subtitle: Agriculture is the backbone of Germany, yet the countryside's situatio
 view-if: green_front_program_start = 0
 on-arrival: green_front_program_start += 1; green_front_program_timer += 24;
 
-We have started discussions with the other organisations under the <span style="color: #0dba1e;">**Green Front**</span> to draft a farm program satisfactory to all. Given the strong influence labor holds in the <span style="color: #000000;">**Center Party's**</span>, this will not be an easy task.
+We have started discussions with the other organisations under the <span style="color: #0dba1e;">Green Front</span> to draft a farm program satisfactory to all. Given the strong influence labor holds in the <span style="color: #000000;">**Center Party's**</span>, this will not be an easy task.
 
 @speedup
 choose-if: return_to_normalcy = 0
@@ -47,8 +47,8 @@ on-arrival: green_front_program_timer -= 3;
 The program will be available sooner.
 
 @pacify
-title: With the appointment of Martin Schiele as agricultural minister, it is evident that Hindenburg views the agricultural crisis as a pressing issue. Through the <span style="color: #0dba1e;">**Green Front**</span>, we assauge the concerns of the <span style="color: #385A38;">**RLB**</span>, ensuring that Hindenburg maintains his confidence in Bruning's chancellorship.
+title: With the appointment of Martin Schiele as agricultural minister, it is evident that <span style="color: #808080;">Hindenburg</span> views the agricultural crisis as a pressing issue. Through the <span style="color: #0dba1e;">**Green Front**</span>, we assauge the concerns of the <span style="color: #385A38;">**RLB**</span>, ensuring that <span style="color: #808080;">Hindenburg</span> maintains his confidence in Bruning's chancellorship.
 view-if: rubicon_crossed = 1 and agriculture_opposition > 10
-on-arrival: agriculture_opposition -= 10
+on-arrival: agriculture_opposition -= 10; hindenburg_anger -= 5;
 
 We defend Bruning's unpopular policies and reassure elements of the <span style="color: #0dba1e;">**Green Front**</span> of our continued focus on agricultural issues. 
