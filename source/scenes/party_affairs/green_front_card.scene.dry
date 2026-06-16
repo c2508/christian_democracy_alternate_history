@@ -47,7 +47,7 @@ on-arrival: green_front_program_timer -= 3;
 The program will be available sooner.
 
 @pacify
-title: Rally against antisemitism and in defense of Jewish Germans.
+title: With the appointment of Martin Schiele as agricultural minister, it is evident that Hindenburg views the agricultural crisis as a pressing issue. Through the <span style="color: #0dba1e;">**Green Front**</span>, we assauge the concerns of the <span style="color: #385A38;">**RLB**</span>, ensuring that Hindenburg maintains his confidence in Bruning's chancellorship.
 view-if: rubicon_crossed = 1 and agriculture_opposition > 10
 on-arrival: agriculture_opposition -= 10
 
