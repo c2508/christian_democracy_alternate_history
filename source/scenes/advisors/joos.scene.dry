@@ -7,7 +7,7 @@ new-page: true
 
 = Joseph Joos
 
-Joos is a strong supporter of Wirth and the left wing of the <span style="color: #000000;">**Center Party**</span>. He also sits on the Federal Executive Committee of the Reichbanner. 
+Joos is a strong supporter of Wirth and the left wing of the <span style="color: #000000;">**Center Party**</span>. He also sits on the Federal Executive Committee of the <span style="color: #c00000;">**Reichsbanner**</span>. 
 
 - @nazi_urgency
 - @media_
@@ -33,8 +33,8 @@ on-arrival: advisor_action_timer = 6; media_timer -= 6; last_advisor_action = 1
 go-to: media
 
 @build_reichsbanner
-title: Reichsbanner
-subtitle: Joos supports providing more resources to the Reichsbanner.
+title: <span style="color: #c00000;">**Reichsbanner**</span>
+subtitle: Joos supports providing more resources to the <span style="color: #c00000;">**Reichsbanner**</span>.
 choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 on-arrival: advisor_action_timer = 6; reichsbanner_timer -= 6; last_advisor_action = 1
