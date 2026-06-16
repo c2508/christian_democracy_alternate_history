@@ -17,19 +17,19 @@ Following the passage of a decree to increase wages of miners in the Ruhr by 7%,
 
 @support_labor
 subtitle: Popular amongst our labor unions, this will alienate the industrialists.
-on-arrival: labor_strength += 5; labor_dissent -= 5; right_dissent += 5; workers_z += 4*(1-dissent); coalition_dissent += 1; spd_relations += 4; dvp_relation -= 4; capital_strike_progress += 1 if dvp_relation <= 30; capital_strike_progress += 1 if unemployed > 15; capital_strike_progress += 1 if unemployed > 24; labor_goal_completed += 1; inflation += 0.1; pro_labor += 1; strike_term_seen += 1; economic_growth -= 0.1;
+on-arrival: labor_strength += 5; labor_dissent -= 5; catholics_z += (1/3); right_dissent += 5; workers_z += (4/3)*(1-dissent); coalition_dissent += 1; spd_relations += 4; dvp_relation -= 4; capital_strike_progress += 1 if dvp_relation <= 30; capital_strike_progress += 1 if unemployed > 15; capital_strike_progress += 1 if unemployed > 24; labor_goal_completed += 1; inflation += 0.1; pro_labor += 1; strike_term_seen += 1; economic_growth -= 0.1; workers_spd += (3/2) if spd_in_government = 1;
 
 By declaring the affected workers as 'unemployed' to make them eligible for unemployment insurance benefits, we have mitigated the worst effects of the lockout. As a result, the industrialists have been forced to reopen the factories. 
 
 @support_employers
 subtitle: Popular among the industrialists, much less so among the workers.
-on-arrival: labor_dissent += 8; workers_z -= 5; coalition_dissent -= 1 if coalition_dissent > 0; dvp_relation += 5; dnvp_relation += 5; spd_relation -= 5; workers_kpd += 3; kpd_coalition_dissent += 1; kpd_relation -= 8; capital_strike_progress -= 1 if capital_strike_progress > 1; capital_strike_progress -= 1 if capital_strike_progress > 8; pro_labor -= 1; strike_term_seen += 1
+on-arrival: labor_dissent += 8; workers_z -= (4/3); coalition_dissent -= 1 if coalition_dissent > 0; dvp_relation += 5; dnvp_relation += 5; spd_relation -= 5; workers_kpd += 3; kpd_coalition_dissent += 1; kpd_relation -= 8; capital_strike_progress -= 1 if capital_strike_progress > 1; capital_strike_progress -= 1 if capital_strike_progress > 8; pro_labor -= 1; strike_term_seen += 1; workers_spd -= 1 if spd_in_government = 1; 
 
 Rescinding the wage degree has led to massive backlash from our labor unions, with workers furious over our deference to the whims of heavy industry. Meanhwile, our coalition partners are supportive of this course of action.
 
 @balance
 subtitle: Strike a compromise between the two opposing sides
-on-arrival: labor_dissent += 4; workers_z -= 2; spd_relation -= 3; strike_term_seen += 1
+on-arrival: labor_dissent += 4; workers_z -= (2/3); spd_relation -= 3; strike_term_seen += 1
 
 Halving the proposed wage increase, industrialists are pleased with the concession and have opened up their factories, while workers are unhappy over the compromise.
 
