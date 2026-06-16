@@ -49,7 +49,7 @@ unavailable-subtitle: Not enough resources.
 choose-if: resources >= 2 and fund = 0
 tags: demands
 view-if: fund = 0
-on-arrival: rpm_points += 3; fund += 1; resources -= 2; right_dissent -= 4; catholic_z += 4*(1-dissent)
+on-arrival: rpm_points += 3; fund += 1; resources -= 2; right_dissent -= 5; catholic_z += 4*(1-dissent)
 go-to: ministries
 
 While this appeases the Catholic peasants, Protestant farmers are unhappy at their exclusion.
@@ -61,7 +61,7 @@ unavailable-subtitle: Not enough budget.
 tags: demands
 choose-if: coop = 0 and budget >= 1
 view-if: coop = 0
-on-arrival: rpm_points += 3; coop += 1; budget -= 1; economic_growth += 0.3; unemployed -= 0.3; 
+on-arrival: rpm_points += 3; coop += 1; budget -= 1; economic_growth += 0.3; unemployed -= 0.2; 
 go-to: ministries
 
 We shall allocate more government funds to support agriculture cooperatives.
@@ -114,7 +114,7 @@ subtitle: Drop this concession +2 resources
 choose-if: fund = 1
 tags: drop_demands
 view-if: fund = 1
-on-arrival: rpm_points -= 3; fund -= 1; resources += 2; right_dissent += 4; catholics_z -= 4*(1-dissent)
+on-arrival: rpm_points -= 3; fund -= 1; resources += 2; right_dissent += 5; catholics_z -= 4*(1-dissent)
 go-to: ministries
 
 We have decided to drop this concession.
@@ -125,7 +125,7 @@ subtitle: Drop this concession +1 budget
 tags: drop_demands
 choose-if: coop = 1
 view-if: coop = 1
-on-arrival: rpm_points -= 3; coop -= 1; budget += 1; economic_growth -= 0.3; unemployed += 0.3; 
+on-arrival: rpm_points -= 3; coop -= 1; budget += 1; economic_growth -= 0.3; unemployed += 0.2; 
 go-to: ministries
 
 We have decided to drop this concession.
