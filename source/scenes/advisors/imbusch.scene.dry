@@ -19,7 +19,7 @@ title: Rally for democracy
 subtitle: Rally our party and the German people to defend democracy and freedom.
 choose-if: advisor_action_timer == 0 
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on_arrival: advisor_action_timer = 6; pro_republic += 4; democratization += 1; left_strength += 5; left_labor_strength += 3; old_middle_z += 2*(1-dissent) if democratization >= 4; catholics_z += 4*(1-dissent) if democratization >= 4
+on_arrival: advisor_action_timer = 6; pro_republic += 5; democratization += 1; left_strength += 5; old_middle_z += 1*(1-dissent) if democratization >= 4; catholics_z += 4*(1-dissent) if democratization >= 4
 
 Imbusch helps us to rally the people in defense of democracy.
 
@@ -28,9 +28,9 @@ title: Union-party coordination
 subtitle: Reduce dissent among the unions.
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; left_labor_dissent -= 5; left_labor_strength += 5; right_labor_dissent -= 3; right_labor_strength += 3
+on-arrival: advisor_action_timer = 6; labor_dissent -= 10; labor_strength += 8
 
-We have reduced tensions with the labor factions, and increased their strength within the party.
+We have reduced tensions within the labor faction, and increased their strength within the party.
 
 @labor_opposition
 title: Defending Austerity
@@ -38,6 +38,6 @@ subtitle: Convince the labor unions to accept Bruning's salary cuts
 view-if: rubicon_crossed = 1
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if labor_opposition < 10 : The labor unions are pleased with Bruning. ?]
-on-arrival: advisor_action_timer = 6; labor_opposition -= 10; 
+on-arrival: advisor_action_timer = 6; labor_opposition -= 10; labor_dissent -= 3;
 
 We have managed to soften the opposition of some union members towards Bruning's unpopular salary cuts
