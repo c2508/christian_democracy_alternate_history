@@ -21,7 +21,7 @@ title: Union-party coordination
 subtitle: Reduce dissent among the unions.
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; left_labor_dissent -= 3; right_labor_dissent -= 7
+on-arrival: advisor_action_timer = 6; labor_dissent -= 10
 
 We have reduced tensions with the Labor factions.
 
@@ -30,7 +30,7 @@ title: Organising Workers
 subtitle: Improve our standing among the workers. 
 choose-if: advisor_action_timer <= 0
 unavailable subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; workers_z += 5*(1-dissent); right_labor_strength += 2
+on-arrival: advisor_action_timer = 6; workers_z += (5/3)*(1-dissent); labor_strength += 2
 
 Brauns has rallied workers to support the <span style="color: #000000;">Center Party</span>.
 
@@ -40,7 +40,7 @@ subtitle: Can we expand our party beyond Catholics?
 view-if: peoples_party = 0
 choose-if: peoples_party_support <= 4 and advisor_action_timer = 0 and peoples_party = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if peoples_party_support > 4: There is already substantial support for an interconfessional Christian Party. ?]
-on-arrival: advisor_action_timer = 6; peoples_party_support += 1; left_labor_dissent += 2; left_dissent += 2; center_dissent += 1
+on-arrival: advisor_action_timer = 6; peoples_party_support += 1; left_labor_dissent += 2; left_dissent += 5; center_dissent += 3
 
 We are building up support for the idea of an interconfessional Christian Party.
 
@@ -50,7 +50,7 @@ subtitle: Can we expand our party beyond Catholics?
 view-if: peoples_party = 0
 choose-if: peoples_party_support >= 3 and advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if peoples_party_support < 3: There is not enough support for this policy within the party. ?]
-on-arrival: advisor_action_timer = 6; left_labor_dissent += 5; left_dissent += 5; center_dissent += 3
+on-arrival: advisor_action_timer = 6; left_labor_dissent += 5; left_dissent += 8; center_dissent += 5
 go-to: peoples_party
 
 
