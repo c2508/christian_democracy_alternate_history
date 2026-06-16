@@ -325,6 +325,7 @@ Q.industry_opposition = 35;
 Q.labor_opposition = 25;
 Q.agrarian_split = 0;
 Q.historical_split = 0;
+Q.special_interests = 100;
 
 
 // quality of life (as % of 1928 - currently unused - should be welfare-adjusted.)
