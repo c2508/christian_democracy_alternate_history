@@ -21,20 +21,20 @@ subtitle: An emergency infusion of resources.
 view-if: difficulty < 1
 choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; emergency_used += 1; resources += 2; workers_z -= 2 if emergency_used > 1; labor_dissent += 3 if emergency_used > 1; unemployed_z -= 2 if emergency_used > 1; rural_z -= 2 if emergency_used > 2; unemployed_z -= 2 if emergency_used > 2; left_labor_dissent += 5 if emergency_used > 2; labor_dissent += 5 if emergency_used > 2
+on-arrival: advisor_action_timer = 6; emergency_used += 1; resources += 2; workers_z -= 1 if emergency_used > 1; labor_dissent += 3 if emergency_used > 1; unemployed_z -= 2 if emergency_used > 1; rural_z -= 1 if emergency_used > 2; unemployed_z -= 1 if emergency_used > 2; catholic_z -= 3 if emergency_used > 2; labor_dissent += 5 if emergency_used > 2; labor_dissent += 5 if emergency_used > 2
 
 [? if emergency_used <= 1: Marx has leveraged his position to pull in donations and arrange quick loans. ?][? if emergency_used > 1 and emergency_used < 3: Discontent is brewing among the Center's rank and file due to our persistent attempts at begging for money. ?][? if emergency_used > 2: We’re really scraping the barrel now—committed members are pressured into selling their valuables, while many others leave in frustration. ?]
 
 We have gained 2 resources.
 
 @liberal_relation
-title: <span style="color: #D3C24D;">Liberal</span> Relations
-subtitle: Forge closer cooperation with the <span style="color: #D3C24D;">liberal</span> parties
+title: <span style="color: #FFCC00;">Liberal</span> Relations
+subtitle: Forge closer cooperation with the <span style="color: #FFCC00;">liberal</span> parties
 choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 on-arrival: advisor_action_timer = 6; ddp_relation += 6; dvp_relation += 6; lvp_relation += 6
 
-We have managed to improve our relations with the <span style="color: #D3C24D;">liberals</span>. 
+We have managed to improve our relations with the <span style="color: #FFCC00;">liberals</span>. 
 
 @party_discipline
 title: Party Discipline
