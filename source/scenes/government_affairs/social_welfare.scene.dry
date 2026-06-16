@@ -50,7 +50,7 @@ We have kept welfare spending the same.
 
 
 @spending_same_post_depression
-view-if: unemployed > 1
+view-if: unemployed > 15
 on-arrival: workers_z -= 1; unemployed_z -= 1; catholics_z -= 1; welfare -= 1; labor_dissent += 4
 subtitle: The increased levels of unemployment necessitate more spending on aid.
 
