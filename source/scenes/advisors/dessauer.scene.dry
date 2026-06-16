@@ -21,7 +21,7 @@ choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 on-arrival: advisor_action_timer = 6; spd_relation += 5*(1-dissent); ddp_relation += 5*(1-dissent)
 
-We’ve been able to strengthen our relations with the involved parties through the participation of figures like Heuss and Mierendorff, members of the DDP and SPD respectively.
+We’ve been able to strengthen our relations with the involved parties through the participation of figures like Heuss and Mierendorff, members of the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> and <span style="color: #c00000;">**SPD**</span> respectively.
 
 @media_enemies
 title: Editorial Line
@@ -32,28 +32,28 @@ on-arrival: advisor_action_timer = 6
 
 Which party should we criticise? 
 
-- @against_dvp: DVP
-- @against_dnvp: DNVP
-- @against_nsdap: NSDAP
+- @against_dvp: <span style="color: #C0A054;">**DVP**</span>
+- @against_dnvp: <span style="color: #3E88B3;">**DNVP**</span>
+- @against_nsdap: <span style="color: #7A3C00;">**NSDAP**</span>
 
 @against_dvp
-on-arrival: dvp_relations -= 4; dvp_old_middle -= 3; dvp_right += 1
+on-arrival: dvp_relations -= 5; dvp_old_middle -= 3; dvp_right += 1
 
-Rhein-Mainische Volkszeitung prints editorials to attack the policies of the DVP.
+Rhein-Mainische Volkszeitung prints editorials to attack the policies of the <span style="color: #C0A054;">**DVP**</span>.
 
 @against_dnvp
-on-arrival: enemies = "DNVP"; right_strength -= 3; rural_dnvp -= 3; dnvp_relations -= 4
+on-arrival: enemies = "DNVP"; right_strength -= 3; rural_dnvp -= 3; dnvp_relations -= 5
 
-Rhein-Mainische Volkszeitung prints editorials to attack the policies of the DNVP.
+Rhein-Mainische Volkszeitung prints editorials to attack the policies of the <span style="color: #3E88B3;">**DNVP**</span>.
 
 @against_nsdap
-on-arrival: enemies = "NSDAP"; left_strength += 5; nazi_urgency += 1; workers_nsdap -= 3;
+on-arrival: enemies = "NSDAP"; left_strength += 5; nazi_urgency += 1; workers_nsdap -= 3; nsdap_relation -= 5;
 
-Rhein-Mainische Volkszeitung prints editorials to attack the policies of the NSDAP.
+Rhein-Mainische Volkszeitung prints editorials to attack the policies of the <span style="color: #7A3C00;">**NSDAP**</span>.
 
 @build_reichsbanner
-title: Reichsbanner
-subtitle: Dessauer supports providing more resources to the Reichsbanner.
+title: <span style="color: #c00000;">**Reichsbanner**</span>
+subtitle: Dessauer supports providing more resources to the <span style="color: #c00000;">**Reichsbanner**</span>.
 choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if z_endorse_rb = 0: The <span style="color: #000000;">Center Party</span> has not endorsed the Reichbanner yet. ?] 
 
