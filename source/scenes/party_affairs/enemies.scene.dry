@@ -38,7 +38,7 @@ on-arrival: enemies = "NSDAP"; left_strength += 5; nazi_urgency += 1; workers_ns
 @special_interest
 choose-if: year <= 1932
 unavailable-subtitle: [? if year <= 1932: The <span style="color: #909090;">**special interest**</span> parties have become irrelevant in light of the rise of the <span style="color: #7A3C00;">**NSDAP**</span>. ?}
-on-arrival: enemies = "special interests"; workers_other -= 1; old_middle_other -= 1; old_middle_wp -= 1; rural_cnblp -= 1; 
+on-arrival: enemies = "special interests"; workers_other -= 1; old_middle_other -= 1; old_middle_wp -= 1; rural_cnblp -= 1; special_interests -= 3
 
 We critisise the increasing materialism of the German electorate and their pivot towards narrow <span style="color: #909090;">**special interest**</span> parties. 
 
