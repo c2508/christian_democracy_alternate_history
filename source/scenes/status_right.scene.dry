@@ -10,7 +10,7 @@ Chancellor: <span style="color: #000000;">Heinrich Bruning</span> (<span style="
 
 Parties supporting the government: <span style="color: #000000;">**Z**</span>, <span style="color: #69A2BE;">**BVP**</span>[? if spd_bruning_support : , <span style="color: #c00000;">**SPD**</span> ?][? if ddp_bruning_support : , <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?] [? if dvp_bruning_support : , <span style="color: #C0A054;">**DVP**</span> ?][? if wp_bruning_support : , <span style="color: #B8996F;">**WP**</span> ?][? if cnblp_bruning_support : , <span style="color: #006400;">**CNBLP**</span> ?][? if csvd_formed and csvd_bruning_support : , <span style="color: #8ED8E4;">**CSVD**</span> ?][? if kvp_formed and kvp_bruning_support : , <span style="color: #455B95;">**KVP**</span> ?][? if dnvp_bruning_support : , <span style="color: #3E88B3;">**DNVP**</span> ?]
 
-<span style="color: #000000;">Bruning's</span> Reichstag Mandate: ([+ bruning_support_percentage +]%)
+<span style="color: #000000;">Bruning's</span> Reichstag Mandate: ([+ bruning_support_percentage +]%) ([+ bruning_support +]/500)
 
 = Labor 
 
