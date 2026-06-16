@@ -32,7 +32,7 @@ title: Rural Campaign
 subtitle: Try to campaign among the rural populace.
 choose-if: advisor_action_timer == 0 
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; rural_z += 5*(1-dissent)
+on-arrival: advisor_action_timer = 6; rural_z += (3/2)*(1-dissent); catholic_z += (1/3)*(1-dissent)
 
 We have increased our campaigning among farmers and the rural populace.
 
