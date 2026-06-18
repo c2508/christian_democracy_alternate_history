@@ -2,7 +2,7 @@ title: Young Plan
 new-page: true
 subtitle: A new agreement on reparations
 tags: event
-view-if: year = 1929 and month >= 7 and in_right_coalition = 0 and young_plan_seen = 0
+view-if: year = 1929 and month >= 7 and in_right_coalition = 0 and young_plan_seen = 0 and dnvp_leader = "Hugenburg" 
 on-arrival: young_plan_seen = 1
 max-visits: 1
 
@@ -10,31 +10,49 @@ max-visits: 1
 
 The Young Plan is an agreement with the Western powers to reduce Germany's reparation payments and give us more fiscal autonomy. Simultaneously, France will agree to withdraw its military occupation from the Rhineland.
 
-While this seems to be a positive development for the country, the Right is campaigning hard against this plan, as are the Communists for whatever reason. They claim that any reparations are a form of national slavery, and have organized a referendum against it.
+While this seems to be a positive development for the country, the <span style="color: #3E88B3;">Nationalist Right</span> led by Hugenburg has started a campaign opposing the Young Plan. By presenting the Young Plan as a plot to enslave Germany for generations to come, Hugenburg's "<i>Katastrophenpolitik</i>" aims to polarise the electorate. Nevertheless, the passaage of the Young Plan is of utmost priority in relation to Germany's financial situation. 
 
-- @pro_plan: Campaign in favor of the Young Plan and against the referendum.
+- @prussia: With our <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition partners, utilise the resources of the Prussian Cabinet to campaign for the Young Plan.
+- @bourgeois: Campaign in favor of the Young Plan with the other bourgeois parties, the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> and <span style="color: #C0A054;">**DVP**</span>
 - @no_plan: Do not campaign on the Young Plan, one way or another.
 
-@pro_plan
+@prussia
+choose-if: spd_in_prussia = 1 and z_in_prussia = 1
+unavailable-subtitle: The <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition is not currently in power in Prussia
 
 How should we campaign in favor of the Plan?
 
-- @internationalism: As part of a broader campaign in favor of internationalism and pacifism.
-- @rational: The Young Plan is simply the most rational choice for Germany.
+- @republicanism: Campaign for democracy and the preservation of the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span>  
+- @rational: The Young Plan is the most rational choice for Germany, why should we oppose it?
 
-@internationalism
-on-arrival: nationalism -= 5*(1-dissent) if pacifism >= 2 else nationalism += 3; pacifism += 1; workers_spd += 5*(1-dissent) if pacifism >= 3 and nationalism <= 50; workers_nsdap += 4 if pacifism <= 3; rural_nsdap += 5; catholics_spd -= 4 if pacifism <= 3; rural_dvp -= 4
+@republicanism
+on-arrival: pro_republic += 4; dvp_left += 1; spd_relation += 3; ddp_relation += 3; left_strength += 5; right_dissent += 5; dnvp_relation -= 6
 
-We rail hard against nationalism and in favor of pacifism and belonging to the international community of nations. The referendum easily fails, with only around 15% of voters supporting it. It seems that nationalism is not omnipotent in Germany, despite everything. [? if pacifism >= 3 and nationalism <= 50 : We have rallied the workers to the cause of internationalism. ?]
-
+asd
 
 @rational
-on-arrival: nationalism += 5; workers_nsdap += 4; rural_nsdap += 5; catholics_spd -= 4; workers_spd -= 3; rural_dvp -= 5
+on-arrival: nationalism += 5; dnvp_relation -= 4; right_dissent -= 3; catholics_z -= (1/3); workers_spd -= 4; old_middle_nsdap += 4; rural_nsdap += 4; rural_dnvp -= 3; rural_dvp -= 3 
 
-The referendum easily fails, with only around 15% of voters supporting it. It seems that the German people have a sense of rationality, after all.
+asd
 
+@bourgeois
+
+How should we campaign in favor of the Plan?
+
+- @republicanism: Campaign for democracy and the preservation of the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span>  
+- @rational: The Young Plan is the most rational choice for Germany, why should we oppose it?
+
+@republicanism
+on-arrival: pro_republic += 2; dvp_left += 2; spd_relation -= 1; ddp_relation += 3; dvp_relation += 1; left_dissent += 3; right_dissent += 3; dnvp_relation -= 6; 
+
+asd
+
+@rational
+on-arrival: nationalism += 5; dnvp_relation -= 4; left_dissent += 3; right_dissent -= 3; catholics_z -= (2/3); workers_spd -= 6; old_middle_nsdap += 6; rural_nsdap += 6; rural_dnvp -= 5; rural_dvp -= 5 
+
+asd
 
 @no_plan
-on-arrival: nationalism += 5; workers_spd -= 3; old_middle_spd -= 3; new_middle_spd -= 3; pacifism -= 1; workers_nsdap += 5; rural_nsdap += 5; rural_dnvp -= 5; catholics_spd -= 5; rural_dvp -= 5;
-
-The referendum easily fails with or without our presence in the campaign, with only around 15% of voters supporting it. However, nationalist sentiment is inflammed, and the right-wing parties are using our silence around the Plan as a tacit admission of its faults. Our silence has only emboldened the Right, especially the NSDAP.
+on-arrival: nationalism += 7; workers_spd -= 3; old_middle_spd -= 3; new_middle_spd -= 3; pacifism -= 1; workers_nsdap += 5; rural_nsdap += 5; rural_dnvp -= 5; catholics_spd -= 5; rural_dvp -= 5; dnvp_relations += 3; spd_relations -= 3; ddp_relations -= 3; left_dissent += 5; labor_dissent += 3; center_dissent += 3
+subtitle: The majority of our party is strongly against this course of action
+asd
