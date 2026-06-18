@@ -55,4 +55,5 @@ asd
 @no_plan
 on-arrival: nationalism += 7; workers_spd -= 3; old_middle_spd -= 3; new_middle_spd -= 3; pacifism -= 1; workers_nsdap += 5; rural_nsdap += 5; rural_dnvp -= 5; catholics_spd -= 5; rural_dvp -= 5; dnvp_relations += 3; spd_relations -= 3; ddp_relations -= 3; left_dissent += 5; labor_dissent += 3; center_dissent += 3
 subtitle: The majority of our party is strongly against this course of action
+
 asd
