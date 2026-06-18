@@ -32,7 +32,7 @@ Affiliated Organisations:
 
 Opposition: [+ industrial_opposition : opposition +]
 
-<span style="color: #808080;">**RDI**</span> balance of power: [+ rdi_balance +]
+<span style="color: #808080;">**RDI**</span> balance of power: [+ rdi_balance : balance_of_power +]
 
 <span style="color: #808080;">**RDI**</span> President: [? if not rdi_balance > 1100 or not rdi_balance < 1000 : Duisberg (nominal) ?][? if rdi_balance > 1100 : Duisberg ?][? if rdi_balance < -1100 : Thyssen ?] 
 
