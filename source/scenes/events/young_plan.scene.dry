@@ -22,15 +22,15 @@ unavailable-subtitle: The <span style="color: #000000;">We</span><span style="co
 
 How should we campaign in favor of the Plan?
 
-- @republicanism: Campaign for democracy and the preservation of the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span>  
-- @rational: The Young Plan is the most rational choice for Germany, why should we oppose it?
+- @republicanism_p: Campaign for democracy and the preservation of the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span>  
+- @rational_p: The Young Plan is the most rational choice for Germany, why should we oppose it?
 
-@republicanism
+@republicanism_p
 on-arrival: pro_republic += 4; dvp_left += 1; spd_relation += 3; ddp_relation += 3; left_strength += 5; right_dissent += 5; dnvp_relation -= 6
 
 asd
 
-@rational
+@rational_p
 on-arrival: nationalism += 5; dnvp_relation -= 4; right_dissent -= 3; catholics_z -= (1/3); workers_spd -= 4; old_middle_nsdap += 4; rural_nsdap += 4; rural_dnvp -= 3; rural_dvp -= 3 
 
 asd
