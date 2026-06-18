@@ -233,6 +233,9 @@ Q.rfb_strength = 130;
 Q.rfb_militancy = 0.5;
 Q.rfb_banned = 0;
 Q.rfb_banned_prussia = 0;
+
+// z mod
+
 Q.z_rb = 1;
 Q.z_endorse_rb = 0;
 Q.z_sh = 0;
@@ -326,7 +329,7 @@ Q.labor_opposition = 25;
 Q.agrarian_split = 0;
 Q.historical_split = 0;
 Q.special_interests = 100;
-
+Q.rdi_balance = 0
 
 // quality of life (as % of 1928 - currently unused - should be welfare-adjusted.)
 Q.workers_qol = 100;
