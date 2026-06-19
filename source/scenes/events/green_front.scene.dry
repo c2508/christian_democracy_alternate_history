@@ -27,7 +27,7 @@ if (Q.right_dissent > 25) {
     Q.green_front_points += 1;
 }
 
-if (Q.hermes_advisor = 1) {
+if (Q.hermes_advisor == 1) {
     Q.green_front_points += 1; 
 }
 
@@ -39,15 +39,15 @@ if (Q.spd_relation > 60) {
     Q.green_front_points -= 1;
 }
 
-if (Q.rpm_strength = 1) {
+if (Q.rpm_strength == 1) {
     Q.green_front_points += 1;
 }
 
-if (Q.rpm_strength = 2) {
+if (Q.rpm_strength == 2) {
     Q.green_front_points += 2;
 }
 
-if (Q.rpm_strength = 0) {
+if (Q.rpm_strength == 0) {
     Q.green_front_points -= 2;
 }
 if (Q.rural_z + Q.rural_dnvp < 45) {
