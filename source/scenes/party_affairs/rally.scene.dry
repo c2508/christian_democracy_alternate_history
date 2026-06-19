@@ -81,7 +81,7 @@ Mass rallies are a common feature of German political life life, especially in t
 - @easy_discard
 
 @catholic
-on-arrival: catholics_z += 6*(1-dissent); catholics_z += 3*(1-dissent) if prussian_concordat = 1;
+on-arrival: catholics_z += 4*(1-dissent); catholics_z += 2*(1-dissent) if prussian_concordat = 1;
 
 Reminding our constituents of our confessional nature is a good way of energising our electoral base. [? if prussian_concordat = 1 : Our work in the Prussian Concordat have assisted our messaging. ?]
 
