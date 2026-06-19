@@ -32,7 +32,7 @@ In line with the <span style="color: #000000;">**VdB's**</span> policies, we hav
 @land_reform
 title: Land Reform
 subtitle: -2 budget - Break up indebted land estates and distribute it to smallholder farmers
-unavailable-subtitle: [? if budget <= 1 : Requires 2 budget. ?] [? if judicial_reform < 2 : The judiciary would never allow this. ?][? if rubicon_crossed = 0 : Why would we do this? ?][ ? if agricultural_opposition > 80 : The <span style="color: #385A38;">**RLB**</span> would never allow this. ?]
+unavailable-subtitle: [? if budget <= 1 : Requires 2 budget. ?] [? if judicial_reform < 2 : The judiciary would never allow this. ?][? if rubicon_crossed = 0 : Why would we do this? ?][? if agricultural_opposition > 80 : The <span style="color: #385A38;">**RLB**</span> would never allow this. ?]
 choose-if: judicial_reform >= 2 and budget > 1 and rubicon_crossed = 1 and agricultural_opposition <= 80 and spd_r > 67
 on-arrival: budget -= 1; land_reform += 1; coalition_dissent += 1; rural_z += (4/3)*(1-dissent); rural_nsdap -= 2*(1-dissent); unemployed -= 1 if unemployed >= 5; dvp_relation -= 5; spd_relation += 4; dnvp_relation -= 5; left_strength += 8; left_dissent -= 5; right_dissent += 3; rural_sol += 3; rural_policy += 1; coup_progress += 1; agriculture_goal_completed += 1;
 max-visits: 4
