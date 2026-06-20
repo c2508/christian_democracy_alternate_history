@@ -48,7 +48,7 @@ Affiliated Organisations:
 
 Opposition: [+ agriculture_opposition : opposition +]
 
-<span style="color: #385A38;">**RLB**</span> President: Schiele
+<span style="color: #385A38;">**RLB**</span> President: [? if rlb_leader = "Schiele": Schiele ?][? if rlb_leader = "Kalckreuth": Kalckreuth ?]
 
 
 @politics
