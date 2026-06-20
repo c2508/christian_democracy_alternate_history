@@ -146,7 +146,7 @@ if (Q.dissent < 0) {
     Q.dissent = 0.95;
 }
 
-if (Q.industrial_opposition < 20) and (Q.industrialist_funding_timer = 0) {
+if (Q.industrial_opposition < 20) && (Q.industrialist_funding_timer = 0) {
     Q.resource += 2;
     Q.industrialist_funding_timer = 6;
 }
