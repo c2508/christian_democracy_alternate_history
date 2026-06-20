@@ -25,7 +25,7 @@ if (Q.cnblp_votes <= 2.5) {
 if (Q.right_strength >= 25) {
     Q.schiele_points += 1;
 }
-if (Q.right_dissent >= 20) and not (Q.right_strength >= 25) {
+if (Q.right_dissent >= 20) && not (Q.right_strength >= 25) {
     Q.schiele_points -= 1;
 }
 if (Q.dvp_left > dvp_right) {
