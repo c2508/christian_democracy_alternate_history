@@ -4,7 +4,7 @@ subtitle: The influence of organised agriculture grows...
 tags: event
 on-arrival: {!
 Q.schiele_points = 0;
-if (Q.agriculture_minister_party == 'Schiele') {
+if (Q.agriculture_minister == 'Schiele') {
     Q.schiele_points += 1;
 }
 if (Q.special_interests > 120) {
@@ -25,7 +25,7 @@ if (Q.cnblp_votes <= 2.5) {
 if (Q.right_strength >= 25) {
     Q.schiele_points += 1;
 }
-if (Q.right_dissent >= 20 and not Q.right_strength >= 25) {
+if (Q.right_dissent >= 20) and not (Q.right_strength >= 25) {
     Q.schiele_points -= 1;
 }
 if (Q.dvp_left > dvp_right) {
