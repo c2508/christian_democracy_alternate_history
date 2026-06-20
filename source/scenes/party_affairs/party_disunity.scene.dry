@@ -1,7 +1,7 @@
 title: Party Disunity
 new-page: true
 is-card: true
-view-if: party_disunity_timer = 0 and (dissent >= 0.3 or (reformist_dissent > 30 and not reformists_resign) or (center_dissent > 30 and not centrists_resign) or (left_dissent > 30 and not sapd_formed) or (labor_dissent > 30 and not unions_independent) or (neorevisionist_dissent > 30 and neorevisionism))
+view-if: party_disunity_timer = 0 and (dissent >= 0.3 or (right_dissent > 60 and not right_resign) or (center_dissent > 60 and not centrists_resign) or (left_dissent > 60 and not sapd_formed) or (labor_dissent > 60 and not unions_independent) or (neorevisionist_dissent > 60 and neorevisionism))
 on-arrival: month_actions += 1; party_disunity_timer = 4
 card-image: img/InternalDissent.jpg
 frequency: 200
@@ -13,11 +13,11 @@ tags: party_affairs
 
 The party is being torn apart by internal dissent. Upset at the leadership and general direction, factions have started sabotaging their rivals, hampering our efforts to win votes and carry out our policies. As the only Catholic party, great care must be taken to appease our socially heterogenous base lest our sidelined members splinter from the party. 
 
-[? if right_dissent > 45 : The right is upset at our direction.  ?]
-[? if center_dissent > 45 : The centrists are displeased with the direction of our party. ?]
-[? if left_dissent > 45 : The left is upset at our direction. ?]
-[? if labor_dissent > 45 : The Christian Trade Unions disagree with our present course of action. ?]
-[? if young_conservatives_dissent > 45 and young_conservatives = 1 : The young conservatives are in disagreement about our political direction. ?]
+[? if right_dissent > 60 : The right is upset at our direction. ?]
+[? if center_dissent > 60 : The centrists are displeased with the direction of our party. ?]
+[? if left_dissent > 60 : The <span style="color: #FF7F00;">left</span> is upset at our direction. ?]
+[? if labor_dissent > 60 : The Christian Trade Unions disagree with our present course of action. ?]
+[? if young_conservatives_dissent > 60 and young_conservatives = 1 : The young conservatives are in disagreement about our political direction. ?]
 
 Something must be done to reinforce party unity.
 
@@ -45,21 +45,21 @@ title: Give concessions to the right.
 view-if: right_dissent > 45
 on-arrival: right_dissent -= 7; left_dissent += 4
 
-We have promised to adopt a more conservative posture. This may alienate the left wing of our party.
+We have promised to adopt a more conservative posture. This may alienate the <span style="color: #FF7F00;">left</span> wing of our party.
 
 @concessions_center
 title: Give concessions to the centrists.
 view-if: center_dissent > 45
 on-arrival: center_dissent -= 7; right_dissent += 2; young_conservatives_dissent += 2; left_dissent += 2
 
-We have promised to take more policy suggestions from the centrists. The left and right wings of the party might be displeased.
+We have promised to take more policy suggestions from the centrists. The <span style="color: #FF7F00;">left</span> and right wings of the party might be displeased.
 
 @concessions_left
-title: Give concessions to the left.
+title: Give concessions to the <span style="color: #FF7F00;">left</span>.
 view-if: left_dissent > 30
 on-arrival: left_dissent -= 7; right_dissent += 4; center_dissent += 2
 
-We have promised that we will listen to the left wing of the party. Of course, this leads to increased dissent from the centrists and the conservatives.
+We have promised that we will listen to the <span style="color: #FF7F00;">left</span> wing of the party. Of course, this leads to increased dissent from the centrists and the conservatives.
 
 @concessions_labor
 title: Give concessions to labor.
@@ -73,7 +73,7 @@ title: Give concessions to the Young Conservatives.
 view-if: young_conservatives_dissent > 30 and neorevisionism = 1
 on-arrival: young_conservaties_dissent -= 7; center_dissent += 5;
 
-Giving the neorevisionists more influence will cause increased dissent from the centrists.
+Giving the Young Conservatives more influence will cause increased dissent from the centrists.
 
 
 @do_nothing
