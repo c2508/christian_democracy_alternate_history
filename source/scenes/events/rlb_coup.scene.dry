@@ -1,0 +1,13 @@
+title: The <span style="color: #385A38;">**RLB**</span> chooses its new leader
+subtitle: Internal strife in the <span style="color: #385A38;">**RLB**</span> comes to a boiling point
+frequency: 1000
+new-page: true
+on-arrival: rlb_leader = "Kalckreuth"
+tags: event
+view-if: year >= 1929 and nsdap_r > 15 and rural_nsdap > 30 
+max-visits: 1
+face-image: img/Kabinett_Marx_IV.jpg
+
+= Schiele tot
+
+  saadsa
