@@ -66,7 +66,7 @@ Meanwhile, a letter written by Treviranus has been leaked, in which he criticize
 - @resultsdnvp: However, the results of the Young Plan initiative might change the trajectory of this party congresss...
 
 @resultsdnvp
-go-to: success if (young_plan_success >= 3); fail if (young_plan_success < 3)
+go-to: success if (young_plan_success >= 3); failure if (young_plan_success < 3)
 
 @failure
 title: The Young Plan Initiative has failed
