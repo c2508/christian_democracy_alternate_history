@@ -43,11 +43,13 @@ go-to: schiele if (schiele_points > 3); hermes if (schiele_points < 3)
 - @hermes
 
 @schiele
+title: asjad
 on-arrival: rural_z += 3; rural_dnvp += 3; rural_other += 2; rural_nsdap -= 5; right_strength += 5; right_dissent -= 5; pro_republic += 2; dnvp_relations += 3; left_dissent += 4
 
 assa
 
 @hermes
+title: ask
 on-arrival: rural_z += 3; rural_dnvp += 3; rural_other += 2; rural_nsdap -= 5; right_strength += 5; right_dissent -= 5; pro_republic += 2; dnvp_relations += 3; left_dissent += 4
 
 assasa
