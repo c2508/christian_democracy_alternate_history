@@ -12,7 +12,7 @@ new-page: true
 
 Wilhelm Marx, former <span style="color: #000000;">**Center Party**</span> chancellor and presidential candidate, has chosen to resign from leadership of the <span style="color: #000000;">**Center Party**</span> . Now, the party holds a conference to replace him. Several names have been floated around, including Heinrich Brauns, Joseph Joos and Adam Stegerwald.
 
-The party has splintered in two over the vote to decide his sucessor. The nominee of the National Committee is Christian Trade Union (<span style="color: #000000;">**DGB**</span>) chairman Adam Stegerwald, who has lain in waiting for quite some time now. On the other hand, there is Joseph Joos, whose concilliatory nature endear him to most of the party, as opposed to Stegerwald's more abrasive personality. However, if the vote is deadlocked, a dark horse could emerge as the chairman of the <span style="color: #000000;">Center Party</span>. 
+The party has splintered in two over the vote to decide his sucessor. The nominee of the National Committee is Christian Trade Union (<span style="color: #000000;">**DGB**</span>) chairman Adam Stegerwald, who has lain in waiting for quite some time now. On the other hand, there is Joseph Joos, whose concilliatory nature endear him to most of the party, as opposed to Stegerwald's more abrasive personality. However, if the vote is deadlocked, a dark horse could emerge as the chairman of the <span style="color: #000000;">**Center Party**</span>. 
 
 - @stegerwald: Adam Stegerwald has been confirmed by the rest of the party.
 - @joos: The <span style="color: #000000;">Center Party</span> has pivoted to Joseph Joos as the party chair.
@@ -45,7 +45,7 @@ face-image: img/portraits/KaasLudwig.jpg
 While a suggestion about a collegium with Joos, Stegerwald and Kaas won some approval from delegates, concerns about Stegerwald's personality and the desire of the Windhorstbund for a strong leader has sunk the idea. Thus, in a secret vote by the delegates, Ludwig Kaas has been selected as the chairman of the [? if z_party_name != "CVP": <span style="color: #000000;">**Center Party**</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] as a compromise candidate between Stegerwald and Joos. 
 His surprising victory can be attributed to the <span style="color: #000000;">**Center Party's**</span> recent poor electoral performance and the efforts of Cardinal Faulhauber in corraling the votes for undecided delegates.
 
-The elevation of a cleric to the chairmanship signifies the desire of party leaders to win back disaffected Catholics by going to our religious roots, but whether or not Kaas has the ability to lead the <span style="color: #000000;">Center Party</span> through these uncertain times is another issue altogether.
+The elevation of a cleric to the chairmanship signifies the desire of party leaders to win back disaffected Catholics by going to our religious roots, but whether or not Kaas has the ability to lead the <span style="color: #000000;">**Center Party**</span> through these uncertain times is another issue altogether.
 
 
 
