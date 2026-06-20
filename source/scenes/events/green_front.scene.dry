@@ -50,7 +50,7 @@ if (Q.rpm_strength == 2) {
 if (Q.rpm_strength == 0) {
     Q.green_front_points -= 2;
 }
-if (Q.rural_z + Q.rural_dnvp < 45) {
+if (Q.rural_z + Q.rural_dnvp < 50) {
     Q.green_front_points += 1;
 }
 !}
