@@ -50,6 +50,7 @@ Opposition: [+ agriculture_opposition : opposition +]
 
 <span style="color: #385A38;">**RLB**</span> President: [? if rlb_leader = "Schiele": Schiele ?][? if rlb_leader = "Kalckreuth": Kalckreuth ?]
 
+[? if green_front = 1: <span style="color: #0dba1e;">**Green Front**</span> President: ?][? if green_front = 1 and green_front_leader = "Undecided": Undecided ?][? if green_front = 1 and green_front_leader = "Hepp": Hepp ?][? if green_front = 1 and green_front_leader = "Schiele" ?]
 
 @politics
 
