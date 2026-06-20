@@ -1,6 +1,46 @@
 title: The Kassel Party Congress
 subtitle: A fight for the soul of the <span style="color: #3E88B3;">**DNVP**</span>
 view-if: year = 1929 and month = 11 and dnvp_leader = "Hugenberg"
+on-arrival: {!
+Q.young_plan_success = 0;
+if (Q.dnvp_leader == 'Triumvirate') {
+    Q.young_plan_success -= 1;
+}
+if (Q.nationalism >= 60) {
+    Q.young_plan_success += 1;
+}
+if (Q.pro_republic >= 65) {
+    Q.young_plan_success -= 1;
+}
+if (Q.dnvp_r > 14) {
+    Q.young_plan_success += 1;
+}
+if (Q.rpm_strength = 1) {
+    Q.young_plan_success += 1;
+}
+if (Q.rpm_strength = 2) {
+    Q.young_plan_success += 2;
+}
+if (Q.green_front = 0) {
+    Q.young_plan_success += 1;
+}
+if (Q.dvp_right) > (Q.dvp_left) {
+    Q.young_plan_success += 1;
+}
+if (Q.special_interests >= 80) {
+    Q.young_plan_success += 1; 
+}
+if (Q.dnvp_in_prussia = 1) {
+    Q.young_plan_success += 1;
+}
+if (Q.spd_prussia = 1) {
+    Q.young_plan_success -= 1;
+}
+if (Q.right_strength > 40) {
+    Q.young_plan_success += 1;
+}
+}
+!}
 max-visits: 1
 new-page: true
 face-image: img/Kollwitz_Weavers.jpg
@@ -24,9 +64,18 @@ Following Hugenburg’s intransigence regarding the controversial imprisonment p
 
 Meanwhile, a letter written by Treviranus has been leaked, in which he criticized Hugenburg’s leadership and discussed a secession from the <span style="color: #3E88B3;">**DNVP**</span>, with Hugenburg’s allies on the Executive Committee likely to use this as a pretext for expulsion. However, as the leader of the anti-Hugenburg faction on the left, it is certain that his allies will not let him go down without a fight. Against the backdrop of the vote on the ‘Freedom Law’ in the Reichstag, the events of the upcoming week will culminate in a decisive showdown between the left and right of the <span style="color: #3E88B3;">**DNVP**</span>.
 
-[? if young_plan_signatures < 10: With the failure of the Young Plan initiative to reach the required 10% of signatures to be put into a referendum, some of Hugenburg's allies on the Executive Committee have begun to turn on him. His intransigence about the inclusion of the imprisonment paragraph and the surrounding controversy have alienated most of the party and has been attributed as the key cause of the failure. ?]
+- @resultsdnvp: However, the results of the Young Plan initiative might change the trajectory of this party congresss...
 
-[? if young_plan_signautres > 10: The ability of the Young Plan initiative to garner more than the required 10% of signatures has bolstered Hugenburg’s position within the party. With their goal of forging the <span style="color: #3E88B3;">**DNVP**</span> into a cohesive and rigid "<i>Sammelpartei</i>", Hugenburg’s associates have decided to utilise their influence on the Executive Committee to purge the party of dissidents from the <span style="color: #6D5298;">Christian Social</span> and <span style="color: #0087DC;">Young Conservative</span> wings. ?]
+@resultsdnvp
+go-to: success if (young_plan_success >= 3); fail if (young_plan_success < 3)
+
+@success
+on-arrival: young_plan_signatures += 11; nationalism += 5; rural_nsdap += 5; special_interests += 5; rdi_balance += 4; dvp_right += 1; right_strength += 3
+With the failure of the Young Plan initiative to reach the required 10% of signatures to be put into a referendum, some of Hugenburg's allies on the Executive Committee have begun to turn on him. His intransigence about the inclusion of the imprisonment paragraph and the surrounding controversy have alienated most of the party and has been attributed as the key cause of the failure. 
+
+@failure
+on-arrival: young_plan_signatures += 9; nationalism += 3; rural_nsdap += 3; special_interests += 3; rdi_balance += 2;
+The ability of the Young Plan initiative to garner more than the required 10% of signatures has bolstered Hugenburg’s position within the party. With their goal of forging the <span style="color: #3E88B3;">**DNVP**</span> into a cohesive and rigid "<i>Sammelpartei</i>", Hugenburg’s associates have decided to utilise their influence on the Executive Committee to purge the party of dissidents from the <span style="color: #6D5298;">Christian Social</span> and <span style="color: #0087DC;">Young Conservative</span> wings. 
 
 - @sacked_natcon: The <span style="color: #3E88B3;">National Conservatives</span> wrest control of the <span style="color: #3E88B3;">**DNVP**</span> from Hugenburg and his volksich allies.
 - @sacked_youngcon: The <span style="color: #0087DC;">Young Conservatives</span> wrest control of the <span style="color: #3E88B3;">**DNVP**</span> from Hugenburg and his volksich allies.
@@ -36,10 +85,10 @@ Meanwhile, a letter written by Treviranus has been leaked, in which he criticize
 
 @sacked_youngcon
 view-if: young_plan_signatures < 10
-choose-if: pro_republic > 60 and dnvp_relation > 65 and young_plan_signatures < 10
+choose-if: pro_republic > 60 and dnvp_relation > 65 and young_plan_signatures < 10 and not old_middle_dnvp >= 25 and right_strength >= 20
 subtitle: Hugenburg's experiment comes to an end.
 unavailable-subtitle: Another leader like Westarp is not what the party wants.
-on-arrival: dnvp_leader = "Wildau"; pro_republic += 2; dnvp_relation += 5; dvp_right += 2; right_strength += 2
+on-arrival: dnvp_leader = "Wildau"; pro_republic += 2; dnvp_relation += 5; dvp_right += 2; right_strength += 2; new_middle_dnvp += 5; rural_dnvp -= 2; catholics_dnvp += 2; workers_dnvp += 3
 face-image: img/portraits/Ludwig_Kaas.jpg
 
 As such, in the vote over the expulsion of Treviranus, the Executive Committee has overwhelmingly sided with Treviranus. Emboldened by such a turn of events, the anti-Hugenburg elements on the left have initiated a vote of no-confidence in his leadership, which has passed with votes from the <span style="color: #6D5298;">Christian Socials</span>, <span style="color: #0087DC;">Young Conservatives</span> and the disgruntled <span style="color: #385A38;">agrarian</span> wing. After Hugenburg’s removal, the Executive Committee has voted in Hans-Erdmann von Lindeiner-Wildau as the new party chair.
@@ -48,10 +97,10 @@ A close associate of Treviranus, Lindeiner-Wildau hails from the nascent <span s
 
 @sacked_natcon
 view-if: young_plan_signatures < 10
-choose-if: young_plan_signatures < 10 and (not pro_republic > 60 or not dnvp_relation > 65)
+choose-if: young_plan_signatures < 10 and old_middle_dnvp >= 25 and (not pro_republic > 60 or not dnvp_relation > 65 or not right_strength >= 20)
 subtitle: Hugenburg's experiment comes to an end.
 unavailable-subtitle: Most of the <span style="color: #3E88B3;">**DNVP**</span> is still skeptical of Treviranus' ideas. 
-on-arrival: dnvp_leader = "Schlange"; nationalism += 3; dnvp_relation += 3; dvp_right += 1
+on-arrival: dnvp_leader = "Schlange"; nationalism += 3; dnvp_relation += 3; dvp_right += 1; old_middle_dnvp += 3; rural_dnvp += 3
 face-image: img/portraits/Ludwig_Kaas.jpg
 
 As such, in the vote over the expulsion of Treviranus, the Executive Committee has overwhelmingly sided with Treviranus. Emboldened by such a turn of events, the anti-Hugenburg elements on the left have initiated a vote of no-confidence in his leadership, which has passed with votes from the <span style="color: #6D5298;">Christian Socials</span>, <span style="color: #0087DC;">Young Conservatives</span> and the disgruntled <span style="color: #385A38;">agrarian</span> wing. After Hugenburg’s removal, the Executive Committee has voted in Hans Schlange-Schöningen as the new party chair. 
@@ -61,9 +110,9 @@ Despite his leadership of the anti-Hugenburg elements on the left, his staunch o
 
 @historical_split
 view-if: young_plan_signatures >= 10
-choose-if: young_plan_signatures >= 10 and (not rpm_strength = 2 or not green_front = 0) 
+choose-if: young_plan_signatures >= 10 and (not rpm_strength = 2 or not green_front = 0 or not green_front_leader = "Hepp") 
 unavailable-subtitle: Schiele is not yet willing to split from the <span style="color: #3E88B3;">**DNVP**</span>.
-on-arrival: historical_split += 1; 
+on-arrival: historical_split += 1; special_interests += 6; new_middle_dnvp -= 3; workers_dnvp -= 8; workers_dvp += 1; old_middle_nsdap += 3
 face-image: img/portraits/Ludwig_Kaas.jpg
 
 Despite Westarp’s best attempts to preserve party unity, three rogue delegates from the <span style="color: #6D5298;">Christian Social</span> wing have reneged on an agreement made with Hugenburg and have publicly castigated the <span style="color: #3E88B3;">**DNVP**</span>’s leadership for ‘its inability to tolerate differences of political opinion’ during the vote on the Freedom Law in the Reichstag. Furious at such a betrayal, these three delegates and Treviranus were immediately expelled from the party by the Executive Committee. Overnight, eight other Reichstag deputies have left the party in a show of solidarity, leaving the <span style="color: #3E88B3;">**DNVP**</span> left a shadow of its former self. 
@@ -72,9 +121,9 @@ However, Schiele and the <span style="color: #385A38;">Agrarian</span> wing have
 
 @agrarian_split
 view-if: young_plan_signatures >= 10
-choose-if: young_plan_signatures >= 10 and rpm_strength = 2 and green_front = 0
+choose-if: young_plan_signatures >= 10 and rpm_strength = 2 and green_front = 0 and green_front_leader = "Hepp"
 unavailable-subtitle: The situation in the countryside is too dire for the <span style="color: #385A38;">agrarians</span> to continue their 'wait and see' approach. 
-on-arrival: agrarian_split += 1; 
+on-arrival: agrarian_split += 1; special_interests += 9; rural_dnvp -= 8; rural_cnblp += 5; rural_nsdap += 3; new_middle_dnvp -= 3; old_middle_dnvp += 3; workers_dnvp -= 8; new_middle_wp += 1; old_middle_nsdap += 1
 face-image: img/portraits/Ludwig_Kaas.jpg
 
 Despite Westarp’s best attempts to preserve party unity, three rogue delegates from the <span style="color: #6D5298;">Christian Social</span> wing have reneged on an agreement made with Hugenburg and have publicly castigated the <span style="color: #3E88B3;">**DNVP**</span>’s leadership for ‘its inability to tolerate differences of political opinion’ during the vote on the Freedom Law in the Reichstag. Furious at such a betrayal, these three delegates and Treviranus were immediately expelled from the party by the Executive Committee. Overnight, eight other Reichstag deputies have left the party in a show of solidarity, leaving the <span style="color: #3E88B3;">**DNVP**</span> left a shadow of its former self. 
