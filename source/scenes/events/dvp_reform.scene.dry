@@ -6,9 +6,9 @@ if (dnvp_ideology = "Radical") {
 Q.dvp_left += 1; 
 } 
 
-if (Q.dvp_relation >= 60) {
+if (Q.dvp_relation >= 70) {
     Q.dvp_left += 1;
-} else if (Q.dvp_relation < 40) {
+} else if (Q.dvp_relation < 50) {
     Q.dvp_right += 1;
 }
 if (!Q.in_grand_coalition) {
