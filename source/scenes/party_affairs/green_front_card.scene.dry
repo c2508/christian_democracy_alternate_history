@@ -1,4 +1,4 @@
-title: The <span style="color: #0dba1e;"><strong>Green Front</strong></span>
+title: The Green Front
 new-page: true
 is-card: true
 view-if: green_front > 0 and green_front_card_timer <= 0
