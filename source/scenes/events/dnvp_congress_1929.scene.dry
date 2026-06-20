@@ -39,7 +39,6 @@ if (Q.spd_prussia = 1) {
 if (Q.right_strength > 40) {
     Q.young_plan_success += 1;
 }
-}
 !}
 max-visits: 1
 new-page: true
