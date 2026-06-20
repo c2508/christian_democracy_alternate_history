@@ -29,7 +29,7 @@ With control of the Labor Ministry, we can set national standards for labor. Our
 
 @working_hours
 view-if: working_hours < 2
-on-arrival: working_hours += 1; labor_dissent -= 8; labor_strength += 5; workers_z += (4/3)*(1-dissent); dvp_relation -= 4; dnvp_relation -= 4; spd_relation += 4; kpd_relation += 4; coalition_dissent += 1; capital_strike_progress += 1 if dvp_relation <= 30; labor_goal_completed = 1; inflation += 0.1; economic_growth -= 0.1
+on-arrival: working_hours += 1; labor_dissent -= 8; labor_strength += 5; workers_z += (4/3)*(1-dissent); dvp_relation -= 4; dnvp_relation -= 4; spd_relation += 4; kpd_relation += 4; coalition_dissent += 1; capital_strike_progress += 1 if dvp_relation <= 30; labor_goal_completed = 1; inflation += 0.1; economic_growth -= 0.1; right_dissent += 3;
 
 While a 40-hour work week was declared during the German Revolution in 1918, enforcement has become increasingly porous over the years. The capitalists have successfully added numerous exceptions and loopholes, returning to the old regime of forced overtime for workers.
 
@@ -38,13 +38,13 @@ Now, with the force of the Labor Ministry, we are finally enforcing the rights o
 @shorten_hours
 view-if: working_hours >= 2 and black_thursday_seen = 1
 subtitle: Could we induce more hiring and reduce unemployment by reducing work hours?
-on-arrival: working_hours += 1; labor_dissent -= 5; labor_strength += 5; workers_z += 2*(1-dissent); dvp_relation -= 4; dnvp_relation -= 4; spd_relation += 4; kpd_relation += 4; coalition_dissent += 1; capital_strike_progress += 1; labor_goal_completed = 1; unemployed -= 0.3; economic_growth -= 0.2;
+on-arrival: working_hours += 1; labor_dissent -= 5; labor_strength += 5; workers_z += 2*(1-dissent); dvp_relation -= 4; dnvp_relation -= 4; spd_relation += 4; kpd_relation += 4; coalition_dissent += 1; capital_strike_progress += 1; labor_goal_completed = 1; unemployed -= 0.3; economic_growth -= 0.2; rdi_balance += 3; right_dissent += 5;
 
 Some in the labor movement argue that by reducing the maximum number of hours worked, employers would be induced to hire more workers, reducing unemployment. The argument also goes that this would be complementary to deflation, maintaining the same purchasing power for workers by cutting hours without cutting wages. Employers, however, resist this policy, arguing for more flexibility in hiring and firing.
 
 
 @safety
-on-arrival: workers_safety += 1; labor_dissent -= 3; labor_strength += 5; workers_z += 1*(1-dissent); capital_strike_progress += 1 if workers_safety >= 3
+on-arrival: workers_safety += 1; labor_dissent -= 3; labor_strength += 5; workers_z += 1*(1-dissent); capital_strike_progress += 1 if workers_safety >= 3; rdi_balance += 5 if workers_safety >= 3; right_dissent += 4 if workers_safety >= 3;
 
 The Labor Ministry works on developing and enforcing safety regulations, in order to ensure healty working conditions for the proletariat. [? if workers_safety >= 3 : Businesses have begun to argue that our focus on safety is overbearing and unnecessary, interfering with the economy. ?]
 
@@ -61,18 +61,18 @@ With the onset of the Depression and its throngs of unemployed, our unemployment
 
 @cut_benefits
 subtitle: The workers will regard this as a betrayal.
-on-arrival: workers_z -= 0.12*workers_z; unemployed_z -= 0.2*unemployed_spd; workers_kpd += 6; workers_nsdap += 6; workers_spd += 6; unemployed_kpd += 5; unemployed_nsdap += 5; left__labor_dissent += 15; right_labor_dissent += 10; welfare -= 2; budget += 1; unemployed += 3; pro_republic -= 4; kpd_relation -= 8; spd_relation -= 8; dvp_relation += 5; dnvp_relation += 5; inflation -= 2; unemployment_insurance_threshold = unemployed; unemployment_insurance_timer = 10; economic_growth -= 0.2;
+on-arrival: workers_z -= 0.12*workers_z; unemployed_z -= 0.2*unemployed_spd; workers_kpd += 6; workers_nsdap += 6; workers_spd += 6; unemployed_kpd += 5; unemployed_nsdap += 5; labor_dissent += 15; right_dissent -= 6; welfare -= 2; budget += 1; unemployed += 3; pro_republic -= 4; kpd_relation -= 8; spd_relation -= 8; dvp_relation += 5; dnvp_relation += 5; inflation -= 2; unemployment_insurance_threshold = unemployed; unemployment_insurance_timer = 10; economic_growth -= 0.2; rdi_balance -= 6; right_strength += 4
 
 For budgetary reasons, we have cut unemployment insurance benefits. Unfortunately, our reasons for fiscal discipline are alien to the workers. They are furious at our betrayal, as are a good portion of our membership throughout the labor factions. Our loss is the KPD's and SPD's gain, and even the NSDAP, those lapdogs of the bourgeoisie, have joined in criticizing us for our austerity.
 
 @increase_employers
 subtitle: Employers are strongly against this. [? if in_grand_coalition: The DVP will likely break the coalition. ?] [? if in_right_coalition: The DNVP will likely break the coalition. ?]
-on-arrival: capital_strike_progress += 2; coalition_dissent = 2 if in_grand_coalition; coalition_dissent += 1; welfare += 1; workers_z += 6*(1-dissent); unemployed_z += 6*(1-dissent); old_middle_z -= 6*(1-dissent); new_middle_z -= 2*(1-dissent); unemployment_insurance_threshold = unemployed; unemployment_insurance_timer = 10; economic_growth -= 0.2;
+on-arrival: capital_strike_progress += 2; coalition_dissent = 2 if in_grand_coalition; coalition_dissent += 1; welfare += 1; workers_z += 6*(1-dissent); unemployed_z += 6*(1-dissent); old_middle_z -= 6*(1-dissent); new_middle_z -= 2*(1-dissent); unemployment_insurance_threshold = unemployed; unemployment_insurance_timer = 10; economic_growth -= 0.2; rdi_balance += 6; left_strength += 4
 
 We have increased employer contributions to the unemployment insurance fund, allowing the program to continue without hurting workers and the unemployed. Perhaps understandably, the capitalists and their political parties are furious, while our base in the unions and among the unemployed are pleased.
 
 @balance
 subtitle: Neither workers nor employers will be entirely satisfied or dissatisfied. [? if in_grand_coalition and dvp_relation < 30: The DVP will likely consider the compromise unacceptable. ?][? if in_grand_coalition and dvp_relation >= 30: The DVP might grudgingly accept the compromise for now. ?]
-on-arrival: workers_z -= 4; unemployed_z -= 4; workers_kpd += 2; unemployed_kpd += 2; workers_spd += 3; unemployed_spd += 3; unemployed_nsdap += 2; left_labor_dissent += 10; right_labor_dissent += 10; right_dissent += 8; welfare -= 1; budget += 1; month += 1; kpd_relation -= 4; spd_relation -= 4; inflation -= 1; unemployment_insurance_threshold = unemployed; unemployment_insurance_timer = 10; coalition_dissent = 2 if in_grand_coalition and dvp_relation < 30; coalition_dissent += 1 if in_grand_coalition; economic_growth -= 0.1;
+on-arrival: workers_z -= (4/3); unemployed_z -= (4/3); workers_kpd += 2; unemployed_kpd += 2; workers_spd += 3; unemployed_spd += 3; unemployed_nsdap += 2; labor_dissent += 10; right_dissent += 8; welfare -= 1; budget += 1; month += 1; kpd_relation -= 4; spd_relation -= 4; inflation -= 1; unemployment_insurance_threshold = unemployed; unemployment_insurance_timer = 10; coalition_dissent = 2 if in_grand_coalition and dvp_relation < 30; coalition_dissent += 1 if in_grand_coalition; economic_growth -= 0.1; rdi_balance += 3
 
 Neither side is entirely satisfied by our compromise solution. Many of the workers and unemployed see this as a betrayal, although we present it as the successful aversion of a much worse alternative. [? if in_grand_coalition: Meanwhile, the DVP is aghast at the prospect of raising any taxes on businesses at all. ?]
