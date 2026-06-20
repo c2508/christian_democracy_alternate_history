@@ -24,7 +24,7 @@ if (Q.rpm_strength = 2) {
 if (Q.green_front = 0) {
     Q.young_plan_success += 1;
 }
-if (Q.dvp_right) > (Q.dvp_left) {
+if (Q.dvp_right > Q.dvp_left) {
     Q.young_plan_success += 1;
 }
 if (Q.special_interests >= 80) {
