@@ -51,7 +51,7 @@ The Prussian judiciary is deeply reactionary, and many abuse their power to favo
 @house
 choose-if: unemployed_2 < 15 
 unavailable-subtitle: There are more pressing matters at hand.
-on-arrival: workers_z += 2*(1-dissent); workers_sol += 1
+on-arrival: workers_z += 1*(1-dissent); workers_sol += 1
 
 We have managed to build better housing for workers in cities such as Mannheim and Karlsruhe.
 
