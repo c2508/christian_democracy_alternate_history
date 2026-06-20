@@ -12,16 +12,16 @@ if (Q.nationalism >= 60) {
 if (Q.pro_republic >= 65) {
     Q.young_plan_success -= 1;
 }
-if (Q.dnvp_r > 14) {
+if (Q.dnvp_votes > 14) {
     Q.young_plan_success += 1;
 }
-if (Q.rpm_strength = 1) {
+if (Q.rpm_strength == 1) {
     Q.young_plan_success += 1;
 }
-if (Q.rpm_strength = 2) {
+if (Q.rpm_strength == 2) {
     Q.young_plan_success += 2;
 }
-if (Q.green_front = 0) {
+if (Q.green_front == 0) {
     Q.young_plan_success += 1;
 }
 if (Q.dvp_right > Q.dvp_left) {
@@ -30,10 +30,10 @@ if (Q.dvp_right > Q.dvp_left) {
 if (Q.special_interests >= 80) {
     Q.young_plan_success += 1; 
 }
-if (Q.dnvp_in_prussia = 1) {
+if (Q.dnvp_in_prussia == 1) {
     Q.young_plan_success += 1;
 }
-if (Q.spd_prussia = 1) {
+if (Q.spd_prussia == 1) {
     Q.young_plan_success -= 1;
 }
 if (Q.right_strength > 40) {
