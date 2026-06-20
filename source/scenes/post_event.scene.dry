@@ -59,6 +59,15 @@ if (Q.agriculture_opposition < 0) {
 if (Q.industrial_opposition < 0) {
     Q.industrial_opposition = 0;
 }
+if (Q.labor_opposition > 100) {
+    Q.labor_opposition = 100;
+}
+if (Q.agriculture_opposition > 100) {
+    Q.agriculture_opposition = 100;
+}
+if (Q.industrial_opposition > 100) {
+    Q.industrial_opposition = 100;
+}
 // re-calculate party support
 // calculate normalized class voting for the achievements
 for (var c of Q.classes) {
@@ -135,6 +144,11 @@ if (Q.dissent < 0) {
     Q.dissent = 0;
 } else if (Q.dissent > 0.95) {
     Q.dissent = 0.95;
+}
+
+if (Q.industrial_opposition < 20) and (Q.industrialist_funding_timer = 0){
+    Q.resource += 2;
+    Q.industrialist_funding_timer = 6;
 }
 
 // 1. update dates
