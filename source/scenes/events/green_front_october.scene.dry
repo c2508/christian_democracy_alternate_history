@@ -19,7 +19,7 @@ if (Q.dnvp_leader == 'Hugenberg') {
 if (Q.dnvp_votes > 14) {
     Q.schiele_points += 1;
 }
-if (Q.cnblp_votes <= 2.5) {
+if (Q.cnblp_votes <= 5/2) {
     Q.schiele_points += 1;
 }
 if (Q.right_strength >= 25) {
