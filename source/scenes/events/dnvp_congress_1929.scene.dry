@@ -70,13 +70,13 @@ go-to: success if (young_plan_success >= 3); failure if (young_plan_success < 3)
 
 @failure
 title: The Young Plan Initiative has failed
-on-arrival: young_plan_signatures += 11; nationalism += 5; rural_nsdap += 5; special_interests += 5; rdi_balance += 4; dvp_right += 1; right_strength += 3
+on-arrival: young_plan_signatures += 9; nationalism += 5; rural_nsdap += 5; special_interests += 5; rdi_balance += 4; dvp_right += 1; right_strength += 3
 
 With the failure of the Young Plan initiative to reach the required 10% of signatures to be put into a referendum, some of Hugenburg's allies on the Executive Committee have begun to turn on him. His intransigence about the inclusion of the imprisonment paragraph and the surrounding controversy have alienated most of the party and has been attributed as the key cause of the failure. 
 
 @success
 title: The Young Plan Initiativeproceeds to a referendum
-on-arrival: young_plan_signatures += 9; nationalism += 3; rural_nsdap += 3; special_interests += 3; rdi_balance += 2
+on-arrival: young_plan_signatures += 11; nationalism += 3; rural_nsdap += 3; special_interests += 3; rdi_balance += 2
 
 The ability of the Young Plan initiative to garner more than the required 10% of signatures has bolstered Hugenburg’s position within the party. With their goal of forging the <span style="color: #3E88B3;">**DNVP**</span> into a cohesive and rigid "<i>Sammelpartei</i>", Hugenburg’s associates have decided to utilise their influence on the Executive Committee to purge the party of dissidents from the <span style="color: #6D5298;">Christian Social</span> and <span style="color: #0087DC;">Young Conservative</span> wings. 
 
