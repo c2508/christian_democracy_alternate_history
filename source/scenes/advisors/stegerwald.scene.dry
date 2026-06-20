@@ -13,8 +13,6 @@ Stegerwald is a prominent trade unionist and the main proponent for forming an i
 - @labor_rights_
 - @prussian_bulwark
 - @support_peoples_party
-- @build_peoples_party
-- @campaigning_peoples_party
 - @snap_election
 - @root: Return to main
 
@@ -35,32 +33,14 @@ on-arrival: advisor_action_timer = 6; prussian_affairs_timer -= 6; last_advisor_
 go-to: prussian_affairs
 
 @support_peoples_party
-title: Build support for a People's Party
+title: Build support for an interconfessional Christian Party
 subtitle: Can we expand our party beyond Catholics?
 view-if: peoples_party = 0
-choose-if: peoples_party_support <= 4 and advisor_action_timer = 0 and peoples_party = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if peoples_party_support > 4: There is already substantial support for a People's Party. ?]
-on-arrival: advisor_action_timer = 6; peoples_party_support += 1; left_labor_dissent += 2; right_dissent += 2
+choose-if: peoples_party_support <= 5 and advisor_action_timer = 0 and peoples_party = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if peoples_party_support > 5: There is already substantial support for an interconfessional Christian Party. ?]
+on-arrival: advisor_action_timer = 6; peoples_party_support += 1; left_dissent += 5; center_dissent += 3; right_dissent += 1
 
-We are building up support for the idea of a People's Party.
-
-@build_peoples_party
-title: Building a People's Party
-subtitle: Can we expand our party beyond Catholics?
-view-if: peoples_party = 4
-choose-if: peoples_party_support >= 3 and advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if peoples_party_support < 4: There is not enough support for this policy within the party. ?]
-on-arrival: advisor_action_timer = 6; left_labor_dissent += 5; right_dissent += 5
-go-to: peoples_party
-
-@campaigning_peoples_party
-title: Campaigning as a People's Party
-subtitle: Campaigning with some of our previously nontraditional demographics.
-view-if: peoples_party = 1
-choose-if: advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6;
-go-to: peoples_party_campaigning
+We are building up support for the idea of an interconfessional Christian Party.
 
 @snap_election
 title: Snap Election
