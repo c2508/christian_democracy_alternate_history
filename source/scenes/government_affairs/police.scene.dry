@@ -20,6 +20,7 @@ As with the state police units and the <span style="color: #808080;">**Reichsweh
 - @deport_hitler
 - @arrest_thalmann
 - @propaganda: Create an intensified propaganda campaign to counter radical movements
+- @law: Pass the 2nd Law for Protection of the Republic 
 - @root: Take no action for now.
 - @easy_discard
 - @cancel_advisor_action
@@ -77,8 +78,16 @@ Unfortunately, our investigations have failed to turn up anything. Rumors are th
 
 @propaganda
 subtitle: These costs will be drawn from the Fund for The Protection of the Republic
-choose-if: kpd_r > 10 or nsdap_r > 10
-unavailable_subtitle: Political Extremism is not a problem
+choose-if: rubicon_crossed = 1
+unavailable_subtitle: Political Extremism is not a problem 
 on-arrival: unemployed_kpd -= 3; rural_nsdap -= 3; pro_republic += 3
 
 Utilising mass media like the radio and the press, we have managed to counteract the increasingly radical rhertoric of those on the political extremes.  
+
+@law
+subtitle: Streetfighting has hit dangerous levels.
+choose-if: rubicon_crossed = 1
+unavailable_subtitle: There is no need for this right now. 
+on-arrival: pro_republic += 3; rfb_strength -= 50; sa_strength -= 50; sh_strength -= 50
+
+ Heightened threats of punishment has little effect given the current increased radicalisation of the public, and the conflicts between the federal government and the states have prevented the cooperation on constitutional protection on which the law is based on. 
