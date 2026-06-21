@@ -28,9 +28,11 @@ new-page: true
 
 = <span style="color: #3E88B3;">**DNVP**</span> Conference
 
-A leadership vote is being held at the <span style="color: #3E88B3;">German National People's Party</span> (<span style="color: #3E88B3;">**DNVP**</span>) congress following the resignation of former leader Kuno von Westarp. The in-fighting resulting from their electoral defeat last election, coupled with the question of governmental participation in a system they're fundamentally opposed to has come to a head at this congress.
+Following Kuno von Westarp's cautious handling of the Lambach Affair, the volksich elements on the party's right have managed to use it as a pretext to force Westarp's resignation as party chair. At a time where the republic has seemingly stabilised and the appeal of <span style="color: #909090;">**special interests**</span> threaten to usurp the <span style="color: #3E88B3;">**DNVP**</span>'s position, this party congress will be pivotal in determining the direction of Germany's <span style="color: #3E88B3;">Conservative</span> Establishment.
 
-On the right is Alfred Hugenberg, a prominent industrialist and head of a media empire. He is vehemently opposed by the left of the party for his "<i>Katastrophenpolitik</i>", as he prefers to see the republic fall than participate in parliamentary government. With Westarp's refusal to run for re-election, despite urgent pleas from the moderates within the party, they have convinced the reluctant Oskar Hergt, former leader of the <span style="color: #3E88B3;">**DNVP**</span> from 1918—1924, himself ousted by the right. The results of this congress may very well be a turning point in the history of the entire German nation.
+On the right stands Alfred Hugenberg, media mogul and shrewd businessman, who has provided significant backing to the <span style="color: #3E88B3;">**DNVP**</span> since its inception in 1919. Aiming to polarise the political environment and force German voters to the political extremities, his policy of "<i>Katastrophenpolitik</i>" has won him much support amongst disillusioned grassroots members.
+
+Meanwhile, the anti-Hugenberg <span style="color: #0087DC;">Young Conservatives</span> and <span style="color: #6D5298;">Christian Socials</span> have struggled to find a willing politician to rally around. Following Westarp's refusal, they have convinced reluctant former party leader Oskar Hergt to stand for election against Hugenberg. Joined by the <span style="color: #909090;">**Ruhrlade**</span> in their opposition to Hugenberg, they will face an uphill task in preventing the elction of Hugenberg as party chair.
 
 - @resultsdnvp: The party votes...
 
@@ -39,22 +41,24 @@ go-to: hergt if (dnvp_points > 3); hugenberg if (dnvp_points < 3); compromise if
 
 
 @hergt
-on-arrival: dnvp_relation += 8; rural_other -= 2; old_middle_other -= 1; pro_republic += 3; dvp_right += 1; ddp_right += 1; dnvp_leader = "Hergt"
+on-arrival: dnvp_relation += 8; rural_other -= 2; old_middle_other -= 1; pro_republic += 3; dvp_right += 1; ddp_right += 1; dnvp_leader = "Hergt"; special_interests += 3; old_middle_dnvp -= 3; rdi_balance -= 5
 face-image: img/portraits/HergtOscar.jpg
 
 Amidst the general pro-republic sentiment in Germany, Hugenberg has failed to consolidate support amongst the lower echoleons of the <span style="color: #3E88B3;">**DNVP**</span> for his "<i>Katastrophenpolitik</i>". With the thesis of the Lambach article having found itself some supporters from the <span style="color: #3E88B3;">National Conservatives</span>  [? if chancellor == "Treviranus" : as well as the appointment of Treviranus to the Chancellorship ?], the left of the party has been strengthened. Following a divisive party congress, Oskar Hergt has been elected chairman, where he is expected to continue the policies of Westarp.
-Meanwhile, Hugenberg and his supporters are agaitating about another split and Hugenberg himself is withholding financial contributions and the use of his media empire from the party.
+
+In response, Hugenberg has withdrawn his significant financial backing from the <span style="color: #3E88B3;">**DNVP**</span> and barred the use of his media empire, leaving the <span style="color: #3E88B3;">**DNVP**</span>'s coffers in dire straits. It is expected that they will have to depend more on the backing of the more moderate <span style="color: #909090;">**Ruhrlade**</span> to sustain the <span style="color: #3E88B3;">**DNVP**</span> for now.
 
 @hugenberg
-on-arrival: dnvp_relation -= 8; pro_republic -= 4; new_middle_dnvp -= 2; rural_dnvp -= 2; rural_other += 3; dvp_left += 1; dnvp_leader = "Hugenberg"
+on-arrival: dnvp_relation -= 8; pro_republic -= 4; new_middle_dnvp -= 2; rural_dnvp -= 2; rural_other += 3; dvp_left += 1; dnvp_leader = "Hugenberg"; special_interests += 5
 face-image: img/portraits/HugenbergAlfred.jpg
 
-Following Hugenberg's letter to Westarp in 1927 critisizing the <span style="color: #3E88B3;">**DNVP's**</span> participation in government, him and his allies in the Pan German League have worked to fill the <span style="color: #3E88B3;">**DNVP**</span>'s provincial organsations with their supporters. Using the outrage generated by inflammatory Lambach article as a pretext to attack the national leadership, they have managed to discredit the moderate wing of the party in the view of the party rank-and-file. With the support of the Volksich Wing and local leaders disillusioned with Westarp's direction, Alfred Hugenberg has been elected chairman with a slim margin.
-It is expected that Hugenberg will turn the <span style="color: #3E88B3;">**DNVP**</span> from a party based conservative values into an instrument of the radical right based on his slogan "Block, nicht Brei!", meaning that further cooperation with the <span style="color: #3E88B3;">**DNVP**</span> will be unlikely. Meanwhile, Westarp will continue to stay on as the chairman of the <span style="color: #3E88B3;">**DNVP's**</span> Reichstag delegation and work to prevent a secession of the <span style="color: #6D5298;">Christian Socials</span> and <span style="color: #0087DC;">Young Conservatives</span> .
+Since 1927, Hugenberg and his allies in the Pan German League have worked to fill the <span style="color: #3E88B3;">**DNVP**</span>'s provincial organsations with their supporters in preparation for a party takeover. Using the outrage generated by inflammatory Lambach article as a pretext to attack the national leadership, they have managed to discredit the moderate wing of the party in the view of the party rank-and-file. With the support of the Volksich Wing and local leaders disillusioned with Westarp's direction, Alfred Hugenberg has been elected chairman by a slim margin.
+
+It is expected that Hugenberg will turn the <span style="color: #3E88B3;">**DNVP**</span> from a party based on conservative values into an instrument of the radical right based on his slogan "Block, nicht Brei!", meaning that further cooperation with the <span style="color: #3E88B3;">**DNVP**</span> will be unlikely. Meanwhile, Westarp will continue to stay on as the chairman of the <span style="color: #3E88B3;">**DNVP's**</span> Reichstag delegation and work to prevent a secession of the <span style="color: #6D5298;">Christian Socials</span> and <span style="color: #0087DC;">Young Conservatives</span>.
 
 
 @compromise
-on-arrival: dnvp_relation += 3; pro_republic -= 2; rural_dnvp -= 1; new_middle_dnvp -= 1; dnvp_leader = "Triumvirate"
+on-arrival: dnvp_relation += 3; pro_republic -= 2; rural_dnvp -= 1; new_middle_dnvp -= 1; dnvp_leader = "Triumvirate"; special_interests += 5
 face-image: img/portraits/WestarpKuno.jpg
 
 In part due to the efforts of the left and right of the <span style="color: #3E88B3;">**DNVP**</span> in garnering support since Westarp's resignation, the party congress has been inconclusive and no candidate has emerged victorious. Thus, a compromise has been reached in which Westarp, Hugenberg and the chairman of the <span style="color: #3E88B3;">**DNVP**</span>'s Prussian delegation would lead the <span style="color: #3E88B3;">**DNVP**</span> in a triumvirate. Hugenberg is content to sit in the sidelines and consolidate power via the regional organisations, while Westarp has begun to look to Martin Schiele and the <span style="color: #385A38;">Agrarian</span> Wing for their aid.
