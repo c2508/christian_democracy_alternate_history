@@ -34,7 +34,7 @@ Industrialist funding: [+ industrialist_funding : funding +]
 
 [? if z_in_government and (in_left_front or in_popular_front): <span style="color: #700000;">**KPD**</span> coalition dissent: [+ kpd_coalition_dissent : coalition_dissent +] ?]
 
-[? if z_in_government and president == "Hindenburg": <span style="color: #808080;">Hindenburg's</span> approval: [+ hindenburg_relation : hindenburg_anger +] ?]
+[? if z_in_government and president == "Hindenburg": Conservative Opposition: [+ conservative_opposition : opposition +] ?]
 
 
 = Government
