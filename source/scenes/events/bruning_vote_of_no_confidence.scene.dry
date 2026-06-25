@@ -407,7 +407,7 @@ We have increased employer contributions to the unemployment insurance fund, all
 @dnvp
 subtitle: Neither workers nor employers will be entirely satisfied or dissatisfied. [? if in_grand_coalition and dvp_relation < 30: The DVP will likely consider the compromise unacceptable. ?][? if in_grand_coalition and dvp_relation >= 30: The DVP might grudgingly accept the compromise for now. ?]
 view-if: dnvp_bruning_support = 0
-on-arrival: dnvp_bruning_support += 1; bruning_support += dnvp_seats; bruning_support_percentage += dnvp_r; bruning_undecided -= dnvp_seats; bruning_undecided_percentage -= dnvp_r; labor_opposition += 25; industrial_opposition -= 20; agriculture_opposition -= q5; conservative 
+on-arrival: dnvp_bruning_support += 1; bruning_support += dnvp_seats; bruning_support_percentage += dnvp_r; bruning_undecided -= dnvp_seats; bruning_undecided_percentage -= dnvp_r; labor_opposition += 25; industrial_opposition -= 20; agriculture_opposition -= 25; conservative_opposition -= 20;
 go-to: convince
 
 Neither side is entirely satisfied by our compromise solution. Many of the workers and unemployed see this as a betrayal, although we present it as the successful aversion of a much worse alternative. [? if in_grand_coalition: Meanwhile, the DVP is aghast at the prospect of raising any taxes on businesses at all. ?]
