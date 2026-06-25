@@ -333,6 +333,7 @@ Q.special_interests = 100;
 Q.rdi_balance = 1100;
 Q.rlb_leader = "Schiele";
 Q.green_front_leader = "Undecided";
+Q.nsdap_leader = "Hitler";
 
 // quality of life (as % of 1928 - currently unused - should be welfare-adjusted.)
 Q.workers_qol = 100;
