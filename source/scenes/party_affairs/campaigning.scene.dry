@@ -24,7 +24,7 @@ Whether or not we are in an electoral campaign, the party is always trying to ma
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: workers_z += 2*(1-dissent); workers_z -= 1/3 if unemployed >= 15; workers_z -= 1/3 if unemployed >= 25; workers_z += 2*(1-dissent) if peoples_party == 1; resources -= 1
+on-arrival: workers_z += 1*(1-dissent); workers_z -= 1/3 if unemployed >= 15; workers_z -= 1/3 if unemployed >= 25; workers_z += 2*(1-dissent) if peoples_party == 1; resources -= 1
 
 We have increased our campaigning among the workers. [? if unemployed >= 15: The high levels of unemployment make our campaign more difficult. ?][? if peoples_party == 1 : Our transformation into a Christian People's Party has allowed to appeal to Christians of all denominations. ?]
 
@@ -56,7 +56,7 @@ We have increased our campaigning among farmers. [? if peoples_party > 0: Our tr
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: unemployed_z += 2*(1-dissent); resources -= 1; unemployed_z -= 1 if welfare < 0; unemployed_z += 2*(1-dissent) if wtb_adopted = 1; unemployed_z += 1*(1-dissent) if welfare >= 2;
+on-arrival: unemployed_z += 1*(1-dissent); resources -= 1; unemployed_z -= 1 if welfare < 0; unemployed_z += 2*(1-dissent) if wtb_adopted = 1; unemployed_z += 1*(1-dissent) if welfare >= 2;
 
 We have increased our campaigning among the unemployed. [? if welfare < 0: The welfare cuts and resultant poverty make our campaign more difficult, since we are associated with the government that enacted these cuts, and our campaign may even backfire. ?][? if wtb_adopted = 1 : Adopting the WTB plan gives us a new rallying point around which to attract support from the unemployed. ?]
 
@@ -64,6 +64,6 @@ We have increased our campaigning among the unemployed. [? if welfare < 0: The w
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: catholics_z += 4*(1-dissent); resources -= 1; catholics_z += 2*(1-dissent) if prussian_concordat = 1; catholics_z -= 1 if peoples_party > 0; 
+on-arrival: catholics_z += 2*(1-dissent); resources -= 1; catholics_z += 2*(1-dissent) if prussian_concordat = 1; catholics_z -= 1 if peoples_party > 0; 
 
 We have increased our campaigning among Catholics, our traditional voting base. [? if prussian_concordat = 1: Due to our successes in securing the rights of Catholics, they have started to come back to our party. ?][? if peoples_party > 0: Our transformation into a Christian People's Party has alienated some Catholics. ?]
