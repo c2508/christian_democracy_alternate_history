@@ -42,8 +42,8 @@ subtitle: A dark horse emerges...
 on-arrival: z_party_leader = "Kaas"; spd_relations -= 5; prussian_concordat_progress += 1; catholics_z += 4; dvp_right += 1
 face-image: img/portraits/KaasLudwig.jpg
 
-While a suggestion about a collegium with Joos, Stegerwald and Kaas won some approval from delegates, concerns about Stegerwald's personality and the desire of the Windhorstbund for a strong leader has sunk the idea. Thus, in a secret vote by the delegates, Ludwig Kaas has been selected as the chairman of the [? if z_party_name != "CVP": <span style="color: #000000;">**Center Party**</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] as a compromise candidate between Stegerwald and Joos. 
-His surprising victory can be attributed to the <span style="color: #000000;">**Center Party's**</span> recent poor electoral performance and the efforts of Cardinal Faulhauber in corraling the votes for undecided delegates.
+While a suggestion about a collegium with Joos, Stegerwald and Kaas had won some approval from delegates, concerns about Stegerwald's personality has sunk the idea. In a secret vote by the delegates, Ludwig Kaas has been selected as the chairman of the [? if z_party_name != "CVP": <span style="color: #000000;">**Center Party**</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] as a compromise candidate between Stegerwald and Joos. 
+His surprising victory can be attributed to the <span style="color: #000000;">**Center Party's**</span> recent poor electoral performance and the efforts of Cardinal Faulhauber in corraling the votes of undecided delegates.
 
 The elevation of a cleric to the chairmanship signifies the desire of party leaders to win back disaffected Catholics by going to our religious roots, but whether or not Kaas has the ability to lead the <span style="color: #000000;">**Center Party**</span> through these uncertain times is another issue altogether.
 
