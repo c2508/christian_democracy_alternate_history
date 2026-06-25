@@ -38,8 +38,6 @@ new-page: true
 
 = <span style="color: #700000;">**KPD**</span> Party Congress
 
-I HATE THE <span style="color: #700000;">**IKP-DS**</span>
-
 - @resultskpd: The party votes...
   
 @resultskpd
@@ -51,21 +49,21 @@ go-to: fascist if (kpd_points < 3); coup if (kpd_points > 40); united if (kpd_po
 
 @fascist
 view-if: kpd_points < 3
-on-arrival: spd_relation += 4; workers_z -= 3; workers_z += 2; pro_republic -= 3
+on-arrival: spd_relation += 4; workers_spd -= 3; workers_kpd += 2; unemployed_spd -= 2; unemployed_kpd += 1; pro_republic -= 3; spd_left -= 2;
 face-image: img/portraits/JoosJoseph.jpg
 
-WIP                                                                                                           
+I HATE THE <span style="color: #700000;">**IKP-DS**</span>                                                                                                       
                                                                                                              
 @united
 view_if: kpd_points > 3 and kpd_points < 40
-on-arrival: workers_z += 1
+on-arrival: unemployed_kpd += 1; spd_left += 1; 
 face-image: img/portraits/JoosJoseph.jpg
 
-WIP
+I HATE THE <span style="color: #700000;">**IKP-DS**</span>
 
 @coup
 view-if: kpd_points > 40
-on-arrival: kpd_party_leader = "Concillators"
+on-arrival: kpd_party_leader = "Concillators"; spd_left += 2; workers_kpd -= 1; unemployed_kpd -= 1; pro_republic += 3; kpd_relation += 5; 
 face-image: img/portraits/KaasLudwig.jpg
 
-WIP
+I HATE THE <span style="color: #700000;">**IKP-DS**</span>
