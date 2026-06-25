@@ -31,6 +31,12 @@ if (Q.right_dissent >= 20) {
 if (Q.dvp_left > dvp_right) {
     Q.schiele_points -= 1;
 }
+if (Q.rpm_strength < 2) {
+    Q.schiele_points += 1;
+}
+if (Q.dnvp_party_leader == 'Hugenberg') {
+    Q.schiele_points += 1;
+}
 !}
 view-if: year = 1929 and month = 10 and green_front = 1
 priority: 1
@@ -39,26 +45,27 @@ max-visits: 1
 = The <span style="color: #0dba1e;">Green Front</span>
 
 In an effort to act as a counterweight to the growing strength of the Rural People's Movement, the bulk of organised agrculture has formed an umbrella organisation called the <span style="color: #0dba1e;">**Green Front**</span>, affording agricultural interests in the <span style="color: #000000;">**Center Party**</span> and <span style="color: #3E88B3;">**DNVP**</span> more influence in their respective parties.
-Built on the negotiations back in March, the <span style="color: #0dba1e;">**Green Front**</span> aims for the economic rehabiltion of the German farmer in the face of growing economic hardship.
-With members from the <span style="color: #3E88B3;">**DNVP**</span>, <span style="color: #006400;">**CNBLP**</span> and <span style="color: #909090;">**DBP**</span>, this disparate coalition is testament to the increasingly concering plight of farmers in the countryside.
-[? if agriculture_minister_party = 'Z': As we currently hold the Agriculture Ministry, the onus falls on us to implement the <span style="color: #0dba1e;">**Green Front**</span>'s economic program in the coming months. ?] This increased focus on agricultural issues might alienate our substantial worker base while this extensive cooperation with anti-republican parties has led to outcry from the left of the party.
+Built on the negotiations back in March, the <span style="color: #0dba1e;">**Green Front**</span> aims to draft a comprehensive farm program to address the structural deficiencies in German Agriculture. [? if agriculture_minister_party = 'Z': As we currently hold the Agriculture Ministry, the onus will fall on us to implement the <span style="color: #0dba1e;">**Green Front**</span>'s economic program in the coming months. ?] This increased focus on agricultural issues might alienate our substantial worker base while this extensive cooperation with anti-republican parties has led to outcry from the left of the party.
+
+With members from the <span style="color: #3E88B3;">**DNVP**</span>, <span style="color: #006400;">**CNBLP**</span> and <span style="color: #909090;">**DBP**</span>, this disparate coalition of Estate Agriculture and smallholder farmers is testament to the increasingly concering situation in the countryside. However, not all is well, as the <span style="color: #006400;">**CNBLP**</span> and <span style="color: #3E88B3;">**DNVP**</span> have managed to use the leadership elections of the <span style="color: #0dba1e;">Green Front</span> as a proxy in their bid for control of the <span style="color: #385A38;">**RLB**</span>.  
+
 
 - @results: The delegates vote...
 
 @results
-go-to: schiele if (schiele_points >= 2); hepp if (schiele_points <= 2)
+go-to: schiele if (schiele_points > 3); hepp if (schiele_points <= 3)
 
 - @schiele
 - @hepp
 
 @schiele
 title: asjad
-on-arrival: rural_z += 1; rural_dnvp += 4; rural_other += 3; rural_nsdap -= 3; right_strength += 5; right_dissent -= 5; dnvp_relations += 5; left_dissent += 4; green_front_leader = "Schiele"
+on-arrival: rural_z += 1; rural_dnvp += 4; rural_other += 4; rural_nsdap -= 3; right_strength += 5; right_dissent -= 5; dnvp_relations += 5; left_dissent += 6; green_front_leader = "Schiele"
 
-assa
+As expected, Martin Schiele, with strong backing from most of the <span style="color: #385A38;">**RLB**</span> and some of the <span style="color: #000000;">**VdB**</span>'s delegates, has clinched the Presidency of the <span style="color: #0dba1e;">Green Front</span>. As a Reichstag
 
 @hepp
 title: ask
-on-arrival: rural_z += 1; rural_dnvp += 2; rural_other += 5; rural_nsdap -= 3; right_strength += 5; right_dissent -= 3; dnvp_relations += 3; left_dissent += 4; special_interests += 10; green_front_leader = "Hepp"
+on-arrival: rural_z += 1; rural_dnvp += 2; rural_cnblp += 5; rural_nsdap -= 3; right_strength += 3; right_dissent -= 3; dnvp_relations += 3; left_dissent += 4; special_interests += 10; green_front_leader = "Hepp"
 
 assasa
