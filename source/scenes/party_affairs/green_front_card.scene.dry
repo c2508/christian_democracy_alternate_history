@@ -38,7 +38,7 @@ subtitle: Agriculture is the backbone of Germany, yet the countryside's situatio
 view-if: green_front_program_start = 0
 on-arrival: green_front_program_start += 1; green_front_program_timer += 24;
 
-We have started discussions with the other organisations under the <span style="color: #0dba1e;">Green Front</span> to draft a farm program satisfactory to all. Given the strong influence labor holds in the <span style="color: #000000;">**Center Party's**</span>, this will not be an easy task.
+We have started discussions with the other organisations under the <span style="color: #0dba1e;">Green Front</span> to draft a farm program satisfactory to all. Given the strong influence labor holds in the <span style="color: #000000;">**Center Party**</span>, this will not be an easy task.
 
 @speedup
 choose-if: return_to_normalcy = 0
