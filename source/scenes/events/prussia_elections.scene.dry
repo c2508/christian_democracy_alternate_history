@@ -1166,10 +1166,10 @@ subtitle: <span style="color: #000000;">**Z**</span> + <span style="color: <span
 unavailable-subtitle: <span style="color: #000000;">[+ z_party_name +]</span>[? if dvp_exist and not lvp_formed:&nbsp;+ <span style="color: #C0A054;">DVP</span>?][? if lvp_formed:&nbsp;+ <span style="color: #FFCC00;">LVP</span>?] + <span style="color: #3E88B3;">DNVP</span> + Others ([+ right_coalition_prussia +]%) [? if (dnvp_ideology == "Radical" and not dnvp_westarp) or (year = 1929 and month >= 7):- The <span style="color: #3E88B3;">DNVP</span> is not interested in a coalition with the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?].?]
 view-if: right_coalition_prussia >= 50 and not cvp_formed
 choose-if: dnvp_relation >= 30 and dvp_relation >= 25
-on-arrival: in_right_coalition_prussia = 1; spd_relation -= 10; ddp_relation -= 10; dvp_relation += 10; dnvp_relation += 10; left_dissent += 10; right_strength += 10; z_in_prussia = 1; dvp_in_prussia = 1; dnvp_in_prussia = 1; others_in_prussia = 1
+on-arrival: in_right_coalition_prussia = 1; spd_relation -= 10; ddp_relation -= 10; dvp_relation += 10; dnvp_relation += 10; left_dissent += 10; right_strength += 10; z_in_prussia = 1; dvp_in_prussia = 1; dnvp_in_prussia = 1; others_in_prussia = 1; ddp_right += 1 if year == 1928;
 go-to: prussia_minister_president_right
 
-Our decision to form a <span style="color: #3E88B3;">**Bürgerblock**</span> coalition has shocked our "<span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition" partners in Prussia. The DVP and DNVP are pleased with our actions.
+Our decision to form a <span style="color: #3E88B3;">**Bürgerblock**</span> coalition has shocked our "<span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition" partners in Prussia. The <span style="color: #C0A054;">**DVP**</span> and <span style="color: #3E88B3;">**DNVP**</span> are pleased with our actions.
 
 @prussia_minister_president_right
 
