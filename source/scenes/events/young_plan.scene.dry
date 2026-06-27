@@ -26,12 +26,12 @@ How should we campaign in favor of the Plan?
 - @rational_p: The Young Plan is the most rational choice for Germany, why should we oppose it?
 
 @republicanism_p
-on-arrival: pro_republic += 4; dvp_left += 1; spd_relation += 3; ddp_relation += 3; left_strength += 5; right_dissent += 5; dnvp_relation -= 6
+on-arrival: pro_republic += 4; dvp_left += 1; spd_relation += 3; ddp_relation += 3; left_strength += 5; right_dissent += 5; dnvp_relation -= 6; young_plan_votes += 1
 
 asd
 
 @rational_p
-on-arrival: nationalism += 5; dnvp_relation -= 4; right_dissent -= 3; catholics_z -= (1/3); workers_spd -= 4; old_middle_nsdap += 4; rural_nsdap += 4; rural_dnvp -= 3; rural_dvp -= 3 
+on-arrival: nationalism += 5; dnvp_relation -= 4; right_dissent -= 3; catholics_z -= (1/3); workers_spd -= 2; old_middle_nsdap += 1; rural_nsdap += 3; rural_dnvp -= 3; rural_dvp -= 3; young_plan_votes += 1
 
 asd
 
