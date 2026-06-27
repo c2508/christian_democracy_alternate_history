@@ -59,6 +59,9 @@ if (Q.agriculture_opposition < 0) {
 if (Q.industrial_opposition < 0) {
     Q.industrial_opposition = 0;
 }
+if (Q.conservative_opposition < 0) {
+    Q.conservative_opposition = 0;
+}
 if (Q.labor_opposition > 100) {
     Q.labor_opposition = 100;
 }
@@ -68,6 +71,10 @@ if (Q.agriculture_opposition > 100) {
 if (Q.industrial_opposition > 100) {
     Q.industrial_opposition = 100;
 }
+if (Q.conservative_opposition > 100) {
+    Q.conservative_opposition = 100;
+}
+
 // re-calculate party support
 // calculate normalized class voting for the achievements
 for (var c of Q.classes) {
