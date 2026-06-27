@@ -5,25 +5,14 @@ tags: event
 view-if: year = 1929 and month >= 12 and dnvp_leader = "Hugenburg" 
 max-visits: 1
 on-arrival: {!
-if (Q.dnvp_relation > 45) {
-    Q.dnvp_points += 1;
-}
-if (Q.chancellor == "Treviranus") {
-    Q.dnvp_points += 1;
-}
-if (Q.pro_republic >= 67) {
-    Q.dnvp_points += 1;
-}
-if (Q.dnvp_r > 14) {
-    Q.dnvp_points += 1;
-}
-if (Q.spd_in_government = 0) {
-    Q.dnvp_points += 1;
-}
-if (Q.tariffs >= 0) {
-    Q.dnvp_points += 1;
-}
+(Q.young_plan_votes += ((Q.young_plan_modifier)*(Q.dnvp_votes + Q.nsdap_votes));
+(Q.young_plan_votes += Math.round(0.75*(Q.cnblp_votes)*100.0)/100.0);
+(Q.young_plan_votes += Math.round(0.05*(Q.cnblp_votes)*100.0)/100.0 if rpm_strength > 0);
+(Q.young_plan_votes += Math.round(((Q.dvp_young_plan_modifier)*(dvp_votes))*100.0)/100.0);
+(Q.young_plan_votes += Math.round(0.05*(Q.dvp_votes)*100.0)/100.0 if rdi_balance > 1080));
+(Q.young_plan_votes += Math.round(0.1*(Q.nationalism)*(Q.others_votes)*100.0)/100.0))
 !}
 
+= Young Plan Referendum
 
-= Young Plan Referendeum
+The referendum against the Young Plan has received the support of [+ young_plan_votes +]% of the electorate.  
