@@ -1,0 +1,29 @@
+title: Young Plan Referendeum
+new-page: true
+subtitle: A new agreement on reparations
+tags: event
+view-if: year = 1929 and month >= 12 and dnvp_leader = "Hugenburg" 
+max-visits: 1
+on-arrival: {!
+if (Q.dnvp_relation > 45) {
+    Q.dnvp_points += 1;
+}
+if (Q.chancellor == "Treviranus") {
+    Q.dnvp_points += 1;
+}
+if (Q.pro_republic >= 67) {
+    Q.dnvp_points += 1;
+}
+if (Q.dnvp_r > 14) {
+    Q.dnvp_points += 1;
+}
+if (Q.spd_in_government = 0) {
+    Q.dnvp_points += 1;
+}
+if (Q.tariffs >= 0) {
+    Q.dnvp_points += 1;
+}
+!}
+
+
+= Young Plan Referendeum
