@@ -20,7 +20,7 @@ As an umbrella organisation representing organised agriculture, the formation of
 
 @dnvp
 subtitle: Amidst the deepening agricultural crisis, a coordinated response with <span style="color: #385A38;">agrarian</span> interests in the <span style="color: #3E88B3;">**DNVP**</span> is crucial in slowing the radicalisation of the rural people. Deepening ties with them can also pave the way for further cooperation with the <span style="color: #3E88B3;">**DNVP**</span> in the future.
-on-arrival: dnvp_relation += 8; dnvp_relation -= 2 if green_front = 0.5; dnvp_relation -= 2 if dnvp_leader = "Hugenberg"
+on-arrival: dnvp_relation += 8; dnvp_relation -= 2 if green_front = 0.5; dnvp_relation -= 2 if dnvp_leader = "Hugenberg"; dnvp_relation -= 1 if green_front_leader = "Hepp"
 
 The <span style="color: #385A38;">agrarians</span> within our party has reached out to the friendly portions of the <span style="color: #3E88B3;">**DNVP**</span> and found some common ground with them. This has also helped strengthen the <span style="color: #385A38;">agrarian</span> faction in the <span style="color: #3E88B3;">**DNVP**</span>.
 
@@ -29,7 +29,7 @@ The <span style="color: #385A38;">agrarians</span> within our party has reached 
 subtitle: The radicalism of the <span style="color: #7A3C00;">**NSDAP**</span> and their propagation of the 'Blood and Soil' ideology has much appeal amongst some members of the <span style="color: #0dba1e;">**Green Front**</span>. We must strengthen the <span style="color: #000000;">**Center Party's**</span> and <span style="color: #3E88B3;">**DNVP**</span> influence in the <span style="color: #0dba1e;">**Green Front**</span>, lest the rural electorate turn to the demagogic <span style="color: #7A3C00;">**Nazis**</span> for a solution. 
 unavailable-subtitle: Kalckreuth's <span style="color: #385A38;">**RLB**</span> will leave the <span style="color: #0dba1e;">**Green Front**</span> if we do this.
 choose-if: rlb_leader = "Schiele"
-on-arrival: rural_nsdap -= 4; nationalism -= 3; rural_nsdap += 1 if green_front = 0.5
+on-arrival: rural_nsdap -= 3; nationalism -= 3; rural_nsdap += 1 if green_front = 0.5; rural_nsdap -= 1 if green_front_leader = "Hepp"; special_interests += 3 if green_front_leader = "Hepp"
 
 We rail against the <span style="color: #7A3C00;">**NSDAP's**</span> miltant tendencies and their irresponsible rhetoric, damaging their credibility in the eyes of the farmers.
 
@@ -46,11 +46,11 @@ unavailable-subtitle: We must speed up the creation of the <span style="color: #
 view-if: green_front_program_start = 1
 on-arrival: green_front_program_timer -= 3;
 
-The program will be available sooner.
+The program will be available faster.
 
 @pacify
 title: With the appointment of Martin Schiele as agricultural minister, it is evident that <span style="color: #808080;">Hindenburg</span> views the agricultural crisis as a pressing issue. Through the <span style="color: #0dba1e;">**Green Front**</span>, we assauge the concerns of the <span style="color: #385A38;">**RLB**</span>, ensuring that <span style="color: #808080;">Hindenburg</span> maintains his confidence in Bruning's chancellorship.
 view-if: rubicon_crossed = 1 and agriculture_opposition > 10
-on-arrival: agriculture_opposition -= 10; hindenburg_anger -= 5; agriculture_opposition += 1 if green_front = 0.5; 
+on-arrival: agriculture_opposition -= 10; hindenburg_anger -= 5; agriculture_opposition += 1 if green_front = 0.5; agriculture_opposition -= 1 if green_front_leader = "Schiele"; hindenburg_anger -= 1 if green_front_leader = "Schiele"
 
 We defend Bruning's unpopular policies and reassure elements of the <span style="color: #0dba1e;">**Green Front**</span> of our continued focus on agricultural issues. 
