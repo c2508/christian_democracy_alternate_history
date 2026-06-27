@@ -12,10 +12,10 @@ if (Q.dnvp_relation <= 30) {
 if (Q.pro_republic >= 40) {
     Q.harzburg_points += 1;
 }
-if (Q.dnvp_r <= 7) {
+if (Q.dnvp_votes <= 7) {
     Q.harzburg_points += 1;
 }
-if (Q.nsdap_r <= 20) {
+if (Q.nsdap_votes <= 20) {
     Q.harzburg_points += 1;
 }
 if (Q.spd_in_prussia == 1) {
