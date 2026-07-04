@@ -114,7 +114,7 @@ Despite his leadership of the anti-Hugenburg elements on the left, his staunch o
 @historical_split
 view-if: young_plan_signatures >= 10
 choose-if: young_plan_signatures >= 10 and (not rpm_strength = 2 or not green_front = 0 or not green_front_leader = "Hepp") 
-unavailable-subtitle: Schiele is not yet willing to split from the <span style="color: #3E88B3;">**DNVP**</span>.
+unavailable-subtitle: The situation in the countryside is too dire for the <span style="color: #385A38;">agrarians</span> to continue their 'wait and see' approach. 
 on-arrival: historical_split += 1; special_interests += 6; new_middle_dnvp -= 3; workers_dnvp -= 8; workers_dvp += 1; old_middle_nsdap += 3
 face-image: img/portraits/Ludwig_Kaas.jpg
 
@@ -125,7 +125,7 @@ However, Schiele and the <span style="color: #385A38;">Agrarian</span> wing have
 @agrarian_split
 view-if: young_plan_signatures >= 10
 choose-if: young_plan_signatures >= 10 and rpm_strength = 2 and green_front = 0 and green_front_leader = "Hepp"
-unavailable-subtitle: The situation in the countryside is too dire for the <span style="color: #385A38;">agrarians</span> to continue their 'wait and see' approach. 
+unavailable-subtitle: Schiele is not yet willing to split from the <span style="color: #3E88B3;">**DNVP**</span>. 
 on-arrival: agrarian_split += 1; special_interests += 9; rural_dnvp -= 8; rural_cnblp += 5; rural_nsdap += 3; new_middle_dnvp -= 3; old_middle_dnvp += 3; workers_dnvp -= 8; new_middle_wp += 1; old_middle_nsdap += 1
 face-image: img/portraits/Ludwig_Kaas.jpg
 
