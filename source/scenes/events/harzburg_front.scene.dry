@@ -37,17 +37,17 @@ if (Q.nsdap_leader == "Goebbels") {
 
 = The Harzburg Front
 
-The far-right parties and paramilitaries - the <span style="color: #7A3C00;">**NSDAP**</span> (and its paramilitary the <span style="color: #7A3C00;">**SA**</span>), the <span style="color: #3E88B3;">**Stahlhelm**</span> paramilitary group, and the <span style="color: #3E88B3;">**DNVP**</span> - have united to form the Harzburg Front, as a force dedicated to the overthrow of the current government.
+The <span style="color: #3E88B3;">**DNVP**</span> and <span style="color: #7A3C00;">**NSDAP**</span>, along with the <span style="color: #3E88B3;">**Stahlhelm**</span> and the <span style="color: #7A3C00;">**SA**</span> have met in Bad Harzburg for a joint rally to demonstrate their unity in the fight against the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span>. They have been joined by many prominent figures on the right, including the Hohenzollern princes Eitel Friedrich of Prussia and his brother August Wilhelm, former General Walther von Lüttwitz behind the Kapp Putsch and the former President of the Reichbank Hjalmar Schacht. 
 
-- @succeed: We must develop a coherent strategy to combat the Radical Right.
-- @fail: We must develop a coherent strategy to combat the Radical Right.
+- @succeed: A united national opposition has formed to coordinate their efforts against the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span>.
+- @fail: Hitler's ego proves to be too huge. 
 
 
 @succeed
 view-if: harzburg_points > 4
 on-arrival: nazi_urgency += 1
 
-We do not yet have a coherent strategy for combatting the fascists. We must develop one as soon as possible.
+The far-right parties and paramilitaries - the <span style="color: #7A3C00;">**NSDAP**</span> (and its paramilitary the <span style="color: #7A3C00;">**SA**</span>), the <span style="color: #3E88B3;">**Stahlhelm**</span> paramilitary group, and the <span style="color: #3E88B3;">**DNVP**</span> - have united to form the Harzburg Front, as a force dedicated to the overthrow of the current government.
 
 @fail
 view-if: harzburg_points <= 4
