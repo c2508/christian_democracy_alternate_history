@@ -29,7 +29,7 @@ With control of the Labor Ministry, we can set national standards for labor. Our
 
 @working_hours
 view-if: working_hours < 2
-on-arrival: working_hours += 1; labor_dissent -= 8; labor_strength += 5; workers_z += (4/3)*(1-dissent); dvp_relation -= 4; dnvp_relation -= 4; spd_relation += 4; kpd_relation += 4; coalition_dissent += 1; capital_strike_progress += 1 if dvp_relation <= 30; labor_goal_completed = 1; inflation += 0.1; economic_growth -= 0.1; right_dissent += 3;
+on-arrival: working_hours += 1; labor_dissent -= 8; labor_strength += 5; workers_z += (4/3)*(1-dissent); dvp_relation -= 4; dnvp_relation -= 4; spd_relation += 4; kpd_relation += 4; coalition_dissent += 1; capital_strike_progress += 1 if dvp_relation <= 30; labor_goal_completed = 1; inflation += 0.1; economic_growth -= 0.1; right_dissent += 3; rdi_balance += 3
 
 While a 40-hour work week was declared during the German Revolution in 1918, enforcement has become increasingly porous over the years. The capitalists have successfully added numerous exceptions and loopholes, returning to the old regime of forced overtime for workers.
 
@@ -61,7 +61,7 @@ With the onset of the Depression and its throngs of unemployed, our unemployment
 
 @cut_benefits
 subtitle: The workers will regard this as a betrayal.
-on-arrival: workers_z -= 0.12*workers_z; unemployed_z -= 0.2*unemployed_spd; workers_kpd += 6; workers_nsdap += 6; workers_spd += 6; unemployed_kpd += 5; unemployed_nsdap += 5; labor_dissent += 15; right_dissent -= 6; welfare -= 2; budget += 1; unemployed += 3; pro_republic -= 4; kpd_relation -= 8; spd_relation -= 8; dvp_relation += 5; dnvp_relation += 5; inflation -= 2; unemployment_insurance_threshold = unemployed; unemployment_insurance_timer = 10; economic_growth -= 0.2; rdi_balance -= 6; right_strength += 4
+on-arrival: workers_z -= 0.12*workers_z; unemployed_spd -= 0.2*unemployed_spd if spd_in_government = 1; workers_kpd += 6; workers_nsdap += 6; workers_spd += 6; unemployed_kpd += 5; unemployed_nsdap += 5; labor_dissent += 15; right_dissent -= 6; welfare -= 2; budget += 1; unemployed += 3; pro_republic -= 4; kpd_relation -= 8; spd_relation -= 8; dvp_relation += 5; dnvp_relation += 5; inflation -= 2; unemployment_insurance_threshold = unemployed; unemployment_insurance_timer = 10; economic_growth -= 0.2; rdi_balance -= 6; right_strength += 4
 
 For budgetary reasons, we have cut unemployment insurance benefits. Unfortunately, our reasons for fiscal discipline are alien to the workers. They are furious at our betrayal, as are a good portion of our membership throughout the labor factions. Our loss is the KPD's and SPD's gain, and even the NSDAP, those lapdogs of the bourgeoisie, have joined in criticizing us for our austerity.
 
