@@ -4,6 +4,8 @@ audio: clear shuffle music/1928_1933/ZurSonne_zurFreiheit.mp3 music/1928_1933/ar
 on-arrival: {!
 // increase NSDAP vote share 
 Q.unemployed += 6.8; 
+Q.special_interests += 6
+Q.rdi_balance += 5;
 Q.inflation -= 4;
 if (Q.budget > 0) {
     Q.budget -= 1;
