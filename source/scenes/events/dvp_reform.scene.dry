@@ -5,9 +5,9 @@ priority: 2
 on-arrival: {!
 
 if (Q.dvp_relation >= 75) {
-    Q.dvp_left += 1;
+    Q.dvp_left += 0.5;
 } else if (Q.dvp_relation < 50) {
-    Q.dvp_right += 1;
+    Q.dvp_right += 0.5;
 }
 if (!Q.in_grand_coalition) {
     Q.dvp_right += 1;
