@@ -3,16 +3,16 @@ on-arrival: {!
 Q.csvd_formed = 1;
 Q.parties.push('csvd');
 
-Q.workers_csvd = 5;
+Q.workers_csvd = 4;
 Q.workers_z -= 1; 
 Q.workers_dnvp -= 2;
 Q.workers_others -= 2;
 Q.new_middle_csvd = 10; 
-Q.new_middle_dnvp -= 4;
+Q.new_middle_dnvp -= 3;
 Q.new_middle_others -= 6;
 Q.old_middle_csvd = 3;
 Q.old_middle_dnvp -= 2;
-Q.old_middle_others -= 1;
+Q.old_middle_others -= 2;
 Q.rural_csvd = 0;
 Q.catholics_csvd = 0;
 Q.unemployed_csvd = 0;
