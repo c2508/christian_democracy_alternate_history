@@ -15,8 +15,8 @@ Wilhelm Marx, former <span style="color: #000000;">**Center Party**</span> chanc
 The party has splintered in two over the vote to decide his sucessor. The nominee of the National Committee is Christian Trade Union (<span style="color: #000000;">**DGB**</span>) chairman Adam Stegerwald, who has lain in waiting for quite some time now. On the other hand, there is Joseph Joos, whose concilliatory nature endear him to most of the party, as opposed to Stegerwald's more abrasive personality. However, if the vote is deadlocked, a dark horse could emerge as the chairman of the <span style="color: #000000;">**Center Party**</span>. 
 
 - @stegerwald: Adam Stegerwald has been confirmed by the rest of the party.
-- @joos: The <span style="color: #000000;">Center Party</span> has pivoted to Joseph Joos as the party chair.
-- @kaas: The <span style="color: #000000;">Center Party</span> compromises to elect Ludwig Kaas as the party chair.
+- @joos: The <span style="color: #000000;">**Center Party**</span> has pivoted to Joseph Joos as the party chair.
+- @kaas: The <span style="color: #000000;">**Center Party**</span> compromises to elect Ludwig Kaas as the party chair.
 
 @stegerwald
 unavailable-subtitle: [? if right_dissent > 15: There is too much infighting with the right of the party. ?][? if labor_dissent > 15: The white collar unions are still unhappy with Stegerwald's decision oppose wage increases in 1927. ?][? if labor_strength < 35: Stegerwald does not have enough influence to secure the nomination. ?] 
