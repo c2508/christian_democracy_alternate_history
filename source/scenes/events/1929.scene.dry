@@ -3,7 +3,8 @@ subtitle: A new year
 on-arrival: {!
 // see post_event.scene.dry for changes.
 Q.economic_growth -= 4;
-
+Q.special_interests += 10
+Q.rdi_balance += 3
 !}
 tags: event
 view-if: year = 1929 and month = 1
