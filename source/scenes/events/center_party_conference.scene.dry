@@ -2,7 +2,7 @@ title: <span style="color: #000000;">**Center Party**</span> Conference
 subtitle: The <span style="color: #000000;">Center Party</span> chooses their new leader...
 view-if: year = 1928 and month = 12 and z_party_leader = "Marx"
 max-visits: 1
-priority: 2
+priority: 1
 tags: event
 new-page: true
 
@@ -39,7 +39,7 @@ With the National Council's rejection of Stegerwald, the party's close relations
 @kaas
 view-if: not (spd_relation >= 67 and labor_strength >= right_strength and left_strength >= right_strength) and not (right_dissent <= 15 and labor_dissent <= 15 and labor_strength >= 35)
 subtitle: A dark horse emerges... 
-on-arrival: z_party_leader = "Kaas"; spd_relations -= 5; prussian_concordat_progress += 1; catholics_z += 4; dvp_right += 1
+on-arrival: z_party_leader = "Kaas"; spd_relations -= 5; prussian_concordat_progress += 1; catholics_z += 3; dvp_right += 1; ddp_relations -= 3; dvp_relations -= 5;
 face-image: img/portraits/KaasLudwig.jpg
 
 While a suggestion about a collegium with Joos, Stegerwald and Kaas had won some approval from delegates, concerns about Stegerwald's personality has sunk the idea. In a secret vote by the delegates, Ludwig Kaas has been selected as the chairman of the [? if z_party_name != "CVP": <span style="color: #000000;">**Center Party**</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] as a compromise candidate between Stegerwald and Joos. 
