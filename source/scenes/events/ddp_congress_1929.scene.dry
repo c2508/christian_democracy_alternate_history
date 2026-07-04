@@ -19,7 +19,7 @@ Headed by esteemed economist and journalist Gustav Stolper, the newly coined 'St
 
 @program_yay
 view-if: stolper_program_adopted = 1
-on-arrival: liberal_cooperation += 3; new_middle_ddp += 4; old_middle_ddp += 4; new_middle_other -= 4; old_middle_other -= 4; catholics_ddp += 1; workers_ddp -= 1; ddp_right += 2; ddp_cohesion += 2; ddp_relation += 3;
+on-arrival: liberal_cooperation += 3; new_middle_ddp += 4; old_middle_ddp += 4; new_middle_other -= 4; old_middle_other -= 4; catholics_ddp += 1; workers_ddp -= 1; ddp_right += 2; ddp_cohesion += 2; ddp_relation += 3; rdi_balance -= 7
 face-image: img/portraits/lemmer.jpg
 
 With strong support from the business interests residing on the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>'s right wing, the party has overwhelmingly voted to adopt the Stolper Program as the official program of the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>.
@@ -30,7 +30,7 @@ Meanwhile, the reelection of Koch Weser has gone without a hitch, affirming his 
 
 @program_nay
 view-if: stolper_program_adopted = 0
-on-arrival: new_middle_other += 2; old_middle_other += 2; ddp_cohesion -= 1;
+on-arrival: new_middle_other += 2; old_middle_other += 2; ddp_cohesion -= 1; special_interests += 5
 face-image: img/portraits/heuss.jpg
 
 In the face of strong opposition from the left wing and Young Democrats faction of the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, the Stolper Program has been shot down in a decisive internal party vote. [? if agriculture_minister_party = 'DDP': This represents a repudiation of the policies Dietrich has implemented since his appointment as Minister of Agriculture and has left the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> more divided than ever before. ?]
