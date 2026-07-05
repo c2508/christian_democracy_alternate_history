@@ -1,6 +1,6 @@
 title: An Unlikely Alliance?
-subtitle: The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> is at a crossroad
-view-if: year == 1930 and month >= 6 and nationalism >= 60
+subtitle: The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> is at a crossroads
+view-if: year == 1930 and month >= 6 
 new-page: true
 max-visits: 1
 on-arrival: {!
@@ -9,56 +9,62 @@ if (Q.dnvp_leader == 'Triumvirate') {
     Q.young_plan_success -= 1;
 }
 if (Q.nationalism >= 60) {
-    Q.young_plan_success += 1;
+    Q.dstp_points += 3;
 }
-if (Q.pro_republic >= 65) {
-    Q.young_plan_success -= 1;
+if (Q.pro_republic <= 40) {
+    Q.dstp_points += 1;
 }
-if (Q.dnvp_votes > 14) {
-    Q.young_plan_success += 1;
+if (Q.ddp_votes < 3.5) {
+    Q.dstp_points += 2;
 }
-if (Q.rpm_strength == 1) {
-    Q.young_plan_success += 1;
+if (Q.spd_right > (Q.spd_left + 4)) {
+    Q.dstp_points -= 1;
 }
-if (Q.rpm_strength == 2) {
-    Q.young_plan_success += 2;
+if (Q.ddp_votes >= 5) {
+    Q.dstp_points -= 1;
 }
-if (Q.green_front == 0) {
-    Q.young_plan_success += 1;
+if (Q.dvp_leader = "Scholz") {
+    Q.dstp_points += 1;
 }
-if (Q.dvp_right > Q.dvp_left) {
-    Q.young_plan_success += 1;
+if (Q.special_interests <= 80) {
+    Q.dstp_points -= 2; 
 }
-if (Q.special_interests >= 80) {
-    Q.young_plan_success += 1; 
+if (Q.stolper_program_adopted = 0) {
+    Q.dstp_points -= 2;
 }
-if (Q.dnvp_in_prussia == 1) {
-    Q.young_plan_success += 1;
+if (Q.rdi_balance >= 1135) {
+    Q.dstp_points += 2;
 }
-if (Q.spd_prussia == 1) {
-    Q.young_plan_success -= 1;
-}
-if (Q.right_strength > 40) {
-    Q.young_plan_success += 1;
+if (Q.next_election_time - Q.time < 6) {
+    Q.dstp_formation_points += 1;
 }
 !}
 tags: event
 
-=  reformation
+= <span style="color: #D3C24D;">**[+ ddp_name +]**</span> reformation
 
-Leaders of the German Democratic Party, seeing the party's vote share fall over time, has decided that now is the time to completely reform the party. The party leader, Erich Koch-Weser, has engineered a merger with the political arm of the Young German Order, a nationalist paramilitary group. Now, the party will be called the German State Party, or DStP.
+dadadad
 
-This has led to outcry from the left wing of the party, progressives who would rather not work with antisemites and conservative nationalists.
+- @resultsdstp: The party votes...
 
-- @advantage: We can recruit disaffected progressives to the SPD.
-- @nothing: This is none of our concern.
+@resultsdstp
+go-to: dstp_success if (dstp_points > 4); dstp_fail if (dnvp_points < 4); dstp_mid if (dstp_points = 4)
 
-@advantage
-on-arrival: new_middle_spd += 5; peoples_party_support += 1; left_dissent += 5; reformist_strength += 3; neorevisionist_strength += 3; reformist_dissent -= 2; neorevisionist_dissent -= 2;  ddp_name = "DStP"; ddp_dstp_seen = 1; new_middle_ddp -= 5; old_middle_ddp -= 3; rural_ddp -= 3; ddp_relation -= 5
+- @dstp_success: The Conservative Democrats manage to rally the party in support of a merger with the <span style="color: #eea056;">**VNR**</span>.
+- @dstp_mid: The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> is at an impasse
+- @dstp_fail: The resolution for a merger with the <span style="color: #eea056;">**VNR**</span> is soundly defeated.
+
+@dstp_success
+on-arrival: new_middle_spd += 5; peoples_party_support += 1; ddp_name = "DStP"; ddp_dstp_seen = 1; new_middle_ddp -= 5; old_middle_ddp -= 3; rural_ddp -= 3; ddp_relation -= 5
 
 With turmoil in the DDP, we have an opportunity to recruit middle-class progressives and portions of the liberal intelligensia into our party. The left of the SPD is opposed to this path, seeing it as diluting the class character of the party. On the other hand, revisionists support this course.
 
+@dstp_mid
+on-arrival: ddp_left += 1
 
-@nothing
+assasa
+
+@dstp_fail
+on-arrival: ddp_left += 1
 
 The DDP's internal affairs are none of our concern.
