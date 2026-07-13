@@ -63,7 +63,7 @@ We are continuing to invest in our radio stations. Both commercial and political
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
-on-arrival: resources -= 1; workers_aid += 1; unemployed_z += 2*(1 - dissent); catholics_z += 1*(1-dissent)
+on-arrival: resources -= 1; workers_aid += 1; unemployed_z += 2*(1-dissent); catholics_z += 1*(1-dissent)
 
 We have increased funding to Catholic Charities. [? if black_thursday_seen > 0 : In an age of economic crisis, this will be helpful for improving our standing among the impoverished. ?]
 
@@ -73,16 +73,16 @@ unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
 on-arrival: resources -= 1; cultural_organizations += 1; left_dissent -= 6; center_dissent -= 6; labor_dissent -= 6; right_dissent -= 6; young_conservatives_dissent -= 6
 
-It is not enough for the <span style="color: #000000;">Center Party</span> to solely be a political party. The Catholic Workers Association, our schools and libraries are crucial to our members' lives. Funding these organizations makes our members more committed to the party, even when our policies might not be to their liking.
+It is not enough for the <span style="color: #000000;">**Center Party**</span> to solely be a political party. The Catholic Workers Association, our schools and libraries are crucial to our members' lives. Funding these organizations makes our members more committed to the party, even when our policies might not be to their liking.
 
-[? if sa_strength > 500 : However, it feels frivolous to spend on sports and choirs when the fascists are murdering us in the streets. ?]
-[? if rfb_strength > 250 : However, it feels frivolous to spend on sports and choirs when the communists are murdering us in the streets. ?]
+[? if sa_strength > 500 : However, it feels frivolous to spend on sports and choirs when the <span style="color: #7A3C00;">Nazis</span> are murdering us in the streets. ?]
+[? if rfb_strength > 250 : However, it feels frivolous to spend on sports and choirs when the <span style="color: #700000;">Communists</span> are murdering us in the streets. ?]
 
 @rb
 choose-if: resources > 0 and z_endorse_rb = 1
 unavailable-subtitle: [? if resources < 1: Not enough resources. ?][? if z_endorse_rb = 0: The <span style="color: #000000;">**Center Party**</span> has not offically endorsed the <span style="color: #c00000;">**Reichsbanner**</span> yet. ?]
 subtitle: -1 resources
-on-arrival: resources -= 1; rb_strength  += 100; rb_militancy += 0.01; reichsbanner_timer = 0; funded_reichsbanner += 1
+on-arrival: resources -= 1; rb_strength += 100; rb_militancy += 0.01; reichsbanner_timer = 0; funded_reichsbanner += 1; z_dominance += 5; 
 
 We have increased recruiting to the <span style="color: #c00000;">**Reichsbanner**</span>.
 
