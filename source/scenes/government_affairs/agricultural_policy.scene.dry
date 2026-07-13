@@ -11,6 +11,7 @@ tags: govt_affairs, cabinet
 
 Agricultural policy has been the domain of the Center Party and there is much need for reform in this area. Our urban constituencies hope for cheaper and more stable food supplies, while small farmers need economic relief. There is also the movement for land reform, to break up the large aristocratic estates and redistribute land to peasants.
 
+- @price_floor
 - @expand_cooperatives
 - @land_reform
 - @agricultural_finance
@@ -23,11 +24,18 @@ Agricultural policy has been the domain of the Center Party and there is much ne
 @expand_cooperatives
 title: Support agricultural cooperatives.
 subtitle: Advance legislation to aid agricultural cooperatives.
-view-if: works_councils == 0
 on-arrival: rural_z += (1/3)*(1-dissent); right_dissent -= 3; right_strength += 4; rural_nsdap -= 1*(1-dissent); rural_others -= 1*(1-dissent); unemployed -= 0.2; unemployed -= 0.8 if unemployed > 9; economic_growth += 0.2
 max-visits: 1
 
 In line with the <span style="color: #000000;">**VdB's**</span> policies, we have supported the establishment and expansion of agricultural cooperatives to aid small farmers. Our rural base is pleased.
+
+@price_floor
+title: Price Floor
+subititle: Impose a price floor on agriculture goods
+on-arrival: rural_z += 2*(1-dissent); catholic_z += (1/3)*(1-dissent); worker_z -= 0.5; new_middle_z -= 1/3; dnvp_relation += 8; spd_relation -= 5; kpd_relation -= 5; right_dissent -= 5; right_strength += 5; labor_dissent += 8; rural_nsdap -= 2*(1-dissent); rural_others -= 1*(1-dissent); economic_growth -= 0.3; worker_sol -= 2; inflation += 0.2
+max-visits: 1
+
+This creates a price floor where agriculture products cannot be sold below a certain price. This policy prevents cheap <span style="color: #DC143C;">Pol</span><span style="color: #FFFFFF;">ish</span> agriculture goods from flooding the market so German farmers will be able to sell their goods for a profit. However, this increases the price of agriculture goods for blue collar and white collar workers.
 
 @land_reform
 title: Land Reform
@@ -47,7 +55,6 @@ on-arrival: budget -= 1; agricultural_finance += 1; rural_z += (1/3)*(1-dissent)
 
 We have increased financial support for small farmers, providing access to credit and insurance, saving them from privation. The right in our party are pleased with our support for German agriculture.
 
-
 @rural_infrastructure
 title: Rural Infrastructure
 subtitle: -1 budget - Invest in the more rural regions of Germany
@@ -64,4 +71,3 @@ on-arrival: budget -= 2; rural_z += 2*(1-dissent); rural_nsdap -= 1*(1-dissent);
 max-visits: 1
 
 Subsidising the production of agricutltural goods for German farmers helps keep their costs of production low, which leads to lower prices for consumers. While our rural and industrial electorate stand to gain from this policy, this does not solve the structural problems plaguing German Agriculture.
-
