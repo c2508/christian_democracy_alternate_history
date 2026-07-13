@@ -23,7 +23,7 @@ Agricultural policy has been the domain of the Center Party and there is much ne
 
 @expand_cooperatives
 title: Support agricultural cooperatives.
-subtitle: Advance legislation to aid agricultural cooperatives.
+subtitle: Advance legislation to aid agricultural cooperatives
 on-arrival: rural_z += (1/3)*(1-dissent); right_dissent -= 3; right_strength += 4; rural_nsdap -= 1*(1-dissent); rural_others -= 1*(1-dissent); unemployed -= 0.2; unemployed -= 0.8 if unemployed > 9; economic_growth += 0.2
 max-visits: 1
 
@@ -31,7 +31,7 @@ In line with the <span style="color: #000000;">**VdB's**</span> policies, we hav
 
 @price_floor
 title: Price Floor
-subititle: Impose a price floor on agriculture goods
+subtitle: Impose a price floor on agriculture goods
 on-arrival: rural_z += 2*(1-dissent); catholic_z += (1/3)*(1-dissent); worker_z -= 0.5; new_middle_z -= 1/3; dnvp_relation += 8; spd_relation -= 5; kpd_relation -= 5; right_dissent -= 5; right_strength += 5; labor_dissent += 8; rural_nsdap -= 2*(1-dissent); rural_others -= 1*(1-dissent); economic_growth -= 0.3; worker_sol -= 2; inflation += 0.2
 max-visits: 1
 
