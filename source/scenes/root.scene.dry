@@ -337,7 +337,7 @@ Q.nsdap_leader = "Hitler";
 Q.young_plan_modifier = 0.35;
 Q.young_plan_votes = 0;
 Q.clergy_relation = 5; 
-Q.clergy_timer = 6;
+Q.clergy_time = 6;
 
 // quality of life (as % of 1928 - currently unused - should be welfare-adjusted.)
 Q.workers_qol = 100;
