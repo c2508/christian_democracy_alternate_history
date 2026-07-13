@@ -18,11 +18,11 @@ We can enact policies in Wurttemburg.
 - @judiciary: Purge the judiciary of its reactionary elements.
 - @merge: Begin drawing up plans for a merger of Baden and Wurttemburg.
 - @foreign: Convince foreign companies to set up factories in Wurttemburg.
-- @ban_sa: Ban the <span style="color: #7A3C00;">**SA**</span>, the Nazi paramilitary group.
+- @ban_sa: Ban the <span style="color: #7A3C00;">**SA**</span>, the <span style="color: #7A3C00;">Nazi</span> paramilitary group.
 - @unban_sa: Reverse the <span style="color: #7A3C00;">**SA**</span> ban.
-- @ban_rfb: Ban the <span style="color: #8B0000;">**RFB**</span>, the Communist paramilitary.
+- @ban_rfb: Ban the <span style="color: #8B0000;">**RFB**</span>, the <span style="color: #700000;">Communist</span> paramilitary.
 - @unban_rfb: Reverse the <span style="color: #8B0000;">**RFB**</span> ban.
-- @ban_sh: Ban the <span style="color: #3E88B3;">**Stahlhelm**</span>, the Nationalist paramilitary.
+- @ban_sh: Ban the <span style="color: #3E88B3;">**Stahlhelm**</span>, the <span style="color: #3E88B3;">*Nationalist</span> paramilitary.
 - @unban_sh: Reverse the <span style="color: #3E88B3;">**Stahlhelm**</span> ban.
 - @negotiate_concordat: Negotiate a concordat with the Vatican.
 - @sign_concordat: Sign a concordat with the Vatican.
