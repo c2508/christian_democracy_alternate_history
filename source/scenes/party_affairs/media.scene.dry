@@ -32,7 +32,7 @@ Our commercialized newspapers are able to bring in more funds. However, the left
 @campaign
 title: The purpose of our media is to elect more Catholics.
 subtitle: Our newspapers will focus on the electoral campaign.
-on-arrival: campaign_media += 1; catholics_z += 3*(1-dissent)
+on-arrival: campaign_media += 1; catholics_z += 2*(1-dissent)
 
 Our campaign media is mostly reaching the Catholics who already vote for us, but it must be doing *something*, or at least that is what we hope.
 
