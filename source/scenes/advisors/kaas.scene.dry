@@ -10,12 +10,21 @@ new-page: true
 Kaas has a close friendship with Eugenio Pacelli, the Papal Nuncio to Germany, which has been useful in concordat negotiations. His conciliatory nature will be helpful in bringing together the divergent wings of the party. 
  
 
-- @negotiate_prussian_concordat_
-- @sign_prussian_concordat_
+- @clergy_relation
+- @negotiate_prussian_concordat
+- @sign_prussian_concordat
 - @concordat_negotiate
 - @root: Return to main
 
-@negotiate_prussian_concordat_
+@clergy_relation
+title: Improve the standing of the <span style="color: #000000;">**Center Party**</span> within the clergy
+subtitle: Kaas reassures his contacts within the clergy of the <span style="color: #000000;">**Center Party's**</span> dedication towards securing catholic rights.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: clergy_relation += 1; right_dissent -= 3;
+
+We have managed to convince the clergy of our commitment to Political Catholicism. 
+
+@negotiate_prussian_concordat
 title: Negotiate a Concordat in Prussia
 subtitle: Kaas leverages his contacts within the Vatican to start negotiations for a Prussian Concordat.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
@@ -24,7 +33,7 @@ on-arrival: prussian_concordat_progress += 1; labor_dissent -= 2; right_dissent 
 
 We are making progress towards negotiating a concordat between Prussia and the Catholic church.
 
-@sign_prussian_concordat_
+@sign_prussian_concordat
 title: We can sign a Concordat in Prussia now
 subtitle: We are done negotiating the terms of a Prussian Concordat.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
