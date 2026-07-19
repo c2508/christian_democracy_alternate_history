@@ -1,0 +1,169 @@
+title: President <span style="color: #808080;">Hindenburg</span> invokes Article 48
+new-page: true
+subtitle: A step towards Authoritarianism
+tags: event
+view-if: year == 1930 and month == 7 and Chancellor == "Bruning"
+priority: 2
+max-visits: 1
+face-image: img/redfront.jpg
+go-to: ministries
+
+= First Comprehensive Emergency Decree to Secure the Economy and State Finances
+
+With the rapid growth in unemployment, the unemployment insurance fund has been under great strain. As such, the Decree increases rates and cuts benefits for workers while involving other cuts to social welfare. 
+
+@ministries 
+
+We can choose the contents of the decree. Large cuts will make it easier for us to balance the budget.
+
+
+- #demands
+- #drop_demands
+
+@agri_minister
+title: Have a <span style="color: #000000;">**Center Party**</span> or <span style="color: #3E88B3;">**DNVP**</span> politician as Agriculture Minister in the next cabinet 
+tags: demands
+choose-if: agri_minister = 0
+view-if: agri_minister = 0
+on-arrival: rpm_points += 2; agri_minister += 1; right_strength += 5;
+go-to: ministries
+
+We shall have a conservative agriculture minister in the next cabinet.
+
+@fund
+title: Fund the <span style="color: #000000;">**Center Party**</span> aligned Association of German Farmers’ Association <span style="color: #000000;">**(VdB)**</span> for more low interest loans 
+subtitle: -2 resources
+unavailable-subtitle: Not enough resources.
+choose-if: resources >= 2 and fund = 0
+tags: demands
+view-if: fund = 0
+on-arrival: rpm_points += 3; fund += 1; resources -= 2; right_dissent -= 5; catholic_z += 4*(1-dissent)
+go-to: ministries
+
+While this appeases the Catholic peasants, Protestant farmers are unhappy at their exclusion.
+
+@coop
+title: Support agricultural cooperatives
+subtitle: -1 budget
+unavailable-subtitle: Not enough budget.
+tags: demands
+choose-if: coop = 0 and budget >= 1
+view-if: coop = 0
+on-arrival: rpm_points += 3; coop += 1; budget -= 1; economic_growth += 0.3; unemployed -= 0.2; 
+go-to: ministries
+
+We shall allocate more government funds to support agriculture cooperatives.
+
+@trade_war
+title: Prolong the trade war with <span style="color: #DC143C;">Pol</span><span style="color: #FFFFFF;">and</span> until at least 1932 
+subtitle: Continuing the trade war is popular amongst the majority of our party.
+tags: demands
+choose-if: trade_war = 0
+view-if: trade_war = 0
+on-arrival: rpm_points += 3; trade_war += 1; nationalism += 5*(1-dissent); spd_left += 1; old_middle_z += 2*(1-dissent); dnvp_relation += 5; dvp_relation += 5; left_dissent += 3; 
+go-to: ministries
+
+We shall continue the trade war with <span style="color: #DC143C;">Pol</span><span style="color: #FFFFFF;">and</span>. 
+
+@foreclosure
+title: Impose a rent moratorium and postpone the foreclosure of insolvent farms
+subtitle: -2 budget
+unavailable-subtitle: Not enough budget.
+tags: demands
+choose-if: tax_breaks = 0 and budget >= 2
+view-if: tax_breaks = 0
+on-arrival: rpm_points += 5; tax_breaks += 1; budget -= 2; ddp_relation -= 5; dvp_relation -= 5; ddp_right += 1; economic_growth += 0.5
+go-to: ministries
+
+This will relieve the financial burden of the farmers.
+
+@no_more
+title: No more concessions
+subtitle: We shall not make any more concessions
+tags: demands
+go-to: low if (rpm_points > 9); high if (rpm_points < 3); medium if (rpm_points > 2 ) and (rpm_points < 10 ) 
+
+We shall see if the farmers are satisfied with these concessions.
+
+@drop_agri_minister
+title: Have a <span style="color: #000000;">**Center Party**</span> or <span style="color: #3E88B3;">**DNVP**</span> politician as Agriculture Minister in the next cabinet 
+subtitle: Drop this concession
+tags: drop_demands
+choose-if: agri_minister = 1
+view-if: agri_minister = 1
+on-arrival: rpm_points -= 2; agri_minister -= 1; right_strength -= 5;
+go-to: ministries
+
+We have decided to drop this concession.
+
+@drop_fund
+title: Fund the <span style="color: #000000;">**Center Party**</span> aligned Association of German Farmers’ Association <span style="color: #000000;">**(VdB)**</span> for more low interest loans 
+subtitle: Drop this concession +2 resources
+choose-if: fund = 1
+tags: drop_demands
+view-if: fund = 1
+on-arrival: rpm_points -= 3; fund -= 1; resources += 2; right_dissent += 5; catholics_z -= 4*(1-dissent)
+go-to: ministries
+
+We have decided to drop this concession.
+
+@drop_coop
+title: Support agricultural cooperatives
+subtitle: Drop this concession +1 budget
+tags: drop_demands
+choose-if: coop = 1
+view-if: coop = 1
+on-arrival: rpm_points -= 3; coop -= 1; budget += 1; economic_growth -= 0.3; unemployed += 0.2; 
+go-to: ministries
+
+We have decided to drop this concession.
+
+@drop_trade_war
+title: Prolong the trade war with <span style="color: #DC143C;">Pol</span><span style="color: #FFFFFF;">and</span> until at least 1932 
+subtitle: Drop this concession
+tags: drop_demands
+choose-if: trade_war = 1
+view-if: trade_war = 1
+on-arrival: rpm_points -= 3; trade_war -= 1; nationalism -= 5*(1-dissent); spd_left -= 1; old_middle_z -= 3*(1-dissent); dnvp_relation -= 5; dvp_relation -= 5;
+go-to: ministries
+
+We have decided to drop this concession.
+
+@drop_foreclosure
+title: Impose a rent moratorium and postpone the foreclosure of insolvent farms
+subtitle: Drop this concession +2 budget
+tags: drop_demands
+choose-if: tax_breaks = 1 
+view-if: tax_breaks = 1
+on-arrival: rpm_points -= 5; tax_breaks -= 1; budget += 2; ddp_relation += 5; dvp_relation += 5; ddp_right -= 1; economic_growth -= 0.5
+go-to: ministries
+
+We have decided to drop this concession.
+
+
+@low
+on-arrival: pro_republic += 3; nationalism -= 3*(1-dissent); dnvp_relation += 5; catholics_z += 4*(1-dissent); rural_dnvp += 3; rural_z += 2*(1-dissent); right_dissent -= 5; cnblp_formed = 1; special_interests -= 3
+face-image: img/portraits/HergtOscar.jpg
+go-to: cnblp_formed
+
+After substantial concessions to the Landvolkbewegung, most farmers are content for now, as is the <span style="color: #000000;">**VdB**</span>, but the more radical elements still agitate against our policies. However, our worker base is unhappy with our capitulation to organised agriculture. In light of rising worker unemployment, this focus on agricultural issues is viewed as blatant pandering to the <span style="color: #385A38;">**RLB**</span> and <span style="color: #000000;">**VdB**</span>. 
+
+Despite the successful talks, Karl Hepp from the <span style="color: #C0A054;">**DVP**</span> and disaffected regional affliates of the <span style="color: #385A38;">**RLB**</span> have formed a new political party called the <span style="color: #006400;">**CNBLP**</span> in response to the preeminence of industrial interests in the <span style="color: #C0A054;">**DVP**</span> and <span style="color: #3E88B3;">**DNVP**</span>. With Hepp's position as President of the <span style="color: #385A38;">**RLB**</span>, the <span style="color: #3E88B3;">**DNVP**</span> and the <span style="color: #006400;">**CNBLP**</span> have begun to wrangle for control over the <span style="color: #385A38;">**RLB**</span> various regional chapters, which has severely compromised the <span style="color: #385A38;">**RLB**</span>'s official stance of political neutrality. Although the Rural People’s Movement has been pacified, the <span style="color: #909090;">**CNBLP's**</span> appeal as an <span style="color: #385A38;">agrarian</span> <span style="color: #909090;">**special interest**</span> party can only spell trouble for the <span style="color: #C0A054;">**DVP**</span> and <span style="color: #3E88B3;">**DNVP**</span> in the upcoming elections.
+
+@medium
+on-arrival: pro_republic -= 2; nationalism += 2*(1-dissent); dnvp_relation -= 4; rural_nsdap += 4; rural_dnvp -= 2; rural_z -= 1; catholics_z += 2; right_dissent += 5; rpm_strength += 1; cnblp_formed = 1; special_interests += 4
+face-image: img/portraits/WestarpKuno.jpg
+go-to: cnblp_formed
+
+Despite some concessions to the Landvolkbewegung, some feel that our policies do not go far enough in helping German farmers, but the <span style="color: #000000;">**VdB**</span>  is satisfied with our handling of the situation. As such, the radical elements of the movement have been significantly empowered and will seek to use this initially moderate movement to resort to increasingly violent acts of protest. This will have a destabilising effect in the countryside and may serve to further radicalise the already disenfranchised rural electorate.
+
+Meanwhile, Karl Hepp from the <span style="color: #C0A054;">**DVP**</span> and disaffected regional affliates of the <span style="color: #385A38;">**RLB**</span> have formed a new political party called the <span style="color: #006400;">**CNBLP**</span> in response to the preeminence of industrial interests in the <span style="color: #C0A054;">**DVP**</span> and <span style="color: #3E88B3;">**DNVP**</span>. With Hepp's position as President of the <span style="color: #385A38;">**RLB**</span>, the <span style="color: #3E88B3;">**DNVP**</span> and the <span style="color: #006400;">**CNBLP**</span> have begun to wrangle for control over the <span style="color: #385A38;">**RLB**</span> various regional chapters, which has severely compromised the <span style="color: #385A38;">**RLB**</span>'s official stance of political neutrality. With its appeal as an <span style="color: #385A38;">agrarian</span> <span style="color: #909090;">**special interest**</span> party, this can only spell trouble for the <span style="color: #C0A054;">**DVP**</span> and <span style="color: #3E88B3;">**DNVP**</span> in the upcoming elections
+
+@high
+on-arrival: pro_republic -= 5; nationalism += 5*(1-dissent); dnvp_relation -= 8; rural_nsdap += 6; rural_z -= 3; rural_dnvp -= 4; catholics_nsdap += 5; catholics_z -= 3; catholics_dnvp -= 1; right_dissent -= 8; rpm_strength += 2; cnblp_formed = 1; special_interests += 8; rural_dvp -= 5; rural_othets -= 2
+face-image: img/portraits/WestarpKuno.jpg
+go-to: cnblp_formed
+
+Talks with the Landvolkbewegung have broken down due to our refusal to offer them any substantial concessions, much to the disapproval of the <span style="color: #000000;">**VdB**</span>. As such, the radical elements of the movement have been significantly empowered and will seek to use this initially moderate movement to resort to increasingly violent acts of protest. This will have a destabilising effect in the countryside and may serve to further radicalise the already disenfranchised rural electorate.
+
+Meanwhile, Karl Hepp from the <span style="color: #C0A054;">**DVP**</span> and disaffected regional affliates of the <span style="color: #385A38;">**RLB**</span> have formed a political party called the <span style="color: #006400;">**CNBLP**</span> in response to the preeminence of industrial interests in the <span style="color: #C0A054;">**DVP**</span> and <span style="color: #3E88B3;">**DNVP**</span>. With Hepp's position as President of the <span style="color: #385A38;">**RLB**</span>, the <span style="color: #3E88B3;">**DNVP**</span> and the <span style="color: #006400;">**CNBLP**</span> have begun to wrangle for control over the <span style="color: #385A38;">**RLB**</span> various regional chapters, which has severely compromised the <span style="color: #385A38;">**RLB**</span>'s official stance of political neutrality. With the growing strength of the Rural People’s Movement and the <span style="color: #909090;">**CNBLP's**</span> appeal as an <span style="color: #385A38;">agrarian</span> <span style="color: #909090;">**special interest**</span> party, this can only spell trouble for the <span style="color: #C0A054;">**DVP**</span> and <span style="color: #3E88B3;">**DNVP**</span> in the upcoming elections
