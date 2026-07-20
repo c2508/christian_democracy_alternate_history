@@ -340,6 +340,22 @@ Q.young_plan_modifier = 0.35;
 Q.young_plan_votes = 0;
 Q.clergy_relation = 5; 
 Q.clergy_time = 6;
+Q.spd_anger = 0;
+Q.ddp_anger = 0;
+Q.dvp_anger = 0;
+Q.wp_anger = 0;
+Q.cnblp_anger = 0;
+Q.csvd_anger = 0;
+Q.kvp_anger = 0;
+Q.dnvp_anger = 0;
+Q.spd_total_anger = 0;
+Q.ddp_total_anger = 0;
+Q.dvp_total_anger = 0;
+Q.wp_total_anger = 0;
+Q.cnblp_total_anger = 0;
+Q.csvd_total_anger = 0;
+Q.kvp_total_anger = 0;
+Q.dnvp_total_anger = 0;
 
 // quality of life (as % of 1928 - currently unused - should be welfare-adjusted.)
 Q.workers_qol = 100;
