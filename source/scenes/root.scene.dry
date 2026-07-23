@@ -327,6 +327,7 @@ Q.rdi_balance = 1100;
 Q.rlb_leader = "Schiele";
 Q.green_front_leader = "Undecided";
 Q.nsdap_leader = "Hitler";
+Q.civil_servants = 0
 Q.young_plan_modifier = 0.35;
 Q.young_plan_votes = 0;
 Q.clergy_relation = 5; 
