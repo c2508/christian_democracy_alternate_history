@@ -4,10 +4,7 @@ view-if: year == 1930 and month >= 6
 new-page: true
 max-visits: 1
 on-arrival: {!
-Q.young_plan_success = 0;
-if (Q.dnvp_leader == 'Triumvirate') {
-    Q.young_plan_success -= 1;
-}
+Q.dstp_points = 0
 if (Q.nationalism >= 60) {
     Q.dstp_points += 3;
 }
@@ -23,13 +20,13 @@ if (Q.spd_right > (Q.spd_left + 4)) {
 if (Q.ddp_votes >= 5) {
     Q.dstp_points -= 1;
 }
-if (Q.dvp_leader = "Scholz") {
+if (Q.dvp_leader == "Scholz") {
     Q.dstp_points += 1;
 }
 if (Q.special_interests <= 80) {
     Q.dstp_points -= 2; 
 }
-if (Q.stolper_program_adopted = 0) {
+if (Q.stolper_program_adopted == 0) {
     Q.dstp_points -= 2;
 }
 if (Q.rdi_balance >= 1135) {
@@ -43,7 +40,8 @@ tags: event
 
 = <span style="color: #D3C24D;">**[+ ddp_name +]**</span> reformation
 
-ds
+In light of the worsening economic crisis and the radicalisation of the middle class, there is a renewed impetus amongst the leadership of the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> to reverse their flagging party, lest they doom themselves to irrelevancy. While Koch Weser has looked to the <span style="color: #B8996F;">**WP**</span> and <span style="color: #C0A054;">**DVP**</span> for a merger, extenuating circumstances have led to a breakdown in negotiations. Instead, an opportunity has arisen with the entry of Artur Mahraun’s <span style="color: #00FF00;">Young German Order's</span> entry into politics. Despite their strong antisemitic and Christian tendencies, their youthful character and large membership has managed to overcome the qualms of prominent <span style="color: #D3C24D;">**[+ ddp_name +]**</span> leaders. As such, Koch Weser has been engaged in secret negotiations with Mahraun over the formation of a new political party, which will be revealed to the rest of the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> in this pivotal party congress. With the atrophication of the <span style="color: #D3C24D;">**DDP's**</span> left wing, it remains to be seen if they can muster a concerted opposition to the merger with skeptical moderates. 
+
 
 - @resultsdstp: The party votes...
 
@@ -57,14 +55,17 @@ go-to: dstp_success if (dstp_points > 4); dstp_fail if (dnvp_points < 4); dstp_m
 @dstp_success
 on-arrival: ddp_name = "DStP"; special_interests += 5; rdi_balance += 3; nationalism += 4; new_middle_ddp -= 5; rural_ddp -= 2; old_middle_ddp += 4; liberal_cooperation -= 5; workers_ddp += 2
 
-ds
+As expected, prominent supporters of the merger like Baumer and Koch Weser have managed to rally a majority of the party in favor of the merger with the <span style="color: #00FF00;">Young German Order</span>, in the face of the disparate opposition of the pacifists and trade unionists from the party’s left. Although most of the <span style="color: #D3C24D;">**DDP**</span>-affiliated organisations have affirmed their support for the <span style="color: #D3C24D;">**DStP**</span>, the <span style="color: #D3C24D;">**DDP’s**</span> voting bloc left-wing intellectuals are not fully convinced by the romantic nationalism of the <span style="color: #00FF00;">Young German Order</span> while their anti-semitic tendencies have severely alienated the predominantly Jewish backers of the <span style="color: #D3C24D;">**DDP**</span>.
+Besides the <span style="color: #D3C24D;">**DDP**</span> and <span style="color: #00FF00;">Young German Order</span>, prominent members of the liberal establishment and the DVP’s Young Liberals have also been involved in the creation of the new <span style="color: #D3C24D;">**DStP**</span>. However, the formation of the <span style="color: #D3C24D;">**DStP**</span> has undermined the <span style="color: #C0A054;">**DVP’s**</span> attempts at creating a united bourgeoisie party, severely undercutting the quest for liberal unity. As such, despite the <span style="color: #D3C24D;">**DDP’s**</span> shift to the right, a united liberal party now looks further than ever. 
 
 @dstp_mid
 on-arrival: ddp_right += 1; special_interests -= 3; rdi_balance -= 3; new_middle_ddp += 1; catholics_ddp += 0.5; liberal_cooperation += 2; workers_ddp += 1
 
-Following a contentious party congress with heckling from both sides, the Execuetive Committee has come to a compromise in order to preserve internal unity. Due to the efforts of Erkelenz and Stolper in 
+Faced with an organised opposition from the party’s left and threats of resignation from prominent union leaders, the Business Wing has dropped their plans for the merger with the <span style="color: #00FF00;">Young German Order</span>. However, in a bid to revitalise the party, the <span style="color: #D3C24D;">**DDP**</span> leftists have consented to allowing the entry of other elements interested in joining the <span style="color: #D3C24D;">**DSTP**</span>, namely the Young Liberals of the <span style="color: #C0A054;">**DVP**</span> and Christian trade union leaders dissatisfied with the <span style="color: #000000;">**DGB’s**</span>  direction. While numerically small, the injection of new blood into the party might be able to woo back disillusioned voters from other bourgeois parties. 
 
-@dstp_fail
+@dstp_fail 
 on-arrival: ddp_left += 3; new_middle_ddp -= 2; old_middle_ddp -= 2; special_interests += 5; rdi_balance += 3 
 
-ds
+Despite their strong position heading into the party congress, the right of the <span style="color: #D3C24D;">**DDP**</span> have failed in advancing the resolution for the merger. Part of this can be attributed to the party’s close ties with the <span style="color: #c00000;">**SPD**</span>, which has galvanised moderates like Heuss and Stolper into closing ranks with the pacifists and trade unionists on the left. With a part to play in this discredited venture, Koch Weser has been forced to resign as party chair, greatly empowering the social-liberal elements of the party. 
+All in all, the overwhelming rejection of the merger suggests the <span style="color: #D3C24D;">**DDP’s**</span> continued commitment to its progressive and left liberal ideals. While this is respectable, the failure of the <span style="color: #D3C24D;">**DDP**</span> to reinvent itself amidst this volatile political landscape can only prove to be a handicap. With the declining appeal of liberalism and a moribund Party Executive, has the <span style="color: #D3C24D;">**DDP**</span> doomed itself to irrelevancy?
+
