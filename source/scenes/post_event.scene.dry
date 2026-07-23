@@ -136,7 +136,7 @@ Q.wp_anger = Q.total_wp_anger
 Q.cnblp_anger+0.3*(agriculture_opposition) = Q.cnblp_total_anger
 Q.csvd_anger+0.15*(labor_opposition) = Q.csvd_total_anger
 Q.kvp_anger+0.15*(industrial_opposition) = Q.kvp_total_anger
-Q.dnvp_anger-0.5*(relation-50)+0.30*(industrial_opposition)+0.45*(agriculture_opposition) = Q.dnvp_total_anger
+Q.dnvp_anger-0.5*(dnvp_relation-50)+0.30*(industrial_opposition)+0.45*(agriculture_opposition) = Q.dnvp_total_anger
 
 Q.rb_unity = parseFloat((Q.spd_relation*(1-Q.dissent)*1.1).toFixed(1))
 
