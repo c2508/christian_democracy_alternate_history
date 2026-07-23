@@ -115,7 +115,7 @@ choose-if: fund = 1
 tags: drop_demands
 view-if: fund = 1
 on-arrival: rpm_points -= 3; fund -= 1; resources += 2; right_dissent += 5; catholics_z -= 4*(1-dissent)
-go-to: moriginalname5
+go-to: originalname5
 
 We have decided to drop this concession.
 
