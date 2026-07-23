@@ -16,7 +16,7 @@ Q.trade_war = 0
 Q.tariff = 0
 Q.foreclosure = 0
 !}
-go-to: ministries
+go-to: originalname5
 
 = The Rural People's Movement
 
@@ -24,7 +24,7 @@ With the lack of investment in German Agriculture, the maturity of high interest
 
 All these factors have led to an increasing disillusion with the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> system and a radicalisation of the rural electorate. Already, large demonstrations have been held in Schleswig Holstein, with the potential of spreading to the rest of Northern Germany. The situation there is volatile and as a party in the Fourth <span style="color: #000000;">Marx</span> Cabinet with a significant rural voterbase, the onus is on us to give them a solution lest they defect to an agrarian <span style="color: #808080;">**special interest party**</span>.
 
-@ministries 
+@originalname5
 
 We can give them any number of concessions. The less we give them, the angrier they will be.
 
