@@ -38,7 +38,7 @@ tags: demands
 choose-if: agri_minister = 0
 view-if: agri_minister = 0
 on-arrival: rpm_points += 2; agri_minister += 1; right_strength += 5;
-go-to: ministries
+go-to: originalname5
 
 We shall have a conservative agriculture minister in the next cabinet.
 
@@ -50,7 +50,7 @@ choose-if: resources >= 2 and fund = 0
 tags: demands
 view-if: fund = 0
 on-arrival: rpm_points += 3; fund += 1; resources -= 2; right_dissent -= 5; catholic_z += 4*(1-dissent)
-go-to: ministries
+go-to: originalname5
 
 While this appeases the Catholic peasants, Protestant farmers are unhappy at their exclusion.
 
@@ -62,7 +62,7 @@ tags: demands
 choose-if: coop = 0 and budget >= 1
 view-if: coop = 0
 on-arrival: rpm_points += 3; coop += 1; budget -= 1; economic_growth += 0.3; unemployed -= 0.2; 
-go-to: ministries
+go-to: originalname5
 
 We shall allocate more government funds to support agriculture cooperatives.
 
@@ -73,7 +73,7 @@ tags: demands
 choose-if: trade_war = 0
 view-if: trade_war = 0
 on-arrival: rpm_points += 3; trade_war += 1; nationalism += 5*(1-dissent); spd_left += 1; old_middle_z += 2*(1-dissent); dnvp_relation += 5; dvp_relation += 5; left_dissent += 3; 
-go-to: ministries
+go-to: originalname5
 
 We shall continue the trade war with <span style="color: #DC143C;">Pol</span><span style="color: #FFFFFF;">and</span>. 
 
@@ -85,7 +85,7 @@ tags: demands
 choose-if: tax_breaks = 0 and budget >= 2
 view-if: tax_breaks = 0
 on-arrival: rpm_points += 5; tax_breaks += 1; budget -= 2; ddp_relation -= 5; dvp_relation -= 5; ddp_right += 1; economic_growth += 0.5
-go-to: ministries
+go-to: originalname5
 
 This will relieve the financial burden of the farmers.
 
@@ -104,7 +104,7 @@ tags: drop_demands
 choose-if: agri_minister = 1
 view-if: agri_minister = 1
 on-arrival: rpm_points -= 2; agri_minister -= 1; right_strength -= 5;
-go-to: ministries
+go-to: originalname5
 
 We have decided to drop this concession.
 
@@ -115,7 +115,7 @@ choose-if: fund = 1
 tags: drop_demands
 view-if: fund = 1
 on-arrival: rpm_points -= 3; fund -= 1; resources += 2; right_dissent += 5; catholics_z -= 4*(1-dissent)
-go-to: ministries
+go-to: moriginalname5
 
 We have decided to drop this concession.
 
@@ -126,7 +126,7 @@ tags: drop_demands
 choose-if: coop = 1
 view-if: coop = 1
 on-arrival: rpm_points -= 3; coop -= 1; budget += 1; economic_growth -= 0.3; unemployed += 0.2; 
-go-to: ministries
+go-to: originalname5
 
 We have decided to drop this concession.
 
@@ -137,7 +137,7 @@ tags: drop_demands
 choose-if: trade_war = 1
 view-if: trade_war = 1
 on-arrival: rpm_points -= 3; trade_war -= 1; nationalism -= 5*(1-dissent); spd_left -= 1; old_middle_z -= 3*(1-dissent); dnvp_relation -= 5; dvp_relation -= 5;
-go-to: ministries
+go-to: originalname5
 
 We have decided to drop this concession.
 
@@ -148,7 +148,7 @@ tags: drop_demands
 choose-if: tax_breaks = 1 
 view-if: tax_breaks = 1
 on-arrival: rpm_points -= 5; tax_breaks -= 1; budget += 2; ddp_relation += 5; dvp_relation += 5; ddp_right -= 1; economic_growth -= 0.5
-go-to: ministries
+go-to: originalname5
 
 We have decided to drop this concession.
 
