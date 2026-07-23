@@ -170,11 +170,11 @@ if ((Q.industrial_opposition < 20) && (Q.industrialist_funding_timer = 0)) {
 
 // 1. update dates
 if (Q.week_actions >= 1) {
-    Q.time += 1;
     Q.week_actions = 0;
     Q.week += 1;
 
 if (Q.month_actions >= 1) {
+    Q.time += 1;
     Q.month_actions = 0;
     Q.month += 1;
 }
