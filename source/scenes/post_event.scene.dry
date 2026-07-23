@@ -129,14 +129,14 @@ if (Q.unemployed <= 1) {
 }
 
 
-Q.spd_anger-0.5*(Q.spd_relation-50)+1.05*(Q.labor_opposition) = Q.spd_total_anger
-Q.ddp_anger-0.5*(Q.ddp_relation-50)+0.15*(Q.labor_opposition)+0.15*(Q.industrial_opposition) = Q.ddp_total_anger
-Q.dvp_anger-0.5*(Q.dvp_relation-50)+0.15*(Q.agriculture_opposition)+0.45*(Q.industrial_opposition) = Q.dvp_total_anger
-Q.wp_anger = Q.total_wp_anger
-Q.cnblp_anger+0.3*(Q.agriculture_opposition) = Q.cnblp_total_anger
-Q.csvd_anger+0.15*(Q.labor_opposition) = Q.csvd_total_anger
-Q.kvp_anger+0.15*(Q.industrial_opposition) = Q.kvp_total_anger
-Q.dnvp_anger-0.5*(Q.dnvp_relation-50)+0.30*(Q.industrial_opposition)+0.45*(Q.agriculture_opposition) = Q.dnvp_total_anger
+Q.spd_total_anger = Q.spd_anger - 0.5 * (Q.spd_relation - 50) + 1.05 * Q.labor_opposition;
+Q.ddp_total_anger = Q.ddp_anger - 0.5 * (Q.ddp_relation - 50) + 0.15 * Q.labor_opposition + 0.15 * Q.industrial_opposition;
+Q.dvp_total_anger = Q.dvp_anger - 0.5 * (Q.dvp_relation - 50) + 0.15 * Q.agriculture_opposition + 0.45 * Q.industrial_opposition;
+Q.wp_total_anger = Q.wp_anger;
+Q.cnblp_total_anger = Q.cnblp_anger + 0.3 * Q.agriculture_opposition;
+Q.csvd_total_anger = Q.csvd_anger + 0.15 * Q.labor_opposition;
+Q.kvp_total_anger = Q.kvp_anger + 0.15 * Q.industrial_opposition;
+Q.dnvp_total_anger = Q.dnvp_anger - 0.5 * (Q.dnvp_relation - 50) + 0.30 * Q.industrial_opposition + 0.45 * Q.agriculture_opposition;
 
 Q.rb_unity = parseFloat((Q.spd_relation*(1-Q.dissent)*1.1).toFixed(1))
 
