@@ -153,7 +153,7 @@ Q.in_grand_coalition_baden = 0;
 Q.in_bourgeois_coalition_baden = 0;
 Q.in_bourgeoise_coalition_baden = 0;
 Q.in_far_right_coalition_baden = 0;
-Q.in_christian_coalition = 0;
+Q.in_christian_coalition_baden = 0;
 !}
 on-display: {!
 data = []
