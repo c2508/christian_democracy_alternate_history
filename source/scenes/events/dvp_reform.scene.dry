@@ -38,15 +38,11 @@ if (Q.dvp_right > (Q.dvp_left*1.5) || (Q.dvp_right > (Q.dvp_left + 4))) {
 }
 
 if (Q.dvp_ideology == "Left" || (Q.dvp_left - Q.dvp_right >= 3)) {
-    Q.stresemann_reform_yay = 1;
+    Q.reform_pass = 1;
 }
 
-if (Q.dvp_ideology == "Right" || (Q.dvp_right - Q.dvp_left >= 3)) {
-    Q.stresemann_reform_nay = 1;
-}
-
-if (!Q.stresemann_reform_yay && !Q.stresemann_reform_nay) {
-    Q.stresemann_reform_mid = 1;
+if (!Q.reform_pass) {
+    Q.reform_fail = 1;
 }
 !}
 max-visits: 1
@@ -56,34 +52,24 @@ new-page: true
 
 = <span style="color: #C0A054;">**DVP**</span> Congress
 
-Following the increased influence of industrial interests in the <span style="color: #C0A054;">**DVP**</span>'s Reichstag delegation, a party congress has been called within the <span style="color: #C0A054;">**DVP**</span> over proposed internal reform spearheaded by Stresemann and Thiel. The reform is expected to give the disaffected working-class and white collar elements more of a voice in the <span style="color: #C0A054;">**DVP**</span> to act as a counterweight to the party's right wing and turn it into a genuine People's Party.
+Amidst the growing appeal of special interests, the atrophication of the <span style="color: #C0A054;">**DVP’s**</span> vote and the ailing health of Streseman, there is a renewed impetus for him to secure his party’s future. This might be his very last chance to influence the yearslong struggle for control of the <span style="color: #C0A054;">**DVP**</span>.
 
-German industry isn't going to abandon their voice within the <span style="color: #C0A054;">**DVP**</span> so easily, and this is likely to be the last chance Stresemann will have to maintain control of the party, with his declining health.[? if not in_grand_coalition: The left of the <span style="color: #C0A054;">**DVP**</span> has also been diminished by the current absence of a coalition including the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> and the <span style="color: #C0A054;">**DVP**</span>. ?]
+Spearheaded by the white collar representatives of the <span style="color: #a2c617;">DHV</span> and supported by Stresemann, the left wing of the <span style="color: #C0A054;">**DVP**</span> has introduced a reform which aims to give working and middle class elements more influence in the <span style="color: #C0A054;">**DVP**</span>, thus weakening the leverage of the industrialists on the right. This would finally free the <span style="color: #C0A054;">**DVP**</span> from the reactionary social policies of heavy industry, enabling it to become a true volkspartei rather than one governed by parochial interests. Ultimately, the results of this will determine the course of the <span style="color: #C0A054;">**DVP**</span> for the years to come. 
 
 - @resultsdvp: The party votes...
 
 @resultsdvp
 go-to: left if stresemann_reform_yay; right if stresemann_reform_nay; left_conflict if stresemann_reform_mid
 
-@left
+@reform_pass
 on-arrival: dvp_left += 10; dvp_relation += 5; liberal_cooperation += 3; workers_dvp += 1; workers_other -= 1; new_middle_dvp += 4; new_middle_other -= 4; old_middle_dvp += 4; old_middle_other -= 4; rural_dvp += 2; rural_other -= 2; catholics_other -= 2; catholics_z -= 2; catholics_dvp += 4; coalition_dissent -= 2 if in_grand_coalition; dvp_reform = 1; pro_republic += 5; ddp_left += 1.5; ddp_cohesion += 1.5; rdi_balance -= 5; 
 face-image: 
 
-With the help of Thiel, Stresemann rallies what's left of the <span style="color: #C0A054;">**DVP**</span> that aren't bought out by industry into adopting the proposed reform, not without any fierce opposition from the other half of the party. The industrialists have diverted their efforts on maintaining influence within the <span style="color: #3E88B3;">**DNVP**</span> now, to make up for their loss.
+With his continued threats of resignation and backed by a coalition of the remaining constructive elements of the <span style="color: #C0A054;">**DVP**</span>, Stresemann has managed to push through the organisational reform by a slim margin. As a result, the ability of the industrialists to garner advantageous positions for their representatives on the national list has been severely limited. Not willing to abandon their influence in the <span style="color: #C0A054;">**DVP**</span> so quickly, donations from heavy industry will continue, albeit at a slower pace. Nevertheless, the <span style="color: #C0A054;">**DVP**</span> will continue on its leftwards pro-republican path for now, which has advanced the cause for liberal unity. 
 
-We have noticed an improvement in relations with the <span style="color: #C0A054;">**DVP**</span>[? if in_grand_coalition:, and a decrease in coalition tensions?]. The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> has also voiced approval to the actions of the congress and have opened up talks for further cooperation. This also has a ripple effect within the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, shifting them leftwards.
-
-@left_conflict
-on-arrival: dvp_left += 5; dvp_relation += 3; liberal_cooperation += 2; workers_dvp += 1; workers_other -= 1; new_middle_dvp += 2; new_middle_other -= 2; old_middle_dvp += 2; old_middle_other -= 2; catholics_other -= 2; catholics_dvp += 2; dvp_reform = 1; coalition_dissent -= 1 if in_grand_coalition; pro_republic += 3; ddp_left += 1; ddp_cohesion += 1; rdi_balance -= 3; 
-face-image: 
-
-Stresemann and the left-wing of the <span style="color: #C0A054;">**DVP**</span> behind Thiel have pushed through the reform by an extremely narrow margin, only achieved by Stresemann's threats to resign if it were not to pass. Half of the party's Reichstag delegation is tied to industry, which are now without much influence within the <span style="color: #C0A054;">**DVP**</span>, and have mostly shifted to support the <span style="color: #3E88B3;">**DNVP**</span> now. Those in the Reichstag delegation are now in open conflict with the left-wing of the <span style="color: #C0A054;">**DVP**</span>.
-
-We have noticed a small improvement in relations with the <span style="color: #C0A054;">**DVP**</span>[? if in_grand_coalition:, and a decrease in coalition tensions?]. The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> has also voiced approval to the actions of the congress and have opened up talks for further cooperation. This also has a ripple effect within the <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, shifting them leftwards.
-
-@right
+@reform_fail
 on-arrival: dvp_right += 5; dvp_relation -= 3; coalition_dissent += 1 if in_grand_coalition; old_middle_dnvp += 2; new_middle_dnvp += 2; dvp_reform = 0; pro_republic -= 3; ddp_right += 1; ddp_cohesion -= 1; rdi_balance += 8; 
 face-image: 
 
-Stresemann has faced a resounding defeat at the hands of the right-wing industrial interests inside the <span style="color: #C0A054;">**DVP**</span>. They have capitalized on this defeat by restricting the powers of the party chairmanship under Stresemann towards the more conservative Reichstag delegation led by Ernst Scholz, the lead figure on the right-wing. 
+Following the recent elections, the industrialist forces in the <span style="color: #C0A054;">**DVP’s**</span> Reichstag delegation have been greatly strengthened, in part due to their monetary contributions to the <span style="color: #C0A054;">**DVP’s**</span> diminished coffers.  [? if dnvp_leader = “Hugenberg”: Furthermore, with Hugenberg’s leadership of the DNVP, many industrialists have shifted to the <span style="color: #C0A054;">**DVP**</span> and entrenched themselves on the party’s right. ?]Thus, they have overwhelmingly rejected the reform and have passed a resolution to allow the Reichstag delegation independence from the demands of the Central Committee. This has severely weakened Stresemann’s hold over the party, instead benefitting Ernst Scholz, Reichstag delegation leader and a key figure on the party’s right.
 
