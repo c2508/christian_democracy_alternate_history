@@ -607,13 +607,13 @@ Q.in_grand_coalition_baden = 0;
 Q.in_bourgeois_coalition_baden = 0;
 Q.in_bourgeoise_coalition_baden = 0;
 Q.in_far_right_coalition_baden = 0;
-Q.in_christian_coalition = 0;
+Q.in_christian_coalition_baden = 0;
 
-Q.in_z_majority_wurttemberg = 1;
+Q.in_z_majority_wurttemberg = 0;
 Q.in_weimar_coalition_wurttemberg = 0;
 Q.in_grand_coalition_wurttemberg = 0;
 Q.in_bourgeois_coalition_wurttemberg = 0;
-Q.in_christian_coalition_wurttemberg = 0;
+Q.in_christian_coalition_wurttemberg = 1;
 Q.in_christian_coalition_toleration_wurttemberg = 0;
 Q.in_christian_coalition_toleration_both_wurttemberg = 0;
 Q.in_right_coalition_wurttemberg = 0;
