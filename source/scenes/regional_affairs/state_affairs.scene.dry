@@ -1,17 +1,14 @@
-title: State Affairs
+title: Toleration
 new-page: true
 is-card: true
-view-if: state_affairs_timer <= 0
+view-if: rubicon_crossed = 1
 on-arrival: state_affairs_timer += 6; month_actions += 1
 tags: regional_affairs
 card-image: img/braun.jpg
-#subtitle: We can implement our state policies
 
-= State Affairs
+= Toleration
 
-Prussia, by far the largest and most important state in Germany, is governed by our party, in a coalition with the <span style="color: #c00000;">**SPD**</span> and <span style="color: #D3C24D;">**DDP**</span>. It is the most stable and democratic state government in Germany, led by the able <span style="color: #c00000;">**Otto Braun**</span>.
-
-We can enact policies through our state governments. 
+The Bruning Cabinet is unprecedented in the republic's history, backed by a disparate coalition of parties from the left to the right. However, this has made the cabinet exceedingly unstable, subject to the whim of any party at any time. In this era of unemployment and heightened radicalism amidst the German populace, our task is to guide German Democracy through this trying period. Thus, we must do everything in our power to preserve this fragile cabinet. 
 
 - @baden: Baden
 - @prussia: Prussia
