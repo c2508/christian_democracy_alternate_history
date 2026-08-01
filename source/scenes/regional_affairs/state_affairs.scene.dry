@@ -26,6 +26,7 @@ go-to: baden_affairs
 The police have historically been overrun with reactionaries, and we are trying to change this, little by little. We have improved the training and recruitment process to select for a broader demographic than the traditional conservatives, and to put a tighter leash on their political activity. In addition, we set up committees to investigate the ranks of the police and remove those with far-right sympathies. It is a slow and arduous work.
 
 @prussia
+subtitle: <span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> + [? if ddp_exist: <span style="color: #DCCA4A;">**[+ ddp_name +]**</span>?]
 go-to: prussian_affairs
 
 The bureaucracy is deeply reactionary, and many abuse their power to favor the political right. By removing the pro-monarchy and pro-dictatorship elements, we can democratize it. Some of our opponents claim that we are infringing on individual freedoms, but perhaps the security of the republic requires it.
