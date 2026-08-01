@@ -58,35 +58,35 @@ Opposition: [+ agriculture_opposition : opposition +]
 
 [? if spd_bruning_support : <span style="color: #c00000;">**SPD**</span> : [+ spd_total_anger : party_anger +] ?]
 
-[? if not spd_bruning_support : <span style="color: #c00000;">**SPD**</span> : The <span style="color: #c00000;">**SPD**</span> is not in government. ?]
+[? if not spd_bruning_support : The <span style="color: #c00000;">**SPD**</span> is not in government. ?]
 
 [? if ddp_bruning_support : <span style="color: #D3C24D;">**[+ ddp_name +]**</span> : [+ ddp_total_anger : party_anger +] ?]
 
-[? if not ddp_bruning_support : <span style="color: #D3C24D;">**[+ ddp_name +]**</span> : The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> is not in government. ?]
+[? if not ddp_bruning_support : The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> is not in government. ?]
 
 [? if dvp_bruning_support : <span style="color: #C0A054;">**DVP**</span> : [+ dvp_total_anger : party_anger +] ?]
 
-[? if not dvp_bruning_support : <span style="color: #C0A054;">**DVP**</span> : The <span style="color: #C0A054;">**DVP**</span> is not in government. ?]
+[? if not dvp_bruning_support : The <span style="color: #C0A054;">**DVP**</span> is not in government. ?]
 
 [? if wp_bruning_support : <span style="color: #B8996F;">**WP**</span> : [+ wp_total_anger : party_anger +] ?]
 
-[? if not wp_bruning_support : <span style="color: #B8996F;">**WP**</span> : The <span style="color: #B8996F;">**WP**</span> is not in government. ] ?]
+[? if not wp_bruning_support : The <span style="color: #B8996F;">**WP**</span> is not in government. ?]
 
 [? if cnblp_bruning_support : <span style="color: #006400;">**CNBLP**</span> : [+ cnblp_total_anger : party_anger +] ?]
 
-[? if not cnblp_bruning_support : <span style="color: #006400;">**CNBLP**</span> : The <span style="color: #006400;">**CNBLP**</span> is not in government. ?]
+[? if not cnblp_bruning_support : The <span style="color: #006400;">**CNBLP**</span> is not in government. ?]
 
 [? if csvd_bruning_support : <span style="color: #8ED8E4;">**CSVD**</span> : [+ csvd_total_anger : party_anger +] ?]
 
-[? if not csvd_bruning_support : <span style="color: #8ED8E4;">**CSVD**</span> : The <span style="color: #8ED8E4;">**CSVD**</span> is not in government. ?]
+[? if not csvd_bruning_support : The <span style="color: #8ED8E4;">**CSVD**</span> is not in government. ?]
 
 [? if kvp_bruning_support : <span style="color: #455B95;">**KVP**</span> : [+ kvp_total_anger : party_anger +] ?]
 
-[? if not kvp_bruning_support : <span style="color: #455B95;">**KVP**</span> : The <span style="color: #455B95;">**KVP**</span> is not in government. ?]
+[? if not kvp_bruning_support : The <span style="color: #455B95;">**KVP**</span> is not in government. ?]
 
 [? if dnvp_bruning_support : <span style="color: #3F7BC1;">**DNVP**</span> : [+ dnvp_total_anger: party_anger +] ?]
 
-[? if not dnvp_bruning_support : <span style="color: #3F7BC1;">**DNVP**</span> : The <span style="color: #3F7BC1;">**DNVP**</span> is not in government. ?]
+[? if not dnvp_bruning_support : The <span style="color: #3F7BC1;">**DNVP**</span> is not in government. ?]
 
 @finances
 
