@@ -1,0 +1,35 @@
+title: State Affairs
+new-page: true
+is-card: true
+view-if: state_affairs_timer <= 0
+on-arrival: state_affairs_timer += 6; month_actions += 1
+tags: regional_affairs
+card-image: img/braun.jpg
+#subtitle: We can implement our state policies
+
+= State Affairs
+
+The <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Republic comprises of many states, each with their own laws and governing bodies, with the largest one of them being Prussia. Due to the regional concentration of Catholics, our strongholds are mainly in the south and western of Germany, in states like Bavaria and Wurttemberg. 
+  
+We can enact policies through our state governments. 
+
+- @baden: Baden
+- @prussia: Prussia
+- @wurttemberg: Wurttemberg
+- @easy_discard
+- @cancel_advisor_action
+
+@baden
+subtitle: [? if in_social_catholic_baden == 1: <span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> ?][? if in_z_majority_baden == 1: <span style="color: #000000;">**Z**</span> ?][? if in_weimar_coalition_baden == 1: <span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> + [? if ddp_exist: <span style="color: #DCCA4A;">**[+ ddp_name +]**</span>?] ?][? if in_grand_coalition_baden == 1:  <span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span> ?] + <span style="color: #C0A054;">**DVP**</span> ?][? if in_bourgeois_coalition_baden == 1: <span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span> ?] + <span style="color: #C0A054;">**DVP**</span> + <span style="color: #909090;">**Others**</span> ?][? if in_bougeoise_coalition_baden == 1: <span style="color: #000000;">**Z**</span> + <span style="color: #C0A054;">**DVP**</span> ?][? if in_far_right_coalition_baden == 1: <span style="color: #3E88B3;">**DNVP**</span> + <span style="color: #7A3C00;">**NSDAP**</span> ?][? if in_christian_coalition_baden == 1: <span style="color: #000000;">**Z**</span> + <span style="color: #3E88B3;">**DNVP**</span> ?]
+go-to: baden_affairs
+
+
+@prussia
+subtitle: <span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> + [? if ddp_exist: <span style="color: #DCCA4A;">**[+ ddp_name +]**</span>?]
+go-to: prussian_affairs
+
+
+@wurttemberg
+subtitle: [? if in_z_majority_wurttemberg == 1: <span style="color: #000000;">**Z**</span> ?][? if in_weimar_coalition_wurttemberg == 1: <span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> + [? if ddp_exist: <span style="color: #DCCA4A;">**[+ ddp_name +]**</span>?] ?][? if in_grand_coalition_wurttemberg == 1:  <span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span> ?] + <span style="color: #C0A054;">**DVP**</span> ?][? if in_bourgeois_coalition_wurttemberg == 1: <span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span> ?] + <span style="color: #C0A054;">**DVP**</span> + <span style="color: #909090;">**Others**</span> ?][? if in_far_right_coalition_wurttemberg == 1: <span style="color: #3E88B3;">**DNVP**</span> + <span style="color: #7A3C00;">**NSDAP**</span> ?][? if in_christian_coalition_wurttemberg == 1: <span style="color: #000000;">**Z**</span> + <span style="color: #3E88B3;">**DNVP**</span> ?][? if in_right_coalition_wurttemberg == 1: <span style="color: #000000;">**Z**</span> + <span style="color: #C0A054;">**DVP**</span> + <span style="color: #909090;">**Others**</span> + <span style="color: #3E88B3;">**DNVP**</span> ?][? if in_christian_coalition_toleration_both_wurttemberg == 1: <span style="color: #000000;">**Z**</span> + <span style="color: #3E88B3;">**DNVP**</span> + <span style="color: #909090;">**Others**</span> + <span style="color: #C0A054;">**DVP**</span> toleration ?][? if in_christian_coalition_toleration_wurttemberg == 1: <span style="color: #000000;">**Z**</span> + <span style="color: #3E88B3;">**DNVP**</span> + <span style="color: #909090;">**Others**</span> + <span style="color: #D3C24D;">**[+ ddp_name +]**</span> and <span style="color: #C0A054;">**DVP**</span> toleration ?]
+go-to: wurttemberg_affairs
+
