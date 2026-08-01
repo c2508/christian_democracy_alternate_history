@@ -2,7 +2,6 @@ title: The Fourth <span style="color: #000000;">Marx</span> Cabinet has fallen
 subtitle: The <span style="color: #3E88B3;">**Bürgerblock**</span> coalition has collapsed
 frequency: 1000
 new-page: true
-on-arrival: left_dissent += 5; labor_dissent += 5; center_dissent += 5; right_dissent += 5; special_interests += 5
 tags: event
 view-if: year == 1928 and month == 2
 max-visits: 1
@@ -12,7 +11,14 @@ face-image: img/Kabinett_Marx_IV.jpg
 
 Based on the provisions of Article 174 of the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Constitution, the education system in Germany was generally left to its pre-war status in the Landers. Representing a compromise between the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> coalition partners, this has led to a noticable lack of denominational schools in Catholic-dominated states like Baden and Hesse.
 
-With the <span style="color: #3E88B3;">**DNVP's**</span> presence in government, there is a renewed impetus to pass a Reich School Law on the basis of Kulterpolitik. However, the <span style="color: #C0A054;">**DVP's**</span> anticlerical elements have blocked the passage of <span style="color: #3E88B3;">Keudell's</span> proposed Reich School Law, leading our party to dissolve the current governmental coalition. Marx, as Chairman of the Catholic Schools Association, has faced much rebuke from the rank-and-file due to the failure of the law. 
+With the <span style="color: #3E88B3;">**DNVP's**</span> presence in government, there is a renewed impetus to pass a Reich School Law on the basis of Kulterpolitik. However, the <span style="color: #C0A054;">**DVP's**</span> anticlerical elements have blocked the passage of <span style="color: #3E88B3;">Keudell's</span> proposed Reich School Law, leading our party to dissolve the current governmental coalition.
+
+- @good: Tragic!
+
+@good
+on-arrival: left_dissent += 5; labor_dissent += 5; center_dissent += 5; right_dissent += 5; special_interests += 5
+
+Marx, as Chairman of the Catholic Schools Association, has faced much rebuke from the rank-and-file due to the failure of the law. 
 
 In light of the formation of the <span style="color: #909090;">**CSRP**</span> and the growing appeal of the <span style="color: #c00000;">**SPD**</span>, the outlook for the upcoming election in May looks increasingly bleak. 
 
