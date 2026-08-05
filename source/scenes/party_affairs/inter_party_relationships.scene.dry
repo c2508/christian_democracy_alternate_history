@@ -20,10 +20,10 @@ The <span style="color: #000000;">**Center Party**</span> cannot govern by itsel
 - @easy_discard
 
 @spd
-subtitle: -1 resources
-choose-if: resources >= 1
+subtitle: -2 resources
+choose-if: resources >= 2
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1
+on-arrival: resources -= 2
 go-to: center_op if z_in_government = 1 and spd_in_government = 0; center_coalition if spd_in_government = 1 and z_in_government = 1
 
 @center_op
@@ -37,10 +37,10 @@ on-arrival: spd_relation += 8*(1 - dissent)
 We are currently coalition partners with them, so improving relations comes naturally.
 
 @dvp
-subtitle: -1 resources
-choose-if: resources >= 1
+subtitle: -2 resources
+choose-if: resources >= 2
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1
+on-arrival: resources -= 2
 go-to: dvp_stresemann if stresemann_dead = 0; dvp_loss if stresemann_dead = 1 and year <= 1930; dvp_moribund if year > 1930
 
 The <span style="color: #C0A054;">**DVP**</span> has been one of our closest allies through the course of the Republic.
@@ -65,10 +65,10 @@ The liberal parties (both the <span style="color: #D3C24D;">**DDP**</span> and <
 However, given the influence of the <span style="color: #C0A054;">**DVP**</span> among the other right-leaning parties[? if president == "Hindenburg": and with President Hindenburg ?], it can still be helpful to influence them.
 
 @ddp
-subtitle: -1 resources
-choose-if: resources >= 1
+subtitle: -2 resources
+choose-if: resources >= 2
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; ddp_relation += 8*(1 - dissent)
+on-arrival: resources -= 2; ddp_relation += 8*(1 - dissent)
 go-to: ddp_moribund if year > 1930
 
 The <span style="color: #D3C24D;">**DDP**</span> has been one of our closest allies through the course of the Republic
@@ -78,10 +78,10 @@ The <span style="color: #D3C24D;">**DDP**</span> has been one of our closest all
 The liberal parties (both the <span style="color: #D3C24D;">**DDP**</span> and <span style="color: #C0A054;">**DVP**</span>) are electorally moribund, so perhaps our efforts are best spent elsewhere.
 
 @dnvp
-subtitle: -1 resources
-choose-if: resources >= 1
+subtitle: -2 resources
+choose-if: resources >= 2
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1
+on-arrival: resources -= 2
 go-to: center_op_d if z_in_government = 1 and dnvp_in_government = 0; center_coalition_d if dnvp_in_government = 1 and z_in_government = 1
 
 @center_op_d
