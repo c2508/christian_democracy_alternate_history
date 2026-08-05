@@ -24,20 +24,20 @@ In addition to being a political party, the <span style="color: #000000;">**Cent
 - @easy_discard
 
 @radio
-choose-if: resources >= 2
-subtitle: -2 resources
+choose-if: resources >= 4
+subtitle: -4 resources
 unavailable-subtitle: Not enough resources.
 view-if: radio = 0
-on-arrival: radio += 1; resources -= 2; new_middle_z += 2*(1-dissent); old_middle_z += 1*(1 - dissent); workers_z += 1*(1 - dissent)
+on-arrival: radio += 1; resources -= 4; new_middle_z += 2*(1-dissent); old_middle_z += 1*(1 - dissent); workers_z += 1*(1 - dissent)
 
 Our new radio station allows us to connect to people in a more intimate setting than before, spreading our message along with music and other popular content. 
 
 @radio_2
-choose-if: resources >= 1
-subtitle: -1 resources
+choose-if: resources >= 3
+subtitle: -3 resources
 unavailable-subtitle: Not enough resources.
 view-if: radio > 0 and radio <= 3
-on-arrival: radio += 1; resources -= 1; new_middle_z += 2*(1 - dissent); old_middle_z += 1*(1 - dissent); workers_z += 1*(1 - dissent)
+on-arrival: radio += 1; resources -= 3; new_middle_z += 2*(1 - dissent); old_middle_z += 1*(1 - dissent); workers_z += 1*(1 - dissent)
 
 Our new radio network has a mix of popular and political programming, and is proving a success.
 
@@ -48,11 +48,11 @@ on-arrival: radio += 1; new_middle_z +=(5/3)*(1 - dissent); old_middle_z += 1*(1
 Our radio network has become a successful tool for spreading our message. It is now financially self sufficient and does not require any more resources. 
 
 @radio_4
-choose-if: resources >= 1
-subtitle: -1 resources
+choose-if: resources >= 2
+subtitle: -2 resources
 unavailable-subtitle: Not enough resources.
 view-if: radio > 3 and (radio >= 6 or year >= 1932) and radio <= 9
-on-arrival: radio += 1; resources -= 1; new_middle_z += 1*(1 - dissent); old_middle_z += (2/3)*(1 - dissent); workers_z += 1*(1 - dissent); rural_z += (1/3)*(1 - dissent); unemployed_z += (2/3)*(1-dissent)
+on-arrival: radio += 1; resources -= 2; new_middle_z += 1*(1 - dissent); old_middle_z += (2/3)*(1 - dissent); workers_z += 1*(1 - dissent); rural_z += (1/3)*(1 - dissent); unemployed_z += (2/3)*(1-dissent)
 
 We are continuing to invest in our radio stations. Both commercial and political radio are becoming more prevalent, making it harder to spread our message amidst the competition.
 
@@ -60,18 +60,18 @@ We are continuing to invest in our radio stations. Both commercial and political
 
 
 @charity
-choose-if: resources > 0
+choose-if: resources > 2
 unavailable-subtitle: Not enough resources.
-subtitle: -1 resources
-on-arrival: resources -= 1; workers_aid += 1; unemployed_z += 2*(1-dissent); catholics_z += 1*(1-dissent)
+subtitle: -3 resources
+on-arrival: resources -= 3; workers_aid += 1; unemployed_z += 2*(1-dissent); catholics_z += 1*(1-dissent)
 
 We have increased funding to Catholic Charities. [? if black_thursday_seen > 0 : In an age of economic crisis, this will be helpful for improving our standing among the impoverished. ?]
 
 @culture
-choose-if: resources > 0
+choose-if: resources > 2
 unavailable-subtitle: Not enough resources.
-subtitle: -1 resources
-on-arrival: resources -= 1; cultural_organizations += 1; left_dissent -= 6; center_dissent -= 6; labor_dissent -= 6; right_dissent -= 6; young_conservatives_dissent -= 6
+subtitle: -3 resources
+on-arrival: resources -= 3; cultural_organizations += 1; left_dissent -= 6; center_dissent -= 6; labor_dissent -= 6; right_dissent -= 6; young_conservatives_dissent -= 6
 
 It is not enough for the <span style="color: #000000;">**Center Party**</span> to solely be a political party. The Catholic Workers Association, our schools and libraries are crucial to our members' lives. Funding these organizations makes our members more committed to the party, even when our policies might not be to their liking.
 
@@ -79,18 +79,18 @@ It is not enough for the <span style="color: #000000;">**Center Party**</span> t
 [? if rfb_strength > 250 : However, it feels frivolous to spend on sports and choirs when the <span style="color: #700000;">Communists</span> are murdering us in the streets. ?]
 
 @rb
-choose-if: resources > 0 and z_endorse_rb = 1
-unavailable-subtitle: [? if resources < 1: Not enough resources. ?][? if z_endorse_rb = 0: The <span style="color: #000000;">**Center Party**</span> has not offically endorsed the <span style="color: #c00000;">**Reichsbanner**</span> yet. ?]
-subtitle: -1 resources
-on-arrival: resources -= 1; rb_strength += 100; rb_militancy += 0.01; reichsbanner_timer = 0; funded_reichsbanner += 1; z_dominance += 5; 
+choose-if: resources > 2 and z_endorse_rb = 1
+unavailable-subtitle: [? if resources < 3: Not enough resources. ?][? if z_endorse_rb = 0: The <span style="color: #000000;">**Center Party**</span> has not offically endorsed the <span style="color: #c00000;">**Reichsbanner**</span> yet. ?]
+subtitle: -3 resources
+on-arrival: resources -= 3; rb_strength += 100; rb_militancy += 0.01; reichsbanner_timer = 0; funded_reichsbanner += 1; z_dominance += 5; 
 
 We have increased recruiting to the <span style="color: #c00000;">**Reichsbanner**</span>.
 
 @youth
-choose-if: resources > 0
+choose-if: resources > 2
 unavailable-subtitle: Not enough resources.
-subtitle: -1 resources
-on-arrival: resources -= 1; rb_strength += 50; rb_militancy += 0.02; left_strength += 5; z_dominance += 2
+subtitle: -3 resources
+on-arrival: resources -= 3; rb_strength += 50; rb_militancy += 0.02; left_strength += 5; z_dominance += 2
 
 Our new youth members flock to the <span style="color: #FF7F00;">Christian Left</span> faction and to the <span style="color: #c00000;">**Reichsbanner**</span>.
 
