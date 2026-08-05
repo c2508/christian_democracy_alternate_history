@@ -16,10 +16,10 @@ Adenauer has been the mayor of Cologne since 1917 and is the President of the Pr
 
 @charities
 title: Support Catholic Charities 
-subtitle: -1 resources
-choose-if: resources > 0 and advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if resources < 0: Not enough resources. ?]
-on-arrival: resources -= 1; workers_aid += 1; unemployed_z += 1*(1-dissent); catholics_z += (1/3)*(1-dissent); workers_z += (1/3)*(1-dissent) if black_thursday_seen; advisor_action_timer = 6;
+subtitle: -3 resources
+choose-if: resources > 2 and advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if resources < 3: Not enough resources. ?]
+on-arrival: resources -= 3; workers_aid += 1; unemployed_z += 1*(1-dissent); catholics_z += (1/3)*(1-dissent); workers_z += (1/3)*(1-dissent) if black_thursday_seen; advisor_action_timer = 6;
 
 We have increased funding to Catholic Charities. [? if black_thursday_seen > 0 : In an age of economic crisis, this will be helpful for improving our standing among the impoverished. ?]
 
