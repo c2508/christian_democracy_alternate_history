@@ -45,21 +45,21 @@ This has been our media course historically, and it has successfully paved over 
 
 @newspaper
 title: Allocate funds to Germania
-subtitle: -1 resource
-choose-if: resources >= 1
+subtitle: -3 resource
+choose-if: resources >= 3
 unavailable-subtitle: Not enough resources.
 view-if: newspaper = 0
-on-arrival: newspaper += 1; resources -= 1; new_middle_z += 1*(1-dissent); old_middle_z += 1*(1-dissent); catholics_z += 3*(1-dissent)
+on-arrival: newspaper += 1; resources -= 3; new_middle_z += 1*(1-dissent); old_middle_z += 1*(1-dissent); catholics_z += 3*(1-dissent)
 
 Our expanded newspaper allows us to connect to people in a more intimate setting than before, spreading the message of political catholicism along with music and other popular content. 
 
 @newspaper_2
 title: We must keep on building up our newspaper network.
-subtitle: -1 resources
-choose-if: resources >= 1
+subtitle: -2 resources
+choose-if: resources >= 2
 unavailable-subtitle: Not enough resources.
 view-if: newspaper > 0 and newspaper <= 3
-on-arrival: newspaper += 1; resources -= 1; new_middle_z += 1*(1-dissent); old_middle_z += 1*(1-dissent); workers_z += 1*(1-dissent); pro_republic += 3*(1-dissent)*(democratization-2) if left_strength > right_strength
+on-arrival: newspaper += 1; resources -= 2; new_middle_z += 1*(1-dissent); old_middle_z += 1*(1-dissent); workers_z += 1*(1-dissent); pro_republic += 3*(1-dissent)*(democratization-2) if left_strength > right_strength
 
 Our new newspaper network has a mix of popular and political programming, and is proving a success.
 
