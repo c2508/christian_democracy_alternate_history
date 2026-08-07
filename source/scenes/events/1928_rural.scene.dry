@@ -44,12 +44,12 @@ We shall have a conservative agriculture minister in the next cabinet.
 
 @fund
 title: Fund the <span style="color: #000000;">**Center Party**</span> aligned Association of German Farmers’ Association <span style="color: #000000;">**(VdB)**</span> for more low interest loans 
-subtitle: -5 resources
+subtitle: -4 resources
 unavailable-subtitle: Not enough resources.
-choose-if: resources >= 5 and fund = 0
+choose-if: resources >= 4 and fund = 0
 tags: demands
 view-if: fund = 0
-on-arrival: rpm_points += 3; fund += 1; resources -= 5; right_dissent -= 5; catholic_z += 4*(1-dissent)
+on-arrival: rpm_points += 3; fund += 1; resources -= 4; right_dissent -= 5; catholic_z += 4*(1-dissent)
 go-to: originalname5
 
 While this appeases the Catholic peasants, Protestant farmers are unhappy at their exclusion.
@@ -110,11 +110,11 @@ We have decided to drop this concession.
 
 @drop_fund
 title: Fund the <span style="color: #000000;">**Center Party**</span> aligned Association of German Farmers’ Association <span style="color: #000000;">**(VdB)**</span> for more low interest loans 
-subtitle: Drop this concession +5 resources
+subtitle: Drop this concession +4 resources
 choose-if: fund = 1
 tags: drop_demands
 view-if: fund = 1
-on-arrival: rpm_points -= 3; fund -= 1; resources += 5; right_dissent += 5; catholics_z -= 4*(1-dissent)
+on-arrival: rpm_points -= 3; fund -= 1; resources += 4; right_dissent += 5; catholics_z -= 4*(1-dissent)
 go-to: originalname5
 
 We have decided to drop this concession.
