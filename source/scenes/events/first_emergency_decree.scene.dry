@@ -5,8 +5,7 @@ tags: event
 view-if: year == 1930 and month == 7 and Chancellor == "Bruning"
 priority: 2
 max-visits: 1
-face-image: img/redfront.jpg
-go-to: ministries
+
 
 = First Comprehensive Emergency Decree to Secure the Economy and State Finances
 
