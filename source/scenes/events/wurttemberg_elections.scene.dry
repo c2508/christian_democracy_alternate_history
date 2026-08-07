@@ -1,5 +1,5 @@
 title: Württemberg Landtag Election
-view-if: year = next_election_year_wurttemberg and month >= next_election_month_wurttemberg
+view-if: year >=  next_election_year_wurttemberg and month >= next_election_month_wurttemberg
 new-page: true
 tags: event
 priority: 3
