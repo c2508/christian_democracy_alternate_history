@@ -22,7 +22,9 @@ With control of the Labor Ministry, we can set national standards for labor. Our
 - @working_hours: Enforce the 40-hour work week.
 - @shorten_hours: Shorten work hours less than 40 hours.
 - @safety: Develop and enforce safety regulations.
+- @apprenticeship_program: Expand apprenticeship programs for the unemployed youth
 - @unemployment_insurance: Fund the unemployment insurance program.
+- @minimum_wage: Establish a nationwide minimum wage
 - @root: Do not enact any policies.
 - @easy_discard
 - @cancel_advisor_action
@@ -31,9 +33,9 @@ With control of the Labor Ministry, we can set national standards for labor. Our
 view-if: working_hours < 2
 on-arrival: working_hours += 1; labor_dissent -= 8; labor_strength += 5; workers_z += (4/3)*(1-dissent); dvp_relation -= 4; dnvp_relation -= 4; spd_relation += 4; kpd_relation += 4; coalition_dissent += 1; capital_strike_progress += 1 if dvp_relation <= 30; labor_goal_completed = 1; inflation += 0.1; economic_growth -= 0.1; right_dissent += 3; rdi_balance += 3
 
-While a 40-hour work week was declared during the German Revolution in 1918, enforcement has become increasingly porous over the years. The capitalists have successfully added numerous exceptions and loopholes, returning to the old regime of forced overtime for workers.
+While a 40-hour work week was declared during the German Revolution in 1918, enforcement has become increasingly porous over the years. The industrial lobby has successfully manage to add numerous exceptions and loopholes, returning to the old regime of forced overtime for workers.
 
-Now, with the force of the Labor Ministry, we are finally enforcing the rights of workers to their own time. The bourgeoisie and their political representatives are displeased.
+Now, with the force of the Labor Ministry, we are finally enforcing the rights of workers to their own time. The industrial backed parties are displeased. 
 
 @shorten_hours
 view-if: working_hours >= 2 and black_thursday_seen = 1
@@ -47,6 +49,16 @@ Some in the labor movement argue that by reducing the maximum number of hours wo
 on-arrival: workers_safety += 1; labor_dissent -= 3; labor_strength += 5; workers_z += 1*(1-dissent); capital_strike_progress += 1 if workers_safety >= 3; rdi_balance += 5 if workers_safety >= 3; right_dissent += 4 if workers_safety >= 3;
 
 The Labor Ministry works on developing and enforcing safety regulations, in order to ensure healty working conditions for the proletariat. [? if workers_safety >= 3 : Businesses have begun to argue that our focus on safety is overbearing and unnecessary, interfering with the economy. ?]
+
+@apprenticeship_program
+on-arrival: labor_dissent -= 2; labor_strength += 3; unemployed_z += 1*(1-dissent); spd_relation += 3; unemployed -= 0.1; 
+
+The Labor Ministry works on promoting an apprenticeship program for unemployed youths, giving them an opportunity to learn important skills while gaining work experince. 
+
+@minimum_wage
+on-arrival: labor_strength -= 8; labor_dissent += 5; workers_z += 2*(1-dissent); spd_relation -= 5; workers_spd -= 1*(1-dissent); dvp_relation -= 3; dnvp_relation -= 3; worker_sol += 3
+
+Although this is a big step in improving the lives of workers, this endangers trade unions by reducing their bargaining power with employers. Furthermore, this has resulted in an exodus of workers from unions as workers feel less of a need to associate with a union.
 
 @unemployment_insurance
 view-if: unemployed >= unemployment_insurance_threshold + 4
