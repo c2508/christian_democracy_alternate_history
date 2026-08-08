@@ -181,7 +181,7 @@ if ((Q.month_actions >= 1 && !Q.rubicon_crossed) || (Q.month_actions >= 4 && Q.r
         Q.year += 1;
         Q.resources += Q.dues;
     }
-}
+
 
 if (Q.week >= 5) 
 {
