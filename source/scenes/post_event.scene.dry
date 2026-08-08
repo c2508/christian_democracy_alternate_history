@@ -169,21 +169,27 @@ if ((Q.industrial_opposition < 20) && (Q.industrialist_funding_timer = 0)) {
 }
 
 // 1. update dates
-if (Q.month_actions >= 1 && !Q.rubicon_crossed) or (Q.month_actions >= 4 && Q.rubicon_crossed) {
+if ((Q.month_actions >= 1 && !Q.rubicon_crossed) || 
+    (Q.month_actions >= 4 && Q.rubicon_crossed)) 
+{
     Q.time += 1;
     Q.month_actions = 0;
     Q.month += 1;
-if (Q.month >= 13) {
+
+    if (Q.month >= 13) 
+    {
         Q.month = 1;
         Q.year += 1;
         Q.resources += Q.dues;
-        }
     }
-    if (Q.week >= 5) {
-        Q.month_actions = 0;
-        Q.week = 1;
-        Q.month += 1;    
-    }
+}
+
+if (Q.week >= 5) 
+{
+    Q.month_actions = 0;
+    Q.week = 1;
+    Q.month += 1;
+}
     // decrement timers
     for (timer of Q.timers) {
         if (Q[timer+'_timer'] && Q[timer+'_timer'] > 0) {
