@@ -3,6 +3,7 @@ new-page: true
 subtitle: The <span style="color: #3E88B3;">**Bürgerblock**</span> coalition has collapsed...
 tags: event
 view-if: year = 1929 and month >= 7 and in_right_coalition = 1
+priority: 100
 on-arrival: young_plan_seen = 1
 max-visits: 1
 
