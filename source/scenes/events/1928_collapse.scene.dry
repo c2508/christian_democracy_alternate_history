@@ -9,11 +9,11 @@ face-image: img/Kabinett_Marx_IV.jpg
 
 = The Fall of Marx IV
 
-Following the controversial civil service reforms of 1927, strongly opposed by Stegerwald and the trade union leadership, the reignition of class antagonisms has proven to be detrimental to internal unity. As such, the national leadership has scrambled to find a unifying policy agreeable to the divergent wings of the party. In the end, the need for a comprehensive Reich School Law has proven to be the answer to reunite the party through shared religious concerns and Kulterpolitik, which will be significantly easier due to the <span style="color: #3E88B3;">**DNVP’s**</span> presence in government.  
+Following last year's controversial civil service reforms—strongly opposed by Stegerwald and the trade union leadership—the reignition of class conflict has proven to be detrimental to internal party unity. In response, the national leadership has scrambled to find a unifying policy agreeable to the divergent wings of the party: a comprehensive Reich School Law. Such a measure would have united the party through shared religious concerns and Kulterpolitik, while also having a greater chance of passing given the <span style="color: #3E88B3;">**DNVP**</span>’s presence in government.
 
-Based on the provisions of Article 174 of the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Constitution, the education system in Germany has been generally left to its pre-war status in the Landers. While it was a necessary compromise between the conflicting educational policies of the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> coalition partners, this has however led to a noticeable lack of denominational schools in Catholic-dominated states like Baden and Hesse. 
+Under Article 174 of the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Constitution, Germany's education system has remained under control of the Länder, preserving the pre-war arrangement. While this served as a needed compromise among the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> coalition partners, it has also led to a noticeable lack of denominational schools in Catholic-majority states such as Baden and Hesse. 
 
-With the aid of Walter von Keudell from the <span style="color: #3E88B3;">**DNVP**</span>, we have managed to draft a school law enshrining the primacy of interdenominational schools in Germany. While this would satisfy large portions of our base, the consent of the <span style="color: #C0A054;">**DVP**</span>, rooted in anti-clerical tradition, might prove to be a challenge.
+With the aid of Walter von Keudell of the <span style="color: #3E88B3;">DNVP</span>, we drafted a school law enshrining the primacy of interdenominational schools throughout Germany. However, the anti-clerical <span style="color: #C0A054;">DVP</span> has voiced strong opposition, even threatening to bring down the coalition if the legislation proceeds.
 
 - @reject: The <span style="color: #C0A054;">**DVP**</span> expresses their outrage
 - @accept: Stresemann rallies his party to seek a compromise
@@ -22,9 +22,11 @@ With the aid of Walter von Keudell from the <span style="color: #3E88B3;">**DNVP
 on-arrival: left_dissent += 5; labor_dissent += 5; center_dissent += 5; right_dissent += 5; special_interests += 5; dvp_relation -= 2
 subtitle: what did we expect?
 
-Expectedly, the <span style="color: #C0A054;">**DVP**</span> has resoundingly rejected the proposed school bill, viewing it as an affront to their ideals of the separation of church and state. With little room for compromise, we have decided to collapse the Fourth Marx Cabinet. However, in accordance with Hindenburg’s wishes, the coalition will pass the budget for the upcoming year before the upcoming elections. 
+Expectedly, the <span style="color: #C0A054;">DVP</span> has resoundingly rejected the proposed school bill, viewing it as an affront to their ideals of the separation of church and state. With little room for compromise, we have therefore decided to collapse the Fourth Marx Cabinet. However, in accordance with Hindenburg’s wishes, the coalition will pass the budget for the upcoming year before the upcoming elections in May. 
 
-While Marx IV has achieved legislative successes in the area of social policy, labor-management relations have deteriorated sharply and class antagonisms have flared up within the party. Marx, as Chairman of the Catholic Schools Association, has faced much rebuke from the rank-and-file due to the failure of the law. He will resign at the upcoming party congress in December. Meanwhile, in light of the formation of the <span style="color: #909090;">**CSRP**</span> and the growing appeal of the <span style="color: #c00000;">**SPD**</span>, the outlook for the upcoming election in May looks increasingly bleak. 
+Despite Marx IV achieving legislative successes in social policy, labor-management relations have deteriorated sharply, with class conflict flaring up within the party. Marx, who also serves as Chairman of the Catholic Schools Association, has faced considerable criticism from the rank and file over the failure of the school law. He has since announced that he will resign at the next party congress in December. 
+
+With the formation of the <span style="color: #909090;">CSRP</span> and the growing appeal of the <span style="color: #c00000;">SPD</span>, the outlook for the upcoming election in May looks increasingly bleak.
 
 @accept
 choose-if: dvp_relation > 100
