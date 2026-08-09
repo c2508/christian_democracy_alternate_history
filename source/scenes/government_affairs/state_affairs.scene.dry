@@ -1,7 +1,6 @@
 title: State Affairs
 new-page: true
 is-card: true
-view-if: state_affairs_timer <= 0
 on-arrival: state_affairs_timer += 6; month_actions += 1
 tags: government_affairs
 card-image: img/regional_affairs.jpg
