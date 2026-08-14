@@ -13,20 +13,20 @@ Following last year's controversial civil service reforms—strongly opposed by 
 
 Under Article 174 of the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Constitution, Germany's education system has remained under control of the Länder, preserving the pre-war arrangement. While this served as a needed compromise among the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> coalition partners, it has also led to a noticeable lack of denominational schools in Catholic-majority states such as Baden and Hesse. 
 
-With the aid of Walter von Keudell of the <span style="color: #3E88B3;">DNVP</span>, we drafted a school law enshrining the primacy of interdenominational schools throughout Germany. However, the anti-clerical <span style="color: #C0A054;">DVP</span> has voiced strong opposition, even threatening to bring down the coalition if the legislation proceeds.
+With the aid of Walter von Keudell of the <span style="color: #3E88B3;">**DNVP**</span>, we drafted a school law enshrining the primacy of interdenominational schools throughout Germany. However, the anti-clerical <span style="color: #C0A054;">**DVP**</span> has voiced strong opposition, even threatening to bring down the coalition if the legislation proceeds.
 
 - @reject: The <span style="color: #C0A054;">**DVP**</span> expresses their outrage
 - @accept: Stresemann rallies his party to seek a compromise
 
 @reject
 on-arrival: left_dissent += 5; labor_dissent += 5; center_dissent += 5; right_dissent += 5; special_interests += 5; dvp_relation -= 2
-subtitle: what did we expect?
+subtitle: What did we expect?
 
-Expectedly, the <span style="color: #C0A054;">DVP</span> has resoundingly rejected the proposed school bill, viewing it as an affront to their ideals of the separation of church and state. With little room for compromise, we have therefore decided to collapse the Fourth Marx Cabinet. However, in accordance with Hindenburg’s wishes, the coalition will pass the budget for the upcoming year before the upcoming elections in May. 
+Expectedly, the <span style="color: #C0A054;">**DVP**</span> has resoundingly rejected the proposed school bill, viewing it as an affront to their ideals of the separation of church and state. With little room for compromise, we have therefore decided to collapse the Fourth Marx Cabinet. However, in accordance with Hindenburg’s wishes, the coalition will pass the budget for the upcoming year before the upcoming elections in May. 
 
 Despite Marx IV achieving legislative successes in social policy, labor-management relations have deteriorated sharply, with class conflict flaring up within the party. Marx, who also serves as Chairman of the Catholic Schools Association, has faced considerable criticism from the rank and file over the failure of the school law. He has since announced that he will resign at the next party congress in December. 
 
-With the formation of the <span style="color: #909090;">CSRP</span> and the growing appeal of the <span style="color: #c00000;">SPD</span>, the outlook for the upcoming election in May looks increasingly bleak.
+With the formation of the <span style="color: #909090;">**CSRP**</span> and the growing appeal of the <span style="color: #c00000;">**SPD**</span>, the outlook for the upcoming election in May looks increasingly bleak.
 
 @accept
 choose-if: dvp_relation > 100
