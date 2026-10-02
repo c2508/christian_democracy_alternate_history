@@ -20,10 +20,7 @@ Opposition: [+ labor_opposition : opposition +]
 
 = Industry
 
-Affiliated Organisations:
-<span style="color: #808080;">**Ruhrlade**</span>
-
-<span style="color: #808080;">**RDI**</span>
+{!<span class="tooltip-text" title="Affiliated Organisations:<span style="color: #808080;">**Ruhrlade**</span><span style="color: #808080;">**RDI**</span>">Industry</span>!}
 
 Opposition: [+ industrial_opposition : opposition +]
 
@@ -33,13 +30,7 @@ Opposition: [+ industrial_opposition : opposition +]
 
 = Agriculture 
 
-Affiliated Organisations:
-
-[? if green_front > 0 : <span style="color: #0dba1e;">**Green Front**</span> ?] 
-
-<span style="color: #385A38;">**RLB**</span>
-
-<span style="color: #000000;">**VdB**</span> 
+{!<span class="tooltip-text" title="Affiliated Organisations: [? if green_front > 0 : <span style="color: #0dba1e;">**Green Front**</span>, ?], <span style="color: #385A38;">**RLB**</span><span style="color: #000000;">**VdB**</span> ">Agriculture</span>!}
 
 Opposition: [+ agriculture_opposition : opposition +]
 
