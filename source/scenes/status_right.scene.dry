@@ -12,15 +12,9 @@ Parties supporting the government: <span style="color: #000000;">**Z**</span>, <
 
 <span style="color: #000000;">Bruning's</span> Reichstag Mandate: ([+ bruning_support_percentage +]%) ([+ bruning_support +]/500)
 
-= Labor 
-
-= Labor
-
 {!<span class="tooltip-text" title="Affiliated Organisations: ADG DGB HDU">Labor</span>!}
 
 Opposition: [+ labor_opposition : opposition +]
-
-= Industry
 
 {!<span class="tooltip-text" title="Affiliated Organisations: RDI Ruhrlade ">Industry</span>!}
 
@@ -30,9 +24,15 @@ Opposition: [+ industrial_opposition : opposition +]
 
 <span style="color: #808080;">**RDI**</span> President: [? if not rdi_balance > 1200 or not rdi_balance < 1000 : Duisberg (nominal) ?][? if rdi_balance > 1200 : Duisberg ?][? if rdi_balance < 1000 : Thyssen ?] 
 
-= Agriculture 
-
-{!<span class="tooltip-text="Affiliated Organisations: [? if green_front > 0 : Green Front ?] RLB VdB ">Agriculture</span>!}
+{!<span class="tooltip-text">
+    Agriculture
+    <span class="tooltip-box">
+        Affiliated Organisations:
+        [? if green_front > 0 : Green Front ?]
+        RLB
+        VdB
+    </span>
+</span>!}
 
 Opposition: [+ agriculture_opposition : opposition +]
 
