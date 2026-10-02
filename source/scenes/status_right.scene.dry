@@ -24,15 +24,7 @@ Opposition: [+ industrial_opposition : opposition +]
 
 <span style="color: #808080;">**RDI**</span> President: [? if not rdi_balance > 1200 or not rdi_balance < 1000 : Duisberg (nominal) ?][? if rdi_balance > 1200 : Duisberg ?][? if rdi_balance < 1000 : Thyssen ?] 
 
-{!<span class="tooltip-text">
-    Agriculture
-    <span class="tooltip-box">
-        Affiliated Organisations:
-        [? if green_front > 0 : Green Front ?]
-        RLB
-        VdB
-    </span>
-</span>!}
+{!<span class="tooltip-text" title="Affiliated Organisations: [? if green_front > 0 : Green Front, ?] RLB, VdB">Agriculture</span>!}
 
 Opposition: [+ agriculture_opposition : opposition +]
 
