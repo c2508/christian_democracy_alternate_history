@@ -20,10 +20,7 @@ Parties supporting the government: <span style="color: #000000;">**Z**</span>, <
     Labor
     <span class="tooltip-box">
         Affiliated Organisations:
-        <span style="color: #c00000; font-weight: bold;">ADGB</span>,
-        <span style="color: #000000; font-weight: bold;">DGB</span>,
-        <span style="color: #D3C24D; font-weight: bold;">HDU</span>
-    </span>
+     ADG DGB HDU
 </span>!}
 
 Opposition: [+ labor_opposition : opposition +]
@@ -34,9 +31,7 @@ Opposition: [+ labor_opposition : opposition +]
     Industry
     <span class="tooltip-box">
         Affiliated Organisations:
-        <span style="color: #808080; font-weight: bold;">Ruhrlade</span>,
-        <span style="color: #808080; font-weight: bold;">RDI</span>
-    </span>
+       Ruhrlade RDI
 </span>!}
 
 Opposition: [+ industrial_opposition : opposition +]
@@ -51,12 +46,7 @@ Opposition: [+ industrial_opposition : opposition +]
     Agriculture
     <span class="tooltip-box">
         Affiliated Organisations:
-        [? if green_front > 0 :
-            <span style="color: #0dba1e; font-weight: bold;">Green Front</span>,
-        ?]
-        <span style="color: #385A38; font-weight: bold;">RLB</span>,
-        <span style="color: #000000; font-weight: bold;">VdB</span>
-    </span>
+        [? if green_front > 0 : Green Front ?] RLB VdB
 </span>!}
 
 Opposition: [+ agriculture_opposition : opposition +]
