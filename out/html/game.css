@@ -219,7 +219,7 @@ blockquote + blockquote.attribution {
 #qualities h1 + p:first-line {
   font-weight: normal;
 }
-#qualities_right {
+#qualities_right h1 {
     font-size: 1.1em;
     font-weight: normal;
     text-align: center;
@@ -228,7 +228,7 @@ blockquote + blockquote.attribution {
    text-shadow: rgba(255, 255, 255, 0.75) 2px 2px 2px,
                rgba(0, 0, 0, 0.1) -1px -1px 2px;
 }
-#qualities_right + p:first-line {
+#qualities_right h1 + p:first-line {
   font-weight: normal;
 }
 /* tabs */
