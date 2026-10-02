@@ -86,7 +86,7 @@ Opposition: [+ agriculture_opposition : opposition +]
 
 [? if not dnvp_bruning_support : The <span style="color: #3F7BC1;">**DNVP**</span> is not in government. ?]
 
-@government finances
+@government_finances
 
 Monthly revenue:
 
