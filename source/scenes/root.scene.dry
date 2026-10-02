@@ -348,6 +348,11 @@ Q.csvd_total_anger = 0;
 Q.kvp_total_anger = 0;
 Q.dnvp_total_anger = 0;
 
+// dgb
+Q.dgb_leader = "Stegerwald"
+Q.dgb_unity = 3
+Q.gcg_leader = "Imbusch"
+
 // quality of life (as % of 1928 - currently unused - should be welfare-adjusted.)
 Q.workers_qol = 100;
 Q.rural_qol = 100;
@@ -766,7 +771,9 @@ Q.advisor_action_timer = 0;
 // party affairs timers
 Q.confronting_nazis_timer = 0;
 Q.crisis_program_timer = 0;
+Q.dgb_timer = 0;
 Q.fundraising_timer = 0;
+Q.green_front_timer = 0;
 Q.ideology_timer = 0;
 Q.inter_party_relationships_timer = 0;
 Q.international_relations_timer = 0;
@@ -779,7 +786,6 @@ Q.reichsbanner_timer = 0;
 Q.shuffle_leadership_timer = 0;
 Q.streetfighting_timer = 0;
 Q.peoples_party_timer = 0;
-Q.green_front_timer = 0;
 // n_elections is the number of elections that have happened since the start of the game.
 Q.n_elections = 0;
 // number of elections without a clear majority.
