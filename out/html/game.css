@@ -218,8 +218,16 @@ blockquote + blockquote.attribution {
 #qualities h1 + p:first-line {
   font-weight: normal;
 }
-#qualities_right { text-indent: 0; line-height: 1.3em; } #qualities_right p { text-indent: 0
-                                                                            }
+#qualities_right {
+    font-size: 1.1em;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+#qualities_right + p:first-line {
+  font-weight: normal;
+}
 /* tabs */
 .tab_container {
     background-color: var(--tab-bg-color);
