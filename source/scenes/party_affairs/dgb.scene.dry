@@ -1,0 +1,55 @@
+title: Union Affairs
+new-page: true
+view-if: dgb_timer = 0
+on-arrival: month_actions += 1; dgb_timer += 6
+max-visits: 36
+is-card: true
+card-image: img/CenterCampaign.jpg
+frequency: 0
+tags: party_affairs
+
+  = The DGB
+
+The German Trade Union Confederation (DGB) is an umbrella organisation of Christian and Catholic trade unions, comprising of the of the blue collar General Association of Christian Trade Unions of Germany (GcG) and the white collar General Association of German Employees' Associations (Gedag).
+Due to our continued association since 1919, we have made extensive contacts within the Christian Trade Union Movement. With our control of the DGB chairmanship, we are able to influence and steer its policies.
+
+Chairman: [? if dgb_leader = "Stegerwald" : Adam Stegerwald ?][? if dgb_leader = "Imbusch" : Heinrich Imbusch ?]
+card image: img/CenterCampaign.jpg
+
+DGB cohesion: [? if dgb_unity = 1: <span style="color: #66BB6A;">fragmented/span> ?][? if dgb_unity = 2: <span style="color: #81C784;">disunited</span> ?][? if dgb_unity = 3: <span style="color: #FFD54F;">divided</span> ?][? if dgb_unity = 4: <span style="color: #FFB74D;">stable</span> ?][? if dgb_unity = 5: <span style="color: #d42f2f;">united</span> ?]
+
+- @ideals: Unify the DGB behind its shared goals
+- @fundraise: Raise funds to support pro-labor candidates in the <span style="color: #000000;">**Center Party**</span> 
+- @labor_opposition: Reduce the opposition to Labor towards Bruning's Cabinet
+- @gcg: The GcG
+- @gedag: The Gedag
+- @return: We do not need want to interfere in union affairs.
+
+@ideals
+title: The purpose of our media is to elect more Catholics.
+subtitle: Our newspapers will focus on the electoral campaign.
+on-arrival: campaign_media += 1; catholics_z += 2*(1-dissent)
+
+Our campaign media is mostly reaching the Catholics who already vote for us, but it must be doing *something*, or at least that is what we hope.
+
+@fundraise
+title: The purpose of our media is to elect more Catholics.
+subtitle: Our newspapers will focus on the electoral campaign.
+on-arrival: campaign_media += 1; catholics_z += 2*(1-dissent)
+
+Our campaign media is mostly reaching the Catholics who already vote for us, but it must be doing *something*, or at least that is what we hope.
+
+@labor_opposition
+title: The purpose of our media is to elect more Catholics.
+subtitle: Our newspapers will focus on the electoral campaign.
+on-arrival: campaign_media += 1; catholics_z += 2*(1-dissent)
+
+Our campaign media is mostly reaching the Catholics who already vote for us, but it must be doing *something*, or at least that is what we hope.
+
+@gcg
+subtitle: Manage the internal affairs of the GcG
+go-to: gcg_affairs
+  
+@gedag
+subtitle: Manage the internal affairs of the Gedag
+go-to: gedag_affairs
