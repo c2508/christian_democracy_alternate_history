@@ -14,13 +14,30 @@ Parties supporting the government: <span style="color: #000000;">**Z**</span>, <
 
 = Labor 
 
-{!<span class="tooltip-text" title="Affiliated Organisations: <span style="color: #c00000;">**ADGB**</span>,<span style="color: #000000;">**DGB**</span>,<span style="color: #D3C24D;">**HDU**</span>">Labor</span>!} 
+= Labor
+
+{!<span class="tooltip-text">
+    Labor
+    <span class="tooltip-box">
+        Affiliated Organisations:
+        <span style="color: #c00000; font-weight: bold;">ADGB</span>,
+        <span style="color: #000000; font-weight: bold;">DGB</span>,
+        <span style="color: #D3C24D; font-weight: bold;">HDU</span>
+    </span>
+</span>!}
 
 Opposition: [+ labor_opposition : opposition +]
 
 = Industry
 
-{!<span class="tooltip-text" title="Affiliated Organisations:<span style="color: #808080;">**Ruhrlade**</span><span style="color: #808080;">**RDI**</span>">Industry</span>!}
+{!<span class="tooltip-text">
+    Industry
+    <span class="tooltip-box">
+        Affiliated Organisations:
+        <span style="color: #808080; font-weight: bold;">Ruhrlade</span>,
+        <span style="color: #808080; font-weight: bold;">RDI</span>
+    </span>
+</span>!}
 
 Opposition: [+ industrial_opposition : opposition +]
 
@@ -30,7 +47,17 @@ Opposition: [+ industrial_opposition : opposition +]
 
 = Agriculture 
 
-{!<span class="tooltip-text" title="Affiliated Organisations: [? if green_front > 0 : <span style="color: #0dba1e;">**Green Front**</span>, ?], <span style="color: #385A38;">**RLB**</span><span style="color: #000000;">**VdB**</span> ">Agriculture</span>!}
+{!<span class="tooltip-text">
+    Agriculture
+    <span class="tooltip-box">
+        Affiliated Organisations:
+        [? if green_front > 0 :
+            <span style="color: #0dba1e; font-weight: bold;">Green Front</span>,
+        ?]
+        <span style="color: #385A38; font-weight: bold;">RLB</span>,
+        <span style="color: #000000; font-weight: bold;">VdB</span>
+    </span>
+</span>!}
 
 Opposition: [+ agriculture_opposition : opposition +]
 
