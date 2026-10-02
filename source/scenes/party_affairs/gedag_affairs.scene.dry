@@ -1,0 +1,44 @@
+title: The Gedag
+new-page: true
+max-visits: 36
+is-card: true
+card-image: img/CenterCampaign.jpg
+frequency: 0
+tags: party_affairs
+
+= The GcG
+
+Current Leader: [? if gcg_leader = "Imbusch" : Heinrich Imbusch ?][? if gcg_leader = 'Otte': Bernhard Otte ?]
+Dominant Union: Christian Miners' Union (CMV)
+
+falvortext
+
+- @imbusch: Support Imbusch’s policies
+- @union_coop: Forge closer ties with the <span style="color: #c00000;">**SPD**</span> and <span style="color: #D3C24D;">**HDU**</span>
+- @newspaper: Fund the Westdeutschen Arbeiterzeitung
+- @root: We either don't want to do anything right now
+- @easy_discard
+
+@imbusch
+subtitle: -3 resources
+choose-if: resources >= 3
+unavailable-subtitle: Not enough resources.
+on-arrival: workers_z += 1*(1-dissent); workers_z -= 1/3 if unemployed >= 15; workers_z -= 1/3 if unemployed >= 25; workers_z += 2*(1-dissent) if peoples_party == 1; resources -= 3
+
+as
+
+@union_coop
+subtitle: -3 resources
+choose-if: resources >= 3
+unavailable-subtitle: Not enough resources.
+on-arrival: workers_z += 1*(1-dissent); workers_z -= 1/3 if unemployed >= 15; workers_z -= 1/3 if unemployed >= 25; workers_z += 2*(1-dissent) if peoples_party == 1; resources -= 3
+
+as
+
+@newspaper
+subtitle: -3 resources
+choose-if: resources >= 3
+unavailable-subtitle: Not enough resources.
+on-arrival: workers_z += 1*(1-dissent); workers_z -= 1/3 if unemployed >= 15; workers_z -= 1/3 if unemployed >= 25; workers_z += 2*(1-dissent) if peoples_party == 1; resources -= 3
+
+as
