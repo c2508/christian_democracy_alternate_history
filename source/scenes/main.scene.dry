@@ -29,7 +29,7 @@ if (!document.getElementById('news_tab')) {
         if (!p.textContent.trim()) {
             p.remove();
         }
-    });
+    })
 }
 on-arrival: {!
 if (Q.advisor_action_timer <= 0) {
