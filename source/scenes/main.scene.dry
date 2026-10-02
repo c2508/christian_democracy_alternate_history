@@ -32,8 +32,9 @@ if (!document.getElementById('news_tab')) {
         }
     });
 }
+const scrollableBox = document.querySelector('div.scrollable-box')
 !}
-const scrollableBox = document.querySelector('div.scrollable-box');
+
 on-arrival: {!
 if (Q.advisor_action_timer <= 0) {
     Q.pinnedCardsDescription = 'Advisors - an action is available.';
