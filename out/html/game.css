@@ -207,8 +207,17 @@ blockquote + blockquote.attribution {
 #qualities p {
   text-indent: 0;
 }
+#qualities {
+    font-size: 1.1em;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-shadow: rgba(255, 255, 255, 0.75) 2px 2px 2px,
+                 rgba(0, 0, 0, 0.1) -1px -1px 2px;
+}
 #qualities h1 {
-  font-size: 1.1em;
+  font-size: 1em;
   font-weight: normal;
   text-align: center;
   text-transform: uppercase;
