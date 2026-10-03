@@ -11,7 +11,6 @@ view-if: bruning_advisor = 1
 Bruning is our lead economist and the managing director of the Christian Trade Union Federation (<span style="color: #000000;">**DGB**</span>). With many connections to the political right, he is a rising star in the party.
 
 - @coalition
-- @bruning_international
 - @bruning_foreign
 - @snap_election
 - @root: Return to main
@@ -24,14 +23,6 @@ unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +
 on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if spd_in_government = 1 and coalition_dissent > 0; spd_relation += 5; ddp_relation += 5; dvp_relation += 5 if in_grand_coalition = 1
 
 We have improved our relations with our coalition partners and reduced tensions with the coalition.
-
-@bruning_international
-title: International Party Relations
-subtitle: Brüning is one of our contacts with international socialist parties.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-choose-if: advisor_action_timer == 0
-on-arrival: advisor_action_timer = 6; international_relations_timer -= 12; last_advisor_action = 1
-go-to: international_relations
 
 @bruning_foreign
 title: Foreign Policy
