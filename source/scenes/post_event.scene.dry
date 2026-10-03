@@ -75,8 +75,8 @@ if (Q.conservative_opposition > 100) {
     Q.conservative_opposition = 100;
 }
 (Q.bruning_support_percentage = Math.round(Q.bruning_support_percentage));
-(Q.bruning_opposed_percentage = Math.round((Q.bruning_opposed_percentage);
-(Q.bruning_undecided_percentage = Math.round((Q.bruning_undecided_percentage)*10.0)/10.0);
+(Q.bruning_opposed_percentage = Math.round(Q.bruning_opposed_percentage));
+(Q.bruning_undecided_percentage = Math.round(Q.bruning_undecided_percentage));
 // re-calculate party support
 // calculate normalized class voting for the achievements
 for (var c of Q.classes) {
