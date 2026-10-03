@@ -16,14 +16,14 @@ Antisemitism has long been a latent feature of German society, but since the beg
 - @all: All Germans will suffer from fascism, not just the Jews. We do not need a separate policy for them.
 
 @racist
-on-arrival: spd_relation -= 10; ddp_relation -= 5; dvp_relation += 3; dnvp_relation += 5 ;right_strength += 5; right_dissent -= 3
+on-arrival: spd_relation -= 10; ddp_relation -= 5; dvp_relation += 3; dnvp_relation += 5; right_strength += 5; right_dissent -= 3; old_middle_z += 1;
 
 Judeobolshevism has permeated every corner of our society. We must cooperate with the right wing parties to keep the socialists out of power.
 
 @if
 on-arrival: confronting_antisemitism += 2; sa_strength -= 20; democratization += 1; pacifism += 1; nationalism -= 5*(1-dissent); workers_nsdap -= 6*(1-dissent); right_dissent +=5; right_strength +=3
 
-We develop an entire campaign against antisemitism while calling for churches to condemn this kind of behaviour
+We develop an entire campaign against antisemitism while calling for churches to condemn this kind of behaviour.
 
 @all
 on-arrival: center_strength += 5
