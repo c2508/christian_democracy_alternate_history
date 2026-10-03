@@ -12,7 +12,7 @@ Parties supporting the government: <span style="color: #000000;">**Z**</span>, <
 
 <span style="color: #000000;">Bruning's</span> Reichstag Mandate: ([+ bruning_support_percentage +]%) ([+ bruning_support +]/500)
 
-{!<span class="tooltip-text" title="Affiliated Organisations: ADG DGB HDU">Labor</span>!}
+{!<span class="tooltip-text" title="Affiliated Organisations: ADGB DGB HDU">Labor</span>!}
 
 Opposition: [+ labor_opposition : opposition +]
 
