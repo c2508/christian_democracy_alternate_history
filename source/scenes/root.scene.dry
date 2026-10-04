@@ -449,15 +449,15 @@ Q.other_r = 7;
 
 
 // diff from prev
-Q.old_spd_r = 26;
-Q.old_kpd_r = 9;
-Q.old_z_r = 17;
-Q.old_ddp_r = 6;
-Q.old_dvp_r = 10;
-Q.old_wp_r = 2;
-Q.old_dnvp_r = 20;
-Q.old_nsdap_r = 3;
-Q.old_other_r = 7;
+Q.old_spd_r = 26.6;
+Q.old_kpd_r = 9.1;
+Q.old_z_r = 17.8;
+Q.old_ddp_r = 6.5;
+Q.old_dvp_r = 10.3;
+Q.old_wp_r = 2.4;
+Q.old_dnvp_r = 20.9;
+Q.old_nsdap_r = 2.8;
+Q.old_other_r = 3.6;
 
 // prussian gov right now
 Q.spd_r_prussia = 25.3;
