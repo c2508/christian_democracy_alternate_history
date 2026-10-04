@@ -929,7 +929,7 @@ go-to: 1928_main
 @1928_main
 new-page: true
 choose-if: dvp_relation > 100
-go-to: main.main
+go-to: main
 
 = 1928
 
