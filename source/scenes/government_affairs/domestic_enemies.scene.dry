@@ -12,17 +12,17 @@ view-if: z_in_government = 1 and interior_minister_party = "Z"
 As we have control over the Interior Ministry, we can direct police and intelligence services to investigate internal enemies. We can proscribe various organizations.
 
 - @deport_hitler
-- @ban_sa: Ban the SA.
-- @unban_sa: Unban the SA.
+- @ban_sa: Ban the <span style="color: #7A3C00;">**SA**</span>.
+- @unban_sa: Unban the <span style="color: #7A3C00;">**SA**</span>.
 - @persecute_sa
-- @ban_sh: Ban the Stahlhelm.
-- @unban_sh: Unban the Stahlhelm.
+- @ban_sh: Ban the <span style="color: #3E88B3;">**Stahlhelm**</span>.
+- @unban_sh: Unban the <span style="color: #3E88B3;">**Stahlhelm**</span>.
 - @persecute_sh
-- @ban_rb: Ban the Socialist Reichsbanner.
-- @unban_rb: Unban the Reichsbanner.
+- @ban_rb: Ban the <span style="color: #c00000;">**Reichsbanner**</span>.
+- @unban_rb: Unban the <span style="color: #c00000;">**Reichsbanner**</span>.
 - @persecute_rb
-- @ban_rfb: Ban the Communist RFB.
-- @unban_rfb: Unban the RFB.
+- @ban_rfb: Ban the Communist <span style="color: #8B0000;">**RFB**</span>.
+- @unban_rfb: Unban the <span style="color: #8B0000;">**RFB**</span>.
 - @persecute_rfb
 - @root: Take no action for now.
 
@@ -30,46 +30,46 @@ As we have control over the Interior Ministry, we can direct police and intellig
 view-if: nazi_urgency >= 3 and sa_banned == 0
 on-arrival: sa_strength *= 0.85; sa_strength *= 0.7 if interior_police_loyalty >= 0.7; sa_banned = 1; spd_relation += 3; dvp_relation -= 3; dnvp_relation -= 3; prussian_police_loyalty -= 0.05; interior_police_loyalty -= 0.05; sa_militancy -= 0.05; sa_ban_timer = 6;
 
-As it turns out, the Nazi SA has many allies in the police and bureaucracy. Our relationship with the police weakens, and the SA can still organize illegally, right under the police's noses. [? if interior_police_loyalty >= 0.7 : Nevertheless, the SA is substantially weakened by our ban. ?]
+As it turns out, the <span style="color: #7A3C00;">Nazi</span> <span style="color: #7A3C00;">**SA**</span> has many allies in the police and bureaucracy. Our relationship with the police weakens, and the <span style="color: #7A3C00;">**SA**</span> can still organize illegally, right under the police's noses. [? if interior_police_loyalty >= 0.7 : Nevertheless, the <span style="color: #7A3C00;">**SA**</span> is substantially weakened by our ban. ?]
 
 @unban_sa
 view-if: sa_banned = 1
 on-arrival: sa_banned = 0; sa_strength += 100; sa_militancy += 0.05
 
-The SA is no longer banned. They immediately go on a recruiting spree.
+The <span style="color: #7A3C00;">**SA**</span> is no longer banned. They immediately go on a recruiting spree.
 
 @persecute_sa
-title: Further persecute the SA.
+title: Further persecute the <span style="color: #7A3C00;">**SA**</span>.
 view-if: sa_banned = 1
 choose-if: judicial_reform >= 3 and interior_police_loyalty >= 0.7
 unavailable-subtitle: [? if judicial_reform < 3 : The judiciary would not allow this. ?] [? if interior_police_loyalty < 0.7 : The police are too disloyal to be trusted with this. ?]
 on-arrival: sa_strength *= 0.7; sa_militancy -= 0.05
 
-We have arrested more of the SA's leaders and confiscated their weapons.
+We have arrested more of the <span style="color: #7A3C00;">**SA's**</span> leaders and confiscated their weapons.
 
 @ban_sh
 on-arrival: sh_strength *= 0.85; sh_strength *= 0.7 if interior_police_loyalty >= 0.7; sh_banned = 1; spd_relation += 5; ddp_relation += 5; dvp_relation -= 5; dnvp_relation -= 5; prussian_police_loyalty -= 0.1; interior_police_loyalty -= 0.05; coalition_dissent += 1 if spd_in_government = 1 and in_grand_coalition = 1 and president = "Hindenburg"; sh_ban_timer = 6; right_dissent += 10
 view-if: sh_banned == 0 and z_sh = 0
 
-[? if president == "Hindenburg": Banning the Stahlhelm weakens our relationship with President Hindenburg, as well as the political right and the police. ?][? if president != "Hindenburg": Banning the Stahlhelm weakens our relationship with the political right and the police. ?] [? if spd_in_government = 1 and in_grand_coalition = 1 and president = "Hindenburg" : It also weakens our coalition due to the influence of Hindenburg on the right wing of our coalition. ?] Our right faction disapproves of this action. In addition, the Stahlhelm still operates out of public sight.
+[? if president == "Hindenburg": Banning the <span style="color: #3E88B3;">**Stahlhelm**</span> weakens our relationship with President <span style="color: #808080;">Hindenburg</span>, as well as the political right and the police. ?][? if president != "Hindenburg": Banning the <span style="color: #3E88B3;">**Stahlhelm**</span> weakens our relationship with the political right and the police. ?] [? if spd_in_government = 1 and in_grand_coalition = 1 and president = "Hindenburg" : It also weakens our coalition due to the influence of <span style="color: #808080;">Hindenburg</span>  on the right wing of our coalition. ?] Our right faction disapproves of this action. In addition, the <span style="color: #3E88B3;">**Stahlhelm**</span> still operates out of public sight.
 
 @unban_sh
 view-if: sh_banned = 1 and z_sh = 0
 on-arrival: sh_banned = 0; sh_strength += 100
 
-The Stahlhelm is no longer banned.
+The <span style="color: #3E88B3;">**Stahlhelm**</span> is no longer banned.
 
 @persecute_sh
-title: Further persecute the Stahlhelm.
+title: Further persecute the <span style="color: #3E88B3;">**Stahlhelm**</span>.
 view-if: sh_banned = 1 and z_sh = 0
 choose-if: judicial_reform >= 4 and interior_police_loyalty >= 0.7
 unavailable-subtitle: [? if judicial_reform < 4 : The judiciary would not allow this. ?] [? if interior_police_loyalty < 0.7 : The police are too disloyal to be trusted with this. ?]
 on-arrival: sh_strength *= 0.7; sh_militancy -= 0.05; dvp_relation -= 5; dnvp_relation -= 5; prussian_police_loyalty -= 0.1; interior_police_loyalty -= 0.05; coalition_dissent += 1 if spd_in_government = 1 and in_grand_coalition = 1 and president = "Hindenburg";
 
-We have arrested more of the Stahlhelm's leaders and confiscated their weapons.
+We have arrested more of the <span style="color: #3E88B3;">**Stahlhelm's**</span> leaders and confiscated their weapons.
 
 @ban_rb
-view-if: spd_relation <= 35 and rb_banned = 1 and z_rb = 0
+view-if: spd_relation <= 35 and rb_banned = 1 and z_rb = 0 and spd_in_government = 0
 on-arrival: kpd_relation -= 15; rfb_strength -= 50; rfb_banned = 1; spd_left += 1; dvp_relation += 5; dnvp_relation += 5; prussian_police_loyalty += 0.1; interior_police_loyalty += 0.1; coalition_dissent -= 1 if coalition_dissent > 0 
 
 The ban is enthusiastically carried out by the police, perhaps too enthusiastically. However, the center-right parties approve, as do the police.
@@ -78,14 +78,14 @@ The ban is enthusiastically carried out by the police, perhaps too enthusiastica
 view-if: rb_banned = 1 and z_rb = 0
 on-arrival: rb_banned = 0; spd_relation += 5; rb_strength += 50; prussian_police_loyalty -= 0.05; interior_police_loyalty -= 0.05
 
-The Socialist Reichsbanner is no longer banned.
+The <span style="color: #c00000;">**Reichsbanner**</span> is no longer banned.
 
 @persecute_rb
-title: Further persecute the Reichsbanner.
-view-if: rb_banned = 1 and z_rb = 0
+title: Further persecute the <span style="color: #c00000;">**Reichsbanner**</span>.
+view-if: rb_banned = 1 and z_rb = 0 and spd_in_government = 0
 on-arrival: rb_strength *= 0.7; rb_militancy -= 0.05; spd_relation -= 10; dnvp_relation += 5; dvp_relation += 5; nsdap_relation += 5; prussian_police_loyalty += 0.1; interior_police_loyalty += 0.1; coalition_dissent -= 1 if coalition_dissent > 0 and n_rfb_persecuted = 0; n_rfb_persecuted += 1
 
-We have arrested more of the Reichsbanner's leaders and confiscated their weapons.
+We have arrested more of the <span style="color: #c00000;">**Reichsbanner's**</span> leaders and confiscated their weapons.
 
 
 @ban_rfb
@@ -98,11 +98,11 @@ The ban is enthusiastically carried out by the police, perhaps too enthusiastica
 view-if: rfb_banned = 1
 on-arrival: rfb_banned = 0; kpd_relation += 5; rfb_strength += 50; prussian_police_loyalty -= 0.05; interior_police_loyalty -= 0.05
 
-The Communist RFB is no longer banned.
+The <span style="color: #700000;">Communist</span> <span style="color: #8B0000;">**RFB**</span> is no longer banned.
 
 @persecute_rfb
-title: Further persecute the RFB.
+title: Further persecute the <span style="color: #8B0000;">**RFB**</span>.
 view-if: rfb_banned = 1
 on-arrival: rfb_strength *= 0.7; rfb_militancy -= 0.05; kpd_relation -= 10; kpd_coalition_dissent += 1; z_relation += 5; dvp_relation += 5; prussian_police_loyalty += 0.1; interior_police_loyalty += 0.1; coalition_dissent -= 1 if coalition_dissent > 0 and n_rfb_persecuted = 0; n_rfb_persecuted += 1
 
-We have arrested more of the RFB's leaders and confiscated their weapons.
+We have arrested more of the <span style="color: #8B0000;">**RFB's**</span> leaders and confiscated their weapons.
