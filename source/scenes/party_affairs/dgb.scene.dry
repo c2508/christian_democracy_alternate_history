@@ -41,7 +41,7 @@ Our campaign media is mostly reaching the Catholics who already vote for us, but
 @labor_opposition
 subtitle: Bruning needs the confidence of the <span style="color: #000000;">**DGB**</span> to conduct his economic policies.
 view-if: rubicon = 1
-choose-if: chancellor == "Bruning"; 
+choose-if: chancellor == "Bruning"
 unavailable-subtitle: Bruning has been toppled.
 on-arrival: labor_opposition -= 10
 
