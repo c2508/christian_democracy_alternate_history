@@ -352,6 +352,8 @@ Q.dnvp_total_anger = 0;
 Q.dgb_leader = "Stegerwald"
 Q.dgb_unity = 3
 Q.gcg_leader = "Imbusch"
+Q.union_coop = 0
+
 
 // quality of life (as % of 1928 - currently unused - should be welfare-adjusted.)
 Q.workers_qol = 100;
