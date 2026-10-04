@@ -898,7 +898,7 @@ For more information on the politics and government of the German Republic, see 
 
 @1928_easy
 on-arrival: difficulty = -1; resources = 6; dues = 6; rb_strength = 2500;
-go-to: 1928_main
+go-to: 1928_main.easy
 
 @1928_hard
 on-arrival: difficulty = 1; resources = 0; dues = 6; rb_strength = 1000; liberal_dissent = 25; nationalist_dissent = 30; labor_dissent = 25; industrialist_dissent = 25; z_relation = 45; kpd_relation = 0; spd_relation = 30; budget = 3;
