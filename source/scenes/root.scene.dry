@@ -904,7 +904,7 @@ go-to: main.main_easy
 @1928_hard
 on-arrival: difficulty = 1; resources = 0; dues = 6; rb_strength = 1000; liberal_dissent = 25; nationalist_dissent = 30; labor_dissent = 25; industrialist_dissent = 25; z_relation = 45; kpd_relation = 0; spd_relation = 30; budget = 3;
 choose-if: dvp_relation > 100 
-new-true: true
+new-page: true
 go-to: 1928_main
 
 @1928_historical
