@@ -1,39 +1,37 @@
-title: The GcG
+title: The <span style="color: #000000;">**GcG**</span>
 new-page: true
 max-visits: 36
 is-card: true
+view-if: spd_relation > 200
 card-image: img/CenterCampaign.jpg
 frequency: 0
 tags: party_affairs
 
-= The GcG
+= The <span style="color: #000000;">**GcG**</span>
 
 Current Leader: [? if gcg_leader = "Imbusch" : Heinrich Imbusch ?][? if gcg_leader = 'Otte': Bernhard Otte ?]
 Dominant Union: Christian Miners' Union (CMV)
 
-falvortext
+flavortext
 
-- @imbusch: Support Imbusch’s policies
-- @union_coop: Forge closer ties with the <span style="color: #c00000;">**SPD**</span> and <span style="color: #D3C24D;">**HDU**</span>
+- @imbusch: Support Imbusch’s policies of confrontation
+- @union_coop: Forge closer ties with the <span style="color: #c00000;">**ADGB**</span> and <span style="color: #D3C24D;">**HDU**</span>
 - @newspaper: Fund the Westdeutschen Arbeiterzeitung
 - @root: We either don't want to do anything right now
 - @easy_discard
 
 @imbusch
-subtitle: -3 resources
-choose-if: resources >= 3
-unavailable-subtitle: Not enough resources.
+subtitle: Imbusch supports a more miltant trade unionism compared to Stegerwald's concillation, similar to the <span style="color: #c00000;">**ADGB**</span>.
+view-if: rubicon = 1
 on-arrival: workers_z += 1*(1-dissent); workers_z -= 1/3 if unemployed >= 15; workers_z -= 1/3 if unemployed >= 25; workers_z += 2*(1-dissent) if peoples_party == 1; resources -= 3
 
-as
+This has galvanised our union members amidst growing unemployment and poverty, stabilising our membership for now. However, the industrialist and middle class elements of the party are wary of this shift towards the left.
 
 @union_coop
-subtitle: -3 resources
-choose-if: resources >= 3
-unavailable-subtitle: Not enough resources.
-on-arrival: workers_z += 1*(1-dissent); workers_z -= 1/3 if unemployed >= 15; workers_z -= 1/3 if unemployed >= 25; workers_z += 2*(1-dissent) if peoples_party == 1; resources -= 3
+subtitle: With cooperation running back to the period of the revolution, deepening our ties with them can aid us in the fight for workers' rights and welfare.
+on-arrival: spd_relation += 3; ddp_relation += 3; spd_right += 0.5; ddp_left += 0.5; union_coop += 1
 
-as
+In meetings with other union representatives, we are able to engage in dialogue regarding contentious issues in the German labor movement like the promotion of economic democracy. This has improved our relations with their affliated parties and pushed them towards common ground on economic issues.  
 
 @newspaper
 subtitle: -3 resources
