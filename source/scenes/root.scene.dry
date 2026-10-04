@@ -380,7 +380,7 @@ Q.workers_dvp = 0;
 Q.workers_wp = 0;
 Q.workers_dnvp = 5;
 Q.workers_nsdap = 0;
-Q.workers_other = 10;
+Q.workers_other = 5;
 
 Q.old_middle_spd = 5;
 Q.old_middle_kpd = 0;
@@ -390,7 +390,7 @@ Q.old_middle_dvp = 25;
 Q.old_middle_wp = 20;
 Q.old_middle_dnvp = 25;
 Q.old_middle_nsdap = 5;
-Q.old_middle_other = 10;
+Q.old_middle_other = 8;
 
 Q.new_middle_spd = 5;
 Q.new_middle_kpd = 1;
@@ -400,7 +400,7 @@ Q.new_middle_dvp = 25;
 Q.new_middle_wp = 20;
 Q.new_middle_dnvp = 10;
 Q.new_middle_nsdap = 5;
-Q.new_middle_other = 10;
+Q.new_middle_other = 8;
 
 Q.rural_spd = 10;
 Q.rural_kpd = 0;
@@ -410,27 +410,27 @@ Q.rural_dvp = 15;
 Q.rural_wp = 0;
 Q.rural_dnvp = 45;
 Q.rural_nsdap = 5;
-Q.rural_other = 10;
+Q.rural_other = 8;
 
 Q.unemployed_spd = 25;
 Q.unemployed_kpd = 50;
-Q.unemployed_z = 0;
-Q.unemployed_ddp = 0;
-Q.unemployed_dvp = 0;
+Q.unemployed_z = 1;
+Q.unemployed_ddp = 1;
+Q.unemployed_dvp = 1;
 Q.unemployed_wp = 0;
 Q.unemployed_dnvp = 5;
 Q.unemployed_nsdap = 15;
-Q.unemployed_other = 8;
+Q.unemployed_other = 5;
 
 Q.catholics_spd = 15;
 Q.catholics_kpd = 2;
-Q.catholics_z = 50;
-Q.catholics_ddp = 0;
+Q.catholics_z = 45;
+Q.catholics_ddp = 2;
 Q.catholics_dvp = 5;
 Q.catholics_wp = 1;
 Q.catholics_dnvp = 5;
 Q.catholics_nsdap = 0;
-Q.catholics_other = 12;
+Q.catholics_other = 8;
 
 
 // Current Reichstag composition
