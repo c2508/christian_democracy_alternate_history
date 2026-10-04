@@ -926,12 +926,9 @@ this.state.disableSaves = true;
 !}
 go-to: 1928_main
 
-@1928_easy
-new-page: true
-go-to: main.main_easy 
-
 @1928_main
 new-page: true
+choose-if: dvp_relation > 100
 go-to: main.main
 
 = 1928
