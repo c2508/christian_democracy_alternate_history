@@ -26,23 +26,23 @@ on-arrival: enemies = "anti-democratic parties"; center_strength += 5; left_stre
 Attacking the anti-democratic parties is popular among all but the right wing of our party, who would prefer to be fighting the <span style="color: #c00000;">**Marxist**</span> parties. This might also hamper our ability to reconcile with the <span style="color: #3E88B3;">**DNVP**</span> in the future.
 
 @far_right_and_left
-on-arrival: enemies = "far right and left"; left_dissent -= 5; center_dissent -= 5; right_dissent -= 5; old_middle_nsdap -= 3; workers_kpd -= 3;
+on-arrival: enemies = "far <span style="color: #7A3C00;">right</span> and <span style="color: #700000;">left</span>"; left_dissent -= 5; center_dissent -= 5; right_dissent -= 5; old_middle_nsdap -= 3; workers_kpd -= 3;
 
 Our rhetoric against the extremist parties are popular among most of the party. 
 
 @nsdap
-on-arrival: enemies = "NSDAP"; left_strength += 5; nazi_urgency += 1; old_middle_nsdap -= 4;
+on-arrival: enemies = "<span style="color: #7A3C00;">**NSDAP**</span>"; left_strength += 5; nazi_urgency += 1; old_middle_nsdap -= 4;
 
 [? if nazi_urgency == 0 or nsdap_r < 10 : The <span style="color: #7A3C00;">**NSDAP**</span> is a tiny party right now, with more bark than bite. Many in our party are questioning our choices. ?][? if nazi_urgency > 0 and nsdap_r >= 10 : The <span style="color: #7A3C00;">**Nazis**</span> are the most urgent problem for us to deal with. ?]
 
 @special_interest
 choose-if: year <= 1932
 unavailable-subtitle: [? if year <= 1932: The <span style="color: #909090;">**special interest**</span> parties have become irrelevant in light of the rise of the <span style="color: #7A3C00;">**NSDAP**</span>. ?}
-on-arrival: enemies = "special interests"; workers_other -= 1; old_middle_other -= 1; old_middle_wp -= 1; rural_cnblp -= 1; special_interests -= 3
+on-arrival: enemies = "<span style="color: #909090;">**special interest**</span> parties"; workers_other -= 1; old_middle_other -= 1; old_middle_wp -= 1; rural_cnblp -= 1; special_interests -= 3
 
 We critisise the increasing materialism of the German electorate and their pivot towards narrow <span style="color: #909090;">**special interest**</span> parties. 
 
 @marxist
-on-arrival: enemies = "marxist parties"; left_dissent += 5; labor_dissent += 3; right_strength += 8; right_dissent -= 5; spd_relation -= 5; dvp_relation += 5; dnvp_relation += 5; workers_spd -= 3; workers_kpd -= 3
+on-arrival: enemies = "<span style="color: #c00000;">marxist</span> parties"; left_dissent += 5; labor_dissent += 3; right_strength += 8; right_dissent -= 5; spd_relation -= 5; dvp_relation += 5; dnvp_relation += 5; workers_spd -= 3; workers_kpd -= 3
 
-Our anti-<span style="color: #c00000;">Marxist</span> rhetoric is popular among the right, but may make it harder for continued cooperation with the left. 
+Our anti-<span style="color: #c00000;">marxist</span> rhetoric is popular among the right, but may make it harder for continued cooperation with the left. 
