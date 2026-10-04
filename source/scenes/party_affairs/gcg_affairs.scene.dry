@@ -10,6 +10,7 @@ tags: party_affairs
 = The <span style="color: #000000;">**GcG**</span>
 
 Current Leader: [? if gcg_leader = "Imbusch" : Heinrich Imbusch ?][? if gcg_leader = 'Otte': Bernhard Otte ?]
+
 Dominant Union: Christian Miners' Union (CMV)
 
 flavortext
