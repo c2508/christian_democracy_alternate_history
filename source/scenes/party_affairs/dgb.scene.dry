@@ -8,52 +8,53 @@ card-image: img/CenterCampaign.jpg
 frequency: 2
 tags: party_affairs
 
-  = The DGB
+  = The <span style="color: #000000;">**DGB**</span> 
 
-The German Trade Union Confederation (DGB) is an umbrella organisation of Christian and Catholic trade unions, comprising of the of the blue collar General Association of Christian Trade Unions of Germany (GcG) and the white collar General Association of German Employees' Associations (Gedag).
-Due to our continued association since 1919, we have made extensive contacts within the Christian Trade Union Movement. With our control of the DGB chairmanship, we are able to influence and steer its policies.
+The German Trade Union Confederation (<span style="color: #000000;">**Z**</span>) is an umbrella organisation of Christian and Catholic trade unions, comprising of the of the blue collar General Association of Christian Trade Unions of Germany (<span style="color: #000000;">**GcG**</span>) and the white collar General Association of German Employees' Associations (<span style="color: #a2c617;">**Gedag**</span>).
+Due to our continued association since 1919, we have made extensive contacts within the Christian Trade Union Movement. With our control of the <span style="color: #000000;">**DGB**</span> chairmanship, we are able to influence and steer its policies.
 
 Chairman: [? if dgb_leader = "Stegerwald" : Adam Stegerwald ?][? if dgb_leader = "Imbusch" : Heinrich Imbusch ?]
-card image: img/CenterCampaign.jpg
+card-image: img/CenterCampaign.jpg
+<span style="color: #000000;">**DGB**</span>  cohesion: [? if dgb_unity = 1: <span style="color: #66BB6A;">fragmented/span> ?][? if dgb_unity = 2: <span style="color: #81C784;">disunited</span> ?][? if dgb_unity = 3: <span style="color: #FFD54F;">divided</span> ?][? if dgb_unity = 4: <span style="color: #FFB74D;">stable</span> ?][? if dgb_unity = 5: <span style="color: #d42f2f;">united</span> ?]
 
-DGB cohesion: [? if dgb_unity = 1: <span style="color: #66BB6A;">fragmented/span> ?][? if dgb_unity = 2: <span style="color: #81C784;">disunited</span> ?][? if dgb_unity = 3: <span style="color: #FFD54F;">divided</span> ?][? if dgb_unity = 4: <span style="color: #FFB74D;">stable</span> ?][? if dgb_unity = 5: <span style="color: #d42f2f;">united</span> ?]
-
-- @ideals: Unify the DGB behind its shared goals
+- @ideals: Unify the <span style="color: #000000;">**DGB**</span> behind its shared goals
 - @fundraise: Raise funds to support pro-labor candidates in the <span style="color: #000000;">**Center Party**</span> 
-- @labor_opposition: Reduce the opposition to Labor towards Bruning's Cabinet
-- @gcg: The GcG
-- @gedag: The Gedag
+- @labor_opposition: Reduce the opposition of Labor towards Bruning's Cabinet
+- @gcg: The <span style="color: #000000;">**DGB**</span>
+- @gedag: The <span style="color: #a2c617;">**Gedag**</span>
 - @return: We do not need want to interfere in union affairs.
 
 @ideals
-title: The purpose of our media is to elect more Catholics.
-subtitle: Our newspapers will focus on the electoral campaign.
-on-arrival: campaign_media += 1; catholics_z += 2*(1-dissent)
+subtitle: This will prevent infighting and mollify dissenting factions.
+on-arrival: dgb_unity += 1; labor_dissent -= 2; left_dissent -= 2
 
 Our campaign media is mostly reaching the Catholics who already vote for us, but it must be doing *something*, or at least that is what we hope.
 
 @fundraise
-title: The purpose of our media is to elect more Catholics.
-subtitle: Our newspapers will focus on the electoral campaign.
-on-arrival: campaign_media += 1; catholics_z += 2*(1-dissent)
+subtitle: We will hold union rallies to fundraise for the <span style="color: #000000;">**Center Party**</span>.
+choose-if: unemployed > 30
+unavailable-subtitle: In such times of economic despair, we cannot shift the burden of party finances on union members.
+on-arrival: resources += 1
 
 Our campaign media is mostly reaching the Catholics who already vote for us, but it must be doing *something*, or at least that is what we hope.
 
 @labor_opposition
-title: The purpose of our media is to elect more Catholics.
-subtitle: Our newspapers will focus on the electoral campaign.
-on-arrival: campaign_media += 1; catholics_z += 2*(1-dissent)
+subtitle: Bruning needs the confidence of the <span style="color: #000000;">**DGB**</span> to conduct his economic policies.
+view-if: rubicon = 1
+choose-if: chancellor = "Bruning"; 
+unavailable-subtitle: Bruning has been toppled.
+on-arrival: labor_opposition -= 10
 
-Our campaign media is mostly reaching the Catholics who already vote for us, but it must be doing *something*, or at least that is what we hope.
+Our speakers rally the <span style="color: #000000;">**DGB**</span> in favor of the Bruning Cabinet as the only way for Germany to be saved. Bruning's support from organised labor is strengthened and his position gives him more room for maneuvering now.
 
 @gcg
-subtitle: Manage the internal affairs of the GcG
+subtitle: Manage the internal affairs of the <span style="color: #000000;">**GcG**</span> 
 go-to: gcg_affairs
 
 
 
 @gedag
-subtitle: Manage the internal affairs of the Gedag
+subtitle: Manage the internal affairs of the <span style="color: #a2c617;">**Gedag**</span>
 go-to: gedag_affairs
 
 
