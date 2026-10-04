@@ -926,9 +926,13 @@ this.state.disableSaves = true;
 !}
 go-to: 1928_main
 
+@1928_easy
+new-page: true
+go-to: main.main_easy 
+
 @1928_main
 new-page: true
-go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
+go-to: main.main
 
 = 1928
 
