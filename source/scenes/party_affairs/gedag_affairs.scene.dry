@@ -20,7 +20,7 @@ flavortext
 - @fund_nazi: Fund the left wing of the <span style="color: #7A3C00;">**Nazis**</span>
 - @easy_discard
 
-@yellow_unions
+@yellow_union
 subtitle: Closely affliated with employers, the yellow unions have jostled with the <span style="color: #000000;">**DGB**</span> over influence in the parties of the bourgeois right. This has allowed industrialists in the <span style="color: #C0A054;">**DVP**</span> and <span style="color: #3E88B3;">**DNVP**</span> a disproportionate say in party affairs, hampering the passage of pro labor legislation in the Reichstag.
 choose-if: year < 1930
 unavailable-subtitle: The yellow unions have collapsed under the weight of their own incompetence.
