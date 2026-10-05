@@ -3,6 +3,7 @@ new-page: true
 max-visits: 36
 is-card: true
 card-image: img/CenterCampaign.jpg
+view-if: spd_relation > 200
 frequency: 0
 tags: party_affairs
 
