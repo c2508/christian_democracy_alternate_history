@@ -9,7 +9,7 @@ go-to: main_rally; sa_disrupt if sa_strength > 180 and not sa_banned and not ret
 
 @sa_disrupt
 
-The Nazi SA has disrupted our rally! Their street troops are preventing us from meeting.
+The <span style="color: #7A3C00;">Nazis</span> <span style="color: #7A3C00;">**SA**</span> has disrupted our rally! Their street troops are preventing us from meeting.
 
 - @police_protect: Call the police to protect our rally.
 - @rb_protect: Use the <span style="color: #c00000;">**Reichsbanner**</span> to protect our rally.
@@ -38,12 +38,12 @@ go-to: rb_protect_win if rb_success >= 0; rb_protect_lose if rb_success < 0
 @rb_protect_win
 go-to: main_rally
 
-The <span style="color: #c00000;">**Reichsbanner**</span> has successfully protected our rally against the <span style="color: #7A3C00;">**SA**</span>! Our meeting can go ahead as usual.
+The <span style="color: #c00000;">**Reichsbanner**</span> has successfully protected our rally against the <span style="color: #7A3C00;">**SA**</span> Our meeting can go ahead as usual.
 
 @rb_protect_lose
 on-arrival: workers_nsdap += 3; rb_strength -= 50
 
-Unfortunately, the <span style="color: #c00000;">**Reichsbanner**</span> was not able to hold back the <span style="color: #7A3C00;">**SA**</span> mob. The <span style="color: #7A3C00;">Nazis/span> have won this show of strength.
+Unfortunately, the <span style="color: #c00000;">**Reichsbanner**</span> was not able to hold back the <span style="color: #7A3C00;">**SA**</span> mob. The <span style="color: #7A3C00;">Nazis</span> have won this show of strength.
 
 @both_protect
 view-if: spd_prussia
