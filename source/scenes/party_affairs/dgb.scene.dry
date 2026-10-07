@@ -14,7 +14,7 @@ The German Trade Union Confederation (<span style="color: #000000;">**Z**</span>
 Due to our continued association since 1919, we have made extensive contacts within the Christian Trade Union Movement. With our control of the <span style="color: #000000;">**DGB**</span> chairmanship, we are able to influence and steer its policies.
 
 Chairman: [? if dgb_leader = "Stegerwald" : Adam Stegerwald ?][? if dgb_leader = "Imbusch" : Heinrich Imbusch ?]
-card-image: img/CenterCampaign.jpg
+
 <span style="color: #000000;">**DGB**</span>  cohesion: [? if dgb_unity = 1: <span style="color: #66BB6A;">fragmented/span> ?][? if dgb_unity = 2: <span style="color: #81C784;">disunited</span> ?][? if dgb_unity = 3: <span style="color: #FFD54F;">divided</span> ?][? if dgb_unity = 4: <span style="color: #FFB74D;">stable</span> ?][? if dgb_unity = 5: <span style="color: #d42f2f;">united</span> ?]
 
 - @ideals: Unify the <span style="color: #000000;">**DGB**</span> behind its shared goals
