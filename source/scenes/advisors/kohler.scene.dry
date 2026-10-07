@@ -17,7 +17,7 @@ Minister-President of Baden on two separate occasions, Kohler was also Finance M
 @finance_ministry_
 title: Fiscal Policy
 subtitle: As Finance Minister, Kohler can enact tax policies.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if z_in_government = 0 : The Center Party is not in government: ?] [? if finance_minister_party != "Z" : The Center Party does not control the finance ministry. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if z_in_government = 0 : The <span style="color: #000000;">**Center Party**</span> is not in government: ?] [? if finance_minister_party != "Z" : The Center Party does not control the finance ministry. ?]
 choose-if: advisor_action_timer == 0 and z_in_government == 1 and finance_minister_party == "Z"
 on-arrival: advisor_action_timer = 6; fiscal_policy_timer -= 6; last_advisor_action = 1
 go-to: fiscal_policy
@@ -30,7 +30,7 @@ choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 on-arrival: advisor_action_timer = 6; emergency_used += 1; resources += 6; workers_z -= 2 if emergency_used > 1; labor_dissent += 3 if emergency_used > 1; unemployed_z -= 1 if emergency_used > 1; rural_z -= 1 if emergency_used > 2; unemployed_z -= 1 if emergency_used > 2; labor_dissent += 5 if emergency_used > 2; 
 
-[? if emergency_used <= 1: Kohler has leveraged his position to pull in donations and arrange quick loans. ?][? if emergency_used > 1 and emergency_used < 3: Discontent is brewing among the Center's rank and file due to our persistent attempts at begging for money. ?][? if emergency_used > 2: We’re really scraping the barrel now—committed members are pressured into selling their valuables, while many others leave in frustration. ?]
+[? if emergency_used <= 1: Kohler has leveraged his position to pull in donations and arrange quick loans. ?][? if emergency_used > 1 and emergency_used < 3: Discontent is brewing among the <span style="color: #000000;">**Center's**</span>  rank and file due to our persistent attempts at begging for money. ?][? if emergency_used > 2: We’re really scraping the barrel now—committed members are pressured into selling their valuables, while many others leave in frustration. ?]
 
 We have gained 6 resources.
 
