@@ -7,7 +7,7 @@ new-page: true
 
 = Johannes Giesberts
 
-Giesberts is a prominent union spokesman who was the first workers' representative of the <span style="color: #000000;">**Center Party**</span>  in the Reichstag. 
+Giesberts is a prominent union spokesman who was the first workers' representative of the <span style="color: #000000;">**Center Party**</span> in the Reichstag. 
 
 - @democratic_rally
 - @organising
@@ -29,5 +29,5 @@ choose-if: advisor_action_timer <= 0
 unavailable subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 on-arrival: advisor_action_timer = 6; workers_z += 6*(1-dissent); left_labor_strength += 3
 
-Giesberts has rallied workers to support the <span style="color: #000000;">Center Party</span>.
+Giesberts has rallied workers to support the <span style="color: #000000;">**Center Party**</span>.
 
