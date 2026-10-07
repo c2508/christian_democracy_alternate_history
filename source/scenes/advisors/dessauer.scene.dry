@@ -21,7 +21,7 @@ choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 on-arrival: advisor_action_timer = 6; spd_relation += 5*(1-dissent); ddp_relation += 5*(1-dissent)
 
-We’ve been able to strengthen our relations with the involved parties through the participation of figures like Heuss and Mierendorff, members of the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> and <span style="color: #c00000;">**SPD**</span> respectively.
+We’ve been able to strengthen our relations with the involved parties through the participation of figures like Theodor Heuss and Carlo Mierendorff, members of the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> and <span style="color: #c00000;">**SPD**</span> respectively.
 
 @media_enemies
 title: Editorial Line
