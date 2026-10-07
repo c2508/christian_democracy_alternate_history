@@ -20,7 +20,7 @@ Stegerwald is a prominent trade unionist and the main proponent for forming an i
 title: Labor Rights
 subtitle: As Labor Minister, Stegerwald can help set regulations for working conditions.
 choose-if: advisor_action_timer <= 0 and z_in_government and labor_minister_party = "Z"
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if labor_minister_party != "Center" : The Center Party does not control the Labor Ministry. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if labor_minister_party != "Z" : The <span style="color: #000000;">**Center Party**</span> does not control the Labor Ministry. ?]
 on-arrival: advisor_action_timer = 6; labor_rights_timer -= 10; last_advisor_action = 1
 go-to: labor_rights
 
@@ -28,7 +28,7 @@ go-to: labor_rights
 title: The Prussian Bulwark
 subtitle: As the Minister-President of Prussia, Stegerwald has power over the Prussian bureaucracy and security services.
 choose-if: advisor_action_timer <= 0 and z_prussia = 1
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if z_prussia == 0 : The Center Party does not control Prussia. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if z_prussia == 0 : The <span style="color: #000000;">**Center Party**</span> does not control Prussia. ?]
 on-arrival: advisor_action_timer = 6; prussian_affairs_timer -= 6; last_advisor_action = 1
 go-to: prussian_affairs
 
