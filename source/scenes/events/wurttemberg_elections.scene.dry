@@ -405,8 +405,6 @@ on-arrival: in_weimar_coalition_wurttemberg = 1; z_wurttemberg = 1;
 
 There are enough votes for a majority <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition of the <span style="color: #E3000F;">**SPD**</span>, <span style="color: #000000;">**Center**</span> and [? if not lvp_formed and not nfvp_formed: <span style="color: #DCCA4A;">**[+ ddp_name +]**</span>?][? if lvp_formed or nfvp_formed: <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span>?].
 
-- @wurttemberg_sp
-
 @grand_coalition_wurttemberg
 title: We can form a Grand Coalition.
 view-if: grand_coalition_wurttemberg >= 50 and not (lvp_formed)
@@ -416,8 +414,6 @@ subtitle: <span style="color: #E3000F;">**SPD**</span> + <span style="color: #00
 on-arrival: in_grand_coalition_wurttemberg = 1; z_wurttemberg = 1;
 
 We will form a Grand Coalition.
-
-- @wurttemberg_sp
 
 @bourgeois_coalition_wurttemberg
 title: We can form a Bourgeois Coalition.
@@ -443,8 +439,6 @@ on-arrival: in_bourgeois_coalition_wurttemberg = 1; z_wurttemberg = 1; rural_z -
 
 A Bourgeois Coalition is formed.
 
-- @wurttemberg_sp
-
 @no
 title: Back to the drawing board it is
 go-to: coalition_menu
@@ -460,8 +454,6 @@ on-arrival: in_right_coalition_wurttemberg = 1; z_wurttemberg = 1;
 
 A <span style="color: #3E88B3;">**Bürgerblock**</span> Coalition is formed.
 
-- @wurttemberg_sp
-
 @christian_coalition_toleration_wurttemberg
 title: We can form a Christian Coalition.
 view-if: christian_coalition_toleration_wurttemberg >= 50 and christian_coalition_wurttemberg < 50
@@ -469,8 +461,6 @@ subtitle: <span style="color: #000000;">**Z**</span> + <span style="color: #3E88
 on-arrival: in_christian_coalition_toleration_wurttemberg = 1; z_wurttemberg = 1;
 
 With the Wurttemberg Chapter's dislike of the <span style="color: #c00000;">**SPD**</span>, a <span style="color: #3E88B3;">**Bürgerblock**</span> would have been the obvious choice. However, with the animosity of the liberals towards the <span style="color: #3E88B3;">**DNVP's**</span> William Bazille, it appears that such a coalition is unlikely, especially due to Bazille's <span style="color: #385A38;">agrarian</span> bias during his tenure as Minister of Education. As such, a Christian Coalition will be formed, with the <span style="color: #C0A054;">**DVP**</span> and <span style="color: #909090;">**minor parties**</span> willing to at least abstain on motions of no confidence. 
-
-- @wurttemberg_sp
 
 @christian_coalition_wurttemberg
 title: We can form a Christian Coalition.
@@ -480,8 +470,6 @@ on-arrival: in_christian_coalition_wurttemberg = 1; z_wurttemberg = 1;
 
 A Christian Coalition is formed.
 
-- @wurttemberg_sp
-
 @far_right_coalition_wurttemberg
 title: Far-right Coalition is formed!
 view-if: far_right_coalition_wurttemberg >= 50
@@ -489,8 +477,6 @@ subtitle: <span style="color: #954B00;">**NSDAP**</span> + [? if dnvp_ideology =
 on-arrival: in_far_right_coalition_wurttemberg = 1;
 
 A Far-right Coalition is formed.
-
-- @wurttemberg_sp
 
 @z_majority_wurttemberg
 title: We can rule alone!
