@@ -7,7 +7,7 @@ new-page: true
 
 = Joseph Hess
 
-Hess has been instrumental in maintaining the Weimar Coalition in Prussia and possesses a good working relationship with the <span style="color: #c00000;">**SPD**</span>.
+Hess has been instrumental in maintaining the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition in Prussia and possesses a good working relationship with the <span style="color: #c00000;">**SPD**</span>.
 
 
 - @spd_cooperation
@@ -22,7 +22,7 @@ unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +
 choose-if: advisor_action_timer = 0
 on-arrival: advisor_action_timer = 6; left_strength += 4; spd_relation += 5*(1-dissent); right_dissent += 3
 
-Hess works towards closer ties with the <span style="color: #c00000;">**SPD**</span> through his connections.
+Hess works towards closer ties with the <span style="color: #c00000;">**SPD**</span> through his connections in Prussia.
 
 @party_discipline
 title: Party Discipline
