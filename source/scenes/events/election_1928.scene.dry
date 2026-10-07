@@ -625,7 +625,7 @@ Who should be the chancellor?
 
 @right_coalition
 title: We can form a <span style="color: #3E88B3;">Bürgerblock</span> coalition.
-subtitle: <span style="color: #000000;">**Z**</span> + <span style="color: #69A2BE;">**BVP**</span> + <span style="color: #C0A054;">**DVP**</span> + <span style="color: #3E88B3;">**DNVP**</span> + Others ([+ right_coalition +]%)
+subtitle: <span style="color: #000000;">**Z**</span> + <span style="color: #69A2BE;">**BVP**</span> + <span style="color: #C0A054;">**DVP**</span> + <span style="color: #3E88B3;">**DNVP**</span> + <span style="color: #808080;">**Others**</span> ([+ right_coalition +]%)
 view-if: right_coalition >= 50 and rubicon_crossed = 0
 on arrival: in_right_coalition = 1
 
@@ -760,7 +760,7 @@ We have assembled a new coalition under Otto Braun.
 
 @unity_government
 title: The Center Party offers a "Government of National Unity" under Chancellor Joseph Wirth.
-subtitle: <span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> + <span style="color: #69A2BE;">**BVP**</span> + <span style="color: #D3C24D;">**[+ ddp_name +]**</span> + <span style="color: #C0A054;">**DVP**</span> + Others ([+ neo_weimar_coalition +]%)
+subtitle: <span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> + <span style="color: #69A2BE;">**BVP**</span> + <span style="color: #D3C24D;">**[+ ddp_name +]**</span> + <span style="color: #C0A054;">**DVP**</span> + <span style="color: #909090;">**Others**</span> ([+ neo_weimar_coalition +]%)
 view-if: z_party_leader == "Joos" and neo_weimar_coalition >= 50 and weimar_coalition < 50 and z_relation >= 10 
 
 Our leader, Joseph Joos, sees the threat from the ascension of the anti-democratic extremist parties, and thus tries to negotiate a "Government of National Unity" to save the republic. This coalition would be led by Joseph Wirth, a left-leaning member of the Center Party and former chancellor, and would encompass all of the constitutional parties. Our role in this government might be limited, however.
@@ -1219,7 +1219,7 @@ As expected, the <span style="color: #C0A054;">**DVP**</span> is too set in thei
 @grand_coalition_spd_lead
 on-arrival: leverage -= 1 if nsdap_relation > 100 
 
-As expected, the <span style="color: #c00000;">**SPD**</span> is the largest party, and this time, they are expected to take the lead role in the formation of the next government, including selecting the chancellor. President [+ president +] has asked them to form a majority coalition with the Center (Z), <span style="color: #69A2BE;">Bavarian People's</span> (<span style="color: #69A2BE;">**BVP**</span>), Democratic ([+ ddp_name +]), and People's (<span style="color: #C0A054;">**DVP**</span>) parties.
+As expected, the <span style="color: #c00000;">**SPD**</span> is the largest party, and this time, they are expected to take the lead role in the formation of the next government, including selecting the chancellor. President [+ president +] has asked them to form a majority coalition with the Center (Z), <span style="color: #69A2BE;">Bavarian People's</span> (<span style="color: #69A2BE;">**BVP**</span>), <span style="color: #D3C24D;">**Democratic**</span> (<span style="color: #D3C24D;">**[+ ddp_name +]**</span>), and <span style="color: #C0A054;">**People's**</span> (<span style="color: #C0A054;">**DVP**</span>) parties.
 
 Who should be the chancellor?
 
