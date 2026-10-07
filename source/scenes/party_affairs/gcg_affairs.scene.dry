@@ -17,13 +17,13 @@ flavortext
 
 - @imbusch: Support Imbusch’s policies of confrontation
 - @union_coop: Forge closer ties with the <span style="color: #c00000;">**ADGB**</span> and <span style="color: #D3C24D;">**HDU**</span>
-- @newspaper: Fund the Westdeutschen Arbeiterzeitung
+- @newspaper: Fund the Westdeutschen Arbeiterzeitung, a prominent Catholic workers newspaper
 - @root: We either don't want to do anything right now
 - @easy_discard
 
 @imbusch
 subtitle: Imbusch supports a more miltant trade unionism compared to Stegerwald's concillation, similar to the <span style="color: #c00000;">**ADGB**</span>.
-view-if: rubicon = 1
+view-if: rubicon_crossed = 1
 on-arrival: workers_z += 1*(1-dissent); workers_z -= 1/3 if unemployed >= 15; workers_z -= 1/3 if unemployed >= 25; workers_z += 2*(1-dissent) if peoples_party == 1; resources -= 3
 
 This has galvanised our union members amidst growing unemployment and poverty, stabilising our membership for now. However, the industrialist and middle class elements of the party are wary of this shift towards the left.
@@ -38,6 +38,6 @@ In meetings with other union representatives, we are able to engage in dialogue 
 subtitle: -3 resources
 choose-if: resources >= 3
 unavailable-subtitle: Not enough resources.
-on-arrival: workers_z += 1*(1-dissent); workers_z -= 1/3 if unemployed >= 15; workers_z -= 1/3 if unemployed >= 25; workers_z += 2*(1-dissent) if peoples_party == 1; resources -= 3
+on-arrival: workers_z += 2*(1-dissent); workers_z -= 1/3 if unemployed >= 15; workers_z -= 1/3 if unemployed >= 25; workers_z += 2*(1-dissent) if peoples_party == 1; resources -= 3
 
-as
+Our increased funding for the newspaper allows it to reach a broader group of workers and expand the reach of the <span style="color: #000000;">**Center Party**</span>.
