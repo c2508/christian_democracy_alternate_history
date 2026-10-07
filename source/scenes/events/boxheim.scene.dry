@@ -30,23 +30,6 @@ The <span style="color: #c00000;">**SPD's**</span> <span style="color: #c00000;"
 - @pressure_drop: We await the decision of the courts.
 - @pressure: We await the decision of the courts.
 
-@pressure_drop
-view-if: judicial_reform >= 4
-on-arrival: workers_nsdap -= 6; new_middle_nsdap -= 10; old_middle_nsdap -= 10; rural_nsdap -= 4; catholics_nsdap -= 3; workers_z += 2; catholics_z += 3; pro_republic += 8; sa_militancy -= 0.1; 
-
-Due to our thorough reform of the judicial system, the <span style="color: #7A3C00;">Nazis</span> behind these documents can now be publicly exposed and prosecuted by the state for high treason. This has dealt a severe blow to the constitutional appearance of the <span style="color: #7A3C00;">**NSDAP**</span>, causing great distrust between them and the establishment parties, including President <span style="color: #808080;">Hindenburg</span> himself.
-
-However, this has led to the collapse of our talks with the <span style="color: #7A3C00;">**NSDAP**</span> about their possible entry into the Hessian state government. As such, the current <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> coalition shall remain in office as a caretaker government for the foreseeable future.    
-
-@pressure
-view-if: judicial_reform < 4
-on-arrival: workers_nsdap -= 2; new_middle_nsdap -= 6; old_middle_nsdap -= 6; rural_nsdap -= 2; pro_republic += 5; sa_militancy -= 0.05; catholics_z += 2; 
-
-Expectedly, the Ministry of Justice believes that the documents did not constitute a crime of high treason, as they argue that the document was directed against <span style="color: #700000;">communist</span> putschists, rather than the government.
-
-This at least discredited the <span style="color: #7A3C00;">Nazis</span> in the eyes of many who now question their committment to Hitler's legality tactics. With strong outrage from our left wing, this has led to the collapse of our talks with the <span style="color: #7A3C00;">**NSDAP**</span> about their possible entry into the Hessian state government. As such, the current <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> coalition shall remain in office as a caretaker government for the foreseeable future.    
-
-
 @nothing
 title: Do nothing with the information.
 on-arrival: left_dissent += 5; nsdap_relation -= 5;
