@@ -440,7 +440,7 @@ A <span style="color: #7A3C00;">Far</span>-<span style="color: #3E88B3;">right</
 title: Can the <span style="color: #7A3C00;">**NSDAP**</span> enter a government with us?
 view-if: black_brown_coalition_hesse >= 50
 choose-if: left_strength <= 25 and nsdap_relations >= 35
-unavailable-subtitle: [? if left_dissent > 25: Our left wing is able to dissuade us from this course of action. ?][? if nsdap_relation < 35: Why would we do this? ?]
+unavailable-subtitle: [? if left_strength > 25: Our left wing is able to dissuade us from this course of action. ?][? if nsdap_relation < 35: Why would we do this? ?]
 
 Exploratory talks have begun for a possible coalition government with the <span style="color: #7A3C00;">**NSDAP**</span> and other conservative parties. 
 
