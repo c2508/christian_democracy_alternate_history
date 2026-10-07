@@ -367,7 +367,7 @@ Bourgeois Coalition (<span style="color: #000000;">**Z**</span> [? if ddp_exist:
 
 Christian Coalition (<span style="color: #000000;">**Z**</span> + <span style="color: #3E88B3;">**DNVP**</span> + <span style="color: #909090;">**Others**</span>): [+ christian_coalition_hesse +]%
 
-<span style="color: #000000;">*Black</span>-<span style="color: #7A3C00;">Brown</span>Coalition (<span style="color: #000000;">**Z**</span> + <span style="color: #C0A054;">**DVP**</span> + <span style="color: #3F7BC1;">**DNVP**</span> + <span style="color: #909090;">**Others**</span>): [+ black_brown_coalition_hesse +]%
+<span style="color: #000000;">Black</span>-<span style="color: #7A3C00;">Brown</span> Coalition (<span style="color: #000000;">**Z**</span> + <span style="color: #C0A054;">**DVP**</span> + <span style="color: #3F7BC1;">**DNVP**</span> + <span style="color: #909090;">**Others**</span>): [+ black_brown_coalition_hesse +]%
 
 <span style="color: #7A3C00;">Far</span>-<span style="color: #3E88B3;">right</span> Coalition (<span style="color: #954B00;">**NSDAP**</span> + [? if dnvp_ideology = "Radical": <span style="color: #3F7BC1;">**DNVP**</span>?][? if dnf_formed: <span style="color: #003755;">**DNF**</span>?]): [+ far_right_coalition_hesse +]%
 
