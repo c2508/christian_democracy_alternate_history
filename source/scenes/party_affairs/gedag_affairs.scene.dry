@@ -32,14 +32,15 @@ how to slime them?
 @nazi_purge
 subtitle: In light of the ongoing economic crisis, the <span style="color: #7A3C00;">**Nazis**</span> have been making huge inroads amidst our union members. 
 choose-if: unemployment > 7
-unavailable-subtitle: who?
+unavailable-subtitle: The <span style="color: #7A3C00;">**NSDAP**</span> is not a potent force right now. 
 on-arrival: workers_z += 1*(1-dissent); workers_z -= 1/3 if unemployed >= 15; workers_z -= 1/3 if unemployed >= 25; workers_z += 2*(1-dissent) if peoples_party == 1; resources -= 3
 
 Quietly, those with suspected <span style="color: #7A3C00;">**National Socialist**</span> sympathies in leadership positions are expelled or forced to step down. At the lower levels, the dissemination of <span style="color: #7A3C00;">**Nazi**</span> propaganda has been strongly discouraged. Bechly's control of the span style="color: #a2c617;">**DHV**</span> remains, for now.
 
 @csvd_rally
-subtitle: With their recent founding, the <span style="color: #8ED8E4;">**CSVD**</span> needs our aid to wrest the votes of nationalist workers from the <span style="color: #3E88B3;">**DNVP**</span>.
+subtitle: With their recent founding, the <span style="color: #8ED8E4;">**CSVD**</span> needs our help to wrest the votes of nationalist workers from the <span style="color: #3E88B3;">**DNVP**</span>.
 choose-if: csvd_formed = 1
+unavailable-subtitle: The <span style="color: #8ED8E4;">**CSVD**</span> does not exist. 
 on-arrival: workers_z += 1*(1-dissent); workers_z -= 1/3 if unemployed >= 15; workers_z -= 1/3 if unemployed >= 25; workers_z += 2*(1-dissent) if peoples_party == 1; resources -= 3
 
 Together with unionists like Hulser and Behrens, we rail against the plutocracy and bankruptcy of Hugenberg's <span style="color: #3E88B3;">**DNVP**</span>. Organised in <span style="color: #3E88B3;">**DNVP**</span> strongholds like Pomerania and East Prussia, we aim to capitalise on regional discontent with Hugenberg's policies and establish our footing there.
