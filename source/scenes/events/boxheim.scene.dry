@@ -10,25 +10,77 @@ tags: event
 
 The recent state elections in Hesse has seen a massive surge in <span style="color: #7A3C00;">**NSDAP**</span> votes. [? if z_ideology == "Right": while the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] and <span style="color: #7A3C00;">**NSDAP**</span> attempt to negotiate a coalition agreement.?] This has allowed us to retain control of the Interior Ministry and granted our Wilhelm Leuschner, the authority to order house searches of <span style="color: #7A3C00;">Nazis</span> following a tip from a disgraced <span style="color: #7A3C00;">**NSDAP**</span> Landtag member.
 
-During these searches, a copy of a letter sent by <span style="color: #7A3C00;">**NSDAP**</span> member Werner Best to the party leadership in Munich is discovered. The letter reveals their plan to violently seize power and includes guidelines for emergency decrees. Among these plans is a provision making access to food contingent on compulsory labor service, from which <span style="color: #005EB8;">Jews</span> would be exempt, implying they would receive no food at all.
+During these searches, a copy of a letter sent by <span style="color: #7A3C00;">**NSDAP**</span> member Werner Best to the party leadership in Munich was discovered. The letter reveals their plan to violently seize power and includes guidelines for emergency decrees. Among these plans is a provision making access to food contingent on compulsory labor service, from which <span style="color: #005EB8;">Jews</span> would be exempt, implying they would receive no food at all.
 
-In an attempt to protect themselves from the severe damage this revelation causes to [? if not hitler_deported: Hitler's?][? if hitler_deported: their?] oath of legality, the <span style="color: #7A3C00;">**NSDAP**</span> has defended the letter, claiming it was intended solely for a potential <span style="color: #700000;">communist</span> seizure of power. It is now up to the judiciary to determine the consequences of this anti-constitutional plan.
+What should we do with this information?
+
+- @publicize
+- @nothing
+- @secret
+
+@publicize
+title: We will publicize the scandal to discredit the <span style="color: #7A3C00;">**NSDAP**</span>.
+on-arrival: nsdap_relation -= 15; left_strength += 5; 
+
+In the democratic public and among the <span style="color: #700000;">Communists</span>, the disclosure of these documents have provoked a storm of indignation. From the <span style="color: #700000;">**KPD**</span> newspapers to the party press of the <span style="color: #69A2BE;">**BVP**</span>, there are demands for the author be brought before the Reich Court for high treason, since he has barely concealed the overthrow of the existing state order.
+The <span style="color: #c00000;">**SPD's**</span> <span style="color: #c00000;">Vorwärts</span> has commented
+
+> *"For these people, governing means having others shot. Her imagination is filled with execution scenes, for her lust for power is synonymous with lust for murder."*
 
 - @pressure_drop: We await the decision of the courts.
 - @nothing: We await the decision of the courts.
 
 @pressure_drop
 view-if: judicial_reform >= 4
-on-arrival: left_dissent -= 15; left_strength += 8; workers_nsdap -= 6; new_middle_nsdap -= 10; old_middle_nsdap -= 10; rural_nsdap -= 4; catholics_nsdap -= 3; workers_z += 2; catholics_z += 3; pro_republic += 10; sa_militancy -= 0.1; 
+on-arrival: workers_nsdap -= 6; new_middle_nsdap -= 10; old_middle_nsdap -= 10; rural_nsdap -= 4; catholics_nsdap -= 3; workers_z += 2; catholics_z += 3; pro_republic += 8; sa_militancy -= 0.1; 
 
-Due to our thorough reform of the judicial system, the <span style="color: #7A3C00;">Nazis</span> behind these documents can now be publicly exposed and prosecuted by the state for high treason. This has dealt a severe blow to the constitutional appearance of the <span style="color: #7A3C00;">**NSDAP**</span>, causing great distrust between them and the bourgeois establishment, including President Hindenburg himself.
+Due to our thorough reform of the judicial system, the <span style="color: #7A3C00;">Nazis</span> behind these documents can now be publicly exposed and prosecuted by the state for high treason. This has dealt a severe blow to the constitutional appearance of the <span style="color: #7A3C00;">**NSDAP**</span>, causing great distrust between them and the establishment parties, including President <span style="color: #808080;">Hindenburg</span> himself.
 
-Our Hesse government is set to continue in a caretaker capacity for the foreseeable future, following the collapse of talks between the <span style="color: #7A3C00;">**NSDAP**</span> and [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?].
+However, this has led to the collapse of our talks with the <span style="color: #7A3C00;">**NSDAP**</span> about their possible entry into the Hessian state government. As such, the current <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> coalition shall remain in office as a caretaker government for the foreseeable future.    
 
 @nothing
 view-if: judicial_reform < 4
-on-arrival: left_dissent -= 10; left_strength += 5; workers_nsdap -= 2; new_middle_nsdap -= 6; old_middle_nsdap -= 6; rural_nsdap -= 2; pro_republic += 5; sa_militancy -= 0.05; catholics_z += 2;
+on-arrival: workers_nsdap -= 2; new_middle_nsdap -= 6; old_middle_nsdap -= 6; rural_nsdap -= 2; pro_republic += 5; sa_militancy -= 0.05; catholics_z += 2; 
 
-Expectedly, the Ministry of Justice believes that the documents did not constitute a crime of high treason, as they argue that the document was directed against <span style="color: #700000;">communist</span> putschists, rather than the government. [? if bruning_time: We are sure that Chancellor Brüning is behind this downplaying, to keep cooperation with the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> open. ?]
+Expectedly, the Ministry of Justice believes that the documents did not constitute a crime of high treason, as they argue that the document was directed against <span style="color: #700000;">communist</span> putschists, rather than the government.
 
-We have at least discredited the <span style="color: #7A3C00;">Nazis</span> in the eyes of many, and have managed to keep our Hesse government functioning in a caretaker capacity due to the collapse of talks between the <span style="color: #7A3C00;">**NSDAP**</span> and [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?].
+This at least discredited the <span style="color: #7A3C00;">Nazis</span> in the eyes of many who now question their committment to Hitler's legality tactics. With strong outrage from our left wing, this has led to the collapse of our talks with the <span style="color: #7A3C00;">**NSDAP**</span> about their possible entry into the Hessian state government. As such, the current <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> coalition shall remain in office as a caretaker government for the foreseeable future.    
+
+
+@nothing
+title: Do nothing with the information.
+on-arrival: left_dissent += 5; nsdap_relation -= 5;
+
+After further investigation, the Hessian <span style="color: #c00000;">**SPD's**</span> interior minister Wilhelm Leuschner has passed the information along to the press.
+In the democratic public and among the <span style="color: #700000;">Communists</span>, the disclosure of these documents have provoked a storm of indignation. From the <span style="color: #700000;">**KPD**</span> newspapers to the party press of the <span style="color: #69A2BE;">**BVP**</span>, there are demands for the author be brought before the Reich Court for high treason, since he has barely concealed the overthrow of the existing state order.
+The <span style="color: #c00000;">**SPD's**</span> <span style="color: #c00000;">Vorwärts</span> has commented
+
+> *"For these people, governing means having others shot. Her imagination is filled with execution scenes, for her lust for power is synonymous with lust for murder."*
+
+- @pressure_drop: We await the decision of the courts.
+- @nothing: We await the decision of the courts.
+
+@pressure_drop
+view-if: judicial_reform >= 4
+on-arrival: workers_nsdap -= 6; new_middle_nsdap -= 10; old_middle_nsdap -= 10; rural_nsdap -= 4; catholics_nsdap -= 3; workers_z += 2; catholics_z += 3; pro_republic += 8; sa_militancy -= 0.1; 
+
+Due to our thorough reform of the judicial system, the <span style="color: #7A3C00;">Nazis</span> behind these documents can now be publicly exposed and prosecuted by the state for high treason. This has dealt a severe blow to the constitutional appearance of the <span style="color: #7A3C00;">**NSDAP**</span>, causing great distrust between them and the establishment parties, including President <span style="color: #808080;">Hindenburg</span> himself.
+
+However, this has led to the collapse of our talks with the <span style="color: #7A3C00;">**NSDAP**</span> about their possible entry into the Hessian state government. As such, the current <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> coalition shall remain in office as a caretaker government for the foreseeable future.    
+
+@nothing
+view-if: judicial_reform < 4
+on-arrival: workers_nsdap -= 2; new_middle_nsdap -= 6; old_middle_nsdap -= 6; rural_nsdap -= 2; pro_republic += 5; sa_militancy -= 0.05; catholics_z += 2; 
+
+Expectedly, the Ministry of Justice believes that the documents did not constitute a crime of high treason, as they argue that the document was directed against <span style="color: #700000;">communist</span> putschists, rather than the government.
+
+This at least discredited the <span style="color: #7A3C00;">Nazis</span> in the eyes of many who now question their committment to Hitler's legality tactics. With strong outrage from our left wing, this has led to the collapse of our talks with the <span style="color: #7A3C00;">**NSDAP**</span> about their possible entry into the 
+
+@secret
+title: It is best to keep this information secret. Prevent the <span style="color: #c00000;">**SPD**</span> from spreading this to disrupt coalition talks with the <span style="color: #7A3C00;">**NSDAP**</span>.
+choose-if: left_strength <= 15; spd_relation >= 60
+unavailable-subtitle: There is too much pressure to release the documents 
+on-arrival: left_dissent += 10; left_strength -= 5; 
+
+Some among our leadership consider it unsavory to engage in cloak-and-dagger scheming. However, keeping this secret might be necessary to maintain good relations with the <span style="color: #7A3C00;">**NSDAP**</span> and to ensure the continuation of the coalition talks. Our marginalized left wing strongly objects to our "Taming Strategy" of the <span style="color: #7A3C00;">**NSDAP**</span> but their protests are futile. 
+
