@@ -367,7 +367,9 @@ Bourgeois Coalition (<span style="color: #000000;">**Z**</span> [? if ddp_exist:
 
 Christian Coalition (<span style="color: #000000;">**Z**</span> + <span style="color: #3E88B3;">**DNVP**</span> + <span style="color: #909090;">**Others**</span>): [+ christian_coalition_hesse +]%
 
-Far-Right Coalition (<span style="color: #954B00;">**NSDAP**</span> + [? if dnvp_ideology = "Radical": <span style="color: #3F7BC1;">**DNVP**</span>?][? if dnf_formed: <span style="color: #003755;">**DNF**</span>?]): [+ far_right_coalition_hesse +]%
+<span style="color: #000000;">*Black</span>-<span style="color: #7A3C00;">Brown</span>Coalition (<span style="color: #000000;">**Z**</span> + <span style="color: #C0A054;">**DVP**</span> + <span style="color: #3F7BC1;">**DNVP**</span> + <span style="color: #909090;">**Others**</span>): [+ black_brown_coalition_hesse +]%
+
+<span style="color: #7A3C00;">Far</span>-<span style="color: #3E88B3;">right</span> Coalition (<span style="color: #954B00;">**NSDAP**</span> + [? if dnvp_ideology = "Radical": <span style="color: #3F7BC1;">**DNVP**</span>?][? if dnf_formed: <span style="color: #003755;">**DNF**</span>?]): [+ far_right_coalition_hesse +]%
 
 [? if weimar_coalition <= 50 and grand_coalition <= 50 and right_coalition <= 50 : Due to the strong gains made by the <span style="color: #7A3C00;">**NSDAP**</span>, there are no coalitions that can be formed without <span style="color: #7A3C00;">Nazi</span> involvment. Some within the party have begun advocating for a <span style="color: #7A3C00;">**NSDAP**</span> entry into the Hessian government.  ?]
 
@@ -427,15 +429,15 @@ on-arrival: in_christian_coalition_hesse = 1; z_hesse = 1;
 A Christian Coalition is formed.
 
 @far_right_coalition_hesse
-title: A far-right Coalition is formed!
+title: A <span style="color: #7A3C00;">Far</span>-<span style="color: #3E88B3;">right</span> Coalition is formed!
 view-if: far_right_coalition_hesse >= 50
 subtitle: <span style="color: #954B00;">**NSDAP**</span> + [? if dnvp_ideology = "Radical": <span style="color: #3F7BC1;">**DNVP**</span>?][? if dnf_formed: <span style="color: #003755;">**DNF**</span>?] ([+ far_right_coalition_hesse +]%)
 on-arrival: in_far_right_coalition_hesse = 1;
 
-A Far-right Coalition is formed.
+A <span style="color: #7A3C00;">Far</span>-<span style="color: #3E88B3;">right</span> Coalition is formed.
 
 @black_brown_coalition_hesse
-title: Can the <span style="color: #7A3C00;">**NSDAP**</span> enter government with us?
+title: Can the <span style="color: #7A3C00;">**NSDAP**</span> enter a government with us?
 view-if: black_brown_coalition_hesse >= 50
 choose-if: left_strength <= 25 and nsdap_relations >= 35
 unavailable-subtitle: [? if left_dissent > 25: Our left wing is able to dissuade us from this course of action. ?][? if nsdap_relation < 35: Why would we do this? ?]
