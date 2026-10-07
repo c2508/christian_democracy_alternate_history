@@ -28,7 +28,7 @@ The <span style="color: #c00000;">**SPD's**</span> <span style="color: #c00000;"
 > *"For these people, governing means having others shot. Her imagination is filled with execution scenes, for her lust for power is synonymous with lust for murder."*
 
 - @pressure_drop: We await the decision of the courts.
-- @nothing: We await the decision of the courts.
+- @pressure: We await the decision of the courts.
 
 @pressure_drop
 view-if: judicial_reform >= 4
