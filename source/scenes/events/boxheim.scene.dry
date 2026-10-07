@@ -57,10 +57,10 @@ on-arrival: workers_nsdap -= 2; new_middle_nsdap -= 6; old_middle_nsdap -= 6; ru
 
 Expectedly, the Ministry of Justice believes that the documents did not constitute a crime of high treason, as they argue that the document was directed against <span style="color: #700000;">communist</span> putschists, rather than the government.
 
-This at least discredited the <span style="color: #7A3C00;">Nazis</span> in the eyes of many who now question their committment to Hitler's legality tactics. With strong outrage from our left wing, this has led to the collapse of our talks with the <span style="color: #7A3C00;">**NSDAP**</span> about their possible entry into the 
+This at least discredited the <span style="color: #7A3C00;">Nazis</span> in the eyes of many who now question their committment to Hitler's legality tactics. With strong outrage from our left wing, this has led to the collapse of our talks with the <span style="color: #7A3C00;">**NSDAP**</span> about their possible entry into the Hessian state government. As such, the current <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> coalition shall remain in office as a caretaker government for the foreseeable future.    
 
 @secret
-title: It is best to keep this information secret. Prevent the <span style="color: #c00000;">**SPD**</span> from spreading this to disrupt coalition talks with the <span style="color: #7A3C00;">**NSDAP**</span>.
+title: It is best to keep this information secret. Prevent the <span style="color: #c00000;">**SPD**</span> from spreading this so that coalition talks with the <span style="color: #7A3C00;">**NSDAP**</span> can continue.
 choose-if: left_strength <= 15 and spd_relation >= 60
 unavailable-subtitle: There is too much pressure to release the documents 
 on-arrival: left_dissent += 10; left_strength -= 5; 
