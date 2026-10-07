@@ -500,41 +500,6 @@ on-arrival: in_z_majority_wurttemberg = 1; z_wurttemberg = 1;
 
 A <span style="color: #000000;">**Z**</span> majority government is formed.
 
-- @wurttemberg_sp
-
-
-
-@wurttemberg_sp
-title: The coalition will choose the State President.
-
-
-- @bickes: Theodor Bickes
-- @bazille: Wilhelm Bazille
-- @bolz: Eugen Bolz
-
-@bickes
-view-if: in_grand_coalition_wurttemberg or in_bourgeois_coalition_wurttemberg
-on-arrival: wurttemberg_leader = "Bickes"; wurttemberg_leader_party = dvp_name
-face-image: img/portraits/BickesTheodor.jpg
-
-Theodor Bickes was chosen.
-
-@bazille
-view-if: in_right_coalition_wurttemberg or in_christian_coalition_toleration_wurttemberg or in_christian_coalition_wurttemberg
-on-arrival: wurttemberg_leader = "Bazille"; wurttemberg_leader_party = "DNVP"
-face-image: img/portraits/MaierReinhold.jpg
-
-Wilhelm Bazille was chosen.
-
-@bolz
-view-if: in_weimar_coalition_wurttemberg or in_grand_coalition_wurttemberg or in_bourgeois_coalition_wurttemberg or in_z_majority_wurttemberg 
-on-arrival: wurttemberg_leader = "Bolz"; wurttemberg_leader_party = "Z"
-face-image: img/portraits/BolzEugen.jpg
-
-Eugen Bolz was chosen.
-
-
-
 @no_majority
 title: There is no clear governing majority.
 view-if: weimar_coalition_wurttemberg < 50 and bourgeois_coalition_wurttemberg < 50 and grand_coalition_wurttemberg < 50 and far_right_coalition_wurttemberg < 50
