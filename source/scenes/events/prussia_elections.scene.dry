@@ -21,7 +21,6 @@ if (Q.in_social_catholic_coalition_prussia || Q.in_social_liberal_coalition_prus
 }
 !}
 set-jump: new_elections
-face-image: img/prussia.png
 
 = Elections, [+ month : month +] [+ year +]
 
