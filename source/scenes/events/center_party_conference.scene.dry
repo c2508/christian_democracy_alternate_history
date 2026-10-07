@@ -1,5 +1,5 @@
 title: <span style="color: #000000;">**Center Party**</span> Conference
-subtitle: The <span style="color: #000000;">Center Party</span> chooses their new leader...
+subtitle: The <span style="color: #000000;">**Center Party's**</span> chooses their new leader...
 view-if: year = 1928 and month = 12 and z_party_leader = "Marx"
 max-visits: 1
 priority: 1
@@ -24,7 +24,7 @@ subtitle: Stegerwald sits on the right of the labor faction and would rather wor
 on-arrival: z_party_leader = "Stegerwald"; spd_relation -= 5; dnvp_relation += 8; workers_z += 1*(1-dissent); new_middle_z -= 1; clergy_relation -= 1;
 choose-if: labor_dissent <= 15 and right_dissent <= 15 and labor_strength >= 35
 
-Adam Stegerwald has been elected as the chairman of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]. He seems to represent a rightward turn from Marx, despite his trade union background, and will preside over a [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] less inclined to compromise with the left. He views the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] as a prototype for a <span style="color: #000000;">Christian</span>, <span style="color: #586593;">democratic</span>, <span style="color: #000000;">German</span>, and <span style="color: #c00000;">social</span> party, and aims to transform it according to the principles laid out in his proposed "Essen program" eight years prior. 
+Adam Stegerwald has been elected as the chairman of the [? if z_party_name != "CVP": <span style="color: #000000;">**Center Party's**</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]. He seems to represent a rightward turn from Marx, despite his trade union background, and will preside over a [? if z_party_name != "CVP": <span style="color: #000000;">**Center Party's**</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] less inclined to compromise with the left. He views the [? if z_party_name != "CVP": <span style="color: #000000;">**Center Party's**</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] as a prototype for a <span style="color: #000000;">Christian</span>, <span style="color: #586593;">democratic</span>, <span style="color: #000000;">German</span>, and <span style="color: #c00000;">social</span> party, and aims to transform it according to the principles laid out in his proposed "Essen program" eight years prior. 
 
 @joos
 unavailable-subtitle: [? if right_dissent <= 15 and labor_dissent <= 15 and labor_strength >= 35: Stegerwald has a strong following within the party. ?][? if not (right_dissent <= 15 and labor_dissent <= 15 and labor_strength >= 35): A vote between Stegerwald and Joos would not be decisive enough for the rank-and-file. ?]
