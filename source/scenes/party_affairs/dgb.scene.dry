@@ -4,7 +4,7 @@ view-if: dgb_timer = 0
 on-arrival: month_actions += 1; dgb_timer += 6
 max-visits: 36
 is-card: true
-card-image: img/CenterCampaign.jpg  img/portraits/StegerwaldAdam.jpg
+card-image: img/CenterCampaign.jpg 
 frequency: 2
 tags: party_affairs
 
