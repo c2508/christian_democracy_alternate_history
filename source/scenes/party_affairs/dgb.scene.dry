@@ -7,13 +7,13 @@ is-card: true
 card-image: img/CenterCampaign.jpg 
 frequency: 2
 tags: party_affairs
+face-image: img/portraits/StegerwaldAdam.jpg
 
   = The <span style="color: #000000;">**DGB**</span> 
 
 The German Trade Union Confederation (<span style="color: #000000;">**Z**</span>) is an umbrella organisation of Christian and Catholic trade unions, comprising of the of the blue collar General Association of Christian Trade Unions of Germany (<span style="color: #000000;">**GcG**</span>) and the white collar General Association of German Employees' Associations (<span style="color: #a2c617;">**Gedag**</span>).
 Due to our continued association since 1919, we have made extensive contacts within the Christian Trade Union Movement. With our control of the <span style="color: #000000;">**DGB**</span> chairmanship, we are able to influence and steer its policies.
 
-face-image: img/portraits/StegerwaldAdam.jpg
 
 Chairman: [? if dgb_leader = "Stegerwald" : Adam Stegerwald ?][? if dgb_leader = "Imbusch" : Heinrich Imbusch ?]
 
