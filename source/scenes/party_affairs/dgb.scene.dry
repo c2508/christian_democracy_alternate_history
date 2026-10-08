@@ -34,9 +34,9 @@ Our campaign media is mostly reaching the Catholics who already vote for us, but
 
 @fundraise
 subtitle: We will hold union rallies to fundraise for the <span style="color: #000000;">**Center Party**</span>.
-choose-if: unemployed < 30
+choose-if: unemployed < 25
 unavailable-subtitle: In such times of economic despair, we cannot shift the burden of party finances on union members.
-on-arrival: resources += 1
+on-arrival: resources += 2; labor_strength += 5; 
 
 Our campaign media is mostly reaching the Catholics who already vote for us, but it must be doing *something*, or at least that is what we hope.
 
