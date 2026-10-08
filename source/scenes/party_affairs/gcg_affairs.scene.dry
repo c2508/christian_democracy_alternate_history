@@ -3,7 +3,7 @@ new-page: true
 max-visits: 36
 is-card: true
 view-if: spd_relation > 200
-card-image: img/CenterCampaign.jpg
+face-image: img/portraits/ImbuschHeinrich.jpg
 frequency: 0
 tags: party_affairs
 
