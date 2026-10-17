@@ -111,47 +111,6 @@ The ability of the Young Plan initiative to garner more than the required 10% of
 - @historical_split: The <span style="color: #6D5298;">Christian Socials</span> and <span style="color: #0087DC;">Young Conservatives</span> have split from the <span style="color: #3E88B3;">**DNVP**</span>.
 - @agrarian_split: The <span style="color: #6D5298;">Christian Socials</span>, <span style="color: #0087DC;">Young Conservatives</span> and <span style="color: #385A38;">agrarians</span> have split from the <span style="color: #3E88B3;">**DNVP**</span>.
 
-@historical_split
-view-if: young_plan_signatures >= 10
-choose-if: young_plan_signatures >= 10 and (not rpm_strength = 2 or not green_front = 0 or not green_front_leader = "Hepp") 
-unavailable-subtitle: The situation in the countryside is too dire for the <span style="color: #385A38;">agrarians</span> to continue their 'wait and see' approach. 
-on-arrival: historical_split += 1; special_interests += 6; new_middle_dnvp -= 3; workers_dnvp -= 8; workers_dvp += 1; old_middle_nsdap += 3
-face-image: img/portraits/Ludwig_Kaas.jpg
-
-Despite Westarp’s best attempts to preserve party unity, three rogue delegates from the <span style="color: #6D5298;">Christian Social</span> wing have reneged on an agreement made with Hugenburg and have publicly castigated the <span style="color: #3E88B3;">**DNVP**</span>’s leadership for ‘its inability to tolerate differences of political opinion’ during the vote on the Freedom Law in the Reichstag. Furious at such a betrayal, these three delegates and Treviranus were immediately expelled from the party by the Executive Committee. Overnight, eight other Reichstag deputies have left the party in a show of solidarity, leaving the <span style="color: #3E88B3;">**DNVP**</span> left a shadow of its former self. 
-
-However, Schiele and the <span style="color: #385A38;">agrarian</span> wing have decided to remain in the party in an attempt to change the <span style="color: #3E88B3;">**DNVP**</span>’s direction, limiting the damage of the succession on the party’s Reichstag delegation.
-
-- @christsoc_split: Overnight, the rest of the <span style="color: #6D5298;">Christian Socials</span> desert the <span style="color: #3E88B3;">**DNVP**</span>.
-
-@christsoc_split
-go-to: csvd_formed
-
-Rallying behind their beleaguered leaders, the <span style="color: #6D5298;">Christian Socials</span> affliated with the <span style="color: #a2c617;">**DHV**</span> have followed Lambach out of the <span style="color: #3E88B3;">**DNVP**</span>. Ever since the debacle over the Lambach article, the <span style="color: #6D5298;">Christian Socials</span> have been moving in the direction of a break with the <span style="color: #3E88B3;">**DNVP**</span>, with only appeals from Westarp and Treviranus to preserve party unity holding them back. Now, Hugenberg's consolidation of power has proven to be the last straw for them.
-
-Building on the <span style="color: #6D5298;">Christian Social</span> Reich Union formed in 1928, they have established the <span style="color: #8ED8E4;">**Christlich-Sozialer Volksdienst**</span> (<span style="color: #8ED8E4;">**CSVD**</span>) in conjuction with regional evangelical parties. 
-Based on the <span style="color: #6D5298;">Christian Social</span> teachings of Adolf Stoecker, the <span style="color: #8ED8E4;">**CSVD's**</span> acceptance of republican government make it an anomaly amongst the minor parties.  
-
-- @rest_split: Westarp reluctantly bids the <span style="color: #3E88B3;">**DNVP**</span> goodbye as well
-
-@rest_split
-go-to: kvp_formed
-
-In light of his failure to contain Hugenberg's autocratic tendencies, Kuno von Westarp, along with those who still remain loyal to him, submit their resignations to Hugenberg soon after. Unwilling to condone Hugenberg's flirtations with the radical right, some have retired from politics altogether, while the remaining few have put their weight behind Treviranus' political experiment. The 
-
-With financial backing from <span style="color: #808080;">**Reichwehr**</span> general Kurt von Schleicher and support from the <span style="color: #a2c617;">**DHV**</span>, Treviranus has set up the Conservative People's Association as a precursor to his new party. Despite that, his failure in courting the <span style="color: #385A38;">agrarian</span> wing under Schiele will severely hamper his electoral appeal in rural districts. Lacking the agrarian electorate that has served the <span style="color: #3E88B3;">**DNVP**</span> well, is his <span style="color: #455B95;">**KVP**</span> doomed even before its inception?
-
-- @hugy_happy: The <span style="color: #3E88B3;">**DNVP**</span> continues on, a shadow of its former self...
-
-@hugy_happy
-on-arrival: special_interests += 10; nationalism += 5
-face-image: img/portraits/HugenbergAlfred.jpg
-
-With Hugenberg's control of the Execuetive Commitee and the gradual expulsion of Westarp's <span style="color: #3E88B3;">National Conservatives</span> allies at the regional levels, he stands unchallenged in his control of the <span style="color: #3E88B3;">**DNVP**</span>. Having purged all unpatriotic elements from the party, he is now free to remake the <span style="color: #3E88B3;">**DNVP**</span> into his own image - an instrument of the radical right.
-In the <span style="color: #3E88B3;">German National</span> Reichstag Delegation, only Hugenberg's loyalists and Schiele's <span style="color: #385A38;">agrarians</span> remain, a fraction of the once proud <span style="color: #3E88B3;">**DNVP**</span>. 
-
-Alfred Hugenberg has achieved his Fuhrerprinzip at last, but at what cost to the party?
-
 @agrarian_split
 view-if: young_plan_signatures >= 10
 choose-if: young_plan_signatures >= 10 and rpm_strength = 2 and (green_front = 0 or green_front_leader = "Hepp")
@@ -162,3 +121,43 @@ face-image: img/portraits/Ludwig_Kaas.jpg
 Despite Westarp’s best attempts to preserve party unity, three rogue delegates from the <span style="color: #6D5298;">Christian Social</span> wing have reneged on an agreement made with Hugenburg and have publicly castigated the <span style="color: #3E88B3;">**DNVP**</span>’s leadership for ‘its inability to tolerate differences of political opinion’ during the vote on the Freedom Law in the Reichstag. Furious at such a betrayal, these three delegates and Treviranus were immediately expelled from the party by the Executive Committee. Overnight, eight other Reichstag deputies have left the party in a show of solidarity, leaving the <span style="color: #3E88B3;">**DNVP**</span> left a shadow of its former self. 
 
 In light of the worsening agricultural crisis, Schiele and the <span style="color: #385A38;">agrarian</span> wing have announced their departure from the party, which has led to massive desertions from the left and moderate factions of the <span style="color: #3E88B3;">**DNVP**</span>, Westarp included. The <span style="color: #3E88B3;">**DNVP**</span> now stands in the polls but a spectre of its former self…
+
+@historical_split
+view-if: young_plan_signatures >= 10
+choose-if: young_plan_signatures >= 10 and (not rpm_strength = 2 or not green_front = 0 or not green_front_leader = "Hepp") 
+unavailable-subtitle: The situation in the countryside is too dire for the <span style="color: #385A38;">agrarians</span> to continue their 'wait and see' approach. 
+on-arrival: historical_split += 1; special_interests += 6; new_middle_dnvp -= 3; workers_dnvp -= 8; workers_dvp += 1; old_middle_nsdap += 3
+face-image: img/portraits/Ludwig_Kaas.jpg
+
+Despite Westarp’s best attempts to preserve party unity, three rogue delegates from the <span style="color: #6D5298;">Christian Social</span> wing have reneged on an agreement made with Hugenburg and have publicly castigated the <span style="color: #3E88B3;">**DNVP**</span>’s leadership for ‘its inability to tolerate differences of political opinion’ during the vote on the Freedom Law in the Reichstag. Furious at such a betrayal, these three delegates and Treviranus were immediately expelled from the party by the Executive Committee. 
+
+However, Schiele and the <span style="color: #385A38;">agrarian</span> wing have decided to remain in the party in an attempt to change the <span style="color: #3E88B3;">**DNVP**</span>’s direction, limiting the damage of the succession on the party’s Reichstag delegation.
+
+- @christsoc_split: Overnight, the rest of the <span style="color: #6D5298;">Christian Socials</span> leave the <span style="color: #3E88B3;">**DNVP**</span> in a show of solidarity.
+
+@christsoc_split
+
+Rallying behind their beleaguered leaders, the <span style="color: #6D5298;">Christian Socials</span> affliated with the <span style="color: #a2c617;">**DHV**</span> have followed Lambach out of the <span style="color: #3E88B3;">**DNVP**</span>. Ever since the debacle over the Lambach article, the <span style="color: #6D5298;">Christian Socials</span> have been moving in the direction of a break with the <span style="color: #3E88B3;">**DNVP**</span>, with only appeals from Westarp and Treviranus to preserve party unity holding them back. Now, Hugenberg's consolidation of power has proven to be the last straw for them.
+
+Building on the <span style="color: #6D5298;">Christian Social</span> Reich Union formed in 1928, they have established the <span style="color: #8ED8E4;">**Christlich-Sozialer Volksdienst**</span> (<span style="color: #8ED8E4;">**CSVD**</span>) in conjuction with regional evangelical parties. 
+Based on the <span style="color: #6D5298;">Christian Social</span> teachings of Adolf Stoecker, the <span style="color: #8ED8E4;">**CSVD's**</span> acceptance of republican government make it an anomaly amongst the minor parties.  
+
+- @rest_split: Westarp reluctantly bids the <span style="color: #3E88B3;">**DNVP**</span> goodbye as well
+
+@rest_split
+
+In light of his failure to contain Hugenberg's autocratic tendencies, Kuno von Westarp, along with those who still remain loyal to him, submit their resignations to Hugenberg soon after. Unwilling to condone Hugenberg's flirtations with the radical right, some have retired from politics altogether, while the remaining few have put their weight behind Treviranus' political experiment. The 
+
+With financial backing from <span style="color: #808080;">**Reichwehr**</span> general Kurt von Schleicher and support from the <span style="color: #a2c617;">**DHV**</span>, Treviranus has set up the Conservative People's Association as a precursor to his new party. Despite that, his failure in courting the <span style="color: #385A38;">agrarian</span> wing under Schiele will severely hamper his electoral appeal in rural districts. Lacking the agrarian electorate that has served the <span style="color: #3E88B3;">**DNVP**</span> well, is his <span style="color: #455B95;">**KVP**</span> doomed even before its inception?
+
+- @hugy_happy: The <span style="color: #3E88B3;">**DNVP**</span> continues on, a shadow of its former self...
+
+@hugy_happy
+on-arrival: special_interests += 10; nationalism += 5
+face-image: img/portraits/HugenbergAlfred.jpg
+go-to: csvd_formed
+
+With Hugenberg's control of the Execuetive Commitee and the gradual expulsion of Westarp's <span style="color: #3E88B3;">National Conservatives</span> allies at the regional levels, he stands unchallenged in his control of the <span style="color: #3E88B3;">**DNVP**</span>. Having purged all unpatriotic elements from the party, he is now free to remake the <span style="color: #3E88B3;">**DNVP**</span> into his own image - an instrument of the radical right.
+In the <span style="color: #3E88B3;">German National</span> Reichstag Delegation, only Hugenberg's loyalists and Schiele's <span style="color: #385A38;">agrarians</span> remain, a fraction of the once proud <span style="color: #3E88B3;">**DNVP**</span>. 
+
+Alfred Hugenberg has achieved his Fuhrerprinzip at last, but at what cost to the party?
