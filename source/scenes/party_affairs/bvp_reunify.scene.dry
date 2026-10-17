@@ -1,7 +1,7 @@
 title: Reunification with the BVP
 new-page: true
 view-if: (z_party_leader = "Joos" and chud_joos = 1) or (z_party_leader = "Stegerwald" and non_cvp_stegerwald = 1 ) or z_party_leader = "Kaas"
-on-arrival: month_actions += 1; bvp_reunify_timer = 5
+on-arrival: month_actions += 1; bvp_reunify_timer += 5
 max-visits: 7
 is-card: true
 card-image: img/poster_1.png
