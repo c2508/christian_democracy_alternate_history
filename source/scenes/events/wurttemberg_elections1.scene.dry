@@ -29,7 +29,7 @@ for (var c of Q.classes) {
 
 
 
-if (Q.year >= 1928) {
+if (Q.year <= 1932) {
 Q.adjustmentFactors_spd_wurttemberg = 0.8;
 Q.adjustmentFactors_kpd_wurttemberg = 0.70;
 Q.adjustmentFactors_ddp_wurttemberg = 2.1;
@@ -44,8 +44,8 @@ Q.adjustmentFactors_dnvp_wurttemberg = 0.4;
 Q.adjustmentFactors_dnf_wurttemberg = 0.5;
 Q.adjustmentFactors_nsdap_wurttemberg = 0.7;
 Q.adjustmentFactors_other_wurttemberg = 1.2;
-    };
-} else if (Q.year >= 1932) {
+} 
+if (Q.year >= 1932) {
 Q.adjustmentFactors_spd_wurttemberg = 0.77;
 Q.adjustmentFactors_kpd_wurttemberg = 0.66;
 Q.adjustmentFactors_ddp_wurttemberg = 3.21;
