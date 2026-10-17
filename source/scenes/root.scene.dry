@@ -549,6 +549,8 @@ Q.old_nsdap_votes_wurttemberg = 4.0;
 Q.old_other_votes_wurttemberg = 1.6;
 Q.old_cnva_votes_wurttemberg = 0;
 
+Q.bvp_votes = 3;
+
 Q.spd_baden = 21.9;
 Q.kpd_baden = 6.7;
 Q.z_baden = 34.6;
