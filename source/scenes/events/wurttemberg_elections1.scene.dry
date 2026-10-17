@@ -28,7 +28,8 @@ for (var c of Q.classes) {
 }
 
 
-// Define adjustment factors
+
+if (Q.year >= 1928) {
 Q.adjustmentFactors_spd_wurttemberg = 0.8;
 Q.adjustmentFactors_kpd_wurttemberg = 0.70;
 Q.adjustmentFactors_ddp_wurttemberg = 2.1;
@@ -36,11 +37,30 @@ Q.adjustmentFactors_z_wurttemberg = 1.29;
 Q.adjustmentFactors_dvp_wurttemberg = 0.52;
 Q.adjustmentFactors_wp_wurttemberg = 0.24;
 Q.adjustmentFactors_cnblp_wurttemberg = 0.7;
+Q.adjustmentFactors_bvp_wurttemberg = 6.01; 
 Q.adjustmentFactors_kvp_wurttemberg = 0.8;
+Q.adjustmentFactors_csvd_wurttemberg = 1.42
 Q.adjustmentFactors_dnvp_wurttemberg = 0.4;
 Q.adjustmentFactors_dnf_wurttemberg = 0.5;
 Q.adjustmentFactors_nsdap_wurttemberg = 0.7;
 Q.adjustmentFactors_other_wurttemberg = 1.2;
+    };
+} else if (Q.year >= 1932) {
+Q.adjustmentFactors_spd_wurttemberg = 0.77;
+Q.adjustmentFactors_kpd_wurttemberg = 0.66;
+Q.adjustmentFactors_ddp_wurttemberg = 3.21;
+Q.adjustmentFactors_z_wurttemberg = 1.51;
+Q.adjustmentFactors_dvp_wurttemberg = 1.14;
+Q.adjustmentFactors_wp_wurttemberg = 0.22;
+Q.adjustmentFactors_cnblp_wurttemberg = 0.7;
+Q.adjustmentFactors_bvp_wurttemberg = 3.58; 
+Q.adjustmentFactors_kvp_wurttemberg = 0.7;
+Q.adjustmentFactors_csvd_wurttemberg = 1.58
+Q.adjustmentFactors_dnvp_wurttemberg = 0.71;
+Q.adjustmentFactors_dnf_wurttemberg = 0.5;
+Q.adjustmentFactors_nsdap_wurttemberg = 0.73;
+Q.adjustmentFactors_other_wurttemberg = 0.8;  
+}
 
 // Calculate support for each of the parties
 var total_support = 0;
