@@ -5,7 +5,18 @@ new-page: true
 tags: event
 view-if: year == 1928 and month == 2
 max-visits: 1
-face-image: img/Kabinett_Marx_IV.jpg
+on-display: {!
+    var cardEl = document.createElement('div');
+    cardEl.className = "face-figure2";
+
+    var image = new Image();
+    image.className = "face-img";
+    image.src = "img/Kabinett_Marx_IV.jpg";
+
+    cardEl.appendChild(image);
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
 
 = The Fall of Marx IV
 
