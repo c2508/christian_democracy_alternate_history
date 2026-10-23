@@ -116,6 +116,8 @@ Economic growth: [+ economic_growth_2 +]%
 on-arrival: {!
 Q.rb_strength_2 = Q.rb_strength.toFixed(1);
 Q.rfb_strength_2 = Q.rfb_strength.toFixed(1);
+Q.bw_strength_2 = Q.bw_strength.toFixed(1);
+Q.ygo_strength_2 = Q.ygo_strength.toFixed(1);
 Q.sh_strength_2 = Q.sh_strength.toFixed(1);
 Q.sa_strength_2 = Q.sa_strength.toFixed(1);
 !}
