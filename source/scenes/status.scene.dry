@@ -116,21 +116,27 @@ Economic growth: [+ economic_growth_2 +]%
 on-arrival: {!
 Q.rb_strength_2 = Q.rb_strength.toFixed(1);
 Q.rfb_strength_2 = Q.rfb_strength.toFixed(1);
-Q.bw_strength_2 = Q.bw_strength.toFixed(1);
-Q.ygo_strength_2 = Q.ygo_strength.toFixed(1);
 Q.sh_strength_2 = Q.sh_strength.toFixed(1);
 Q.sa_strength_2 = Q.sa_strength.toFixed(1);
 !}
 
 = Paramilitaries
 
-<span class="tooltip-text" title="The Reichsbanner Schwarz-Rot-Gold is a popular organization for defending democracy, mostly affiliated with the SPD." style="color: #c00000;">**Reichsbanner**</span> Strength: [+ rb_strength_2 +] thousand
-
-<span style="color: #c00000;">**Reichsbanner**</span> Militarization: [+ rb_militancy : militancy +]
-
 <span class="tooltip-text" title="The RFB (Rotfrontkämpferbund) is a communist group associated with the KPD." style="color: #8B0000;">**RFB**</span> Strength: [+ rfb_strength_2 +] thousand
 
 <span style="color: #8B0000;">**RFB**</span> Militarization: [+ rfb_militancy : militancy +]
+
+<span class="tooltip-text" title="The Reichsbanner Schwarz-Rot-Gold is a popular organization for defending democracy, mostly affiliated with the SPD." style="color: #c00000;">**Reichsbanner**</span> Strength: [+ rb_strength_2 +] thousand
+
+<span style="color: #c00000;">**Reichsbanner**</span> Militarization: [+ rb_militancy : militancy +]   
+
+<span class="tooltip-text" title="The Bayernwacht mainly functions as a hall guard for the BVP." style="color: #69A2BE;">**Bayernwacht**</span> Strength: [+ bw_strength_2 +] thousand
+
+<span style="color: #69A2BE;">**Bayernwacht**</span> Militarization: [+ bw_militancy : militancy +]   
+
+<span class="tooltip-text" title="The Young German Order is a national liberal youth paramilitary led by former Freikorps leader Artur Mahraun." style="color:  #00FF00;">**Young German Order**</span> Strength: [+ ygo_strength_2 +] thousand
+
+<span style="color: #00FF00;">**Young German Order**</span> Militarization: [+ ygo_militancy : militancy +]   
 
 <span class="tooltip-text" title="The Stahlhelm is a right-wing organization of war veterans associated with the DNVP." style="color:#3E88B3;">**Stahlhelm**</span> Strength: [+ sh_strength_2 +] thousand
 
