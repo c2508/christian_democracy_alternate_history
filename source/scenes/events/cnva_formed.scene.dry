@@ -1,0 +1,35 @@
+on-arrival: {!
+
+Q.cnva_formed = 1;
+Q.parties.push('cnva');
+
+Q.workers_cnva = 8;
+Q.workers_nsdap -= 1; 
+Q.workers_dnvp -= 3;
+Q.workers_others -= 1;
+Q.new_middle_cnva = 15; 
+Q.new_middle_dnvp -= 5;
+Q.new_middle_others -= 7;
+Q.old_middle_csvd = 7;
+Q.old_middle_dnvp -= 4;
+Q.old_middle_others -= 3;
+Q.rural_cnva = 11;
+Q.catholics_cnva = 6;
+Q.unemployed_cnva = 5;
+Q.workers_cnva += Q.workers_cnblp;
+Q.new_middle_cnva += Q.new_middle_cnblp;
+Q.old_middle_cnva += Q.old_middle_cnblp;
+Q.rural_cnva += Q.rural_cnblp;
+Q.catholics_cnva += Q.catholics_cnblp;
+Q.unemployed_cnva += Q.unemployed_cnblp;
+Q.cnblp_formed = 0 
+             
+Q.cnva_r = 0;
+Q.old_cnva_r = 0;
+for (var record of Q.election_records) {
+    record['cnva'] = 0;
+}
+for (var record of Q.party_support_records) {
+    record['cnva'] = 0;
+}
+!}
