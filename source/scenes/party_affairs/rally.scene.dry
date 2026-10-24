@@ -91,6 +91,8 @@ on-arrival: workers_z += 3*(1-dissent); workers_z += 2*(1-dissent) if welfare > 
 The pro-labor message appeals to the organized workers from the labor wing, whose benefits are the accomplishments of our time in government. [? if welfare > 1 : Our achievements in expanding welfare have made this message more effective. ?]
 
 @democracy
+choose_if: z_party_leader == "Joos" or z_party_leader == "Marx" or z_endorse_rb = 1
+unavailable-subtitle: Democracy is not a big issue within our voter base right now.
 on-arrival: democratization += 1; pro_republic += 2*(1 - dissent); workers_spd += 4*(1-dissent) if democratization >= 3; catholics_z += 3*(1-dissent) if democratization >= 3; pro_republic += 4*(1 - dissent) if democratization >= 3; new_middle_z += 4*(1-dissent) if democratization >= 3; ddp_left += 0.5 if pro_republic >= 70
 
 Our speakers defend the status quo and rail against the <span style="color: #700000;">communists</span> and <span style="color: #7A3C00;">fascists</span who threaten it.
