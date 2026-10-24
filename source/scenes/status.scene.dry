@@ -168,7 +168,7 @@ Q.sa_strength_2 = Q.sa_strength.toFixed(1);
 
 [? if year >= 1928 and not streetfighting_joever: <span style="color: #3E88B3;">**Stahlhelm**</span>: [+ sh_force +]%?]
 
-[? if year >= 1928 and not streetfighting_joever: <h4><span style="color: #700000;">**Antifaschistische Aktion**</span> strength: [+ democracy_force +]%</h4>?]
+[? if year >= 1928 and not streetfighting_joever: <h4><span style="color: #700000;">**Antifaschistische Aktion**</span> strength: [+ left_force +]%</h4>?]
 
 [? if year >= 1928 and not streetfighting_joever and not kpd_truce: <span style="color: #8B0000;">**RFB**</span>: [+ rfb_force +]%?]
 
