@@ -179,6 +179,7 @@ Q.prussia_force = Math.round((Q.prussia_force/total_force)*100);
 
 Q.far_right_force = Q.sh_force + Q.sa_force;
 Q.democracy_force = Q.rb_force + Q.prussia_force + Q.bw_force + Q.ygo_force;
+Q.left_force = Q.rfb_force;
 Q.state_force = 0;
 if (Q.reichswehr_street) Q.state_force += Q.reichswehr_force;
 if (Q.prussia_leader == "Strasser" || Q.prussia_leader == "Schleicher" || Q.prussia_leader == "Papen") {
