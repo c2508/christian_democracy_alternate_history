@@ -165,7 +165,7 @@ Q.prussia_force = Q.prussian_police_strength*Q.prussian_police_militancy*Q.pruss
 if (Q.prussia_leader == "Strasser" || Q.prussia_leader == "Schleicher" || Q.prussia_leader == "Papen") Q.prussia_force = Q.prussian_police_strength*Q.prussian_police_militancy*(1 - Q.prussian_police_loyalty);
 Q.reichswehr_force = Q.reichswehr_strength*Q.reichswehr_militancy*(1 - Q.reichswehr_loyalty);
 Q.total_force = (Q.sa_force+Q.sh_force+Q.rb_force+Q.rfb_force+Q.bw_force+Q.ygo_force);
-var total_force = (Q.sa_force+Q.sh_force+Q.rb_force+Q.rfb_force+Q.prussia_force);
+var total_force = (Q.sa_force+Q.sh_force+Q.rb_force+Q.rfb_force+Q.prussia_force+Q.bw_force+Q.ygo_force);
 if (Q.reichswehr_street) total_force += Q.reichswehr_force;
 
 Q.bw_force = Math.round((Q.bw_force/total_force)*100);
