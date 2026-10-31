@@ -35,7 +35,7 @@ on-arrival: rural_nsdap -= 3; nationalism -= 3; rural_nsdap += 1 if green_front 
 We rail against the <span style="color: #7A3C00;">**NSDAP's**</span> miltant tendencies and their irresponsible rhetoric, damaging their credibility in the eyes of the farmers.
 
 @program
-subtitle: Agriculture is the backbone of Germany, yet the countryside's situation is dire and German farmers are struggling to make a living. Only through the unification of agricultural interests under the auspices of the <span style="color: #0dba1e;">**Green Front**</span> can we start drafting a comprehensive farm program to aid the peasants.
+subtitle: Only through the unification of agricultural interests under the auspices of the <span style="color: #0dba1e;">**Green Front**</span> can we start drafting a comprehensive farm program to aid the peasants.
 view-if: green_front_program_start = 0
 on-arrival: green_front_program_start += 1; green_front_program_timer += 24;
 
