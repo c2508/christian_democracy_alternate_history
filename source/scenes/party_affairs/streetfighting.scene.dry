@@ -16,7 +16,7 @@ We cannot sit idly and watch these extremists slaughter innocents in the streets
 - @para_urgency: Push the party towards a more militant defense of the current constitutional order
 - @z_endorse_rb: We must take up arms in the <span style="color: #c00000;">**Reichsbanner**</span> to defend the streets from the <span style="color: #700000;">far left</span> and <span style="color: #3E88B3;">right</span>
 - @prussian_police_training: Use the Prussian police to help train the Reichsbanner.
-- @peace: Try to avoid all militant confrontations, as much as possible.
+- @bw: We can fund the <span style="color: #0094FF;">Bayernwacht</span>, the <span style="color: #69A2BE;">**BVP's**</span> regional paramilitary. 
 - @truce_rfb: Try to make peace with the RFB.
 - @easy_discard
 
@@ -41,10 +41,13 @@ on-arrival: rb_militancy += 0.05; sa_strength += 50; prussian_police_training +=
 
 The loyal sections of the Prussian police can help train the Reichsbanner.
 
-@peace
-on-arrival: rb_militancy -= 0.02; rb_strength -= 50; pacifism += 1
+@bw
+choose-if: bvp_reunified = 1 and resources > 0 and year >= 1931 
+unavailable_subtitle: [? if bvp_reunified = 0 : The <span style="color: #69A2BE;">**BVP**</span> does not need our help. ?][? if resources = 0 : Not enough resources ?][? if year <= 1930 : The <span style="color: #69A2BE;">**BVP**</span> thinks that it is a waste of money. ?]
+view-if: streetfighting_urgency = 1 
+on-arrival: bw_militancy += 0.065; bw_strength += 2.5; resources -= 1
 
-By not fighting, the strength of the Reichsbanner atrophies. Pacifists in the party are gaining the upper hand.
+In these trying times, the <span style="color: #69A2BE;">**BVP**</span> is grateful for any bit of aid we can offer
 
 @truce_rfb
 choose-if: kpd_relation >= 45
