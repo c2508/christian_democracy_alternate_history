@@ -2,6 +2,7 @@ title: The <span style="color: #000000;">**Center**</span> and the <span style="
 new-page: true
 subtitle: A new era of cooperation between the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> coalition parties?
 tags: event
+view-if: spd_relation > 200
 max-visits: 1
 face-image: img/redfront.jpg
 
