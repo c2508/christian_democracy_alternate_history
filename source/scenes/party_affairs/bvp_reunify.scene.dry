@@ -1,6 +1,6 @@
 title: Reunification with the BVP
 new-page: true
-view-if: (z_party_leader = "Joos" and chud_joos = 1) or (z_party_leader = "Stegerwald" and non_cvp_stegerwald = 1 ) or z_party_leader = "Kaas"
+view-if: ((z_party_leader = "Joos" and chud_joos = 1) or (z_party_leader = "Stegerwald" and non_cvp_stegerwald = 1 ) or z_party_leader = "Kaas") and bvp_reunify_timer = 0
 on-arrival: month_actions += 1; bvp_reunify_timer += 5
 max-visits: 7
 is-card: true
@@ -9,7 +9,7 @@ tags: party_affairs
 
 = Reunification with the <span style="color: #69A2BE;">**BVP**</span>
 
-Since the Regensburg Agreement, our relationship with the once estranged <span style="color: #69A2BE;">**BVP**</span> has mostly normalised, especially with the delineation of our explicit spheres of influence. Despite that, pressure still remains at the grassroots level for the reformation of the <span style="color: #000000;">**Center Party**</span> back into a united Catholic party, with the 1925 elections a warning to many <span style="color: #000000;">**Center Party**</span> members of the price of continued Catholic disunity. 
+Since the Regensburg Agreement, our relationship with the once estranged <span style="color: #69A2BE;">**BVP**</span> has mostly normalised, especially with the delineation of our explicit spheres of influence. Despite that, pressure still remains at the grassroots level for the reformation of the <span style="color: #000000;">**Center Party**</span> back into a united Catholic party, with the result of the 1925 Presidential Elections a warning to many <span style="color: #000000;">**Center Party**</span> members of the price of continued Catholic disunity. 
  
 In light of the resignation of long-time party leader Wilhelm Marx, the onus now falls on [+ z_party_leader +] to bring the prodigal son back into the fold. With the <span style="color: #69A2BE;">**BVP**</span>'s demand for continued political autonomy being a sticking point, the alternative pathway to reunification lies in the establishment of a formal working relationship with the <span style="color: #69A2BE;">**BVP**</span> such that they can function as an official sister party of the <span style="color: #000000;">**Center Party**</span>. 
 
