@@ -4,7 +4,6 @@ subtitle: A new agreement on reparations
 tags: event
 view-if: year = 1929 and month >= 12 and dnvp_leader = "Hugenberg" 
 max-visits: 1
-face-image: img/youngplan.jpg
 on-arrival: {!
 (Q.young_plan_votes += ((Q.young_plan_modifier)*(Q.dnvp_votes + Q.nsdap_votes)));
 (Q.young_plan_votes += Math.round(0.75*(Q.cnblp_votes)*100.0)/100.0);
@@ -19,6 +18,10 @@ if (Q.rdi_balance > 1080) {
 !}
 
 = Young Plan Referendum
+
+<img src="img/youngplan.jpg" style="display:block; width:100%; max-width:500px; height:auto; margin:0 auto 1em auto; object-fit:cover; object-position:top;">
+
+<hr>
 
 We have done our best in depressing turnout for the Young Plan. Let us hope that the electorate remembers the spirit of Locarno and rejects this shameless attempt at upending the foreign policy of the late Gustav Stresemann. 
 
