@@ -108,7 +108,22 @@ if (new_party_sum > 0) {
     }
 }
 
+Q.total_votes_baden = Q.spd_baden + Q.sapd_baden + Q.kpd_baden + Q.ddp_baden + Q.lvp_baden + Q.z_baden + Q.dvp_baden + Q.dnvp_baden + Q.cnblp_baden + Q.wp_baden + Q.csvd_baden + Q.nsdap_baden + Q.other_baden + Q.kvp_baden + Q.dnf_baden;
 
+if (Q.total_votes_baden > 0) {
+    Q.spd_baden = (Q.spd_baden / Q.total_votes_baden) * 100;
+    Q.sapd_baden = (Q.sapd_baden / Q.total_votes_baden) * 100;
+    Q.kpd_baden = (Q.kpd_baden / Q.total_votes_baden) * 100;
+    Q.ddp_baden = (Q.ddp_baden / Q.total_votes_baden) * 100;
+    Q.lvp_baden = (Q.lvp_baden / Q.total_votes_baden) * 100;
+    Q.z_baden = (Q.z_baden / Q.total_votes_baden) * 100;
+    Q.dvp_baden = (Q.dvp_baden / Q.total_votes_baden) * 100;
+    Q.dnvp_baden = (Q.dnvp_baden / Q.total_votes_baden) * 100;
+    Q.nsdap_baden = (Q.nsdap_baden / Q.total_votes_baden) * 100;
+    Q.other_baden = (Q.other_baden / Q.total_votes_baden) * 100;
+    Q.kvp_baden = (Q.kvp_baden / Q.total_votes_baden) * 100;
+    Q.dnf_baden = (Q.dnf_baden / Q.total_votes_baden) * 100;
+}
 
 if (!Q.lvp_formed && !Q.nfvp_formed) Q.weimar_coalition_baden = parseFloat((Q.spd_baden + Q.ddp_baden + Q.z_baden).toFixed(1));
 if (Q.lvp_formed || Q.nfvp_formed) Q.weimar_coalition_baden = parseFloat((Q.spd_baden + Q.dvp_baden + Q.z_baden).toFixed(1));
