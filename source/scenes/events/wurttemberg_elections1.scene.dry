@@ -396,7 +396,7 @@ Bourgeois Coalition (<span style="color: #000000;">**Z**</span> [? if ddp_exist:
 
 Christian Coalition (<span style="color: #000000;">**Z**</span> + <span style="color: #3F7BC1;">**WBWB**</span> + <span style="color: #3E88B3;">**DNVP**</span>): [+ christian_coalition_wurttemberg +]%
 
-Far-Right Coalition (<span style="color: #954B00;">**NSDAP**</span> + <span style="color: #3F7BC1;">**DNVP**</span>[? if dnf_formed: + <span style="color: #003755;">**DNF**</span>?]): [+ far_right_coalition_wurttemberg +]%
+Far-Right Coalition (<span style="color: #954B00;">**NSDAP**</span> + <span style="color: #3E88B3;">**DNVP**</span>[? if dnf_formed: + <span style="color: #003755;">**DNF**</span>?]): [+ far_right_coalition_wurttemberg +]%
 
 There are some potential coalition arrangements.
 
