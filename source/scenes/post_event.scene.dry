@@ -258,6 +258,10 @@ if (Q.dissent < 0) {
     Q.dissent = 0.95;
 }
 
+if (Q.sa_strength >= 140) {
+    Q.streetfighting_popup += 1
+}
+
 if ((Q.industrial_opposition < 20) && (Q.industrialist_funding_timer = 0)) {
     Q.resource += 2;
     Q.industrialist_funding_timer = 6;
