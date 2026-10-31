@@ -24,7 +24,7 @@ Whether or not we are in an electoral campaign, the party is always trying to ma
 subtitle: -3 resources
 choose-if: resources >= 3
 unavailable-subtitle: Not enough resources.
-on-arrival: workers_z += 1*(1-dissent); workers_z -= 1/3 if unemployed >= 15; workers_z -= 1/3 if unemployed >= 25; workers_z += 2*(1-dissent) if peoples_party == 1; resources -= 3
+on-arrival: workers_z += 1/3*(1-dissent); workers_z -= 1/3 if unemployed >= 15; workers_z -= 1/3 if unemployed >= 25; workers_z += 2*(1-dissent) if peoples_party == 1; resources -= 3
 
 We have increased our campaigning among the workers. [? if unemployed >= 15: The high levels of unemployment make our campaign more difficult. ?][? if peoples_party == 1 : Our transformation into a Christian People's Party has allowed to appeal to Christians of all denominations. ?]
 
