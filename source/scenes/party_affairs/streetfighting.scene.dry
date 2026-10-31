@@ -15,9 +15,9 @@ We cannot sit idly and watch these extremists slaughter innocents in the streets
 # - @battle: Test our defense units in battle against the fascists!
 - @para_urgency: Push the party towards a more militant defense of the current constitutional order
 - @z_endorse_rb: We must take up arms in the <span style="color: #c00000;">**Reichsbanner**</span> to defend the streets from the <span style="color: #700000;">far left</span> and <span style="color: #3E88B3;">right</span>
-- @prussian_police_training: Use the Prussian police to help train the Reichsbanner.
+- @prussian_police_training: Use the Prussian police to help train the <span style="color: #c00000;">**Reichsbanner**</span>.
 - @bw: We can fund the <span style="color: #0094FF;">Bayernwacht</span>, the <span style="color: #69A2BE;">**BVP's**</span> regional paramilitary. 
-- @truce_rfb: Try to make peace with the RFB.
+- @police: Turn to the state police to crack down on the paramilitaries
 - @easy_discard
 
 @para_urgency
@@ -36,10 +36,10 @@ unavailable-subtitle: [? if pro_republic > 60 : The situation is not desperate e
 go-to: endorse_rb
 
 @prussian_police_training
-view-if: spd_prussia == 1 and prussian_police_loyalty > 0.5
+view-if: spd_prussia == 1 and z_prussia == 1 and prussian_police_loyalty > 0.5
 on-arrival: rb_militancy += 0.05; sa_strength += 50; prussian_police_training += 1
 
-The loyal sections of the Prussian police can help train the Reichsbanner.
+The loyal sections of the Prussian police can help train the <span style="color: #c00000;">**Reichsbanner**</span>.
 
 @bw
 choose-if: bvp_reunified = 1 and resources > 0 and year >= 1931 
@@ -49,10 +49,9 @@ on-arrival: bw_militancy += 0.065; bw_strength += 2.5; resources -= 1
 
 In these trying times, the <span style="color: #69A2BE;">**BVP**</span> is grateful for any bit of aid we can offer
 
-@truce_rfb
-choose-if: kpd_relation >= 45
-view-if: kpd_truce == 0
-unavailable-subtitle: The KPD is not interested.
-on-arrival: kpd_truce = 1; kpd_relation += 5; rfb_strength += 50; rb_strength += 50; sa_strength += 50;
+@police
+choose-if: z == prussia or bvp_reunfied = 0
+unavailable-subtitle: We are not in any major state governments.
+on-arrival: prussian_police_strength += 5 if z == prussia; sa_strength -= 1; rfb_strength -= 1
 
-We have made at least a temporary truce with the KPD, so that our respective paramilitaries will stop fighting.
+This is an amenable compromise for all factions of the party and prepares the state police for further encounters on the streets. 
