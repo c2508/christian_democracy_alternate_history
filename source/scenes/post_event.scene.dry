@@ -491,8 +491,8 @@ if (Q.week >= 5)
         Q.rural_dnvp -= 15/12;
         Q.rural_nsdap += 10/12;
         Q.unemployed_nsdap += 18/12;
-        Q.bw_strength += 2/5;
-        Q.ygo_strength += 4;
+        Q.bw_strength += 1/20;
+        Q.ygo_strength += 1/4;
     } else if (Q.year == 1930) {
         Q.rural_nsdap += 10/12;
         Q.rural_dnvp -= 15/12;
@@ -506,8 +506,8 @@ if (Q.week >= 5)
         Q.old_middle_other += 4/12;
         Q.unemployed_nsdap += 8/12;
         Q.rural_other += 5/12;
-        Q.bw_strength += 3/5;
-        Q.ygo_strength += 6; 
+        Q.bw_strength += 1/20;
+        Q.ygo_strength += 1/2; 
 
         Q.workers_z += 1/12;
         Q.old_middle_z += 2/12;
@@ -534,6 +534,9 @@ if (Q.week >= 5)
         Q.old_middle_nsdap += 10/12;
         Q.rural_other -= 5/12;
         Q.rural_nsdap += 9/12;
+        Q.bw_strength += 1/20;
+        Q.ygo_strength += 1/2; 
+
         // TODO: economic policies should reduce NSDAP rurals
         if (!Q.works_program) {
             Q.old_middle_dvp -= 6/12;
@@ -558,6 +561,8 @@ if (Q.week >= 5)
             Q.old_middle_nsdap += 4/12;
             Q.new_middle_nsdap += 4/12;
             Q.rural_nsdap += 4/12;
+            Q.bw_strength += 1/4;
+            Q.ygo_strength += 1/2; 
         }
     } else if (Q.year == 1932) {
         Q.old_middle_other -= 7/12;
