@@ -37,13 +37,13 @@ Q.adjustmentFactors_z_wurttemberg = 1.29;
 Q.adjustmentFactors_dvp_wurttemberg = 0.52;
 Q.adjustmentFactors_wp_wurttemberg = 0.24;
 Q.adjustmentFactors_cnblp_wurttemberg = 0.7;
-Q.adjustmentFactors_bvp_wurttemberg = 6.01; 
 Q.adjustmentFactors_kvp_wurttemberg = 0.8;
-Q.adjustmentFactors_csvd_wurttemberg = 1.42
+Q.adjustmentFactors_csvd_wurttemberg = 1.42;
+Q.adjustmentFactors_wbwb_wurttemberg = 3.00;
 Q.adjustmentFactors_dnvp_wurttemberg = 0.4;
 Q.adjustmentFactors_dnf_wurttemberg = 0.5;
 Q.adjustmentFactors_nsdap_wurttemberg = 0.7;
-Q.adjustmentFactors_other_wurttemberg = 1.2;
+Q.adjustmentFactors_other_wurttemberg = 3.00;
 } 
 if (Q.year >= 1932) {
 Q.adjustmentFactors_spd_wurttemberg = 0.77;
@@ -55,12 +55,33 @@ Q.adjustmentFactors_wp_wurttemberg = 0.22;
 Q.adjustmentFactors_cnblp_wurttemberg = 0.7;
 Q.adjustmentFactors_bvp_wurttemberg = 3.58; 
 Q.adjustmentFactors_kvp_wurttemberg = 0.7;
-Q.adjustmentFactors_csvd_wurttemberg = 1.58
+Q.adjustmentFactors_csvd_wurttemberg = 1.58;
+Q.adjustmentFactors_wbwb_wurttemberg = 4.00;
 Q.adjustmentFactors_dnvp_wurttemberg = 0.71;
 Q.adjustmentFactors_dnf_wurttemberg = 0.5;
 Q.adjustmentFactors_nsdap_wurttemberg = 0.73;
-Q.adjustmentFactors_other_wurttemberg = 0.8;  
+Q.adjustmentFactors_other_wurttemberg = 6.00;
 }
+
+Q.spd_r_wurttemburg = 0;
+Q.sapd_r_wurttemburg = 0;
+Q.kpd_r_wurttemburg = 0;
+Q.ddp_r_wurttemburg = 0;
+Q.lvp_r_wurttemburg = 0;
+Q.z_r_wurttemburg = 0;
+Q.wp_r_wurttemburg = 0;
+Q.cnblp_r_wurttemburg = 0;
+Q.kvp_r_wurttemburg = 0;
+Q.csvd_r_wurttemburg = 0;
+Q.wbwb_r_wurttemburg = 0;
+Q.dnvp_r_wurttemburg = 0;
+Q.nsdap_r_wurttemburg = 0;
+Q.other_r_wurttemburg = 0;
+Q.dnf_r_wurttemburg = 0;
+
+if (Q.rural_z_normalized >= 8) wurttemburg_adjustment_factors.z += 0.05;
+if (Q.rural_dnvp_normalized <= 35) wurttemburg_adjustment_factors.dnvp -= 0.1;
+
 
 // Calculate support for each of the parties
 var total_support = 0;
@@ -112,7 +133,7 @@ for (var party of Q.parties) {
     Q['old_' + party + '_votes_wurttemberg'] = parseFloat((Q[party + '_votes_wurttemberg']).toFixed(1));
 }
 // calculate new party sum if electoral reform
-if (new_party_sum > 0) {
+if (new_party_sum > 0) {     
     for (var party of Q.parties) {
         if (Q[party + '_wl'] > 0) {
             Q[party + '_wl'] = Math.round(Q[party + '_wl']*1000/new_party_sum)/10;
@@ -271,14 +292,6 @@ if (Q.cnblp_formed && Q.cnblp_wl) {
         "seats": Math.round(Q.cnblp_wl*0.8),
     });
 }
-if (Q.other_wl) {
-    data.push({
-        "id": "other",
-        "legend": "Other",
-        "name": "Other",
-        "seats": Math.round(Q.other_wl*0.8),
-    });
-}
 if (Q.kvp_formed && Q.kvp_wl) {
     data.push({
         "id": "kvp",
@@ -287,7 +300,7 @@ if (Q.kvp_formed && Q.kvp_wl) {
         "seats": Math.round(Q.kvp_wl*0.8),
     });
 }
-if (Q.wbwb_wl) {
+if (Q.other_wl) {
     data.push({
         "id": "wbwb",
         "legend": "WBWB",
@@ -363,7 +376,7 @@ go-to: coalition_menu
 
 [? if kvp_formed: {!<tr><td><div class="box" style='background-color:#455B95'> </div> !} KVP: {!</td><td>!} [+ kvp_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_kvp_wurttemberg +] {!</td><td>!} [+ kvp_wl +]% {!</td><td>!} [+ change_kvp_wl +] {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} WBWB: {!</td><td>!} [+ wbwb_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_wbwb_wurttemberg +] {!</td><td>!} [+ wbwb_wl +]% {!</td><td>!} [+ change_wbwb_wl +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} WBWB: {!</td><td>!} [+ other_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_other_wurttemberg +] {!</td><td>!} [+ other_wl +]% {!</td><td>!} [+ change_other_wl +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} DNVP: {!</td><td>!} [+ dnvp_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_dnvp_wurttemberg +] {!</td><td>!} [+ dnvp_wl +]% {!</td><td>!} [+ change_dnvp_wl +] {!</td></tr>!}
 
@@ -371,7 +384,6 @@ go-to: coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#954B00'> </div> !} NSDAP: {!</td><td>!} [+ nsdap_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_nsdap_wurttemberg +] {!</td><td>!} [+ nsdap_wl +]% {!</td><td>!} [+ change_nsdap_wl +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_other_wurttemberg +] {!</td><td>!} [+ other_wl +]% {!</td><td>!} [+ change_other_wl +] {!</td></tr>!}
 {!</table>!}
 
 **Potential coalitions:**
