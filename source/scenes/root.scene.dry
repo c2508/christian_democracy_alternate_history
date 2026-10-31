@@ -541,7 +541,7 @@ Q.bvp_wl = 18.1;
 Q.dnvp_wl = 10.0;
 Q.dnf_wl = 0.0;
 Q.nsdap_wl = 3.7;
-Q.other_wl = 3.2;
+Q.other_wl = 21.3;
 Q.cnva_wl = 0;
 
 Q.old_spd_votes_wurttemberg = 16.0;
@@ -560,7 +560,7 @@ Q.old_bvp_votes_wurttemberg = 20.2;
 Q.old_dnvp_votes_wurttemberg = 10.4;
 Q.old_dnf_votes_wurttemberg = 0.0;
 Q.old_nsdap_votes_wurttemberg = 4.0;
-Q.old_other_votes_wurttemberg = 1.6;
+Q.old_other_votes_wurttemberg = 20.2;
 Q.old_cnva_votes_wurttemberg = 0;
 
 Q.bvp_votes = 3;
