@@ -132,6 +132,10 @@ Q.sa_strength_2 = Q.sa_strength.toFixed(1);
 
 <span style="color: #c00000;">**Reichsbanner**</span> Militarization: [+ rb_militancy : militancy +]   
 
+<span style="color: #c00000;">**Reichsbanner**</span> Unity: [+ rb_unity +]%
+
+Influence in the <span style="color: #c00000;">**Reichsbanner**</span>: [+ z_dominance +]%
+
 <span class="tooltip-text" title="The Bayernwacht mainly functions as a hall guard for the BVP." style="color: #69A2BE;">**Bayernwacht**</span> Strength: [+ bw_strength_2 +] thousand
 
 <span style="color: #69A2BE;">**Bayernwacht**</span> Militarization: [+ bw_militancy : militancy +]   
@@ -181,11 +185,7 @@ Q.sa_strength_2 = Q.sa_strength.toFixed(1);
 [? if year >= 1928 and not streetfighting_joever: Currently, the streets are [? if far_right_paramilitary and rfb_force < far_right_force:[? if far_right_paramilitary_highest: fully controlled by the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span>?][? if far_right_paramilitary_high: dominated by the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span>?][? if far_right_paramilitary_med: controlled by the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span>?][? if far_right_paramilitary_low: in the slight control of the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span>?][? if sa_paramilitary:, mainly by the violent <span style="color: #7A3C00;">**SA**</span>?]?][? if rfb_force >= far_right_force and far_right_paramilitary: controlled by the <span style="color: #700000;">**RFB**</span>?][? if democracy_paramilitary and rfb_force < democracy_force:[? if democracy_paramilitary_highest: fully controlled by the <span style="color: #000000;">repu</span><span style="color: #DD0000;">bli</span><span style="color: #FFCC00;">cans</span>?][? if democracy_paramilitary_high: dominated by the <span style="color: #000000;">repu</span><span style="color: #DD0000;">bli</span><span style="color: #FFCC00;">cans</span>?][? if democracy_paramilitary_med: controlled by the <span style="color: #000000;">repu</span><span style="color: #DD0000;">bli</span><span style="color: #FFCC00;">cans</span>?][? if democracy_paramilitary_low: in the slight control of the <span style="color: #000000;">repu</span><span style="color: #DD0000;">bli</span><span style="color: #FFCC00;">cans</span>?]?][? if rfb_force >= democracy_force and democracy_paramilitary: controlled by the <span style="color: #700000;">**RFB**</span>?][? if state_paramilitary:[? if state_paramilitary_highest: fully controlled by the <span style="color: #BFC8CC;">**State**</span>?][? if state_paramilitary_high: dominated by the <span style="color: #BFC8CC;">**State**</span>?][? if state_paramilitary_med: controlled by the <span style="color: #BFC8CC;">**State**</span>?][? if state_paramilitary_low: in the slight control of the <span style="color: #BFC8CC;">**State**</span>?]?].?]
 
 
-= Official military/paramilitaries
-
-<span style="color: #c00000;">**Reichsbanner**</span> Unity: [+ rb_unity +]%
-
-Influence in the <span style="color: #c00000;">**Reichsbanner**</span>: [+ z_dominance +]%
+= State Forces
 
 <span style="color: #808080;">**Reichswehr**</span>: [+ reichswehr_strength +] thousand troops.
 
