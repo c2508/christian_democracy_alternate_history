@@ -5,7 +5,6 @@ tags: event
 view-if: year = 1928 and month = 2
 priority: 2
 max-visits: 1
-face-image: img/redfront.jpg
 on-arrival: {! 
 Q.rpm_points = 0
 Q.rep = 0 
@@ -19,6 +18,8 @@ Q.foreclosure = 0
 go-to: originalname5
 
 = The Rural People's Movement
+
+<img src="img/redfront.jpg" style="display:block; width:100%; max-width:500px; height:auto; margin:0 auto 1em auto; object-fit:cover; object-position:top;">
 
 With the lack of investment in German Agriculture, the maturity of high interest American loans and crop failures especially in the province of Schleswig Holstein, German farmers have been facing increasing hardship, evidenced by the steadily increasing number of foreclosures. In addition, cheap agricultural imports from neighboring countries like <span style="color: #DC143C;">Pol</span><span style="color: #FFFFFF;">and</span> have led to a general decline in the price of agricultural goods but local agricultural associations have been ineffective due to factionalism and infighting. 
 
