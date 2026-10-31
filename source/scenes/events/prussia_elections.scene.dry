@@ -787,7 +787,7 @@ go-to: coalition_menu
 
 **Election results:**
 
-{!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}       ; outline: 2px; outline-style: solid;  **** **** **** **** ****
+{!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
 
 {!<table>!} 
 {!<tr><td>Party</td><td>Vote share</td><td>% Change</td><td>Landtag Seats</td><td>% Change</td></tr>!}
@@ -827,7 +827,7 @@ go-to: coalition_menu
 
 [? if lvp_formed and not lvp_dnef: {!<tr><td><div class="box" style='background-color:#FFCC00'> </div> !} LVP: {!</td><td>!} [+ lvp_votes_prussia +]% {!</td><td>!} [+ str_votes_change_lvp_prussia +] {!</td><td>!} [+ lvp_r_prussia +]% {!</td><td>!} [+ str_change_lvp_prussia +] {!</td></tr>!} ?]
 
-[? if not z_dnef: {!<tr><td><div class="box" style='background-color:#000'> </div> !} [+ z_party_name +]: {!</td><td>!} [+ z_votes_prussia +]% {!</td><td>!} [+ str_votes_change_z_prussia +] {!</td><td>!} [+ z_r_prussia +]% {!</td><td>!} [+ str_change_z_prussia +] {!</td></tr>!} ?]
+[? if not z_dnef: {!<tr><td><div class="box2" style='background-color:#1A0000; outline: 2px; outline-style: solid;'> </div> !} **[+ z_party_name +]**: {!</td><td>!} **[+ z_votes_prussia +]**% {!</td><td>!} **[+ str_votes_change_z_prussia +]** {!</td><td>!} **[+ z_r_prussia +]**% {!</td><td>!} **[+ str_change_z_prussia +]** {!</td></tr>!} ?]
 
 [? if not lvp_formed and dvp_exist and not dvp_dnef: {!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !} DVP: {!</td><td>!} [+ dvp_votes_prussia +]% {!</td><td>!} [+ str_votes_change_dvp_prussia +] {!</td><td>!} [+ dvp_r_prussia +]% {!</td><td>!} [+ str_change_dvp_prussia +] {!</td></tr>!} ?]
 
