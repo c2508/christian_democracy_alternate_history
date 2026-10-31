@@ -6,9 +6,9 @@ tags: event
 view-if: year == 1928 and month == 2
 max-visits: 1
 
-<img src="img/Kabinett_Marx_IV.jpg" style="float:left; border-radius: 13px; margin-right:1em;  margin-bottom:0.5em; object-fit:cover; object-position:top; border:5px solid #000000ff;">
-
 = The Fall of Marx IV
+
+<img src="img/Kabinett_Marx_IV.jpg" style="float:left; margin-right:1em; margin-bottom:0.5em; object-fit:cover; object-position:top; border:5px solid #000000ff;">
 
 Following last year's controversial civil service reforms—strongly opposed by Stegerwald and the trade union leadership—the reignition of class conflict has proven to be detrimental to internal party unity. In response, the national leadership has scrambled to find a unifying policy agreeable to the divergent wings of the party: a comprehensive Reich School Law. Such a measure would have united the party through shared religious concerns and Kulterpolitik, while also having a greater chance of passing given the <span style="color: #3E88B3;">**DNVP**</span>’s presence in government.
 
