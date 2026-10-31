@@ -254,7 +254,7 @@ Q.woke_joos = 0;
 Q.clerical_relation = 5;
 Q.cvp_stegerwald = 0;
 Q.non_cvp_stegerwald = 0;
-Q.streetfighting_popup = 0;
+Q.streetfighting_urgency = 0;
 Q.streetfighting_seen = 0;
 
 Q.interior_police_strength = 50;
