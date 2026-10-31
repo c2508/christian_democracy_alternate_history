@@ -1,5 +1,5 @@
 title: Württemberg Landtag Election
-view-if: year >=  next_election_year_wurttemberg and month >= next_election_month_wurttemberg
+view-if: year >= next_election_year_wurttemberg and month >= next_election_month_wurttemberg
 new-page: true
 tags: event
 priority: 3
@@ -39,7 +39,6 @@ Q.adjustmentFactors_wp_wurttemberg = 0.24;
 Q.adjustmentFactors_cnblp_wurttemberg = 0.7;
 Q.adjustmentFactors_kvp_wurttemberg = 0.8;
 Q.adjustmentFactors_csvd_wurttemberg = 1.42;
-Q.adjustmentFactors_wbwb_wurttemberg = 3.00;
 Q.adjustmentFactors_dnvp_wurttemberg = 0.4;
 Q.adjustmentFactors_dnf_wurttemberg = 0.5;
 Q.adjustmentFactors_nsdap_wurttemberg = 0.7;
@@ -56,7 +55,6 @@ Q.adjustmentFactors_cnblp_wurttemberg = 0.7;
 Q.adjustmentFactors_bvp_wurttemberg = 3.58; 
 Q.adjustmentFactors_kvp_wurttemberg = 0.7;
 Q.adjustmentFactors_csvd_wurttemberg = 1.58;
-Q.adjustmentFactors_wbwb_wurttemberg = 4.00;
 Q.adjustmentFactors_dnvp_wurttemberg = 0.71;
 Q.adjustmentFactors_dnf_wurttemberg = 0.5;
 Q.adjustmentFactors_nsdap_wurttemberg = 0.73;
@@ -160,7 +158,7 @@ Q.grand_coalition_wurttemberg = parseFloat((Q.spd_wl + Q.ddp_wl + Q.z_wl + Q.dvp
 Q.christian_coalition_toleration_both_wurttemberg =  parseFloat((Q.z_wl + Q.dnvp_wl + Q.ddp_wl + Q.dvp_wl + Q.other_wl).toFixed(1));
 Q.bourgeois_coalition_wurttemberg = parseFloat((Q.ddp_wl + Q.z_wl + Q.dvp_wl + Q.other_wl + Q.kvp_wl).toFixed(1));
 Q.christian_coalition_toleration_wurttemberg =  parseFloat((Q.z_wl + Q.dnvp_wl + Q.dvp_wl + Q.other_wl).toFixed(1));
-Q.christian_coalition_wurttemberg =  parseFloat((Q.z_wl + Q.dnvp_wl + Q.wbwb_wl ).toFixed(1));
+Q.christian_coalition_wurttemberg =  parseFloat((Q.z_wl + Q.dnvp_wl + Q.other_wl ).toFixed(1));
 Q.right_coalition_wurttemberg = parseFloat(( Q.z_wl + Q.dvp_wl + Q.other_wl + Q.kvp_wl + Q.dnvp_wl).toFixed(1));
 if (Q.dnvp_ideology === "Radical") Q.far_right_coalition_wurttemberg = parseFloat((Q.dnvp_wl + Q.nsdap_wl).toFixed(1));
 if (Q.dnf_formed) Q.far_right_coalition_wurttemberg = parseFloat((Q.dnf_wl + Q.nsdap_wl).toFixed(1));
