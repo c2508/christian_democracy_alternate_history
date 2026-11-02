@@ -182,6 +182,7 @@ if (Q.total_votes_wl > 0) {
     Q.other_wl = (Q.other_wl / Q.total_votes_wl) * 100;
     Q.kvp_wl = (Q.kvp_wl / Q.total_votes_wl) * 100;
     Q.dnf_wl = (Q.dnf_wl / Q.total_votes_wl) * 100;
+}
 
 if (!Q.lvp_formed && !Q.nfvp_formed) Q.weimar_coalition_wurttemberg = parseFloat((Q.spd_wl + Q.ddp_wl + Q.z_wl + Q.csrp_wl).toFixed(1));
 if (Q.lvp_formed || Q.nfvp_formed) Q.weimar_coalition_wurttemberg = parseFloat((Q.spd_wl + Q.dvp_wl + Q.z_wl + Q.csrp_wl).toFixed(1));
