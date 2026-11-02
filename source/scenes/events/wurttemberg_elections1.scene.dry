@@ -184,6 +184,57 @@ if (Q.total_votes_wl > 0) {
     Q.dnf_wl = (Q.dnf_wl / Q.total_votes_wl) * 100;
 }
 
+function allocateSeats(percentages, totalSeats = 80) {
+    const exactSeats = {};
+    const flooredSeats = {};
+    const remainders = [];
+
+    let totalFlooredSeats = 0;
+    for (const party in percentages) {
+        const exact = (percentages[party] * totalSeats) / 100;
+        const floored = Math.floor(exact);
+        const remainder = exact - floored;
+
+        exactSeats[party] = exact;
+        flooredSeats[party] = floored;
+        totalFlooredSeats += floored;
+
+        remainders.push({ party, remainder });
+    }
+
+    const seatsToDistribute = totalSeats - totalFlooredSeats;
+    remainders.sort((a, b) => b.remainder - a.remainder);
+
+    for (let i = 0; i < seatsToDistribute; i++) {
+        flooredSeats[remainders[i].party]++;
+    }
+
+    return flooredSeats;
+}
+
+const inputPercentages = {
+    spd_wl: Q.spd_wl,
+    aspd_wl: Q.aspd_wl,
+    sapd_wl: Q.sapd_wl,
+    kpd_wl: Q.kpd_wl,
+    ddp_wl: Q.ddp_wl,
+    lvp_wl: Q.lvp_wl,
+    z_wl: Q.z_wl,
+    dvp_wl: Q.dvp_wl,
+    dnvp_wl: Q.dnvp_wl,
+    nsdap_wl: Q.nsdap_wl,
+    wp_wl: Q.wp_wl,
+    farm_wl: Q.farm_wl,
+    vrp_wl: Q.vrp_wl,
+    kvp_wl: Q.kvp_wl,
+    dnf_wl: Q.dnf_wl
+};
+
+const allocatedSeats = allocateSeats(inputPercentages);
+
+for (const party in allocatedSeats) {
+    Q[party] = parseFloat(((allocatedSeats[party] * 100) / 80).toFixed(1));
+
 if (!Q.lvp_formed && !Q.nfvp_formed) Q.weimar_coalition_wurttemberg = parseFloat((Q.spd_wl + Q.ddp_wl + Q.z_wl + Q.csrp_wl).toFixed(1));
 if (Q.lvp_formed || Q.nfvp_formed) Q.weimar_coalition_wurttemberg = parseFloat((Q.spd_wl + Q.dvp_wl + Q.z_wl + Q.csrp_wl).toFixed(1));
 if (Q.aspd_exist && Q.aspd_ideology == "Moderate") Q.weimar_coalition_wurttemberg = parseFloat((Q.weimar_coalition_wurttemberg + Q.aspd_wl).toFixed(1));
