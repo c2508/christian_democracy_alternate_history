@@ -150,7 +150,7 @@ if (new_party_sum > 0) {
 
 Q.total_votes_wl = Q.spd_wl + Q.sapd_wl + Q.kpd_wl + Q.ddp_wl + Q.lvp_wl + Q.z_wl + Q.dvp_wl + Q.dnvp_wl + Q.cnblp_wl + Q.wp_wl + Q.csvd_wl + Q.nsdap_wl + Q.other_wl + Q.kvp_wl + Q.dnf_wl;
 
-if (Q.total_votes_wl > 0) {
+if (Q.total_votes_wl < 100) {
     Q.spd_wl = (Q.spd_wl / Q.total_votes_wl) * 100;
     Q.sapd_wl = (Q.sapd_wl / Q.total_votes_wl) * 100;
     Q.kpd_wl = (Q.kpd_wl / Q.total_votes_wl) * 100;
