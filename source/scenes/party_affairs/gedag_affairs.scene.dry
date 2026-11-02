@@ -19,11 +19,11 @@ The <span style="color: #a2c617;">**Gedag**</span> is a
 - @yellow_union: Drive out the yellow unions from the bourgeois parties
 - @nazi_purge: Guard against the increasing influence of the <span style="color: #7A3C00;">**Nazi**</span> movement in the <span style="color: #a2c617;">**DHV**</span>
 - @csvd_rally: Conduct joint rallies with the <span style="color: #8ED8E4;">**CSVD**</span>
-- @fund_nazi: Fund the left wing of the <span style="color: #7A3C00;">**Nazis**</span>
+- @fund_nazi: Support left wing members of the <span style="color: #7A3C00;">**National Socialists**</span>
 - @easy_discard
 
 @yellow_union
-subtitle: Closely affliated with employers, the yellow unions have jostled with the <span style="color: #000000;">**DGB**</span> over influence in the parties of the bourgeois right. This has allowed industrialists in the <span style="color: #C0A054;">**DVP**</span> and <span style="color: #3E88B3;">**DNVP**</span> a disproportionate say in party affairs, hampering the passage of pro labor legislation in the Reichstag.
+subtitle: Closely affliated with employers, the yellow unions have jostled with the <span style="color: #000000;">**DGB**</span> over influence in the parties of the bourgeois right.
 choose-if: year < 1930
 unavailable-subtitle: The yellow unions have collapsed under the weight of their own incompetence.
 on-arrival: workers_z += 1*(1-dissent); workers_z -= 1/3 if unemployed >= 15; workers_z -= 1/3 if unemployed >= 25; workers_z += 2*(1-dissent) if peoples_party == 1; resources -= 3
@@ -41,13 +41,13 @@ Quietly, those with suspected <span style="color: #7A3C00;">**National Socialist
 @csvd_rally
 subtitle: With their recent founding, the <span style="color: #8ED8E4;">**CSVD**</span> needs our help to wrest the votes of nationalist workers from the <span style="color: #3E88B3;">**DNVP**</span>.
 choose-if: csvd_formed = 1
-unavailable-subtitle: The <span style="color: #8ED8E4;">**CSVD**</span> does not exist. 
+unavailable-subtitle: The <span style="color: #8ED8E4;">**CSVD**</span> is irrelevant on the national stage.  
 on-arrival: workers_z += 1*(1-dissent); workers_z -= 1/3 if unemployed >= 15; workers_z -= 1/3 if unemployed >= 25; workers_z += 2*(1-dissent) if peoples_party == 1; resources -= 3
 
 Together with unionists like Hulser and Behrens, we rail against the plutocracy and bankruptcy of Hugenberg's <span style="color: #3E88B3;">**DNVP**</span>. Organised in <span style="color: #3E88B3;">**DNVP**</span> strongholds like Pomerania and East Prussia, we aim to capitalise on regional discontent with Hugenberg's policies and establish our footing there.
 
 @fund_nazi
-subtitle: Under the leadership of Gregor Strasser, the left wing of the <span style="color: #7A3C00;">**NSDAP**</span> has espoused a firmly anti-capitalist stance much like our own. Strengthening their influence in the <span style="color: #7A3C00;">**NSDAP**</span> might allow them to clarify the ambigous economic policies of the <span style="color: #7A3C00;">**Nazis**</span> in favor of organised labor.
+subtitle: Strengthening their influence in the <span style="color: #7A3C00;">**NSDAP**</span> might allow them to clarify the ambigous economic policies of the <span style="color: #7A3C00;">**Nazis**</span> in favor of organised labor.
 on-arrival: spd_relation += 1
 
 as
