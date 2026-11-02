@@ -213,21 +213,21 @@ function allocateSeats(percentages, totalSeats = 80) {
 }
 
 const inputPercentages = {
-    spd_wl: Q.spd_wl,
-    aspd_wl: Q.aspd_wl,
-    sapd_wl: Q.sapd_wl,
-    kpd_wl: Q.kpd_wl,
-    ddp_wl: Q.ddp_wl,
-    lvp_wl: Q.lvp_wl,
-    z_wl: Q.z_wl,
-    dvp_wl: Q.dvp_wl,
-    dnvp_wl: Q.dnvp_wl,
-    nsdap_wl: Q.nsdap_wl,
-    wp_wl: Q.wp_wl,
-    farm_wl: Q.farm_wl,
-    vrp_wl: Q.vrp_wl,
-    kvp_wl: Q.kvp_wl,
-    dnf_wl: Q.dnf_wl
+    spd_wl: Q.spd_wl || 0,
+    sapd_wl: Q.sapd_wl || 0,
+    kpd_wl: Q.kpd_wl || 0,
+    ddp_wl: Q.ddp_wl || 0,
+    lvp_wl: Q.lvp_wl || 0,
+    z_wl: Q.z_wl || 0,
+    dvp_wl: Q.dvp_wl || 0,
+    dnvp_wl: Q.dnvp_wl || 0,
+    cnblp_wl: Q.cnblp_wl || 0,
+    wp_wl: Q.wp_wl || 0,
+    csvd_wl: Q.csvd_wl || 0,
+    nsdap_wl: Q.nsdap_wl || 0,
+    other_wl: Q.other_wl || 0,
+    kvp_wl: Q.kvp_wl || 0,
+    dnf_wl: Q.dnf_wl || 0
 };
 
 const allocatedSeats = allocateSeats(inputPercentages);
