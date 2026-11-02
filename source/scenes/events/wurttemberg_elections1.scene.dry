@@ -148,9 +148,25 @@ if (new_party_sum > 0) {
     }
 }
 
+if (Q.spd_wl === undefined) Q.spd_wl = 0;
+if (Q.sapd_wl === undefined) Q.sapd_wl = 0;
+if (Q.kpd_wl === undefined) Q.kpd_wl = 0;
+if (Q.ddp_wl === undefined) Q.ddp_wl = 0;
+if (Q.lvp_wl === undefined) Q.lvp_wl = 0;
+if (Q.z_wl === undefined) Q.z_wl = 0;
+if (Q.dvp_wl === undefined) Q.dvp_wl = 0;
+if (Q.dnvp_wl === undefined) Q.dnvp_wl = 0;
+if (Q.cnblp_wl === undefined) Q.cnblp_wl = 0;
+if (Q.wp_wl === undefined) Q.wp_wl = 0;
+if (Q.csvd_wl === undefined) Q.csvd_wl = 0;
+if (Q.nsdap_wl === undefined) Q.nsdap_wl = 0;
+if (Q.other_wl === undefined) Q.other_wl = 0;
+if (Q.kvp_wl === undefined) Q.kvp_wl = 0;
+if (Q.dnf_wl === undefined) Q.dnf_wl = 0;
+
 Q.total_votes_wl = Q.spd_wl + Q.sapd_wl + Q.kpd_wl + Q.ddp_wl + Q.lvp_wl + Q.z_wl + Q.dvp_wl + Q.dnvp_wl + Q.cnblp_wl + Q.wp_wl + Q.csvd_wl + Q.nsdap_wl + Q.other_wl + Q.kvp_wl + Q.dnf_wl;
 
-if (Q.total_votes_wl < 100) {
+if (Q.total_votes_wl > 0) {
     Q.spd_wl = (Q.spd_wl / Q.total_votes_wl) * 100;
     Q.sapd_wl = (Q.sapd_wl / Q.total_votes_wl) * 100;
     Q.kpd_wl = (Q.kpd_wl / Q.total_votes_wl) * 100;
@@ -159,11 +175,13 @@ if (Q.total_votes_wl < 100) {
     Q.z_wl = (Q.z_wl / Q.total_votes_wl) * 100;
     Q.dvp_wl = (Q.dvp_wl / Q.total_votes_wl) * 100;
     Q.dnvp_wl = (Q.dnvp_wl / Q.total_votes_wl) * 100;
+    Q.cnblp_wl = (Q.cnblp_wl / Q.total_votes_wl) * 100;
+    Q.wp_wl = (Q.wp_wl / Q.total_votes_wl) * 100;
+    Q.csvd_wl = (Q.csvd_wl / Q.total_votes_wl) * 100;
     Q.nsdap_wl = (Q.nsdap_wl / Q.total_votes_wl) * 100;
     Q.other_wl = (Q.other_wl / Q.total_votes_wl) * 100;
     Q.kvp_wl = (Q.kvp_wl / Q.total_votes_wl) * 100;
     Q.dnf_wl = (Q.dnf_wl / Q.total_votes_wl) * 100;
-}
 
 if (!Q.lvp_formed && !Q.nfvp_formed) Q.weimar_coalition_wurttemberg = parseFloat((Q.spd_wl + Q.ddp_wl + Q.z_wl + Q.csrp_wl).toFixed(1));
 if (Q.lvp_formed || Q.nfvp_formed) Q.weimar_coalition_wurttemberg = parseFloat((Q.spd_wl + Q.dvp_wl + Q.z_wl + Q.csrp_wl).toFixed(1));
