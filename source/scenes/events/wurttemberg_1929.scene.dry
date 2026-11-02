@@ -3,7 +3,7 @@ subtitle: The Christian Coalition's position is precarious...
 frequency: 1000
 new-page: true
 tags: event
-view-if: year == 1929 and month == 8 and christian_coalition_toleration_wurttemberg <= 52.5 and in_christian_coalition_toleration_wurttemberg = 1
+view-if: year == 1929 and month == 8 and christian_coalition_toleration_wurttemberg <= 52.7 and in_christian_coalition_toleration_wurttemberg = 1
 max-visits: 1
 face-image: img/Kabinett_Marx_IV.jpg
 on-arrival: pro_republic -= 1
