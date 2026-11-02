@@ -258,7 +258,7 @@ Q.streetfighting_urgency = 0;
 Q.bvp_reunified = 0;
 Q.z_ideology = "Political Catholicism";
 Q.cnblp_ideology = "Agrarianism";
-Q.dnvp_ideology = "Authoritarian Conservatism";
+Q.dnvp_ideology = "National Conservatism";
 
 Q.interior_police_strength = 50;
 Q.interior_police_militancy = 1;
