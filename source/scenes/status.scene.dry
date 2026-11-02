@@ -109,7 +109,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 [? if cnblp_formed : <span style="color: #006400;">**CNBLP**</span>: [+ cnblp_ideology +] ([? if year <= 1930 : Baum ?][? if year > 1930 : Höfer ?]) ?]
 
-<span style="color: #3E88B3;">**DNVP**</span> : [+ dnvp_ideology +] ([+ dnvp_leader +])
+<span style="color: #3E88B3;">**DNVP**</span>: [+ dnvp_ideology +] ([+ dnvp_leader +])
 
 
 = Internal Factions of the Centre Party
