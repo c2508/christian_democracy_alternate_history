@@ -234,6 +234,7 @@ const allocatedSeats = allocateSeats(inputPercentages);
 
 for (const party in allocatedSeats) {
     Q[party] = parseFloat(((allocatedSeats[party] * 100) / 80).toFixed(1));
+}
 
 if (!Q.lvp_formed && !Q.nfvp_formed) Q.weimar_coalition_wurttemberg = parseFloat((Q.spd_wl + Q.ddp_wl + Q.z_wl + Q.csrp_wl).toFixed(1));
 if (Q.lvp_formed || Q.nfvp_formed) Q.weimar_coalition_wurttemberg = parseFloat((Q.spd_wl + Q.dvp_wl + Q.z_wl + Q.csrp_wl).toFixed(1));
