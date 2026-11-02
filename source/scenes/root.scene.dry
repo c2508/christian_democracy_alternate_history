@@ -256,6 +256,7 @@ Q.cvp_stegerwald = 0;
 Q.non_cvp_stegerwald = 0;
 Q.streetfighting_urgency = 0;
 Q.bvp_reunified = 0;
+Q.cnblp_ideology = "Agrarianism";
 
 Q.interior_police_strength = 50;
 Q.interior_police_militancy = 1;
