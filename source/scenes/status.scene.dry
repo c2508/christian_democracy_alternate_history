@@ -105,7 +105,12 @@ Economic growth: [+ economic_growth_2 +]%
 
 <span style="color: #c00000;">**SPD**</span>: Center Marxism [? if muller_dead = 1 : (Wels-Crispen) ?][? if muller_dead = 0 : (Wels-Muller) ?]
 
-<span style="color: #000000;">**Z**</span>: [? if z_leader = "Marx" : Political Catholicism ?][? if z_leader = "Joos" and woke_joos = 1 : Christian Democracy ?][? if z_leader = "Joos" and chud_joos = 1 : Political Catholicism ?][? if z_leader = "Stegerwald" and cvp_stegerwald = 1 : Christian Corporatism ?][? if z_leader = "Stegerwald" and non_cvp_stegerwald = 0 : Political Catholicism ?][? if z_leader = "Kaas" : Political Catholicism ?] ([+ z_leader +])
+<span style="color: #000000;">**Z**</span>: [+ z_ideology +] ([+ z_leader +])
+
+[? if cnblp_formed : <span style="color: #006400;">**CNBLP**</span>: [+ cnblp_ideology +] ([? if year <= 1930 : Baum ?][? if year > 1930 : Höfer ?])
+
+<span style="color: #3E88B3;">**DNVP**</span> : [+ dnvp_ideology +] ([+ dnvp_leader +])
+
 
 = Internal Factions of the Centre Party
 
