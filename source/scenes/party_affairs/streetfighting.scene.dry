@@ -18,6 +18,7 @@ We cannot sit idly and watch these extremists slaughter innocents in the streets
 - @prussian_police_training: Use the Prussian police to help train the <span style="color: #c00000;">**Reichsbanner**</span>.
 - @bw: We can fund the <span style="color: #0094FF;">Bayernwacht</span>, the <span style="color: #69A2BE;">**BVP's**</span> regional paramilitary. 
 - @police: Turn to the state police to crack down on the paramilitaries
+- @nothing: There is nothing we can do about it. 
 - @easy_discard
 
 @para_urgency
@@ -36,22 +37,26 @@ unavailable-subtitle: [? if pro_republic > 60 : The situation is not desperate e
 go-to: endorse_rb
 
 @prussian_police_training
-view-if: spd_prussia == 1 and z_prussia == 1 and prussian_police_loyalty > 0.5
+unavailable-subtitle: [? if spd_prussia == 0 and z_prussia == 1 : Our current Prussian Coalition would not let this happen. ?][? if z_prussia == 0 : We are currently not in the Prussian Government. ?][? if prussian_police_loyalty <= 0.5 : The Prussian Police are unwilling. ?]
+choose-if: spd_prussia == 1 and z_prussia == 1 and prussian_police_loyalty > 0.5
 on-arrival: rb_militancy += 0.05; sa_strength += 50; prussian_police_training += 1
 
 The loyal sections of the Prussian police can help train the <span style="color: #c00000;">**Reichsbanner**</span>.
 
 @bw
-choose-if: bvp_reunified = 1 and resources > 0 and year >= 1931 
-unavailable_subtitle: [? if bvp_reunified = 0 : The <span style="color: #69A2BE;">**BVP**</span> does not need our help. ?][? if resources = 0 : Not enough resources ?][? if year <= 1930 : The <span style="color: #69A2BE;">**BVP**</span> thinks that it is a waste of money. ?]
+choose-if: (bvp_reunified = 1 and resources > 0 and year >= 1931) or (bvp_reunified = 0 and resources > 0 and year >= 1932 and month >= 6)
+unavailable_subtitle: [? if bvp_reunified = 0 : The <span style="color: #69A2BE;">**BVP**</span> does not need our help. ?][? if resources = 0 : Not enough resources ?][? if year < 1931 and bvp_reunified = 1 : The <span style="color: #69A2BE;">**BVP**</span> thinks that it is a waste of money. ?][? if year <= 1932 and month <= 6 and bvp_reunified = 1 : The <span style="color: #69A2BE;">**BVP**</span> does not need our help. ?]
 view-if: streetfighting_urgency = 1 
-on-arrival: bw_militancy += 0.065; bw_strength += 2.5; resources -= 1
+on-arrival: bw_militancy += 0.065; bw_strength += 3.5; resources -= 1
 
 In these trying times, the <span style="color: #69A2BE;">**BVP**</span> is grateful for any bit of aid we can offer
 
 @police
 choose-if: z == prussia or bvp_reunfied = 0
-unavailable-subtitle: We are not in any major state governments.
-on-arrival: prussian_police_strength += 5 if z == prussia; sa_strength -= 1; rfb_strength -= 1
+unavailable-subtitle: We are not in any major state governments. 
+on-arrival: prussian_police_strength += 5 if z == prussia; sa_strength -= 7.5; rfb_strength -= 7.5
 
 This is an amenable compromise for all factions of the party and prepares the state police for further encounters on the streets. 
+
+@nothing
+on-arrival: streetfighting_urgency -= 1; left_dissent += 3
