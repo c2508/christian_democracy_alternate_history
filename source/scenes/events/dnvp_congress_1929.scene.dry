@@ -82,7 +82,7 @@ view-if: young_plan_signatures < 10
 choose-if: pro_republic > 60 and dnvp_relation > 65 and young_plan_signatures < 10 and not old_middle_dnvp >= 25 and right_strength >= 20
 subtitle: Hugenburg's experiment comes to an end.
 unavailable-subtitle: Another leader like Westarp is not what the party wants.
-on-arrival: dnvp_leader = "Wildau"; pro_republic += 2; dnvp_relation += 5; dvp_right += 2; right_strength += 2; new_middle_dnvp += 5; rural_dnvp -= 2; catholics_dnvp += 2; workers_dnvp += 3
+on-arrival: dnvp_leader = "Lindeiner-Wildau"; pro_republic += 2; dnvp_relation += 5; dvp_right += 2; right_strength += 2; new_middle_dnvp += 5; rural_dnvp -= 2; catholics_dnvp += 2; workers_dnvp += 3; dnvp_ideology = "Pragmatic Conservatism"
 face-image: img/portraits/Ludwig_Kaas.jpg
 
 As such, in the vote over the expulsion of Treviranus, the Executive Committee has overwhelmingly sided with Treviranus. Emboldened by such a turn of events, the anti-Hugenburg elements on the left have initiated a vote of no-confidence in his leadership, which has passed with votes from the <span style="color: #6D5298;">Christian Socials</span>, <span style="color: #0087DC;">Young Conservatives</span> and the disgruntled <span style="color: #385A38;">agrarian</span> wing. After Hugenburg’s removal, the Executive Committee has voted in Hans-Erdmann von Lindeiner-Wildau as the new party chair.
@@ -94,7 +94,7 @@ view-if: young_plan_signatures < 10
 choose-if: young_plan_signatures < 10 and old_middle_dnvp >= 25 and (not pro_republic > 60 or not dnvp_relation > 65 or not right_strength >= 20)
 subtitle: Hugenburg's experiment comes to an end.
 unavailable-subtitle: Most of the <span style="color: #3E88B3;">**DNVP**</span> is still skeptical of Treviranus' ideas. 
-on-arrival: dnvp_leader = "Schlange"; nationalism += 3; dnvp_relation += 3; dvp_right += 1; old_middle_dnvp += 3; rural_dnvp += 3
+on-arrival: dnvp_leader = "Schlange-Schöningen"; nationalism += 3; dnvp_relation += 3; dvp_right += 1; old_middle_dnvp += 3; rural_dnvp += 3; dnvp_ideology = "Agrarian Conservatism"
 face-image: img/portraits/Ludwig_Kaas.jpg
 
 As such, in the vote over the expulsion of Treviranus, the Executive Committee has overwhelmingly sided with Treviranus. Emboldened by such a turn of events, the anti-Hugenburg elements on the left have initiated a vote of no-confidence in his leadership, which has passed with votes from the <span style="color: #6D5298;">Christian Socials</span>, <span style="color: #0087DC;">Young Conservatives</span> and the disgruntled <span style="color: #385A38;">agrarian</span> wing. After Hugenburg’s removal, the Executive Committee has voted in Hans Schlange-Schöningen as the new party chair. 
