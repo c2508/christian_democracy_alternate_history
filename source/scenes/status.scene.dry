@@ -99,6 +99,14 @@ Economic growth: [+ economic_growth_2 +]%
 
 <span style="color: #7A3C00;">**NSDAP**</span>: [+ nsdap_relation : relationships +]
 
+= Party Leadership
+
+<span style="color: #700000;">**Communist Party of Germany**</span>: [? if kpd_party_leader = "Thalmann" : Third Period Marxism-Leninism ?][? if kpd_party_leader = "Concillators" : United Front Marxism-Leninism ?] ([+ kpd_leader +])
+
+<span style="color: #c00000;">**Social Democratic Party of Germaby**</span>: Center Marxism [? if muller dead = 1 : (Wels-Crispen) ?][? if muller_dead = 0 : (Wels-Muller) ?]
+
+<span style="color: #000000;">**Center Party**</span>: [? if z_leader = "Joos" and woke_joos = 1 : Christian Democracy ?][? if z_leader = "Joos" and chud_joos = 1 : Political Catholicism ?][? if z_leader = "Stegerwald" and cvp_stegerwald = 1 : Christian Corporatism ?][? if z_leader = "Stegerwald" and non_cvp_stegerwald = 0 : Political Catholicism ?][? if z_leader = "Kaas" : Political Catholicism ?]
+
 = Internal Factions of the Centre Party
 
 {!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the KPD.">Christian Left</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
@@ -110,7 +118,6 @@ Economic growth: [+ economic_growth_2 +]%
 {!<span class="tooltip-text" title="Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy.">Catholic Conservatives</span>!} strength: [+ right_strength : strength +], dissent: [+ right_dissent : dissent +]
 
 [? if neorevisionism > 0 : Young Conservatives strength: [+ young_conservatives_strength : strength +], dissent: [+ young_conservatives_dissent : dissent +] ?]
-
 
 @paramilitaries
 on-arrival: {!
