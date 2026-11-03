@@ -276,6 +276,30 @@ if (new_party_sum_prussia > 0) {
     }
 }
 
+var r_total_prussia = (Q.spd_r_prussia || 0) + (Q.sapd_r_prussia || 0) + (Q.kpd_r_prussia || 0) + (Q.ddp_r_prussia || 0) + (Q.lvp_r_prussia || 0) + (Q.z_r_prussia || 0) + (Q.dvp_r_prussia || 0) + (Q.wp_r_prussia || 0) + (Q.cnblp_r_prussia || 0) + (Q.csvd_r_prussia || 0) + (Q.kvp_r_prussia || 0) + (Q.dnvp_r_prussia || 0) + (Q.nsdap_r_prussia || 0) + (Q.other_r_prussia || 0) + (Q.dnf_r_prussia || 0) + (Q.dnef_r_prussia || 0);
+
+if (r_total_prussia > 0) {
+    Q.spd_r_prussia = Math.round(((Q.spd_r_prussia || 0) / r_total_prussia) * 1000) / 10;
+    Q.sapd_r_prussia = Math.round(((Q.sapd_r_prussia || 0) / r_total_prussia) * 1000) / 10;
+    Q.kpd_r_prussia = Math.round(((Q.kpd_r_prussia || 0) / r_total_prussia) * 1000) / 10;
+    Q.ddp_r_prussia = Math.round(((Q.ddp_r_prussia || 0) / r_total_prussia) * 1000) / 10;
+    Q.lvp_r_prussia = Math.round(((Q.lvp_r_prussia || 0) / r_total_prussia) * 1000) / 10;
+    Q.z_r_prussia = Math.round(((Q.z_r_prussia || 0) / r_total_prussia) * 1000) / 10;
+    Q.dvp_r_prussia = Math.round(((Q.dvp_r_prussia || 0) / r_total_prussia) * 1000) / 10;
+    Q.wp_r_prussia = Math.round(((Q.wp_r_prussia || 0) / r_total_prussia) * 1000) / 10;
+    Q.cnblp_r_prussia = Math.round(((Q.cnblp_r_prussia || 0) / r_total_prussia) * 1000) / 10;
+    Q.csvd_r_prussia = Math.round(((Q.csvd_r_prussia || 0) / r_total_prussia) * 1000) / 10;
+    Q.kvp_r_prussia = Math.round(((Q.kvp_r_prussia || 0) / r_total_prussia) * 1000) / 10;
+    Q.dnvp_r_prussia = Math.round(((Q.dnvp_r_prussia || 0) / r_total_prussia) * 1000) / 10;
+    Q.nsdap_r_prussia = Math.round(((Q.nsdap_r_prussia || 0) / r_total_prussia) * 1000) / 10;
+    Q.other_r_prussia = Math.round(((Q.other_r_prussia || 0) / r_total_prussia) * 1000) / 10;
+    Q.dnf_r_prussia = Math.round(((Q.dnf_r_prussia || 0) / r_total_prussia) * 1000) / 10;
+    Q.dnef_r_prussia = Math.round(((Q.dnef_r_prussia || 0) / r_total_prussia) * 1000) / 10;
+
+    // Fix the leftover rounding gap (usually 0.1 or less) by giving it to the SPD
+    var r_after_prussia = Q.spd_r_prussia + Q.sapd_r_prussia + Q.kpd_r_prussia + Q.ddp_r_prussia + Q.lvp_r_prussia + Q.z_r_prussia + Q.dvp_r_prussia + Q.wp_r_prussia + Q.cnblp_r_prussia + Q.csvd_r_prussia + Q.kvp_r_prussia + Q.dnvp_r_prussia + Q.nsdap_r_prussia + Q.other_r_prussia + Q.dnf_r_prussia + Q.dnef_r_prussia;
+    Q.spd_r_prussia = parseFloat((Q.spd_r_prussia + (100 - r_after_prussia)).toFixed(1));
+}
 if (Q.dnef_formed) {
     Q.schleicher_dnef_r_prussia = Q.dnef_r_prussia;
     Q.schleicher_dnef_votes_prussia = Q.dnef_votes_prussia;
