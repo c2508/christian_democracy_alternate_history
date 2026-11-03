@@ -97,11 +97,35 @@ for (var party of Q.parties) {
     total_support += Q[party + '_support'];
 }
 
+// CHANGE A: parties with no row in the table get no votes
+if (!Q.aspd_exist) Q.aspd_support = 0;
+if (!Q.ddp_exist) Q.ddp_support = 0;
+if (!Q.csvd_exist) Q.csvd_support = 0;
+if (!Q.cnblp_formed) Q.cnblp_support = 0;
+if (!Q.kvp_formed) Q.kvp_support = 0;
+if (!Q.dnf_formed) Q.dnf_support = 0;
+Q.sapd_support = 0;
+Q.lvp_support = 0;
+
+total_support = 0;
+for (var party of Q.parties) {
+    total_support += Q[party + '_support'] || 0;
+}
+
 // Normalize support (fraction)
 for (var party of Q.parties) {
     Q[party + '_normalized_wurttemberg'] = Q[party + '_support'] / total_support;
     Q[party + '_votes_wurttemberg'] = Math.round(Q[party + '_normalized_wurttemberg'] * 1000) / 10;
 }
+
+// CHANGE B: add any rounding gap to the biggest party so votes total exactly 100
+var vote_sum = 0;
+var biggest = 'spd';
+for (var party of Q.parties) {
+    vote_sum += Q[party + '_votes_wurttemberg'];
+    if (Q[party + '_votes_wurttemberg'] > Q[biggest + '_votes_wurttemberg']) biggest = party;
+}
+Q[biggest + '_votes_wurttemberg'] = parseFloat((Q[biggest + '_votes_wurttemberg'] + (100 - vote_sum)).toFixed(1));
 
 var new_party_sum = 0;
 for (var party of Q.parties) {
@@ -121,11 +145,12 @@ for (var party of Q.parties) {
     }
 
     Q['change_' + party + '_votes_wurttemberg'] = Q[party + '_votes_wurttemberg'] - Q['old_' + party + '_votes_wurttemberg'];
+    // CHANGE C: steady.png replaced with plain text
     var sign2 = Q['change_' + party + '_votes_wurttemberg'] > 0 
                     ? '<img src="img/arrowup.png"> ' 
                     : Q['change_' + party + '_votes_wurttemberg'] < 0 
                       ? '<img src="img/arrowdown.png"> ' 
-                      : '<img src="img/steady.png"> ';
+                      : '— ';
     Q['votes_change_' + party + '_wurttemberg'] = sign2 + Math.abs(parseFloat(Q['change_' + party + '_votes_wurttemberg'])).toFixed(1);
 
     Q['old_' + party + '_votes_wurttemberg'] = parseFloat((Q[party + '_votes_wurttemberg']).toFixed(1));
@@ -224,17 +249,19 @@ const inputPercentages = {
 
 const allocatedSeats = allocateSeats(inputPercentages);
 
+// CHANGE D: two decimals so 1 seat shows as 1.25%
 for (const party in allocatedSeats) {
-    Q[party] = parseFloat(((allocatedSeats[party] * 100) / 80).toFixed(1));
+    Q[party] = parseFloat(((allocatedSeats[party] * 100) / 80).toFixed(2));
 }
 
 for (var party of Q.parties) {
     Q['change_' + party + '_wl'] = Q[party + '_wl'] - Q['old_' + party + '_wl'];
+    // CHANGE E: steady.png replaced with plain text
     var sign = Q['change_' + party + '_wl'] > 0 
                ? '<img src="img/arrowup.png"> ' 
                : Q['change_' + party + '_wl'] < 0
                  ? '<img src="img/arrowdown.png"> '
-                 : '<img src="img/steady.png"> ';
+                 : '— ';
     Q['change_' + party + '_wl'] = sign + Math.abs(parseFloat(Q['change_' + party + '_wl'])).toFixed(1);
 }
 
