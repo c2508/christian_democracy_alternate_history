@@ -150,7 +150,7 @@ for (var party of Q.parties) {
                     ? '<img src="img/arrowup.png"> ' 
                     : Q['change_' + party + '_votes_wurttemberg'] < 0 
                       ? '<img src="img/arrowdown.png"> ' 
-                      : '— ';
+                      : '<img src="img/steady.png ';
     Q['votes_change_' + party + '_wurttemberg'] = sign2 + Math.abs(parseFloat(Q['change_' + party + '_votes_wurttemberg'])).toFixed(1);
 
     Q['old_' + party + '_votes_wurttemberg'] = parseFloat((Q[party + '_votes_wurttemberg']).toFixed(1));
