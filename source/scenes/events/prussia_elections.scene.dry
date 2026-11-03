@@ -71,7 +71,7 @@ if (Q.year == 1928) {
         lvp: 0.96,
         z: 1.02,
         dvp: 1.025,
-        wp: 1.02
+        wp: 1.02,
         dnvp: 1.3,
         nsdap: 1.0,
         other: 0.6,
