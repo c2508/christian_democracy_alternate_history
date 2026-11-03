@@ -52,7 +52,6 @@ Q.adjustmentFactors_z_wurttemberg = 1.51;
 Q.adjustmentFactors_dvp_wurttemberg = 1.14;
 Q.adjustmentFactors_wp_wurttemberg = 0.22;
 Q.adjustmentFactors_cnblp_wurttemberg = 0.7;
-Q.adjustmentFactors_bvp_wurttemberg = 3.58; 
 Q.adjustmentFactors_kvp_wurttemberg = 0.7;
 Q.adjustmentFactors_csvd_wurttemberg = 1.58;
 Q.adjustmentFactors_dnvp_wurttemberg = 0.71;
