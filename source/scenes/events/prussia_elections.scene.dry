@@ -240,6 +240,37 @@ for (var party of Q.parties) {
 }
 Q[biggest_prussia + '_votes_prussia'] = parseFloat((Q[biggest_prussia + '_votes_prussia'] + (100 - vote_sum_prussia)).toFixed(1));
 
+var table_p = ['kpd', 'spd', 'z', 'wp', 'other', 'nsdap'];
+if (Q.lvp_formed) {
+    table_p.push('lvp');
+} else {
+    table_p.push('ddp');
+    if (Q.dvp_exist) table_p.push('dvp');
+}
+if (Q.sapd_formed) table_p.push('sapd');
+if (Q.cnblp_formed) table_p.push('cnblp');
+if (Q.csvd_formed) table_p.push('csvd');
+if (Q.kvp_formed) table_p.push('kvp');
+if (!Q.cvp_formed) table_p.push('dnvp');
+if (Q.dnf_formed) table_p.push('dnf');
+
+var tsum_p = 0;
+for (var p of table_p) tsum_p += (Q[p + '_votes_prussia'] || 0);
+
+if (tsum_p > 0) {
+    var big_p = table_p[0];
+    var acc_p = 0;
+    for (var p of table_p) {
+        Q[p + '_votes_prussia'] = parseFloat((((Q[p + '_votes_prussia'] || 0) / tsum_p) * 100).toFixed(1));
+        acc_p += Q[p + '_votes_prussia'];
+        if (Q[p + '_votes_prussia'] > Q[big_p + '_votes_prussia']) big_p = p;
+    }
+    Q[big_p + '_votes_prussia'] = parseFloat((Q[big_p + '_votes_prussia'] + (100 - acc_p)).toFixed(1));
+}
+for (var p of Q.parties) {
+    if (!table_p.includes(p)) Q[p + '_votes_prussia'] = 0;
+}
+
 var new_party_sum_prussia = 0;
 var total_reichstag_without_prussia = 0; // Initialize a variable to accumulate 'reichstag_without_' values
 var total_other_party_sum_prussia = 0; // Initialize a variable to accumulate '_other_party_sum' values
