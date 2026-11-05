@@ -69,57 +69,6 @@ for (var party of Q.parties) {
     Q['old_' + party + '_votes'] = parseFloat((Q[party + '_votes']).toFixed(1));
 }
 
-    const exactSeats = {};
-    const flooredSeats = {};
-    const remainders = [];
-
-    let totalFlooredSeats = 0;
-    for (const party in percentages) {
-        const exact = (percentages[party] * totalSeats) / 100;
-        const floored = Math.floor(exact);
-        const remainder = exact - floored;
-
-        exactSeats[party] = exact;
-        flooredSeats[party] = floored;
-        totalFlooredSeats += floored;
-
-        remainders.push({ party, remainder });
-    }
-
-    const seatsToDistribute = totalSeats - totalFlooredSeats;
-    remainders.sort((a, b) => b.remainder - a.remainder);
-
-    for (let i = 0; i < seatsToDistribute; i++) {
-        flooredSeats[remainders[i].party]++;
-    }
-
-    return flooredSeats;
-}
-
-const reichstagPercentages = {};
-for (const party of Q.parties) {
-    reichstagPercentages[party + '_r'] = Q[party + '_r'] || 0;
-}
-
-const reichstagSeats = allocateSeats(reichstagPercentages, 500);
-
-for (const party of Q.parties) {
-    // keep last election's seats for the change column
-    Q['old_' + party + '_seats'] = Q[party + '_seats'] || 0;
-
-    // store seats (not %)
-    Q[party + '_seats'] = reichstagSeats[party + '_r'];
-
-    // seat change with arrow
-    const seat_diff = Q[party + '_seats'] - Q['old_' + party + '_seats'];
-    const seat_sign = seat_diff > 0
-        ? '<img src="img/arrowup.png"> '
-        : seat_diff < 0
-          ? '<img src="img/arrowdown.png"> '
-          : '<img src="img/steady.png"> ';
-    Q['str_seat_change_' + party] = seat_sign + Math.abs(seat_diff);
-}
-
 // calculate new party sum
 if (new_party_sum > 0) {
     for (var party of Q.parties) {
@@ -138,6 +87,58 @@ if (new_party_sum > 0) {
     }
 }
 
+// ===== 500-SEAT REICHSTAG =====
+function allocateSeats(percentages, totalSeats) {
+    var exactSeats = {};
+    var flooredSeats = {};
+    var remainders = [];
+
+    var totalFlooredSeats = 0;
+    for (var p in percentages) {
+        var exact = (percentages[p] * totalSeats) / 100;
+        var floored = Math.floor(exact);
+        var remainder = exact - floored;
+
+        exactSeats[p] = exact;
+        flooredSeats[p] = floored;
+        totalFlooredSeats += floored;
+
+        remainders.push({ party: p, remainder: remainder });
+    }
+
+    var seatsToDistribute = totalSeats - totalFlooredSeats;
+    remainders.sort(function (a, b) { return b.remainder - a.remainder; });
+
+    for (var i = 0; i < seatsToDistribute; i++) {
+        flooredSeats[remainders[i].party]++;
+    }
+
+    return flooredSeats;
+}
+
+var reichstagPercentages = {};
+for (var party of Q.parties) {
+    reichstagPercentages[party + '_r'] = Q[party + '_r'] || 0;
+}
+
+var reichstagSeats = allocateSeats(reichstagPercentages, 500);
+
+for (var party of Q.parties) {
+    // keep last election's seats for the change column
+    Q['old_' + party + '_seats'] = Q[party + '_seats'] || 0;
+
+    // store seats (not %)
+    Q[party + '_seats'] = reichstagSeats[party + '_r'];
+
+    // seat change with arrow
+    var seat_diff = Q[party + '_seats'] - Q['old_' + party + '_seats'];
+    var seat_sign = seat_diff > 0
+        ? '<img src="img/arrowup.png"> '
+        : seat_diff < 0
+          ? '<img src="img/arrowdown.png"> '
+          : '<img src="img/steady.png"> ';
+    Q['str_seat_change_' + party] = seat_sign + Math.abs(seat_diff);
+}
 
 
 // get change arrows and signs
