@@ -262,7 +262,10 @@ for (var party of Q.parties) {
                : Q['change_' + party + '_wl'] < 0
                  ? '<img src="img/arrowdown.png"> '
                  : '— ';
-    Q['change_' + party + '_wl'] = sign + Math.abs(parseFloat(Q['change_' + party + '_wl'])).toFixed(1);
+Q.debug_text = "VOTES: " + Q.parties.map(p => p + "=" + Q[p + '_votes_wurttemberg']).join(" | ")
+  + " ## DVP/WP: dvp_wl=" + Q.dvp_wl + ", wp_wl=" + Q.wp_wl
+  + ", dvp_chg=" + Q.change_dvp_wl + ", wp_chg=" + Q.change_wp_wl
+  + ", dvp_votechg=" + Q.votes_change_dvp_wurttemberg;
 }
 
 if (!Q.lvp_formed && !Q.nfvp_formed) Q.weimar_coalition_wurttemberg = parseFloat((Q.spd_wl + Q.ddp_wl + Q.z_wl + Q.csrp_wl).toFixed(1));
