@@ -223,33 +223,35 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 (if the election were to be held now):
 
-<span style="color: #8B0000;">**KPD**</span>: [+ kpd_votes +]%
+{!<tr><td>Party</td><td>Vote Share</td></tr>!}
 
-<span style="color: #E3000F;">**SPD**</span>: [+ spd_votes +]%
+{!<tr><td>!} <span style="color: #700000;">**KPD**</span>: {!</td><td>!} [+ kpd_votes +]% {!</td></tr>!}
 
-[? if sapd_formed: <span style="color: #9B0000;">**SAPD**</span>: [+ sapd_votes +]% ?]
+{!<tr><td>!} <span style="color: #E3000F;">**SPD**</span>: {!</td><td>!} [+ spd_votes +]% {!</td></tr>!}
 
-<span style="color: #D3C24D;">**[+ ddp_name +]**</span>: [+ ddp_votes +]%
+[? if sapd_formed: {!<tr><td>!} <span style="color: #9B0000;">**SAPD**</span>: {!</td><td>!} [+ sapd_votes +]% {!</td></tr>!} ?]
 
-<span style="color: #000000;">**Z**</span> + <span style="color: #69A2BE;">**BVP**</span>: [+ z_votes +]%
+{!<tr><td>!} <span style="color: #D3C24D;">**[+ ddp_name +]**</span>: {!</td><td>!} [+ ddp_votes +]% {!</td></tr>!}
 
-<span style="color: #C0A054;">**DVP**</span>: [+ dvp_votes +]%
+{!<tr><td>!} <span style="color: #000000;">**Z**</span> + <span style="color: #69A2BE;">**BVP**</span>: {!</td><td>!} [+ z_votes +]% {!</td></tr>!}
 
-<span style="color: #B8996F;">**WP**</span>: [+ wp_votes +]%
+{!<tr><td>!} <span style="color: #C0A054;">**DVP**</span>: {!</td><td>!} [+ dvp_votes +]% {!</td></tr>!}
 
-[? if cnblp_formed : <span style="color: #006400;">**CNBLP**</span>: [+ cnblp_votes +]% ?]
+{!<tr><td>!} <span style="color: #B8996F;">**WP**</span>: {!</td><td>!} [+ wp_votes +]% {!</td></tr>!}
 
-[? if csvd_formed : <span style="color: #8ED8E4;">**CSVD**</span>: [+ csvd_votes +]% ?]
+[? if cnblp_formed : {!<tr><td>!} <span style="color: #006400;">**CNBLP**</span>: {!</td><td>!} [+ cnblp_votes +]% {!</td></tr>!} ?]
 
-[? if kvp_formed : <span style="color: #455B95;">**KVP**</span>: [+ kvp_votes +]% ?]
+[? if csvd_formed : {!<tr><td>!} <span style="color: #8ED8E4;">**CSVD**</span>: {!</td><td>!} [+ csvd_votes +]% {!</td></tr>!} ?]
 
-<span style="color: #3F7BC1;">**DNVP**</span>: [+ dnvp_votes +]%
+[? if kvp_formed : {!<tr><td>!} <span style="color: #455B95;">**KVP**</span>: {!</td><td>!} [+ kvp_votes +]% {!</td></tr>!} ?]
 
-[? if dnf_formed : <span style="color: #003755;">**DNF**</span>: [+ dnf_votes +]% ?]
+{!<tr><td>!} <span style="color: #3F7BC1;">**DNVP**</span>: {!</td><td>!} [+ dnvp_votes +]% {!</td></tr>!}
 
-<span style="color: #954B00;">**NSDAP**</span>: [+ nsdap_votes +]%
+[? if dnf_formed : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_votes +]% {!</td></tr>!} ?]
 
-<span style="color: #909090;">**Others**</span>: [+ other_votes +]%
+{!<tr><td>!} <span style="color: #954B00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_votes +]% {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #909090;">**Others**</span>: {!</td><td>!} [+ other_votes +]% {!</td></tr>!}
 
 **Detailed results for each demographic**
 
