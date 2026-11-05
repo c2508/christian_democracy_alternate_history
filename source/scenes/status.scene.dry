@@ -233,7 +233,6 @@ Q.socialism_disp = Math.round(Q.socialism);
 (if the election were to be held now):
 
 {!<table>!} 
-{!<tr><td>Party</td><td>Vote Share</td></tr>!}
 
 {!<tr><td>!} <span style="color: #700000;">**KPD**</span>: {!</td><td>!} [+ kpd_votes +]% {!</td></tr>!}
 
