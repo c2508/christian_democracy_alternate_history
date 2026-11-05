@@ -131,6 +131,31 @@ for (var party of Q.parties) {
 }
 Q[biggest + '_votes_wurttemberg'] = parseFloat((Q[biggest + '_votes_wurttemberg'] + (100 - vote_sum)).toFixed(1));
 
+var table_w = ['kpd', 'spd', 'z', 'dvp', 'wp', 'other', 'dnvp', 'nsdap'];
+if (Q.ddp_exist) table_w.push('ddp');
+if (Q.aspd_exist) table_w.push('aspd');
+if (Q.csvd_exist) table_w.push('csvd');
+if (Q.cnblp_formed) table_w.push('cnblp');
+if (Q.kvp_formed) table_w.push('kvp');
+if (Q.dnf_formed) table_w.push('dnf');
+
+var tsum_w = 0;
+for (var p of table_w) tsum_w += (Q[p + '_votes_wurttemberg'] || 0);
+
+if (tsum_w > 0) {
+    var big_w = table_w[0];
+    var acc_w = 0;
+    for (var p of table_w) {
+        Q[p + '_votes_wurttemberg'] = parseFloat((((Q[p + '_votes_wurttemberg'] || 0) / tsum_w) * 100).toFixed(1));
+        acc_w += Q[p + '_votes_wurttemberg'];
+        if (Q[p + '_votes_wurttemberg'] > Q[big_w + '_votes_wurttemberg']) big_w = p;
+    }
+    Q[big_w + '_votes_wurttemberg'] = parseFloat((Q[big_w + '_votes_wurttemberg'] + (100 - acc_w)).toFixed(1));
+}
+for (var p of Q.parties) {
+    if (!table_w.includes(p)) Q[p + '_votes_wurttemberg'] = 0;
+}
+
 var new_party_sum = 0;
 for (var party of Q.parties) {
     Q['old_' + party + '_wl'] = Q[party + '_wl'];
