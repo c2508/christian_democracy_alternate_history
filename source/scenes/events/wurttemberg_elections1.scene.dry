@@ -469,6 +469,9 @@ if (window && d3) {
     parliament.enter.fromCenter(true).smallToBig(true);
     parliament.exit.toCenter(false).bigToSmall(true);
     d3.select("#reichstag").datum(data).call(parliament);
+
+Q.debug_text = Q.parties.map(p => p + " v:" + Q[p + '_votes_wurttemberg'] + " wl:" + Q[p + '_wl']).join(" | ");
+
 }
 !}
 go-to: coalition_menu
