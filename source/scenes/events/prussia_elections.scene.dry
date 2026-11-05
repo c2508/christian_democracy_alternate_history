@@ -198,6 +198,48 @@ for (var party of Q.parties) {
     Q[party + '_votes_prussia'] = Math.round(Q[party + '_normalized_prussia'] * 1000) / 10;
 }
 
+var shown_prussia = ['kpd', 'spd', 'z', 'wp', 'other', 'nsdap'];
+if (Q.lvp_formed) {
+    shown_prussia.push('lvp');
+} else {
+    shown_prussia.push('ddp');
+    if (Q.dvp_exist) shown_prussia.push('dvp');
+}
+if (Q.sapd_formed) shown_prussia.push('sapd');
+if (Q.cnblp_formed) shown_prussia.push('cnblp');
+if (Q.csvd_formed) shown_prussia.push('csvd');
+if (Q.kvp_formed) shown_prussia.push('kvp');
+if (!Q.cvp_formed) shown_prussia.push('dnvp');
+if (Q.dnf_formed) shown_prussia.push('dnf');
+if (Q.dnef_formed) shown_prussia.push('dnef');
+if (Q.dsu_exist) shown_prussia.push('dsu');
+if (Q.nvf_exist) shown_prussia.push('nvf');
+
+for (var party of Q.parties) {
+    if (!shown_prussia.includes(party) || isNaN(Q[party + '_support'])) {
+        Q[party + '_support'] = 0;
+    }
+}
+
+total_support = 0;
+for (var party of Q.parties) {
+    total_support += Q[party + '_support'];
+}
+
+// Normalize support (fraction)
+for (var party of Q.parties) {
+    Q[party + '_normalized_prussia'] = Q[party + '_support'] / total_support;
+    Q[party + '_votes_prussia'] = Math.round(Q[party + '_normalized_prussia'] * 1000) / 10;
+}
+
+var vote_sum_prussia = 0;
+var biggest_prussia = 'spd';
+for (var party of Q.parties) {
+    vote_sum_prussia += Q[party + '_votes_prussia'];
+    if (Q[party + '_votes_prussia'] > Q[biggest_prussia + '_votes_prussia']) biggest_prussia = party;
+}
+Q[biggest_prussia + '_votes_prussia'] = parseFloat((Q[biggest_prussia + '_votes_prussia'] + (100 - vote_sum_prussia)).toFixed(1));
+
 var new_party_sum_prussia = 0;
 var total_reichstag_without_prussia = 0; // Initialize a variable to accumulate 'reichstag_without_' values
 var total_other_party_sum_prussia = 0; // Initialize a variable to accumulate '_other_party_sum' values
