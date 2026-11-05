@@ -76,7 +76,6 @@ Q.nsdap_r_wurttemberg = 0;
 Q.other_r_wurttemberg = 0;
 Q.dnf_r_wurttemberg = 0;
 
-// CHANGE 1: use the variables that actually exist
 if (Q.rural_z_normalized >= 8) Q.adjustmentFactors_z_wurttemberg += 0.05;
 if (Q.rural_dnvp_normalized <= 35) Q.adjustmentFactors_dnvp_wurttemberg -= 0.1;
 
@@ -97,20 +96,24 @@ for (var party of Q.parties) {
     total_support += Q[party + '_support'];
 }
 
-// CHANGE A: parties with no row in the table get no votes
-if (!Q.aspd_exist) Q.aspd_support = 0;
-if (!Q.ddp_exist) Q.ddp_support = 0;
-if (!Q.csvd_exist) Q.csvd_support = 0;
-if (!Q.cnblp_formed) Q.cnblp_support = 0;
-if (!Q.kvp_formed) Q.kvp_support = 0;
-if (!Q.dnf_formed) Q.dnf_support = 0;
-Q.sapd_support = 0;
-Q.lvp_support = 0;
-Q.bvp_support = 0;
+// Only parties with a table row get votes
+var shown = ['kpd', 'spd', 'z', 'dvp', 'wp', 'other', 'dnvp', 'nsdap'];
+if (Q.ddp_exist) shown.push('ddp');
+if (Q.aspd_exist) shown.push('aspd');
+if (Q.csvd_exist) shown.push('csvd');
+if (Q.cnblp_formed) shown.push('cnblp');
+if (Q.kvp_formed) shown.push('kvp');
+if (Q.dnf_formed) shown.push('dnf');
+
+for (var party of Q.parties) {
+    if (!shown.includes(party) || isNaN(Q[party + '_support'])) {
+        Q[party + '_support'] = 0;
+    }
+}
 
 total_support = 0;
 for (var party of Q.parties) {
-    total_support += Q[party + '_support'] || 0;
+    total_support += Q[party + '_support'];
 }
 
 // Normalize support (fraction)
@@ -119,7 +122,7 @@ for (var party of Q.parties) {
     Q[party + '_votes_wurttemberg'] = Math.round(Q[party + '_normalized_wurttemberg'] * 1000) / 10;
 }
 
-// CHANGE B: add any rounding gap to the biggest party so votes total exactly 100
+// Add any rounding gap to the biggest party so votes total exactly 100
 var vote_sum = 0;
 var biggest = 'spd';
 for (var party of Q.parties) {
@@ -488,7 +491,7 @@ go-to: coalition_menu
 
 [? if ddp_exist: {!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} [+ ddp_name +]: {!</td><td>!} [+ ddp_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_ddp_wurttemberg +] {!</td><td>!} [+ ddp_wl +]% {!</td><td>!} [+ change_ddp_wl +] {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#000'> </div> !} Z: {!</td><td>!} [+ z_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_z_wurttemberg +] {!</td><td>!} [+ z_wl +]% {!</td><td>!} [+ change_z_wl +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#1A0000; outline: 2px; outline-style: solid;'> </div> !} **[+ z_party_name +]**: {!</td><td>!} **[+ z_votes_wurttemberg +]**% {!</td><td>!} **[+ votes_change_z_wurttemberg +]** {!</td><td>!} **[+ z_wl +]**% {!</td><td>!} **[+ change_z_wl +]** {!</td></tr>!} 
 
 {!<tr><td><div class="box" style='background-color:#C0A054'> </div> !} DVP: {!</td><td>!} [+ dvp_votes_wurttemberg +]% {!</td><td>!} [+ votes_change_dvp_wurttemberg +] {!</td><td>!} [+ dvp_wl +]% {!</td><td>!} [+ change_dvp_wl +] {!</td></tr>!}
 
