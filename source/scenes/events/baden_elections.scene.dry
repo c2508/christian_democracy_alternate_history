@@ -300,7 +300,7 @@ go-to: coalition_menu
 
 [? if ddp_exist: {!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} [+ ddp_name +]: {!</td><td>!} [+ ddp_votes_baden +]% {!</td><td>!} [+ votes_change_ddp_baden +] {!</td><td>!} [+ ddp_baden +]% {!</td><td>!} [+ change_ddp_baden +] {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#000'> </div> !} Z: {!</td><td>!} [+ z_votes_baden +]% {!</td><td>!} [+ votes_change_z_baden +] {!</td><td>!} [+ z_baden +]% {!</td><td>!} [+ change_z_baden +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#1A0000; outline: 2px; outline-style: solid;'> </div> !} **[+ z_party_name +]**: {!</td><td>!} **[+ z_votes_baden +]**% {!</td><td>!} **[+ votes_change_z_baden +]** {!</td><td>!} **[+ z_baden +]**% {!</td><td>!} **[+ change_z_baden +]** {!</td></tr>!} 
 
 {!<tr><td><div class="box" style='background-color:#C0A054'> </div> !} DVP: {!</td><td>!} [+ dvp_votes_baden +]% {!</td><td>!} [+ votes_change_dvp_baden +] {!</td><td>!} [+ dvp_baden +]% {!</td><td>!} [+ change_dvp_baden +] {!</td></tr>!}
 
