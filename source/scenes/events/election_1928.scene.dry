@@ -186,36 +186,36 @@ if (Q.kpd_r >= Q.spd_r && Q.kpd_r >= Q.nsdap_r) {
 }
 
 // coalitions
-Q.weimar_coalition =  Math.round((Q.spd_r + Q.ddp_r + Q.z_r - 3)*10.0)/10.0
-Q.grand_coalition = Math.round((Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r)*10.0)/10.0
-Q.bourgeois_coalition = Math.round((Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r + Q.wp_r)*10.0)/10.0
-Q.center_right_coalition = Q.z_r + Q.ddp_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
-Q.right_coalition = Math.round((100 - Q.spd_r - Q.ddp_r - Q.kpd_r - Q.nsdap_r)*10.0)/10.0
-Q.far_right_coalition = Q.dnvp_r + Q.nsdap_r;
-Q.left_coalition = Q.spd_r + Q.kpd_r + Q.sapd_r;
-Q.popular_front_coalition = Q.spd_r + Q.kpd_r + Q.z_r + Q.ddp_r - 3 + Q.sapd_r;
-Q.anti_democratic_coalition = Q.kpd_r + Q.nsdap_r + Q.dnvp_r;
+Q.weimar_coalition = Math.round((Q.spd_seats + Q.ddp_seats + Q.z_seats)*0.2);
+Q.grand_coalition = Math.round((Q.spd_seats + Q.ddp_seats + Q.z_seats + Q.dvp_seats)*0.2);
+Q.bourgeois_coalition = Math.round((Q.ddp_seats + Q.z_seats + Q.dvp_seats + Q.other_seats + Q.wp_seats)*0.2);
+Q.center_right_coalition = Q.z_seats + Q.ddp_seats + Q.dvp_seats + Q.other_seats + Q.dnvp_seats;
+Q.right_coalition = Math.round((100 - Q.spd_seats - Q.ddp_seats - Q.kpd_seats - Q.nsdap_seats)*0.2);
+Q.far_right_coalition = Q.dnvp_seats + Q.nsdap_seats;
+Q.left_coalition = Q.spd_seats + Q.kpd_seats + Q.sapd_seats;
+Q.popular_front_coalition = Q.spd_seats + Q.kpd_seats + Q.z_seats + Q.ddp_seats - 3 + Q.sapd_seats;
+Q.anti_democratic_coalition = Q.kpd_seats + Q.nsdap_seats + Q.dnvp_seats;
 // aka everyone except nazi, kpd, dnvp
-Q.neo_weimar_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
+Q.neo_weimar_coalition = Q.spd_seats + Q.ddp_seats + Q.z_seats + Q.dvp_seats + Q.other_seats;
 // Hitler + Right-wing parties (only comes into effect if you've alienated Z too badly)
-Q.hitler_right_coalition = Q.z_r + Q.dnvp_r + Q.nsdap_r;
+Q.hitler_right_coalition = Q.z_seats + Q.dnvp_seats + Q.nsdap_seats;
 // Progressive coalition isn't going to be implemented as a distinct coalition but it's the coalition that lets you pass improved women's rights/gay rights
-Q.progressive_coalition = Q.spd_r + Q.kpd_r + Q.ddp_r + Q.sapd_r;
+Q.progressive_coalition = Q.spd_seats + Q.kpd_seats + Q.ddp_seats + Q.sapd_seats;
 
 if (Q.kpd_relation >= 30) {
-    Q.weimar_coalition += Q.sapd_r;
+    Q.weimar_coalition += Q.sapd_seats;
 }
 if (Q.kvp_formed == 1) {
-    Q.bourgeois_coalition += Q.kvp_r;
-    Q.right_coalition += Q.kvp_r;
+    Q.bourgeois_coalition += Q.kvp_seats;
+    Q.right_coalition += Q.kvp_seats;
 }
 if (Q.csvd_formed == 1) {
-    Q.bourgeois_coalition += Q.csvd_r;
-    Q.right_coalition += Q.csvd_r;
+    Q.bourgeois_coalition += Q.csvd_seats;
+    Q.right_coalition += Q.csvd_seats;
 }
 if (Q.cnblp_formed == 1) {
-    Q.bourgeois_coalition += Q.cnblp_r;
-    Q.right_coalition += Q.cnblp_r;
+    Q.bourgeois_coalition += Q.cnblp_seats;
+    Q.right_coalition += Q.cnblp_seats;
 }
 
 Q.leverage = Q.z_r + 5;
@@ -316,7 +316,7 @@ data = data.concat([
         "id": "z",
         "legend": "Center",
         "name": "Center",
-        "seats": Math.round((Q.z_r - 3)*5),
+        "seats": Math.round(Q.z_r*5),
     },
     {
         "id": "bvp",
@@ -407,7 +407,7 @@ go-to: coalition_menu
 {!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
 
 {!<table>!} 
-{!<tr><td>Party</td><td>Vote Share</td><td>% Change</td><td>Landtag Seats</td><td>% Change</td></tr>!}
+{!<tr><td>Party</td><td>Vote Share</td><td>% Change</td><td>Reichstag Seats</td><td> Change</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#8B0000'> </div> !} <span style="color: #700000;">**KPD**</span>: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ votes_change_kpd +] {!</td><td>!} [+ kpd_seats +] {!</td><td>!} [+ str_seat_change_kpd +] {!</td></tr>!}
 
