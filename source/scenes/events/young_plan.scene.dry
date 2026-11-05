@@ -17,7 +17,7 @@ While this seems to be a positive development for the country, the <span style="
 - @no_plan: Do not campaign on the Young Plan, one way or another.
 
 @prussia
-choose-if: spd_in_prussia = 1 and z_in_prussia = 1 and weimar_coalition_prussia = 1
+choose-if: spd_in_prussia == 1 and z_in_prussia == 1 and weimar_coalition_prussia = 1
 unavailable-subtitle: The <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition is not currently in power in Prussia
 
 Diplomacy and cooperation with the <span style="color: #0A3161;">Western</span> Powers is the only way for Germany to regain its international standing and break off the chains of the diktat of Versailles.
