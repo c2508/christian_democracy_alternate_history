@@ -467,7 +467,26 @@ Q.wp_r = 2.4;
 Q.dnvp_r = 20.9;
 Q.nsdap_r = 2.8;
 Q.other_r = 3.6;
+Q.cnblp_r = 0;
+Q.csvd_r = 0;
+Q.kvp_r = 0;
+Q.cnva_r = 0;
+Q.dnf_r = 0;
 
+Q.spd_seats = 132;
+Q.kpd_seats = 46;
+Q.z_seats = 89;
+Q.ddp_seats = 33;
+Q.dvp_seats = 52;
+Q.wp_seats = 12;
+Q.dnvp_seats = 103;
+Q.nsdap_seats = 14;
+Q.other_seats = 19;
+Q.cnblp_seats = 0;
+Q.csvd_seats = 0;
+Q.kvp_seats = 0;
+Q.cnva_seats = 0;
+Q.dnf_seats = 0;
 
 // diff from prev
 Q.old_spd_r = 26.6;
@@ -479,6 +498,26 @@ Q.old_wp_r = 2.4;
 Q.old_dnvp_r = 20.9;
 Q.old_nsdap_r = 2.8;
 Q.old_other_r = 3.6;
+Q.old_cnblp_r = 0;
+Q.old_csvd_r = 0;
+Q.old_kvp_r = 0;
+Q.old_cnva_r = 0;
+Q.old_dnf_r = 0;
+
+Q.old_spd_seats = 132;
+Q.old_kpd_seats = 46;
+Q.old_z_seats = 89;
+Q.old_ddp_seats = 33;
+Q.old_dvp_seats = 52;
+Q.old_wp_seats = 12;
+Q.old_dnvp_seats = 103;
+Q.old_nsdap_seats = 14;
+Q.old_other_seats = 19;
+Q.old_cnblp_seats = 0;
+Q.old_csvd_seats = 0;
+Q.old_kvp_seats = 0;
+Q.old_cnva_seats = 0;
+Q.old_dnf_seats = 0;
 
 // prussian gov right now
 Q.spd_r_prussia = 25.3;
