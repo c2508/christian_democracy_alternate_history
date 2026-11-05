@@ -223,6 +223,7 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 (if the election were to be held now):
 
+{!<table>!} 
 {!<tr><td>Party</td><td>Vote Share</td></tr>!}
 
 {!<tr><td>!} <span style="color: #700000;">**KPD**</span>: {!</td><td>!} [+ kpd_votes +]% {!</td></tr>!}
@@ -252,6 +253,7 @@ Q.socialism_disp = Math.round(Q.socialism);
 {!<tr><td>!} <span style="color: #954B00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_votes +]% {!</td></tr>!}
 
 {!<tr><td>!} <span style="color: #909090;">**Others**</span>: {!</td><td>!} [+ other_votes +]% {!</td></tr>!}
+{!<table>!} 
 
 **Detailed results for each demographic**
 
