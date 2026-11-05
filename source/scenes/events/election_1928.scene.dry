@@ -187,16 +187,16 @@ if (Q.kpd_r >= Q.spd_r && Q.kpd_r >= Q.nsdap_r) {
 
 // coalitions
 Q.weimar_coalition = Math.round((Q.spd_seats + Q.ddp_seats + Q.z_seats)*2)/10;
-Q.grand_coalition = Math.round((Q.spd_seats + Q.ddp_seats + Q.z_seats + Q.dvp_seats)*2)/10;
-Q.bourgeois_coalition = Math.round((Q.ddp_seats + Q.z_seats + Q.dvp_seats + Q.other_seats + Q.wp_seats)*2)/10;
-Q.center_right_coalition = Math.round((Q.z_seats + Q.ddp_seats + Q.dvp_seats + Q.other_seats + Q.dnvp_seats)*2)/10;
+Q.grand_coalition = Math.round((Q.spd_seats + Q.ddp_seats + Q.z_seats + Q.dvp_seats + Q.bvp_seats)*2)/10;
+Q.bourgeois_coalition = Math.round((Q.ddp_seats + Q.z_seats + Q.dvp_seats + Q.other_seats + Q.wp_seats + Q.bvp_seats)*2)/10;
+Q.center_right_coalition = Math.round((Q.z_seats + Q.ddp_seats + Q.dvp_seats + Q.other_seats + Q.dnvp_seats + Q.bvp_seats)*2)/10;
 Q.right_coalition = Math.round((500 - Q.spd_seats - Q.ddp_seats - Q.kpd_seats - Q.nsdap_seats)*2)/10;
 Q.far_right_coalition = Math.round((Q.dnvp_seats + Q.nsdap_seats)*2)/10;
 Q.left_coalition = Math.round((Q.spd_seats + Q.kpd_seats + Q.sapd_seats)*2)/10;
-Q.popular_front_coalition = Math.round((Q.spd_seats + Q.kpd_seats + Q.z_seats + Q.ddp_seats - 3 + Q.sapd_seats)*2)/10;
+Q.popular_front_coalition = Math.round((Q.spd_seats + Q.kpd_seats + Q.z_seats + Q.ddp_seats + Q.sapd_seats)*2)/10;
 Q.anti_democratic_coalition = Math.round((Q.kpd_seats + Q.nsdap_seats + Q.dnvp_seats)*2)/10;
 // aka everyone except nazi, kpd, dnvp
-Q.neo_weimar_coalition = Math.round((Q.spd_seats + Q.ddp_seats + Q.z_seats + Q.dvp_seats + Q.other_seats)*2)/10;
+Q.neo_weimar_coalition = Math.round((Q.spd_seats + Q.ddp_seats + Q.z_seats + Q.dvp_seats + Q.other_seats + Q.bvp_seats)*2)/10;
 // Hitler + Right-wing parties (only comes into effect if you've alienated Z too badly)
 Q.hitler_right_coalition = Math.round((Q.z_seats + Q.dnvp_seats + Q.nsdap_seats)*2)/10;
 // Progressive coalition isn't going to be implemented as a distinct coalition but it's the coalition that lets you pass improved women's rights/gay rights
@@ -207,15 +207,12 @@ if (Q.kpd_relation >= 30) {
 }
 if (Q.kvp_formed == 1) {
     Q.bourgeois_coalition += Q.kvp_seats;
-    Q.right_coalition += Q.kvp_seats;
 }
 if (Q.csvd_formed == 1) {
     Q.bourgeois_coalition += Q.csvd_seats;
-    Q.right_coalition += Q.csvd_seats;
 }
 if (Q.cnblp_formed == 1) {
     Q.bourgeois_coalition += Q.cnblp_seats;
-    Q.right_coalition += Q.cnblp_seats;
 }
 
 Q.leverage = Q.z_r + 5;
@@ -288,7 +285,7 @@ data = [
         "id": "kpd",
         "legend": "KPD",
         "name": "KPD",
-        "seats": Math.round(Q.kpd_r*5),
+        "seats": Q.kpd_seats,
     }
 ];
 if (Q.sapd_formed && Q.sapd_r) {
@@ -296,7 +293,7 @@ if (Q.sapd_formed && Q.sapd_r) {
             "id": "sapd",
             "legend": "SAPD",
             "name": "SAPD",
-            "seats": Math.round(Q.sapd_r*5),
+            "seats": Q.sapd_seats,
             });
 }
 data = data.concat([
@@ -304,49 +301,49 @@ data = data.concat([
         "id": "spd",
         "legend": "SPD",
         "name": "SPD",
-        "seats": Math.round(Q.spd_r*5),
+        "seats": Q.spd_seats,
     },
     {
         "id": "ddp",
         "legend": Q.ddp_name,
         "name": Q.ddp_name,
-        "seats": Math.round(Q.ddp_r*5),
+        "seats": Q.ddp_seats,
     },
     {
         "id": "z",
         "legend": "Center",
         "name": "Center",
-        "seats": Math.round(Q.z_r*5),
+        "seats": Q.z_seats,
     },
     {
         "id": "bvp",
         "legend": "BVP",
         "name": "BVP",
-        "seats": Math.round(3*5),
+        "seats": Q.bvp_seats,
     },
     {
         "id": "dvp",
         "legend": "DVP",
         "name": "DVP",
-        "seats": Math.round(Q.dvp_r*5),
+        "seats": Q.dvp_seats,
     },
   {
         "id": "wp",
         "legend": "WP",
         "name": "WP",
-        "seats": Math.round(Q.wp_r*5),
+        "seats": Q.wp_seats,
     },
     {
         "id": "other",
         "legend": "Other",
         "name": "Other",
-        "seats": Math.round(Q.other_r*5),
+        "seats": Q.other_seats,
     },
    {
         "id": "cnblp",
         "legend": "CNBLP",
         "name": "CNBLP",
-        "seats": Math.round(Q.cnblp_r*5),
+        "seats": Q.cnblp_seats,
     },
 ]);
 
@@ -355,7 +352,7 @@ if (Q.csvd_formed && Q.csvd_r) {
         "id": "csvd",
         "legend": "CSVD",
         "name": "CSVD",
-        "seats": Math.round(Q.csvd_r*5),
+        "seats": Q.csvd_seats,
     });
 }
 
@@ -364,7 +361,7 @@ if (Q.kvp_formed && Q.kvp_r) {
         "id": "kvp",
         "legend": "KVP",
         "name": "KVP",
-        "seats": Math.round(Q.kvp_r*5),
+        "seats": Q.kvp_seats,
     });
 }
 
@@ -373,13 +370,13 @@ data = data.concat([
         "id": "dnvp",
         "legend": "DNVP",
         "name": "DNVP",
-        "seats": Math.round(Q.dnvp_r*5),
+        "seats": Q.dnvp_seats,
     },
     {
         "id": "nsdap",
         "legend": "NSDAP",
         "name": "NSDAP",
-        "seats": Math.round(Q.nsdap_r*5),
+        "seats": Q.nsdap_seats,
     },
 ]);
 
