@@ -50,7 +50,7 @@ unavailable-subtitle: Not enough resources.
 choose-if: resources >= 4 and fund = 0
 tags: demands
 view-if: fund = 0
-on-arrival: rpm_points += 3; fund += 1; resources -= 4; right_dissent -= 5; catholic_z += 4*(1-dissent)
+on-arrival: rpm_points += 3; fund += 1; resources -= 4; right_dissent -= 5; catholics_z += 3*(1-dissent)
 go-to: originalname5
 
 While this appeases the Catholic peasants, Protestant farmers are unhappy at their exclusion.
@@ -83,9 +83,9 @@ title: Impose a rent moratorium and postpone the foreclosure of insolvent farms
 subtitle: -2 budget
 unavailable-subtitle: Not enough budget.
 tags: demands
-choose-if: tax_breaks = 0 and budget >= 2
-view-if: tax_breaks = 0
-on-arrival: rpm_points += 5; tax_breaks += 1; budget -= 2; ddp_relation -= 5; dvp_relation -= 5; ddp_right += 1; economic_growth += 0.5
+choose-if: foreclosure = 0 and budget >= 2
+view-if: forclosure = 0
+on-arrival: rpm_points += 5; foreclosure += 1; budget -= 2; ddp_relation -= 5; dvp_relation -= 5; ddp_right += 1; economic_growth += 0.5
 go-to: originalname5
 
 This will relieve the financial burden of the farmers.
@@ -94,7 +94,7 @@ This will relieve the financial burden of the farmers.
 title: No more concessions
 subtitle: We shall not make any more concessions
 tags: demands
-go-to: yes if (rpm_points > 5); no if (rpm_points < 6); 
+go-to: yes if (rpm_points > 5); no if (rpm_points < 6)
 
 We shall see if the farmers are satisfied with these concessions.
 
@@ -115,7 +115,7 @@ subtitle: Drop this concession +4 resources
 choose-if: fund = 1
 tags: drop_demands
 view-if: fund = 1
-on-arrival: rpm_points -= 3; fund -= 1; resources += 4; right_dissent += 5; catholics_z -= 4*(1-dissent)
+on-arrival: rpm_points -= 3; fund -= 1; resources += 4; right_dissent += 5; catholics_z -= 3*(1-dissent)
 go-to: originalname5
 
 We have decided to drop this concession.
@@ -146,9 +146,9 @@ We have decided to drop this concession.
 title: Impose a rent moratorium and postpone the foreclosure of insolvent farms
 subtitle: Drop this concession +2 budget
 tags: drop_demands
-choose-if: tax_breaks = 1 
-view-if: tax_breaks = 1
-on-arrival: rpm_points -= 5; tax_breaks -= 1; budget += 2; ddp_relation += 5; dvp_relation += 5; ddp_right -= 1; economic_growth -= 0.5
+choose-if: foreclosure = 1 
+view-if: foreclosure = 1
+on-arrival: rpm_points -= 5; foreclosure -= 1; budget += 2; ddp_relation += 5; dvp_relation += 5; ddp_right -= 1; economic_growth -= 0.5
 go-to: originalname5
 
 We have decided to drop this concession.
