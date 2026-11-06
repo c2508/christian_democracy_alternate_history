@@ -258,10 +258,10 @@ Q.streetfighting_urgency = 0;
 Q.z_ideology = "Political Catholicism";
 Q.cnblp_ideology = "Agrarianism";
 Q.dnvp_ideology = "National Conservatism";
-Q.dnvp_gf_influence = 7
+Q.dnvp_gf_influence = 9
 Q.cnblp_gf_influence = 0
 Q.cnva_gf_influence = 0
-Q.z_gf_influence = 3
+Q.z_gf_influence = 5
 Q.nsdap_gf_influence = 1
 Q.others_gf_influence = 1
 
