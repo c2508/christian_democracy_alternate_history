@@ -1,6 +1,6 @@
 title: Negotiations with the <span style="color: #c00000;">**SPD**</span> 
 new-page: true
-subtitle: The <span style="color: #c00000;">**SPD**</span> has some demands in exchange for their toleration
+subtitle: The <span style="color: #c00000;">**SPD**</span> has some con in exchange for their toleration
 on-arrival: {! 
 Q.rpm_points = 0
 Q.rep = 0 
@@ -30,12 +30,12 @@ All these factors have led to an increasing disillusion with the <span style="co
 We can give them any number of concessions. The less we give them, the angrier they will be.
 
 
-- #demands
-- #drop_demands
+- #con
+- #drop_con
 
 @agri_minister
 title: Have a <span style="color: #000000;">**Center Party**</span> or <span style="color: #3E88B3;">**DNVP**</span> politician as Agriculture Minister in the next cabinet 
-tags: demands
+tags: con
 choose-if: agri_minister = 0
 view-if: agri_minister = 0
 on-arrival: rpm_points += 2; agri_minister += 1; right_strength += 5;
@@ -48,7 +48,7 @@ title: Fund the <span style="color: #000000;">**Center Party**</span> aligned As
 subtitle: -4 resources
 unavailable-subtitle: Not enough resources.
 choose-if: resources >= 4 and fund = 0
-tags: demands
+tags: con
 view-if: fund = 0
 on-arrival: rpm_points += 3; fund += 1; resources -= 4; right_dissent -= 5; catholics_z += 3*(1-dissent)
 go-to: spd 
@@ -59,7 +59,7 @@ While this appeases the Catholic peasants, Protestant farmers are unhappy at the
 title: Support agricultural cooperatives
 subtitle: -1 budget
 unavailable-subtitle: Not enough budget.
-tags: demands
+tags: con
 choose-if: coop = 0 and budget >= 1
 view-if: coop = 0
 on-arrival: rpm_points += 3; coop += 1; budget -= 1; economic_growth += 0.3; unemployed -= 0.2; 
@@ -70,7 +70,7 @@ We shall allocate more government funds to support agriculture cooperatives.
 @trade_war
 title: Prolong the trade war with <span style="color: #DC143C;">Pol</span><span style="color: #FFFFFF;">and</span> until at least 1932 
 subtitle: Continuing the trade war is popular amongst the majority of our party.
-tags: demands
+tags: con
 choose-if: trade_war = 0
 view-if: trade_war = 0
 on-arrival: rpm_points += 3; trade_war += 1; nationalism += 5*(1-dissent); spd_left += 1; old_middle_z += 2*(1-dissent); dnvp_relation += 5; dvp_relation += 5; left_dissent += 3; 
@@ -82,7 +82,7 @@ We shall continue the trade war with <span style="color: #DC143C;">Pol</span><sp
 title: Impose a rent moratorium and postpone the foreclosure of insolvent farms
 subtitle: -2 budget
 unavailable-subtitle: Not enough budget.
-tags: demands
+tags: con
 choose-if: foreclosure = 0 and budget >= 2
 view-if: forclosure = 0
 on-arrival: rpm_points += 5; foreclosure += 1; budget -= 2; ddp_relation -= 5; dvp_relation -= 5; ddp_right += 1; economic_growth += 0.5
@@ -93,7 +93,7 @@ This will relieve the financial burden of the farmers.
 @no_more
 title: No more concessions
 subtitle: We shall not make any more concessions
-tags: demands
+tags: con
 go-to: yes if (rpm_points > 5); no if (rpm_points < 6)
 
 We shall see if the farmers are satisfied with these concessions.
@@ -101,7 +101,7 @@ We shall see if the farmers are satisfied with these concessions.
 @drop_agri_minister
 title: Have a <span style="color: #000000;">**Center Party**</span> or <span style="color: #3E88B3;">**DNVP**</span> politician as Agriculture Minister in the next cabinet 
 subtitle: Drop this concession
-tags: drop_demands
+tags: drop_con
 choose-if: agri_minister = 1
 view-if: agri_minister = 1
 on-arrival: rpm_points -= 2; agri_minister -= 1; right_strength -= 5;
@@ -113,7 +113,7 @@ We have decided to drop this concession.
 title: Fund the <span style="color: #000000;">**Center Party**</span> aligned Association of German Farmers’ Association <span style="color: #000000;">**(VdB)**</span> for more low interest loans 
 subtitle: Drop this concession +4 resources
 choose-if: fund = 1
-tags: drop_demands
+tags: drop_con
 view-if: fund = 1
 on-arrival: rpm_points -= 3; fund -= 1; resources += 4; right_dissent += 5; catholics_z -= 3*(1-dissent)
 go-to: spd 
@@ -123,7 +123,7 @@ We have decided to drop this concession.
 @drop_coop
 title: Support agricultural cooperatives
 subtitle: Drop this concession +1 budget
-tags: drop_demands
+tags: drop_con
 choose-if: coop = 1
 view-if: coop = 1
 on-arrival: rpm_points -= 3; coop -= 1; budget += 1; economic_growth -= 0.3; unemployed += 0.2; 
@@ -134,7 +134,7 @@ We have decided to drop this concession.
 @drop_trade_war
 title: Prolong the trade war with <span style="color: #DC143C;">Pol</span><span style="color: #FFFFFF;">and</span> until at least 1932 
 subtitle: Drop this concession
-tags: drop_demands
+tags: drop_con
 choose-if: trade_war = 1
 view-if: trade_war = 1
 on-arrival: rpm_points -= 3; trade_war -= 1; nationalism -= 5*(1-dissent); spd_left -= 1; old_middle_z -= 3*(1-dissent); dnvp_relation -= 5; dvp_relation -= 5;
@@ -145,7 +145,7 @@ We have decided to drop this concession.
 @drop_foreclosure
 title: Impose a rent moratorium and postpone the foreclosure of insolvent farms
 subtitle: Drop this concession +2 budget
-tags: drop_demands
+tags: drop_con
 choose-if: foreclosure = 1 
 view-if: foreclosure = 1
 on-arrival: rpm_points -= 5; foreclosure -= 1; budget += 2; ddp_relation += 5; dvp_relation += 5; ddp_right -= 1; economic_growth -= 0.5
