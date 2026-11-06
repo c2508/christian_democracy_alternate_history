@@ -23,8 +23,7 @@ if (Q.kvp_formed >= 1) {
 !}
 go-to: convince
 
-
-
+@convince
 
 = Bruning's Mandate
 
@@ -83,8 +82,6 @@ Composed primarily of <span style="color: #909090;">**special interest**</span> 
 [? if dnf_formed : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_r +]% {!</td><td>!} [+ dnf_seats +] {!</td></tr>!} ?]
 
 {!</table>!}
-
-@convince
 
 - @spd: Can we get the <span style="color: #c00000;">**SPD**</span> to tolerate Bruning's government?
 - @ddp: Can we get the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> to join Bruning's government?
