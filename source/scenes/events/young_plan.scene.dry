@@ -20,7 +20,9 @@ While this seems to be a positive development for the country, the <span style="
 choose-if: spd_in_prussia == 1 and z_in_prussia == 1 and weimar_coalition_prussia = 1
 unavailable-subtitle: The <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition is not currently in power in Prussia
 
-Diplomacy and cooperation with the <span style="color: #0A3161;">Western</span> Powers is the only way for Germany to regain its international standing and break off the chains of the diktat of Versailles.
+With the resources of the Prussian State at our disposal and some support from the <span style="color: #C0A054;">**DVP**</span>, we pressure regional newspapers into printing editorials calling for a "No" vote on Hugenberg's Young Plan Referendum, with Braun addressing the Prussian people on radio urging the voters not to support the <span style="color: #3E88B3;">**Stahlhelm's**</span> action. 
+Under orders from Prussian Inteior Minister Albert Grzesinski, all political appointees in the Prussian civil service have been barred from offering support, but also to sign petitions opposing this radical initiative. Having done all that we can, the responsibility now falls on the people to vote, vote, vote against this kind of reckless demagogery.
+
 
 @bourgeois
 on-arrival: spd_relation += 2
