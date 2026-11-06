@@ -48,19 +48,7 @@ don't poke around
 
 @fail
 subtitle: Stegerwald has been resoundingly rejected by the rest of the party. 
-view-if: not (clerical_relation >=6 
-         and labor_strength > 25 
-         and dnvp_relation >= 55 
-         and labor_strength > right_strength) 
-and not (clerical_relation < 7 
-        and clerical_relation > 4 
-        and labor_strength > 25 
-        and dnvp_relation >= 55 
-        and labor_strength >= right_strength) 
-and not (clerical_relation >= 7 
-        and labor_strength > 25 
-        and dnvp_relation > 55 
-        and labor_strength < right_strength)
+view-if: not (clerical_relation >=6 and labor_strength > 25 and dnvp_relation >= 55 and labor_strength > right_strength) and not (clerical_relation < 7 and clerical_relation > 4 and labor_strength > 25 and dnvp_relation >= 55 and labor_strength >= right_strength) and not (clerical_relation >= 7 and labor_strength > 25 and dnvp_relation > 55 and labor_strength < right_strength)
 on-arrival: labor_dissent += 5
 
 steggy blocked
