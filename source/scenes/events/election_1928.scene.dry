@@ -301,6 +301,9 @@ for (var party of Q.parties) {
     election_result[party] = Q[party + '_r'];
 }
 Q.election_records.push(election_result);
+ } catch (e) {
+    Q.debug_text = "ERROR: " + e.message;
+}
 !}
 on-departure: nazi_urgency = 1 if (nazi_urgency == 0 and nsdap_r >= 15)
 on-display: {!
@@ -420,9 +423,7 @@ if (window && d3) {
     parliament.exit.toCenter(false).bigToSmall(true);
     d3.select("#reichstag").datum(data).call(parliament);
 }
- } catch (e) {
-    Q.debug_text = "ERROR: " + e.message;
-}
+
 !}
 go-to: coalition_menu
 
