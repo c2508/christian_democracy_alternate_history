@@ -60,7 +60,6 @@ for (var party of Q.parties) {
         }
     } else {
         Q[party + '_r'] = parseFloat((Q[party + '_votes']).toFixed(1));
-        if (party == 'other') Q[party + '_r'] = Q[party + '_votes'] * 0.3;
     }
 
     // parties without a table row get nothing
@@ -155,6 +154,7 @@ for (var i = 0; i < shown.length; i++) {
     seat_shares[shown[i]] = Q[shown[i] + '_r'] || 0;
 }
 seat_shares['z'] = Math.max((Q.z_r || 0) - 3, 0);
+seat_shares['other'] = (Q.other_r || 0) * 0.3;
 
 var seat_result = allocateSeats(seat_shares, 500 - BVP_SEATS);
 
