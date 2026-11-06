@@ -22,7 +22,10 @@ The party has splintered in two over the vote to decide his sucessor. The nomine
 @cvp_stegerwald
 unavailable-subtitle: [? if labor_dissent > 15: The white collar unions are still unhappy with Stegerwald's decision to oppose wage increases last year. ?][? if labor_strength < 25: Stegerwald does not have enough influence to secure the nomination. ?][? if dnvp_relation < 55 : His policy of cooperation with the <span style="color: #3E88B3;">**DNVP**</span> is unpopular right now. ?]
 subtitle: Stegerwald sits on the right of the labor faction and would rather work with the political right than the <span style="color: #c00000;">**SPD**</span>.
-view-if: clerical_relation >= 6 and labor_strength > 25 and dnvp_relation >= 55 and labor_strength >= right_strength
+view-if: clerical_relation >= 6 
+         and labor_strength > 25 
+         and dnvp_relation >= 55 
+         and labor_strength >= right_strength
 on-arrival: z_party_leader = "Stegerwald"; spd_relation -= 5; dnvp_relation += 8; workers_z += 1*(1-dissent); new_middle_z -= 1; cvp_stegerwald += 1; z_ideology = "Christian Corporatism"
 
 Adam Stegerwald has been elected as the chairman of the [? if z_party_name != "CVP": <span style="color: #000000;">**Center Party's**</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]. He seems to represent a rightward turn from Marx, despite his trade union background, and will preside over a [? if z_party_name != "CVP": <span style="color: #000000;">**Center Party's**</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] less inclined to compromise with the left. He views the [? if z_party_name != "CVP": <span style="color: #000000;">**Center Party's**</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] as a prototype for a <span style="color: #000000;">Christian</span>, <span style="color: #586593;">democratic</span>, <span style="color: #000000;">German</span>, and <span style="color: #c00000;">social</span> party, and aims to transform it according to the principles laid out in his proposed "Essen program" eight years prior. 
@@ -30,7 +33,15 @@ Adam Stegerwald has been elected as the chairman of the [? if z_party_name != "C
 @stegerwald
 unavailable-subtitle: [? if labor_dissent > 15: The white collar unions are still unhappy with Stegerwald's decision to oppose wage increases last year. ?][? if labor_strength < 25: Stegerwald does not have enough influence to secure the nomination. ?][? if dnvp_relation < 55 : His policy of cooperation with the <span style="color: #3E88B3;">**DNVP**</span> is unpopular right now. ?]
 subtitle: Stegerwald sits on the right of the labor faction and would rather work with the political right than the <span style="color: #c00000;">**SPD**</span>.
-view-if: (clerical_relation < 7 and clerical_relation > 4 and labor_strength > 25 and dnvp_relation >= 55 and labor_strength >= right_strength) or (clerical_relation > 7 and labor_strength > 25 and dnvp_relation >= 55 and labor_strength < right_strength)
+view-if: (clerical_relation < 7
+          and clerical_relation > 4 
+          and labor_strength > 25 
+          and dnvp_relation >= 55 
+          and labor_strength >= right_strength) 
+or (clerical_relation > 7 
+          and labor_strength > 25 
+          and dnvp_relation >= 55 
+          and labor_strength < right_strength)
 on-arrival: z_party_leader = "Stegerwald"; spd_relation -= 5; dnvp_relation += 8; workers_z += 1*(1-dissent); new_middle_z -= 1; clergy_relation -= 1; non_cvp_stegerwald += 1; z_ideology = "Catholic Corporatism"
 
 steggy elected
@@ -45,7 +56,19 @@ don't poke around
 
 @fail
 subtitle: Stegerwald has been resoundingly rejected by the rest of the party. 
-view-if: not (clerical_relation >=6 and labor_strength > 25 and dnvp_relation >= 55 and labor_strength > right_strength) and not (clerical_relation < 7 and clerical_relation > 4 and labor_strength > 25 and dnvp_relation >= 55 and labor_strength >= right_strength) and not (clerical_relation > 7 and labor_strength > 25 and dnvp_relation > 55 and labor_strength < right_strength)
+view-if: not (clerical_relation >=6 
+         and labor_strength > 25 
+         and dnvp_relation >= 55 
+         and labor_strength > right_strength) 
+and not (clerical_relation < 7 
+        and clerical_relation > 4 
+        and labor_strength > 25 
+        and dnvp_relation >= 55 
+        and labor_strength >= right_strength) 
+and not (clerical_relation > 7 
+        and labor_strength > 25 
+        and dnvp_relation > 55 
+        and labor_strength < right_strength)
 on-arrival: labor_dissent += 5
 
 steggy blocked
@@ -56,9 +79,15 @@ steggy blocked
 
 @chud_joos
 subtitle: Joos belongs to the <span style="color: #FF7F00;">left</span> and supports increased cooperation with the <span style="color: #c00000;">**SPD**</span>. However, he might have trouble controlling the right within our party. 
-choose-if: clerical_relation > 4 and pro_republic >= 50 and center_strength >= 10 and spd_relation >= 55
-view-if: clerical_relation > 4 and pro_republic >= 50 and center_strength >= 10 and spd_relation >= 55
-on-arrival: z_party_leader = "Joos"; catholics_spd += 2; workers_z += 1*(1-dissent); z_party_leader1 += 1; spd_relation += 8*(1-dissent); z_rural -= 2*(1-dissent); left_strength += 4*(1-dissent); right_dissent += 3; pro_republic += 3; chud_joos = 1
+choose-if: clerical_relation > 4 
+           and pro_republic >= 50 
+           and center_strength >= 10 
+           and spd_relation >= 55
+view-if: clerical_relation > 4 
+          and pro_republic >= 50 
+          and center_strength >= 10 
+          and spd_relation >= 55
+on-arrival: z_party_leader = "Joos"; z_party_leader1 += 1; spd_relation += 3*(1-dissent); dmvp_relation += 3*(1-dissent); ddp_relation -= 3; dvp_relation -= 3; dvp_right += 0.5; workers_z += 1/3*(1-dissent); old_middle_z += 1/3*(dissent); z_rural += 1/3*(1-dissent); center_strength += 8*(1-dissent); right_dissent -= 3; center_dissent -= 3; labor_dissent -= 3; left_dissent -= 3; pro_republic += 1; chud_joos = 1
 face-image: img/portraits/JoosJoseph.jpg
 
 chud With the National Council's rejection of Stegerwald, the party's close relations with the <span style="color: #c00000;">**SPD**</span> has led the delegates to nominate Joseph Joos as chairman to continue further cooperation with the <span style="color: #c00000;">**SPD**</span>. As chairman of the Catholic Workers Associations and de-facto leader of the <span style="color: #FF7F00;">Christian Left</span>, he increases the appeal of the <span style="color: #000000;">**Center Party**</span> to workers and progressives. 
@@ -66,9 +95,12 @@ chud With the National Council's rejection of Stegerwald, the party's close rela
 @woke_joos
 unavailable-subtitle: [? if clerical_relation < 6 : Joos' economically left policies are unpopular amongst the clergy. ?][? if pro_republic < 55 : His inclinations towards republicanism are incompatible with the current national mood. ?][? if left_strength < 25 or left_strength <= 0.4*(labor_strength + right_strength) : The <span style="color: #FF7F00;">Christian Left</span> faction is not strong enough to elect Joos. ?][? if spd_relation < 65 : His policy of close cooperation with the <span style="color: #c00000;">**SPD**</span> is unpopular within the party. ?]
 subtitle: Joos belongs to the <span style="color: #FF7F00;">left</span> and supports increased cooperation with the <span style="color: #c00000;">**SPD**</span>. However, he might have trouble controlling the right within our party. 
-choose-if: clerical_relation > 5 and pro_republic >= 55 and left_strength >= 25 and left_strength > 0.4*(labor_strength + right_strength) and spd_relation >= 65
-view-if: clerical_relation > 5 and pro_republic >= 55 and left_strength >= 25 and left_strength > 0.4*(labor_strength + right_strength) and spd_relation >= 65
-on-arrival: z_party_leader = "Joos"; catholics_spd += 2; workers_z += 1*(1-dissent); z_party_leader1 += 1; spd_relation += 8*(1-dissent); z_rural -= 2*(1-dissent); left_strength += 4*(1-dissent); right_dissent += 3; pro_republic += 3; woke_joos = 1; z_ideology = "Christian Democracy"
+choose-if: clerical_relation > 5 
+           and pro_republic >= 55 
+           and left_strength >= 25 
+           and left_strength > 0.4*(labor_strength + right_strength) 
+           and spd_relation >= 65
+on-arrival: z_party_leader = "Joos"; catholics_spd += 2; workers_z += 1*(1-dissent); z_party_leader1 += 1; spd_relation += 8*(1-dissent); z_rural -= 2*(1-dissent); left_strength += 6*(1-dissent); right_dissent += 3; pro_republic += 3; woke_joos = 1; z_ideology = "Christian Democracy"
 face-image: img/portraits/JoosJoseph.jpg
 
 woke With the National Council's rejection of Stegerwald, the party's close relations with the <span style="color: #c00000;">**SPD**</span> has led the delegates to nominate Joseph Joos as chairman to continue further cooperation with the <span style="color: #c00000;">**SPD**</span>. As chairman of the Catholic Workers Associations and de-facto leader of the <span style="color: #FF7F00;">Christian Left</span>, he increases the appeal of the <span style="color: #000000;">**Center Party**</span> to workers and progressives. 
@@ -76,7 +108,7 @@ woke With the National Council's rejection of Stegerwald, the party's close rela
 @kaas
 view-if: not (clerical_relation > 4 and pro_republic >= 55 and center_strength >= 10 and spd_relation >= 55) and not (clerical_relation > 5 and pro_republic >= 60 and left_strength >= 25 and left_strength > 0.4*(labor_strength + right_strength) and spd_relation >= 65)
 subtitle: A dark horse emerges... 
-on-arrival: z_party_leader = "Kaas"; spd_relations -= 5; prussian_concordat_progress += 1; catholics_z += 3; dvp_right += 1; ddp_relations -= 3; dvp_relations -= 5; clergy_relation += 2;
+on-arrival: z_party_leader = "Kaas"; spd_relation -= 5; prussian_concordat_progress += 1; catholics_z += 3; dvp_right += 1; ddp_relations -= 3; dvp_relations -= 5; clergy_relation += 2;
 face-image: img/portraits/KaasLudwig.jpg
 
 While a suggestion about a collegium with Joos, Stegerwald and Kaas had won some approval from delegates, concerns about Stegerwald's personality has sunk the idea. In a secret vote by the delegates, Ludwig Kaas has been selected as the chairman of the [? if z_party_name != "CVP": <span style="color: #000000;">**Center Party**</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] as a compromise candidate between Stegerwald and Joos. 
