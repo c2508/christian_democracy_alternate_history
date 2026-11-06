@@ -20,8 +20,8 @@ Is the fall of Bolz I inevitable?
 
 @ddp_toleration
 title: The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> has decided to tolerate us!
-subtitle: This is unexpected
-choose-if: ddp_relation > 40 
+subtitle: The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> succumbs to pressure from its industrial wing. 
+choose-if: ddp_relation >= 40 
 unavailable-subtitle: [? if ddp_relation > 40 : Our relations with the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> are too low. ?][? if ddp_left > ddp_right : The left of the <span style="color: #D3C24D;">**[+ ddp_name +]**</span> has reservations about this arrangement. ?][? if dvp_left < dvp_right : The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> has no reason to tolerate us. ?]
 on-arrival: pro_republic += 1; ddp_relation += 2; ddp_right += 2; dvp_left += 1; ddp_new_middle -= 1; in_christian_coalition_toleration_both_wurttemberg = 1; in_christian_coalition_toleration_wurttemberg = 0
 
@@ -30,8 +30,8 @@ During the <span style="color: #c00000;">**SPD's**</span> motion of no-confidenc
 @weimar
 title: A <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition has the necessary seats...
 subtitle: Our state chapter has a strong distrust of the <span style="color: #c00000;">**Social Democrats**</span>
-choose-if: spd_relation > 60 and right_dissent < 15
-unavailable_subtitle: [? if spd_relation < 60 : Our relations with the <span style="color: #c00000;">**SPD**</span> are too poor. ?][? if right_dissent < 15 : The right of the party will not let this happen. ?]
+choose-if: spd_relation > 60 and right_dissent < 15 and ddp_relation < 40
+unavailable_subtitle: [? if spd_relation < 60 : Our relations with the <span style="color: #c00000;">**SPD**</span> are too poor. ?][? if right_dissent < 15 : The right of the party will not let this happen. ?][? if ddp_relation < 40 : The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> has offered to tolerate us. ?]
 on-arrival: right_dissent += 5; z_rural -= 2; in_weimar_coalition_wurttemberg = 1; in_christian_coalition_toleration_wurttemberg = 0; dnvp_relation -= 3; pro_republic += 3
 
 Due to the unwillingness of our Wurttemberg Chapter to face new elections, they have overcome their anti-<span style="color: #c00000;">**socialist**</span> bias and formed a <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition. This has its expected detractors within our party, but it is a necessary measure to maintain stability.
@@ -39,6 +39,8 @@ Due to the unwillingness of our Wurttemberg Chapter to face new elections, they 
 @snap
 title: The cabinet falls...
 subtitle: An election now will only disadvantage us
+choose-if: spd_relation <= 60 and right_dissent >= 15 and ddp_relation < 40 
+unavailable-subtitle: We have other options
 on-arrival: pro_republic -= 3; left_dissent += 5; z_catholic -= 2; z_rural -= 2; dnvp_rural -= 3; nsdap_rural += 2; others_rural += 3; in_christian_coalition_toleration_wurttemberg = 0; next_election_year_wurttemberg = 1929; next_election_month_wurttemberg = 11; 
 
 The fall of the Bolz cabinet has led the <span style="color: #FF7F00;">Christian Left</span> to critisise our unwillingness to cooperate with the <span style="color: #c00000;">**SPD**</span>. 
