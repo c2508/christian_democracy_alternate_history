@@ -100,7 +100,7 @@ Composed primarily of <span style="color: #909090;">**special interest**</span> 
 
 @spd
 subtitle: The workers will regard this as a betrayal.
-go-to: negotiate_spd.originalname5
+go-to: negotiate_spd.spd
 
 @ddp
 subtitle: Employers are strongly against this. 
