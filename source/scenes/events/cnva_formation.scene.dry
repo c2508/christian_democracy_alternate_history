@@ -1,6 +1,6 @@
-title: The <span style="color: #8ED8E4;">**CSVD**</span>, <span style="color: #006400;">**CNBLP**</span> and <span style="color: #455B95;">**KVP**</span have merged.
-subtitle: A consolidation of the anti Hugenberg elements on the right
-view-if: year = 1928 
+title: The formation of the <span style="color:#009EE0;">**CNVA**</span>
+subtitle: A consolidation of the moderate elements on the right
+view-if: year = 1929 and month = 12 and agrarian_split = 1
 max-visits: 1
 tags: event
 priority: 3
@@ -25,7 +25,7 @@ With his plans in ruins, Schiele has reluctantly joined forces with Westarp’s 
 
 Disdainful of the crass materialism of the German electorate personified by Westarp and Schiele, the <span style="color: #6D5298;">Christian Socials</span> initially rejected Westarp’s invitation. However, in negotiations with the regional Stoeckerite parties, contentious disagreements over republicanism have caused much strife, with prominent <span style="color: #6D5298;">Christian Socials</span> unwilling to budge on their opposition to the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> system. 
 
-Consequently, despite some reservations the the <span style="color: #6D5298;">Christian Socials</span> have accepted Westarp’s offer after recognising the necessity of preserving an independent Christian influence within the conservative movement. 
+Consequently, despite some reservations, the <span style="color: #6D5298;">Christian Socials</span> have accepted Westarp’s offer after recognising the necessity of preserving an independent Christian influence within the conservative movement. 
 
 - @good: Westarp succeeds
 
