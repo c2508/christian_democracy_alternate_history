@@ -11,6 +11,15 @@ tags: party_affairs
 
 As an umbrella organisation representing organised agriculture, the formation of the <span style="color: #0dba1e;">**Green Front**</span> is a response to the growing crisis in the countryside. With the elements of the <span style="color: #3E88B3;">**DNVP**</span>, the <span style="color: #000000;">**Center Party**</span> and the <span style="color: #006400;">**CNBLP**</span>, it possesses sizable influence in German Politics. How might we utilise the <span style="color: #0dba1e;">**Green Front**</span> to advance our goals?
 
+Below denotes the amount of influence each party has in the <span style="color: #0dba1e;">**Green Front**</span>
+
+<span style="color: #000000;">**Z**</span>/<span style="color: #69A2BE;">**BVP**</span>: [+ z_gf_influence : gf_influence +]
+[? if cnblp_formed : <span style="color: #006400;">**CNBLP**</span>: [+ cnblp_gf_influence : gf_influence +] ?]
+[? if cnva_formed : <span style="color:#009EE0;">**CNVA**</span>: [+ cnva_gf_influence : gf_influence +] ?]
+<span style="color: #3E88B3;">**DNVP**</span>: [+ dnvp_gf_influence : gf_influence +]
+<span style="color: #7A3C00;">**NSDAP**</span>: [+ nsdap_gf_influence : gf_influence +]
+<span style="color: #909090;">Minor Agrarian Parties</span>: [+ others_gf_influence : gf_influence +]
+
 - @junker: Rail against the influence of Junkers and the bankrupt large estates
 - @influence: Root out those with sympathies towards the <span style="color: #7A3C00;">**NSDAP**</span> within the <span style="color: #0dba1e;">**Green Front**</span>
 - @program: Start formulating the <span style="color: #0dba1e;">**Green Front**</span> program
