@@ -9,7 +9,7 @@ if (Q.dnvp_leader == "Hugenberg") {
 if (Q.dnvp_relations > 65) {
     Q.green_front_points += 1;
 }
-if (Q.dnvp_relations < 50) {
+if (Q.dnvp_relations < 45) {
     Q.green_front_points -= 1;
 }
 if (Q.z_leader == "Joos") {
@@ -19,11 +19,11 @@ if (Q.z_leader == "Stegerwald") {
     Q.green_front_points += 1;
 
 }
-if (Q.cnblp_votes > 3) {
+if (Q.cnblp_votes > 2.6) {
     Q.green_front_points += 1;
 }
 
-if (Q.right_dissent > 25) {
+if (Q.right_dissent > 15) {
     Q.green_front_points += 1;
 }
 
@@ -31,7 +31,7 @@ if (Q.hermes_advisor == 1) {
     Q.green_front_points += 1; 
 }
 
-if (Q.right_strength > 25) { 
+if (Q.right_strength > 22) { 
     Q.green_front_points += 1;
 }
 
@@ -50,7 +50,7 @@ if (Q.rpm_strength == 2) {
 if (Q.rpm_strength == 0) {
     Q.green_front_points -= 2;
 }
-if (Q.rural_z + Q.rural_dnvp + Q.rural_dvp < 50) {
+if (Q.rural_z + Q.rural_dnvp + Q.rural_dvp < 55) {
     Q.green_front_points += 1;
 }
 !}
