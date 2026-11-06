@@ -86,15 +86,7 @@ face-image: img/portraits/JoosJoseph.jpg
 woke With the National Council's rejection of Stegerwald, the party's close relations with the <span style="color: #c00000;">**SPD**</span> has led the delegates to nominate Joseph Joos as chairman to continue further cooperation with the <span style="color: #c00000;">**SPD**</span>. As chairman of the Catholic Workers Associations and de-facto leader of the <span style="color: #FF7F00;">Christian Left</span>, he increases the appeal of the <span style="color: #000000;">**Center Party**</span> to workers and progressives. 
 
 @kaas
-view-if: not (clerical_relation > 4 
-         and pro_republic >= 50 
-         and center_strength >= 10 
-         and spd_relation >= 55) 
-and not (clerical_relation >= 5 
-         and pro_republic >= 55 
-         and left_strength >= 25 
-         and left_strength > 0.4*(labor_strength + right_strength) 
-         and spd_relation >= 60)
+view-if: not (clerical_relation > 4 and pro_republic >= 50 and center_strength >= 10 and spd_relation >= 55) and not (clerical_relation >= 5 and pro_republic >= 55 and left_strength >= 25 and left_strength > 0.4*(labor_strength + right_strength) and spd_relation >= 60)
 subtitle: A dark horse emerges... 
 on-arrival: z_party_leader = "Kaas"; spd_relation -= 5; prussian_concordat_progress += 1; catholics_z += 4; dvp_right += 1; ddp_relations -= 5; dvp_relations -= 5; clerical_relation += 2; right_dissent -= 5; center_dissent -= 5; labor_dissent -= 5; left_dissent -= 5
 face-image: img/portraits/KaasLudwig.jpg
