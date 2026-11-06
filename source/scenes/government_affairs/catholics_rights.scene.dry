@@ -22,10 +22,10 @@ Despite the <span style="color: #000000;">We</span><span style="color: #DD0000;"
 
 @equal
 subtitle: Ensure equal treatment for Jews and Catholics in the civil service
-on-arrival: dnvp_relation -= 3; catholics_z += 3*(1-dissent); nationalism -= 5; new_middle_z += 1; ddp_relation += 5; 
+on-arrival: dnvp_relation -= 3; catholics_z += 3*(1-dissent); nationalism -= 5; new_middle_z += 1; ddp_relation += 3; spd_relation += 3
 max-visits: 3
 
-These policies strongly discourage discrimination on the basis of religion during the hiring process, enabling the entry of those from more diverse backgrounds to enter the traditionally reactionary bureaucracy. This has led to an influx of Aussenseiter (outsiders) in the civil service, with the right wing parties accusing us to turning the bureaucracy into a 'pork barrel institution'.
+These policies strongly discourage discrimination on the basis of religion during the hiring process, enabling the entry of those from more diverse backgrounds to enter the traditionally reactionary bureaucracy. This has led to an influx of outsiders in the civil service, who tend to be more amenable to the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Republic. While the right wing parties accuse us to turning the bureaucracy into a 'pork barrel institution', the <span style="color: #c00000;">**SPD**</span> expresses their gratefulness for our help. 
 
 @pconcordat
 subtitle: The Prussian Concordat is an important convention in protecting the rights of Catholics throughout Prussia and paves the way for a Reichskonkordat in the future.
@@ -39,7 +39,7 @@ Georg Schreiber and Ludwig Kaas make some progress regarding the Prussian Concor
 
 
 @school
-subtitle: This has been our goal since 1927.
+subtitle: Whlie this was unachievable in the Fourth Marx Cabinet, it might be possible to implement one now. 
 on-arrival: catholics_z += 5*(1-dissent); dvp_relation -= 10; clergy_relation += 1; ddp_relation -= 5;
 max-visits: 1
 
