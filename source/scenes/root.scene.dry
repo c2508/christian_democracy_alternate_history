@@ -258,6 +258,12 @@ Q.streetfighting_urgency = 0;
 Q.z_ideology = "Political Catholicism";
 Q.cnblp_ideology = "Agrarianism";
 Q.dnvp_ideology = "National Conservatism";
+Q.gf_dnvp_influence = 7
+Q.gf_cnblp_influence = 0
+Q.gf_cnva_influence = 0
+Q.gf_z_influence = 3
+Q.nsdap_gf_influence = 1
+Q.gf_others_influence = 1
 
 Q.interior_police_strength = 50;
 Q.interior_police_militancy = 1;
