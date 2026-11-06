@@ -39,8 +39,9 @@ Georg Schreiber and Ludwig Kaas make some progress regarding the Prussian Concor
 
 
 @school
-subtitle: Whlie this was unachievable in the Fourth Marx Cabinet, it might be possible to implement one now. 
+subtitle: While this was unachievable in the Fourth Marx Cabinet, it might be possible to implement one now. 
 on-arrival: catholics_z += 5*(1-dissent); dvp_relation -= 10; clergy_relation += 1; ddp_relation -= 5;
+choose-if: spd_relation > 200
 max-visits: 1
 
 We have increased welfare spending on women and children. [? if welfare >= 1 and unemployed >= 15 : Some of our coalition partners consider increased welfare spending profligate at this time. ?]
