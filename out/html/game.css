@@ -577,6 +577,11 @@ body.highlight-ddp .seat.ddp {
     stroke-width: 1.5px;
 }
 
+body.highlight-bvp .seat.bvp {
+   stroke: var(--border-color);
+    stroke-width: 1.5px;
+}
+
 body.highlight-dvp .seat.dvp {
    stroke: var(--border-color);
     stroke-width: 1.5px;
