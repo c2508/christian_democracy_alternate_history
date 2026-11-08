@@ -147,6 +147,11 @@ if (window && d3) {
     d3.select("#reichstag").datum(data).call(parliament);
 }
 
+if (Q.spd_bruning_support == 1) {
+  document.body.classList.add("highlight-spd");
+} else {
+  document.body.classList.remove("highlight-spd");
+}
 !}
 
 = Bruning's Mandate
