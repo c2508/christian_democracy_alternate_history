@@ -143,6 +143,11 @@ if (window && d3) {
 go-to: convince
 
 @convince
+on-arrival: {!
+Q.bruning_support_percentage = Math.round(Q.bruning_support_percentage * 10) / 10;
+Q.bruning_undecided_percentage = Math.round(Q.bruning_undecided_percentage * 10) / 10;
+Q.bruning_opposed_percentage = Math.round(Q.bruning_opposed_percentage * 10) / 10;
+!}
 
 = Bruning's Mandate
 
@@ -231,7 +236,6 @@ go-to: negotiate_spd
 @spd_return
 new-page: true
 go-to: convince
-
 
 @ddp
 subtitle: The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> will regard this as a betrayal.
