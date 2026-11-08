@@ -21,7 +21,6 @@ if (Q.kvp_formed >= 1) {
     Q.bruning_undecided_percentage += Q.kvp_r;
 }
 !}
-
 go-to: convince
 
 @convince
