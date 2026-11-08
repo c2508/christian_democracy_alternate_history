@@ -649,6 +649,9 @@ body.highlight-dnvp .seat.dnvp {
 .seat.kvp {
     fill: #455B95;
 }
+.seat.cnva {
+    fill: #009EE0;
+}
 .seat.dnvp {
     fill: #3E88B3;
 }
