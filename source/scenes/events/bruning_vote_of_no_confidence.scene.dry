@@ -21,6 +21,15 @@ if (Q.kvp_formed >= 1) {
     Q.bruning_undecided_percentage += Q.kvp_r;
 }
 !}
+
+go-to: convince
+
+@convince
+on-arrival: {!
+Q.bruning_support_percentage = Math.round(Q.bruning_support_percentage * 10) / 10;
+Q.bruning_undecided_percentage = Math.round(Q.bruning_undecided_percentage * 10) / 10;
+Q.bruning_opposed_percentage = Math.round(Q.bruning_opposed_percentage * 10) / 10;
+!}
 on-display: {!
 data = [
     {
@@ -140,19 +149,13 @@ if (window && d3) {
 }
 
 !}
-go-to: convince
-
-@convince
-on-arrival: {!
-Q.bruning_support_percentage = Math.round(Q.bruning_support_percentage * 10) / 10;
-Q.bruning_undecided_percentage = Math.round(Q.bruning_undecided_percentage * 10) / 10;
-Q.bruning_opposed_percentage = Math.round(Q.bruning_opposed_percentage * 10) / 10;
-!}
 
 = Bruning's Mandate
 
 Following the Great Depression, Germany's finances have been in shambles, with most of the Landers running huge deficits every year. As such, Bruning has been tasked with balancing the budget through a ruthless austerity program, for which he requires the support of the Reichstag. However, <span style="color: #808080;">Hindenburg's</span> aversion towards <span style="color: #c00000;">socialist</span> governance and the <span style="color: #3E88B3;">**DNVP's**</span> vacillating stance mean that Bruning has to rely on the support of the parties of the middle.
 Composed primarily of <span style="color: #909090;">**special interest**</span> parties, their single-minded pursuit of <span style="color: #909090;">**special interests**</span> might jeopardise Bruning's goal of balancing the budget, making their support tenuous at best. Now, our task in the Reichstag is to somehow wrangle a majority in favour of Bruning's policies. 
+
+{!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
 
 {!<table>!} 
 {!<tr><td>!}Party{!</td><td>!}Vote Share{!</td><td>!}Reichstag Seats{!</td><td>!}Stance{!</td></tr>!}
