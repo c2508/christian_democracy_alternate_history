@@ -84,23 +84,19 @@ Economic growth: [+ economic_growth_2 +]%
 
 = Inter-party Relations
 
-{!<table>!}
+<span style="color: #700000;">**KPD**</span>: [+ kpd_relation : relationships +]
 
-{!<tr><td>!} <span style="color: #700000;">**KPD**</span>: {!</td><td>!} [+ kpd_relation : relationships +] {!</td></tr>!}
+<span style="color: #c00000;">**SPD**</span>: [+ spd_relation : relationships +]
 
-{!<tr><td>!} <span style="color: #c00000;">**SPD**</span>: {!</td><td>!} [+ spd_relation : relationships +] {!</td></tr>!}
+[? if not lvp_formed or not ddp_name: [? if not ddp_name:<span style="color: #D3C24D;">**DDP**</span>?][? if ddp_name = "DDP":<span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if ddp_name = "DStP":<span style="color: #D3C24D;">**[+ ddp_name +]**</span>?]: [+ ddp_relation : relationships +] ?]
 
-[? if not lvp_formed or not ddp_name: [? if not ddp_name:{!<tr><td>!} <span style="color: #D3C24D;">**DDP**</span>: {!</td><td>!} [+ ddp_relation : relationships +] {!</td></tr>!}?][? if ddp_name = "DDP":{!<tr><td>!} <span style="color: #D3C24D;">**[+ ddp_name +]**</span>: {!</td><td>!} [+ ddp_relation : relationships +] {!</td></tr>!}?][? if ddp_name = "DStP":{!<tr><td>!} <span style="color: #D3C24D;">**[+ ddp_name +]**</span>: {!</td><td>!} [+ ddp_relation : relationships +] {!</td></tr>!}?] ?]
+<span style="color: #C0A054;">**DVP**</span>: [+ dvp_relation : relationships +]
 
-{!<tr><td>!} <span style="color: #C0A054;">**DVP**</span>: {!</td><td>!} [+ dvp_relation : relationships +] {!</td></tr>!}
+<span style="color: #3E88B3;">**DNVP**</span>: [+ dnvp_relation : relationships +]
 
-{!<tr><td>!} <span style="color: #3E88B3;">**DNVP**</span>: {!</td><td>!} [+ dnvp_relation : relationships +] {!</td></tr>!}
+[? if dnf_formed : <span style="color: #003755;">**DNF**</span>: [+ dnf_relation : relationships +] ?]
 
-[? if dnf_formed: {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_relation : relationships +] {!</td></tr>!} ?]
-
-{!<tr><td>!} <span style="color: #7A3C00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_relation : relationships +] {!</td></tr>!}
-
-{!<table>!}
+<span style="color: #7A3C00;">**NSDAP**</span>: [+ nsdap_relation : relationships +]
 
 = Party Leadership
 
