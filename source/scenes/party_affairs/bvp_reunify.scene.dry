@@ -9,27 +9,35 @@ tags: party_affairs
 
 = Reunification with the <span style="color: #69A2BE;">**BVP**</span>
 
-Since the Regensburg Agreement, our relationship with the once estranged <span style="color: #69A2BE;">**BVP**</span> has mostly normalised, especially with the delineation of our explicit spheres of influence. Despite that, pressure still remains at the grassroots level for the reformation of the <span style="color: #000000;">**Center Party**</span> back into a united Catholic party, with the result of the 1925 Presidential Elections a warning to many <span style="color: #000000;">**Center Party**</span> members of the price of continued Catholic disunity. 
+Since the Regensburg Agreement, our relationship with the once estranged <span style="color: #69A2BE;">**BVP**</span> has mostly normalised, especially with the delineation of our explicit spheres of influence at the regional levels. Despite that, pressure still remains at the grassroots level for the reformation of the <span style="color: #000000;">**Center Party**</span> back into a united Catholic party, with the result of the 1925 Presidential Elections a warning to many <span style="color: #000000;">**Center Party**</span> members of the price of continued Catholic disunity. 
  
 In light of the resignation of long-time party leader Wilhelm Marx, the onus now falls on [+ z_party_leader +] to bring the prodigal son back into the fold. With the <span style="color: #69A2BE;">**BVP**</span>'s demand for continued political autonomy being a sticking point, the alternative pathway to reunification lies in the establishment of a formal working relationship with the <span style="color: #69A2BE;">**BVP**</span> such that they can function as an official sister party of the <span style="color: #000000;">**Center Party**</span>. 
 
-- @catholic_rights: ds
-- @rb_distance: Resolve the <span style="color: #c00000;">**Reichbanner**</span> issue
-- @fund_org: saas
+- @catholic_rights: Negotiate a new joint party program with the <span style="color: #69A2BE;">**BVP**</span>
+- @rb_distance: Take actions to distance ourselves from the <span style="color: #c00000;">**SPD**</span>
+- @fund_org: Integrate the <span style="color: #69A2BE;">**BVP**</span> affliated organisations into the national party apparatus
 - @easy_discard
 
 @catholic_rights
-on-arrival: enemies = "anti-democratic parties"; center_strength += 5; reformist_strength += 5; left_dissent += 5; workers_kpd -= 1.5; workers_nsdap -= 2; workers_dnvp -= 1 if dnvp_ideology == "Radical"; workers_dnf -= 1; unemployed_kpd -= 2; unemployed_nsdap -= 2; kpd_relation -= 10
+view-if: bvp_condition_1 = 0
+subtitle: Our differing views on several key issues have impeded talks
+on-arrival: right_dissent -= 3; left_dissent += 5; bvp_condition_1 += 1
 
-Attacking the <span style="color: #7A3C00;">far</span>-[? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">right</span>?][? if dnvp_ideology == "Moderate": <span style="color: #003755;">right</span>?] and <span style="color: #700000;">left</span> is popular among all but the left wing of our party, who would prefer to be fighting the bourgeois parties. This might also hamper our ability to reconcile with the <span style="color: #700000;">**KPD**</span> in the future.
+
+Following intense negotiations, [+ z_leader  +], negotiating from a position of strength, has managed to secure a major concession from the <span style="color: #69A2BE;">**BVP**</span> - their acceptance of the current republic, in part due to the vigorous efforts of Heinrich Held and Fritz Schaffer. This has alienated many monarchists on their right flank, but only a minority of them have defected to the <span style="color: #3E88B3;">**DNVP**</span>. In fact, most of them remain, whether out of confessional ties or their satisfaction with our cultural policies. 
+
+In other areas, the <span style="color: #69A2BE;">**BVP**</span> has won the fight, officially securing a plank in the <span style="color: #000000;">**Center Party**</span> program endorsing regionalism and the concept of federalism, especially in Bavaria. This has strengthened the position of those who advocate for the dissolution of Prussia and the need for Reichsreform in our party, much to the chagrin of the <span style="color: #FF7F00;">Christian Left</span> who view Prussia as the stabiliser of the republic.
 
 @rb_distance
-on-arrival: enemies = "far right"; left_strength += 5; left_dissent -= 5; workers_nsdap -= 3; unemployed_nsdap -= 3; workers_dnvp -= 2 if dnvp_ideology == "Radical"; workers_dnf -= 2
-subtitle: The presence of prominent party leaders like Wilhelm Marx in the <span style="color: #c00000;">**Reichbanner**</span> has blocked further talks towards reunification
+view-if: bvp_condition_2 = 0
+subtitle: Our close relations with the <span style="color: #c00000;">**SPD**</span> has been cause for concern in the <span style="color: #69A2BE;">**BVP**</span>.
+on-arrival: right_strength += 5; left_strength -= 3; left_dissent += 6; bvp_condition_2 += 1
 
-
+ok
 
 @fund_org
-on-arrival: enemies = "NSDAP"; neorevisionist_strength += 5; nazi_urgency += 1; workers_nsdap -= 4; unemployed_nsdap -= 4; workers_nsdap += 8 if nsdap_votes < 8; unemployed_nsdap += 8 if nsdap_votes < 8
+on-arrival: resources -= 2; bvp_negotiations += 1
+view-if: bvp_negotiations = 2
+subtitle: - 2 resources 
 
 sasa
