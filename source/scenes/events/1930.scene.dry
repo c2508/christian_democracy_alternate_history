@@ -7,6 +7,8 @@ Q.unemployed += 6.8;
 Q.special_interests += 6
 Q.rdi_balance += 5;
 Q.inflation -= 4;
+Q.nazi_gf_influence += 2; 
+Q.others_gf_influence += 1;
 if (Q.budget > 0) {
     Q.budget -= 1;
 }
