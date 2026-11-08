@@ -264,7 +264,8 @@ Q.cnva_gf_influence = 0;
 Q.z_gf_influence = 6;
 Q.nsdap_gf_influence = 1;
 Q.others_gf_influence = 1;
-Q.bvp_negotiations = 0;
+Q.bvp_condition_1 = 0;
+Q.bvp_condition_2 = 0;
 
 Q.interior_police_strength = 50;
 Q.interior_police_militancy = 1;
