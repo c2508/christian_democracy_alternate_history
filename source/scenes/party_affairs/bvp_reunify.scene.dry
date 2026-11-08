@@ -45,7 +45,7 @@ on-arrival: resources -= 2; bvp_condition_2 += 1
 With their electoral dominance in Bavaria, the <span style="color: #69A2BE;">**BVP**</span> has built itself a veritable party organisation with regional newspapers, youth organisations and grassroot networks. Thus, it falls on us to establish regular lines of commmunication and standardise important procedures to ensure that joint electoral campaigns can be run smoothly.
  
 @reunify
-view-if: bvp_condition_2 = 2; bvp_condition_1 = 1
+view-if: bvp_condition_2 = 2 and bvp_condition_1 = 1
 subtitle: The mistakes of the early 1920s can no longer haunt us
 on-arrival: bvp_reunified = 1; left_dissent += 5; left_strength -= 5
 
