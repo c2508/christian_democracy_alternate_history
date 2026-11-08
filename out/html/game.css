@@ -573,6 +573,10 @@ table {
 .seat.spd {
     fill: #E3000F;
 }
+body.highlight-spd .seat.spd {
+   stroke: var(--border-color);
+    stroke-width: 1.5px;
+}
 .seat.ddp {
     fill: #DCCA4A;
 }
