@@ -1,1 +1,160 @@
+title: Negotiations with the <span style="color: #455B95;">**KVP**</span> 
+new-page: true
+subtitle: The <span style="color: #455B95;">**KVP**</span> has some demands in exchange for their participation in Bruning's government.
+go-to: kvp
 
+= Talks with the <span style="color: #455B95;">**KVP**</span> 
+
+<img src="img/redfront.jpg" style="display:block; width:100%; max-width:500px; height:auto; margin:0 auto 1em auto; object-fit:cover; object-position:top;">
+
+<hr>
+
+With the lack of investment in German Agriculture, the maturity of high interest American loans and crop failures especially in the province of Schleswig Holstein, German farmers have been facing increasing hardship, evidenced by the steadily increasing number of foreclosures. In addition, cheap agricultural imports from neighboring countries like <span style="color: #DC143C;">Pol</span><span style="color: #FFFFFF;">and</span> have led to a general decline in the price of agricultural goods but local agricultural associations have been ineffective due to factionalism and infighting. 
+
+All these factors have led to an increasing disillusion with the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> system and a radicalisation of the rural electorate. Already, large demonstrations have been held in Schleswig Holstein, with the potential of spreading to the rest of Northern Germany. The situation there is volatile and as a party in the Fourth <span style="color: #000000;">Marx</span> Cabinet with a significant rural voterbase, the onus is on us to give them a solution lest they defect to an agrarian <span style="color: #808080;">**special interest party**</span>.
+
+<hr>
+
+@kvp
+
+We need to give them enough concessions to ensure their toleration. 
+
+
+- #con_kvp
+- #drop_con_kvp
+
+@agri_minister
+title: Have a <span style="color: #000000;">**Center Party**</span> or <span style="color: #3E88B3;">**DNVP**</span> politician as Agriculture Minister in the next cabinet 
+tags: con_kvp
+choose-if: agri_minister = 0
+view-if: agri_minister = 0
+on-arrival: rpm_points += 2; agri_minister += 1; right_strength += 5;
+go-to: kvp 
+
+We shall have a conservative agriculture minister in the next cabinet.
+
+@fund
+title: Fund the <span style="color: #000000;">**Center Party**</span> aligned Association of German Farmers’ Association <span style="color: #000000;">**(VdB)**</span> for more low interest loans 
+subtitle: -4 resources
+unavailable-subtitle: Not enough resources.
+choose-if: resources >= 4 and fund = 0
+tags: con_kvp
+view-if: fund = 0
+on-arrival: rpm_points += 3; fund += 1; resources -= 4; right_dissent -= 5; catholics_z += 3*(1-dissent)
+go-to: kvp 
+
+While this appeases the Catholic peasants, Protestant farmers are unhappy at their exclusion.
+
+@coop
+title: Support agricultural cooperatives
+subtitle: -1 budget
+unavailable-subtitle: Not enough budget.
+tags: con_kvp
+choose-if: coop = 0 and budget >= 1
+view-if: coop = 0
+on-arrival: rpm_points += 3; coop += 1; budget -= 1; economic_growth += 0.3; unemployed -= 0.2; 
+go-to: kvp 
+
+We shall allocate more government funds to support agriculture cooperatives.
+
+@trade_war
+title: Prolong the trade war with <span style="color: #DC143C;">Pol</span><span style="color: #FFFFFF;">and</span> until at least 1932 
+subtitle: Continuing the trade war is popular amongst the majority of our party.
+tags: con_kvp
+choose-if: trade_war = 0
+view-if: trade_war = 0
+on-arrival: rpm_points += 3; trade_war += 1; nationalism += 5*(1-dissent); kvp_left += 1; old_middle_z += 2*(1-dissent); dnvp_relation += 5; dvp_relation += 5; left_dissent += 3; 
+go-to: kvp 
+
+We shall continue the trade war with <span style="color: #DC143C;">Pol</span><span style="color: #FFFFFF;">and</span>. 
+
+@foreclosure
+title: Impose a rent moratorium and postpone the foreclosure of insolvent farms
+subtitle: -2 budget
+unavailable-subtitle: Not enough budget.
+tags: con_kvp
+choose-if: foreclosure = 0 and budget >= 2
+view-if: foreclosure = 0
+on-arrival: rpm_points += 5; foreclosure += 1; budget -= 2; kvp_relation -= 5; dvp_relation -= 5; kvp_right += 1; economic_growth += 0.5
+go-to: kvp 
+
+This will relieve the financial burden of the farmers.
+
+@no_more
+title: No more concessions
+subtitle: We shall not make any more concessions
+tags: con_kvp
+go-to: yes if (rpm_points > 5); no if (rpm_points < 6)
+
+We shall see if the farmers are satisfied with these concessions.
+
+@drop_agri_minister
+title: Have a <span style="color: #000000;">**Center Party**</span> or <span style="color: #3E88B3;">**DNVP**</span> politician as Agriculture Minister in the next cabinet 
+subtitle: Drop this concession
+tags: drop_con_kvp
+choose-if: agri_minister = 1
+view-if: agri_minister = 1
+on-arrival: rpm_points -= 2; agri_minister -= 1; right_strength -= 5;
+go-to: kvp 
+
+We have decided to drop this concession.
+
+@drop_fund
+title: Fund the <span style="color: #000000;">**Center Party**</span> aligned Association of German Farmers’ Association <span style="color: #000000;">**(VdB)**</span> for more low interest loans 
+subtitle: Drop this concession +4 resources
+choose-if: fund = 1
+tags: drop_con_kvp
+view-if: fund = 1
+on-arrival: rpm_points -= 3; fund -= 1; resources += 4; right_dissent += 5; catholics_z -= 3*(1-dissent)
+go-to: kvp 
+
+We have decided to drop this concession.
+
+@drop_coop
+title: Support agricultural cooperatives
+subtitle: Drop this concession +1 budget
+tags: drop_con_kvp
+choose-if: coop = 1
+view-if: coop = 1
+on-arrival: rpm_points -= 3; coop -= 1; budget += 1; economic_growth -= 0.3; unemployed += 0.2; 
+go-to: kvp 
+
+We have decided to drop this concession.
+
+@drop_trade_war
+title: Prolong the trade war with <span style="color: #DC143C;">Pol</span><span style="color: #FFFFFF;">and</span> until at least 1932 
+subtitle: Drop this concession
+tags: drop_con_kvp
+choose-if: trade_war = 1
+view-if: trade_war = 1
+on-arrival: rpm_points -= 3; trade_war -= 1; nationalism -= 5*(1-dissent); kvp_left -= 1; old_middle_z -= 3*(1-dissent); dnvp_relation -= 5; dvp_relation -= 5;
+go-to: kvp 
+
+We have decided to drop this concession.
+
+@drop_foreclosure
+title: Impose a rent moratorium and postpone the foreclosure of insolvent farms
+subtitle: Drop this concession +2 budget
+tags: drop_con_kvp
+choose-if: foreclosure = 1 
+view-if: foreclosure = 1
+on-arrival: rpm_points -= 5; foreclosure -= 1; budget += 2; kvp_relation += 5; dvp_relation += 5; kvp_right -= 1; economic_growth -= 0.5
+go-to: kvp 
+
+We have decided to drop this concession.
+
+@yes
+on-arrival: right_dissent += 5 if kvp_bruning_support == 0; bruning_support += kvp_seats if kvp_bruning_support == 0; bruning_support_percentage += kvp_r if kvp_bruning_support == 0; bruning_undecided -= kvp_seats if kvp_bruning_support == 0; bruning_undecided_percentage -= kvp_r if kvp_bruning_support == 0; labor_opposition -= 35 if kvp_bruning_support == 0; industrial_opposition += 20 if kvp_bruning_support == 0; agriculture_opposition += 5 if kvp_bruning_support == 0; conservative_opposition += 40 if kvp_bruning_support == 0; kvp_bruning_support += 1 if kvp_bruning_support == 0
+go-to: bruning_vote_of_no_confidence.kvp_return
+
+Despite some concessions to the Landvolkbewegung, some feel that our policies do not go far enough in helping German farmers, but the <span style="color: #000000;">**VdB**</span>  is satisfied with our handling of the situation. As such, the radical elements of the movement have been significantly empowered and will seek to use this initially moderate movement to resort to increasingly violent acts of protest. This will have a destabilising effect in the countryside and may serve to further radicalise the already disenfranchised rural electorate.
+
+Meanwhile, Karl Hepp from the <span style="color: #C0A054;">**DVP**</span> and disaffected regional affliates of the <span style="color: #385A38;">**RLB**</span> have formed a new political party called the <span style="color: #006400;">**CNBLP**</span> in response to the preeminence of industrial interests in the <span style="color: #C0A054;">**DVP**</span> and <span style="color: #3E88B3;">**DNVP**</span>. With Hepp's position as President of the <span style="color: #385A38;">**RLB**</span>, the <span style="color: #3E88B3;">**DNVP**</span> and the <span style="color: #006400;">**CNBLP**</span> have begun to wrangle for control over the <span style="color: #385A38;">**RLB**</span> various regional chapters, which has severely compromised the <span style="color: #385A38;">**RLB**</span>'s official stance of political neutrality. With its appeal as an <span style="color: #385A38;">agrarian</span> <span style="color: #909090;">**special interest**</span> party, this can only spell trouble for the <span style="color: #C0A054;">**DVP**</span> and <span style="color: #3E88B3;">**DNVP**</span> in the upcoming elections
+
+@no
+on-arrival: right_dissent -= 5 if kvp_bruning_support == 1; bruning_support -= kvp_seats if kvp_bruning_support == 1; bruning_support_percentage -= kvp_r if kvp_bruning_support == 1; bruning_undecided += kvp_seats if kvp_bruning_support == 1; bruning_undecided_percentage += kvp_r if kvp_bruning_support == 1; labor_opposition += 35 if kvp_bruning_support == 1; industrial_opposition -= 20 if kvp_bruning_support == 1; agriculture_opposition -= 5 if kvp_bruning_support == 1; conservative_opposition -= 40 if kvp_bruning_support == 1; kvp_bruning_support -= 1 if kvp_bruning_support == 1
+go-to: bruning_vote_of_no_confidence.kvp_return
+
+Talks with the Landvolkbewegung have broken down due to our refusal to offer them any substantial concessions, much to the disapproval of the <span style="color: #000000;">**VdB**</span>. As such, the radical elements of the movement have been significantly empowered and will seek to use this initially moderate movement to resort to increasingly violent acts of protest. This will have a destabilising effect in the countryside and may serve to further radicalise the already disenfranchised rural electorate.
+
+Meanwhile, Karl Hepp from the <span style="color: #C0A054;">**DVP**</span> and disaffected regional affliates of the <span style="color: #385A38;">**RLB**</span> have formed a political party called the <span style="color: #006400;">**CNBLP**</span> in response to the preeminence of industrial interests in the <span style="color: #C0A054;">**DVP**</span> and <span style="color: #3E88B3;">**DNVP**</span>. With Hepp's position as President of the <span style="color: #385A38;">**RLB**</span>, the <span style="color: #3E88B3;">**DNVP**</span> and the <span style="color: #006400;">**CNBLP**</span> have begun to wrangle for control over the <span style="color: #385A38;">**RLB**</span> various regional chapters, which has severely compromised the <span style="color: #385A38;">**RLB**</span>'s official stance of political neutrality. With the growing strength of the Rural People’s Movement and the <span style="color: #006400;">**CNBLP's**</span> appeal as an <span style="color: #385A38;">agrarian</span> <span style="color: #909090;">**special interest**</span> party, this can only spell trouble for the <span style="color: #C0A054;">**DVP**</span> and <span style="color: #3E88B3;">**DNVP**</span> in the upcoming elections
