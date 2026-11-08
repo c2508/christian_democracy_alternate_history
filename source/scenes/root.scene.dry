@@ -266,6 +266,7 @@ Q.nsdap_gf_influence = 1;
 Q.others_gf_influence = 1;
 Q.bvp_condition_1 = 0;
 Q.bvp_condition_2 = 0;
+Q.bvp_reunified = 0;
 
 Q.interior_police_strength = 50;
 Q.interior_police_militancy = 1;
