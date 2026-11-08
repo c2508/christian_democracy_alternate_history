@@ -567,15 +567,50 @@ table {
 }
 
 /* Styles for parties */
+body.highlight-spd .seat.spd {
+   stroke: var(--border-color);
+    stroke-width: 1.5px;
+}
+
+body.highlight-ddp .seat.ddp {
+   stroke: var(--border-color);
+    stroke-width: 1.5px;
+}
+
+body.highlight-dvp .seat.dvp {
+   stroke: var(--border-color);
+    stroke-width: 1.5px;
+}
+
+body.highlight-wp .seat.wp {
+   stroke: var(--border-color);
+    stroke-width: 1.5px;
+}
+
+body.highlight-cnblp .seat.cnblp {
+   stroke: var(--border-color);
+    stroke-width: 1.5px;
+}
+
+body.highlight-csvd .seat.csvd {
+   stroke: var(--border-color);
+    stroke-width: 1.5px;
+}
+
+body.highlight-kvp .seat.kvp {
+   stroke: var(--border-color);
+    stroke-width: 1.5px;
+}
+
+body.highlight-dnvp .seat.dnvp {
+   stroke: var(--border-color);
+    stroke-width: 1.5px;
+}
 .seat.kpd {
     fill: #8B0000;
 }
 .seat.spd {
     fill: #E3000F;
-}
-body.highlight-spd .seat.spd {
-   stroke: var(--border-color);
-    stroke-width: 1.5px;
 }
 .seat.ddp {
     fill: #DCCA4A;
