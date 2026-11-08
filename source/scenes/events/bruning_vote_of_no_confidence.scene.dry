@@ -152,6 +152,54 @@ if (Q.spd_bruning_support == 1) {
 } else {
   document.body.classList.remove("highlight-spd");
 }
+
+if (Q.ddp_bruning_support == 1) {
+  document.body.classList.add("highlight-ddp");
+} else {
+  document.body.classList.remove("highlight-ddp");
+}
+
+if (Q.dvp_bruning_support == 1) {
+  document.body.classList.add("highlight-dvp");
+} else {
+  document.body.classList.remove("highlight-dvp");
+}
+
+if (Q.wp_bruning_support == 1) {
+  document.body.classList.add("highlight-wp");
+} else {
+  document.body.classList.remove("highlight-wp");
+}
+
+if (Q.cnblp_bruning_support == 1) {
+  document.body.classList.add("highlight-cnblp");
+} else {
+  document.body.classList.remove("highlight-cnblp");
+}
+
+if (Q.csvd_bruning_support == 1) {
+  document.body.classList.add("highlight-csvd");
+} else {
+  document.body.classList.remove("highlight-csvd");
+}
+
+if (Q.kvp_bruning_support == 1) {
+  document.body.classList.add("highlight-kvp");
+} else {
+  document.body.classList.remove("highlight-kvp");
+}
+
+if (Q.dnvp_bruning_support == 1) {
+  document.body.classList.add("highlight-dnvp");
+} else {
+  document.body.classList.remove("highlight-dnvp");
+}
+
+if (Q.spd_relation >= 1) {
+  document.body.classList.add("highlight-bvp");
+} else {
+  document.body.classList.remove("highlight-bvp");
+}
 !}
 
 = Bruning's Mandate
