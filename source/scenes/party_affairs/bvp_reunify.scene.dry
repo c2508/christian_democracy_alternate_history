@@ -1,6 +1,6 @@
 title: Reunification with the BVP
 new-page: true
-view-if: ((z_party_leader = "Joos" and chud_joos = 1) or (z_party_leader = "Stegerwald" and non_cvp_stegerwald = 1 ) or z_party_leader = "Kaas") and bvp_reunify_timer = 0
+view-if: ((z_party_leader = "Joos" and chud_joos = 1) or (z_party_leader = "Stegerwald" and non_cvp_stegerwald = 1 ) or z_party_leader = "Kaas") and bvp_reunify_timer = 0 and bvp_reunified = 0
 on-arrival: month_actions += 1; bvp_reunify_timer += 5
 max-visits: 7
 is-card: true
@@ -15,12 +15,14 @@ In light of the resignation of long-time party leader Wilhelm Marx, the onus now
 
 - @catholic_rights: Negotiate a new joint party program with the <span style="color: #69A2BE;">**BVP**</span>
 - @rb_distance: Take actions to distance ourselves from the <span style="color: #c00000;">**SPD**</span>
-- @fund_org: Integrate the <span style="color: #69A2BE;">**BVP**</span> affliated organisations into the national party apparatus
+- @integrate: Integrate the <span style="color: #69A2BE;">**BVP**</span> affliated organisations into the national party apparatus
+- @reunify: We can finally reunify with the <span style="color: #69A2BE;">**BVP**</span>!
 - @easy_discard
 
 @catholic_rights
-view-if: bvp_condition_1 = 0
-subtitle: Our differing views on several key issues have impeded talks
+choose-if: bvp_condition_1 = 0
+subtitle: Our differing stances on several key issues have impeded talks
+unavailable-subtitle: Our views are aligned
 on-arrival: right_dissent -= 3; left_dissent += 5; bvp_condition_1 += 1
 
 
@@ -35,9 +37,13 @@ on-arrival: right_strength += 5; left_strength -= 3; left_dissent += 6; bvp_cond
 
 ok
 
-@fund_org
-on-arrival: resources -= 2; bvp_negotiations += 1
-view-if: bvp_negotiations = 2
+@integrate
+view-if: bvp_condition_1 = 1 and bvp_condition_2 = 1
 subtitle: - 2 resources 
+on-arrival: resources -= 2; bvp_condition_2 += 1
 
-sasa
+With their electoral dominance in Bavaria, the <span style="color: #69A2BE;">**BVP**</span> has built itself a veritable party organisation with regional newspapers, youth organisations and grassroot networks. Thus, it falls on us to establish regular lines of commmunication and standardise important procedures to ensure that joint electoral campaigns can be run smoothly.
+ 
+@reunify
+view-if: bvp_condition += 2; bvp_reunified += 1
+subtitle: The mistakes of the early 1920s can no longer haunt us
