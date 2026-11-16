@@ -5,12 +5,14 @@ on-arrival: black_thursday_seen = 1; workers_kpd += 5; workers_spd += 3 if not s
 tags: event
 view-if: year = 1929 and month >= 10
 max-visits: 1
-face-image: img/bankrun.jpg
 
 = Black Thursday
 
-Wall Street has had its biggest crash in history, with its effects being felt everywhere around the world, especially in Europe. With Germany's heavy dependence on post-war American loans, the meltdown of the American economy is sure to impact us greatly, which will put the unemployment insurance system under further strain. The Roaring Twenties have come to an abrupt halt... 
+<img src="img/bankrun.jpg" style="display:block; width:100%; max-width:500px; height:auto; margin:0 auto 1em auto; object-fit:cover; object-position:top;">
 
+<hr>
+
+Wall Street has had its biggest crash in history, with its effects being felt everywhere around the world, especially in Europe. With Germany's heavy dependence on post-war American loans, the meltdown of the American economy is sure to impact us greatly, which will put the unemployment insurance system under further strain. The Roaring Twenties have come to an abrupt halt... 
 
 
 - @do_something: We must do something to stop the suffering...
