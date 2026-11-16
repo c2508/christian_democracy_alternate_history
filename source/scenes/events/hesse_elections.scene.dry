@@ -389,7 +389,7 @@ There are some potential coalition arrangements.
 
 @weimar_coalition_hesse
 title: We can form a <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition.
-subtitle: <span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span>?] [? if lvp_formed: + <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span>?]: [+ weimar_coalition_hesse +]%
+subtitle: <span style="color: #E3000F;">**SPD**</span> + <span style="color: #000000;">**Z**</span> [? if ddp_exist: + <span style="color: #DCCA4A;">**[+ ddp_name +]**</span>?] [? if lvp_formed: + <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span>?] [+ weimar_coalition_hesse +]%
 on-arrival: in_weimar_coalition_hesse = 1; z_hesse = 1;
 
 There are enough votes for a majority <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition of the <span style="color: #E3000F;">**SPD**</span>, <span style="color: #000000;">**Center**</span> and [? if not lvp_formed and not nfvp_formed: <span style="color: #DCCA4A;">**[+ ddp_name +]**</span>?][? if lvp_formed or nfvp_formed: <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span>?].
@@ -437,7 +437,7 @@ on-arrival: in_far_right_coalition_hesse = 1;
 A <span style="color: #7A3C00;">Far</span>-<span style="color: #3E88B3;">right</span> Coalition is formed.
 
 @black_brown_coalition_hesse
-title: Can the <span style="color: #7A3C00;">**NSDAP**</span> enter a government with us?
+title: Can we form a <span style="color: #7A3C00;">**NSDAP**</span>?
 view-if: black_brown_coalition_hesse >= 50
 choose-if: left_strength <= 25 and nsdap_relations >= 35
 unavailable-subtitle: [? if left_strength > 25: Our left wing is able to dissuade us from this course of action. ?][? if nsdap_relation < 35: Why would we do this? ?]
