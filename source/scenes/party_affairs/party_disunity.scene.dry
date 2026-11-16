@@ -14,9 +14,9 @@ tags: party_affairs
 The party is being torn apart by internal dissent. Upset at the leadership and general direction, factions have started sabotaging their rivals, hampering our efforts to win votes and carry out our policies. As the only Catholic party, great care must be taken to appease our socially heterogenous base lest our sidelined members splinter from the party. 
 
 [? if right_dissent > 60 : The <span style="color: #000000;">Catholic Conservatives</span> are upset at our direction. ?]
-[? if center_dissent > 60 : The centrists are displeased with the direction of our party. ?]
+[? if center_dissent > 60 : The Centrists are displeased with the direction of our party. ?]
 [? if left_dissent > 60 : The <span style="color: #FF7F00;">Christian Left</span> is upset at our direction. ?]
-[? if labor_dissent > 60 : The <span style="color: #000000;">**Center Party**</span> disagrees with our present course of action. ?]
+[? if labor_dissent > 60 : The <span style="color: #000000;">**DGB**</span> disagrees with our present course of action. ?]
 [? if young_conservatives_dissent > 60 and young_conservatives = 1 : The young conservatives are in disagreement about our political direction. ?]
 
 Something must be done to reinforce party unity.
