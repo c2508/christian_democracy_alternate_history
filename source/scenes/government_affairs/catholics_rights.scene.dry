@@ -22,10 +22,10 @@ Despite the <span style="color: #000000;">We</span><span style="color: #DD0000;"
 
 @equal
 subtitle: Ensure equal treatment for Jews and Catholics in the civil service
-on-arrival: dnvp_relation -= 3; catholics_z += 3*(1-dissent); nationalism -= 5; new_middle_z += 1; ddp_relation += 3; spd_relation += 3
+on-arrival: dnvp_relation -= 3; catholics_z += 1*(1-dissent); nationalism -= 5; new_middle_z += 1/2*(1-dissent); ddp_relation += 3; spd_relation += 3; new_middle_spd += 1/4*(1-dissent); new_middle_ddp += 1/4*(1-dissent);
 max-visits: 3
 
-These policies strongly discourage discrimination on the basis of religion during the hiring process, enabling the entry of those from more diverse backgrounds to enter the traditionally reactionary bureaucracy. This has led to an influx of outsiders in the civil service, who tend to be more amenable to the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Republic. While the right wing parties accuse us to turning the bureaucracy into a 'pork barrel institution', the <span style="color: #c00000;">**SPD**</span> expresses their gratefulness for our help. 
+These policies strongly discourage discrimination on the basis of religion during the hiring process, enabling the entry of those from more diverse backgrounds to enter the traditionally reactionary bureaucracy. This has led to an influx of outsiders in the civil service, who tend to be more amenable to the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Republic. While the right wing parties accuse us to turning the bureaucracy into a 'pork barrel institution', the <span style="color: #c00000;">**SPD**</span> and <span style="color: #D3C24D;">**[+ ddp_name +]**</span> express their gratefulness for our actions. 
 
 @pconcordat
 subtitle: The Prussian Concordat is an important convention in protecting the rights of Catholics throughout Prussia and paves the way for a Reichskonkordat in the future.
