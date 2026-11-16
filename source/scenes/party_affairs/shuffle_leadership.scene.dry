@@ -198,7 +198,7 @@ go-to: rm_main
 
 Spahn has been removed as an advisor. The Catholic Conservative faction disapproves. 
 
-# young conservatives
+# young_conservatives
 
 @remove_treviranus
 title: Remove Treviranus
@@ -261,7 +261,7 @@ go-to: advisor_menu
 
 @advisor_menu
 title: Add other advisors.
-tags: center_advisor, left_advisor, right_advisor, labor_advisor, young_conservative_advisor, nonfactional_advisor
+tags: center_advisor, left_advisor, right_advisor, labor_advisor, young_conservatives_advisor, nonfactional_advisor
 frequency: 1
 
 
