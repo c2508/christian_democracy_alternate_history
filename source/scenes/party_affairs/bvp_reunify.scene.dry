@@ -1,6 +1,6 @@
 title: Reunification with the BVP
 new-page: true
-view-if: ((z_party_leader = "Joos" and chud_joos = 1) or (z_party_leader = "Stegerwald" and non_cvp_stegerwald = 1 ) or z_party_leader = "Kaas") and bvp_reunify_timer = 0 and bvp_reunified = 0
+view-if: ((z_leader = "Joos" and chud_joos = 1) or (z_leader = "Stegerwald" and non_cvp_stegerwald = 1 ) or z_leader = "Kaas") and bvp_reunify_timer = 0 and bvp_reunified = 0
 on-arrival: month_actions += 1; bvp_reunify_timer += 5
 max-visits: 7
 is-card: true
@@ -11,7 +11,7 @@ tags: party_affairs
 
 Since the Regensburg Agreement, our relationship with the once estranged <span style="color: #69A2BE;">**BVP**</span> has mostly normalised, especially with the delineation of our explicit spheres of influence at the regional levels. Despite that, pressure still remains at the grassroots level for the reformation of the <span style="color: #000000;">**Center Party**</span> back into a united Catholic party, with the result of the 1925 Presidential Elections a warning to many <span style="color: #000000;">**Center Party**</span> members of the price of continued Catholic disunity. 
  
-In light of the resignation of long-time party leader Wilhelm Marx, the onus now falls on [+ z_party_leader +] to bring the prodigal son back into the fold. With the <span style="color: #69A2BE;">**BVP**</span>'s demand for continued political autonomy being a sticking point, the alternative pathway to reunification lies in the establishment of a formal working relationship with the <span style="color: #69A2BE;">**BVP**</span> such that they can function as an official sister party of the <span style="color: #000000;">**Center Party**</span>. 
+In light of the resignation of long-time party leader Wilhelm Marx, the onus now falls on [+ z_leader +] to bring the prodigal son back into the fold. With the <span style="color: #69A2BE;">**BVP**</span>'s demand for continued political autonomy being a sticking point, the alternative pathway to reunification lies in the establishment of a formal working relationship with the <span style="color: #69A2BE;">**BVP**</span> such that they can function as an official sister party of the <span style="color: #000000;">**Center Party**</span>. 
 
 - @catholic_rights: Negotiate a new joint party program with the <span style="color: #69A2BE;">**BVP**</span>
 - @rb_distance: Take actions to distance ourselves from the <span style="color: #c00000;">**SPD**</span>
@@ -26,7 +26,7 @@ unavailable-subtitle: Our views are aligned
 on-arrival: right_dissent -= 3; left_dissent += 5; bvp_condition_1 += 1
 
 
-Following intense negotiations, [+ z_leader  +], negotiating from a position of strength, has managed to secure a major concession from the <span style="color: #69A2BE;">**BVP**</span> - their acceptance of the current republic, in part due to the vigorous efforts of Heinrich Held and Fritz Schaffer. This has alienated many monarchists on their right flank, but only a minority of them have defected to the <span style="color: #3E88B3;">**DNVP**</span>. In fact, most of them remain, whether out of confessional ties or their satisfaction with our cultural policies. 
+Following intense negotiations, [+ z_leader +], negotiating from a position of strength, has managed to secure a major concession from the <span style="color: #69A2BE;">**BVP**</span> - their acceptance of the current republic, in part due to the vigorous efforts of Heinrich Held and Fritz Schaffer. This has alienated many monarchists on their right flank, but only a minority of them have defected to the <span style="color: #3E88B3;">**DNVP**</span>. In fact, most of them remain, whether out of confessional ties or their satisfaction with our cultural policies. 
 
 In other areas, the <span style="color: #69A2BE;">**BVP**</span> has won the fight, officially securing a plank in the <span style="color: #000000;">**Center Party**</span> program endorsing regionalism and the concept of federalism, especially in Bavaria. This has strengthened the position of those who advocate for the dissolution of Prussia and the need for Reichsreform in our party, much to the chagrin of the <span style="color: #FF7F00;">Christian Left</span> who view Prussia as the stabiliser of the republic.
 
