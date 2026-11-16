@@ -24,7 +24,7 @@ Agricultural policy has been the domain of the Center Party and there is much ne
 @expand_cooperatives
 title: Support agricultural cooperatives.
 subtitle: Advance legislation to aid agricultural cooperatives
-on-arrival: rural_z += (1/3)*(1-dissent); right_dissent -= 3; right_strength += 4; rural_nsdap -= 1*(1-dissent); rural_others -= 1*(1-dissent); unemployed -= 0.2; unemployed -= 0.8 if unemployed > 9; economic_growth += 0.2
+on-arrival: rural_z += (1/3)*(1-dissent); right_dissent -= 3; right_strength += 4; rural_nsdap -= (2/3)*(1-dissent); rural_others -= (2/3)*(1-dissent); unemployed -= 0.2; unemployed -= 0.8 if unemployed > 9; economic_growth += 0.2
 max-visits: 1
 
 In line with the <span style="color: #000000;">**VdB's**</span> policies, we have supported the establishment and expansion of agricultural cooperatives to aid small farmers. Our rural base is pleased.
@@ -32,7 +32,7 @@ In line with the <span style="color: #000000;">**VdB's**</span> policies, we hav
 @price_floor
 title: Price Floor
 subtitle: Impose a price floor on agriculture goods
-on-arrival: rural_z += 2*(1-dissent); catholic_z += (1/3)*(1-dissent); worker_z -= 0.5; new_middle_z -= 1/3; dnvp_relation += 8; spd_relation -= 5; kpd_relation -= 5; right_dissent -= 5; right_strength += 5; labor_dissent += 8; rural_nsdap -= 2*(1-dissent); rural_others -= 1*(1-dissent); economic_growth -= 0.3; worker_sol -= 2; inflation += 0.2
+on-arrival: rural_z += 2*(1-dissent); catholic_z += (1/3)*(1-dissent); worker_z -= 2/3; new_middle_z -= 1/3; dnvp_relation += 8; spd_relation -= 5; kpd_relation -= 5; right_dissent -= 5; right_strength += 5; labor_dissent += 8; rural_nsdap -= 2*(1-dissent); rural_others -= 1*(1-dissent); economic_growth -= 0.3; worker_sol -= 2; inflation += 0.2
 max-visits: 1
 
 This creates a price floor where agriculture products cannot be sold below a certain price. This policy prevents cheap <span style="color: #DC143C;">Pol</span><span style="color: #FFFFFF;">ish</span> agriculture goods from flooding the market so German farmers will be able to sell their goods for a profit. However, this increases the price of agriculture goods for blue collar and white collar workers.
