@@ -37,8 +37,8 @@ unavailable-subtitle: [? if pro_republic > 60 : The situation is not desperate e
 go-to: endorse_rb
 
 @prussian_police_training
-unavailable-subtitle: [? if spd_prussia == 0 and z_prussia == 1 : Our current Prussian Coalition would not let this happen. ?][? if z_prussia == 0 : We are currently not in the Prussian Government. ?][? if prussian_police_loyalty <= 0.5 : The Prussian Police are unwilling. ?]
-choose-if: spd_prussia == 1 and z_prussia == 1 and prussian_police_loyalty > 0.5
+unavailable-subtitle: [? if spd_in_prussia == 0 and z_in_prussia == 1 : Our current Prussian Coalition would not let this happen. ?][? if z_in_prussia == 0 : We are currently not in the Prussian Government. ?][? if prussian_police_loyalty <= 0.5 : The Prussian Police are unwilling. ?]
+choose-if: spd_in_prussia == 1 and z_in_prussia == 1 and prussian_police_loyalty > 0.5
 on-arrival: rb_militancy += 0.05; sa_strength += 50; prussian_police_training += 1
 
 The loyal sections of the Prussian police can help train the <span style="color: #c00000;">**Reichsbanner**</span>.
@@ -49,12 +49,12 @@ unavailable_subtitle: [? if bvp_reunified = 0 : The <span style="color: #69A2BE;
 view-if: streetfighting_urgency = 1 
 on-arrival: bw_militancy += 0.065; bw_strength += 3.5; resources -= 1
 
-In these trying times, the <span style="color: #69A2BE;">**BVP**</span> is grateful for any bit of aid we can offer
+In these trying times, the <span style="color: #69A2BE;">**BVP**</span> is grateful for any bit of aid we can offer.
 
 @police
 choose-if: z == prussia or bvp_reunfied = 0
 unavailable-subtitle: We are not in any major state governments. 
-on-arrival: prussian_police_strength += 5 if z == prussia; sa_strength -= 7.5; rfb_strength -= 7.5
+on-arrival: prussian_police_strength += 5 if z_in_prussia; sa_strength -= 7.5; rfb_strength -= 7.5
 
 This is an amenable compromise for all factions of the party and prepares the state police for further encounters on the streets. 
 
