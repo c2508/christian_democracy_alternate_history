@@ -477,7 +477,7 @@ Bourgeois Coalition (<span style="color: #000000;">**Z**</span> + <span style="c
 
 [? if nazi_urgency <= 1 and nsdap_r >= 15 : The rapid rise in <span style="color: #7A3C00;">**NSDAP**</span votes is extremely worrying. Many had believed that the party was moribund; now, some of us consider it to be the greatest threat to stability in Germany. ?]
 
-[? if anti_democratic_coalition >= 50 : Together, the anti-democratic <span style="color: #700000;">**KPD**</span>, <span style="color: #3E88B3;">**DNVP**</span>, <span style="color: #7A3C00;">**NSDAP**</span> and have a majority in the Reichstag. A stable governing majority will be almost impossible. ?]
+[? if anti_democratic_coalition >= 50 : Together, the anti-democratic <span style="color: #700000;">**KPD**</span>, <span style="color: #3E88B3;">**DNVP**</span> and <span style="color: #7A3C00;">**NSDAP**</span> have a majority in the Reichstag. A stable governing majority will be almost impossible. ?]
 
 There are some potential coalition arrangements.
 
