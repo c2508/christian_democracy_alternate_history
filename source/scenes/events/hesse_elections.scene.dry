@@ -328,31 +328,29 @@ go-to: coalition_menu
 
 {!<table>!} 
 {!<tr><td>Party</td><td>Vote Share</td><td>% Change</td><td>Landtag Seats</td><td>% Change</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#8B0000'> </div> !} KPD: {!</td><td>!} [+ kpd_votes_hesse +]% {!</td><td>!} [+ votes_change_kpd_hesse +] {!</td><td>!} [+ kpd_hesse +]% {!</td><td>!} [+ change_kpd_hesse +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#8B0000'> </div> !} <span style="color: #700000;">**KPD**</span>: {!</td><td>!} [+ kpd_votes_hesse +]% {!</td><td>!} [+ votes_change_kpd_hesse +] {!</td><td>!} [+ kpd_hesse +]% {!</td><td>!} [+ change_kpd_hesse +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#E3000F'> </div> !} SPD: {!</td><td>!} [+ spd_votes_hesse +]% {!</td><td>!} [+ votes_change_spd_hesse +] {!</td><td>!} [+ spd_hesse +]% {!</td><td>!} [+ change_spd_hesse +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#E3000F'> </div> !} <span style="color: #c00000;">**SPD**</span>: {!</td><td>!} [+ spd_votes_hesse +]% {!</td><td>!} [+ votes_change_spd_hesse +] {!</td><td>!} [+ spd_hesse +]% {!</td><td>!} [+ change_spd_hesse +] {!</td></tr>!}
 
-[? if aspd_exist: {!<tr><td><div class="box" style='background-color:#FE9E00'> </div> !} ASPD: {!</td><td>!} [+ aspd_votes_hesse +]% {!</td><td>!} [+ votes_change_aspd_hesse +] {!</td><td>!} [+ aspd_hesse +]% {!</td><td>!} [+ change_aspd_hesse +] {!</td><td>!} ?]
+[? if ddp_exist: {!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} <span style="color: #D3C24D;">**[+ ddp_name +]**</span>: {!</td><td>!} [+ ddp_votes_hesse +]% {!</td><td>!} [+ votes_change_ddp_hesse +] {!</td><td>!} [+ ddp_hesse +]% {!</td><td>!} [+ change_ddp_hesse +] {!</td></tr>!} ?]
 
-[? if ddp_exist: {!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} [+ ddp_name +]: {!</td><td>!} [+ ddp_votes_hesse +]% {!</td><td>!} [+ votes_change_ddp_hesse +] {!</td><td>!} [+ ddp_hesse +]% {!</td><td>!} [+ change_ddp_hesse +] {!</td></tr>!} ?]
+{!<tr><td><div class="box" style='background-color:#000'> </div> !} <span style="color: #000000;">**Z**</span> : {!</td><td>!} [+ z_votes_hesse +]% {!</td><td>!} [+ votes_change_z_hesse +] {!</td><td>!} [+ z_hesse +]% {!</td><td>!} [+ change_z_hesse +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#000'> </div> !} Z: {!</td><td>!} [+ z_votes_hesse +]% {!</td><td>!} [+ votes_change_z_hesse +] {!</td><td>!} [+ z_hesse +]% {!</td><td>!} [+ change_z_hesse +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#C0A054'> </div> !} <span style="color: #C0A054;">**DVP**</span>: {!</td><td>!} [+ dvp_votes_hesse +]% {!</td><td>!} [+ votes_change_dvp_hesse +] {!</td><td>!} [+ dvp_hesse +]% {!</td><td>!} [+ change_dvp_hesse +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#C0A054'> </div> !} DVP: {!</td><td>!} [+ dvp_votes_hesse +]% {!</td><td>!} [+ votes_change_dvp_hesse +] {!</td><td>!} [+ dvp_hesse +]% {!</td><td>!} [+ change_dvp_hesse +] {!</td></tr>!}
+[? if csvd_exist: {!<tr><td><div class="box" style='background-color:#8ED8E4'> </div> !} <span style="color: #8ED8E4;">**CSVD**</span>: {!</td><td>!} [+ csvd_votes_hesse +]% {!</td><td>!} [+ votes_change_csvd_hesse +] {!</td><td>!} [+ csvd_hesse +]% {!</td><td>!} [+ change_csvd_hesse +] {!</td><td>!} ?]
 
-[? if csvd_exist: {!<tr><td><div class="box" style='background-color:#8ED8E4'> </div> !} CSVD: {!</td><td>!} [+ csvd_votes_hesse +]% {!</td><td>!} [+ votes_change_csvd_hesse +] {!</td><td>!} [+ csvd_hesse +]% {!</td><td>!} [+ change_csvd_hesse +] {!</td><td>!} ?]
+[? if cnblp_exist: {!<tr><td><div class="box" style='background-color:#006400'> </div> !} <span style="color: #006400;">**CNBLP**</span>: {!</td><td>!} [+ cnblp_votes_hesse +]% {!</td><td>!} [+ votes_change_cnblp_hesse +] {!</td><td>!} [+ cnblp_hesse +]% {!</td><td>!} [+ change_cnblp_hesse +] {!</td><td>!} ?]
 
-[? if cnblp_exist: {!<tr><td><div class="box" style='background-color:#006400'> </div> !} CNBLP: {!</td><td>!} [+ cnblp_votes_hesse +]% {!</td><td>!} [+ votes_change_cnblp_hesse +] {!</td><td>!} [+ cnblp_hesse +]% {!</td><td>!} [+ change_cnblp_hesse +] {!</td><td>!} ?]
+[? if kvp_formed: {!<tr><td><div class="box" style='background-color:#455B95'> </div> !} <span style="color: #455B95;">**KVP**</span>: {!</td><td>!} [+ kvp_votes_hesse +]% {!</td><td>!} [+ votes_change_kvp_hesse +] {!</td><td>!} [+ kvp_hesse +]% {!</td><td>!} [+ change_kvp_hesse +] {!</td></tr>!} ?]
 
-[? if kvp_formed: {!<tr><td><div class="box" style='background-color:#455B95'> </div> !} KVP: {!</td><td>!} [+ kvp_votes_hesse +]% {!</td><td>!} [+ votes_change_kvp_hesse +] {!</td><td>!} [+ kvp_hesse +]% {!</td><td>!} [+ change_kvp_hesse +] {!</td></tr>!} ?]
+{!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} <span style="color: #3E88B3;">**DNVP**</span>: {!</td><td>!} [+ dnvp_votes_hesse +]% {!</td><td>!} [+ votes_change_dnvp_hesse +] {!</td><td>!} [+ dnvp_hesse +]% {!</td><td>!} [+ change_dnvp_hesse +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} DNVP: {!</td><td>!} [+ dnvp_votes_hesse +]% {!</td><td>!} [+ votes_change_dnvp_hesse +] {!</td><td>!} [+ dnvp_hesse +]% {!</td><td>!} [+ change_dnvp_hesse +] {!</td></tr>!}
+[? if dnf_formed: {!<tr><td><div class="box" style='background-color:#003755'> </div> !} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_votes_hesse +]% {!</td><td>!} [+ votes_change_dnf_hesse +] {!</td><td>!} [+ dnf_hesse +]% {!</td><td>!} [+ change_dnf_hesse +] {!</td></tr>!} ?]
 
-[? if dnf_formed: {!<tr><td><div class="box" style='background-color:#003755'> </div> !} DNF: {!</td><td>!} [+ dnf_votes_hesse +]% {!</td><td>!} [+ votes_change_dnf_hesse +] {!</td><td>!} [+ dnf_hesse +]% {!</td><td>!} [+ change_dnf_hesse +] {!</td></tr>!} ?]
+{!<tr><td><div class="box" style='background-color:#954B00'> </div> !} <span style="color: #7A3C00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_votes_hesse +]% {!</td><td>!} [+ votes_change_nsdap_hesse +] {!</td><td>!} [+ nsdap_hesse +]% {!</td><td>!} [+ change_nsdap_hesse +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#954B00'> </div> !} NSDAP: {!</td><td>!} [+ nsdap_votes_hesse +]% {!</td><td>!} [+ votes_change_nsdap_hesse +] {!</td><td>!} [+ nsdap_hesse +]% {!</td><td>!} [+ change_nsdap_hesse +] {!</td></tr>!}
-
-{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_votes_hesse +]% {!</td><td>!} [+ votes_change_other_hesse +] {!</td><td>!} [+ other_hesse +]% {!</td><td>!} [+ change_other_hesse +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} <span style="color: #909090;">**Others**</span>: {!</td><td>!} [+ other_votes_hesse +]% {!</td><td>!} [+ votes_change_other_hesse +] {!</td><td>!} [+ other_hesse +]% {!</td><td>!} [+ change_other_hesse +] {!</td></tr>!}
 {!</table>!}
 
 **Potential coalitions:**
