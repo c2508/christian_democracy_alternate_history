@@ -58,7 +58,7 @@ subtitle: Stegerwald has been resoundingly rejected by the rest of the party.
 view-if: not (clerical_relation >=6 and labor_strength > 25 and dnvp_relation >= 55 and labor_strength > right_strength) and not (clerical_relation < 7 and clerical_relation > 4 and labor_strength > 25 and dnvp_relation >= 55 and labor_strength >= right_strength) and not (clerical_relation >= 7 and labor_strength > 25 and dnvp_relation > 55 and labor_strength < right_strength)
 on-arrival: labor_dissent += 5
 
-steggy blocked
+Although Stegerwald had been widely expected to succeed Marx, Stegerwald’s opposition to last year’s controversial civil service reform has convinced the powerful civil service lobby on the National Committee to block his candidacy. This is a drastic break from procedure and has left the party in turmoil over Marx’s successor, with implications for party unity. Now, there is a scramble amongst party delegates to find a sufficiently unifying candidate amenable to all factions of the party, especially in a party increasingly beset by class tensions.  
 
 - @chud_joos: The <span style="color: #000000;">**Center Party**</span> has pivoted to Joseph Joos as the party chair.
 - @woke_joos: The <span style="color: #000000;">**Center Party**</span> has pivoted to Joseph Joos as the party chair.
