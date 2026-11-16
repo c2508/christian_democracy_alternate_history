@@ -118,6 +118,8 @@ Economic growth: [+ economic_growth_2 +]%
 
 <span style="color: #3E88B3;">**DNVP**</span>: [+ dnvp_ideology +] ([+ dnvp_leader +])
 
+[? if dnf_formed : <span style="color: #003755;">**DNF**</span>: Authoritarian Conservatism (Hugenberg) ?]
+
 <span style="color: #7A3C00;">**NSDAP**</span>: National Socialism (Hitler)
 
 
