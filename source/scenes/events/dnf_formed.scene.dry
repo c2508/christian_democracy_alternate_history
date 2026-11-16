@@ -5,14 +5,14 @@ Q.parties.push('dnf');
 
 Q.workers_dnf = 1;
 
-Q.new_middle_dnf = 4;
-Q.new_middle_dnvp -= 5;
+Q.new_middle_dnf = 1;
+Q.new_middle_dnvp -= 2;
 
-Q.old_middle_dnf = 18;
-Q.old_middle_dnvp -= 16;
+Q.old_middle_dnf = 7;
+Q.old_middle_dnvp -= 5;
 
-Q.rural_dnf = 16;
-Q.rural_dnvp -= 18;
+Q.rural_dnf = 12;
+Q.rural_dnvp -= 10;
 
 Q.unemployed_dnf = 1;
 Q.unemployed_dnvp -= 1;
@@ -22,13 +22,12 @@ Q.catholics_dnf = 0;
 Q.new_middle_nsdap += 1;
 Q.old_middle_nsdap += 2;
 Q.rural_nsdap += 2;
-Q.unemployed_nsdap += 1;
 
 Q.dnf_r = Math.round((Q.dnvp_r / 2 - 1) * 10) / 10;
 Q.dnvp_r = Math.round((Q.dnvp_r - Q.dnf_r) * 10) / 10;
 Q.dnf_r_prussia = Math.round((Q.dnvp_r_prussia / 2 - 3) * 10) / 10;
 Q.dnvp_r_prussia = Math.round((Q.dnvp_r_prussia - Q.dnf_r_prussia) * 10) / 10;
-Q.dnf_relation = 15
+Q.dnf_relation = 20
 
 Q.old_workers_dnf_display = 0
 Q.old_new_middle_dnf_display = 0
