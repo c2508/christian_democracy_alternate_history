@@ -70,10 +70,12 @@ choose-if: clerical_relation > 4
            and pro_republic >= 50 
            and center_strength >= 10 
            and spd_relation >= 55
+           and dnvp_relation >= 55
 view-if: clerical_relation > 4 
           and pro_republic >= 50 
           and center_strength >= 10 
           and spd_relation >= 55
+          and dnvp_relation >= 55
 on-arrival: z_leader = "Joos"; z_party_leader1 += 1; spd_relation += 3*(1-dissent); dmvp_relation += 3*(1-dissent); ddp_relation -= 3; dvp_relation -= 3; dvp_right += 0.5; workers_z += 1/3*(1-dissent); old_middle_z += 1/3*(dissent); z_rural += 1/3*(1-dissent); center_strength += 8*(1-dissent); right_dissent -= 3; center_dissent -= 3; labor_dissent -= 3; left_dissent -= 3; pro_republic += 1; chud_joos = 1
 face-image: img/portraits/JoosJoseph.jpg
 
@@ -87,13 +89,20 @@ choose-if: clerical_relation >= 5
            and left_strength >= 25 
            and left_strength > 0.4*(labor_strength + right_strength) 
            and spd_relation >= 60
+           and dnvp_relation < 55
+view-if:  clerical_relation >= 5 
+           and pro_republic >= 55 
+           and left_strength >= 25 
+           and left_strength > 0.4*(labor_strength + right_strength) 
+           and spd_relation >= 60
+           and dnvp_relation < 55
 on-arrival: z_leader = "Joos"; catholics_spd += 2; workers_z += 1*(1-dissent); z_party_leader1 += 1; spd_relation += 8*(1-dissent); z_rural -= 2*(1-dissent); left_strength += 6*(1-dissent); right_dissent += 3; pro_republic += 3; woke_joos = 1; z_ideology = "Christian Democracy"
 face-image: img/portraits/JoosJoseph.jpg
 
 woke With the National Council's rejection of Stegerwald, the party's close relations with the <span style="color: #c00000;">**SPD**</span> has led the delegates to nominate Joseph Joos as chairman to continue further cooperation with the <span style="color: #c00000;">**SPD**</span>. As chairman of the Catholic Workers Associations and de-facto leader of the <span style="color: #FF7F00;">Christian Left</span>, he increases the appeal of the <span style="color: #000000;">**Center Party**</span> to workers and progressives. 
 
 @kaas
-view-if: not (clerical_relation > 4 and pro_republic >= 50 and center_strength >= 10 and spd_relation >= 55) and not (clerical_relation >= 5 and pro_republic >= 55 and left_strength >= 25 and left_strength > 0.4*(labor_strength + right_strength) and spd_relation >= 60)
+view-if: not (clerical_relation > 4 and pro_republic >= 50 and center_strength >= 10 and spd_relation >= 55 and dnvp_relation >= 55) and not (clerical_relation >= 5 and pro_republic >= 55 and left_strength >= 25 and left_strength > 0.4*(labor_strength + right_strength) and spd_relation >= 60 and dnvp_relation < 55)
 subtitle: A dark horse emerges... 
 on-arrival: z_leader = "Kaas"; spd_relation -= 5; prussian_concordat_progress += 1; catholics_z += 4; dvp_right += 1; ddp_relations -= 5; dvp_relations -= 5; clerical_relation += 2; right_dissent -= 5; center_dissent -= 5; labor_dissent -= 5; left_dissent -= 5
 face-image: img/portraits/KaasLudwig.jpg
