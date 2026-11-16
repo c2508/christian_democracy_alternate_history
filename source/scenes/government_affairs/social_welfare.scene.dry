@@ -51,7 +51,7 @@ We have kept welfare spending the same.
 
 @spending_same_post_depression
 view-if: unemployed > 15
-on-arrival: unemployed_z -= 1/3; catholics_z -= 1/5\3; welfare -= 1; labor_dissent += 4
+on-arrival: unemployed_z -= 1/3; catholics_z -= 1/3; welfare -= 1; labor_dissent += 3
 subtitle: The increased levels of unemployment necessitate more spending on aid.
 
 Increasing welfare spending is necessary in light of the rise in unemployment, so we have essentially cut welfare. The workers are justifiably displeased - we are sacrificing their livelihoods for the sake of fiscal orthodoxy.
