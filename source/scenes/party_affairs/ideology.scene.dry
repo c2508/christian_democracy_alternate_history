@@ -67,7 +67,7 @@ if (Q.ideology && Q.ideology != "Catholic Conservative") {
 go-to: changed if changed = 1
 on-departure: ideology = "Catholic Conservative"; right_strength += 10; right_dissent -= 5; dnvp_relation += 5; dvp_relation += 5; spd_relation -= 8; rural_z += 1/6; old_middle_z += 1/6;
 
-Represented by bourgeois aristocrats and <span style="color: #385A38;">agrarian</span> interests, the right wing of the party is are strong anti-<span style="color: #c00000;">socialists</span> while being skeptical of parlimentary democracy.
+Represented by bourgeois aristocrats and <span style="color: #385A38;">agrarian</span> interests, the right wing of the party are strong anti-<span style="color: #c00000;">socialists</span> while being skeptical of parlimentary democracy.
 
 @changed
 on-arrival: left_dissent += 5; labor_dissent += 5; center_dissent += 5; right_dissent += 5
