@@ -26,8 +26,8 @@ Q.young_plan_votes = Math.round(Q.young_plan_votes);
 
 We have done our best in depressing turnout for the Young Plan. Let us hope that the electorate remembers the spirit of Locarno and rejects this shameless attempt at upending the foreign policy of the late Gustav Stresemann. 
 
--@dnvp_pass: The referendum gets [+ Math.round(young_plan_votes * 100) / 100 +]% of the vote.
--@dnvp_fail: The referendum gets [+ Math.round(young_plan_votes * 100) / 100 +]% of the vote.
+-@dnvp_pass: The referendum gets [+ young_plan_votes +]% of the vote.
+-@dnvp_fail: The referendum gets [+ young_plan_votes +]% of the vote.
 
 @dnvp_pass
 view-if: young_plan_votes >= 14.6
