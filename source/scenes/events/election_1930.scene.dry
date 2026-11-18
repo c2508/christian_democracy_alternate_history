@@ -449,7 +449,9 @@ go-to: coalition_menu
 There are some potential coalition arrangements.
 
 @coalition_menu
+
 - @no_majority
+
 
 @no_majority
 title: There is no clear governing majority.
