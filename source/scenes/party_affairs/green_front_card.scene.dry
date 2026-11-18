@@ -13,12 +13,22 @@ As an umbrella organisation representing organised agriculture, the formation of
 
 Below denotes the amount of influence each party has in the <span style="color: #0dba1e;">**Green Front**</span>
 
-<span style="color: #000000;">**Z**</span>/<span style="color: #69A2BE;">**BVP**</span>: [+ z_gf_influence : gf_influence +]
-[? if cnblp_formed : <span style="color: #006400;">**CNBLP**</span>: [+ cnblp_gf_influence : gf_influence +] ?]
-[? if cnva_formed : <span style="color:#009EE0;">**CNVA**</span>: [+ cnva_gf_influence : gf_influence +] ?]
-<span style="color: #3E88B3;">**DNVP**</span>: [+ dnvp_gf_influence : gf_influence +]
-<span style="color: #7A3C00;">**NSDAP**</span>: [+ nsdap_gf_influence : gf_influence +]
-<span style="color: #909090;">Minor Agrarian Parties</span>: [+ others_gf_influence : gf_influence +]
+{!<table>!} 
+
+{!<tr><td>!} <span style="color: #000000;">**Z**</span> + <span style="color: #69A2BE;">**BVP**</span>: {!</td><td>!} [+ z_gf_influence : gf_influence +] {!</td></tr>!}
+
+[? if cnblp_formed : {!<tr><td>!} <span style="color: #006400;">**CNBLP**</span>: {!</td><td>!} [+ cnblp_gf_influence : gf_influence +] {!</td></tr>!} ?]
+
+[? if cnva_formed : {!<tr><td>!} <span style="color:#009EE0;">**CNVA**</span>: {!</td><td>!} [+ cnva_gf_influence : gf_influence +] {!</td></tr>!} ?]
+
+{!<tr><td>!} <span style="color: #3F7BC1;">**DNVP**</span>: {!</td><td>!} [+ dnvp_gf_influence : gf_influence +] {!</td></tr>!}
+
+[? if dnf_formed : {!<tr><td>!} <span style="color: #003755;">**DNF**</span>: {!</td><td>!} [+ dnf_votes +]% {!</td></tr>!} ?]
+
+{!<tr><td>!} <span style="color: #954B00;">**NSDAP**</span>: {!</td><td>!} [+ nsdap_gf_influence : gf_influence +] {!</td></tr>!}
+
+{!<tr><td>!} <span style="color: #909090;">**Minor Agrarian Parties**</span>: {!</td><td>!} [+ others_gf_influence : gf_influence +] {!</td></tr>!}
+{!<table>!} 
 
 - @junker: Rail against the influence of Junkers and the bankrupt large estates
 - @influence: Root out those with sympathies towards the <span style="color: #7A3C00;">**NSDAP**</span> within the <span style="color: #0dba1e;">**Green Front**</span>
