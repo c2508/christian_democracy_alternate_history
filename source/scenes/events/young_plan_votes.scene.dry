@@ -1,4 +1,4 @@
-title: Young Plan Referendeum
+title: Young Plan Referendum
 new-page: true
 subtitle: A new agreement on reparations
 tags: event
@@ -14,7 +14,7 @@ if (Q.rdi_balance > 1080) {
     Q.young_plan_votes += Math.round(0.05*(Q.dvp_votes)*100.0)/100.0 
 }
 (Q.young_plan_votes += Math.round(((Q.dvp_young_plan_modifier)*(dvp_votes))*100.0)/100.0);
-(Q.young_plan_votes += Math.round(0.1*(Q.nationalism)*(Q.others_votes)*100.0)/100.0);
+(Q.young_plan_votes += Math.round(0.1*(Q.nationalism)*(Q.other_votes)*100.0)/100.0);
 Q.young_plan_votes = Math.round(Q.young_plan_votes);
 !}
 
@@ -26,8 +26,8 @@ Q.young_plan_votes = Math.round(Q.young_plan_votes);
 
 We have done our best in depressing turnout for the Young Plan. Let us hope that the electorate remembers the spirit of Locarno and rejects this shameless attempt at upending the foreign policy of the late Gustav Stresemann. 
 
--@dnvp_pass: The referendum gets [+ young_plan_votes +]% of the vote.
--@dnvp_fail: The referendum gets [+ young_plan_votes +]% of the vote.
+-@dnvp_pass: The referendum gets [+ Math.round(young_plan_votes * 10) / 10 +]% of the vote.
+-@dnvp_fail: The referendum gets [+ Math.round(young_plan_votes * 10) / 10 +]% of the vote.
 
 @dnvp_pass
 view-if: young_plan_votes >= 14.6
