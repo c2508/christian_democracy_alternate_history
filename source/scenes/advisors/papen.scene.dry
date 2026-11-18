@@ -1,13 +1,13 @@
-title: Franz Von Papen
+title: Franz von Papen
 is-pinned-card: true
 tags: advisor, centrist
 card-image: img/portraits/PapenFranz.jpg
 view-if: papen_advisor = 1
 new-page: true 
 
-= Franz Von Papen
+= Franz von Papen
 
-Papen is a Catholic aristocrat who advocates for an overall shift of the <span style="color: #000000;">**Center Party**</span> towards the right. Despite his role as main editor of Germania, his influence has been relatively limited. 
+Papen is a Catholic aristocrat who advocates for an overall shift of the <span style="color: #000000;">**Center Party**</span> towards the right. Despite his role as the majority shareholder of Germania, his influence has been relatively limited. 
 
 - @right_cooperation
 - @right_media
@@ -18,11 +18,11 @@ Papen is a Catholic aristocrat who advocates for an overall shift of the <span s
 @right_media
 title: Influencing Germania
 subtitle: Taking more control of party media
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if center_strength > 25 : The Centrists have too much control. ?][? if left_strength > 35 : The Left Wing of our party is too influential. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if center_strength > 25 : The centrists have too much control. ?][? if left_strength > 35 : The <span style="color: #FF7F00;"left</span> wing of our party is too influential. ?]
 choose-if: advisor_action_timer = 0 and center_strength < 26 and left_strength < 36 
 on-arrival: advisor_action_timer = 6; right_strength += 6; right_dissent -= 7; rural_z += 2; center_dissent += 3; left_dissent += 5
 
-We have pressured Germania to adopt more right wing positions. The Center and Left factions disapprove of this behaviour.
+We have pressured Germania to adopt more right wing positions. The Center and <span style="color: #FF7F00;">left</span> factions disapprove of this behaviour.
 
 @right_cooperation
 title: Cooperation with the right
