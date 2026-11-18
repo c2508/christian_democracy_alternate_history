@@ -6,6 +6,8 @@ view-if: year == 1930 and month == 9 and spd_in_government == 0 and dnvp_in_gove
 on-departure: in_election = 0; next_election_year = next_election_year + 4; n_elections += 1; next_election_time = time + 48; papen_chancellor_timer = 4;
 set-jump: post_election_1928
 face-image: img/wahlt_zentrum.jpg
+max-visits: 1
+
 
 # TODO: should there be an image?
 
