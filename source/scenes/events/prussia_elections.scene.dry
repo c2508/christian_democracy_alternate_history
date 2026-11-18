@@ -643,9 +643,9 @@ if (Q.kvp_formed && Q.lvp_formed) {
 }
 
 if (Q.lvp_formed) {
-    Q.right_coalition_prussia = parseFloat((Q.z_r_prussia + Q.lvp_r_prussia + Q.other_r_prussia + Q.dnvp_r_prussia).toFixed(1));
+    Q.right_coalition_prussia = parseFloat((Q.z_r_prussia + Q.lvp_r_prussia + Q.other_r_prussia + Q.dnvp_r_prussia + Q.wp_r_prussia + Q.cnblp_prussia).toFixed(1));
 } else {
-    Q.right_coalition_prussia = parseFloat((Q.z_r_prussia + Q.dvp_r_prussia + Q.other_r_prussia + Q.dnvp_r_prussia).toFixed(1));
+    Q.right_coalition_prussia = parseFloat((Q.z_r_prussia + Q.dvp_r_prussia + Q.other_r_prussia + Q.dnvp_r_prussia + Q.wp_prussia + Q.cnblp_prussia).toFixed(1));
 }
 
 if (Q.dnvp_ideology === "Moderate") {
@@ -1296,11 +1296,11 @@ on-arrival: prussia_negotiations_kpd_left_trigger = 0
 
 @right_coalition_prussia
 title: We can form a <span style="color: #3E88B3;">Bürgerblock</span> coalition.
-subtitle: <span style="color: #000000;">**Z**</span> + <span style="color: <span style="color: #C0A054;">**DVP**</span> + <span style="color: #3E88B3;">**DNVP**</span> + <span style="color: #909090;">**Others**</span> ([+ right_coalition_prussia +]%)
+subtitle: <span style="color: #000000;">**Z**</span> + <span style="color: <span style="color: #C0A054;">**DVP**</span> + <span style="color: #006400;">**CNBLP**</span> + <span style="color: #3E88B3;">**DNVP**</span> + <span style="color: #909090;">**Others**</span> + <span style="color: #B8996F;">**WP**</span> toleration ([+ right_coalition_prussia +]%)
 unavailable-subtitle: <span style="color: #000000;">[+ z_party_name +]</span>[? if dvp_exist and not lvp_formed:&nbsp;+ <span style="color: #C0A054;">DVP</span>?][? if lvp_formed:&nbsp;+ <span style="color: #FFCC00;">LVP</span>?] + <span style="color: #3E88B3;">DNVP</span> + Others ([+ right_coalition_prussia +]%) [? if (dnvp_ideology == "Radical" and not dnvp_westarp) or (year = 1929 and month >= 7):- The <span style="color: #3E88B3;">DNVP</span> is not interested in a coalition with the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?].?]
 view-if: right_coalition_prussia >= 50 and not cvp_formed
 choose-if: dnvp_relation >= 30 and dvp_relation >= 25
-on-arrival: in_right_coalition_prussia = 1; spd_relation -= 10; ddp_relation -= 10; dvp_relation += 10; dnvp_relation += 10; left_dissent += 10; right_strength += 10; z_in_prussia = 1; dvp_in_prussia = 1; dnvp_in_prussia = 1; others_in_prussia = 1; ddp_right += 2 if year == 1928;
+on-arrival: in_right_coalition_prussia = 1; spd_relation -= 10; ddp_relation -= 10; dvp_relation += 10; dnvp_relation += 10; left_dissent += 10; right_strength += 10; z_in_prussia = 1; dvp_in_prussia = 1; dnvp_in_prussia = 1; others_in_prussia = 1; ddp_right += 2 if year == 1928; old_middle_wp += 1/4; rural_cnblp += 1/4; old_middle_dnvp -= 1/4; rural_dnvp -= 1/4; special_interests += 3; rdi_balance -= 3; 
 go-to: prussia_minister_president_right
 
 Our decision to form a <span style="color: #3E88B3;">**Bürgerblock**</span> coalition has shocked our "<span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition" partners in Prussia. The <span style="color: #C0A054;">**DVP**</span> and <span style="color: #3E88B3;">**DNVP**</span> are pleased with our actions.
@@ -1321,13 +1321,13 @@ Adam Stegerwald has been appointed as the Minister-President of Prussia.
 
 @luther
 title: Hans Luther shall be Minister-President. 
-on arrival: prussia_leader = "Luther"; dvp_relation += 5; 
+on arrival: prussia_leader = "Luther"; dvp_relation += 3; 
 
 Hans Luther has been appointed as the Minister President of Prussia. The <span style="color: #C0A054;">**DVP**</span> is pleasantly surprised at our unexpected decision.
 
 @westarp
 title: Kuno von Westarp shall be Minister-President. 
-on arrival: prussia_leader = "Westarp"; pro_republic -= 5; dnvp_relation += 5; 
+on arrival: prussia_leader = "Westarp"; pro_republic -= 3; dnvp_relation += 3; 
 
 Kuno von Westarp has been appointed as Minister President of Prussia. The <span style="color: #3E88B3;">**DNVP**</span> is pleasantly surprised at our decision. 
 
