@@ -70,7 +70,7 @@ go-to: success if (young_plan_success >= 3); failure if (young_plan_success < 3)
 
 @failure
 title: The Young Plan Initiative has failed
-on-arrival: young_plan_signatures += 9; nationalism += 5; rural_nsdap += 5; special_interests += 5; rdi_balance += 4; dvp_right += 1; right_strength += 3
+on-arrival: young_plan_signatures += 9; nationalism += 5; rural_nsdap += 4; special_interests += 5; rdi_balance += 4; dvp_right += 1; right_strength += 3
 
 With the failure of the Young Plan initiative to reach the required 10% of signatures to be put into a referendum, some of Hugenburg's allies on the Executive Committee have begun to turn on him. His intransigence about the inclusion of the imprisonment paragraph and the surrounding controversy have alienated most of the party and has been attributed as the key cause of the failure. 
 
@@ -95,7 +95,6 @@ choose-if: young_plan_signatures < 10 and old_middle_dnvp >= 25 and (not pro_rep
 subtitle: Hugenburg's experiment comes to an end.
 unavailable-subtitle: Most of the <span style="color: #3E88B3;">**DNVP**</span> is still skeptical of Treviranus' ideas. 
 on-arrival: dnvp_leader = "Schlange-Schöningen"; nationalism += 3; dnvp_relation += 3; dvp_right += 1; old_middle_dnvp += 3; rural_dnvp += 3; dnvp_ideology = "Agrarian Conservatism"
-face-image: img/portraits/Ludwig_Kaas.jpg
 
 As such, in the vote over the expulsion of Treviranus, the Executive Committee has overwhelmingly sided with Treviranus. Emboldened by such a turn of events, the anti-Hugenburg elements on the left have initiated a vote of no-confidence in his leadership, which has passed with votes from the <span style="color: #6D5298;">Christian Socials</span>, <span style="color: #0087DC;">Young Conservatives</span> and the disgruntled <span style="color: #385A38;">agrarian</span> wing. After Hugenburg’s removal, the Executive Committee has voted in Hans Schlange-Schöningen as the new party chair. 
 
@@ -116,7 +115,6 @@ view-if: young_plan_signatures >= 10
 choose-if: young_plan_signatures >= 10 and rpm_strength = 2 and (green_front = 0 or green_front_leader = "Hepp")
 unavailable-subtitle: Schiele is not yet willing to split from the <span style="color: #3E88B3;">**DNVP**</span>. 
 on-arrival: agrarian_split += 1; special_interests += 9; rural_dnvp -= 8; rural_cnblp += 5; rural_nsdap += 3; new_middle_dnvp -= 3; old_middle_dnvp += 3; workers_dnvp -= 8; new_middle_wp += 1; old_middle_nsdap += 1
-face-image: img/portraits/Ludwig_Kaas.jpg
 
 Despite Westarp’s best attempts to preserve party unity, three rogue delegates from the <span style="color: #6D5298;">Christian Social</span> wing have reneged on an agreement made with Hugenburg and have publicly castigated the <span style="color: #3E88B3;">**DNVP**</span>’s leadership for ‘its inability to tolerate differences of political opinion during the vote on the Freedom Law in the Reichstag. Furious at such a betrayal, these three delegates and Treviranus were immediately expelled from the party by the Executive Committee. Overnight, eight other Reichstag deputies affliated with those expelled have left the party in a show of solidarity, with many other influential figures in the party moving in the same direciton. 
 
@@ -143,7 +141,7 @@ Rallying behind their beleaguered leaders, the <span style="color: #6D5298;">Chr
 Building on the <span style="color: #6D5298;">Christian Social</span> Reich Union formed in 1928, they have established the <span style="color: #8ED8E4;">**Christlich-Sozialer Volksdienst**</span> (<span style="color: #8ED8E4;">**CSVD**</span>) in conjuction with regional evangelical parties. 
 Based on the <span style="color: #6D5298;">Christian Social</span> teachings of Adolf Stoecker, the <span style="color: #8ED8E4;">**CSVD**</span> has ties to the Protestant Labour movement and aims to fight for "Christian freedom distinguished from unchristian licentiousness".
 
-Distinguishing itself from the deluge of minor parties, the <span style="color: #8ED8E4;">**CSVD**</span> has critisized the crass materialism of special interests, instead espousing a return to the Gospel and the social teachings of Jesus Christ. However, despite the presence of prominent monarchist elements within the <span style="color: #8ED8E4;">**CSVD**</span>, the party has surprisingly endorsed republicanism in its official platform, placing it in an unusual position among the right-wing parties
+Distinguishing itself from the deluge of minor parties, the <span style="color: #8ED8E4;">**CSVD**</span> has critisized the crass materialism of <span style="color: #909090;">**special interest**</span>, instead espousing a return to the gospel and the social teachings of Jesus Christ. However, despite the presence of prominent monarchist elements within the <span style="color: #8ED8E4;">**CSVD**</span>, the party has surprisingly endorsed republicanism in its official platform, placing it in an unusual position among the right-wing parties.
 
 - @rest_split: Westarp reluctantly continues on in the <span style="color: #3E88B3;">**DNVP**</span> 
 
@@ -152,7 +150,7 @@ face-image: img/dnvp_walkout.jpg
 
 Despite his failure to prevent Treviranus' expulsion, Westarp has ignored Treviranus' pleas to resign and has decided to remain in the party to curb Hugenberg's autocratic tendencies, with a slim chance of forcing a change in party leadership. Meanwhile, Treviranus' political associates, unwilling to condone Hugenberg's flirtations with the radical right, have put their weight behind Treviranus' political experiment. 
 
-With financial backing from <span style="color: #808080;">**Reichwehr**</span> general Kurt von Schleicher and support from the <span style="color: #a2c617;">**DHV**</span>, Treviranus has set up the Conservative People's Association as a precursor to his new party. However, his failure in courting the <span style="color: #385A38;">agrarian</span> wing under Schiele has severely limited the extent of the December Secession. which will hamper his electoral appeal in rural districts. Lacking the agrarian electorate that has served the <span style="color: #3E88B3;">**DNVP**</span> well, is his <span style="color: #455B95;">**KVP**</span> doomed even before its inception?
+With financial backing from <span style="color: #808080;">**Reichwehr**</span> general Kurt von Schleicher and support from the <span style="color: #a2c617;">**DHV**</span>, Treviranus has set up the Conservative People's Association as a precursor to his new party. However, his failure in courting the <span style="color: #385A38;">agrarian</span> wing under Schiele has severely limited the extent of the December secession, which will hamper his electoral appeal in rural districts. Lacking the <span style="color: #385A38;">agrarian</span> electorate that has served the <span style="color: #3E88B3;">**DNVP**</span> well, is his <span style="color: #455B95;">**KVP**</span> doomed even before its inception?
 
 - @hugy_happy: The <span style="color: #3E88B3;">**DNVP**</span> continues on, a shadow of its former self...
 
@@ -161,7 +159,7 @@ on-arrival: special_interests += 10; nationalism += 5
 face-image: img/portraits/HugenbergAlfred.jpg
 go-to: csvd_formed
 
-With Hugenberg's control of the Execuetive Commitee and the gradual expulsion of Westarp's <span style="color: #3E88B3;">National Conservatives</span> allies at the regional levels, he stands unchallenged in his control of the <span style="color: #3E88B3;">**DNVP**</span>. Having purged all unpatriotic elements from the party, he is now free to remake the <span style="color: #3E88B3;">**DNVP**</span> into his own image - an instrument of the radical right.
+With Hugenberg's control of the Executive Committee and the gradual expulsion of Westarp's <span style="color: #3E88B3;">National Conservatives</span> allies at the regional levels, he stands unchallenged in his control of the <span style="color: #3E88B3;">**DNVP**</span>. Having purged all unpatriotic elements from the party, he is now free to remake the <span style="color: #3E88B3;">**DNVP**</span> into his own image - an instrument of the radical right.
 In the <span style="color: #3E88B3;">German National</span> Reichstag Delegation, only Hugenberg's loyalists and Schiele's <span style="color: #385A38;">agrarians</span> remain, a fraction of the once proud <span style="color: #3E88B3;">**DNVP**</span>. 
 
 Alfred Hugenberg has achieved his Fuhrerprinzip at last, but at what cost to the party?
