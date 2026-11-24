@@ -5,6 +5,7 @@ tags: event
 view-if: year = 1929 and month >= 12 and dnvp_leader = "Hugenberg" 
 max-visits: 1
 on-arrival: {!
+Q.young_plan_votes == 0;
 (Q.young_plan_votes += ((Q.young_plan_modifier)*(Q.dnvp_votes + Q.nsdap_votes)));
 (Q.young_plan_votes += Math.round(0.75*(Q.cnblp_votes)*100.0)/100.0);
 if (Q.rpm_strength > 0) {
@@ -31,15 +32,21 @@ We have done our best in depressing turnout for the Young Plan. Let us hope that
 
 @dnvp_pass
 view-if: young_plan_votes >= 14.6
-on-arrival: old_middle_dnvp += 1; rural_dnvp += 1; old_middle_nsdap += 2; rural_nsdap += 1; new_middle_nsdap += 1; old_middle_others -= 2; nationalism += 3; pro_republic -= 2;
+on-arrival: {!
+Q.old_middle_dnvp += 1; Q.rural_dnvp += 1; Q.old_middle_nsdap += 2; Q.rural_nsdap += 1; Q.new_middle_nsdap += 1; Q.old_middle_others -= 2; Q.nationalism += 3; Q.pro_republic -= 3;
+Q.young_plan_votes = Math.round(Q.young_plan_votes * 100) / 100;
+!}
 
-With [+ young_plan_votes +]% voting ‘Aye’ on the Young Plan Referendum, it has failed to pass into legislation. However, Hugenberg’s main goal was not for the obstruction of the Young Plan, but rather for the consolidation of the German Right behind him and the banner of the <span style="color: #3E88B3;">**DNVP**</span. In that respect, he has succeeded to a certain extent, with most right wing parties supporting the referendum itself. Even the <span style="color: #3E88B3;">**Stahlhelm**</span, snubbed by Hugenberg in the buildup to the Young Plan Campaign, has supported the radical policies of the <span style="color: #3E88B3;">**DNVP**</span> due to Duesterberg’s recent victory in the power struggle with Seldte. 
+With [+ young_plan_votes +]% voting ‘Aye’ on the Young Plan Referendum, it has failed to pass into legislation. However, Hugenberg’s main goal was not for the obstruction of the Young Plan, but rather for the consolidation of the German Right behind him and the banner of the <span style="color: #3E88B3;">**DNVP**</span>. In that respect, he has succeeded to a certain extent, with most right wing parties supporting the referendum itself. Even the <span style="color: #3E88B3;">**Stahlhelm**</span>, snubbed by Hugenberg in the buildup to the Young Plan Campaign, has supported the radical policies of the <span style="color: #3E88B3;">**DNVP**</span> due to Duesterberg’s recent victory in the power struggle with Seldte. 
 
 Unexpectedly, a small party from Bavaria, the <span style="color: #7A3C00;">**National Socialist German Workers’ Party**</span>, has been the real winner of this campaign. Provided with a national stage by the Hugenberg Press, <span style="color: #7A3C00;">**NSDAP**</span> leader Adolf Hitler has dazzled many with his oratorical prowess Given his ardent anti-establishment stance, the <span style="color: #7A3C00;">**NSDAP**</span> is expected to woo voters disillusioned by the <span style="color: #3E88B3;">**DNVP’s**</span> stints in governance.
 
 @dnvp_fail
 view-if: young_plan_votes < 14.6
-on-arrival: old_middle_dnvp -= 3; rural_dnvp -= 2; old_middle_nsdap += 1; rural += 1; old_middle_others -= 1; nationalism += 1; pro_republic -= 1;
+on-arrival: {!
+Q.old_middle_dnvp -= 3; Q.rural_dnvp -= 2; Q.old_middle_nsdap += 1; Q.rural_nsdap += 1; Q.old_middle_others -= 1; Q.nationalism += 1; Q.pro_republic -= 1;
+Q.young_plan_votes = Math.round(Q.young_plan_votes * 100) / 100;
+!}
 
 With [+ young_plan_votes +]% voting ‘Aye’ on the Young Plan Referendum, it has failed to pass into legislation. However, Hugenberg’s main goal was not for the obstruction of the Young Plan, but rather for the consolidation of the German Right behind him and the banner of the <span style="color: #3E88B3;">**DNVP**</span>. In that respect, he has failed miserably, with turnout lower than expected. This has been an embarrassment for the <span style="color: #3E88B3;">**DNVP**</span>, with some moderate district organisations agitating for his removal. Despite this, the departure of the dissident factions during the Kassel Party Congress mean that such calls for his removal amount to little more than noise.
 
