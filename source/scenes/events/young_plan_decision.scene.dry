@@ -1,6 +1,6 @@
 title: The Young Plan Debate
 subtitle: Hugenberg co-opts the referendum?
-view-if: year = 1929 and month = 7 and (dnvp_leader = "Triumvirate" or dnvp_leader = "Hugenberg" 
+view-if: year = 1929 and month = 7 and (dnvp_leader = "Triumvirate" or dnvp_leader = "Hugenberg" )
 max-visits: 1
 tags: event
 priority: 1
