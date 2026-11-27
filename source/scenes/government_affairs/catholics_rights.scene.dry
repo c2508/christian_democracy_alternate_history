@@ -21,7 +21,7 @@ Despite the <span style="color: #000000;">We</span><span style="color: #DD0000;"
 - @cancel_advisor_action
 
 @equal
-subtitle: Ensure equal treatment for Jews and Catholics in the civil service
+subtitle: Ensure equal treatment for Jews and Catholics in the civil service.
 on-arrival: dnvp_relation -= 3; catholics_z += 1*(1-dissent); nationalism -= 5; new_middle_z += 1/2*(1-dissent); ddp_relation += 3; spd_relation += 3; new_middle_spd += 1/4*(1-dissent); new_middle_ddp += 1/4*(1-dissent);
 max-visits: 3
 
