@@ -1,6 +1,6 @@
 title: The Young Plan Debate
 subtitle: Hugenberg co-opts the referendum?
-view-if: year = 1929 and month = 7 and (dnvp_leader = "Triumvirate" or dnvp_leader = "Hugenberg" )
+view-if: year = 1929 and month = 7 and (dnvp_leader = "Triumvirate" or dnvp_leader = "Hugenberg" ) and in_right_coalition = 0
 max-visits: 1
 tags: event
 priority: 1
@@ -73,6 +73,7 @@ nearly propelled Hugenberg to victory. Meanwhile, Hugenberg has retreated to the
 @hugy
 view-if: young_plan_points < 3
 on-arrival: dnvp_leader = "Hugenberg"; dnvp_ideology = "Authoritarian Conservatism"; young_plan_debate_seen += 1; dnvp_relation -= 6; pro_republic -= 5; dvp_left += 1; rural_dnvp -= 1; workers_dnvp -= 1; old_middle_dnvp += 1; rural_dnvp += 3 if rpm_strength > 1; special_interests += 5; rdi_balance += 6
+go-to: young_plan
 
 The momentum against Westarp’s constructiveness at the grassroots level has proven to be too much to overcome for Westarp and his allies opposed to Hugenberg’s politics of polarization. With the Westarp loyalists having been gradually purged at the state and regional levels since last year’s party congress, albeit at a reduced pace, Alfred Hugenberg has finally won over a majority of the party executive in his bid for the chairmanship. 
 
