@@ -54,3 +54,5 @@ on-arrival: catholics_z += 3*(1-dissent); clergy_relation += 1
 max-visits: 1
 
 Yay
+
+- @return: Continue...
