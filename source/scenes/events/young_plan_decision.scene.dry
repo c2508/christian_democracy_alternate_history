@@ -1,6 +1,6 @@
 title: The Young Plan Debate
 subtitle: Hugenberg co-opts the referendum?
-view-if: year = 1929 and month = 7 and (dnvp_leader = "Triumvirate" or dnvp_leader = "Hugenberg" )
+view-if: year = 1929 and month = 7 and (dnvp_leader = "Triumvirate" or dnvp_leader = "Hugenberg" 
 max-visits: 1
 tags: event
 priority: 1
@@ -40,8 +40,9 @@ Whilst the content ultimately fell short of its intended scope, the strategic ob
 @young_plan_hugy
 choose-if: dnvp_leader = "Hugenberg"
 unavailable-subtitle: Hugenberg has not cemented his control of the <span style="color:#3E88B3;">**DNVP**</span>.
+on-arrival: dnvp_relation -= 3; dvp_left += 1; young_plan_debate_seen += 1
 
-Unwilling to remain subordinate to the <span style="color: #3E88B3;">**Stahlhelm**</span> in the national struggle, Hugenberg has proposed before the <span style="color:#3E88B3;">**DNVP’s**</span Executive Committee a popular referendum intended at compelling a reversal in national foreign policy, earning near-unanimous approval from the party. Utilising emotionally charged narratives around national slavery as compared to a simple revision of the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Constitution, he has argued that this would represent a step in reigniting the crusade against parliamentarism. 
+Unwilling to remain subordinate to the <span style="color: #3E88B3;">**Stahlhelm**</span> in the national struggle, Hugenberg has proposed before the <span style="color:#3E88B3;">**DNVP’s**</span> Executive Committee a popular referendum intended at compelling a reversal in national foreign policy, earning near-unanimous approval from the party. Utilising emotionally charged narratives around national slavery as compared to a simple revision of the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Constitution, he has argued that this would represent a step in reigniting the crusade against parliamentarism. 
 
 Despite Hugenberg’s failure to inform Seldte beforehand, without the support of the largest party on the right, the <span style="color: #3E88B3;">**Stahlhelm**</span> would be unable to give the appearance of right-wing unity that they have striven for. Thus, Seldte has begrudgingly lent his support to Hugenberg’s referendum, if only to show a united front against the forces of <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Republicanism. 
 
@@ -61,7 +62,7 @@ An emergency party congress has been arranged to decide the outcome of this powe
 
 @westarp
 view-if: young_plan_points >= 3
-on-arrival: dnvp_leader = "Westarp"; dnvp_ideology = "National Conservatism"
+on-arrival: dnvp_leader = "Westarp"; dnvp_ideology = "National Conservatism"; young_plan_debate_seen += 1; dnvp_relation += 5; rural_dnvp += 3; old_middle_dnvp += 2; workers_dnvp += 2; rural_cnblp -= 1; rural_dnvp -= 2 if rpm_strength > 1; special_interests -= 5; rdi_balance -= 10 
 
 Despite Hugenberg’s strategy of consolidating power through the regional organisations, the Westarp loyalists, aided by various agrarian and industrial organisations, have managed to hold their ground. 
 As the only figure able to rally a majority of the party’s Reichstag Delegation behind him, Kuno von Westarp has clinched the chairmanship of the <span style="color:#3E88B3;">**DNVP**</span> once again. 
@@ -71,7 +72,7 @@ nearly propelled Hugenberg to victory. Meanwhile, Hugenberg has retreated to the
 
 @hugy
 view-if: young_plan_points < 3
-on-arrival: dnvp_leader = "Hugenberg"; dnvp_ideology = "Authoritarian Conservatism"
+on-arrival: dnvp_leader = "Hugenberg"; dnvp_ideology = "Authoritarian Conservatism"; young_plan_debate_seen += 1; dnvp_relation -= 6; pro_republic -= 5; dvp_left += 1; rural_dnvp -= 1; workers_dnvp -= 1; old_middle_dnvp += 1; rural_dnvp += 3 if rpm_strength > 1; special_interests += 5; rdi_balance += 6
 
 The momentum against Westarp’s constructiveness at the grassroots level has proven to be too much to overcome for Westarp and his allies opposed to Hugenberg’s politics of polarization. With the Westarp loyalists having been gradually purged at the state and regional levels since last year’s party congress, albeit at a reduced pace, Alfred Hugenberg has finally won over a majority of the party executive in his bid for the chairmanship. 
 
