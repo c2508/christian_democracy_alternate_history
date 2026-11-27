@@ -23,7 +23,7 @@ if (Q.left_strength > 25) {
 if (Q.foreign_minister_party = 'DVP' && Q.in_grand_coalition) {
     Q.dvp_left += 1; 
 }
-if (Q.new_middle_dvp + Q.new_middle_dnvp + Q.new_middle_z < 50) {
+if (Q.new_middle_dvp + Q.new_middle_dnvp + Q.new_middle_z < 30) {
     Q.dvp_left += 1; 
 }
 if (Q.prussian_concordat = 1) {
@@ -54,7 +54,7 @@ new-page: true
 
 Amidst the growing appeal of special interests, the atrophication of the <span style="color: #C0A054;">**DVP’s**</span> vote and the ailing health of Streseman, there is a renewed impetus for him to secure his party’s future. This might be his very last chance to influence the yearslong struggle for control of the <span style="color: #C0A054;">**DVP**</span>.
 
-Spearheaded by the white collar representatives of the <span style="color: #a2c617;">DHV</span> and supported by Stresemann, the left wing of the <span style="color: #C0A054;">**DVP**</span> has introduced a reform which aims to give working and middle class elements more influence in the <span style="color: #C0A054;">**DVP**</span>, thus weakening the leverage of the industrialists on the right. This would finally free the <span style="color: #C0A054;">**DVP**</span> from the reactionary social policies of heavy industry, enabling it to become a true volkspartei rather than one governed by parochial interests. Ultimately, the results of this will determine the course of the <span style="color: #C0A054;">**DVP**</span> for the years to come. 
+Spearheaded by the white collar representatives of the <span style="color: #a2c617;">**DHV**</span> and supported by Stresemann, the left wing of the <span style="color: #C0A054;">**DVP**</span> has introduced a reform which aims to give working and middle class elements more influence in the <span style="color: #C0A054;">**DVP**</span>, thus weakening the leverage of the industrialists on the right. This would finally free the <span style="color: #C0A054;">**DVP**</span> from the reactionary social policies of heavy industry, enabling it to become a true volkspartei rather than one governed by parochial interests. Ultimately, the results of this will determine the course of the <span style="color: #C0A054;">**DVP**</span> for the years to come. 
 
 - @resultsdvp: The party votes...
 
@@ -62,7 +62,7 @@ Spearheaded by the white collar representatives of the <span style="color: #a2c6
 go-to: reform_pass_yay if reform_pass; reform_fail_nay if reform_fail
 
 @reform_pass_yay
-on-arrival: dvp_left += 10; dvp_relation += 5; liberal_cooperation += 3; workers_dvp += 1; workers_other -= 1; new_middle_dvp += 2; new_middle_other -= 4; old_middle_dvp += 2; old_middle_other -= 3; rural_dvp += 1; rural_other -= 2; catholics_other -= 2; catholics_z -= 2; catholics_dvp += 2; coalition_dissent -= 2 if in_grand_coalition; dvp_reform = 1; pro_republic += 5; ddp_left += 1.5; ddp_cohesion += 1.5; rdi_balance -= 5; special_interests -= 10
+on-arrival: dvp_left += 10; dvp_relation += 5; liberal_cooperation += 3; workers_dvp += 1; workers_other -= 1; new_middle_dvp += 2; new_middle_other -= 3; old_middle_dvp += 2; old_middle_other -= 3; rural_dvp += 1; rural_other -= 2; catholics_other -= 1; catholics_z -= 1; catholics_dvp += 1; coalition_dissent -= 2 if in_grand_coalition; dvp_reform = 1; pro_republic += 5; ddp_left += 1.5; ddp_cohesion += 1.5; rdi_balance -= 5; special_interests -= 10
 
 With his continued threats of resignation and backed by a coalition of the remaining constructive elements of the <span style="color: #C0A054;">**DVP**</span>, Stresemann has managed to push through the organisational reform by a slim margin. As a result, the ability of the industrialists to garner advantageous positions for their representatives on the national list has been severely limited. Not willing to abandon their influence in the <span style="color: #C0A054;">**DVP**</span> so quickly, donations from heavy industry will continue, albeit at a slower pace. Nevertheless, the <span style="color: #C0A054;">**DVP**</span> will continue on its leftwards pro-republican path for now, which has advanced the cause for liberal unity. 
 
