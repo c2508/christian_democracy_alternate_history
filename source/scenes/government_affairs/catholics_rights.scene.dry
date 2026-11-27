@@ -40,7 +40,8 @@ Georg Schreiber and Ludwig Kaas make some progress regarding the Prussian Concor
 
 @school
 subtitle: While this was unachievable in the Fourth Marx Cabinet, it might be possible to implement one now. 
-on-arrival: catholics_z += 5*(1-dissent); dvp_relation -= 10; clergy_relation += 1; ddp_relation -= 5;
+unavailable_subtitle: We do not have enough votes to guarantee its passage through the Reichstag.
+on-arrival: catholics_z += 5*(1-dissent); dvp_relation -= 10; clergy_relation += 1; ddp_relation -= 5; spd_relation -= 3; 
 choose-if: spd_relation > 200
 max-visits: 1
 
@@ -49,7 +50,7 @@ We have increased welfare spending on women and children. [? if welfare >= 1 and
 
 @pulpit
 subtitle: The Pulpit Law was enacted in 1871 during the start of the German Kulterkampf and was used to arrest Catholic Clericals. Even though the law has not been enforced after 1878, we might want to repeal it to prevent it from being used by a hostile government in the future.
-on-arrival: catholics_z += 5*(1-dissent); clergy_relation += 1
+on-arrival: catholics_z += 3*(1-dissent); clergy_relation += 1
 max-visits: 1
 
 Yay
