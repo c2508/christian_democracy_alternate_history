@@ -41,6 +41,7 @@ Whilst the content ultimately fell short of its intended scope, the strategic ob
 choose-if: dnvp_leader = "Hugenberg"
 unavailable-subtitle: Hugenberg has not cemented his control of the <span style="color:#3E88B3;">**DNVP**</span>.
 on-arrival: dnvp_relation -= 3; dvp_left += 1; young_plan_debate_seen += 1
+go-to: young_plan
 
 Unwilling to remain subordinate to the <span style="color: #3E88B3;">**Stahlhelm**</span> in the national struggle, Hugenberg has proposed before the <span style="color:#3E88B3;">**DNVP’s**</span> Executive Committee a popular referendum intended at compelling a reversal in national foreign policy, earning near-unanimous approval from the party. Utilising emotionally charged narratives around national slavery as compared to a simple revision of the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Constitution, he has argued that this would represent a step in reigniting the crusade against parliamentarism. 
 
