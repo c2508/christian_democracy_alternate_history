@@ -26,7 +26,7 @@ if (Q.dvp_reform == 0) {
    Q.young_plan_points += 1;
 }
 !}
-face-image: img/All_Quiet.jpg
+face-image: img/youngplanposter.jpg
 
 = The <span style="color: #3E88B3;">**Stahlhelm’s**</span> Proposal 
 
