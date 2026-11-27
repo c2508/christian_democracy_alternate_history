@@ -1,0 +1,85 @@
+title: The Young Plan Debate
+subtitle: Hugenberg co-opts the referendum?
+view-if: year = 1929 and month = 7 and (dnvp_leader = "Triumvirate" or dnvp_leader = "Hugenberg" ) and in_right_coalition = 1
+max-visits: 1
+tags: event
+priority: 1
+new-page: true
+on-arrival: {!
+Q.young_plan_points = 0;
+if (Q.dnvp_relation < 40) {
+    Q.young_plan_points += 1;
+}
+if (Q.in_right_coalition == 0) {
+    Q.young_plan_points += 2;
+}
+if (Q.pro_republic <= Q.spd_r + Q.z_r + Q.ddp_r + 5 ) {
+    Q.young_plan_points += 2;
+}
+if (Q.dnvp_votes + Q.nsdap_votes + Q.dvp_votes*(Q.dvp_right/Q.dvp_right + Q.dvp_left) + Q.cnblp_votes + 2 - 10 > Q.dnvp_votes + Q.nsdap_votes + 3 + Q.wp_votes + Q.dvp_votes + Q.cnblp_votes + 0.15(Q.z_votes) + 0.3*(Q.other_votes) - 20) {
+    Q.young_plan_points += 3;
+}
+if (Q.rdi > 1100) {
+    Q.young_plan_points += 1;
+}
+if (Q.dvp_reform == 0) {
+   Q.young_plan_points += 1;
+}
+!}
+face-image: img/All_Quiet.jpg
+
+= The <span style="color: #3E88B3;">**Stahlhelm’s**</span> Proposal 
+
+With the gradual shift of the <span style="color: #3E88B3;">**Stahlhelm**</span> away from the bourgeois <span style="color:#C0A054;">**DVP** </span> and into the camp of the radical right, many of the militant elements of the <span style="color: #3E88B3;">**Stahlhelm**</span> have advocated for a more aggressive stance in the struggle against democracy and the legacy of the November Revolution, building on the infamous ‘Fürstenwald Hate Declaration’. This has culminated in the proposal for a popular referendum intended to revise the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Constitution, which would strengthen the powers of the Reich President and lift the immunity of deputies charged with high treason. 
+
+Whilst the content ultimately fell short of its intended scope, the strategic objective of such a referendum was rather to place the Stahlhelm at the head of the national movement and to establish it as the focal point around which the various organizations of the Patriotic Right would revolve. As such, Seldte has already managed to secure tentative support from right-wing organisations like <span style="color: #385A38;">**RLB**</span> and <span style="color: #909090;">**Pan-German League**</span>, with only the <span style="color: #00FF00;">Young German Order</span> refusing to commit to such an initiative. Nevertheless, Hugenberg’s <span style="color:#3E88B3;">**DNVP**</span> might have other plans, especially with his unwillingness to be overshadowed by the <span style="color: #3E88B3;">**Stahlhelm**</span>.
+
+- @triumvirate: The Triumvirate falls apart
+- @young_plan_hugy: Hugenberg proposes an alternative referendum
+
+@young_plan_hugy
+choose-if: dnvp_leader = "Hugenberg"
+unavailable-subtitle: Hugenberg has not cemented his control of the <span style="color:#3E88B3;">**DNVP**</span>.
+on-arrival: dnvp_relation -= 3; dvp_left += 1; young_plan_debate_seen += 1
+go-to: young_plan_right_coalition
+
+Unwilling to remain subordinate to the <span style="color: #3E88B3;">**Stahlhelm**</span> in the national struggle, Hugenberg has proposed before the <span style="color:#3E88B3;">**DNVP’s**</span> Executive Committee a popular referendum intended at compelling a reversal in national foreign policy, earning near-unanimous approval from the party. Utilising emotionally charged narratives around national slavery as compared to a simple revision of the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Constitution, he has argued that this would represent a step in reigniting the crusade against parliamentarism. 
+
+Despite Hugenberg’s failure to inform Seldte beforehand, without the support of the largest party on the right, the <span style="color: #3E88B3;">**Stahlhelm**</span> would be unable to give the appearance of right-wing unity that they have striven for. Thus, Seldte has begrudgingly lent his support to Hugenberg’s referendum, if only to show a united front against the forces of <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Republicanism. 
+
+Expectedly, the <span style="color: #C0A054;">**DVP**</span> has immediately broken off negotiations regarding Hugenberg’s proposed referendum as even the intransigent right wing of the <span style="color: #C0A054;">**DVP**</span> is unwilling to publicly break with Stresemann’s foreign policy. Meanwhile, the <span style="color: #69A2BE;">**BVP**</span> and <span style="color: #a2c617;">**DHV**</span> have also attempted to disassociate themselves from the negotiations with the <span style="color: #3E88B3;">**Stahlhelm**</span>, refusing to condone this sort of reckless demagoguery. However, the <span style="color: #006400;">**CNBLP**</span> and <span style="color: #385A38;">**RLB**</span> have reaffirmed their support for this referendum. 
+
+@triumvirate
+choose-if: dnvp_leader = "Triumvirate"
+view-if: dnvp_leader = "Triumvirate"
+on-arrival: nationalism -= 4; pro_republic += 4*(1-dissent); strife += 1
+
+Unwilling to remain subordinate to the <span style="color: #3E88B3;">**Stahlhelm**</span> in the national struggle, Hugenberg has proposed before the <span style="color:#3E88B3;">**DNVP’s**</span> Executive Committee a popular referendum intended at compelling a reversal in national foreign policy.  Utilising emotionally charged narratives around national slavery as compared to a simple revision of the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Constitution, he has argued that this would represent a step in reigniting the crusade against parliamentarism. However, with the proposal intended to overshadow the <span style="color: #3E88B3;">**Stahlhelm’s**</span> referendum, it represents a departure from Westarp’s policy of close cooperation with them. Thus, this has caused the collapse of the tenuous power-sharing agreement between Hugenberg and Westarp since last year’s party congres
+
+An emergency party congress has been arranged to decide the outcome of this power struggle. 
+
+- @westarp: In a contentious vote marred with jeers and boos, the <span style="color:#3E88B3;">**DNVP**</span> elects its new leader.   
+- @hugy: In a contentious vote marred with jeers and boos, the <span style="color:#3E88B3;">**DNVP**</span> elects its new leader.   
+
+@westarp
+view-if: young_plan_points >= 3
+on-arrival: dnvp_leader = "Westarp"; dnvp_ideology = "National Conservatism"; young_plan_debate_seen += 1; dnvp_relation += 5; rural_dnvp += 3; old_middle_dnvp += 2; workers_dnvp += 2; rural_cnblp -= 1; rural_dnvp -= 2 if rpm_strength > 1; special_interests -= 5; rdi_balance -= 10 
+
+Despite Hugenberg’s strategy of consolidating power through the regional organisations, the Westarp loyalists, aided by various agrarian and industrial organisations, have managed to hold their ground. 
+As the only figure able to rally a majority of the party’s Reichstag Delegation behind him, Kuno von Westarp has clinched the chairmanship of the <span style="color:#3E88B3;">**DNVP**</span> once again. 
+
+With his renewed mandate, Westarp has fully committed to the <span style="color: #3E88B3;">**Stahlhelm’s**</span> initiative and will attempt to marginalise the volkisch elements that 
+nearly propelled Hugenberg to victory. Meanwhile, Hugenberg has retreated to the sidelines, silent for now. It remains unclear if he will continue on in a <span style="color:#3E88B3;">**DNVP**</span> that has rejected his politics of polarization. 
+
+@hugy
+view-if: young_plan_points < 3
+on-arrival: dnvp_leader = "Hugenberg"; dnvp_ideology = "Authoritarian Conservatism"; young_plan_debate_seen += 1; dnvp_relation -= 6; pro_republic -= 5; dvp_left += 1; rural_dnvp -= 1; workers_dnvp -= 1; old_middle_dnvp += 1; rural_dnvp += 3 if rpm_strength > 1; special_interests += 5; rdi_balance += 6
+go-to: young_plan_right_coalition
+
+The momentum against Westarp’s constructiveness at the grassroots level has proven to be too much to overcome for Westarp and his allies opposed to Hugenberg’s politics of polarization. With the Westarp loyalists having been gradually purged at the state and regional levels since last year’s party congress, albeit at a reduced pace, Alfred Hugenberg has finally won over a majority of the party executive in his bid for the chairmanship. 
+
+Armed with this broad mandate, it is expected that Hugenberg will move to consolidate his control of the party by installing his confederates in prominent party positions while working to limit Westarp’s powers as chairman of the <span style="color:#3E88B3;">**DNVP’s**</span> Reichstag Delegation. For the time being, he has managed to secure party approval for his proposed referendum, which threatens to alienate the moderate elements in the <span style="color: #3E88B3;">**Stahlhelm**</span>.
+
+Despite Hugenberg’s failure to inform Seldte beforehand, without the support of the largest party on the right, the <span style="color: #3E88B3;">**Stahlhelm**</span> would be unable to give the appearance of right-wing unity that they have striven for. Thus, Seldte has begrudgingly lent his support to Hugenberg’s referendum, if only to show a united front against the forces of <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Republicanism. 
+
+Expectedly, the <span style="color: #C0A054;">**DVP**</span> has immediately broken off negotiations regarding Hugenberg’s proposed referendum as even the intransigent right wing of the <span style="color: #C0A054;">**DVP**</span> is unwilling to publicly break with Stresemann’s foreign policy. Meanwhile, the <span style="color: #69A2BE;">**BVP**</span> and <span style="color: #a2c617;">**DHV**</span> have also attempted to disassociate themselves from the negotiations with the <span style="color: #3E88B3;">**Stahlhelm**</span>, refusing to condone this sort of reckless demagoguery. However, the <span style="color: #006400;">**CNBLP**</span> and <span style="color: #385A38;">**RLB**</span> have reaffirmed their support for this referendum. 
